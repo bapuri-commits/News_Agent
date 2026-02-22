@@ -6,7 +6,6 @@ Top 5 + SK에코플랜트 관련 기사만 크롤링하고,
 
 from __future__ import annotations
 
-import base64
 import logging
 import re
 import time
@@ -63,54 +62,66 @@ def fetch_body(url: str) -> str | None:
             if resp.status_code != 200:
                 logger.debug("HTTP %d for %s", resp.status_code, url[:60])
                 return None
-            return _extract_text(resp.text, resp.url)
+            return _extract_text(resp.text)
         except requests.RequestException as e:
             logger.debug("Crawl attempt %d failed for %s: %s", attempt, url[:60], e)
             if attempt < MAX_RETRIES:
                 time.sleep(1)
+        except Exception as e:
+            logger.debug("Parse failed for %s: %s", url[:60], e)
+            return None
     return None
 
 
 def resolve_google_news_url(url: str) -> str:
-    """Google News redirect URL을 실제 URL로 변환한다.
+    """Google News redirect URL을 실제 기사 URL로 변환한다.
 
-    Google News RSS의 URL은 JS redirect 기반이라 HTTP HEAD로 해결되지 않는다.
-    GET 요청으로 실제 리다이렉트된 최종 URL을 추출한다.
+    Strategy:
+      1) googlenewsdecoder 라이브러리 (가장 안정적, HTTP 요청 기반)
+      2) 원본 URL 반환 (non-Google News URL)
     """
-    if "news.google.com" not in url:
+    if not _is_google_news_url(url):
         return url
 
-    try:
-        resp = requests.get(
-            url,
-            headers={"User-Agent": USER_AGENT},
-            timeout=8,
-            allow_redirects=True,
-        )
-        final = resp.url
-        if final and "news.google.com" not in final:
-            return final
+    decoded = _decode_via_library(url)
+    if decoded:
+        return decoded
 
-        soup = BeautifulSoup(resp.text, "html.parser")
-        for a_tag in soup.find_all("a", href=True):
-            href = a_tag["href"]
-            if href.startswith("http") and "news.google.com" not in href:
-                return href
-
-    except requests.RequestException:
-        pass
-
+    logger.warning("Google News URL decode failed, returning original: %s", url[:80])
     return url
+
+
+def _decode_via_library(url: str) -> str | None:
+    """googlenewsdecoder 라이브러리로 URL을 디코딩한다."""
+    try:
+        from googlenewsdecoder import gnewsdecoder
+
+        result = gnewsdecoder(url, interval=0.5)
+        if result and result.get("status"):
+            decoded = result.get("decoded_url", "")
+            if decoded and "news.google.com" not in decoded:
+                logger.debug("Decoded via library: %s -> %s", url[:60], decoded[:80])
+                return decoded
+    except Exception as e:
+        logger.debug("googlenewsdecoder failed for %s: %s", url[:60], e)
+    return None
+
+
+def _is_google_news_url(url: str) -> bool:
+    """Google News 도메인인지 확인한다 (지역 변형 포함)."""
+    hostname = (urlparse(url).hostname or "").lower()
+    return hostname.startswith("news.google.")
 
 
 def _is_uncrawlable(url: str) -> bool:
     """크롤링 불가능한 도메인인지 확인한다."""
-    domain = urlparse(url).netloc.lower()
-    uncrawlable = {"news.google.com", "consent.google.com"}
-    return domain in uncrawlable
+    hostname = (urlparse(url).hostname or "").lower()
+    if hostname.startswith("news.google.") or hostname == "consent.google.com":
+        return True
+    return False
 
 
-def _extract_text(html: str, url: str) -> str | None:
+def _extract_text(html: str) -> str | None:
     """HTML에서 기사 본문 텍스트를 추출한다."""
     soup = BeautifulSoup(html, "html.parser")
 

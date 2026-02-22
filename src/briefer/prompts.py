@@ -25,6 +25,8 @@ sk_ecoplant_ids 선정 규칙 (엄격하게 적용):
 - 최대 10건 이내로 제한
 
 출력은 반드시 아래 JSON 스키마대로만 응답하라. 설명 없이 순수 JSON만 출력.
+빈 카테고리는 빈 배열([])로, 기사가 없는 카테고리는 아예 제외해도 된다.
+하나의 기사는 가장 적합한 1개 카테고리에만 배치하라.
 """
 
 STAGE1_OUTPUT_SCHEMA = """\
@@ -32,18 +34,38 @@ STAGE1_OUTPUT_SCHEMA = """\
   "top5_ids": ["기사id1", "기사id2", "기사id3", "기사id4", "기사id5"],
   "sk_ecoplant_ids": ["SK에코플랜트 관련 기사 id 리스트"],
   "clusters": {
-    "fab_capex": ["기사id", ...],
-    "dc_build": ["기사id", ...],
-    "epc_award": ["기사id", ...],
-    "ma_restructure": ["기사id", ...],
-    "esg_regulation": ["기사id", ...],
-    "pf_finance": ["기사id", ...],
-    "sk_ecoplant": ["기사id", ...],
-    "other": ["기사id", ...]
+    "fab_capex": ["반도체 Fab/CapEx 기사 id"],
+    "cleanroom": ["클린룸/공정 인프라 기사 id"],
+    "equipment_supply": ["장비/부품 공급망 기사 id"],
+    "packaging": ["첨단 패키징 기사 id"],
+    "dc_build": ["데이터센터 신축 기사 id"],
+    "dc_power": ["DC 전력 기사 id"],
+    "dc_cooling": ["DC 냉각 기사 id"],
+    "epc_award": ["EPC/수주 기사 id"],
+    "schedule_cost": ["공기/원가/변경관리 기사 id"],
+    "permit": ["인허가/환경 기사 id"],
+    "safety": ["안전/품질/컴플라이언스 기사 id"],
+    "material_labor": ["자재/노무 기사 id"],
+    "capex_guidance": ["CapEx 가이던스 기사 id"],
+    "pf_finance": ["프로젝트 파이낸싱 기사 id"],
+    "ma_restructure": ["M&A/사업재편 기사 id"],
+    "policy_subsidy": ["정책/보조금 기사 id"],
+    "esg_regulation": ["ESG/탄소규제 기사 id"],
+    "construction_tech": ["건설기술 기사 id"],
+    "talent_hr": ["인력/인사 기사 id"],
+    "urban_smartcity": ["도시개발/스마트시티 기사 id"],
+    "contingent": ["우발채무/PF 리스크 기사 id"],
+    "sk_ecoplant": ["SK에코플랜트 기사 id"],
+    "other": ["기타 기사 id"]
   },
   "excluded_ids": ["관련성 낮아 제외된 기사 id"],
   "reasoning": "Top 5 선정 이유 (한국어, 2-3문장)"
 }
+"""
+
+STAGE1_EXTRA_INSTRUCTIONS = """\
+주의: 빈 카테고리는 빈 배열([])로, 기사가 없는 카테고리는 아예 제외해도 됩니다.
+하나의 기사는 가장 적합한 1개 카테고리에만 배치하세요.
 """
 
 

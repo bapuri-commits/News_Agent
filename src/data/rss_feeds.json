@@ -12,77 +12,91 @@
       "url": "https://www.eetimes.com/feed/",
       "source_group": "S2",
       "lang": "en",
-      "categories": ["fab_capex", "semi_makers", "equipment_supply"]
+      "categories": ["fab_capex", "equipment_supply", "packaging"]
     },
     {
       "name": "Semiconductor Engineering",
       "url": "https://semiengineering.com/feed/",
       "source_group": "S2",
       "lang": "en",
-      "categories": ["fab_capex", "packaging", "semi_makers"]
+      "categories": ["fab_capex", "packaging", "cleanroom"]
+    },
+    {
+      "name": "Construction Dive",
+      "url": "https://www.constructiondive.com/feeds/news/",
+      "source_group": "S5",
+      "lang": "en",
+      "categories": ["epc_award", "schedule_cost", "material_labor", "safety"]
+    },
+    {
+      "name": "World Construction Today",
+      "url": "https://www.worldconstructiontoday.com/feed/",
+      "source_group": "S5",
+      "lang": "en",
+      "categories": ["epc_award", "construction_tech", "urban_smartcity"]
     },
     {
       "name": "Bloomberg Markets",
       "url": "https://feeds.bloomberg.com/markets/news.rss",
       "source_group": "S6",
       "lang": "en",
-      "categories": ["ma_restructure", "capex_guidance", "macro"]
+      "categories": ["ma_restructure", "capex_guidance", "pf_finance"]
     },
     {
       "name": "CNBC",
       "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
       "source_group": "S6",
       "lang": "en",
-      "categories": ["capex_guidance", "macro", "ma_restructure"]
+      "categories": ["capex_guidance", "ma_restructure", "policy_subsidy"]
     },
     {
       "name": "TechCrunch",
       "url": "https://techcrunch.com/feed/",
       "source_group": "S6",
       "lang": "en",
-      "categories": ["dc_build", "ai_trend"]
+      "categories": ["dc_build", "fab_capex"]
     },
     {
       "name": "전자신문",
       "url": "https://rss.etnews.com/Section901.xml",
       "source_group": "S7",
       "lang": "kr",
-      "categories": ["fab_capex", "semi_makers", "dc_build"]
+      "categories": ["fab_capex", "dc_build", "equipment_supply"]
     },
     {
       "name": "더일렉",
       "url": "https://www.thelec.kr/rss/allArticle.xml",
       "source_group": "S7",
       "lang": "kr",
-      "categories": ["fab_capex", "semi_makers", "packaging"]
+      "categories": ["fab_capex", "packaging", "equipment_supply"]
     },
     {
       "name": "한국경제",
       "url": "https://www.hankyung.com/feed/all-news",
       "source_group": "S7",
       "lang": "kr",
-      "categories": ["macro", "capex_guidance", "ma_restructure"]
+      "categories": ["capex_guidance", "ma_restructure", "epc_award"]
     },
     {
       "name": "매일경제",
       "url": "https://www.mk.co.kr/rss/30000001/",
       "source_group": "S7",
       "lang": "kr",
-      "categories": ["macro", "capex_guidance", "epc_award"]
+      "categories": ["capex_guidance", "epc_award", "pf_finance"]
     },
     {
       "name": "뉴시스",
       "url": "https://newsis.com/RSS/economy.xml",
       "source_group": "S7",
       "lang": "kr",
-      "categories": ["macro", "epc_award", "pf_finance"]
+      "categories": ["epc_award", "pf_finance", "policy_subsidy"]
     },
     {
       "name": "아이뉴스24",
       "url": "https://rss.inews24.com/rss/news_it.xml",
       "source_group": "S7",
       "lang": "kr",
-      "categories": ["fab_capex", "dc_build", "ai_trend"]
+      "categories": ["fab_capex", "dc_build", "packaging"]
     }
   ]
 }

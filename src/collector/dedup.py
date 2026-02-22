@@ -13,8 +13,8 @@ from src.models.article import Article
 _TOKEN_RE = re.compile(r"[\w가-힣]+", re.UNICODE)
 
 SOURCE_GROUP_RANK = {
-    "S1": 3, "S2": 3, "S3": 4, "S4": 4,
-    "S5": 3, "S6": 5, "S7": 3,
+    "S1": 6, "S2": 6, "S3": 5, "S4": 5,
+    "S5": 6, "S6": 3, "S7": 4,
 }
 
 
@@ -80,6 +80,8 @@ def _should_replace(existing: Article, candidate: Article) -> bool:
     """candidate가 기존 기사보다 나은지 판단한다."""
     if candidate.relevance_score > existing.relevance_score:
         return True
+    if candidate.relevance_score < existing.relevance_score:
+        return False
     e_rank = SOURCE_GROUP_RANK.get(existing.source_group, 1)
     c_rank = SOURCE_GROUP_RANK.get(candidate.source_group, 1)
     return c_rank > e_rank

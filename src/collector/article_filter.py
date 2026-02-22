@@ -175,7 +175,7 @@ def _match_categories(article: Article, profile: dict) -> list[str]:
 
 
 MINORITY_GROUPS = {"S1", "S2", "S5"}
-MINORITY_MIN = 1
+MINORITY_MIN = 2
 
 
 def _ensure_source_minimum(
@@ -183,23 +183,38 @@ def _ensure_source_minimum(
     all_scored: list[Article],
     max_count: int,
 ) -> list[Article]:
-    """전문매체(S1/S2/S5)가 선택에 없으면 최소 1건씩 넣어준다."""
+    """전문매체(S1/S2/S5)가 선택에 부족하면 최소 MINORITY_MIN건씩 보장한다.
+
+    목록이 가득 찬 경우 비전문매체 중 점수가 가장 낮은 기사를 교체한다.
+    """
     selected_urls = {a.url for a in selected}
-    present_groups = {a.source_group for a in selected}
+    group_counts = {g: sum(1 for a in selected if a.source_group == g)
+                    for g in MINORITY_GROUPS}
 
     for group in MINORITY_GROUPS:
-        if group in present_groups:
+        needed = MINORITY_MIN - group_counts.get(group, 0)
+        if needed <= 0:
             continue
-        candidates = [
-            a for a in all_scored
-            if a.source_group == group
-            and a.url not in selected_urls
-            and a.relevance_score >= 0
-        ]
-        for cand in candidates[:MINORITY_MIN]:
+        candidates = sorted(
+            [a for a in all_scored
+             if a.source_group == group and a.url not in selected_urls],
+            key=lambda a: a.relevance_score,
+            reverse=True,
+        )
+        for cand in candidates[:needed]:
             if len(selected) < max_count:
                 selected.append(cand)
                 selected_urls.add(cand.url)
+            else:
+                replaceable = [
+                    (i, a) for i, a in enumerate(selected)
+                    if a.source_group not in MINORITY_GROUPS
+                ]
+                if replaceable:
+                    replaceable.sort(key=lambda x: x[1].relevance_score)
+                    idx, _ = replaceable[0]
+                    selected[idx] = cand
+                    selected_urls.add(cand.url)
 
     return selected
 
@@ -238,29 +253,37 @@ def _rebalance_sources(articles: list[Article], max_count: int) -> list[Article]
 
 
 _KEYWORD_MAP: dict[str, list[str]] = {
+    # A. 반도체
     "fab_capex": ["fab", "팹", "반도체", "semiconductor", "capex", "증설"],
-    "cleanroom": ["클린룸", "cleanroom", "clean room"],
-    "equipment_supply": ["장비", "equipment", "asml", "amat", "lam"],
-    "packaging": ["패키징", "packaging", "hbm", "cowos"],
+    "cleanroom": ["클린룸", "cleanroom", "clean room", "upw", "cda", "스크러버", "scrubber"],
+    "equipment_supply": ["장비", "equipment", "asml", "amat", "lam", "tel", "kla"],
+    "packaging": ["패키징", "packaging", "hbm", "cowos", "osat", "첨단패키징"],
     "memory_foundry": ["메모리", "파운드리", "memory", "foundry"],
-    "dc_build": ["데이터센터", "data center", "hyperscale", "하이퍼스케일"],
-    "dc_power": ["전력", "power", "변전", "substation", "grid"],
-    "dc_cooling": ["냉각", "cooling", "액침", "immersion", "수랭"],
-    "epc_award": ["epc", "수주", "계약", "contract", "award"],
-    "schedule_cost": ["공기", "원가", "schedule", "cost", "delay"],
-    "permit": ["인허가", "permit", "zoning"],
-    "material_labor": ["자재", "노무", "material", "labor"],
-    "milestone": ["마일스톤", "milestone", "준공", "착공"],
-    "capex_guidance": ["capex", "투자 전망", "guidance", "실적"],
-    "pf_finance": ["프로젝트 파이낸스", "project finance", "pf", "리파이낸싱"],
-    "ma_restructure": ["m&a", "인수", "매각", "acquisition"],
-    "esg_regulation": ["esg", "탄소", "carbon", "배출권"],
-    "construction_tech": ["모듈러", "modular", "dfma", "프리팹"],
-    "talent_hr": ["인력", "인사", "talent", "hr", "채용"],
-    "urban_smartcity": ["스마트시티", "smart city", "도시개발", "neom"],
-    "contingent": ["우발채무", "contingent", "자금보충"],
+    # B. 데이터센터
+    "dc_build": ["데이터센터", "data center", "hyperscale", "하이퍼스케일", "colocation", "코로케이션"],
+    "dc_power": ["전력", "power", "변전", "substation", "grid", "ppa", "계통연계"],
+    "dc_cooling": ["냉각", "cooling", "액침", "immersion", "수랭", "cdu", "열밀도"],
+    # C. 건설/수주
+    "epc_award": ["epc", "수주", "계약", "contract", "award", "턴키", "turnkey"],
+    "schedule_cost": ["공기", "원가", "schedule", "cost", "delay", "변경관리", "change order"],
+    "permit": ["인허가", "permit", "zoning", "환경영향", "지역 반발"],
+    "safety": ["안전", "safety", "컴플라이언스", "compliance", "위험물", "사고"],
+    "material_labor": ["자재", "노무", "material", "labor", "철강", "시멘트", "파업"],
+    "milestone": ["마일스톤", "milestone", "준공", "착공", "groundbreaking"],
+    # D. 투자/정책
+    "capex_guidance": ["capex", "투자 전망", "guidance", "실적", "earnings"],
+    "pf_finance": ["프로젝트 파이낸스", "project finance", "pf", "리파이낸싱", "cmbs"],
+    "ma_restructure": ["m&a", "인수", "매각", "acquisition", "divestiture", "사업재편"],
+    "policy_subsidy": ["보조금", "subsidy", "chips act", "세제", "tax credit", "정부정책"],
+    # 테마
+    "esg_regulation": ["esg", "탄소", "carbon", "배출권", "탄소중립", "넷제로"],
+    "construction_tech": ["모듈러", "modular", "dfma", "프리팹", "prefab"],
+    "talent_hr": ["인력", "인사", "talent", "hr", "채용", "성과급"],
+    "urban_smartcity": ["스마트시티", "smart city", "도시개발", "neom", "신도시"],
+    "contingent": ["우발채무", "contingent", "자금보충", "보증", "브릿지론"],
+    # 전용 추적
     "sk_ecoplant_order": ["sk에코플랜트", "sk ecoplant"],
-    "infra_equip": ["schneider", "vertiv", "인프라장비"],
+    "infra_equip": ["schneider", "vertiv", "eaton", "인프라장비"],
 }
 
 

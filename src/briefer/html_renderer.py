@@ -68,13 +68,15 @@ def _pick_theme(briefing: dict) -> dict:
                any("SK에코플랜트" in str(item.get("headline", "")) for item in top5)):
         return THEMES["sk_orange"]
 
-    if top_cat in ("fab_capex", "packaging", "capex_guidance"):
+    if top_cat in ("fab_capex", "cleanroom", "equipment_supply", "packaging", "capex_guidance"):
         return THEMES["tech_blue"]
-    if top_cat in ("dc_build", "dc_power", "dc_cooling", "construction_tech"):
+    if top_cat in ("dc_build", "dc_power", "dc_cooling", "construction_tech", "urban_smartcity"):
         return THEMES["infra_purple"]
-    if top_cat in ("epc_award", "ma_restructure"):
+    if top_cat in ("epc_award", "ma_restructure", "schedule_cost", "material_labor",
+                   "permit", "talent_hr", "milestone"):
         return THEMES["deal_green"]
-    if top_cat in ("pf_finance", "esg_regulation"):
+    if top_cat in ("pf_finance", "esg_regulation", "contingent", "policy_subsidy",
+                   "safety"):
         return THEMES["market_teal"]
 
     return THEMES["tech_blue"]
