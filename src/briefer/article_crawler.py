@@ -92,6 +92,10 @@ def resolve_google_news_url(url: str) -> str:
     if decoded:
         return decoded
 
+    decoded = _resolve_via_playwright(url)
+    if decoded:
+        return decoded
+
     logger.warning("Google News URL decode failed, returning original: %s", url[:80])
     return url
 
@@ -126,6 +130,27 @@ def _resolve_via_redirect(url: str) -> str | None:
             return final_url
     except requests.RequestException as e:
         logger.debug("Redirect resolve failed for %s: %s", url[:60], e)
+    return None
+
+
+def _resolve_via_playwright(url: str) -> str | None:
+    """Playwright headless browser로 JS redirect를 따라가 실제 URL을 획득한다."""
+    try:
+        from playwright.sync_api import sync_playwright
+
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page()
+            page.goto(url, wait_until="domcontentloaded", timeout=15000)
+            page.wait_for_timeout(2000)
+            final_url = page.url
+            browser.close()
+
+            if final_url and not _is_google_news_url(final_url):
+                logger.info("Resolved via Playwright: %s -> %s", url[:60], final_url[:80])
+                return final_url
+    except Exception as e:
+        logger.debug("Playwright resolve failed for %s: %s", url[:60], e)
     return None
 
 

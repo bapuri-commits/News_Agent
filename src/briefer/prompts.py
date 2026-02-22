@@ -17,6 +17,7 @@ STAGE1_SYSTEM = """\
 - 대형 수주, 차환/리파이낸싱 이벤트는 무조건 Top 5 후보
 - 같은 사건의 중복 기사는 대표 1건만 선정
 - 소스 다양성 고려 (한국어/영어 혼합, S1~S7 분산)
+- crawlable:yes인 기사를 Top 5에 최소 2건 이상 포함 (본문 크롤링이 가능해 심층 분석 가능)
 
 sk_ecoplant_ids 선정 규칙 (엄격하게 적용):
 - "SK에코플랜트" 또는 "SK ecoplant"가 제목에 직접 등장하는 기사만 포함
@@ -171,16 +172,24 @@ STAGE4_OUTPUT_SCHEMA = """\
 """
 
 
+def _is_crawlable_url(url: str) -> bool:
+    """Google News 인코딩 URL이 아니면 본문 크롤링 가능."""
+    from urllib.parse import urlparse
+    hostname = (urlparse(url).hostname or "").lower()
+    return not hostname.startswith("news.google.")
+
+
 def build_stage1_prompt(articles: list[dict], profile_summary: str) -> str:
     """Stage 1: 기사 목록 + 프로필 요약 → 클러스터링/Top5 선정 프롬프트."""
     article_lines = []
     for a in articles:
+        crawlable = "yes" if _is_crawlable_url(a.get("url", "")) else "no"
         line = (
             f"- id:{a['id']} | {a['title'][:80]} | "
             f"source:{a['source_name']} ({a['source_group']}) | "
             f"cat:{','.join(a.get('categories', []))} | "
             f"score:{a.get('relevance_score', 0):.2f} | "
-            f"lang:{a['language']}"
+            f"lang:{a['language']} | crawlable:{crawlable}"
         )
         article_lines.append(line)
 

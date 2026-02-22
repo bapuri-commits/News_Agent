@@ -1,10 +1,10 @@
 {
   "2026-02-22": {
     "date": "2026-02-22",
-    "theme_label": "Risk Alert",
-    "theme_accent": "#dc2626",
-    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
-    "top_headline": "SK하이닉스 HBM 증산, AI 데이터센터 원전급 전력 수요 급증",
+    "theme_label": "Tech Focus",
+    "theme_accent": "#2563eb",
+    "theme_gradient": "linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)",
+    "top_headline": "SK하이닉스 HBM 대폭 증산, DC당 원전급 전력 필요",
     "sk_headline": "",
     "article_count": 35
   }
