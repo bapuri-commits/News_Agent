@@ -140,11 +140,13 @@ def _resolve_via_playwright(url: str) -> str | None:
 
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True)
-            page = browser.new_page()
-            page.goto(url, wait_until="domcontentloaded", timeout=15000)
-            page.wait_for_timeout(2000)
-            final_url = page.url
-            browser.close()
+            try:
+                page = browser.new_page()
+                page.goto(url, wait_until="domcontentloaded", timeout=15000)
+                page.wait_for_timeout(2000)
+                final_url = page.url
+            finally:
+                browser.close()
 
             if final_url and not _is_google_news_url(final_url):
                 logger.info("Resolved via Playwright: %s -> %s", url[:60], final_url[:80])

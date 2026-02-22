@@ -131,7 +131,58 @@ class BriefingGenerator:
             },
         }
 
+        self._validate_briefing(briefing)
         return briefing
+
+    @staticmethod
+    def _validate_briefing(briefing: dict) -> None:
+        """산출물 품질 자동 검증 — 문제 발견 시 경고 로그."""
+        warnings_found = []
+        top5 = briefing.get("top5", [])
+
+        if len(top5) < 4:
+            warnings_found.append(f"Top 5가 {len(top5)}건뿐 (최소 4건 필요)")
+
+        headlines = [item.get("headline", "") for item in top5]
+        for i, h1 in enumerate(headlines):
+            for j, h2 in enumerate(headlines):
+                if i < j and h1 and h2 and h1 == h2:
+                    warnings_found.append(f"Top 5 #{i+1}과 #{j+1} 헤드라인 완전 중복: {h1[:40]}")
+
+        unknown_count = sum(
+            1 for item in top5
+            if "미확인" in item.get("fact", "") or "확인되지" in item.get("fact", "")
+        )
+        if unknown_count >= 3:
+            warnings_found.append(f"Top 5 중 {unknown_count}건이 '미확인' — 크롤링 실패 가능성")
+
+        categories = briefing.get("by_category", {})
+        if not categories:
+            warnings_found.append("카테고리 데이터 없음 (Stage 3 실패 가능성)")
+
+        cat_ids = [x["id"] for cat in categories.values() for x in cat.get("items", [])]
+        if len(cat_ids) != len(set(cat_ids)):
+            warnings_found.append(f"카테고리 내 기사 중복: {len(cat_ids) - len(set(cat_ids))}건")
+
+        risks = briefing.get("risks", [])
+        if len(risks) != len(set(risks)):
+            warnings_found.append("리스크 항목 중복")
+
+        signals = briefing.get("next_signals", [])
+        if len(signals) != len(set(signals)):
+            warnings_found.append("Next Signals 중복")
+
+        meta = briefing.get("metadata", {})
+        attempted = meta.get("crawl_attempted", 0)
+        success = meta.get("crawl_success", 0)
+        if attempted > 0 and success == 0:
+            warnings_found.append("크롤링 전부 실패 (0/{}건)".format(attempted))
+
+        if warnings_found:
+            for w in warnings_found:
+                logger.warning("QUALITY CHECK: %s", w)
+        else:
+            logger.info("QUALITY CHECK: 모든 검증 통과")
 
     def _stage1_cluster(self, articles: list[dict], profile: dict) -> dict:
         profile_summary = build_profile_summary(profile)
