@@ -7,5 +7,14 @@
     "top_headline": "SK에코엔지니어링, SK에코플랜트 100% 자회사로 재편",
     "sk_headline": "SK에코엔지니어링 4년만에 100% 자회사 재편",
     "article_count": 31
+  },
+  "2026-02-23": {
+    "date": "2026-02-23",
+    "theme_label": "Data Pulse",
+    "theme_accent": "#38bdf8",
+    "theme_gradient": "linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%)",
+    "top_headline": "중동부유럽 데이터센터 개발 가이드",
+    "sk_headline": "",
+    "article_count": 39
   }
 }
