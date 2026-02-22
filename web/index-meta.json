@@ -3,9 +3,9 @@
     "date": "2026-02-22",
     "theme_label": "Risk Alert",
     "theme_accent": "#dc2626",
-    "theme_gradient": "linear-gradient(135deg, #dc2626 0%, #f87171 100%)",
-    "top_headline": "용인 SK하이닉스 현장 1.4만명 근로자 vs 경찰 3-4명",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "SK하이닉스 HBM 증산, AI 데이터센터 원전급 전력 수요 급증",
     "sk_headline": "",
-    "article_count": 36
+    "article_count": 35
   }
 }

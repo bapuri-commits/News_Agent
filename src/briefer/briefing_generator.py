@@ -1,9 +1,9 @@
 """4단계 브리핑 생성 파이프라인.
 
-Stage 1 (Sonnet): 클러스터링 + Top 5 선정
+Stage 1 (Haiku):  클러스터링 + Top 5 선정
 Stage 2 (Opus):   Top 5 심층 요약 (크롤링된 본문 기반)
-Stage 3 (Sonnet): 카테고리별 요약
-Stage 4 (Opus):   SK에코플랜트 렌즈 분석
+Stage 3 (Sonnet): 카테고리별 요약 (3건+ 카테고리에 impact 포함)
+Stage 4 (Sonnet): SK에코플랜트 렌즈 분석
 """
 
 from __future__ import annotations
@@ -30,6 +30,7 @@ logger = logging.getLogger(__name__)
 
 load_dotenv(config.PROJECT_ROOT / ".env")
 
+MODEL_HAIKU = "claude-haiku-4-5-20251001"
 MODEL_SONNET = "claude-sonnet-4-20250514"
 MODEL_OPUS = "claude-opus-4-20250514"
 
@@ -52,7 +53,7 @@ class BriefingGenerator:
         """전체 브리핑 파이프라인을 실행한다."""
         article_dicts = [a.to_dict() for a in articles]
 
-        logger.info("=== Stage 1: Clustering + Top 5 (Sonnet) ===")
+        logger.info("=== Stage 1: Clustering + Top 5 (Haiku) ===")
         stage1 = self._stage1_cluster(article_dicts, profile)
 
         top5_ids = stage1.get("top5_ids", [])[:5]
@@ -66,6 +67,11 @@ class BriefingGenerator:
 
         crawl_targets = [a for a in articles if a.id in crawl_target_ids]
         bodies = crawl_articles(crawl_targets) if crawl_targets else {}
+        crawl_success = sum(
+            1 for a in crawl_targets
+            if bodies.get(a.id, "") != a.snippet and len(bodies.get(a.id, "")) > len(a.snippet)
+        )
+        logger.info("크롤링 결과: %d/%d 성공", crawl_success, len(crawl_targets))
 
         logger.info("=== Stage 2: Top 5 Deep Summary (Opus) ===")
         top5_articles = self._enrich_with_body(
@@ -80,7 +86,7 @@ class BriefingGenerator:
         sk_ecoplant_result = None
         sk_article_dicts = [a for a in article_dicts if a["id"] in sk_ids]
         if sk_article_dicts:
-            logger.info("=== Stage 4: SK에코플랜트 Lens (Opus) ===")
+            logger.info("=== Stage 4: SK에코플랜트 Lens (Sonnet) ===")
             sk_with_body = self._enrich_with_body(sk_article_dicts, bodies)
             sk_ecoplant_result = self._stage4_sk_ecoplant(sk_with_body)
 
@@ -112,12 +118,13 @@ class BriefingGenerator:
             "source_diversity": dict(source_dist),
             "metadata": {
                 "total_articles": len(articles),
-                "crawled_articles": len(bodies),
+                "crawl_attempted": len(crawl_targets),
+                "crawl_success": crawl_success,
                 "models_used": {
-                    "clustering": MODEL_SONNET,
+                    "clustering": MODEL_HAIKU,
                     "deep_summary": MODEL_OPUS,
                     "category_summary": MODEL_SONNET,
-                    "sk_ecoplant": MODEL_OPUS,
+                    "sk_ecoplant": MODEL_SONNET,
                 },
                 "pipeline_version": "2.0",
             },
@@ -128,7 +135,7 @@ class BriefingGenerator:
     def _stage1_cluster(self, articles: list[dict], profile: dict) -> dict:
         profile_summary = build_profile_summary(profile)
         prompt = build_stage1_prompt(articles, profile_summary)
-        raw = self._call_llm(MODEL_SONNET, STAGE1_SYSTEM, prompt, max_tokens=2048)
+        raw = self._call_llm(MODEL_HAIKU, STAGE1_SYSTEM, prompt, max_tokens=2048)
         return self._parse_json(raw, "stage1")
 
     def _stage2_deep_summary(self, articles_with_body: list[dict]) -> dict:
@@ -143,14 +150,14 @@ class BriefingGenerator:
         if not non_empty:
             return {"categories": {}}
         prompt = build_stage3_prompt(non_empty)
-        raw = self._call_llm(MODEL_SONNET, STAGE3_SYSTEM, prompt, max_tokens=4096)
+        raw = self._call_llm(MODEL_SONNET, STAGE3_SYSTEM, prompt, max_tokens=8192)
         return self._parse_json(raw, "stage3")
 
     def _stage4_sk_ecoplant(self, sk_articles: list[dict]) -> dict | None:
         if not sk_articles:
             return None
         prompt = build_stage4_prompt(sk_articles)
-        raw = self._call_llm(MODEL_OPUS, STAGE4_SYSTEM, prompt, max_tokens=2048)
+        raw = self._call_llm(MODEL_SONNET, STAGE4_SYSTEM, prompt, max_tokens=2048)
         return self._parse_json(raw, "stage4")
 
     def _call_llm(
@@ -160,16 +167,30 @@ class BriefingGenerator:
         user_prompt: str,
         max_tokens: int = 2048,
     ) -> str:
-        model_label = "Sonnet" if "sonnet" in model else "Opus"
+        if "haiku" in model:
+            model_label = "Haiku"
+        elif "opus" in model:
+            model_label = "Opus"
+        else:
+            model_label = "Sonnet"
         logger.info("LLM call [%s]: %d chars input", model_label, len(user_prompt))
         response = self.client.messages.create(
             model=model,
             max_tokens=max_tokens,
-            system=system,
+            system=[{
+                "type": "text",
+                "text": system,
+                "cache_control": {"type": "ephemeral"},
+            }],
             messages=[{"role": "user", "content": user_prompt}],
         )
         result = response.content[0].text
-        logger.info("LLM response [%s]: %d chars", model_label, len(result))
+        cache_status = getattr(response.usage, "cache_read_input_tokens", 0)
+        if cache_status:
+            logger.info("LLM response [%s]: %d chars (cache hit: %d tokens)",
+                        model_label, len(result), cache_status)
+        else:
+            logger.info("LLM response [%s]: %d chars", model_label, len(result))
         return result
 
     @staticmethod
@@ -209,9 +230,16 @@ class BriefingGenerator:
         articles: list[dict], clusters: dict[str, list[str]],
     ) -> dict[str, list[dict]]:
         id_map = {a["id"]: a for a in articles}
+        seen: set[str] = set()
         result: dict[str, list[dict]] = {}
         for cat, ids in clusters.items():
-            result[cat] = [id_map[aid] for aid in ids if aid in id_map]
+            deduped = []
+            for aid in ids:
+                if aid in id_map and aid not in seen:
+                    deduped.append(id_map[aid])
+                    seen.add(aid)
+            if deduped:
+                result[cat] = deduped
         return result
 
     @staticmethod

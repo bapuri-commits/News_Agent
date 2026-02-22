@@ -98,11 +98,15 @@ def _render_categories(categories: dict) -> list[str]:
     for cat_key, cat_data in categories.items():
         label = CATEGORY_LABELS.get(cat_key, cat_key)
         summary = cat_data.get("summary", "")
+        impact = cat_data.get("impact", "")
         items = cat_data.get("items", [])
 
         lines.append(f"### {label}")
         if summary:
             lines.append(f"{summary}")
+            lines.append("")
+        if impact:
+            lines.append(f"**Impact**: {impact}")
             lines.append("")
 
         for item in items:

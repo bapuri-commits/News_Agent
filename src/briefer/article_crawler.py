@@ -77,13 +77,18 @@ def resolve_google_news_url(url: str) -> str:
     """Google News redirect URL을 실제 기사 URL로 변환한다.
 
     Strategy:
-      1) googlenewsdecoder 라이브러리 (가장 안정적, HTTP 요청 기반)
-      2) 원본 URL 반환 (non-Google News URL)
+      1) googlenewsdecoder 라이브러리
+      2) requests redirect 추적 (HEAD → GET 폴백)
+      3) 원본 URL 반환 (최후 수단)
     """
     if not _is_google_news_url(url):
         return url
 
     decoded = _decode_via_library(url)
+    if decoded:
+        return decoded
+
+    decoded = _resolve_via_redirect(url)
     if decoded:
         return decoded
 
@@ -104,6 +109,23 @@ def _decode_via_library(url: str) -> str | None:
                 return decoded
     except Exception as e:
         logger.debug("googlenewsdecoder failed for %s: %s", url[:60], e)
+    return None
+
+
+def _resolve_via_redirect(url: str) -> str | None:
+    """HTTP redirect chain을 따라가 최종 URL을 추출한다."""
+    headers = {"User-Agent": USER_AGENT}
+    try:
+        resp = requests.get(
+            url, headers=headers, timeout=REQUEST_TIMEOUT,
+            allow_redirects=True,
+        )
+        final_url = resp.url
+        if final_url and not _is_google_news_url(final_url):
+            logger.debug("Resolved via redirect: %s -> %s", url[:60], final_url[:80])
+            return final_url
+    except requests.RequestException as e:
+        logger.debug("Redirect resolve failed for %s: %s", url[:60], e)
     return None
 
 

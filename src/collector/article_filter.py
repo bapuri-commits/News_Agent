@@ -21,7 +21,7 @@ _SK_ECOPLANT_PATTERNS = re.compile(
     r"SK\s*에코플랜트|SK\s*ecoplant|sk\s*ecoplant", re.IGNORECASE
 )
 
-MAX_SOURCE_GROUP_RATIO = 0.4
+MAX_SOURCE_GROUP_RATIO = 0.35
 
 
 MAX_ARTICLE_AGE_DAYS = 3
@@ -61,7 +61,7 @@ def filter_articles(
     for article in scored:
         if article.url in selected_urls:
             continue
-        if article.relevance_score < 0.1:
+        if article.relevance_score < 0.05:
             continue
         selected.append(article)
         selected_urls.add(article.url)
@@ -175,7 +175,7 @@ def _match_categories(article: Article, profile: dict) -> list[str]:
 
 
 MINORITY_GROUPS = {"S1", "S2", "S5"}
-MINORITY_MIN = 2
+MINORITY_MIN = 3
 
 
 def _ensure_source_minimum(

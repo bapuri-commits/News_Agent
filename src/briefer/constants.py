@@ -36,6 +36,10 @@ CATEGORY_LABELS = {
     "talent_hr": "인력 / 인사",
     "urban_smartcity": "도시개발 / 스마트시티",
     "contingent": "우발채무 / PF 리스크",
+    # LLM이 생성하는 추가 카테고리
+    "memory_foundry": "메모리 / 파운드리",
+    "ai_trend": "AI / 반도체 트렌드",
+    "milestone": "마일스톤 / 착공·준공",
     # 전용 추적
     "sk_ecoplant": "SK에코플랜트",
     "other": "기타",
@@ -63,6 +67,9 @@ CATEGORY_COLORS = {
     "talent_hr": "#0d9488",
     "urban_smartcity": "#0284c7",
     "contingent": "#e11d48",
+    "memory_foundry": "#7e22ce",
+    "ai_trend": "#0ea5e9",
+    "milestone": "#059669",
     "sk_ecoplant": "#f97316",
     "other": "#6b7280",
 }
