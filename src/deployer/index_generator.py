@@ -2,15 +2,35 @@
 
 Google Opal 스타일 유지, 모바일 반응형.
 각 카드에 날짜, 테마 라벨, Top 1 헤드라인, SK에코플랜트 헤드라인 표시.
+메타 캐시(index-meta.json)로 CI에서도 과거 카드 정보를 보존한다.
 """
 
 from __future__ import annotations
 
 import html
 import json
+import logging
 from pathlib import Path
 
 from src.briefer.themes import pick_theme
+
+logger = logging.getLogger("deploy")
+
+
+def _load_meta_cache(cache_path: Path) -> dict[str, dict]:
+    """기존 메타 캐시를 로드한다. 없으면 빈 dict."""
+    try:
+        with open(cache_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def _save_meta_cache(cache_path: Path, cache: dict[str, dict]) -> None:
+    """메타 캐시를 저장한다."""
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(cache_path, "w", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False, indent=2)
 
 
 def _load_briefing_meta(json_path: Path) -> dict | None:
@@ -39,12 +59,23 @@ def _load_briefing_meta(json_path: Path) -> dict | None:
 
 
 def generate_index(briefings_dir: Path, dates: list[str], output_path: Path) -> None:
-    """날짜 목록으로 인덱스 페이지를 생성한다."""
+    """날짜 목록으로 인덱스 페이지를 생성한다. 메타 캐시를 활용하여 과거 카드 정보도 보존."""
+    cache_path = output_path.parent / "index-meta.json"
+    meta_cache = _load_meta_cache(cache_path)
+
+    for date in dates:
+        json_path = briefings_dir / f"{date}.json"
+        fresh_meta = _load_briefing_meta(json_path)
+        if fresh_meta:
+            meta_cache[date] = fresh_meta
+
+    _save_meta_cache(cache_path, meta_cache)
+    logger.info("  메타 캐시 갱신: %d건 (%s)", len(meta_cache), cache_path.name)
+
     cards_html_parts = []
 
     for date in sorted(dates, reverse=True):
-        json_path = briefings_dir / f"{date}.json"
-        meta = _load_briefing_meta(json_path)
+        meta = meta_cache.get(date)
 
         if meta:
             theme_label = html.escape(meta["theme_label"])
