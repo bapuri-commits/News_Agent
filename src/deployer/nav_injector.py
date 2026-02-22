@@ -60,6 +60,18 @@ _NAV_CSS = """\
 </style>"""
 
 
+_NAV_STRIP_PATTERN = re.compile(
+    r"\n?<style>\s*\.briefing-nav\s*\{.*?</style>\s*"
+    r"<nav class=\"briefing-nav\">.*?</nav>\s*",
+    re.DOTALL,
+)
+
+
+def strip_nav(html_content: str) -> str:
+    """이전에 주입된 네비게이션 바와 CSS를 제거한다."""
+    return _NAV_STRIP_PATTERN.sub("", html_content)
+
+
 def inject_nav(
     html_content: str,
     prev_date: str | None,

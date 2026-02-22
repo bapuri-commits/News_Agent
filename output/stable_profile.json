@@ -1,0 +1,305 @@
+{
+  "user_intent": "매일 아침 5~20분 내 반도체/DC/건설/투자 핵심 동향 파악. 직접 요청 증거: 'Send me semiconductor business news at 8am every day'",
+  "top_priorities": [
+    {
+      "name": "반도체 Fab/CapEx",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 17
+    },
+    {
+      "name": "EPC/수주",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 16
+    },
+    {
+      "name": "반도체 메이커",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 16
+    },
+    {
+      "name": "CapEx 가이던스",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 15
+    },
+    {
+      "name": "첨단패키징(HBM/CoWoS)",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 13
+    },
+    {
+      "name": "SK그룹/하이닉스",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 13
+    },
+    {
+      "name": "DC 냉각",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 10
+    },
+    {
+      "name": "건설기술(모듈러/DfMA)",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 9
+    },
+    {
+      "name": "인력/인사",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 9
+    },
+    {
+      "name": "데이터센터 신축",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 8
+    },
+    {
+      "name": "M&A/사업재편",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 6
+    },
+    {
+      "name": "국내 건설사",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 5
+    },
+    {
+      "name": "DC 전력",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 4
+    },
+    {
+      "name": "마일스톤",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 4
+    },
+    {
+      "name": "하이퍼스케일러",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 4
+    },
+    {
+      "name": "반도체 장비",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 4
+    },
+    {
+      "name": "공기/원가/변경관리",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 3
+    },
+    {
+      "name": "SK에코플랜트",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 3
+    },
+    {
+      "name": "인허가",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 2
+    },
+    {
+      "name": "프로젝트 파이낸싱",
+      "score": 3,
+      "source": "both",
+      "export_mentions": 2
+    },
+    {
+      "name": "도시개발/스마트시티",
+      "score": 3,
+      "source": "confirmed",
+      "export_mentions": 1,
+      "mode": "trigger",
+      "trigger_condition": "대형 프로젝트(네옴 등) 이슈 발생 시"
+    },
+    {
+      "name": "우발채무",
+      "score": 3,
+      "source": "confirmed",
+      "export_mentions": 1,
+      "mode": "trigger",
+      "trigger_condition": "SK에코플랜트 또는 주요 건설사 관련 이슈 시"
+    },
+    {
+      "name": "ESG/탄소규제",
+      "score": 3,
+      "source": "confirmed",
+      "export_mentions": 1,
+      "mode": "always",
+      "scope": "규제 리스크 + ESG 투자 기회/탄소크레딧 포함"
+    },
+    {
+      "name": "클린룸/공정 인프라",
+      "score": 3,
+      "source": "confirmed",
+      "export_mentions": 0,
+      "mode": "trigger",
+      "trigger_condition": "중요 이슈(신규 Fab 착공, 장비 지연 등) 발생 시"
+    },
+    {
+      "name": "자재/노무",
+      "score": 3,
+      "source": "confirmed",
+      "export_mentions": 0,
+      "mode": "trigger",
+      "trigger_condition": "가격 급등/파업 등 이상 시그널 시"
+    },
+    {
+      "name": "인프라장비(Schneider/Vertiv)",
+      "score": 3,
+      "source": "confirmed",
+      "export_mentions": 0,
+      "mode": "contextual",
+      "trigger_condition": "DC 전력/냉각 뉴스 내 자연 언급 시만"
+    }
+  ],
+  "must_include_triggers": [
+    "large_award",
+    "refinance"
+  ],
+  "avoid": [
+    "biased",
+    "no_source",
+    "too_basic"
+  ],
+  "preferred_format": {
+    "reading_time": "20min",
+    "sections": [
+      "Top5",
+      "ByCategory",
+      "Risks",
+      "NextSignals",
+      "SourceDiversity"
+    ],
+    "style": "executive_brief",
+    "detail_preferences": [
+      "PPT 슬라이드",
+      "리스트",
+      "브리핑",
+      "비교분석",
+      "상세설명",
+      "요약",
+      "인포그래픽",
+      "표"
+    ]
+  },
+  "source_preferences": {
+    "paywalled_ok": false,
+    "language": "summary_kr"
+  },
+  "schedule": {
+    "timezone": "Asia/Seoul",
+    "daily_time": "05:00-06:00",
+    "weekends": true
+  },
+  "industries": {
+    "fab_capex": 3,
+    "cleanroom": 3,
+    "equipment_supply": 2,
+    "packaging": 2,
+    "memory_foundry": 2,
+    "dc_build": 3,
+    "dc_power": 3,
+    "dc_cooling": 3,
+    "dc_cloud": 2,
+    "power_grid": 2,
+    "renewable": 2,
+    "nuclear": 2,
+    "carbon_esg": 2,
+    "petrochemical": 2,
+    "battery_ev": 2,
+    "bio_pharma": 2,
+    "defense": 2,
+    "transport_logistics": 2,
+    "urban_smartcity": 3
+  },
+  "themes": {
+    "epc_award": 3,
+    "schedule_cost": 3,
+    "permit": 3,
+    "material_labor": 3,
+    "safety": 2,
+    "milestone": 3,
+    "capex_guidance": 3,
+    "pf_finance": 3,
+    "contingent": 3,
+    "ipo": 2,
+    "ma_restructure": 3,
+    "credit_bond": 2,
+    "policy_subsidy": 2,
+    "geopolitics": 2,
+    "macro": 2,
+    "trade_supply": 2,
+    "esg_regulation": 3,
+    "ai_trend": 2,
+    "construction_tech": 3,
+    "talent_hr": 3
+  },
+  "companies": {
+    "sk_ecoplant": 3,
+    "sk_group": 3,
+    "kr_construction": 2,
+    "semi_makers": 2,
+    "hyperscalers": 2,
+    "semi_equip": 2,
+    "infra_equip": 3
+  },
+  "regions": [
+    "korea",
+    "us",
+    "asia"
+  ],
+  "sk_ecoplant_lens": [
+    "order_mix",
+    "cashflow",
+    "pf_contingent",
+    "competitor"
+  ],
+  "conversation_hint_policy": {
+    "lookback_days": 7,
+    "max_weight_percent": 10
+  },
+  "risk_guardrails": {
+    "diversity_enforced": true,
+    "require_links": true,
+    "separate_fact_inference": true
+  },
+  "open_questions": [],
+  "confirmed_overrides": {
+    "confirmed_at": "2026-02-21",
+    "items": [
+      {"name": "클린룸/공정 인프라", "decision": "trigger: 중요 이슈 발생 시만"},
+      {"name": "도시개발/스마트시티", "decision": "trigger: 대형 프로젝트 이슈 시만"},
+      {"name": "자재/노무", "decision": "trigger: 가격 급등/파업 등 이상 시그널만"},
+      {"name": "우발채무", "decision": "trigger: SK에코플랜트/주요 건설사 이슈 시만"},
+      {"name": "ESG/탄소규제", "decision": "always: 적극적 관심 (투자 기회/탄소크레딧 포함)"},
+      {"name": "인프라장비(Schneider/Vertiv)", "decision": "contextual: DC 전력/냉각 내 자연 언급 시만"}
+    ]
+  },
+  "metadata": {
+    "export_conversation_count": 65,
+    "business_relevant_count": 28,
+    "survey_date": "2026-02-18",
+    "model_used": "claude-opus-4-6",
+    "pipeline_version": "1.0",
+    "generated_at": "2026-02-21T14:44:57.771671+00:00",
+    "profile_confirmed_at": "2026-02-21"
+  }
+}

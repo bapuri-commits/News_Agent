@@ -62,7 +62,8 @@ htmlcov/
 node_modules/
 
 # Project output (generated data, not source)
-output/
+output/*
+!output/stable_profile.json
 
 # ChatGPT export data (sensitive)
 *.zip
