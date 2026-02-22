@@ -17,6 +17,7 @@ PREPROCESSED_CHUNKS_PATH = OUTPUT_DIR / "preprocessed_chunks.json"
 
 COLLECTED_DIR = OUTPUT_DIR / "collected"
 BRIEFINGS_DIR = OUTPUT_DIR / "briefings"
+WEB_DIR = PROJECT_ROOT / "web"
 RSS_FEEDS_PATH = DATA_DIR / "rss_feeds.json"
 
 ROLES_TO_EXTRACT = {"user", "assistant"}

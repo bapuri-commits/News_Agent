@@ -456,6 +456,44 @@ def cmd_brief(args: argparse.Namespace) -> None:
     logger.info("=== Phase 6 complete ===")
 
 
+def cmd_deploy(args: argparse.Namespace) -> None:
+    """Phase 7: briefings/ HTML → web/ 정적 사이트 빌드."""
+    logger = logging.getLogger("deploy")
+    logger.info("=== Phase 7: Deploy ===")
+
+    briefings_dir = config.BRIEFINGS_DIR
+    output_dir = Path(args.output_dir) if args.output_dir else config.WEB_DIR
+
+    if not briefings_dir.exists() or not list(briefings_dir.glob("*.html")):
+        logger.error("빌드할 HTML 브리핑이 없습니다. 'brief' 명령을 먼저 실행하세요.")
+        sys.exit(1)
+
+    from src.deployer.site_builder import build_site
+    build_site(briefings_dir, output_dir)
+
+    _save_pipeline_state("deploy", {
+        "output_dir": str(output_dir),
+    })
+
+    if args.push:
+        import subprocess
+        logger.info("git push 시작...")
+        try:
+            subprocess.run(["git", "add", str(output_dir)], check=True,
+                           cwd=config.PROJECT_ROOT)
+            subprocess.run(
+                ["git", "commit", "-m", f"deploy: update web briefings"],
+                check=True, cwd=config.PROJECT_ROOT,
+            )
+            subprocess.run(["git", "push"], check=True, cwd=config.PROJECT_ROOT)
+            logger.info("git push 완료")
+        except subprocess.CalledProcessError as e:
+            logger.error("git push 실패: %s", e)
+            sys.exit(1)
+
+    logger.info("=== Phase 7 complete ===")
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="news-agent",
@@ -475,6 +513,10 @@ def build_parser() -> argparse.ArgumentParser:
 
     p_brief = sub.add_parser("brief", help="Phase 6: 브리핑 생성 (LLM)")
     p_brief.add_argument("--date", default=None, help="브리핑 대상 날짜 (YYYY-MM-DD)")
+
+    p_deploy = sub.add_parser("deploy", help="Phase 7: 정적 사이트 빌드 (web/)")
+    p_deploy.add_argument("--output-dir", default=None, help="출력 디렉토리 (기본: web/)")
+    p_deploy.add_argument("--push", action="store_true", help="빌드 후 git add/commit/push 자동 실행")
 
     return parser
 
@@ -496,6 +538,8 @@ def main() -> None:
         cmd_collect(args)
     elif args.command == "brief":
         cmd_brief(args)
+    elif args.command == "deploy":
+        cmd_deploy(args)
     else:
         parser.print_help()
 

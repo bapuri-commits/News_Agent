@@ -254,7 +254,7 @@ def _rebalance_sources(articles: list[Article], max_count: int) -> list[Article]
 
 _KEYWORD_MAP: dict[str, list[str]] = {
     # A. 반도체
-    "fab_capex": ["fab", "팹", "반도체", "semiconductor", "capex", "증설"],
+    "fab_capex": ["fab", "팹", "반도체", "semiconductor", "증설", "fab capex", "신규 팹"],
     "cleanroom": ["클린룸", "cleanroom", "clean room", "upw", "cda", "스크러버", "scrubber"],
     "equipment_supply": ["장비", "equipment", "asml", "amat", "lam", "tel", "kla"],
     "packaging": ["패키징", "packaging", "hbm", "cowos", "osat", "첨단패키징"],

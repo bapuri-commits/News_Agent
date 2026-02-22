@@ -1,0 +1,227 @@
+"""인덱스 페이지 생성 — 날짜별 브리핑 카드 목록.
+
+Google Opal 스타일 유지, 모바일 반응형.
+각 카드에 날짜, 테마 라벨, Top 1 헤드라인, SK에코플랜트 헤드라인 표시.
+"""
+
+from __future__ import annotations
+
+import html
+import json
+from pathlib import Path
+
+from src.briefer.themes import pick_theme
+
+
+def _load_briefing_meta(json_path: Path) -> dict | None:
+    """JSON 브리핑에서 인덱스 카드에 필요한 메타 정보를 추출한다."""
+    try:
+        with open(json_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return None
+
+    date = data.get("date", json_path.stem)
+    theme = pick_theme(data)
+    top5 = data.get("top5", [])
+    sk = data.get("sk_ecoplant")
+    article_count = data.get("metadata", {}).get("total_articles", 0)
+
+    return {
+        "date": date,
+        "theme_label": theme.get("label", ""),
+        "theme_accent": theme.get("accent", "#1a73e8"),
+        "theme_gradient": theme.get("header_gradient", ""),
+        "top_headline": top5[0].get("headline", "") if top5 else "",
+        "sk_headline": sk.get("headline", "") if sk else "",
+        "article_count": article_count,
+    }
+
+
+def generate_index(briefings_dir: Path, dates: list[str], output_path: Path) -> None:
+    """날짜 목록으로 인덱스 페이지를 생성한다."""
+    cards_html_parts = []
+
+    for date in sorted(dates, reverse=True):
+        json_path = briefings_dir / f"{date}.json"
+        meta = _load_briefing_meta(json_path)
+
+        if meta:
+            theme_label = html.escape(meta["theme_label"])
+            accent = html.escape(meta["theme_accent"])
+            top_hl = html.escape(meta["top_headline"])
+            sk_hl = html.escape(meta["sk_headline"])
+            date_esc = html.escape(meta["date"])
+        else:
+            theme_label = ""
+            accent = "#1a73e8"
+            top_hl = ""
+            sk_hl = ""
+            date_esc = html.escape(date)
+
+        sk_row = ""
+        if sk_hl:
+            sk_row = f'<div class="idx-sk"><span class="idx-sk-tag">SK에코</span> {sk_hl}</div>'
+
+        cards_html_parts.append(f"""\
+    <a href="{date_esc}.html" class="idx-card" style="--card-accent: {accent}">
+      <div class="idx-card-top">
+        <span class="idx-date">{date_esc}</span>
+        <span class="idx-theme" style="background: {accent}20; color: {accent}">{theme_label}</span>
+      </div>
+      <div class="idx-headline">{top_hl}</div>
+      {sk_row}
+    </a>""")
+
+    cards_html = "\n".join(cards_html_parts) if cards_html_parts else '<p class="idx-empty">아직 생성된 브리핑이 없습니다.</p>'
+
+    page = f"""\
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing Archive</title>
+{_INDEX_CSS}
+</head>
+<body>
+<div class="idx-container">
+  <header class="idx-header">
+    <h1 class="idx-logo">Executive Briefing</h1>
+    <p class="idx-sub">건설 · 반도체 · 데이터센터 · 인프라</p>
+  </header>
+  <main class="idx-grid">
+{cards_html}
+  </main>
+  <footer class="idx-footer">
+    <p>News Agent — Executive Briefing Archive</p>
+  </footer>
+</div>
+</body>
+</html>"""
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(page)
+
+
+_INDEX_CSS = """\
+<style>
+:root {
+  --bg: #f0f4ff;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --text-secondary: #6b7280;
+  --border: #e5e7eb;
+  --radius: 16px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-lg: 0 4px 12px rgba(0,0,0,0.1);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, 'Pretendard', 'Noto Sans KR', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.idx-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+.idx-header {
+  text-align: center;
+  background: linear-gradient(135deg, #1a73e8 0%, #4285f4 100%);
+  color: white;
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  margin-bottom: 28px;
+}
+.idx-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.idx-sub {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.85);
+}
+.idx-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.idx-card {
+  display: block;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+  text-decoration: none;
+  color: var(--text);
+  border-left: 3px solid var(--card-accent, #1a73e8);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+.idx-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-1px);
+}
+.idx-card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.idx-date {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.idx-theme {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.idx-headline {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.idx-sk {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+.idx-sk-tag {
+  display: inline-block;
+  background: #fff7ed;
+  color: #ea580c;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 6px;
+  margin-right: 4px;
+}
+.idx-footer {
+  text-align: center;
+  padding: 24px 0 8px;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+.idx-empty {
+  text-align: center;
+  color: var(--text-secondary);
+  font-style: italic;
+  padding: 40px 16px;
+}
+@media (max-width: 480px) {
+  .idx-container { padding: 16px 12px; }
+  .idx-card { padding: 14px 16px; }
+}
+</style>"""
