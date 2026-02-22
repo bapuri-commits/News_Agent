@@ -22,6 +22,8 @@ jobs:
   briefing:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    outputs:
+      target_date: ${{ steps.date.outputs.target }}
     steps:
       - uses: actions/checkout@v4
 
@@ -62,6 +64,38 @@ jobs:
           git diff --staged --quiet || git commit -m "briefing: ${{ steps.date.outputs.target }}"
           git push
 
+      - name: Email briefing
+        if: success()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "📰 ${{ steps.date.outputs.target }} Executive Briefing"
+          to: ${{ secrets.EMAIL_TO }}
+          from: ${{ secrets.EMAIL_USERNAME }}
+          html_body: file://web/${{ steps.date.outputs.target }}.html
+        continue-on-error: true
+
+      - name: Email failure alert
+        if: failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "❌ ${{ steps.date.outputs.target }} 브리핑 파이프라인 실패"
+          to: ${{ secrets.EMAIL_TO }}
+          from: ${{ secrets.EMAIL_USERNAME }}
+          body: |
+            브리핑 파이프라인이 실패했습니다.
+
+            날짜: ${{ steps.date.outputs.target }}
+            로그: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        continue-on-error: true
+
   deploy-pages:
     needs: briefing
     runs-on: ubuntu-latest
@@ -78,3 +112,21 @@ jobs:
           path: web
       - id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Email deploy failure
+        if: failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "❌ ${{ needs.briefing.outputs.target_date }} 페이지 배포 실패"
+          to: ${{ secrets.EMAIL_TO }}
+          from: ${{ secrets.EMAIL_USERNAME }}
+          body: |
+            GitHub Pages 배포가 실패했습니다.
+            (브리핑 생성은 완료, 배포 단계에서 오류)
+
+            로그: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        continue-on-error: true
