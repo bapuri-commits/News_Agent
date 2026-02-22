@@ -67,6 +67,23 @@ jobs:
           git pull --rebase origin main
           git push
 
+      - name: Prepare email body
+        if: success()
+        run: |
+          DATE="${{ steps.date.outputs.target }}"
+          URL="https://bapuri-commits.github.io/News_Agent/${DATE}.html"
+          {
+            echo "📰 ${DATE} Executive Briefing"
+            echo ""
+            echo "▶ 웹에서 보기: ${URL}"
+            echo "▶ 전체 목록: https://bapuri-commits.github.io/News_Agent/"
+            echo ""
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            echo ""
+            cat output/briefings/${DATE}.md
+          } > /tmp/email-body.txt
+          cp web/${DATE}.html /tmp/email-html.html
+
       - name: Email briefing
         if: success()
         uses: dawidd6/action-send-mail@v3
@@ -78,7 +95,8 @@ jobs:
           subject: "📰 ${{ steps.date.outputs.target }} Executive Briefing"
           to: ${{ secrets.EMAIL_TO }}
           from: ${{ secrets.EMAIL_USERNAME }}
-          html_body: file://web/${{ steps.date.outputs.target }}.html
+          body: file:///tmp/email-body.txt
+          html_body: file:///tmp/email-html.html
         continue-on-error: true
 
       - name: Email failure alert
