@@ -56,7 +56,8 @@ class BriefingGenerator:
         logger.info("=== Stage 1: Clustering + Top 5 (Haiku) ===")
         stage1 = self._stage1_cluster(article_dicts, profile)
 
-        top5_ids = stage1.get("top5_ids", [])[:5]
+        raw_top5_ids = stage1.get("top5_ids", [])[:5]
+        top5_ids = self._dedup_top5(raw_top5_ids, article_dicts)
         sk_ids = stage1.get("sk_ecoplant_ids", [])[:10]
         clusters = stage1.get("clusters", {})
         crawl_target_ids = list(dict.fromkeys(top5_ids + sk_ids))
@@ -243,19 +244,43 @@ class BriefingGenerator:
         return result
 
     @staticmethod
+    def _dedup_top5(ids: list[str], articles: list[dict]) -> list[str]:
+        """같은 기사가 다른 소스 URL로 중복 선정된 경우 제목 유사도 기반으로 제거."""
+        id_map = {a["id"]: a for a in articles}
+        seen_titles: list[str] = []
+        deduped: list[str] = []
+        for aid in ids:
+            article = id_map.get(aid)
+            if not article:
+                continue
+            title = article.get("title", "").strip().lower()
+            title_short = title[:30]
+            if any(title_short in seen or seen in title_short
+                   for seen in seen_titles):
+                logger.info("Top 5 중복 제거: %s (제목 유사)", aid)
+                continue
+            seen_titles.append(title_short)
+            deduped.append(aid)
+        return deduped
+
+    @staticmethod
     def _extract_risks(stage2: dict) -> list[str]:
         risks = []
+        seen: set[str] = set()
         for item in stage2.get("items", []):
             risk = item.get("risk", "")
-            if risk and risk != "특이사항 없음":
+            if risk and risk != "특이사항 없음" and risk not in seen:
                 risks.append(f"[{item.get('headline', '')}] {risk}")
+                seen.add(risk)
         return risks
 
     @staticmethod
     def _extract_next_signals(stage2: dict) -> list[str]:
         signals = []
+        seen: set[str] = set()
         for item in stage2.get("items", []):
             ns = item.get("next_signal", "")
-            if ns:
+            if ns and ns not in seen:
                 signals.append(ns)
+                seen.add(ns)
         return signals
