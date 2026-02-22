@@ -1,10 +1,10 @@
 {
   "2026-02-22": {
     "date": "2026-02-22",
-    "theme_label": "Risk Alert",
-    "theme_accent": "#dc2626",
-    "theme_gradient": "linear-gradient(135deg, #dc2626 0%, #f87171 100%)",
-    "top_headline": "용인 SK반도체 현장 1.4만명 투입, 치안인력 부족 심화",
+    "theme_label": "Tech Focus",
+    "theme_accent": "#1a73e8",
+    "theme_gradient": "linear-gradient(135deg, #1a73e8 0%, #4285f4 100%)",
+    "top_headline": "용인 SK하이닉스 현장 1.4만명 투입, 치안 인력 부족 심각",
     "sk_headline": "",
     "article_count": 36
   }
