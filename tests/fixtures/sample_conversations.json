@@ -1,0 +1,193 @@
+[
+  {
+    "id": "conv-001",
+    "title": "반도체 공장 수주 동향",
+    "create_time": 1708300000.0,
+    "update_time": 1708300500.0,
+    "mapping": {
+      "root": {
+        "id": "root",
+        "message": null,
+        "parent": null,
+        "children": ["msg-1"]
+      },
+      "msg-1": {
+        "id": "msg-1",
+        "message": {
+          "id": "msg-1",
+          "author": {"role": "user", "metadata": {}},
+          "create_time": 1708300100.0,
+          "content": {
+            "content_type": "text",
+            "parts": ["최근 반도체 팹 증설 관련 수주 동향 알려줘"]
+          },
+          "status": "finished_successfully"
+        },
+        "parent": "root",
+        "children": ["msg-2"]
+      },
+      "msg-2": {
+        "id": "msg-2",
+        "message": {
+          "id": "msg-2",
+          "author": {"role": "assistant", "metadata": {}},
+          "create_time": 1708300200.0,
+          "content": {
+            "content_type": "text",
+            "parts": ["최근 TSMC 구마모토 2공장 착공, 삼성전자 평택 P4 라인 증설, SK에코플랜트 클린룸 EPC 수주 확대 등이 주요 이슈입니다."]
+          },
+          "status": "finished_successfully"
+        },
+        "parent": "msg-1",
+        "children": ["msg-3"]
+      },
+      "msg-3": {
+        "id": "msg-3",
+        "message": {
+          "id": "msg-3",
+          "author": {"role": "user", "metadata": {}},
+          "create_time": 1708300300.0,
+          "content": {
+            "content_type": "text",
+            "parts": ["SK에코플랜트 재무 상황은 어때?"]
+          },
+          "status": "finished_successfully"
+        },
+        "parent": "msg-2",
+        "children": ["msg-4"]
+      },
+      "msg-4": {
+        "id": "msg-4",
+        "message": {
+          "id": "msg-4",
+          "author": {"role": "assistant", "metadata": {}},
+          "create_time": 1708300400.0,
+          "content": {
+            "content_type": "text",
+            "parts": ["SK에코플랜트는 총차입금 6조원대, 단기차입 비중 60% 수준입니다. PF 우발채무 리스크와 차환 이슈가 있으며, IPO 재추진 여부가 시장의 관심사입니다."]
+          },
+          "status": "finished_successfully"
+        },
+        "parent": "msg-3",
+        "children": []
+      }
+    }
+  },
+  {
+    "id": "conv-002",
+    "title": "데이터센터 냉각 기술",
+    "create_time": 1708400000.0,
+    "update_time": 1708400300.0,
+    "mapping": {
+      "root": {
+        "id": "root",
+        "message": null,
+        "parent": null,
+        "children": ["msg-a"]
+      },
+      "msg-a": {
+        "id": "msg-a",
+        "message": {
+          "id": "msg-a",
+          "author": {"role": "user", "metadata": {}},
+          "create_time": 1708400100.0,
+          "content": {
+            "content_type": "text",
+            "parts": ["데이터센터 액침냉각 최신 동향 요약해줘"]
+          },
+          "status": "finished_successfully"
+        },
+        "parent": "root",
+        "children": ["msg-b"]
+      },
+      "msg-b": {
+        "id": "msg-b",
+        "message": {
+          "id": "msg-b",
+          "author": {"role": "assistant", "metadata": {}},
+          "create_time": 1708400200.0,
+          "content": {
+            "content_type": "text",
+            "parts": ["액침냉각(immersion cooling)은 AI 워크로드 증가에 따른 열밀도 상승으로 수요가 급증하고 있습니다. Schneider Electric, Vertiv 등이 CDU 솔루션을 확대 중입니다."]
+          },
+          "status": "finished_successfully"
+        },
+        "parent": "msg-a",
+        "children": []
+      }
+    }
+  },
+  {
+    "id": "conv-003",
+    "title": "빈 대화 테스트",
+    "create_time": 1708500000.0,
+    "update_time": 1708500000.0,
+    "mapping": {
+      "root": {
+        "id": "root",
+        "message": null,
+        "parent": null,
+        "children": []
+      }
+    }
+  },
+  {
+    "id": "conv-004",
+    "title": "분기 대화 테스트",
+    "create_time": 1708600000.0,
+    "update_time": 1708600400.0,
+    "mapping": {
+      "root": {
+        "id": "root",
+        "message": null,
+        "parent": null,
+        "children": ["msg-x"]
+      },
+      "msg-x": {
+        "id": "msg-x",
+        "message": {
+          "id": "msg-x",
+          "author": {"role": "user", "metadata": {}},
+          "create_time": 1708600100.0,
+          "content": {
+            "content_type": "text",
+            "parts": ["EPC 수주 현황 알려줘"]
+          },
+          "status": "finished_successfully"
+        },
+        "parent": "root",
+        "children": ["msg-y-old", "msg-y-new"]
+      },
+      "msg-y-old": {
+        "id": "msg-y-old",
+        "message": {
+          "id": "msg-y-old",
+          "author": {"role": "assistant", "metadata": {}},
+          "create_time": 1708600200.0,
+          "content": {
+            "content_type": "text",
+            "parts": ["이전 응답 (편집 전)"]
+          },
+          "status": "finished_successfully"
+        },
+        "parent": "msg-x",
+        "children": []
+      },
+      "msg-y-new": {
+        "id": "msg-y-new",
+        "message": {
+          "id": "msg-y-new",
+          "author": {"role": "assistant", "metadata": {}},
+          "create_time": 1708600300.0,
+          "content": {
+            "content_type": "text",
+            "parts": ["국내 EPC 수주는 삼성물산, 현대건설, SK에코플랜트가 주도하고 있습니다."]
+          },
+          "status": "finished_successfully"
+        },
+        "parent": "msg-x",
+        "children": []
+      }
+    }
+  }
+]

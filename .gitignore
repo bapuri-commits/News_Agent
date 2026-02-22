@@ -60,3 +60,10 @@ htmlcov/
 
 # Node / Frontend
 node_modules/
+
+# Project output (generated data, not source)
+output/
+
+# ChatGPT export data (sensitive)
+*.zip
+docs/father-profile-raw.json

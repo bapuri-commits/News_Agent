@@ -1,0 +1,88 @@
+{
+  "feeds": [
+    {
+      "name": "DatacenterDynamics",
+      "url": "https://www.datacenterdynamics.com/en/rss/",
+      "source_group": "S1",
+      "lang": "en",
+      "categories": ["dc_build", "dc_power", "dc_cooling"]
+    },
+    {
+      "name": "EE Times",
+      "url": "https://www.eetimes.com/feed/",
+      "source_group": "S2",
+      "lang": "en",
+      "categories": ["fab_capex", "semi_makers", "equipment_supply"]
+    },
+    {
+      "name": "Semiconductor Engineering",
+      "url": "https://semiengineering.com/feed/",
+      "source_group": "S2",
+      "lang": "en",
+      "categories": ["fab_capex", "packaging", "semi_makers"]
+    },
+    {
+      "name": "Bloomberg Markets",
+      "url": "https://feeds.bloomberg.com/markets/news.rss",
+      "source_group": "S6",
+      "lang": "en",
+      "categories": ["ma_restructure", "capex_guidance", "macro"]
+    },
+    {
+      "name": "CNBC",
+      "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+      "source_group": "S6",
+      "lang": "en",
+      "categories": ["capex_guidance", "macro", "ma_restructure"]
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/feed/",
+      "source_group": "S6",
+      "lang": "en",
+      "categories": ["dc_build", "ai_trend"]
+    },
+    {
+      "name": "전자신문",
+      "url": "https://rss.etnews.com/Section901.xml",
+      "source_group": "S7",
+      "lang": "kr",
+      "categories": ["fab_capex", "semi_makers", "dc_build"]
+    },
+    {
+      "name": "더일렉",
+      "url": "https://www.thelec.kr/rss/allArticle.xml",
+      "source_group": "S7",
+      "lang": "kr",
+      "categories": ["fab_capex", "semi_makers", "packaging"]
+    },
+    {
+      "name": "한국경제",
+      "url": "https://www.hankyung.com/feed/all-news",
+      "source_group": "S7",
+      "lang": "kr",
+      "categories": ["macro", "capex_guidance", "ma_restructure"]
+    },
+    {
+      "name": "매일경제",
+      "url": "https://www.mk.co.kr/rss/30000001/",
+      "source_group": "S7",
+      "lang": "kr",
+      "categories": ["macro", "capex_guidance", "epc_award"]
+    },
+    {
+      "name": "뉴시스",
+      "url": "https://newsis.com/RSS/economy.xml",
+      "source_group": "S7",
+      "lang": "kr",
+      "categories": ["macro", "epc_award", "pf_finance"]
+    },
+    {
+      "name": "아이뉴스24",
+      "url": "https://rss.inews24.com/rss/news_it.xml",
+      "source_group": "S7",
+      "lang": "kr",
+      "categories": ["fab_capex", "dc_build", "ai_trend"]
+    }
+  ]
+}

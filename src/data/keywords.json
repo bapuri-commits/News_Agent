@@ -1,0 +1,77 @@
+{
+  "industries": {
+    "반도체": [
+      "팹", "Fab", "증설", "CapEx", "클린룸", "UPW", "CDA", "스크러버",
+      "배기", "케미컬", "가스", "공정 인프라", "라인 증설", "초순수",
+      "fab expansion", "capex", "cleanroom", "abatement", "scrubber",
+      "specialty gases", "ramp", "delay"
+    ],
+    "패키징": [
+      "첨단패키징", "advanced packaging", "CoWoS", "HBM", "OSAT",
+      "HBM line", "후공정"
+    ],
+    "데이터센터": [
+      "하이퍼스케일", "hyperscale", "코로케이션", "colocation",
+      "캠퍼스", "campus", "MW", "데이터센터 신축",
+      "data center campus", "MW capacity"
+    ],
+    "DC전력": [
+      "계통연계", "변전소", "PPA", "전력부족", "그리드",
+      "utility interconnection", "substation", "grid constraint"
+    ],
+    "DC냉각": [
+      "액침냉각", "수랭", "immersion cooling", "liquid cooling",
+      "CDU", "열밀도", "냉각 기술"
+    ],
+    "스마트시티": [
+      "신도시", "복합개발", "스마트 인프라", "도시개발",
+      "스마트시티", "smart city"
+    ],
+    "건설수주": [
+      "EPC", "GC", "턴키", "turnkey", "JV", "하도급",
+      "수주", "낙찰", "입찰", "계약", "착공", "준공",
+      "award", "contract", "tender", "contractor", "procurement"
+    ],
+    "투자정책": [
+      "보조금", "subsidies", "세제혜택", "tax credits",
+      "CHIPS", "IRA", "K-CHIPS", "인허가", "permitting",
+      "프로젝트 파이낸스", "project finance", "리파이낸싱", "refinancing",
+      "CMBS", "CapEx 전망", "capex guidance"
+    ]
+  },
+  "entities": [
+    "SK에코플랜트", "SK ecoplant", "SK하이닉스", "SK hynix", "SKC", "SK E&S",
+    "TSMC", "삼성전자", "Samsung", "Intel", "Micron", "GlobalFoundries",
+    "Texas Instruments", "UMC", "SMIC",
+    "삼성물산", "현대건설", "대우건설", "GS건설", "포스코건설", "DL이앤씨",
+    "ASML", "Applied Materials", "AMAT", "Lam Research", "TEL", "KLA",
+    "Schneider Electric", "Vertiv", "Eaton", "ABB", "Siemens", "Legrand",
+    "AWS", "Microsoft", "Google", "Oracle", "Meta",
+    "Equinix", "Digital Realty", "QTS", "CyrusOne", "Switch", "NTT", "GDS",
+    "김영식", "장동현"
+  ],
+  "themes": [
+    "수주", "EPC", "낙찰", "PF", "우발채무", "자금보충", "자금보충약정",
+    "ESG", "탄소규제", "환경 컴플라이언스",
+    "모듈러", "DfMA", "디지털 트윈",
+    "공기", "원가", "변경관리", "체인지 오더",
+    "인허가", "환경영향평가",
+    "자재", "노무", "장비 수급",
+    "착공", "준공", "가동", "지연", "마일스톤",
+    "CapEx", "어닝콜", "earnings call",
+    "브릿지론", "리파이낸싱", "CMBS",
+    "M&A", "지분매각", "자회사매각", "사업구조 재편",
+    "건설 기술", "냉각 기술",
+    "엔지니어링 인력", "경영진 인사", "조직 개편",
+    "차환", "유동성", "신용등급", "회사채", "CP"
+  ],
+  "format_hints": [
+    "표", "요약", "리스트", "브리핑", "딥리드"
+  ],
+  "avoid_signals": [
+    "추측", "출처불명", "기초적", "편향", "홍보"
+  ],
+  "question_patterns": [
+    "어떻게", "왜", "비교", "추천", "전망", "리스크"
+  ]
+}
