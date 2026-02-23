@@ -126,10 +126,16 @@ def generate_index(briefings_dir: Path, dates: list[str], output_path: Path) -> 
 <div class="idx-container">
   <header class="idx-header">
     <h1 class="idx-logo">Executive Briefing</h1>
+    <p class="idx-today" id="today-date"></p>
   </header>
   <div class="idx-search">
-    <input type="date" id="date-filter" class="idx-search-input" placeholder="날짜 선택">
-    <button class="idx-search-clear" id="clear-filter" style="display:none" onclick="clearFilter()">초기화</button>
+    <span class="idx-search-label">날짜로 검색</span>
+    <div class="idx-search-right">
+      <button class="idx-cal-btn" id="cal-btn" onclick="openPicker()">📅</button>
+      <input type="date" id="date-filter" class="idx-date-hidden">
+      <span class="idx-selected" id="selected-date"></span>
+      <button class="idx-search-clear" id="clear-filter" style="display:none" onclick="clearFilter()">초기화</button>
+    </div>
   </div>
   <main class="idx-grid" id="card-grid">
 {cards_html}
@@ -145,8 +151,21 @@ var clearBtn = document.getElementById('clear-filter');
 var noResult = document.getElementById('no-result');
 var cards = document.querySelectorAll('.idx-card');
 
+(function() {{
+  var now = new Date();
+  var y = now.getFullYear();
+  var m = String(now.getMonth()+1).padStart(2,'0');
+  var d = String(now.getDate()).padStart(2,'0');
+  document.getElementById('today-date').textContent = y+'-'+m+'-'+d;
+}})();
+
+function openPicker() {{
+  dateInput.showPicker();
+}}
+
 function filterCards() {{
   var val = dateInput.value;
+  document.getElementById('selected-date').textContent = val || '';
   clearBtn.style.display = val ? 'inline-block' : 'none';
   var shown = 0;
   cards.forEach(function(card) {{
@@ -165,6 +184,7 @@ dateInput.addEventListener('change', filterCards);
 
 function clearFilter() {{
   dateInput.value = '';
+  document.getElementById('selected-date').textContent = '';
   clearBtn.style.display = 'none';
   noResult.style.display = 'none';
   cards.forEach(function(card) {{ card.style.display = ''; }});
@@ -220,29 +240,53 @@ body {
   font-weight: 800;
   letter-spacing: -0.5px;
 }
+.idx-today {
+  margin-top: 8px;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.8);
+}
 .idx-search {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   margin-bottom: 16px;
   align-items: center;
 }
-.idx-search-input {
-  flex: 1;
-  padding: 10px 14px;
+.idx-search-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+.idx-search-right {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.idx-cal-btn {
+  padding: 7px 12px;
   border: 1px solid var(--border);
   border-radius: 10px;
-  font-size: 0.9rem;
-  font-family: inherit;
   background: var(--surface);
-  color: var(--text);
-  outline: none;
-  transition: border-color 0.2s;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  line-height: 1;
 }
-.idx-search-input:focus {
-  border-color: #1a73e8;
+.idx-cal-btn:hover { background: #f3f4f6; }
+.idx-date-hidden {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+.idx-selected {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
 }
 .idx-search-clear {
-  padding: 8px 16px;
+  padding: 7px 14px;
   border: none;
   border-radius: 8px;
   background: #f3f4f6;
