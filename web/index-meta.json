@@ -1,12 +1,12 @@
 {
   "2026-02-22": {
     "date": "2026-02-22",
-    "theme_label": "Risk Alert",
-    "theme_accent": "#dc2626",
-    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
-    "top_headline": "SK에코플랜트 IPO 재무적 투자자 협상 중심 전환",
-    "sk_headline": "IPO 전략 전환, 재무적 투자자와 협상 중",
-    "article_count": 37
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "SK에코엔지니어링, SK에코플랜트 100% 자회사 재편",
+    "sk_headline": "SK에코엔지니어링 100% 자회사 재편완료",
+    "article_count": 31
   },
   "2026-02-23": {
     "date": "2026-02-23",

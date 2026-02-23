@@ -22,74 +22,80 @@
 
 ---
 
-### 2. 사용자 피드백 기능
+### 2. 사용자 피드백 → 프로필 자동 반영
 
-**우선순위**: 낮음
-**관련 파일**: `src/briefer/html_renderer.py`, `src/deployer/index_generator.py`, 신규 `src/profiler/feedback_adjuster.py`
+**우선순위**: 높음
+**관련 파일**: `src/briefer/html_renderer.py`, 신규 `backend/` (VPS FastAPI)
 
-**핵심 제약**: 서버 없음 (GitHub Pages 정적 사이트).
+**환경**: VPS 서버 보유. GitHub Pages(정적) + VPS(API) 하이브리드.
 
-**방안**: LocalStorage + 수동 export (아버지가 한 기기에서만 사용하므로 충분)
-
+**아키텍처**:
 ```
 [브리핑 웹 페이지]
   Top5 카드에 👍/👎 버튼 + 카테고리 "더 보기"/"줄이기" 버튼
       ↓ (클릭 시)
-  localStorage 저장
-  {"2026-02-23": {"thumbs": {"id": "up"}, "category_adjust": {"fab_capex": +1}}}
-      ↓ (인덱스에 "피드백 내보내기" 버튼)
-  feedback.json 다운로드
-      ↓ (CLI로 수동 반영)
-  stable_profile.json 가중치 미세 조정
+  fetch('https://vps.example/api/feedback', {articleId, vote, category_adjust})
+      ↓
+[VPS FastAPI]
+  POST /api/feedback → feedback.db (SQLite) 누적
+      ↓
+[daily-briefing 파이프라인 (매일 자동)]
+  brief 실행 전 → VPS에서 미반영 피드백 조회
+  → stable_profile.json 가중치 미세 조정 (5~10% 범위 제한)
+  → 조정된 프로필로 collect + brief 실행
+  → 다음 날 브리핑에 자동 반영
 ```
 
 **구현 단계**:
-1. Top5 카드에 👍/👎 버튼 삽입 (`html_renderer.py`)
-2. JS: 클릭 → localStorage 저장 + 시각적 피드백 (`html_renderer.py`)
-3. 인덱스에 "피드백 내보내기" 버튼 (`index_generator.py`)
-4. (선택) `apply-feedback` CLI 명령 (`main.py`, `profiler/feedback_adjuster.py`)
+1. VPS에 FastAPI 서버 구축 (`backend/main.py`, `backend/models.py`)
+2. POST /api/feedback 엔드포인트 + SQLite 저장
+3. Top5 카드에 👍/👎 버튼 + JS fetch (`html_renderer.py`)
+4. `apply-feedback` CLI 명령 (`src/main.py`, `src/profiler/feedback_adjuster.py`)
+5. daily-briefing 워크플로우에 feedback 반영 단계 추가
+6. 가중치 조정 범위 제한 (편향 방지)
 
-**향후 자동 반영 경로**: GitHub Actions `workflow_dispatch` input으로 피드백 전달 → 파이프라인이 프로필 가중치 조정 → 다음 날 수집 반영.
-
-**예상 공수**: 6~8시간
+**예상 공수**: 8~12시간
 
 ---
 
-### 3. 과거 브리핑 검색
+### 3. 기사 기반 Q&A 챗봇 (RAG)
 
-**우선순위**: 낮음
-**관련 파일**: `src/deployer/site_builder.py`, `src/deployer/index_generator.py`
+**우선순위**: 높음
+**관련 파일**: 신규 `backend/` (VPS FastAPI), `src/deployer/index_generator.py`
 
-**핵심 제약**: 서버 없음. 클라이언트 사이드 JS 키워드 검색으로 MVP 구현.
+**환경**: VPS 서버 (피드백 API와 동일 서버에 통합).
 
-**방안**: 빌드 시 `web/search-index.json` 생성 → 인덱스 페이지에서 fetch 후 키워드 매칭
-
+**아키텍처**:
 ```
-[site_builder.py 빌드 시]
-  briefings/*.json에서 검색용 필드만 추출
+[매일 brief 완료 후]
+  당일 브리핑 JSON → VPS POST /api/briefings/ingest
+  → briefings.db (SQLite FTS5) 인덱싱
       ↓
-  web/search-index.json 생성
-  {
-    "2026-02-23": {
-      "top5": [{"headline": "...", "category": "fab_capex", "fact": "..."}],
-      "categories": ["fab_capex", "dc_power"],
-      "sk_headline": "..."
-    }
-  }
-
-[인덱스 페이지 검색 UI]
-  🔍 "반도체 수주" 입력
+[브리핑 웹 페이지 — 챗 UI]
+  💬 "지난주 반도체 수주 관련 뉴스 정리해줘"
       ↓
-  JS: search-index.json fetch → 키워드 매칭 → 결과 카드 표시
+  fetch('https://vps.example/api/chat', {query})
+      ↓
+[VPS FastAPI]
+  POST /api/chat
+    → briefings.db FTS5 검색 (키워드 + 날짜 필터)
+    → 관련 기사 3~5건 추출
+    → LLM (Haiku)에 컨텍스트로 전달
+    → 답변 생성 (출처 포함)
+    → 스트리밍 응답
 ```
 
 **구현 단계**:
-1. `search-index.json` 생성 로직 (`site_builder.py`)
-2. 인덱스 페이지에 검색 입력 UI + JS (`index_generator.py`)
-3. JS: fetch → 키워드 매칭 → 결과 표시 (`index_generator.py`)
-4. (향후) LLM RAG: Vercel Function으로 자연어 질의 응답
+1. briefings.db 스키마 설계 + FTS5 인덱싱 (`backend/db.py`)
+2. POST /api/briefings/ingest 엔드포인트
+3. POST /api/chat 엔드포인트 (검색 → LLM 답변)
+4. 브리핑 페이지에 챗 UI (플로팅 버튼 → 슬라이드 패널)
+5. daily-briefing 워크플로우에 ingest 단계 추가
+6. (향후) 스트리밍 응답 (SSE)
 
-**예상 공수**: 8~12시간 (MVP 키워드 검색은 4~5시간)
+**비용**: Haiku $0.005/질의 (월 100회 사용 가정 $0.50)
+
+**예상 공수**: 12~16시간
 
 ---
 
