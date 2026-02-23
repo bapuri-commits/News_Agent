@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-02-22 (텍스트)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #78716c;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, 'Pretendard', 'Noto Sans KR', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.txt-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.txt-header {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+}
+.txt-header-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.txt-header-top a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.txt-header-top a:hover { text-decoration: underline; }
+.txt-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.txt-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+.txt-copy-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.txt-copy-btn:hover { background: #1557b0; }
+.txt-copy-btn:active { transform: scale(0.97); }
+.txt-content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: keep-all;
+  overflow-x: auto;
+  color: var(--text);
+}
+.txt-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #1f2937;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.txt-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .txt-container { padding: 12px; }
+  .txt-header { padding: 16px; }
+  .txt-content { padding: 16px; font-size: 0.82rem; }
+}
+</style>
+</head>
+<body>
+<div class="txt-container">
+  <header class="txt-header">
+    <div class="txt-header-top">
+      <a href="2026-02-22.html" class="txt-back">&larr; 웹 버전</a>
+      <a href="index.html" class="txt-home">목록</a>
+    </div>
+    <h1 class="txt-title">텍스트 브리핑 — 2026-02-22</h1>
+    <p class="txt-desc">카톡 · 이메일 전달용 텍스트</p>
+    <button class="txt-copy-btn" onclick="copyAll()">📋 전체 복사</button>
+  </header>
+  <pre class="txt-content" id="briefing-text"># 임원 뉴스 브리핑 — 2026-02-22
+
+&gt; 읽기 시간: 약 15분
+
+## Top 5
+
+### 1. SK에코플랜트 IPO 재무적 투자자 협상 중심 전환
+
+**Fact**: SK에코플랜트가 IPO 전략을 전환하여 재무적 투자자(FI)와의 협상에 무게를 두고 있음. 장동현 대표이사가 직접 협상을 주도 중.
+**Impact**: 기존 전략적 투자자(SI) 중심에서 재무적 투자자로 전환은 밸류에이션 협상의 유연성 확보 및 IPO 일정 단축 가능성 시사.
+**Risk**: 재무적 투자자 유치 시 장기적 시너지 효과 제한적. IPO 시장 상황에 따른 밸류에이션 변동성 존재.
+**Next**: 3월 중 재무적 투자자 확정 및 구체적인 IPO 일정 발표 예상.
+*출처: [비즈니스포스트](https://news.google.com/rss/articles/CBMic0FVX3lxTE9kcEloNFBJUWNxMWFHNklIazBzYXkwRkF5WlRIVzJkaW1TQmJmRTJxV2lsUzY0Wlp3WG5QMTlXMHlKVlJBd054ZG9ueHBYWktWUUk0OEtGLVg3WlNyOGFHekNWRWxnYm90ZWZEZFlqUU9WMWc?oc=5)*
+
+### 2. 블랙록 SK하이닉스 지분 5% 확보, 7년 9개월만
+
+**Fact**: 글로벌 자산운용사 블랙록이 SK하이닉스 지분율 5%를 넘겨 주요 주주로 등극. 7년 9개월 만의 5% 돌파. SK하이닉스 주가 52주 신고가 경신.
+**Impact**: 글로벌 대형 기관투자자의 지분 확대는 HBM 등 AI 메모리 시장 성장성에 대한 확신 반영. 외국인 자금 유입 지속 기대.
+**Risk**: 단기 주가 급등에 따른 차익실현 매물 출회 가능성. 메모리 업황 변동성에 따른 투자심리 변화 주의.
+**Next**: 블랙록의 추가 지분 확대 여부 및 타 글로벌 기관투자자들의 반도체 투자 동향 모니터링.
+*출처: [SBS Biz](https://news.google.com/rss/articles/CBMiWEFVX3lxTE0yemtMYVdVVU5aMHlPSm90dmE4OEFhYlpVOVgyeVZSWGlBOEhoWElmM2M1WVozSHhtOHVzSEI4M0lGeUhLNGZESWFSSTA5UFlDNFhEOVFjTFk?oc=5)*
+
+### 3. 최태원 회장 HBM 증산 발표, 데이터센터-원전 결합 모델 추진
+
+**Fact**: 최태원 SK그룹 회장이 미국 워싱턴에서 HBM(4세대 16단) 대폭 증산 계획 발표. HBM 마진율 60%, 일반 메모리 80%로 마진 역전 현상 언급. 데이터센터당 기가급 전력(원전 1기분) 필요 강조.
+**Impact**: SK하이닉스 HBM 증산으로 AI 메모리 시장 지배력 강화. 데이터센터-발전소 통합 모델은 새로운 사업 기회 창출 가능.
+**Risk**: HBM 공급 30% 부족으로 시장 왜곡 심화. 영업이익 변동성 극대화(+1000억달러~-1000억달러) 가능성 경고.
+**Next**: SK의 미국 &#x27;AI 컴퍼니&#x27; 설립 구체화 및 인디애나주 패키징 팹 진행 상황 확인.
+*출처: [v.daum.net](https://news.google.com/rss/articles/CBMiT0FVX3lxTE94NExQN1kxTkUzMjZ6VmhfaGI4cEdTSHd3a2VDZmN5ZTdFV2w4VWduTnZyeFNpRHBUcDdzdnE2bXRKZ29ZYkpkTi1IVjEyV1k?oc=5)*
+
+### 4. 효성·HD현대·LS 북미 전력기기 수주잔액 40조원 돌파
+
+**Fact**: 효성, HD현대일렉트릭, LS일렉트릭 등 국내 전력기기 3사의 북미 수주잔액 총 40조원 돌파. AI 데이터센터 확대로 초대형 변압기 수요 급증.
+**Impact**: 북미 전력 인프라 투자 확대로 한국 전력기기 업체들의 중장기 매출 가시성 확보. 데이터센터 관련 전력 설비 시장 선점.
+**Risk**: 원자재 가격 상승 및 북미 현지 생산 요구 증가로 수익성 압박 가능. 인력 확보 및 생산능력 확대 과제.
+**Next**: 한국 정부의 대미투자 1호 프로젝트 내용 및 전력기기 업체 참여 범위 확정.
+*출처: [네이트](https://news.google.com/rss/articles/CBMiU0FVX3lxTFBsZmt3enB6UHJaVzVnVWZndFoxSjc4d0JVRUhGcmJHUlFXQkVXSnlPcDMtTjJEcENPbWczNGtSNDJEZV9BaS00Q1Y5UElIQ0pPRTZv?oc=5)*
+
+### 5. 아이에스티이 SK하이닉스 청주팹 풉크리너 68억 수주
+
+**Fact**: 아이에스티이가 SK하이닉스와 68억원 규모 반도체 풉크리너 장비 계약 체결(2024년 매출 대비 16.65%). 청주 신규팹 및 이천팹 보완투자용. 계약기간 9월 15일까지.
+**Impact**: SK하이닉스 HBM/DDR5 증산에 따른 장비 수요 확대 수혜. 전년 동기 대비 SK하이닉스 관련 누적 수주 300% 이상 증가.
+**Risk**: 특정 고객사 의존도 심화. 반도체 투자 사이클 변동에 따른 수주 변동성 존재.
+**Next**: SK하이닉스 추가 설비투자 계획 및 관련 장비 추가 발주 동향 확인.
+*출처: [아이뉴스24](https://news.google.com/rss/articles/CBMiTEFVX3lxTFA0QVpHeS1YS1RNNTdSV0MweWluUXoxa191c0Z5ZVdSRXB2X0ExM0tGdDlGSnVJWmZfR0hXV1ZUWHAtVHZQcnc5VG92blY?oc=5)*
+
+## SK에코플랜트 렌즈
+
+**IPO 전략 전환, 재무적 투자자와 협상 중**
+
+- **수주·믹스**: 해당 기간 특이사항 없음. 기사에서 수주나 사업 믹스 변화 관련 내용은 언급되지 않음.
+- **현금흐름·차입**: 해당 기간 특이사항 없음. 현금흐름이나 차입 구조 관련 구체적인 내용은 확인되지 않음.
+- **PF/우발채무**: 해당 기간 특이사항 없음. PF 관련 우발채무나 리스크에 대한 언급 없음.
+- **IPO/경쟁사**: IPO 전략 전환 신호 포착. 장동현 부회장이 기존 IPO 계획에서 선회하여 재무적 투자자(FI)와의 협상에 무게를 두고 있는 것으로 확인됨. 구체적인 협상 대상이나 조건은 아직 공개되지 않았으나, IPO 추진 방향성의 중요한 변화로 해석됨.
+
+## 카테고리별 동향
+
+### 반도체 Fab / CapEx
+반도체 업계가 대규모 설비투자와 인력 확보 경쟁에 돌입했으며, 블랙록 등 글로벌 투자자들의 반도체 투자 확대가 이어지고 있다. SK하이닉스를 중심으로 장비 공급 계약이 활발히 체결되고 있으며, 테슬라 등 빅테크 기업들이 국내 반도체 인재 영입에 나서면서 인력 유출 우려가 제기되고 있다.
+
+- **블랙록, SK하이닉스 지분 5% 확보로 반도체 투자 확대**
+  글로벌 자산운용사 블랙록이 SK하이닉스 지분 5%를 확보하며 반도체 투자를 늘렸다
+- **반도체 시설투자 확대로 건설업 호황 기대**
+  2027-2029년 반도체 후반공정 투자 확대로 건설업계 호황이 예상된다
+- **아이에스티이, SK하이닉스에 68억원 반도체 장비 공급**
+  아이에스티이가 SK하이닉스와 68억원 규모의 반도체 장비 공급계약을 체결했다
+- **테스, SK하이닉스와 반도체 장비 공급계약 체결**
+  테스가 SK하이닉스와 반도체 장비공급 계약을 맺어 매출 안정성을 확보했다
+- **티이엠씨씨엔에스, 화재 9개월 만에 SK하이닉스 공급 재개**
+  공장 화재로 중단됐던 반도체 전구체 공급이 9개월 만에 재개된다
+- **머스크 한국 반도체 인재 영입 제안으로 국내업계 긴장**
+  일론 머스크가 공개적으로 한국 반도체 인재 영입을 제안해 국내업계 인력 유출 우려가 커졌다
+- **삼성전자, 글로벌 시총 14위 등극**
+  메모리 반도체 호황으로 삼성전자가 전 세계 시가총액 14위에 올랐다
+
+### 장비 / 부품 공급망
+반도체 장비 공급업계에서 전력반도체와 희토류 소재 등 핵심 소재 공급이 활발해지고 있다. 에스티아이의 전력반도체 장비 수주와 연화신소재의 희토류 소재 상업 거래 등이 주목받고 있다.
+
+- **에스티아이, 전력반도체 장비 수주로 주가 최고가**
+  에스티아이가 전력반도체 장비 수주 소식에 1년 내 최고가를 기록했다
+- **연화신소재, 일본에 희토류 핵심소재 공급 개시**
+  연화신소재가 영구자석 제조용 불화리튬을 일본 고객사에 공급하며 실거래를 확보했다
+- **인피니언, BMW 차세대 전기차에 핵심 반도체 공급**
+  인피니언이 BMW의 차세대 SDV 플랫폼에 마이크로컨트롤러 등 핵심 반도체를 공급한다
+
+### 첨단 패키징
+AMD의 젠6 프로세서 2027년 출시 계획에 따라 삼성전자와 SK하이닉스가 HBM4 수주 전략을 조정할 가능성이 제기되고 있다.
+
+- **AMD 젠6 2027년 출시로 HBM4 수주 전략 재검토**
+  AMD의 젠6 프로세서 2027년 출시에 맞춰 삼성전자와 SK하이닉스가 HBM4 수주 전략을 수정할 전망이다
+
+### 데이터센터 신축
+데이터센터 건설 시장에서 지속가능성을 고려한 빠른 건설과 인도 시장 확장이 주요 트렌드로 나타나고 있다.
+
+- **지속가능성 고려한 데이터센터 건설 가속화**
+  데이터센터 건설에서 빠른 건설과 지속가능성을 동시에 추구하는 방안이 논의되고 있다
+- **STT GDC 인도 첸나이에 데이터센터 개설, IPO 검토**
+  STT GDC 인도가 첸나이에 세 번째 캠퍼스를 개설하고 IPO를 검토하고 있다
+
+### DC 전력
+AI 데이터센터 확산으로 전력 인프라 수요가 급증하고 있으며, HBM 증산과 함께 원전급 전력이 필요할 정도로 전력 수요가 폭증하고 있다. 이에 따라 전력 관련 기업들의 수주잔액이 40조원에 달하며 관련주들이 부상하고 있다.
+
+- **최태원, AI 데이터센터에 원전급 전력 필요 언급**
+  SK 최태원 회장이 AI 칩 HBM 증산과 데이터센터 확산으로 원전급 전력이 필요하다고 밝혔다
+- **AI 데이터센터 확산으로 전력 인프라 관련주 부상**
+  AI 데이터센터 확산에 따른 전력 인프라 수요 증가로 관련 주식들이 주목받고 있다
+- **효성·HD·LS 등 전력기기 업체, 북미서 40조원 수주잔액 확보**
+  효성, HD현대, LS 등 전력기기 업체들이 북미 시장에서 40조원 규모의 수주잔액을 확보했다
+
+### EPC / 수주
+미국 대법원의 관세 판결이 건설업계에 단기적 안정을 가져올 전망이지만, 장기적으로는 불확실성이 지속될 것으로 보인다. 건설업계는 수익성과 인력 확보 사이의 균형을 맞추려 노력하고 있다.
+
+- **대법원 관세 판결, 건설업계에 단기 안정 제공**
+  미국 대법원의 6-3 관세 판결이 건설업계에 단기적 안정을 가져다줄 전망이다
+- **건설업계, 수익성과 인력 확보 균형점 모색**
+  건설업계가 차세대 인력 확보를 위해 문화적 변화와 핵심 가치 유지 사이의 균형을 찾고 있다
+
+### ESG / 탄소규제
+ESG 연계 금융이 확산되면서 기업들이 지속가능경영과 연계된 자금조달을 늘리고 있다.
+
+- **소나에, ESG 연계 운영자금 리파이낸싱 실시**
+  포르투갈 소나에가 ESG 연계 조건으로 운영자금 리파이낸싱을 진행했다
+
+### SK에코플랜트
+SK에코플랜트가 IPO 전략을 재검토하며 재무적 투자자와의 협상을 통한 대안을 모색하고 있다.
+
+- **SK에코플랜트, IPO 대신 재무적 투자자와 협상 검토**
+  SK에코플랜트가 IPO 전략을 전환해 장동현과 재무적 투자자와의 협상에 무게를 두고 있다
+
+### 기타
+미국 대법원이 트럼프 관세 체제를 무효화하면서 공급망 재편과 예산 위기가 예상된다.
+
+- **대법원, 트럼프 관세 체제 무효화로 공급망 재편 불가피**
+  미국 대법원이 트럼프의 관세 정책을 무효화하며 공급망 재편과 수십억 달러 환불로 인한 예산 위기가 예상된다
+
+## 리스크 종합
+
+- [SK에코플랜트 IPO 재무적 투자자 협상 중심 전환] 재무적 투자자 유치 시 장기적 시너지 효과 제한적. IPO 시장 상황에 따른 밸류에이션 변동성 존재.
+- [블랙록 SK하이닉스 지분 5% 확보, 7년 9개월만] 단기 주가 급등에 따른 차익실현 매물 출회 가능성. 메모리 업황 변동성에 따른 투자심리 변화 주의.
+- [최태원 회장 HBM 증산 발표, 데이터센터-원전 결합 모델 추진] HBM 공급 30% 부족으로 시장 왜곡 심화. 영업이익 변동성 극대화(+1000억달러~-1000억달러) 가능성 경고.
+- [효성·HD현대·LS 북미 전력기기 수주잔액 40조원 돌파] 원자재 가격 상승 및 북미 현지 생산 요구 증가로 수익성 압박 가능. 인력 확보 및 생산능력 확대 과제.
+- [아이에스티이 SK하이닉스 청주팹 풉크리너 68억 수주] 특정 고객사 의존도 심화. 반도체 투자 사이클 변동에 따른 수주 변동성 존재.
+
+## Next Signals (향후 확인)
+
+- 3월 중 재무적 투자자 확정 및 구체적인 IPO 일정 발표 예상.
+- 블랙록의 추가 지분 확대 여부 및 타 글로벌 기관투자자들의 반도체 투자 동향 모니터링.
+- SK의 미국 &#x27;AI 컴퍼니&#x27; 설립 구체화 및 인디애나주 패키징 팹 진행 상황 확인.
+- 한국 정부의 대미투자 1호 프로젝트 내용 및 전력기기 업체 참여 범위 확정.
+- SK하이닉스 추가 설비투자 계획 및 관련 장비 추가 발주 동향 확인.
+
+## 소스 분포
+
+- DC전문 (S1): █░░░░░░░░░░░░░░░░░░░ 2건 (5%)
+- 반도체전문 (S2): █░░░░░░░░░░░░░░░░░░░ 2건 (5%)
+- 건설전문 (S5): █░░░░░░░░░░░░░░░░░░░ 2건 (5%)
+- 종합경제지 (S6): ░░░░░░░░░░░░░░░░░░░░ 1건 (3%)
+- 국내매체 (S7): ████████████████░░░░ 30건 (81%)
+
+
+---
+*생성: 2026-02-22T02:38:31.837655+00:00*</pre>
+  <div class="txt-toast" id="toast">복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-text');
+  navigator.clipboard.writeText(el.textContent).then(function() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  });
+}
+</script>
+</body>
+</html>

@@ -6,22 +6,25 @@
 <title>Executive Briefing Archive</title>
 <style>
 :root {
-  --bg: #f0f4ff;
+  --bg: #f8fafc;
   --surface: #ffffff;
   --text: #1f2937;
   --text-secondary: #6b7280;
   --border: #e5e7eb;
   --radius: 16px;
-  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
-  --shadow-lg: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: -apple-system, 'Pretendard', 'Noto Sans KR', sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.65;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .idx-container {
   max-width: 720px;
@@ -30,26 +33,38 @@ body {
 }
 .idx-header {
   text-align: center;
-  background: linear-gradient(135deg, #1a73e8 0%, #4285f4 100%);
+  background: linear-gradient(135deg, #1e3a5f 0%, #1a73e8 50%, #3b82f6 100%);
   color: white;
   border-radius: var(--radius);
-  padding: 32px 24px;
+  padding: 36px 24px 32px;
   margin-bottom: 28px;
+  box-shadow: var(--shadow-md);
 }
 .idx-logo {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: 800;
   letter-spacing: -0.5px;
 }
 .idx-sub {
   margin-top: 8px;
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.85);
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.5px;
+}
+.idx-count {
+  display: inline-block;
+  margin-top: 12px;
+  background: rgba(255,255,255,0.2);
+  padding: 3px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
 .idx-grid {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 .idx-card {
   display: block;
@@ -60,11 +75,11 @@ body {
   text-decoration: none;
   color: var(--text);
   border-left: 3px solid var(--card-accent, #1a73e8);
-  transition: box-shadow 0.2s, transform 0.15s;
+  transition: box-shadow var(--transition), transform var(--transition);
 }
 .idx-card:hover {
   box-shadow: var(--shadow-lg);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 .idx-card-top {
   display: flex;
@@ -78,12 +93,18 @@ body {
   color: var(--text);
 }
 .idx-theme {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
   padding: 2px 10px;
-  border-radius: 12px;
+  border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+.idx-meta {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
 }
 .idx-headline {
   font-size: 0.9rem;
@@ -94,23 +115,26 @@ body {
 .idx-sk {
   font-size: 0.82rem;
   color: var(--text-secondary);
-  margin-top: 4px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 .idx-sk-tag {
   display: inline-block;
   background: #fff7ed;
   color: #ea580c;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  padding: 1px 6px;
+  padding: 2px 8px;
   border-radius: 6px;
-  margin-right: 4px;
+  flex-shrink: 0;
 }
 .idx-footer {
   text-align: center;
-  padding: 24px 0 8px;
+  padding: 28px 0 8px;
   color: var(--text-secondary);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
 }
 .idx-empty {
   text-align: center;
@@ -121,6 +145,8 @@ body {
 @media (max-width: 480px) {
   .idx-container { padding: 16px 12px; }
   .idx-card { padding: 14px 16px; }
+  .idx-header { padding: 28px 16px 24px; }
+  .idx-logo { font-size: 1.35rem; }
 }
 </style>
 </head>
@@ -129,12 +155,14 @@ body {
   <header class="idx-header">
     <h1 class="idx-logo">Executive Briefing</h1>
     <p class="idx-sub">건설 · 반도체 · 데이터센터 · 인프라</p>
+    <span class="idx-count">2일분 브리핑</span>
   </header>
   <main class="idx-grid">
     <a href="2026-02-23.html" class="idx-card" style="--card-accent: #38bdf8">
       <div class="idx-card-top">
         <span class="idx-date">2026-02-23</span>
         <span class="idx-theme" style="background: #38bdf820; color: #38bdf8">Data Pulse</span>
+        <span class="idx-meta">39건</span>
       </div>
       <div class="idx-headline">중동부유럽 데이터센터 개발 가이드</div>
       
@@ -143,9 +171,10 @@ body {
       <div class="idx-card-top">
         <span class="idx-date">2026-02-22</span>
         <span class="idx-theme" style="background: #dc262620; color: #dc2626">Risk Alert</span>
+        <span class="idx-meta">37건</span>
       </div>
-      <div class="idx-headline">SK에코엔지니어링, SK에코플랜트 100% 자회사로 재편</div>
-      <div class="idx-sk"><span class="idx-sk-tag">SK에코</span> SK에코엔지니어링 4년만에 100% 자회사 재편</div>
+      <div class="idx-headline">SK에코플랜트 IPO 재무적 투자자 협상 중심 전환</div>
+      <div class="idx-sk"><span class="idx-sk-tag">SK에코</span> IPO 전략 전환, 재무적 투자자와 협상 중</div>
     </a>
   </main>
   <footer class="idx-footer">

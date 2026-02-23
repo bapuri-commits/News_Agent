@@ -137,6 +137,92 @@ class TestDedup:
         result = deduplicate(articles)
         assert len(result) == 1
 
+    def test_s7_internal_same_press_release(self):
+        """같은 보도자료를 다르게 쓴 S7 기사 → 1건으로 합침."""
+        shared_snippet = (
+            "SK하이닉스 HBM 생산량 올해 대폭 확대 계획 발표 "
+            "반도체 메모리 시장 AI 수요 증가 대응 투자 확대"
+        )
+        articles = [
+            _make_article(
+                title="SK하이닉스 HBM 생산 확대 계획 발표",
+                url="https://a.kr/1",
+                source_group="S7",
+                source_name="매일경제",
+                snippet=shared_snippet + " 매일경제 취재 결과",
+            ),
+            _make_article(
+                title="SK하이닉스 HBM 생산 대폭 확대 발표",
+                url="https://b.kr/2",
+                source_group="S7",
+                source_name="한국경제",
+                snippet=shared_snippet + " 한국경제 단독 보도",
+            ),
+        ]
+        result = deduplicate(articles)
+        assert len(result) == 1
+
+    def test_s7_internal_keeps_different(self):
+        """제목/스니펫이 완전히 다른 S7 기사는 유지."""
+        articles = [
+            _make_article(
+                title="SK하이닉스 HBM 생산 증가 발표",
+                url="https://a.kr/1",
+                source_group="S7",
+                snippet="SK하이닉스가 HBM 생산량을 늘린다",
+            ),
+            _make_article(
+                title="삼성전자 갤럭시 신제품 출시 예정",
+                url="https://b.kr/2",
+                source_group="S7",
+                snippet="삼성전자가 하반기 갤럭시 신제품을 출시한다",
+            ),
+        ]
+        result = deduplicate(articles)
+        assert len(result) == 2
+
+    def test_s7_dedup_preserves_non_s7(self):
+        """S7 내부 dedup이 S1/S2/S6 기사에 영향 주지 않음."""
+        s1_article = _make_article(
+            title="DatacenterDynamics exclusive report",
+            url="https://dcd.com/1",
+            source_group="S1",
+        )
+        s7_articles = [
+            _make_article(
+                title="SK하이닉스 HBM 생산 확대 발표",
+                url="https://a.kr/1",
+                source_group="S7",
+                snippet="SK하이닉스가 HBM 생산량을 대폭 늘린다고 발표했다",
+            ),
+            _make_article(
+                title="SK하이닉스 HBM 생산 증가 계획 공개",
+                url="https://b.kr/2",
+                source_group="S7",
+                snippet="SK하이닉스가 HBM 생산량을 대폭 늘리겠다고 밝혔다",
+            ),
+        ]
+        result = deduplicate([s1_article] + s7_articles)
+        s1_count = sum(1 for a in result if a.source_group == "S1")
+        assert s1_count == 1
+
+    def test_s7_dedup_preserves_order(self):
+        """S7 dedup 후에도 원래 기사 순서가 유지됨."""
+        articles = [
+            _make_article(title="First S6", url="https://s6.com/1", source_group="S6"),
+            _make_article(title="First S7 unique", url="https://a.kr/1", source_group="S7",
+                          snippet="완전히 다른 내용의 기사"),
+            _make_article(title="Second S6", url="https://s6.com/2", source_group="S6"),
+            _make_article(title="Second S7 unique", url="https://b.kr/2", source_group="S7",
+                          snippet="또 다른 주제의 기사"),
+        ]
+        result = deduplicate(articles)
+        assert len(result) == 4
+        assert result[0].source_group == "S6"
+        assert result[1].source_group == "S7"
+        assert result[2].source_group == "S6"
+        assert result[3].source_group == "S7"
+
 
 class TestArticleFilter:
     def test_high_score_for_fab_article(self):

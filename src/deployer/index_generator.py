@@ -83,28 +83,37 @@ def generate_index(briefings_dir: Path, dates: list[str], output_path: Path) -> 
             top_hl = html.escape(meta["top_headline"])
             sk_hl = html.escape(meta["sk_headline"])
             date_esc = html.escape(meta["date"])
+            article_count = meta.get("article_count", 0)
         else:
             theme_label = ""
             accent = "#1a73e8"
             top_hl = ""
             sk_hl = ""
             date_esc = html.escape(date)
+            article_count = 0
 
         sk_row = ""
         if sk_hl:
             sk_row = f'<div class="idx-sk"><span class="idx-sk-tag">SK에코</span> {sk_hl}</div>'
+
+        meta_badge = ""
+        if article_count:
+            meta_badge = f'<span class="idx-meta">{article_count}건</span>'
 
         cards_html_parts.append(f"""\
     <a href="{date_esc}.html" class="idx-card" style="--card-accent: {accent}">
       <div class="idx-card-top">
         <span class="idx-date">{date_esc}</span>
         <span class="idx-theme" style="background: {accent}20; color: {accent}">{theme_label}</span>
+        {meta_badge}
       </div>
       <div class="idx-headline">{top_hl}</div>
       {sk_row}
     </a>""")
 
     cards_html = "\n".join(cards_html_parts) if cards_html_parts else '<p class="idx-empty">아직 생성된 브리핑이 없습니다.</p>'
+
+    total_count = len(dates)
 
     page = f"""\
 <!DOCTYPE html>
@@ -120,6 +129,7 @@ def generate_index(briefings_dir: Path, dates: list[str], output_path: Path) -> 
   <header class="idx-header">
     <h1 class="idx-logo">Executive Briefing</h1>
     <p class="idx-sub">건설 · 반도체 · 데이터센터 · 인프라</p>
+    <span class="idx-count">{total_count}일분 브리핑</span>
   </header>
   <main class="idx-grid">
 {cards_html}
@@ -139,22 +149,25 @@ def generate_index(briefings_dir: Path, dates: list[str], output_path: Path) -> 
 _INDEX_CSS = """\
 <style>
 :root {
-  --bg: #f0f4ff;
+  --bg: #f8fafc;
   --surface: #ffffff;
   --text: #1f2937;
   --text-secondary: #6b7280;
   --border: #e5e7eb;
   --radius: 16px;
-  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
-  --shadow-lg: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: -apple-system, 'Pretendard', 'Noto Sans KR', sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.65;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .idx-container {
   max-width: 720px;
@@ -163,26 +176,38 @@ body {
 }
 .idx-header {
   text-align: center;
-  background: linear-gradient(135deg, #1a73e8 0%, #4285f4 100%);
+  background: linear-gradient(135deg, #1e3a5f 0%, #1a73e8 50%, #3b82f6 100%);
   color: white;
   border-radius: var(--radius);
-  padding: 32px 24px;
+  padding: 36px 24px 32px;
   margin-bottom: 28px;
+  box-shadow: var(--shadow-md);
 }
 .idx-logo {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: 800;
   letter-spacing: -0.5px;
 }
 .idx-sub {
   margin-top: 8px;
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.85);
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.5px;
+}
+.idx-count {
+  display: inline-block;
+  margin-top: 12px;
+  background: rgba(255,255,255,0.2);
+  padding: 3px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
 .idx-grid {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 .idx-card {
   display: block;
@@ -193,11 +218,11 @@ body {
   text-decoration: none;
   color: var(--text);
   border-left: 3px solid var(--card-accent, #1a73e8);
-  transition: box-shadow 0.2s, transform 0.15s;
+  transition: box-shadow var(--transition), transform var(--transition);
 }
 .idx-card:hover {
   box-shadow: var(--shadow-lg);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 .idx-card-top {
   display: flex;
@@ -211,12 +236,18 @@ body {
   color: var(--text);
 }
 .idx-theme {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
   padding: 2px 10px;
-  border-radius: 12px;
+  border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+.idx-meta {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
 }
 .idx-headline {
   font-size: 0.9rem;
@@ -227,23 +258,26 @@ body {
 .idx-sk {
   font-size: 0.82rem;
   color: var(--text-secondary);
-  margin-top: 4px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 .idx-sk-tag {
   display: inline-block;
   background: #fff7ed;
   color: #ea580c;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  padding: 1px 6px;
+  padding: 2px 8px;
   border-radius: 6px;
-  margin-right: 4px;
+  flex-shrink: 0;
 }
 .idx-footer {
   text-align: center;
-  padding: 24px 0 8px;
+  padding: 28px 0 8px;
   color: var(--text-secondary);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
 }
 .idx-empty {
   text-align: center;
@@ -254,5 +288,7 @@ body {
 @media (max-width: 480px) {
   .idx-container { padding: 16px 12px; }
   .idx-card { padding: 14px 16px; }
+  .idx-header { padding: 28px 16px 24px; }
+  .idx-logo { font-size: 1.35rem; }
 }
 </style>"""

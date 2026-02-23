@@ -14,6 +14,7 @@ from pathlib import Path
 
 from src.deployer.nav_injector import inject_nav, strip_nav
 from src.deployer.index_generator import generate_index
+from src.deployer.text_page_generator import generate_text_page
 
 logger = logging.getLogger("deploy")
 
@@ -47,6 +48,13 @@ def build_site(briefings_dir: Path, output_dir: Path) -> None:
         dst_path = output_dir / f"{date}.html"
         html_content = src_path.read_text(encoding="utf-8")
         dst_path.write_text(html_content, encoding="utf-8")
+
+        md_path = briefings_dir / f"{date}.md"
+        if md_path.exists():
+            md_content = md_path.read_text(encoding="utf-8")
+            text_dst = output_dir / f"{date}-text.html"
+            generate_text_page(md_content, date, text_dst)
+            logger.info("  텍스트 페이지 생성: %s", text_dst.name)
 
     all_dates = _scan_dates(output_dir)
     logger.info("전체 브리핑: %d건 (신규 %d건)", len(all_dates), len(new_dates))
