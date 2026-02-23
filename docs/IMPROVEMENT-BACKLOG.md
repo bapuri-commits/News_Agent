@@ -25,23 +25,71 @@
 ### 2. 사용자 피드백 기능
 
 **우선순위**: 낮음
-**관련 파일**: 신규 모듈 필요
+**관련 파일**: `src/briefer/html_renderer.py`, `src/deployer/index_generator.py`, 신규 `src/profiler/feedback_adjuster.py`
 
-브리핑 내 👍/👎 → 프로필 가중치 자동 조정. `stable_profile.json`의 `conversation_hint_policy` 활용. 서버리스 방식 (GitHub Issues API 또는 로컬 JSON).
+**핵심 제약**: 서버 없음 (GitHub Pages 정적 사이트).
+
+**방안**: LocalStorage + 수동 export (아버지가 한 기기에서만 사용하므로 충분)
+
+```
+[브리핑 웹 페이지]
+  Top5 카드에 👍/👎 버튼 + 카테고리 "더 보기"/"줄이기" 버튼
+      ↓ (클릭 시)
+  localStorage 저장
+  {"2026-02-23": {"thumbs": {"id": "up"}, "category_adjust": {"fab_capex": +1}}}
+      ↓ (인덱스에 "피드백 내보내기" 버튼)
+  feedback.json 다운로드
+      ↓ (CLI로 수동 반영)
+  stable_profile.json 가중치 미세 조정
+```
+
+**구현 단계**:
+1. Top5 카드에 👍/👎 버튼 삽입 (`html_renderer.py`)
+2. JS: 클릭 → localStorage 저장 + 시각적 피드백 (`html_renderer.py`)
+3. 인덱스에 "피드백 내보내기" 버튼 (`index_generator.py`)
+4. (선택) `apply-feedback` CLI 명령 (`main.py`, `profiler/feedback_adjuster.py`)
+
+**향후 자동 반영 경로**: GitHub Actions `workflow_dispatch` input으로 피드백 전달 → 파이프라인이 프로필 가중치 조정 → 다음 날 수집 반영.
 
 **예상 공수**: 6~8시간
 
 ---
 
-### 3. 과거 브리핑 검색 채팅 (RAG)
+### 3. 과거 브리핑 검색
 
 **우선순위**: 낮음
-**관련 파일**: 신규 모듈 필요
+**관련 파일**: `src/deployer/site_builder.py`, `src/deployer/index_generator.py`
 
-"지난주 반도체 수주 관련 뉴스" 같은 자연어 질의 → briefings/*.json 검색 → LLM 답변.
-MVP는 클라이언트 사이드 JS로 JSON 직접 검색.
+**핵심 제약**: 서버 없음. 클라이언트 사이드 JS 키워드 검색으로 MVP 구현.
 
-**예상 공수**: 8~12시간
+**방안**: 빌드 시 `web/search-index.json` 생성 → 인덱스 페이지에서 fetch 후 키워드 매칭
+
+```
+[site_builder.py 빌드 시]
+  briefings/*.json에서 검색용 필드만 추출
+      ↓
+  web/search-index.json 생성
+  {
+    "2026-02-23": {
+      "top5": [{"headline": "...", "category": "fab_capex", "fact": "..."}],
+      "categories": ["fab_capex", "dc_power"],
+      "sk_headline": "..."
+    }
+  }
+
+[인덱스 페이지 검색 UI]
+  🔍 "반도체 수주" 입력
+      ↓
+  JS: search-index.json fetch → 키워드 매칭 → 결과 카드 표시
+```
+
+**구현 단계**:
+1. `search-index.json` 생성 로직 (`site_builder.py`)
+2. 인덱스 페이지에 검색 입력 UI + JS (`index_generator.py`)
+3. JS: fetch → 키워드 매칭 → 결과 표시 (`index_generator.py`)
+4. (향후) LLM RAG: Vercel Function으로 자연어 질의 응답
+
+**예상 공수**: 8~12시간 (MVP 키워드 검색은 4~5시간)
 
 ---
 
