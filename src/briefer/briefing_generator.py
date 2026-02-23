@@ -188,9 +188,9 @@ class BriefingGenerator:
 
         for item in top5:
             fact = item.get("fact", "")
-            if fact and len(fact) > 300:
+            if fact and len(fact) > 500:
                 warnings_found.append(
-                    f"Top5 '{item.get('headline', '')[:20]}' Fact {len(fact)}자 (300자 초과)"
+                    f"Top5 '{item.get('headline', '')[:20]}' Fact {len(fact)}자 (500자 초과)"
                 )
             sources = item.get("sources", [])
             if not sources:

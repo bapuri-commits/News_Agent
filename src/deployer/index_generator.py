@@ -145,12 +145,12 @@ var clearBtn = document.getElementById('clear-filter');
 var noResult = document.getElementById('no-result');
 var cards = document.querySelectorAll('.idx-card');
 
-dateInput.addEventListener('input', function() {{
-  var val = this.value;
+function filterCards() {{
+  var val = dateInput.value;
   clearBtn.style.display = val ? 'inline-block' : 'none';
   var shown = 0;
   cards.forEach(function(card) {{
-    var cardDate = card.querySelector('.idx-date').textContent;
+    var cardDate = card.querySelector('.idx-date').textContent.trim();
     if (!val || cardDate === val) {{
       card.style.display = '';
       shown++;
@@ -159,7 +159,9 @@ dateInput.addEventListener('input', function() {{
     }}
   }});
   noResult.style.display = shown === 0 ? 'block' : 'none';
-}});
+}}
+dateInput.addEventListener('input', filterCards);
+dateInput.addEventListener('change', filterCards);
 
 function clearFilter() {{
   dateInput.value = '';
