@@ -308,7 +308,7 @@ def _keyword_matches(kw: str, text: str) -> bool:
     if _SHORT_EN_RE.match(kw):
         pattern = _WORD_BOUNDARY_CACHE.get(kw)
         if pattern is None:
-            pattern = re.compile(rf"\b{re.escape(kw)}\b", re.IGNORECASE)
+            pattern = re.compile(rf"\b{re.escape(kw)}\b", re.IGNORECASE | re.ASCII)
             _WORD_BOUNDARY_CACHE[kw] = pattern
         return pattern.search(text) is not None
     return kw in text

@@ -94,23 +94,27 @@ def _dedup_s7_internal(articles: list[Article]) -> list[Article]:
     if len(s7_articles) <= 1:
         return articles
 
-    kept: list[Article] = []
+    kept_ids: set[int] = set()
     kept_tokens: list[set[str]] = []
+    kept_articles: list[Article] = []
 
     for article in s7_articles:
         tokens = _tokenize(f"{article.title} {article.snippet}")
         dup_idx = _find_similar(tokens, kept_tokens, S7_INTERNAL_THRESHOLD)
 
         if dup_idx is not None:
-            if _should_replace(kept[dup_idx], article):
-                kept[dup_idx] = article
+            if _should_replace(kept_articles[dup_idx], article):
+                kept_ids.discard(id(kept_articles[dup_idx]))
+                kept_articles[dup_idx] = article
                 kept_tokens[dup_idx] = tokens
+                kept_ids.add(id(article))
             continue
 
-        kept.append(article)
+        kept_articles.append(article)
         kept_tokens.append(tokens)
+        kept_ids.add(id(article))
 
-    return non_s7 + kept
+    return [a for a in articles if a.source_group != "S7" or id(a) in kept_ids]
 
 
 def _normalize_url(url: str) -> str:
