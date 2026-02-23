@@ -27,6 +27,13 @@ MAX_SOURCE_GROUP_RATIO = 0.35
 MAX_ARTICLE_AGE_DAYS = 3
 
 
+_SOURCE_QUALITY_BONUS = {
+    "S1": 0.15, "S2": 0.15, "S5": 0.15,
+    "S6": 0.05,
+    "S3": 0.10, "S4": 0.10,
+}
+
+
 def score_article(article: Article, profile: dict) -> float:
     """기사를 프로필 기준으로 관련도 스코어링한다 (0.0 ~ 1.0)."""
     score = 0.0
@@ -37,6 +44,7 @@ def score_article(article: Article, profile: dict) -> float:
     score += _score_triggers(text, profile)
     score += _score_avoid(text, profile)
     score += _score_freshness(article)
+    score += _SOURCE_QUALITY_BONUS.get(article.source_group, 0.0)
 
     return max(0.0, min(1.0, score))
 
@@ -82,7 +90,7 @@ def _score_priorities(text: str, profile: dict) -> float:
         item_score = item.get("score", 0)
         keywords = _name_to_keywords(name)
 
-        if any(kw in text for kw in keywords):
+        if any(_keyword_matches(kw, text) for kw in keywords):
             if item_score >= 3:
                 score += 0.3
             elif item_score >= 2:
@@ -106,7 +114,7 @@ def _score_triggers(text: str, profile: dict) -> float:
     }
     for trigger in triggers:
         keywords = trigger_keywords.get(trigger, [trigger])
-        if any(kw in text for kw in keywords):
+        if any(_keyword_matches(kw, text) for kw in keywords):
             return 0.5
     return 0.0
 
@@ -120,7 +128,7 @@ def _score_avoid(text: str, profile: dict) -> float:
     }
     for item in avoid_items:
         keywords = avoid_keywords.get(item, [item])
-        if any(kw in text for kw in keywords):
+        if any(_keyword_matches(kw, text) for kw in keywords):
             return -0.5
     return 0.0
 
@@ -163,12 +171,12 @@ def _match_categories(article: Article, profile: dict) -> list[str]:
 
     for key, score in profile.get("industries", {}).items():
         keywords = _name_to_keywords(key)
-        if any(kw in text for kw in keywords):
+        if any(_keyword_matches(kw, text) for kw in keywords):
             matched.add(key)
 
     for key, score in profile.get("themes", {}).items():
         keywords = _name_to_keywords(key)
-        if any(kw in text for kw in keywords):
+        if any(_keyword_matches(kw, text) for kw in keywords):
             matched.add(key)
 
     return list(matched)
@@ -285,6 +293,25 @@ _KEYWORD_MAP: dict[str, list[str]] = {
     "sk_ecoplant_order": ["sk에코플랜트", "sk ecoplant"],
     "infra_equip": ["schneider", "vertiv", "eaton", "인프라장비"],
 }
+
+
+_SHORT_EN_RE = re.compile(r"^[a-z]{1,3}$")
+_WORD_BOUNDARY_CACHE: dict[str, re.Pattern] = {}
+
+
+def _keyword_matches(kw: str, text: str) -> bool:
+    """키워드가 텍스트에 매칭되는지 확인한다.
+
+    3글자 이하 영문 키워드(fab, pf, hr, epc 등)는 단어 경계(\\b)를 적용하여
+    "fabulous", "sphere" 같은 오매칭을 방지한다.
+    """
+    if _SHORT_EN_RE.match(kw):
+        pattern = _WORD_BOUNDARY_CACHE.get(kw)
+        if pattern is None:
+            pattern = re.compile(rf"\b{re.escape(kw)}\b", re.IGNORECASE)
+            _WORD_BOUNDARY_CACHE[kw] = pattern
+        return pattern.search(text) is not None
+    return kw in text
 
 
 def _name_to_keywords(name: str) -> list[str]:
