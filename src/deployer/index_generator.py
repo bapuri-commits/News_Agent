@@ -127,13 +127,47 @@ def generate_index(briefings_dir: Path, dates: list[str], output_path: Path) -> 
   <header class="idx-header">
     <h1 class="idx-logo">Executive Briefing</h1>
   </header>
-  <main class="idx-grid">
+  <div class="idx-search">
+    <input type="date" id="date-filter" class="idx-search-input" placeholder="날짜 선택">
+    <button class="idx-search-clear" id="clear-filter" style="display:none" onclick="clearFilter()">초기화</button>
+  </div>
+  <main class="idx-grid" id="card-grid">
 {cards_html}
   </main>
+  <p class="idx-no-result" id="no-result" style="display:none">해당 날짜의 브리핑이 없습니다.</p>
   <footer class="idx-footer">
     <p>News Agent — Executive Briefing Archive</p>
   </footer>
 </div>
+<script>
+var dateInput = document.getElementById('date-filter');
+var clearBtn = document.getElementById('clear-filter');
+var noResult = document.getElementById('no-result');
+var cards = document.querySelectorAll('.idx-card');
+
+dateInput.addEventListener('input', function() {{
+  var val = this.value;
+  clearBtn.style.display = val ? 'inline-block' : 'none';
+  var shown = 0;
+  cards.forEach(function(card) {{
+    var cardDate = card.querySelector('.idx-date').textContent;
+    if (!val || cardDate === val) {{
+      card.style.display = '';
+      shown++;
+    }} else {{
+      card.style.display = 'none';
+    }}
+  }});
+  noResult.style.display = shown === 0 ? 'block' : 'none';
+}});
+
+function clearFilter() {{
+  dateInput.value = '';
+  clearBtn.style.display = 'none';
+  noResult.style.display = 'none';
+  cards.forEach(function(card) {{ card.style.display = ''; }});
+}}
+</script>
 </body>
 </html>"""
 
@@ -183,6 +217,45 @@ body {
   font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: -0.5px;
+}
+.idx-search {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+.idx-search-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.idx-search-input:focus {
+  border-color: #1a73e8;
+}
+.idx-search-clear {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #f3f4f6;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.idx-search-clear:hover { background: #e5e7eb; }
+.idx-no-result {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 32px 16px;
+  font-size: 0.9rem;
 }
 .idx-grid {
   display: flex;

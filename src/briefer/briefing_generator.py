@@ -186,6 +186,32 @@ class BriefingGenerator:
         if attempted > 0 and success == 0:
             warnings_found.append("크롤링 전부 실패 (0/{}건)".format(attempted))
 
+        for item in top5:
+            fact = item.get("fact", "")
+            if fact and len(fact) > 300:
+                warnings_found.append(
+                    f"Top5 '{item.get('headline', '')[:20]}' Fact {len(fact)}자 (300자 초과)"
+                )
+            sources = item.get("sources", [])
+            if not sources:
+                warnings_found.append(
+                    f"Top5 '{item.get('headline', '')[:20]}' 출처 누락"
+                )
+
+        for cat_key, cat_data in categories.items():
+            items = cat_data.get("items", [])
+            if not items:
+                warnings_found.append(f"카테고리 '{cat_key}' 기사 0건 (빈 카테고리)")
+
+        source_div = briefing.get("source_diversity", {})
+        total = sum(source_div.values()) if source_div else 0
+        if total > 0:
+            for group, count in source_div.items():
+                if count / total > 0.85:
+                    warnings_found.append(
+                        f"소스 {group} 비중 {count/total:.0%} (85% 초과, 편향 위험)"
+                    )
+
         if warnings_found:
             for w in warnings_found:
                 logger.warning("QUALITY CHECK: %s", w)

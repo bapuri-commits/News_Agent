@@ -94,6 +94,8 @@ def _dedup_s7_internal(articles: list[Article]) -> list[Article]:
     if len(s7_articles) <= 1:
         return articles
 
+    s7_articles.sort(key=lambda a: (a.published_at or "", a.title))
+
     kept_ids: set[int] = set()
     kept_tokens: list[set[str]] = []
     kept_articles: list[Article] = []
