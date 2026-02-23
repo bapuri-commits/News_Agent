@@ -11,6 +11,7 @@
 
 from __future__ import annotations
 
+import functools
 import re
 from collections import Counter
 from datetime import datetime, timezone, timedelta
@@ -296,7 +297,11 @@ _KEYWORD_MAP: dict[str, list[str]] = {
 
 
 _SHORT_EN_RE = re.compile(r"^[a-z]{1,3}$")
-_WORD_BOUNDARY_CACHE: dict[str, re.Pattern] = {}
+
+
+@functools.lru_cache(maxsize=64)
+def _compile_word_boundary(kw: str) -> re.Pattern:
+    return re.compile(rf"\b{re.escape(kw)}\b", re.IGNORECASE | re.ASCII)
 
 
 def _keyword_matches(kw: str, text: str) -> bool:
@@ -306,11 +311,7 @@ def _keyword_matches(kw: str, text: str) -> bool:
     "fabulous", "sphere" 같은 오매칭을 방지한다.
     """
     if _SHORT_EN_RE.match(kw):
-        pattern = _WORD_BOUNDARY_CACHE.get(kw)
-        if pattern is None:
-            pattern = re.compile(rf"\b{re.escape(kw)}\b", re.IGNORECASE | re.ASCII)
-            _WORD_BOUNDARY_CACHE[kw] = pattern
-        return pattern.search(text) is not None
+        return _compile_word_boundary(kw).search(text) is not None
     return kw in text
 
 
