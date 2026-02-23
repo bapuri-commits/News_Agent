@@ -32,8 +32,6 @@ def render_html(briefing: dict) -> str:
     """브리핑 JSON을 완전한 HTML 문자열로 렌더링한다."""
     date = html.escape(briefing.get("date", ""))
     generated = briefing.get("generated_at", "")
-    reading_time = briefing.get("reading_time_min", "")
-
     design = pick_design(briefing)
     num_hl = design.get("number_highlight", False)
 
@@ -64,7 +62,7 @@ def render_html(briefing: dict) -> str:
     preset_key = html.escape(design.get("preset_key", ""))
 
     dark_class = " theme-dark" if is_dark else ""
-    reading_meta = f'<span class="reading-time">{reading_time} min read</span>' if reading_time else ""
+    reading_meta = ""
 
     return f"""\
 <!DOCTYPE html>

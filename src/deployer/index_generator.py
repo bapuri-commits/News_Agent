@@ -113,8 +113,6 @@ def generate_index(briefings_dir: Path, dates: list[str], output_path: Path) -> 
 
     cards_html = "\n".join(cards_html_parts) if cards_html_parts else '<p class="idx-empty">아직 생성된 브리핑이 없습니다.</p>'
 
-    total_count = len(dates)
-
     page = f"""\
 <!DOCTYPE html>
 <html lang="ko">
@@ -128,8 +126,6 @@ def generate_index(briefings_dir: Path, dates: list[str], output_path: Path) -> 
 <div class="idx-container">
   <header class="idx-header">
     <h1 class="idx-logo">Executive Briefing</h1>
-    <p class="idx-sub">건설 · 반도체 · 데이터센터 · 인프라</p>
-    <span class="idx-count">{total_count}일분 브리핑</span>
   </header>
   <main class="idx-grid">
 {cards_html}
@@ -187,22 +183,6 @@ body {
   font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: -0.5px;
-}
-.idx-sub {
-  margin-top: 8px;
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.8);
-  letter-spacing: 0.5px;
-}
-.idx-count {
-  display: inline-block;
-  margin-top: 12px;
-  background: rgba(255,255,255,0.2);
-  padding: 3px 14px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.3px;
 }
 .idx-grid {
   display: flex;

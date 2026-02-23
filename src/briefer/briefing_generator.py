@@ -101,6 +101,14 @@ class BriefingGenerator:
                 if "sources" not in item:
                     item["sources"] = [{"name": orig["source_name"], "url": orig["url"]}]
 
+        for cat_data in stage3.get("categories", {}).values():
+            for item in cat_data.get("items", []):
+                aid = item.get("id", "")
+                if aid in id_to_article:
+                    orig = id_to_article[aid]
+                    item.setdefault("url", orig.get("url", ""))
+                    item.setdefault("source_name", orig.get("source_name", ""))
+
         risks = self._extract_risks(stage2)
         next_signals = self._extract_next_signals(stage2)
 

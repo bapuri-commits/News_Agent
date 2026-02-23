@@ -1,6 +1,9 @@
-"""브리핑 JSON → Markdown 텍스트 렌더링.
+"""브리핑 JSON → 레퍼런스 문서 렌더링.
 
-카톡/이메일로 바로 보낼 수 있는 형식.
+HTML 카드 버전과는 다른 목적:
+- 원본 소스를 잘 정리한 신뢰도 있는 참고 자료
+- 기사별 출처 링크 명시
+- 전달/보관/검토용 (카톡, 이메일, 아카이브)
 """
 
 from __future__ import annotations
@@ -9,21 +12,24 @@ from src.briefer.constants import CATEGORY_LABELS, SOURCE_GROUP_LABELS
 
 
 def render_markdown(briefing: dict) -> str:
-    """브리핑 JSON을 Markdown 문자열로 렌더링한다."""
+    """브리핑 JSON을 레퍼런스 문서로 렌더링한다."""
     date = briefing.get("date", "")
+    top5 = briefing.get("top5", [])
+    categories = briefing.get("by_category", {})
+
     lines = [
-        f"# 임원 뉴스 브리핑 — {date}",
-        "",
-        f"> 읽기 시간: 약 {briefing.get('reading_time_min', 15)}분",
+        f"# Executive Briefing — {date}",
         "",
     ]
 
-    lines.extend(_render_top5(briefing.get("top5", [])))
+    lines.extend(_render_overview(top5))
+    lines.append("")
+    lines.extend(_render_main_stories(top5))
     lines.extend(_render_sk_ecoplant(briefing.get("sk_ecoplant")))
-    lines.extend(_render_categories(briefing.get("by_category", {})))
+    lines.extend(_render_category_references(categories))
     lines.extend(_render_risks(briefing.get("risks", [])))
     lines.extend(_render_next_signals(briefing.get("next_signals", [])))
-    lines.extend(_render_source_diversity(briefing.get("source_diversity", {})))
+    lines.extend(_render_source_summary(briefing))
 
     lines.append("")
     lines.append(f"---\n*생성: {briefing.get('generated_at', '')}*")
@@ -31,47 +37,77 @@ def render_markdown(briefing: dict) -> str:
     return "\n".join(lines)
 
 
-def _render_top5(items: list[dict]) -> list[str]:
+def _render_overview(top5: list[dict]) -> list[str]:
+    """1~2줄 핵심 요약."""
+    if not top5:
+        return []
+    headlines = [item.get("headline", "") for item in top5[:3] if item.get("headline")]
+    if not headlines:
+        return []
+    return [
+        "> " + " / ".join(headlines),
+        "",
+    ]
+
+
+def _render_main_stories(items: list[dict]) -> list[str]:
+    """주요 뉴스 — 상세 분석 + 출처."""
     if not items:
         return []
 
-    lines = ["## Top 5", ""]
+    lines = ["---", "", "## 주요 뉴스", ""]
+
     for i, item in enumerate(items, 1):
         headline = item.get("headline", item.get("title", ""))
         lines.append(f"### {i}. {headline}")
         lines.append("")
 
         if item.get("fact"):
-            lines.append(f"**Fact**: {item['fact']}")
+            lines.append(item["fact"])
+            lines.append("")
+
+        details = []
         if item.get("impact"):
-            lines.append(f"**Impact**: {item['impact']}")
+            details.append(f"**영향**: {item['impact']}")
         if item.get("risk") and item["risk"] != "특이사항 없음":
-            lines.append(f"**Risk**: {item['risk']}")
+            details.append(f"**리스크**: {item['risk']}")
         if item.get("next_signal"):
-            lines.append(f"**Next**: {item['next_signal']}")
+            details.append(f"**확인 필요**: {item['next_signal']}")
+
+        if details:
+            for d in details:
+                lines.append(d)
+            lines.append("")
 
         sources = item.get("sources", [])
         if sources:
-            src_text = ", ".join(
-                f"[{s.get('name', '')}]({s.get('url', '')})" for s in sources
-            )
-            lines.append(f"*출처: {src_text}*")
-
-        lines.append("")
+            for s in sources:
+                name = s.get("name", "")
+                url = s.get("url", "")
+                if url:
+                    lines.append(f"📎 출처: [{name}]({url})")
+                else:
+                    lines.append(f"📎 출처: {name}")
+            lines.append("")
 
     return lines
 
 
 def _render_sk_ecoplant(sk: dict | None) -> list[str]:
+    """SK에코플랜트 동향."""
     if not sk:
         return []
 
     lines = [
-        "## SK에코플랜트 렌즈",
-        "",
-        f"**{sk.get('headline', '')}**",
+        "---", "",
+        "## SK에코플랜트 동향",
         "",
     ]
+
+    headline = sk.get("headline", "")
+    if headline:
+        lines.append(f"**{headline}**")
+        lines.append("")
 
     lens_items = [
         ("수주·믹스", "order_mix"),
@@ -85,37 +121,56 @@ def _render_sk_ecoplant(sk: dict | None) -> list[str]:
         if value and value != "해당 기간 특이사항 없음":
             lines.append(f"- **{label}**: {value}")
 
+    sources = sk.get("sources", [])
+    if sources:
+        lines.append("")
+        for s in sources:
+            name = s.get("name", "")
+            url = s.get("url", "")
+            if url:
+                lines.append(f"📎 [{name}]({url})")
+
     lines.append("")
     return lines
 
 
-def _render_categories(categories: dict) -> list[str]:
+def _render_category_references(categories: dict) -> list[str]:
+    """카테고리별 기사 레퍼런스 — 출처 링크 포함."""
     if not categories:
         return []
 
-    lines = ["## 카테고리별 동향", ""]
+    lines = ["---", "", "## 카테고리별 기사", ""]
 
     for cat_key, cat_data in categories.items():
         label = CATEGORY_LABELS.get(cat_key, cat_key)
         summary = cat_data.get("summary", "")
-        impact = cat_data.get("impact", "")
         items = cat_data.get("items", [])
 
         lines.append(f"### {label}")
         if summary:
-            lines.append(f"{summary}")
-            lines.append("")
-        if impact:
-            lines.append(f"**Impact**: {impact}")
-            lines.append("")
+            lines.append(summary)
+        lines.append("")
 
         for item in items:
             headline = item.get("headline", "")
             fact = item.get("fact", "")
+            url = item.get("url", "")
+            source_name = item.get("source_name", "")
+
             if headline:
-                lines.append(f"- **{headline}**")
+                if url:
+                    lines.append(f"- [{headline}]({url})")
+                else:
+                    lines.append(f"- {headline}")
+
+                detail_parts = []
                 if fact:
-                    lines.append(f"  {fact}")
+                    detail_parts.append(fact)
+                if source_name and not url:
+                    detail_parts.append(f"출처: {source_name}")
+
+                if detail_parts:
+                    lines.append(f"  {' — '.join(detail_parts)}")
 
         lines.append("")
 
@@ -126,7 +181,7 @@ def _render_risks(risks: list[str]) -> list[str]:
     if not risks:
         return []
 
-    lines = ["## 리스크 종합", ""]
+    lines = ["---", "", "## 리스크 모니터링", ""]
     for risk in risks:
         lines.append(f"- {risk}")
     lines.append("")
@@ -137,23 +192,38 @@ def _render_next_signals(signals: list[str]) -> list[str]:
     if not signals:
         return []
 
-    lines = ["## Next Signals (향후 확인)", ""]
+    lines = ["## 향후 확인 사항", ""]
     for signal in signals:
         lines.append(f"- {signal}")
     lines.append("")
     return lines
 
 
-def _render_source_diversity(dist: dict) -> list[str]:
+def _render_source_summary(briefing: dict) -> list[str]:
+    """전체 출처 요약."""
+    dist = briefing.get("source_diversity", {})
+    meta = briefing.get("metadata", {})
     if not dist:
         return []
 
-    lines = ["## 소스 분포", ""]
     total = sum(dist.values())
-    for group, count in sorted(dist.items()):
+    parts = []
+    for group in sorted(dist.keys()):
+        count = dist[group]
         label = SOURCE_GROUP_LABELS.get(group, group)
-        pct = count / total * 100 if total else 0
-        bar = "█" * int(pct / 5) + "░" * (20 - int(pct / 5))
-        lines.append(f"- {label} ({group}): {bar} {count}건 ({pct:.0f}%)")
+        parts.append(f"{label} {count}건")
+
+    lines = [
+        "---", "",
+        "## 출처 요약",
+        "",
+        f"전체 {total}개 기사 분석 | {' · '.join(parts)}",
+    ]
+
+    crawl_success = meta.get("crawl_success", 0)
+    crawl_attempted = meta.get("crawl_attempted", 0)
+    if crawl_attempted:
+        lines.append(f"본문 크롤링: {crawl_success}/{crawl_attempted}건 성공")
+
     lines.append("")
     return lines
