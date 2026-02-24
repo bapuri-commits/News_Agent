@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-02-25 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-02-25.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-02-25</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-02-25</h1>
+
+<blockquote>인텔·삼성·TSMC, 백사이드 전력공급 양산 본격화 / 보스반도체, 자율주행칩 개발에 870억원 시리즈A 유치 / 현대차, 새만금에 7-8조원 AI데이터센터 투자</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. 인텔·삼성·TSMC, 백사이드 전력공급 양산 본격화</h3>
+
+<p>인텔은 18A 공정(RibbonFET+PowerVia) 양산 진입. 삼성은 2nm(SF2)에서, TSMC는 16Å(A16)에서 백사이드 전력공급 도입 예정. 전압강하 30% 감소, 셀밀도 5-10% 개선 확인.</p>
+
+<p><strong>영향</strong>: 차세대 반도체 제조장비 수요 증가 예상. 새로운 공정기술로 EUV 리소그래피 비용 절감 가능.</p>
+<p><strong>리스크</strong>: 웨이퍼 후면 가공 및 nanoTSV 정렬 기술 난이도. 열방출 문제 해결 필요.</p>
+<p><strong>확인 필요</strong>: 삼성/TSMC의 백사이드 전력공급 장비 발주 시점 및 규모 확인 필요.</p>
+
+<p>📎 출처: <a href="https://semiengineering.com/backside-power-delivery-creates-fab-tool-thermal-dissipation-barriers/" target="_blank" rel="noopener">Semiconductor Engineering</a></p>
+
+<h3>2. 보스반도체, 자율주행칩 개발에 870억원 시리즈A 유치</h3>
+
+<p>보스반도체가 자율주행차용 반도체 개발을 위해 870억원 규모 시리즈A 투자 유치.</p>
+
+<p><strong>영향</strong>: 국내 팹리스 생태계 활성화. 자율주행 반도체 파운드리 수요 증가 예상.</p>
+<p><strong>리스크</strong>: 구체적인 투자자, 밸류에이션, 제품 출시 일정 미확인.</p>
+<p><strong>확인 필요</strong>: 보스반도체의 파운드리 파트너 선정 및 양산 계획 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE90cHhBMC00Y3Q3cnhxbXVqbzJ5OWJoUW9SNEVBUVhEM2UtRXExVkFBRDM2WVpKSk9rRzM2NV9GTTRycWdDZU1ldFM4X3FObUhoSngwTG9CbTM4dVJjOHVCRGJDTURWcXJhMWpBbw?oc=5" target="_blank" rel="noopener">유니콘팩토리</a></p>
+
+<h3>3. 현대차, 새만금에 7-8조원 AI데이터센터 투자</h3>
+
+<p>현대차그룹이 전북 새만금에 향후 5년간 7-8조원 투자 계획. 엔비디아 블랙웰 GPU 5만장 도입 예정. 로봇공장·수소설비 동반 구축 검토. 이번주 정부와 공식 발표 예정.</p>
+
+<p><strong>영향</strong>: 새만금 지역 데이터센터 클러스터 형성 가속화. 재생에너지 연계 데이터센터 모델 확산 예상.</p>
+<p><strong>리스크</strong>: 구체적인 착공 시점, 전력 확보 계획 미확인. 서해안 입지의 재해 리스크 검토 필요.</p>
+<p><strong>확인 필요</strong>: 이번주 정부 발표시 구체적인 일정 및 전력 인프라 계획 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1OaWNfdENORHdOUUFqODg2TFFfSGFudTYzYVV3V25DX3ktMnh2eWhwUW5KN1dQNlhoUFFhZ2VIYWZEeXpsVTdVUVRWdUluWmU0cWQ0cHh5Z182U2R1amd6Vzc2NHo5SmY5WUUwNW55d1JnVDlXbGVOedIBeEFVX3lxTE9YYlF6MEVTN1VaaHpPbnVEekR1QW9rdjJZWDB2SXlHV3ZBdzQxYWs4VFlmVUN3UkN1Q3hfdTJJVFVPSjBjbWxMWWNLMjhwdTZETkZlZ3lTWGMyVFdRd0ctNE5MaUljYWRlal9iTC1TT1h4aG5QM0s3OQ?oc=5" target="_blank" rel="noopener">MBC 뉴스</a></p>
+
+<h3>4. 신성이엔지, 냉각·서버 통합 모듈형 DC솔루션 &#x27;AIO&#x27; 출시</h3>
+
+<p>신성이엔지가 냉각시스템과 서버랙을 수직 일체화한 모듈형 데이터센터 솔루션 &#x27;AIO&#x27; 개발. 공랭 기반에서 액체냉각(DLC)으로 전환 가능한 확장형 설계. 공장 사전제작 모듈로 구축기간 단축.</p>
+
+<p><strong>영향</strong>: AI 데이터센터 구축 비용 절감 및 공기 단축 가능. 국내 냉각솔루션 업체의 기술경쟁력 강화.</p>
+<p><strong>리스크</strong>: 실증 프로젝트 성과 및 고객 확보 미확인. 해외 경쟁사 대비 기술우위 검증 필요.</p>
+<p><strong>확인 필요</strong>: 신성이엔지의 첫 AIO 적용 프로젝트 수주 및 실증결과 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE84UDNVd2gyQnd1eWF4b3JjTEJsZk5ReS1MZ3pnQUk1NFFBcGNVTHZKVWUwQXVGZE13VldrSXFZYkZHOEpVemhZa2RqV2F3MER6?oc=5" target="_blank" rel="noopener">문화일보</a></p>
+
+<h3>5. 브이엠, SK하이닉스에 463억원 반도체장비 공급계약</h3>
+
+<p>브이엠이 SK하이닉스와 462억7800만원 규모 반도체 제조장비 공급계약 체결. 계약기간 2026년 2월 23일~8월 7일(165일). 올해 누적 계약액 1431억원(3건).</p>
+
+<p><strong>영향</strong>: SK하이닉스의 HBM 증설 관련 장비 발주 본격화. 국내 장비업체 실적 개선 기대.</p>
+<p><strong>리스크</strong>: 구체적인 장비 종류 및 적용 팹 미공개. 계약 이행 관련 기술적 리스크 확인 필요.</p>
+<p><strong>확인 필요</strong>: SK하이닉스의 추가 장비 발주 동향 및 타 장비업체 수주 현황 모니터링 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE14ZW4tSkRoS2w4bW9yYW9Raks2VkJJZ0tuenpEY0VQWVI5dG5rLWhYT1NDVDFGQ0h1dzdHbVpKcTNMbFVpSi1QU2I3VEFuRjdfMnd4NUF2V2J3dk5adF9BdHJhNUZjbFNLUV9qeG5UOEdoa0E?oc=5" target="_blank" rel="noopener">데이터투자</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 투자 시장에서 자율주행용 반도체와 AI 반도체 분야로 대규모 투자가 집중되고 있다. 보스반도체가 870억원 규모의 투자유치를 받았고, SK스퀘어는 AI·반도체 기업들에 추가로 1000억원을 투자할 계획이다. HBM 확장 수혜와 함께 반도체 장비업체들의 목표가가 상승하며 시장 전망이 밝아지고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE90cHhBMC00Y3Q3cnhxbXVqbzJ5OWJoUW9SNEVBUVhEM2UtRXExVkFBRDM2WVpKSk9rRzM2NV9GTTRycWdDZU1ldFM4X3FObUhoSngwTG9CbTM4dVJjOHVCRGJDTURWcXJhMWpBbw?oc=5" target="_blank" rel="noopener">보스반도체, 자율주행차용 반도체로 870억원 시리즈A 투자유치</a></li>
+</ul>
+<p>차량용 시스템반도체 설계 전문기업이 대규모 투자를 받았다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9aRmZZZnZhZ2tPRWVuZ0x1ZWFtT0FjRVc0alRZSjVQdjY3alZMWHBvRFlTZUE3YklITm9Nb0VCSkJvVktXSTlrMG1WaV9vcTBIV2FYREpn?oc=5" target="_blank" rel="noopener">SK스퀘어, AI·반도체 분야에 1000억원 추가 투자 계획</a></li>
+</ul>
+<p>미국 해머스페이스 투자를 시작으로 글로벌 AI·반도체 투자를 확대한다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE53eVJZN3hHNndhY3psaFJYSm1QQTRDTkl3MWtvcDNVd0JUMGxjNWp6UGlsU1Q0bEhEZ1FETlo1eEkwY3UxSlVvbEczRk55Z0lEZzhWRdIBVEFVX3lxTE53eVJZN3hHNndhY3psaFJYSm1QQTRDTkl3MWtvcDNVd0JUMGxjNWp6UGlsU1Q0bEhEZ1FETlo1eEkwY3UxSlVvbEczRk55Z0lEZzhWRQ?oc=5" target="_blank" rel="noopener">SK스퀘어 투자 기업들 가치 7배 상승, 투자 성과 가시화</a></li>
+</ul>
+<p>2년간 AI·반도체 투자로 포트폴리오 기업 가치가 크게 증가했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1NdEYyV3pCalMtNnZjd3dscXdEY24zUFRteFNTdy14Qk05MlBBNjdwR1FRaWlDRWtnd1R0Rldvb21IQjNUeXJnZW9VQ1QzRFg5c1ExTi05eklsbXRybnphTXRySTE?oc=5" target="_blank" rel="noopener">삼성전자, HBM 집중으로 P4·P5 생산라인 구축 가속화</a></li>
+</ul>
+<p>고대역폭메모리 증산을 위해 생산 인프라를 확충하고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5QdkdNV1I4emZGVWRnUnh2bW1meGpuTzZBd3lBVno2SGdTeTIwdFg4eXBJZVhUa1pEMmZCYjRfUm9sS0FITGtpYzI5SEhSc0lTbHR5X0lrZTF0aVNGVGNoZdIBeEFVX3lxTFA3bXNZQTdrX0EtYU1TNGo0SDNKdjhrOGxIYVRHS0xvUnpKaG5TSzhTRGNDdlRSZm9LVFRZUWJrY1IzMnltRWI1YWJyeno0RXRBckJMc3M4cWZyUGV0QWRSRll2MklvaWZlYTVOeVBpMjRjTk5PZzVYMw?oc=5" target="_blank" rel="noopener">메릴린치, 한미반도체 목표가 30만원 제시</a></li>
+</ul>
+<p>HBM 확장 수혜로 TC본더 독주체제가 예상된다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE14ZW4tSkRoS2w4bW9yYW9Raks2VkJJZ0tuenpEY0VQWVI5dG5rLWhYT1NDVDFGQ0h1dzdHbVpKcTNMbFVpSi1QU2I3VEFuRjdfMnd4NUF2V2J3dk5adF9BdHJhNUZjbFNLUV9qeG5UOEdoa0E?oc=5" target="_blank" rel="noopener">브이엠, SK하이닉스와 462억원 반도체 제조장비 계약 체결</a></li>
+</ul>
+<p>메모리 반도체 생산 확대에 따른 장비 수주를 기록했다</p>
+
+<h3>데이터센터 신축</h3>
+<p>글로벌적으로 AI와 데이터 처리 수요 증가로 데이터센터 건설이 활발해지고 있다. 구글이 미네소타에 첫 데이터센터를 발표했고, 핀란드에서도 새로운 데이터센터 계획이 진행 중이다. 국내에서도 목포 등 지방 도시의 AI 데이터센터 구축과 전력 인프라 정비가 시급한 과제로 대두되고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/google-announces-first-data-center-in-minnesota/" target="_blank" rel="noopener">구글, 미네소타 파인 아일랜드에 첫 데이터센터 건설 발표</a></li>
+</ul>
+<p>Xcel Energy와 파트너십으로 진행된다</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/finlands-yit-plans-data-center-in-kontiolahti/" target="_blank" rel="noopener">핀란드 YIT, 콘티올라티에 데이터센터 건설 계획</a></li>
+</ul>
+<p>건설회사가 동부 지역 개발을 추진하고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBacjJ0Vm1oTG42dk5EVHBBX1R2TVlLV2RyaE82NG81TkJIMUp6bHhvQXAzM3ZBWmJHSFNseDZUNkFHRWdXS2VieTREb0xqSkZrZWZHYWJ0VkExSFpYMmtpSnZjYWdxNkdyS3NCR9IBbEFVX3lxTFBacjJ0Vm1oTG42dk5EVHBBX1R2TVlLV2RyaE82NG81TkJIMUp6bHhvQXAzM3ZBWmJHSFNseDZUNkFHRWdXS2VieTREb0xqSkZrZWZHYWJ0VkExSFpYMmtpSnZjYWdxNkdyS3NCRw?oc=5" target="_blank" rel="noopener">목포시 AI데이터센터 구축에 전력 인프라 정비 시급</a></li>
+</ul>
+<p>지방 도시의 데이터센터 유치를 위한 인프라 구축이 과제다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE84UDNVd2gyQnd1eWF4b3JjTEJsZk5ReS1MZ3pnQUk1NFFBcGNVTHZKVWUwQXVGZE13VldrSXFZYkZHOEpVemhZa2RqV2F3MER6?oc=5" target="_blank" rel="noopener">신성이엔지, 모듈형 데이터센터 솔루션 &#x27;AIO&#x27; 출시</a></li>
+</ul>
+<p>냉각과 서버 인프라를 통합한 솔루션을 개발했다</p>
+
+<h3>첨단 패키징</h3>
+<p>반도체 패키징 기술에서 백사이드 전력 공급 방식이 주목받고 있으나, 제조 공정과 열 관리 측면에서 새로운 기술적 과제가 제기되고 있다.</p>
+
+<ul>
+<li><a href="https://semiengineering.com/backside-power-delivery-creates-fab-tool-thermal-dissipation-barriers/" target="_blank" rel="noopener">백사이드 전력 공급 기술, 제조 및 열 관리 장벽 직면</a></li>
+</ul>
+<p>칩 후면 전력 공급으로 혼잡도는 줄이지만 새로운 기술적 도전과제가 생겼다</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>글로벌 사우스 지역의 AI 접근성 확대와 유럽의 하드웨어 주권 확보를 위한 기술 개발이 진행되고 있다. 인도에서 AI 민주화 논의가 활발하고, 유럽에서는 3nm 기술과 RISC-V 기반 반도체 개발이 추진되고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/india-summit-champions-global-south-ai-inclusion/" target="_blank" rel="noopener">인도 AI 임팩트 서밋, 글로벌 사우스 AI 민주화 논의</a></li>
+</ul>
+<p>개발도상국의 AI 접근성 향상을 위한 정책적 방안이 제시되었다</p>
+<ul>
+<li><a href="https://www.eetimes.com/semidynamics-becomes-3-nm-ready-moves-europe-toward-hardware-sovereignty/" target="_blank" rel="noopener">세미다이나믹스, 3nm 기술로 유럽 하드웨어 주권 강화</a></li>
+</ul>
+<p>RISC-V 기반으로 유럽의 AI 반도체 자립 기반을 구축하고 있다</p>
+
+<h3>DC 전력</h3>
+<p>AI 데이터센터의 전력 수요 급증으로 랙 밀도 증가와 전력 동역학의 변화가 가속화되고 있어, 새로운 전력 솔루션에 대한 필요성이 커지고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/videos/dcdstudio-exploring-the-evolution-of-power-dynamics-with-vandana-singh-schneider-electric/" target="_blank" rel="noopener">슈나이더일렉트릭, AI 중심 전력 동역학 변화 분석</a></li>
+</ul>
+<p>랙 밀도 증가와 에너지 수요 성장으로 새로운 전력 솔루션이 필요하다</p>
+
+<h3>EPC / 수주</h3>
+<p>대규모 인프라 프로젝트에서 EPC 업체들의 수주 경쟁이 치열해지고 있으며, 텍사스 연안 방벽 프로젝트 등 미래 세대를 위한 투자가 확대되고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/jacobs-wins-role-texas-coastal-barrier-project/812987/" target="_blank" rel="noopener">제이콥스, 텍사스 연안 방벽 350억달러 프로젝트 수주</a></li>
+</ul>
+<p>텍사스 미래를 위한 세대적 투자 프로젝트의 게이트 부분을 담당한다</p>
+
+<h3>자재 / 노무</h3>
+<p>2026년 건설업계에서 경영진 교체와 인력 검증 시스템 도입 등 운영 방식의 변화가 나타나고 있다. 특히 오하이오주에서 E-Verify 의무화로 건설업체들의 인력 관리 방식이 바뀌고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/executive-moves-q1-2026-construction/812929/" target="_blank" rel="noopener">건설업체들, 2026년 초 경영진 교체 움직임 활발</a></li>
+</ul>
+<p>새해를 맞아 여러 건설사에서 리더십 변화가 이뤄졌다</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/construction-e-verify-immigration-dotted-line/812889/" target="_blank" rel="noopener">오하이오주 비주거용 건설업체 E-Verify 의무화</a></li>
+</ul>
+<p>3월 19일부터 인력 검증 프로그램 등록이 필수가 된다</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[인텔·삼성·TSMC, 백사이드 전력공급 양산 본격화] 웨이퍼 후면 가공 및 nanoTSV 정렬 기술 난이도. 열방출 문제 해결 필요.</li>
+<li>[보스반도체, 자율주행칩 개발에 870억원 시리즈A 유치] 구체적인 투자자, 밸류에이션, 제품 출시 일정 미확인.</li>
+<li>[현대차, 새만금에 7-8조원 AI데이터센터 투자] 구체적인 착공 시점, 전력 확보 계획 미확인. 서해안 입지의 재해 리스크 검토 필요.</li>
+<li>[신성이엔지, 냉각·서버 통합 모듈형 DC솔루션 &#x27;AIO&#x27; 출시] 실증 프로젝트 성과 및 고객 확보 미확인. 해외 경쟁사 대비 기술우위 검증 필요.</li>
+<li>[브이엠, SK하이닉스에 463억원 반도체장비 공급계약] 구체적인 장비 종류 및 적용 팹 미공개. 계약 이행 관련 기술적 리스크 확인 필요.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>삼성/TSMC의 백사이드 전력공급 장비 발주 시점 및 규모 확인 필요.</li>
+<li>보스반도체의 파운드리 파트너 선정 및 양산 계획 확인 필요.</li>
+<li>이번주 정부 발표시 구체적인 일정 및 전력 인프라 계획 확인 필요.</li>
+<li>신성이엔지의 첫 AIO 적용 프로젝트 수주 및 실증결과 확인 필요.</li>
+<li>SK하이닉스의 추가 장비 발주 동향 및 타 장비업체 수주 현황 모니터링 필요.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/5건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-02-24T21:36:14.168581+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
