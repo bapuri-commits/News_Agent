@@ -34,5 +34,14 @@
     "top_headline": "인텔·삼성·TSMC, 백사이드 전력공급 양산 본격화",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-02-26": {
+    "date": "2026-02-26",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "SK에코플랜트-성균관대 하이테크솔루션 3기 8명 졸업",
+    "sk_headline": "SK에코플랜트, 반도체 전문인력 양성으로 AI인프라 역량 강화",
+    "article_count": 39
   }
 }
