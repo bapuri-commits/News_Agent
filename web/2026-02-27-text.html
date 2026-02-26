@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-02-27 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-02-27.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-02-27</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-02-27</h1>
+
+<blockquote>데이터센터 프리팹 모듈 구축방식 장단점 분석 백서 발간 / SK에코플랜트, 반도체 전문 석사 3기 8명 배출 / 폴란드 Bełchatów에 500MW 대형 DC 캠퍼스 계획</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. 데이터센터 프리팹 모듈 구축방식 장단점 분석 백서 발간</h3>
+
+<p>DatacenterDynamics가 데이터센터 프리팹(조립식) 모듈 활용의 장단점을 분석한 백서 발간. 속도, 비용, 리스크 간 균형점 제시.</p>
+
+<p><strong>영향</strong>: 모듈러 데이터센터 시장 확대로 국내 건설사의 프리팹 제작/설치 역량이 경쟁력 좌우. 공기 단축과 품질 표준화 가능.</p>
+<p><strong>리스크</strong>: 모듈 운송/설치 과정의 품질관리 및 현장 인터페이스 조정 리스크 존재.</p>
+<p><strong>확인 필요</strong>: 국내 주요 건설사의 모듈러 DC 수주 동향 및 프리팹 생산기지 투자계획 확인 필요.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/whitepapers/benefits-and-drawbacks-of-prefabricated-modules-for-data-centers/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>2. SK에코플랜트, 반도체 전문 석사 3기 8명 배출</h3>
+
+<p>SK에코플랜트·SK에코엔지니어링이 성균관대와 운영하는 하이테크솔루션학과 3기 졸업생 8명 배출(1/24). 2022년 개설된 정식 석사과정으로 FAB건설/AI/BIM 중심 커리큘럼. 현재 4기 운영중, 상반기 5기 선발 예정.</p>
+
+<p><strong>영향</strong>: SK에코엔지니어링 100% 자회사 편입 후 반도체 전문인력 공유로 시너지 창출. 국내 반도체 FAB 수주경쟁력 강화.</p>
+<p><strong>리스크</strong>: 특이사항 없음.</p>
+<p><strong>확인 필요</strong>: 상반기 5기 선발 규모 및 SK에코플랜트의 반도체 관련 신규 수주 동향 모니터링.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1PY0RjdXJYNmdaN1h6bTVMTGxCOU5jQW14bm5kQURvQjBGMFBnZUFIQzJlQ25HTEZadkQ3Z1NIN3JLYklYVWZGNTc4U3A5c1NobmRfQ1ViZVd1SWE3UFFyWndJanp5WmlVZEE?oc=5" target="_blank" rel="noopener">서울파이낸스</a></p>
+
+<h3>3. 폴란드 Bełchatów에 500MW 대형 DC 캠퍼스 계획</h3>
+
+<p>폴란드 Bełchatów에 500MW 규모 데이터센터 캠퍼스 계획 발표. 동유럽 최대 규모 프로젝트 중 하나.</p>
+
+<p><strong>영향</strong>: 동유럽 DC 시장 급성장 신호. 한국 건설사의 유럽 DC EPC 진출 기회 확대 가능.</p>
+<p><strong>리스크</strong>: 전력 인프라 확보 및 인허가 지연 리스크. 구체적인 발주처/일정 미확인.</p>
+<p><strong>확인 필요</strong>: 프로젝트 발주처, 착공시기, EPC 입찰일정 등 구체적인 진행사항 확인 필요.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/500mw-data-center-campus-planned-for-be%C5%82chat%C3%B3w-poland/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>4. 메타-AMD 5년간 최대 85.9조원 AI칩 공급계약</h3>
+
+<p>메타가 AMD와 5년간 최대 600억달러(약 85.9조원) 규모 AI칩 공급계약 체결(1/25). 총 6GW 규모 맞춤형 AI칩 공급 예정. AMD는 올해 하반기 차세대 MI450 1GW 우선 공급.</p>
+
+<p><strong>영향</strong>: AI 인프라 투자 급증으로 데이터센터 건설 수요 확대. 메타의 연간 AI 인프라 투자 최대 193조원 계획으로 DC EPC 기회 증가.</p>
+<p><strong>리스크</strong>: 칩 공급망 집중도 완화 차원의 계약으로 엔비디아 의존도는 여전. 지분연계 구조의 순환거래 우려.</p>
+<p><strong>확인 필요</strong>: 메타의 구체적인 DC 증설 계획 및 입지 선정 동향 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPVTJkbTlfd1gxaVFBU2U2cHRKWldQLTlmandKT0JDZ1FrRVJUQTc1NWtRUnlIcGZNV05HU000V2FiUFJYUF93UUtlRWNuTmdRcmdOUkR3Z1FfVFZwMkV2RnphVlIxSUhGMGFDTWlXQmNNcHgwd1E3YmU1eFN6R3RqUUViQdIBlwFBVV95cUxQd05XSGtyU2liWlV5b29QMVBOZXJ5akp6a3dTakFuNmtKMTN2U3gxMXNzWXNMUGVVeG44dkgwXzZqc2pteHlqSGtQWU90MUtYbzE1RWFicVBTZE9paEROOFh6NThxX0ZqNXgxM0o2WTVrRjZLTXVUck1mTzVHTE15NVNoWFN4S0hGVHk5Q1hGYlB4T3FkVzZv?oc=5" target="_blank" rel="noopener">조선일보</a></p>
+
+<h3>5. AMD-메타 계약에 지분 10% 옵션 포함, 주가 14% 급등</h3>
+
+<p>AMD-메타 AI칩 계약에 메타의 AMD 지분 최대 10% 취득 옵션 포함. 행사가 0.01달러, 최대 1.6억주 규모 신주인수권. AMD 주가 장중 14% 급등. 메타 올해 AI 인프라 투자 최대 1,350억달러(193조원) 계획.</p>
+
+<p><strong>영향</strong>: 대규모 AI 인프라 투자로 아시아 DC 허브 구축 가속화 전망. 한국 건설사의 해외 DC 수주 기회 확대.</p>
+<p><strong>리스크</strong>: 고객사의 지분 취득을 통한 순환거래 구조 우려 제기. 칩 공급 지연시 투자 일정 차질 가능.</p>
+<p><strong>확인 필요</strong>: 메타의 아시아 지역 DC 투자 계획 및 한국 내 증설 가능성 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1pUDQzRHN6WjlobFVBZjVwcUk0b21zVDFBQUljbFlKX29yMjAxZEdjRkUwczBua0ZDODVTM0JsNkFDTXZmRDFWUGRlR1FsVzZLODBnbVY4T1RQd09HZmdZMFFwOEI2dUxLN3JlOGVn?oc=5" target="_blank" rel="noopener">mstoday.co.kr</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>SK에코플랜트, 반도체·AI 전문인력 3기 8명 배출</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> SK에코플랜트가 성균관대와 연계한 &#x27;하이테크솔루션 학과&#x27; 3기에서 반도체 전문인력 8명을 배출했다고 발표했다(기사 기준: 2025년 1월 25일). 이는 AI 인프라 솔루션 공급자 비전 실현을 위한 전문인력 확보 전략의 일환으로, 반도체 제조시설(FAB), AI 데이터센터 등 첨단 분야 경쟁력 강화에 집중하고 있음을 시사한다. 현재 4기 과정 운영 중이며 올해 상반기 5기 선발 예정이다.</li>
+<li><strong>현금흐름·차입</strong> 해당 기간 현금흐름이나 차입 구조 관련 특이사항 없음.</li>
+<li><strong>PF/우발채무</strong> 해당 기간 PF 우발채무 관련 특이사항 없음.</li>
+<li><strong>IPO/경쟁사</strong> 기사에서 SK에코엔지니어링이 &#x27;SK에코플랜트의 100% 자회사로 편입&#x27;되었다고 언급하고 있어, 자회사 편입을 통한 시너지 창출과 포트폴리오 정리가 진행되었음을 확인할 수 있다. 동일한 교육과정을 거친 전문인력 공유를 통해 프로젝트 수행 역량과 기술 통합을 강화한다는 전략이다.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1PY0RjdXJYNmdaN1h6bTVMTGxCOU5jQW14bm5kQURvQjBGMFBnZUFIQzJlQ25HTEZadkQ3Z1NIN3JLYklYVWZGNTc4U3A5c1NobmRfQ1ViZVd1SWE3UFFyWndJanp5WmlVZEE?oc=5" target="_blank" rel="noopener">서울파이낸스</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBnU1I2X0hYZ2ZiS0ZCQ3dkU3RIbWhWTmliX2MwOFQ3SHR2SS1BRXJwcXY4VDRsY2VzZXA5SEdpSEUwVDV0cnZ6cnpKNmRNYy1kUmZid2JRSUZOMjRVc3VnbTU2XzY4bkdLSkE?oc=5" target="_blank" rel="noopener">청년일보</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE56NUNoenYySlpVWXB6c1d3NjRxS252UWxrb0JxRUN0aGhiREItcC1ZSFp3X1p2d1JldlJ5dlpYSGNQUWNkZDAwT3g2bFhnVmJiRHdlX1FZLW1rOS1PQ3pCR2ZNYkUyaHRDX0E?oc=5" target="_blank" rel="noopener">mt.co.kr</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>AI 투자 열풍에 힘입어 전 세계 반도체 관련 설비투자와 국가 성장률 전망이 급격히 개선되고 있다. 삼성전자의 HBM 사업 확장과 SKC의 유리기판 투자 등 대규모 캐펙스가 본격화되면서 반도체 슈퍼사이클이 현실화되고 있다. 한국은행은 반도체 호조를 근거로 올해 성장률 전망치를 2.0%로 상향 조정했다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTjR3Q3BIZGxRcWk5MWZDREVBa0EyS1U0V28xQS05S0MtbGJqazNacEVNM1ZpYTVZZUp3VkdVcE9UQkRoSjBGVUNJaXU5Rm5heFByTWR4eFJxMU9mY1p1aEJveVZlYU5ZRXZKT2UwbnZSR2Vza19pak16RDNaN1BKUWJKM2R4VC1X?oc=5" target="_blank" rel="noopener">반도체 장비 슈퍼사이클 본격화</a></li>
+</ul>
+<p>ASML·도쿄일렉트론 1분기 매출이 16% 급등하며 AI 투자 열풍 확산</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9aTVBQRDB4WkhXUlljZzExcmJMZHUzaWxMS3FHY0s0WmVqOWJfRXppVkpyUTN0emY5d3BhbEZ6eXJMYzNFcW5lNlNNLTRqUDRzakpIWTRQdmtiMktOTW5qZtIBeEFVX3lxTE5SWDJleGJJb3NEcXBIdDZsVEtoeC1ZckhHREhoNm8ybFNGY05BT1M0ckVVVWpYNUxjV3pJbzdXY2E3bzlwSlRZTmtnZHdWT0ZRMjJKYm1OdVAtUkVIS2lTejRUY1lyMlhLbHhKQlJ0dGg1ckpGcjV0ag?oc=5" target="_blank" rel="noopener">삼성전자 미국 반도체 매출 급성장</a></li>
+</ul>
+<p>HBM 수요 증가로 미국 매출이 60조원에 육박</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFBlUnByamtBM2xBMy1sWXJHNUVONmZpODI2eHNCSjgtWmEwOGFtd2tZbHhQZHAySzdQZXRyLUhoeVdRRUY3ZHc1d0N3dXJVSmpzZG5oMmMyanfSAVhBVV95cUxQZVJwcmprQTNsQTMtbFlyRzVFTjZmaTgyNnhzQko4LVphMDhhbXdrWWx4UGRwMks3UGV0ci1IaHlXUUVGN2R3NXdDd3VyVUpqc2RuaDJjMmp3?oc=5" target="_blank" rel="noopener">국민성장펀드 삼성전자 대출 확정</a></li>
+</ul>
+<p>AI 반도체 투자 일정 단축을 위한 정부 지원</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9jaEVKN3FWcHVJcjFzcy16ZE5JWG52MDZKZHRTeVplZEZLVEg1bGtuU1FnMzdRU2JjRzBSaVcxcnJBUk8tTE82VWszYnl5MHZiV2ZyNWJGcDdrckNGcWlDUWY3T1lwUmV0cWNCZEZPcEhhWU0?oc=5" target="_blank" rel="noopener">SKC 1조원 유상증자 추진</a></li>
+</ul>
+<p>반도체 유리기판 사업에 5900억원 투자 계획</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFB2NHVfTGYyQkpNZDRkMDlhbS00ZDJxYkhqSHhHOEVWOU5NckU1WEJUNFp4VThZTkd2MHoyeGV4ZHFrSGxmSHE3cUJVWVpKSWQ1Wm0zWEV0MElxQzVsZVhSQWpJd1p2eWdldDVoT1RqSUtYU0U?oc=5" target="_blank" rel="noopener">한은 성장률 전망 상향 조정</a></li>
+</ul>
+<p>AI 투자 확산에 따른 반도체 수출 호조로 2.2% 성장 전망</p>
+
+<h3>첨단 패키징</h3>
+<p>HBM을 중심으로 한 AI 반도체 패키징 기술 경쟁이 치열해지고 있다. 삼성전자는 후공정 공급망 다각화를 위해 한미반도체와 TC본더 공급을 논의하고 있으며, 한화세미텍은 하이브리드본더로 승부수를 던지고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE4ySmRKN1d1dzNQQXNiUW82UUdEdjVlY052RllvM21lNUMwbjA5VDAzNHpRMWVSbUJnMWRuZzhpZWtJQXJlaUxjalNsaUhkaXp1ZmVpVjlwa1VQTnplTXI3Mm1BZw?oc=5" target="_blank" rel="noopener">한화세미텍 하이브리드본더 승부수</a></li>
+</ul>
+<p>HBM 겨냥 패키징 장비로 AI 반도체 경쟁 참여</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1GbE1jQUtabThzb0NfZXZNaEtib3JNbTNQS0dCS2hPZi1DVElWLVY2TFA3ZDFPc0lqWjNTazJSejd3R29xQWIzUFhsN3VlTjZnRURxZVM0R3FIUdIBWEFVX3lxTE5oMHZRUVdrQU5hTGQ3RVJEZEZDeGRmZk9UWEJCcHM2em9ta1c5a0huYkVXUGZQekdKQzB5WWs5SXhHU2JPRWlfYkxLSEZhT0NycGtZUkdRN0U?oc=5" target="_blank" rel="noopener">삼성전자 한미반도체 본더 공급 논의</a></li>
+</ul>
+<p>HBM 후공정 공급망 다각화 전략 착수</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1wblNaVk9DMlYwWll3TExZOHNaVFpmTDd5OGJSQTZjU0ptRGM5djZXaHhJY1NYenJscmZoaVFQVEt5LTFPSzJkek1yeV8wWGw5QWdad01GamItNWpjazlEOGxkckhWNE8tSzRCRDVlRUgyY1k?oc=5" target="_blank" rel="noopener">HBM 3사 경쟁구도 심화</a></li>
+</ul>
+<p>마이크론이 전력 효율 차별화로 SK하이닉스·삼성전자 추격</p>
+
+<h3>데이터센터 신축</h3>
+<p>동유럽 지역에서 대규모 데이터센터 건설 프로젝트가 계획되고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/500mw-data-center-campus-planned-for-be%C5%82chat%C3%B3w-poland/" target="_blank" rel="noopener">폴란드 500MW 데이터센터 캠퍼스 계획</a></li>
+</ul>
+<p>동유럽 최대 규모 데이터센터 건설 프로젝트</p>
+
+<h3>DC 전력</h3>
+<p>미국 데이터센터 건설이 전력공급 및 인허가 지연으로 어려움을 겪고 있으나, 장기적으로는 AI 전력 인프라 투자가 본격화되고 있다. 퀄컴은 인텔 파운드리 출신 인재를 영입하며 조직 강화에 나섰다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1RYkU0N0JHQnhoa2F0SFE0cm42VXFFRURIRl9KTEhjNGIyd1RyNGRyWldzQzIwMTBkSFVRSDN5d1JjU3d5VTRkQm9VYjk2TmRpS0ZsU0t6N01LYTRI?oc=5" target="_blank" rel="noopener">미국 데이터센터 건설 용량 감소</a></li>
+</ul>
+<p>인허가·전력공급 지연으로 2020년 이후 처음 감소</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE56VlFNaUJLSTBjS3cwZzgzeDZuM1ZUTTRqalJYWlNadlFHRkJzYi1BZWMzdVYteWVzN3NhV25ZcjdlcWNNNDVqSWV1WU1vWjRhMWo5RFZkX0ZUMHR4OXN5Y1lxOW5mX2pId0kxRzVITQ?oc=5" target="_blank" rel="noopener">OCI홀딩스 텍사스 태양광 프로젝트</a></li>
+</ul>
+<p>260MW 태양광 금융조달 완료로 AI 전력 인프라 투자 본격화</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/qualcomm-hires-former-intel-foundry-svp-kevin-obuckley-to-lead-global-operations-and-supply-chain/" target="_blank" rel="noopener">퀄컴 인텔 출신 임원 영입</a></li>
+</ul>
+<p>전 인텔 파운드리 SVP Kevin O&#x27;Buckley 글로벌 부문 책임자로 영입</p>
+
+<h3>DC 냉각</h3>
+<p>데이터센터 건설에서 모듈형 설계의 장단점이 주목받고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/whitepapers/benefits-and-drawbacks-of-prefabricated-modules-for-data-centers/" target="_blank" rel="noopener">데이터센터 모듈형 설계 평가</a></li>
+</ul>
+<p>속도, 비용, 리스크 균형 관점에서 프리팹 모듈 도입 검토</p>
+
+<h3>EPC / 수주</h3>
+<p>메타와 AMD의 144조원 규모 AI칩 계약이 체결되어 한국 반도체 업계에 수혜가 예상된다. 국내 건설·엔지니어링 기업들도 반도체 관련 수주 확대와 ESG 경쟁력 강화에 나서고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPVTJkbTlfd1gxaVFBU2U2cHRKWldQLTlmandKT0JDZ1FrRVJUQTc1NWtRUnlIcGZNV05HU000V2FiUFJYUF93UUtlRWNuTmdRcmdOUkR3Z1FfVFZwMkV2RnphVlIxSUhGMGFDTWlXQmNNcHgwd1E3YmU1eFN6R3RqUUViQdIBlwFBVV95cUxQd05XSGtyU2liWlV5b29QMVBOZXJ5akp6a3dTakFuNmtKMTN2U3gxMXNzWXNMUGVVeG44dkgwXzZqc2pteHlqSGtQWU90MUtYbzE1RWFicVBTZE9paEROOFh6NThxX0ZqNXgxM0o2WTVrRjZLTXVUck1mTzVHTE15NVNoWFN4S0hGVHk5Q1hGYlB4T3FkVzZv?oc=5" target="_blank" rel="noopener">메타-AMD 144조원 AI칩 계약</a></li>
+</ul>
+<p>한국 반도체 업계에도 수혜 효과 기대</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE96S01rZ0tfSUh0akhXb0JsUHlQZVBXTXpRVjZERXNqVjB0eUQ5OTNWMDRYMGl3cFR0NzNCaGtCTVZmY3VQckcwNEdRNHM2S044aEF1NGU0NGV0Q185SHNlckp1UXcweWFwd2c?oc=5" target="_blank" rel="noopener">신성이엔지 4분기 흑자전환</a></li>
+</ul>
+<p>올해 반도체 수주와 수익성 중심 전략 추진</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFByYU1odW1kbXFCclNXeFF1ZkRFZW82WlZDeFFXNkhEcEVMUHk4QTdUcGtQQWU3S1JZYXpWMndsR3h2ZUMtYmhEZnRQb04tTGxIalZGdzJrSXQzay1UdW1nQmZkSWtZZEJtWmE00gFvQVVfeXFMUHpfSk9QUF95ZUZxZnM4b1kzZUFBcU1zZ3RrOXZOcm1rTVFrSFY4M1lGSHlYT3FzT291YzFJTXFNb0VURG9neXJIdHYyQzNDbzREYkVTMG9nLUpzdkk2Mmk4ZktWR2pkbWVUM3pNVkdV?oc=5" target="_blank" rel="noopener">LS머트리얼즈 ESG 실버등급</a></li>
+</ul>
+<p>AI 데이터센터 수주 경쟁력 강화</p>
+
+<h3>공기 / 원가 / 변경관리</h3>
+<p>미국 내 이민 단속이 다세대 주택 운영에 부정적 영향을 미치고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/immigration-raid-ICE-apartment-occupancy-construction/813192/" target="_blank" rel="noopener">이민 단속이 다세대 주택에 미치는 영향</a></li>
+</ul>
+<p>플로리다·텍사스 등에서 점유율 하락 보고</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>AI 기반 스마트글래스 혁신에서 MEMS 마이크로폰 솔루션이 핵심 기술로 주목받고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/hearing-is-believing-the-unsuspected-key-to-smart-glasses-innovation/" target="_blank" rel="noopener">스마트글래스용 MEMS 마이크로폰 혁신</a></li>
+</ul>
+<p>인피니언과 파트너사들이 AI 스마트글래스용 고급 오디오 솔루션 개발</p>
+
+<h3>프로젝트 파이낸싱</h3>
+<p>SK에코플랜트와 SK에코엔지니어링이 반도체 전문인력 양성에 나서고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1PY0RjdXJYNmdaN1h6bTVMTGxCOU5jQW14bm5kQURvQjBGMFBnZUFIQzJlQ25HTEZadkQ3Z1NIN3JLYklYVWZGNTc4U3A5c1NobmRfQ1ViZVd1SWE3UFFyWndJanp5WmlVZEE?oc=5" target="_blank" rel="noopener">SK그룹 반도체 전문가 3기 배출</a></li>
+</ul>
+<p>SK에코플랜트·SK에코엔지니어링이 성균관대와 협력해 인재 양성</p>
+
+<h3>인력 / 인사</h3>
+<p>SK에코플랜트와 SK에코엔지니어링이 성균관대와 협력해 반도체·AI 인프라 전문인력 양성에 본격 나서고 있다. 하이테크솔루션 석사과정을 통해 3기 전문가를 배출하며 AI 인프라 경쟁력 강화를 추진하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBnU1I2X0hYZ2ZiS0ZCQ3dkU3RIbWhWTmliX2MwOFQ3SHR2SS1BRXJwcXY4VDRsY2VzZXA5SEdpSEUwVDV0cnZ6cnpKNmRNYy1kUmZid2JRSUZOMjRVc3VnbTU2XzY4bkdLSkE?oc=5" target="_blank" rel="noopener">SK그룹 AI 인프라 인재양성 강화</a></li>
+</ul>
+<p>에코플랜트·에코엔지니어링이 반도체 전문인력 3기 배출</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE1NdF9nanBuZ2tuWkVKaUhnSWJZOF82Sk0yRTN3QWRBNTVkeGJvZkFsN1dmTVdPSUVBc3R0RG92eW5UcG9kRGxDQUZ2akFPTi1xLV9nNVU3RFdFRFE?oc=5" target="_blank" rel="noopener">SK-성균관대 반도체 인재 양성</a></li>
+</ul>
+<p>하이테크솔루션 석사과정 통한 AI 인프라 전문가 육성</p>
+
+<h3>M&amp;A / 사업재편</h3>
+<p>AI 칩 스타트업 SambaNova가 인텔 인수를 포기하고 자체 자금조달을 통해 새로운 AI 칩 출시에 나섰다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/sambanova-abandons-intel-acquisition-raises-funding-instead/" target="_blank" rel="noopener">SambaNova 인텔 인수 포기</a></li>
+</ul>
+<p>자금조달을 통해 대규모 에이전틱 AI 추론용 신규 칩 출시</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[데이터센터 프리팹 모듈 구축방식 장단점 분석 백서 발간] 모듈 운송/설치 과정의 품질관리 및 현장 인터페이스 조정 리스크 존재.</li>
+<li>[SK에코플랜트, 반도체 전문 석사 3기 8명 배출] 특이사항 없음.</li>
+<li>[폴란드 Bełchatów에 500MW 대형 DC 캠퍼스 계획] 전력 인프라 확보 및 인허가 지연 리스크. 구체적인 발주처/일정 미확인.</li>
+<li>[메타-AMD 5년간 최대 85.9조원 AI칩 공급계약] 칩 공급망 집중도 완화 차원의 계약으로 엔비디아 의존도는 여전. 지분연계 구조의 순환거래 우려.</li>
+<li>[AMD-메타 계약에 지분 10% 옵션 포함, 주가 14% 급등] 고객사의 지분 취득을 통한 순환거래 구조 우려 제기. 칩 공급 지연시 투자 일정 차질 가능.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>국내 주요 건설사의 모듈러 DC 수주 동향 및 프리팹 생산기지 투자계획 확인 필요.</li>
+<li>상반기 5기 선발 규모 및 SK에코플랜트의 반도체 관련 신규 수주 동향 모니터링.</li>
+<li>프로젝트 발주처, 착공시기, EPC 입찰일정 등 구체적인 진행사항 확인 필요.</li>
+<li>메타의 구체적인 DC 증설 계획 및 입지 선정 동향 확인 필요.</li>
+<li>메타의 아시아 지역 DC 투자 계획 및 한국 내 증설 가능성 확인.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 9/12건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-02-26T21:34:22.332034+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
