@@ -52,5 +52,14 @@
     "top_headline": "데이터센터 프리팹 모듈 구축방식 장단점 분석 백서 발간",
     "sk_headline": "SK에코플랜트, 반도체·AI 전문인력 3기 8명 배출",
     "article_count": 39
+  },
+  "2026-02-28": {
+    "date": "2026-02-28",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "SK에코플랜트, 반도체 전문인력 3기 8명 배출",
+    "sk_headline": "AI 인프라 전문인력 확보로 경쟁력 강화",
+    "article_count": 39
   }
 }
