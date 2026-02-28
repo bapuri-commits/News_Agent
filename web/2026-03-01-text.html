@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-03-01 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-03-01.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-03-01</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-03-01</h1>
+
+<blockquote>Macquarie Technology Group 데이터센터 투자 확대 계획 / 일본 정부, 라피더스에 1000억엔 지원·민간 1676억엔 출자 / SK실트론 작년 매출 2.7조원 추정, 구미 신공장 연내 가동</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. Macquarie Technology Group 데이터센터 투자 확대 계획</h3>
+
+<p>Macquarie Technology Group이 H2 매출 증가를 발표하고 향후 데이터센터 프로젝트 자본지출(capex) 증액을 계획. 구체적인 투자 규모와 일정은 미확인.</p>
+
+<p><strong>영향</strong>: 글로벌 데이터센터 투자 확대 기조 지속으로 관련 건설/전력/냉각 설비 업체들의 수주 기회 증가 예상.</p>
+<p><strong>리스크</strong>: 구체적인 프로젝트 위치와 규모 미확인으로 실제 발주 시점과 규모 불확실성 존재.</p>
+<p><strong>확인 필요</strong>: Macquarie의 구체적인 프로젝트 위치, 투자 규모, 발주 일정 발표 모니터링 필요.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/macquarie-technology-group-sees-h2-revenues-rise-plans-future-capex-increase/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>2. 일본 정부, 라피더스에 1000억엔 지원·민간 1676억엔 출자</h3>
+
+<p>일본 정부가 반도체 회사 라피더스(Rapidus)에 1000억엔 투자 지원. 민간 기업은 1676억엔 출자로 총 2676억엔(약 2조 4000억원) 자금 조달.</p>
+
+<p><strong>영향</strong>: 일본의 차세대 반도체 생산 역량 구축 가속화로 글로벌 반도체 장비/소재 업체들의 일본 시장 기회 확대.</p>
+<p><strong>리스크</strong>: 라피더스의 2nm 공정 기술 개발 및 양산 일정 지연 가능성과 수익성 확보 불확실성.</p>
+<p><strong>확인 필요</strong>: 라피더스의 구체적인 팹 건설 위치, 장비 발주 업체 및 일정 발표 주시.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPR0liamctUlp4WTFTV1ZWUDdXaGIzb25ZOGV3TGhBSnpZUUVQdERpSEU3d0MwN0ZDWUNwdDd0NXhuLXhHaFFtemVMWUhRQnNRSjhnSlB4U3NXNndpWDVlVmlGekRFXzZfc3RKNXlxdGNaS25LSEh4Rm5BaGdfX2FUdGtsWmprRkt3?oc=5" target="_blank" rel="noopener">글로벌이코노믹</a></p>
+
+<h3>3. SK실트론 작년 매출 2.7조원 추정, 구미 신공장 연내 가동</h3>
+
+<p>2024년 전세계 실리콘 웨이퍼 출하량 전년 대비 5.8% 증가한 129억 7300만 제곱인치 기록. SK실트론 2024년 매출 2조 7750억원 추정(흥국증권), 구미 신공장(총 2조 3000억원 투자) 연내 가동 계획. 12인치 웨이퍼 주력 생산.</p>
+
+<p><strong>영향</strong>: AI/HBM 수요 증가로 12인치 웨이퍼 시장 성장세 전환. SK실트론 2025년 매출 3조원 돌파 전망으로 관련 장비/소재 업체 수혜 예상.</p>
+<p><strong>리스크</strong>: 레거시 반도체 부문 회복 속도 완만하며 거시경제 변동에 민감. 웨이퍼 가격 회복 지연 가능성.</p>
+<p><strong>확인 필요</strong>: SK실트론 구미 신공장 구체적인 가동 시점 및 초기 생산량(램프업) 일정 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE96X0daMmg4SHBDRzZhTWwwRUducU1LMzBtVlJlV3hSam0xeHJBTGhQYTF5c29NLXctLVJLczNCT1E4bEcwUGNybnZnQjlJOF9qazZudFI2SDBMZkZNRXNpUVlKNFlaSkFTNFZ0NGp1N3c5QdIBdkFVX3lxTE9mbVpnWFZob2hPdWNZaTYycDJ0dUExS29ON2ZVNGU0M2tHc2VCUFBJX0xGZXQ5MnNxUUdTZHlIeXduT1pndTZTbXFuUnFib253X1VPcU9UZU9la01McTV5UUpuRzNRWXBFcG10MFpDMTZINkE2elE?oc=5" target="_blank" rel="noopener">시사저널e</a></p>
+
+<h3>4. 한성크린텍, SK하이닉스 Y1 프로젝트 119억 2차 수주</h3>
+
+<p>한성크린텍이 SK하이닉스 용인 반도체 클러스터 Y1 프로젝트 관련 119억원 규모 물자 부문 2차 발주서 접수. 용인 반도체 클러스터 Ph1 WWT(폐수처리) 시스템 기계 설치공사의 후속 발주.</p>
+
+<p><strong>영향</strong>: SK하이닉스 용인 클러스터 공정 순조로운 진행으로 후속 수처리 EPC 발주 지속 예상. 반도체 CAPA 확대에 따른 인프라 투자 수혜.</p>
+<p><strong>리스크</strong>: 반도체 공정 특성상 요구되는 고난도 수질 기준 충족 및 공기 준수 리스크 존재.</p>
+<p><strong>확인 필요</strong>: SK하이닉스 Y1 프로젝트 3차 발주 시점 및 타 반도체사 수처리 프로젝트 발주 동향 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1XYzNwcnBSbWNWN2k4NXM4S0dVYUJrU0N4cGRWNEFhanpPSjVNaGdNeExCR08zbEpzNU10dlJRanNJc18zY3U0bmhZbW8td2lDaDFrd1NQUkVXeHBSY2xEbXVPdGJjWmtjNmhyZ2Zn?oc=5" target="_blank" rel="noopener">mt.co.kr</a></p>
+
+<h3>5. 마이크로투나노, SK하이닉스와 프로브카드 20억 공급계약</h3>
+
+<p>마이크로투나노가 SK하이닉스와 반도체용 프로브카드 20억 3700만원 공급 계약 체결. 계약 기간 2026년 2월 26일~5월 30일. 마이크로투나노 최근 매출액(102억원)의 20.07%에 해당.</p>
+
+<p><strong>영향</strong>: SK하이닉스의 HBM 등 첨단 반도체 생산 확대에 따른 후공정 부품 수요 증가 확인. 국내 프로브카드 업체 수주 기회 확대.</p>
+<p><strong>리스크</strong>: 마이크로투나노 2024년 영업손실 95억원 기록으로 재무 건전성 리스크. 납기 준수 및 품질 관리 중요.</p>
+<p><strong>확인 필요</strong>: SK하이닉스의 추가 프로브카드 발주 및 타 후공정 부품 업체 수주 동향 모니터링.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBOak5MZVpyWG9JRVp4Wjh5cTlMSlQxRng3VC1NdXdPOHNKWWJJN3BMMXQ1TFlDaWVyM3JGcC1uR1RPZDVRMk9IVzU1VXgzaTR2TEFsSkV1NFpsVXhmWlpvbFJHWHlwSGYyRS1UZ05iZjI0ZTA?oc=5" target="_blank" rel="noopener">디지털투데이</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 업계에 대규모 투자와 설비 증설이 활발히 진행되고 있으며, 일본의 라피더스 투자부터 국내 HBM 관련 소부장 업체들의 설비 확장까지 전방위적 투자 확대 모습을 보이고 있다. AI 반도체 및 HBM 호황의 낙수효과로 반도체 생태계 전반에 투자 열풍이 이어지고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPR0liamctUlp4WTFTV1ZWUDdXaGIzb25ZOGV3TGhBSnpZUUVQdERpSEU3d0MwN0ZDWUNwdDd0NXhuLXhHaFFtemVMWUhRQnNRSjhnSlB4U3NXNndpWDVlVmlGekRFXzZfc3RKNXlxdGNaS25LSEh4Rm5BaGdfX2FUdGtsWmprRkt3?oc=5" target="_blank" rel="noopener">일본 정부, 라피더스에 1000억 엔 투자 지원</a></li>
+</ul>
+<p>민간 기업 1676억 엔과 함께 총 2676억 엔 규모 투자</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxPdVpuTnQ2d3NNYVBURXBqQVFhMWhHV2tRNmtTXzE3MlJ3cUY5SkxvbFlrMkhTUk8tNVZUdTZKd3JTTTlyS2dlLWtXVFJucWJhXzRmS0lSMkVIb1JGRm1iRHRENHdNd2ktc3htSy02TVJrY1JZWU1wdWdidHpXdUpwOQ?oc=5" target="_blank" rel="noopener">보스반도체, 870억 원 시리즈 투자 유치</a></li>
+</ul>
+<p>삼성 출신들이 설립한 시스템반도체 설계 기업</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTFB3aTNOSUFGWExzVy1lX2FDYUNjWHZSdThPRzNSRzhOVTg2enhlMmNSa2lHYTVLb1lja2xDS1l6TkVwdUF1Qm00SldnSHpWM2kza2s1aGxJZG1MZkZoeEhCNGdUMzhzSXZYc1c3SjJNczZzSVZfSGVDbTlB0gF6QVVfeXFMTVdvSzVGa2dHRlZpQmNHT01pV25zX09Xa3NMUlJxcjlQd2JwclZBajdfS2h4NFFKQUd5OEo3dmR0VTRISGZlbUdoUTVIT0pNNEcxSU96X0JWWkl5WFd6UXh5aEdJNE5lZE1wQ1p0TTdKOXBHQ3ktejhaWnc?oc=5" target="_blank" rel="noopener">반도체 기업들 공장 증설 잇따라</a></li>
+</ul>
+<p>현재가 가장 저점이라는 판단하에 투자 확대</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOM0hudWl3V0hCSnFiZDREc01JZnljMGk5d0NkNnoyelJ3ZUEtbmxpYWlMYVFLN0tVd3luaU5pUGxoci00aGNOazJZVVV4UlJzYzlCcnJ1YWQyck5vcmtRc09sOWM3aXNCeGdKOUphM1cteDhfNHJjWG0zY19OdXlXX1N30gGWAUFVX3lxTE13TS1NX2dSNGE3QThaek9UQW9YR1Yycy1oQ2xxdEFJODdRVzRjSEJweHRQTi1GbWhFdWJoSGNwaDBfS3NDaEJBZG9qREZWRWxRZGM5TVgydmxFbTFMQkdPOV9nTk52dl9MZ0kwUElXU3RCQXFQQ0EwWmxUeXpEVVJIaEhSWVhwbUh2ZndqX25RcDlISl8zUQ?oc=5" target="_blank" rel="noopener">HBM 효과로 소부장 업체들 채용·증설 확대</a></li>
+</ul>
+<p>반도체 소재·부품·장비 업체들이 풀가동 채비</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1Qb29qQ19PRkpzbENXQkYwWVdITVRYeWZHTUZQdElZU1B3WlZfRnhxeGdVZUZkU04xRE95d3JXTmFpc2E3eHAtYW9fRzJKdFdLOFBnYkw3d3M0b3BJby1vY0EyQkFtZHJV?oc=5" target="_blank" rel="noopener">유니컨, 185억 원 시리즈B 투자 유치</a></li>
+</ul>
+<p>초고속 무선통신 반도체 개발 기업</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE5zb2pkcl8wMlhpRTVOWmY5bkk1dUNRMUpPaGZSZC1PZkozcFgzZXlNNHJfaW1yQms3ZHN4cllicnJ0eXRWdkRoSnVUR256SlYxMi1JazFuRVhhcnktaXpTbVczakNkb1Z2Tl85NmUtVDBKN0c1?oc=5" target="_blank" rel="noopener">반도체 소부장 급등, 올해 100% 상승주 속출</a></li>
+</ul>
+<p>메모리 호황에 따른 동반 상승세</p>
+
+<h3>CapEx 가이던스</h3>
+<p>해외 테크 기업들이 데이터센터 프로젝트를 위한 투자 계획을 발표하며 미래 성장을 위한 인프라 확충에 나서고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/macquarie-technology-group-sees-h2-revenues-rise-plans-future-capex-increase/" target="_blank" rel="noopener">맥쿼리 테크놀로지, 데이터센터 투자 계획 발표</a></li>
+</ul>
+<p>H2 매출 증가와 함께 향후 데이터센터 프로젝트를 위한 투자 확대</p>
+
+<h3>EPC / 수주</h3>
+<p>반도체 관련 프로젝트 수주와 산학협력이 활발히 진행되고 있으며, 특히 SK하이닉스를 중심으로 한 협력 체계 구축과 반도체 전문 인력 양성을 위한 계약학과 운영이 확대되고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1XYzNwcnBSbWNWN2k4NXM4S0dVYUJrU0N4cGRWNEFhanpPSjVNaGdNeExCR08zbEpzNU10dlJRanNJc18zY3U0bmhZbW8td2lDaDFrd1NQUkVXeHBSY2xEbXVPdGJjWmtjNmhyZ2Zn?oc=5" target="_blank" rel="noopener">한성크린텍, SK하이닉스 Y1 프로젝트 119억 수주</a></li>
+</ul>
+<p>SK하이닉스 반도체 프로젝트 수주 확정</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBOak5MZVpyWG9JRVp4Wjh5cTlMSlQxRng3VC1NdXdPOHNKWWJJN3BMMXQ1TFlDaWVyM3JGcC1uR1RPZDVRMk9IVzU1VXgzaTR2TEFsSkV1NFpsVXhmWlpvbFJHWHlwSGYyRS1UZ05iZjI0ZTA?oc=5" target="_blank" rel="noopener">마이크로투나노, SK하이닉스와 프로브카드 공급계약</a></li>
+</ul>
+<p>반도체용 프로브카드 공급 계약 체결</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFA2R3JDYUFkTmtBNkJJRGUyN0ljM0hWMkhnOGN2eWlGQVlrcWRmeDZKREk1eEVUMWpydHhtcloyeG9BcjFkRDBvbHY0amRKQzJXRnFib21RTjUyY1lXYy1hemgwZEoxV0RodFNnb1NLd3Q?oc=5" target="_blank" rel="noopener">한경국립대 반도체 계약학과 학위수여식</a></li>
+</ul>
+<p>일과 학업 병행하며 반도체 전문가 양성</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE1wVWV1TVdFOUlJa0JMLWQ1ZmNjdzRTTmcxY2NhdlB3OTFqWFM4bEtmcXI2T0ZSWml1U3BTdXRhU19uNlBKbWZmdmpjSXBhZzNkTVlpemt1dG4yQ3VmNUhIZw?oc=5" target="_blank" rel="noopener">한기대 충남형 반도체 계약학과 입학</a></li>
+</ul>
+<p>입학과 동시에 취업이 보장되는 산학협력 모델</p>
+
+<h3>데이터센터 신축</h3>
+<p>AI 데이터센터 건설 붐이 지속되면서 대규모 데이터센터 캠퍼스 계획과 전력 인프라 투자가 활발히 진행되고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/prometheus-hyperscale-details-plans-for-dallas-data-center-campus/" target="_blank" rel="noopener">프로메테우스, 댈러스 200MW 데이터센터 캠퍼스 계획</a></li>
+</ul>
+<p>텍사스주에 대규모 데이터센터 건설 추진</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE9nbjF2Qkt1bnpOYkFEcElDaGRRZ2ZoLWQzWGV0YTE4bmUzTVZ6eUc3ZjZvSVJKeGRuODdsc2YwcmNfalRzbC1sRU5TdzVkTEstLVBaeGlwWFI2RUNUbEZDbFFR?oc=5" target="_blank" rel="noopener">AI 데이터센터 열풍, 전력 인프라 제조사 수혜</a></li>
+</ul>
+<p>데이터센터 건설 증가로 전력 장비 업체들 실적 개선</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5uQTUxYUxpcGRhOXFZVVk3dXZzMXdLVlJBa3R6cTROYU5QYlNJTm4yc1pPa3pCY0thaUZ3MlVIamgzU1B1RUJkX3gtaUVoLUpZVkRHSnFRMEhvNWhHYmVFRHJkbWg?oc=5" target="_blank" rel="noopener">하나은행, 600MW 해상풍력 MOU 체결</a></li>
+</ul>
+<p>AI 데이터센터 전력 인프라 지원을 위한 재생에너지 투자</p>
+
+<h3>DC 냉각</h3>
+<p>인도의 데이터센터 시장이 조 달러 규모의 기회로 부상하며 글로벌 주목을 받고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/opinions/indias-trillion-dollar-data-center-opportunity-is-taking-shape/" target="_blank" rel="noopener">인도 데이터센터 시장, 조 달러 기회로 부상</a></li>
+</ul>
+<p>인도가 더 이상 따라잡기가 아닌 선도 시장으로 성장</p>
+
+<h3>자재 / 노무</h3>
+<p>건설업계에서 관세로 인한 자재비 상승과 고령화로 인한 인력 부족 문제가 심화되고 있으며, 젊은 인력 확보가 업계 생존의 핵심 과제로 대두되고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/tariffs-construction-input-prices-january-2026/813419/" target="_blank" rel="noopener">관세로 인한 건설 자재비 급등</a></li>
+</ul>
+<p>1월 비주거용 자재비가 연율 7.1% 상승</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/nlrb-reverts-2020-trump-joint-employer-rule/813356/" target="_blank" rel="noopener">NLRB, 트럼프 시대 공동고용주 규칙 복귀</a></li>
+</ul>
+<p>2020년 수립된 &#x27;실질적 직접·즉각적 통제&#x27; 기준 유지</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/recruiting-gen-z-construction-trades-social-media/813337/" target="_blank" rel="noopener">건설업계, 젊은 인력 확보 시급</a></li>
+</ul>
+<p>2031년까지 건설 인력의 41%가 은퇴 예정</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>식품 폐기물 손실 문제 해결을 위해 RFID 라벨 기술의 도입이 확산되고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/how-rfid-labels-could-help-tackle-540b-food-waste-losses-in-2026/" target="_blank" rel="noopener">RFID 라벨로 5400억 달러 식품 폐기물 손실 해결</a></li>
+</ul>
+<p>2026년 예상 식품 폐기물 손실 대응을 위한 RFID 기술 확산</p>
+
+<h3>기타</h3>
+<p>대만의 반도체 산업과 AI 기술의 발전 과정에 대한 심층 분석이 이루어지고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/taiwans-tech-industry/" target="_blank" rel="noopener">대만 반도체 산업 분석 보고서</a></li>
+</ul>
+<p>대만 기술 산업의 반도체 제조 및 전력 전자 분야 역할 조명</p>
+<ul>
+<li><a href="https://www.eetimes.com/from-ais-origins-to-smart-devices-selecting-the-right-devices-for-smart-deployment/" target="_blank" rel="noopener">AI 기원부터 스마트 디바이스까지 기술 발전사</a></li>
+</ul>
+<p>1950년대 규칙 기반 시스템부터 현재까지 AI 발전 과정 분석</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[Macquarie Technology Group 데이터센터 투자 확대 계획] 구체적인 프로젝트 위치와 규모 미확인으로 실제 발주 시점과 규모 불확실성 존재.</li>
+<li>[일본 정부, 라피더스에 1000억엔 지원·민간 1676억엔 출자] 라피더스의 2nm 공정 기술 개발 및 양산 일정 지연 가능성과 수익성 확보 불확실성.</li>
+<li>[SK실트론 작년 매출 2.7조원 추정, 구미 신공장 연내 가동] 레거시 반도체 부문 회복 속도 완만하며 거시경제 변동에 민감. 웨이퍼 가격 회복 지연 가능성.</li>
+<li>[한성크린텍, SK하이닉스 Y1 프로젝트 119억 2차 수주] 반도체 공정 특성상 요구되는 고난도 수질 기준 충족 및 공기 준수 리스크 존재.</li>
+<li>[마이크로투나노, SK하이닉스와 프로브카드 20억 공급계약] 마이크로투나노 2024년 영업손실 95억원 기록으로 재무 건전성 리스크. 납기 준수 및 품질 관리 중요.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>Macquarie의 구체적인 프로젝트 위치, 투자 규모, 발주 일정 발표 모니터링 필요.</li>
+<li>라피더스의 구체적인 팹 건설 위치, 장비 발주 업체 및 일정 발표 주시.</li>
+<li>SK실트론 구미 신공장 구체적인 가동 시점 및 초기 생산량(램프업) 일정 확인 필요.</li>
+<li>SK하이닉스 Y1 프로젝트 3차 발주 시점 및 타 반도체사 수처리 프로젝트 발주 동향 확인.</li>
+<li>SK하이닉스의 추가 프로브카드 발주 및 타 후공정 부품 업체 수주 동향 모니터링.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/5건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-02-28T21:21:24.897271+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
