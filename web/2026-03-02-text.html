@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-03-02 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-03-02.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-03-02</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-03-02</h1>
+
+<blockquote>Macquarie Technology, 데이터센터 투자 확대 계획 / 삼성 평택 P4·P5 메모리 전환, SK하이닉스 HBF 표준화 추진 / SK실트론 구미 신공장 연내 가동, 12인치 웨이퍼 증산</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. Macquarie Technology, 데이터센터 투자 확대 계획</h3>
+
+<p>Macquarie Technology Group이 H2 매출 증가 발표. 데이터센터 프로젝트를 위한 자본 투자(capex) 증가 계획 공개.</p>
+
+<p><strong>영향</strong>: 글로벌 DC 운영사의 투자 확대로 DC 건설 시장 활성화 기대. EPC 및 인프라 장비 업체들에게 수주 기회 확대.</p>
+<p><strong>리스크</strong>: 구체적인 투자 규모와 지역, 일정 미확인으로 실제 집행 시점 불투명.</p>
+<p><strong>확인 필요</strong>: 투자 규모, 대상 지역, 프로젝트 일정 등 구체적 계획 발표 모니터링.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/macquarie-technology-group-sees-h2-revenues-rise-plans-future-capex-increase/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>2. 삼성 평택 P4·P5 메모리 전환, SK하이닉스 HBF 표준화 추진</h3>
+
+<p>삼성전자가 평택 P4 Ph2/Ph4를 파운드리에서 메모리(1c D램)로 전환, 연내 구축 완료. P4에서 월 10-12만장 웨이퍼 생산 가능. SK하이닉스는 샌디스크와 HBF(High Bandwidth Flash) 표준화 작업 착수.</p>
+
+<p><strong>영향</strong>: 삼성은 HBM4 대응 생산능력 극대화로 엔비디아 등 빅테크 수요 대응. SK하이닉스는 AI 추론 시대 대비 새로운 메모리 계층 선점으로 장기 경쟁력 확보.</p>
+<p><strong>리스크</strong>: 삼성의 급격한 라인 전환으로 파운드리 사업 회복 지연 우려. HBF는 표준화 성공 여부와 시장 수용성이 불확실.</p>
+<p><strong>확인 필요</strong>: 삼성 P5 라인 장비 발주 현황 및 HBF의 OCP 표준 채택 진행 상황 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1Hd2JRbzlQTFJ4dG1TLXlaVVE5cHllMktiRUhLUFlrXzlOejFQQ1RLQXBSblZXS3pLOEh3R3Nhc0ttdUUzWTI3TVpJQmNSSTA0Z0MwS1E1SlpDUHBncndlbnRjZlA?oc=5" target="_blank" rel="noopener">디지털데일리</a></p>
+
+<h3>3. SK실트론 구미 신공장 연내 가동, 12인치 웨이퍼 증산</h3>
+
+<p>2024년 글로벌 실리콘 웨이퍼 출하량 129억 7300만 제곱인치로 전년비 5.8% 증가. SK실트론 2024년 매출 2조 7750억원 추정(사상 최대). 구미 신공장(총 2조 3000억원 투자) 연내 구축 완료 및 12인치 웨이퍼 생산 예정.</p>
+
+<p><strong>영향</strong>: AI 로직 및 HBM용 웨이퍼 수요 강세로 SK실트론 2025년 매출 3조원 돌파 전망. 글로벌 3위 업체로서 시장 점유율 확대 기회.</p>
+<p><strong>리스크</strong>: 레거시 반도체 부문 회복 속도 완만. 거시경제 요인에 민감한 상황 지속.</p>
+<p><strong>확인 필요</strong>: 구미 신공장 램프업 일정 및 초기 생산 물량 계약 현황 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE96X0daMmg4SHBDRzZhTWwwRUducU1LMzBtVlJlV3hSam0xeHJBTGhQYTF5c29NLXctLVJLczNCT1E4bEcwUGNybnZnQjlJOF9qazZudFI2SDBMZkZNRXNpUVlKNFlaSkFTNFZ0NGp1N3c5QdIBdkFVX3lxTE9mbVpnWFZob2hPdWNZaTYycDJ0dUExS29ON2ZVNGU0M2tHc2VCUFBJX0xGZXQ5MnNxUUdTZHlIeXduT1pndTZTbXFuUnFib253X1VPcU9UZU9la01McTV5UUpuRzNRWXBFcG10MFpDMTZINkE2elE?oc=5" target="_blank" rel="noopener">시사저널e</a></p>
+
+<h3>4. LG전자, 전북 완주 20MW AI DC에 냉각솔루션 공급</h3>
+
+<p>LG전자가 전북 완주군 20MW 규모 AI 데이터센터(2029년까지 총 2800억원 투자)에 HVAC 솔루션 공급. 무급유 터보칠러, CRAH, CDU 등 토털 냉각 시스템 제공. 테크노그린(구축·운영), 한전KDN(전력공급)과 협업.</p>
+
+<p><strong>영향</strong>: LG전자의 데이터센터 냉각 사업 레퍼런스 확보. 국내 AI DC 구축 붐에 따른 냉각 인프라 수요 증가 수혜.</p>
+<p><strong>리스크</strong>: 2029년까지 장기 프로젝트로 중간 변경 리스크 존재. AI DC 특유의 고밀도 냉각 요구사항 충족 여부.</p>
+<p><strong>확인 필요</strong>: 프로젝트 착공 시점 및 LG전자의 구체적 공급 규모(금액) 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBBWWhmZ3BGMFprZjJtbnNWODMxQXRibW4xN0xpZ2JSMG4zQTlfdGdlZy1fcVhHSEoxX3diUzlWWkRocDc4ZlRCeHNaQldQR284eU9TX3FoMnZEblZFYTB5RzJsSlg3ckhGSEVB?oc=5" target="_blank" rel="noopener">라이센스뉴스</a></p>
+
+<h3>5. 日정부, 라피더스에 2500억엔 출자로 2nm 양산 지원</h3>
+
+<p>일본 정부가 라피더스에 총 2500억엔 출자(1000억엔 기출자, 1500억엔 추가 예산). 일본 기업 32곳이 1676억엔 출자 약정. 2027년 2nm 반도체 양산 목표로 홋카이도 공장 건설 중.</p>
+
+<p><strong>영향</strong>: 일본의 첨단 반도체 제조 역량 재건 본격화. 한국/대만과의 2nm 경쟁 구도 형성으로 글로벌 파운드리 시장 재편 가능성.</p>
+<p><strong>리스크</strong>: 기술 개발 및 양산 성공 여부 불확실. 막대한 공적 자금 투입 대비 상업적 성공 보장 없음.</p>
+<p><strong>확인 필요</strong>: 라피더스의 구체적 장비 발주 현황 및 주요 고객사 확보 동향 모니터링.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPNUVHVlNaU3B0eUpEUTNGZFJBcW1sdWNTeVNqRkowMDhBbkUycXJLQjZXUVBaQzViMzhwcGVVMTc0THZlc2c3MjgzakNQaHVqWUJFYVRZQnNIazlhbUlQVHBVUG5jRjVZX2o2RklHX1kxUnFnUFhnTDRDS042b1NVMlViQzdzU0xVZFFIMS15OXVfRTNxM2RpdktseTdyUkwzR2NKa1otbGlzUnpqVmc?oc=5" target="_blank" rel="noopener">모바일한경</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 업계가 99조원 규모의 대규모 설비투자와 함께 강력한 회복세를 보이고 있습니다. 2월 반도체 수출이 160% 급증하며 삼성전자, SK하이닉스 등 주요 기업들의 주가가 사상 최고치를 경신했습니다. 중국 투자자들까지 한국 반도체 ETF에 2조원을 투자하며 글로벌 관심이 집중되고 있습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBPcXVLZHJ1ZlJaTGJ6Skd6dTlyTUFPaUhIS0xyTVBqV1Y0bnBnalFHSzJiUVJBLXk3Vmgwd1BsZ2M5aWxEc3F3T1ZtNk8zUVVTcWlNcktfX1RabnEyMEt0dnhmSzU1aVN5NTRwbU8tdVNsZw?oc=5" target="_blank" rel="noopener">삼성 출신 창업팀, 시스템반도체 설계 기업 870억 투자 유치</a></li>
+</ul>
+<p>보스반도체가 대규모 시리즈B 투자를 성공적으로 완료했습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE5zZXhQVXB5cVg0MXR2MlZxVS15SGNsMEZGdGlzaHd1M3hsbzItM0FEMlZXQWNPVV9mOEoxNEZKODJNMUdXUjZ5TFpXOVh1eVBmTnRmWQ?oc=5" target="_blank" rel="noopener">반도체 업계 99조 설비투자로 장비·인프라 낙수효과 본격화</a></li>
+</ul>
+<p>대규모 설비투자가 관련 산업 전반에 긍정적 영향을 미치고 있습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9mdVhab21Sc0txVUV6LS1lMWNEdURKWmVKWVpfNHEzMERhbmJVZ2JlUmV1UDRuekZDR3NzbG1xRkRuWUEwRG1LSDRyRmwyMGNUR0lJUE1NbE9URzFrem5ndQ?oc=5" target="_blank" rel="noopener">중국 투자자들, 21% 웃돈 주고 한국 반도체 ETF 2조원 매수</a></li>
+</ul>
+<p>해외 자금이 한국 반도체에 대규모 투자하며 &#x27;바이 코리아&#x27; 현상이 나타났습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1paWRnWjRkZUg4dVZ0TnFJbFVscm1xcVJBMVZUcl83bV9uT2x6a2dFTEdiblp1Y05VU3N6VVZZbWVJQVNDWVZVcEc0b2dJcWpWLWZyV0pSTDdhM1BtRWVhUFo0NTdkQnZ4ZEF5UU44V3ZvYnVUdGY4?oc=5" target="_blank" rel="noopener">2월 반도체 수출 160.8% 급증해 251.6억 달러 기록</a></li>
+</ul>
+<p>반도체 수출이 역대급 증가율을 보이며 회복세가 확실해졌습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPU3ktaHNVU3Q2M3ItT1pjVkFpcl9KcUxXX2c0U3ZndnU4NzNHV2xZd08tYnRYRUgxTnVsZ2taZTQ3aWlSenhFUnpmUGVDLWFMRXE2N1h5LWxmdHJRd2ZLeFdCdWlQRHR0VnVRZFZuWmlxblVlQzFIckFKV1VERzJ4cjhuZWI2di1Za3hOZlp4c0tsT3FOS3BmelI1YUxUZDJmSGI5WkhvclR2Y20xMldWZXVDWEt4SnJ4R3M0QzRLN1R5VzdjNHR3ZkNR?oc=5" target="_blank" rel="noopener">삼성전자 30만원, SK하이닉스 160만원 돌파하며 랠리 지속</a></li>
+</ul>
+<p>주요 반도체 기업들이 연일 사상 최고가를 경신하고 있습니다.</p>
+
+<h3>첨단 패키징</h3>
+<p>AI 메모리 시장 확대와 함께 반도체 패키징 기술이 주목받고 있습니다. 삼성과 SK하이닉스가 각각 생산능력과 차세대 표준 기술에 집중하며 경쟁을 벌이고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/how-rfid-labels-could-help-tackle-540b-food-waste-losses-in-2026/" target="_blank" rel="noopener">RFID 라벨로 2026년 5400억 달러 식품 폐기물 손실 해결 추진</a></li>
+</ul>
+<p>개선된 RFID 기술이 부패하기 쉬운 식품의 폐기물 관리에 활용되고 있습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1Hd2JRbzlQTFJ4dG1TLXlaVVE5cHllMktiRUhLUFlrXzlOejFQQ1RLQXBSblZXS3pLOEh3R3Nhc0ttdUUzWTI3TVpJQmNSSTA0Z0MwS1E1SlpDUHBncndlbnRjZlA?oc=5" target="_blank" rel="noopener">삼성-SK, AI 메모리 영토 확장 위해 생산능력과 차세대 표준 경쟁</a></li>
+</ul>
+<p>K-반도체 기업들이 AI 메모리 시장에서 각각 다른 전략으로 승부수를 던졌습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE96X0daMmg4SHBDRzZhTWwwRUducU1LMzBtVlJlV3hSam0xeHJBTGhQYTF5c29NLXctLVJLczNCT1E4bEcwUGNybnZnQjlJOF9qazZudFI2SDBMZkZNRXNpUVlKNFlaSkFTNFZ0NGp1N3c5QdIBdkFVX3lxTE9mbVpnWFZob2hPdWNZaTYycDJ0dUExS29ON2ZVNGU0M2tHc2VCUFBJX0xGZXQ5MnNxUUdTZHlIeXduT1pndTZTbXFuUnFib253X1VPcU9UZU9la01McTV5UUpuRzNRWXBFcG10MFpDMTZINkE2elE?oc=5" target="_blank" rel="noopener">AI 반도체 호황으로 웨이퍼 출하량 회복, SK실트론 반등</a></li>
+</ul>
+<p>HBM 호황이 웨이퍼 시장 전반의 회복세를 견인하고 있습니다.</p>
+
+<h3>데이터센터 신축</h3>
+<p>AI 데이터센터 건설이 전 세계적으로 급증하면서 관련 인프라 투자가 활발해지고 있습니다. 한국에서도 LG전자가 완주 AI 데이터센터 냉각 시스템 공급에 나서는 등 관련 사업 기회가 확대되고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/macquarie-technology-group-sees-h2-revenues-rise-plans-future-capex-increase/" target="_blank" rel="noopener">맥쿼리 테크놀로지, 하반기 매출 증가로 데이터센터 투자 확대 계획</a></li>
+</ul>
+<p>데이터센터 프로젝트를 위한 설비투자 증액을 계획하고 있습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBBWWhmZ3BGMFprZjJtbnNWODMxQXRibW4xN0xpZ2JSMG4zQTlfdGdlZy1fcVhHSEoxX3diUzlWWkRocDc4ZlRCeHNaQldQR284eU9TX3FoMnZEblZFYTB5RzJsSlg3ckhGSEVB?oc=5" target="_blank" rel="noopener">LG전자, 전북 완주 AI 데이터센터에 냉각 인프라 공급 추진</a></li>
+</ul>
+<p>국내 데이터센터 건설에 LG전자가 냉각 시스템 공급업체로 참여합니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE9nbjF2Qkt1bnpOYkFEcElDaGRRZ2ZoLWQzWGV0YTE4bmUzTVZ6eUc3ZjZvSVJKeGRuODdsc2YwcmNfalRzbC1sRU5TdzVkTEstLVBaeGlwWFI2RUNUbEZDbFFR?oc=5" target="_blank" rel="noopener">AI 데이터센터 열풍이 전력 인프라 제조사에 막대한 이익 제공</a></li>
+</ul>
+<p>데이터센터 건설 붐이 전력 관련 제조업체들의 수익성을 크게 개선시키고 있습니다.</p>
+
+<h3>EPC / 수주</h3>
+<p>건설업계가 관세 영향으로 자재비 상승과 인력 부족이라는 이중고를 겪고 있습니다. 2031년까지 건설 인력의 41%가 은퇴할 예정으로 차세대 인력 확보가 시급한 상황입니다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/tariffs-construction-input-prices-january-2026/813419/" target="_blank" rel="noopener">관세로 인한 건설 자재비 상승, 1월 연율 7.1% 급등</a></li>
+</ul>
+<p>비주거용 건설자재 투입 가격이 가파른 상승세를 보이고 있습니다.</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/recruiting-gen-z-construction-trades-social-media/813337/" target="_blank" rel="noopener">건설업계, 2031년까지 41% 인력 은퇴로 차세대 인력 확보 절실</a></li>
+</ul>
+<p>건설업계의 고령화로 인한 대규모 은퇴가 임박해 있습니다.</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[Macquarie Technology, 데이터센터 투자 확대 계획] 구체적인 투자 규모와 지역, 일정 미확인으로 실제 집행 시점 불투명.</li>
+<li>[삼성 평택 P4·P5 메모리 전환, SK하이닉스 HBF 표준화 추진] 삼성의 급격한 라인 전환으로 파운드리 사업 회복 지연 우려. HBF는 표준화 성공 여부와 시장 수용성이 불확실.</li>
+<li>[SK실트론 구미 신공장 연내 가동, 12인치 웨이퍼 증산] 레거시 반도체 부문 회복 속도 완만. 거시경제 요인에 민감한 상황 지속.</li>
+<li>[LG전자, 전북 완주 20MW AI DC에 냉각솔루션 공급] 2029년까지 장기 프로젝트로 중간 변경 리스크 존재. AI DC 특유의 고밀도 냉각 요구사항 충족 여부.</li>
+<li>[日정부, 라피더스에 2500억엔 출자로 2nm 양산 지원] 기술 개발 및 양산 성공 여부 불확실. 막대한 공적 자금 투입 대비 상업적 성공 보장 없음.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>투자 규모, 대상 지역, 프로젝트 일정 등 구체적 계획 발표 모니터링.</li>
+<li>삼성 P5 라인 장비 발주 현황 및 HBF의 OCP 표준 채택 진행 상황 확인.</li>
+<li>구미 신공장 램프업 일정 및 초기 생산 물량 계약 현황 확인.</li>
+<li>프로젝트 착공 시점 및 LG전자의 구체적 공급 규모(금액) 확인.</li>
+<li>라피더스의 구체적 장비 발주 현황 및 주요 고객사 확보 동향 모니터링.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/5건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-03-01T21:24:28.098190+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
