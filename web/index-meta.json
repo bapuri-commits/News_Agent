@@ -79,5 +79,14 @@
     "top_headline": "Macquarie Technology, 데이터센터 투자 확대 계획",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-03-03": {
+    "date": "2026-03-03",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "SK에코플랜트, 반도체 인재 양성 프로그램 3기 8명 졸업",
+    "sk_headline": "SK에코플랜트, 반도체 전문인력 3기 배출",
+    "article_count": 39
   }
 }
