@@ -88,5 +88,14 @@
     "top_headline": "SK에코플랜트, 반도체 인재 양성 프로그램 3기 8명 졸업",
     "sk_headline": "SK에코플랜트, 반도체 전문인력 3기 배출",
     "article_count": 39
+  },
+  "2026-03-04": {
+    "date": "2026-03-04",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "CoreWeave, 2030년까지 5GW 데이터센터 추가 목표",
+    "sk_headline": "반도체 전문인력 8명 배출, AI 인프라 역량 강화",
+    "article_count": 39
   }
 }
