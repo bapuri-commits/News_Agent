@@ -18,6 +18,7 @@ STAGE1_SYSTEM = """\
 - 같은 사건의 중복 기사는 대표 1건만 선정
 - 소스 다양성 고려 (한국어/영어 혼합, S1~S7 분산)
 - crawlable:yes인 기사를 Top 5에 최소 2건 이상 포함 (본문 크롤링이 가능해 심층 분석 가능)
+- ⚠ 이전 며칠간 이미 Top 5로 다룬 뉴스는 새로운 팩트가 추가된 후속 보도가 아닌 한 Top 5에서 제외하라
 
 sk_ecoplant_ids 선정 규칙 (엄격하게 적용):
 - "SK에코플랜트" 또는 "SK ecoplant"가 제목에 직접 등장하는 기사만 포함
@@ -62,11 +63,6 @@ STAGE1_OUTPUT_SCHEMA = """\
   "excluded_ids": ["관련성 낮아 제외된 기사 id"],
   "reasoning": "Top 5 선정 이유 (한국어, 2-3문장)"
 }
-"""
-
-STAGE1_EXTRA_INSTRUCTIONS = """\
-주의: 빈 카테고리는 빈 배열([])로, 기사가 없는 카테고리는 아예 제외해도 됩니다.
-하나의 기사는 가장 적합한 1개 카테고리에만 배치하세요.
 """
 
 
@@ -179,7 +175,11 @@ def _is_crawlable_url(url: str) -> bool:
     return not hostname.startswith("news.google.")
 
 
-def build_stage1_prompt(articles: list[dict], profile_summary: str) -> str:
+def build_stage1_prompt(
+    articles: list[dict],
+    profile_summary: str,
+    previous_top5: dict[str, list[str]] | None = None,
+) -> str:
     """Stage 1: 기사 목록 + 프로필 요약 → 클러스터링/Top5 선정 프롬프트."""
     article_lines = []
     for a in articles:
@@ -193,9 +193,25 @@ def build_stage1_prompt(articles: list[dict], profile_summary: str) -> str:
         )
         article_lines.append(line)
 
+    prev_section = ""
+    if previous_top5:
+        lines = ["## 이전 Top 5 (중복 회피용)"]
+        lines.append(
+            "아래는 최근 며칠간 이미 Top 5로 선정된 헤드라인입니다. "
+            "동일 사건의 후속 보도(새로운 팩트가 추가된 경우)가 아닌 한 "
+            "오늘 Top 5에서 제외하세요."
+        )
+        for date in sorted(previous_top5.keys(), reverse=True):
+            headlines = previous_top5[date]
+            lines.append(f"\n### {date}")
+            for h in headlines:
+                lines.append(f"- {h}")
+        prev_section = "\n".join(lines) + "\n\n"
+
     return (
         f"## 독자 프로필 요약\n{profile_summary}\n\n"
-        f"## 오늘의 기사 ({len(articles)}건)\n"
+        + prev_section
+        + f"## 오늘의 기사 ({len(articles)}건)\n"
         + "\n".join(article_lines)
         + f"\n\n## 출력 스키마\n{STAGE1_OUTPUT_SCHEMA}"
     )

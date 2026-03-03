@@ -443,6 +443,14 @@ def cmd_brief(args: argparse.Namespace) -> None:
         f.write(html_text)
     logger.info("Saved: %s", html_path)
 
+    from src.briefer.top5_history import save_history
+    top5_headlines = [
+        item.get("headline", "")
+        for item in briefing.get("top5", [])
+        if item.get("headline", "").strip()
+    ]
+    save_history(target_date, top5_headlines)
+
     _save_pipeline_state("brief", {
         "date": target_date,
         "articles_input": len(articles),

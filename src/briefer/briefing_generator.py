@@ -11,6 +11,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+import re
 from datetime import datetime, timezone
 
 import anthropic
@@ -53,8 +54,14 @@ class BriefingGenerator:
         """전체 브리핑 파이프라인을 실행한다."""
         article_dicts = [a.to_dict() for a in articles]
 
+        from src.briefer.top5_history import get_recent_top5
+        previous_top5 = get_recent_top5(exclude_date=target_date, max_days=3)
+        if previous_top5:
+            logger.info("이전 Top5 로드: %d일분 (%s)",
+                        len(previous_top5), ", ".join(sorted(previous_top5.keys())))
+
         logger.info("=== Stage 1: Clustering + Top 5 (Haiku) ===")
-        stage1 = self._stage1_cluster(article_dicts, profile)
+        stage1 = self._stage1_cluster(article_dicts, profile, previous_top5)
 
         raw_top5_ids = stage1.get("top5_ids", [])[:5]
         top5_ids = self._dedup_top5(raw_top5_ids, article_dicts)
@@ -218,9 +225,14 @@ class BriefingGenerator:
         else:
             logger.info("QUALITY CHECK: 모든 검증 통과")
 
-    def _stage1_cluster(self, articles: list[dict], profile: dict) -> dict:
+    def _stage1_cluster(
+        self,
+        articles: list[dict],
+        profile: dict,
+        previous_top5: dict[str, list[str]] | None = None,
+    ) -> dict:
         profile_summary = build_profile_summary(profile)
-        prompt = build_stage1_prompt(articles, profile_summary)
+        prompt = build_stage1_prompt(articles, profile_summary, previous_top5)
         raw = self._call_llm(MODEL_HAIKU, STAGE1_SYSTEM, prompt, max_tokens=2048)
         return self._parse_json(raw, "stage1")
 
@@ -328,25 +340,36 @@ class BriefingGenerator:
                 result[cat] = deduped
         return result
 
-    @staticmethod
-    def _dedup_top5(ids: list[str], articles: list[dict]) -> list[str]:
-        """같은 기사가 다른 소스 URL로 중복 선정된 경우 제목 유사도 기반으로 제거."""
+    _TOKEN_RE = re.compile(r"[\w가-힣]+", re.UNICODE)
+    _TOP5_SIMILARITY_THRESHOLD = 0.5
+
+    @classmethod
+    def _dedup_top5(cls, ids: list[str], articles: list[dict]) -> list[str]:
+        """같은 기사가 다른 소스 URL로 중복 선정된 경우 Jaccard 토큰 유사도로 제거."""
         id_map = {a["id"]: a for a in articles}
-        seen_titles: list[str] = []
+        seen_token_sets: list[set[str]] = []
         deduped: list[str] = []
         for aid in ids:
             article = id_map.get(aid)
             if not article:
                 continue
-            title = article.get("title", "").strip().lower()
-            title_short = title[:30]
-            if any(title_short in seen or seen in title_short
-                   for seen in seen_titles):
-                logger.info("Top 5 중복 제거: %s (제목 유사)", aid)
+            tokens = set(cls._TOKEN_RE.findall(
+                article.get("title", "").strip().lower()
+            ))
+            if any(cls._jaccard(tokens, seen) > cls._TOP5_SIMILARITY_THRESHOLD
+                   for seen in seen_token_sets):
+                logger.info("Top 5 중복 제거: %s (Jaccard > %.2f)",
+                            aid, cls._TOP5_SIMILARITY_THRESHOLD)
                 continue
-            seen_titles.append(title_short)
+            seen_token_sets.append(tokens)
             deduped.append(aid)
         return deduped
+
+    @staticmethod
+    def _jaccard(a: set[str], b: set[str]) -> float:
+        if not a or not b:
+            return 0.0
+        return len(a & b) / len(a | b)
 
     @staticmethod
     def _extract_risks(stage2: dict) -> list[str]:

@@ -19,6 +19,8 @@ COLLECTED_DIR = OUTPUT_DIR / "collected"
 BRIEFINGS_DIR = OUTPUT_DIR / "briefings"
 WEB_DIR = PROJECT_ROOT / "web"
 RSS_FEEDS_PATH = DATA_DIR / "rss_feeds.json"
+TOP5_HISTORY_PATH = WEB_DIR / "top5-history.json"
+TOP5_HISTORY_DAYS = 7
 
 ROLES_TO_EXTRACT = {"user", "assistant"}
 CONTENT_TYPES_TO_EXTRACT = {"text"}
