@@ -97,5 +97,14 @@
     "top_headline": "CoreWeave, 2030년까지 5GW 데이터센터 추가 목표",
     "sk_headline": "반도체 전문인력 8명 배출, AI 인프라 역량 강화",
     "article_count": 39
+  },
+  "2026-03-05": {
+    "date": "2026-03-05",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "반도체 패키징 공정 자동화 위한 고해상도 검사장비 수요 증가",
+    "sk_headline": "",
+    "article_count": 39
   }
 }
