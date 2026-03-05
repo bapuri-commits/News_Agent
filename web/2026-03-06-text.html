@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-03-06 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-03-06.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-03-06</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-03-06</h1>
+
+<blockquote>SK에코플랜트, 반도체공장 건설에 필요한 극초정밀 인프라 기술력 강조 / 슈나이더일렉트릭, 북미 데이터센터 전력인프라 수주 15% 성장 / 광양 세풍산단 착공, 133만㎡ 규모 반도체 클러스터 조성</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. SK에코플랜트, 반도체공장 건설에 필요한 극초정밀 인프라 기술력 강조</h3>
+
+<p>반도체 공장은 10nm(1mm의 10만분의 1) 단위 정밀 가공 필요. 진동 0.1mm도 불량 유발. 용인 반도체 클러스터에 하루 107만2천톤 물 공급 위해 2.2조원 사업 추진(환경부, 2025년 5월). SK하이닉스 M14 공장(이천, 2015년 준공) 사례 언급.</p>
+
+<p><strong>영향</strong>: 반도체 팹 건설시 진동제어, 초순수, 공기정화 등 복합 인프라 구축 능력이 수주 경쟁력의 핵심. SK에코플랜트가 이 분야 기술력을 보유하고 있음을 시사.</p>
+<p><strong>리스크</strong>: 용인 클러스터 물 공급 인프라 구축 지연시 프로젝트 일정 차질 가능. 극초정밀 시공 실패시 막대한 재시공 비용 발생.</p>
+<p><strong>확인 필요</strong>: SK에코플랜트의 구체적인 반도체 팹 수주 실적 및 용인 클러스터 관련 계약 체결 여부 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFAxaGU3eXZJc0ppdms1aHRLcmFJRjdNNmt3ZDZxLUFTbUJmT21vaF8zZG9nSHVOVEI2Y190NzRFUFN3VXA3WE5UM0RNcDVYblI3?oc=5" target="_blank" rel="noopener">SK에코플랜트 뉴스룸</a></p>
+
+<h3>2. 슈나이더일렉트릭, 북미 데이터센터 전력인프라 수주 15% 성장</h3>
+
+<p>슈나이더일렉트릭 2025년 전체 매출 8.9% 유기적 성장, 북미 지역 15% 성장. 에너지관리 부문(데이터센터 포함) 10% 성장. 데이터센터/네트워크 부문이 전체 수주의 30% 차지. 향후 5년간 연평균 10% 이상 성장 전망.</p>
+
+<p><strong>영향</strong>: AI 데이터센터 붐으로 전력·냉각 인프라 수요 급증. 800V DC 전력 아키텍처 전환이 신규 수주 동력. 2026년까지 수주 강세 지속 예상.</p>
+<p><strong>리스크</strong>: 주거용 및 분산 IT 부문 약세로 일부 상쇄. 데이터센터 투자 과열시 수주 변동성 확대 가능.</p>
+<p><strong>확인 필요</strong>: 2026년 1분기 실적 발표시 데이터센터 부문 수주 잔고 및 지역별 성장률 확인.</p>
+
+<p>📎 출처: <a href="https://www.constructiondive.com/news/data-centers-remain-standout-industry-for-schneider-electric/813818/" target="_blank" rel="noopener">Construction Dive</a></p>
+
+<h3>3. 광양 세풍산단 착공, 133만㎡ 규모 반도체 클러스터 조성</h3>
+
+<p>광양시 세풍일반산업단지 3월 5일 착공. 총사업비 3,818억원, 부지 133만㎡, 2030년 준공 목표. 산업용지 96만6834㎡에 약 80개 기업 입주 예정. RE100 가능한 친환경 산단으로 조성, 반도체 핵심 클러스터 육성 계획.</p>
+
+<p><strong>영향</strong>: 생산유발효과 4,309억원, 부가가치유발효과 1,888억원, 취업유발효과 2,888명 예상. 남해안권 반도체 공급망 확대에 기여.</p>
+<p><strong>리스크</strong>: 미래첨단 국가산단 지정 추진중이나 확정되지 않음. 기업 유치 실적에 따라 사업성 변동 가능.</p>
+<p><strong>확인 필요</strong>: 국가산단 지정 여부 및 주요 반도체 관련 기업 입주 의향서 체결 동향 모니터링.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1vM0Z5SlJUdGV0Nm9vSlR6RnNaWlhyMVdTeDV5azlRWnFreGpaenlTMzNqeERwcU1rcVJKSkk1WEFEYWZBWEJrVU5HckJTY0E?oc=5" target="_blank" rel="noopener">v.daum.net</a></p>
+
+<h3>4. 스맥, 삼성전자 DS부문 반도체 공정장비 수주 개시</h3>
+
+<p>스맥이 삼성전자 DS부문으로부터 반도체 공정장비 수주 개시. 구체적인 계약 규모 및 장비 종류는 미공개.</p>
+
+<p><strong>영향</strong>: 국내 장비업체의 삼성전자 공급망 진입은 매출 안정성 확보에 긍정적. 반도체 설비투자 재개 신호로 해석 가능.</p>
+<p><strong>리스크</strong>: 계약 규모 및 조건 미공개로 실제 사업 영향 평가 어려움.</p>
+<p><strong>확인 필요</strong>: 스맥의 분기 실적 발표시 삼성전자 관련 매출 비중 및 후속 수주 현황 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1hYnRnam1qbW5QNVloSGRSWFFKZVIzdUQzUDhZbWVpNFgyY2p4ZTAyaTBlWFBtdEg2QldnQ3VObTZsd0pWSFJNYkxyV2ozRkxHeVI5S0lJQ0VUR3hROERPN3NCUVdMWWFueUZENTBsMkZMTEgtRkY3RdIBeEFVX3lxTE1hYnRnam1qbW5QNVloSGRSWFFKZVIzdUQzUDhZbWVpNFgyY2p4ZTAyaTBlWFBtdEg2QldnQ3VObTZsd0pWSFJNYkxyV2ozRkxHeVI5S0lJQ0VUR3hROERPN3NCUVdMWWFueUZENTBsMkZMTEgtRkY3RQ?oc=5" target="_blank" rel="noopener">뉴시스</a></p>
+
+<h3>5. 와이씨, 삼성전자와 403억원 반도체 검사장비 공급계약</h3>
+
+<p>와이씨가 3월 3일 삼성전자와 403억원 규모 반도체 검사장비 공급계약 체결. 계약기간 2026년 3월 3일~6월 30일. 와이씨 최근 매출액(2,112억원) 대비 19.08%. 대금은 장비 납품 후 90%, SET UP 후 10% 지급.</p>
+
+<p><strong>영향</strong>: 와이씨 2026년 상반기 매출 가시성 확보. 삼성전자의 후공정 검사장비 투자 재개는 반도체 생산 확대 신호.</p>
+<p><strong>리스크</strong>: 주가는 공시 당일 11.5% 하락. 시장은 일회성 계약으로 평가하는 분위기.</p>
+<p><strong>확인 필요</strong>: 와이씨의 추가 수주 공시 및 1분기 실적 발표시 수주잔고 증가 추이 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5rTkJqYk9nMlN0T3NWTzlqWHRIMC1zdS1LcXhTZUhMeFlDbFFoSzd2UG9LalNXWm9DRWpPUkhpZ3h6WldkYl9QOEVsdnZ3d2dyaS1HSjBXSllzTF82X3M3cU1tUXVCdzdJUklxZEdSbVQ4N3M?oc=5" target="_blank" rel="noopener">디지털투데이</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>SK에코플랜트 반도체 공장 건설 기술력 소개</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> 기사는 반도체 공장 건설의 기술적 난이도와 요구사항을 설명하고 있으나, SK에코플랜트의 구체적인 수주 현황이나 반도체/AI 인프라 관련 수주 비중 변화에 대한 언급은 없음. 반도체 클러스터 건설 시장의 거대한 규모(용인 클러스터 2.2조원)를 제시하며 시장 잠재력을 시사함.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFAxaGU3eXZJc0ppdms1aHRLcmFJRjdNNmt3ZDZxLUFTbUJmT21vaF8zZG9nSHVOVEI2Y190NzRFUFN3VXA3WE5UM0RNcDVYblI3?oc=5" target="_blank" rel="noopener">SK에코플랜트 뉴스룸</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 산업에서 설비투자 회복세가 뚜렷하게 나타나고 있으며, 광양세풍산단 착공을 통한 반도체 클러스터 조성이 본격화되고 있습니다. 1월 산업생산은 반도체 조정으로 감소했으나 설비투자는 6.8% 급증하며 회복 기조를 보였습니다. AI 반도체 관련 투자 상품들의 명칭 변경과 투자심리 회복도 동반되고 있습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1vM0Z5SlJUdGV0Nm9vSlR6RnNaWlhyMVdTeDV5azlRWnFreGpaenlTMzNqeERwcU1rcVJKSkk1WEFEYWZBWEJrVU5HckJTY0E?oc=5" target="_blank" rel="noopener">전남 광양세풍산단 착공으로 반도체 산업 연계 본격화</a></li>
+</ul>
+<p>광양세풍산단이 착공되어 반도체 핵심 거점 조성이 시작되었습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1UNGRjZjVHc2c3Q01maFRiVXhfZS14SVBvc1lFNFBPbEpsZmtLcEl6MXdSWXhTdTRWMGpxR19oNHlMdnlUdlNqOThGZTFzenM?oc=5" target="_blank" rel="noopener">반도체 조정으로 1월 산업생산 감소하지만 설비투자는 급증</a></li>
+</ul>
+<p>1월 산업생산은 1.3% 감소했으나 설비투자는 6.8% 급증했습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5YOXZtLW1vaFpaX2JyMncxTTlZZ0o1eDdackFnYnVKaThIVTR5d096V0piN1FjQ0dVdDg3XzRFUS1rWlp2NU8xR0kwbVU5RFBzNk9GYTI0MzFxbjFXbzA5cNIBYEFVX3lxTE5YOXZtLW1vaFpaX2JyMncxTTlZZ0o1eDdackFnYnVKaThIVTR5d096V0piN1FjQ0dVdDg3XzRFUS1rWlp2NU8xR0kwbVU5RFBzNk9GYTI0MzFxbjFXbzA5cA?oc=5" target="_blank" rel="noopener">한투운용 HBM 관련 ETF 명칭을 &#x27;AI반도체TOP3+&#x27;로 변경</a></li>
+</ul>
+<p>AI 반도체 압축투자 ETF의 명칭을 변경하여 투자 방향성을 명확히 했습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE9kcU4ybEprWjNjRjZQNy1GSFRpcjB5a0RtR3RFdlh2MjFpTFl5NWtYcDhYOEtlWTh3RUNLZnFURlhDUF9LaWlIWEhPNnZVZE5pUUlvVzhtVjZfcGJ1eUHSAW5BVV95cUxPOXUxa0hIaXc1UFBFNEwzQVN1d2RjWHNreFVpbUJHX2xadGR0VXhVZnpUd01SbG9ldXRmUXBtb01NUHRIRnQxdHlVRnFGMXJRTXdrems3SHQ4SmZjQk5UUHJqWTZ5b0J4QVdFdnVpQQ?oc=5" target="_blank" rel="noopener">하나머티리얼즈, 메모리반도체 설비투자로 실리콘 부품 수요 확장</a></li>
+</ul>
+<p>메모리반도체 설비투자 증가로 실리콘 부품 수요가 확장되고 있습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE45clZfRVNPQ0JDUHZjUUxicnZ2Q3M3M2gwbHJnOTUxRVJkcXBtRzZvMTNlQWNYMHNpTjVLVGgtUGZ5N0R2dms1Nm9rV2JYU1VCZDVwS3E4QWVmZUs0cUlRaUNvVzVORGRsM0E?oc=5" target="_blank" rel="noopener">SK하이닉스 신용등급 상향으로 AI 반도체 성장성 인정</a></li>
+</ul>
+<p>AI 반도체 사업 성과로 신용등급이 AA+로 상향 조정되었습니다.</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>삼성전자를 중심으로 반도체 검사장비 공급계약이 활발하게 체결되고 있으며, 국내 장비업체들의 수주가 집중되고 있습니다. 와이씨, 디아이, 인텍플러스 등 다수 업체가 대규모 공급계약을 따내며 반도체 장비 시장의 회복을 보여줍니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1hYnRnam1qbW5QNVloSGRSWFFKZVIzdUQzUDhZbWVpNFgyY2p4ZTAyaTBlWFBtdEg2QldnQ3VObTZsd0pWSFJNYkxyV2ozRkxHeVI5S0lJQ0VUR3hROERPN3NCUVdMWWFueUZENTBsMkZMTEgtRkY3RdIBeEFVX3lxTE1hYnRnam1qbW5QNVloSGRSWFFKZVIzdUQzUDhZbWVpNFgyY2p4ZTAyaTBlWFBtdEg2QldnQ3VObTZsd0pWSFJNYkxyV2ozRkxHeVI5S0lJQ0VUR3hROERPN3NCUVdMWWFueUZENTBsMkZMTEgtRkY3RQ?oc=5" target="_blank" rel="noopener">스맥, 삼성전자 반도체 공정장비 수주 개시</a></li>
+</ul>
+<p>스맥이 삼성전자 DS부문 반도체 공정장비 수주를 시작했습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5rTkJqYk9nMlN0T3NWTzlqWHRIMC1zdS1LcXhTZUhMeFlDbFFoSzd2UG9LalNXWm9DRWpPUkhpZ3h6WldkYl9QOEVsdnZ3d2dyaS1HSjBXSllzTF82X3M3cU1tUXVCdzdJUklxZEdSbVQ4N3M?oc=5" target="_blank" rel="noopener">와이씨, 삼성전자와 403억원 반도체 검사장비 공급계약 체결</a></li>
+</ul>
+<p>와이씨가 삼성전자와 403억원 규모의 반도체 검사장비 공급계약을 체결했습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9VZFVZaS1vQ29PbFhNT3ZUS3YyNWNzZEp6OTVIV3hUQmxMNVRCS1RwS21ra1NkelhwRk1XVFYyOG16dWdYNzZVLVUxUy1qNG0zMkZzRERydFpVX3dZeC1NcjFURTJjMnVueWltaVlxcnp5X1k?oc=5" target="_blank" rel="noopener">디아이, 삼성전자와 95억원 반도체 검사장비 공급계약 체결</a></li>
+</ul>
+<p>디아이가 삼성전자와 95억원 규모의 반도체 검사장비 공급계약을 체결했습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQYVlWU1dnWDJhck5ZM3V0VExQMVI3WDNVenR5VXVNOVNuMWs5N0dzQVR1dWQ0M1dDV1J5a1h6MFFJR3BabkVjQXBXWXpsaFZEMHVza0JXVWt4RVB6OUxNVzVwRGJCZGRJRDZ5VnFMV1p5eE5lNE5wYXUyM0syZ3dibg?oc=5" target="_blank" rel="noopener">인텍플러스, 96억원 반도체 기판 검사장비 공급계약 체결</a></li>
+</ul>
+<p>인텍플러스가 96억원 규모의 반도체 기판 검사장비 공급계약을 체결했습니다.</p>
+
+<h3>데이터센터 신축</h3>
+<p>AI 데이터센터 구축을 위한 투자가 활발하게 진행되고 있으며, 오라클은 AI 데이터센터 확장을 위해 대규모 인력 조정을 단행하고 있습니다. 슈나이더일렉트릭은 데이터센터가 핵심 성장 동력으로 자리잡았다고 평가했습니다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/data-centers-remain-standout-industry-for-schneider-electric/813818/" target="_blank" rel="noopener">슈나이더일렉트릭, 데이터센터가 핵심 성장 산업으로 부상</a></li>
+</ul>
+<p>데이터센터 부문이 지속적인 성장을 보이며 핵심 사업으로 자리잡았습니다.</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/greencoat-renewables-launches-digital-infrastructure-plaform-plans-36mw-data-center-project-in-drogheda-ireland/" target="_blank" rel="noopener">그린코트 리뉴어블즈, 디지털 인프라 플랫폼 출시 계획</a></li>
+</ul>
+<p>슈뢰더스와 합작으로 디지털 인프라 플랫폼을 출시할 예정입니다.</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/oracle-plans-to-again-cut-thousands-of-jobs-to-free-up-ai-data-center-cash-flow/" target="_blank" rel="noopener">오라클, AI 데이터센터 확장 위해 대규모 인력 감축 계획</a></li>
+</ul>
+<p>OpenAI 구축 지원을 위해 수천 명의 직원을 감축할 계획입니다.</p>
+
+<h3>DC 냉각</h3>
+<p>산업용 냉각 전문업체인 알파라발이 액체 냉각 시스템으로 데이터센터 시장에 진출하며 새로운 경쟁자로 등장했습니다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/industrial-firm-alfa-laval-enters-data-center-market-with-liquid-cooling-system/" target="_blank" rel="noopener">알파라발, 액체 냉각 시스템으로 데이터센터 시장 진출</a></li>
+</ul>
+<p>FreeWaterLoop 시스템을 출시하며 데이터센터 냉각 시장에 진입했습니다.</p>
+
+<h3>EPC / 수주</h3>
+<p>국내외에서 반도체 관련 대규모 계약과 프로젝트가 활발하게 진행되고 있으며, 말레이시아는 2억 8천만 달러 규모의 반도체 제조 계약을 검토 중입니다. 국내에서는 라온피플의 글로벌 반도체 기업 계약과 와이씨의 403억원 수주가 주목받고 있습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQckNEX2xuSWxOSjZwUXZZVUdSRi0yWlhfOVd2d05PUkZtaW1SZEI3anhlbU9pY3M4T3BONG13Ykh0aFNGMFlfNkd3WFVfb0w3MjZkTjNQU01RT3pXWTNBTEU2al9ZLVJPVVBJbVVndGdaejBxa0xvU0txZGRFNFZtdQ?oc=5" target="_blank" rel="noopener">라온피플, 글로벌 반도체 기업 PSK 계약으로 턴어라운드 기대</a></li>
+</ul>
+<p>글로벌 반도체 기업과의 PSK 계약을 통해 사업 전환점을 맞을 것으로 기대됩니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNTlBqamNEQWFUZlFFcFNXUy0wRG55YXJHbUVoYkE0LU41VENHZ3RKenVJTEZnOU5jQkFEVnVROFQ3cGRtR21XUmdPN3gxQVVwYTFLSXZIUlJybWVhU3BIOUxrdi1DRVUyaTBqb1hVNE5xZXlZNHpkYjFJRG9FdXg4SF9YWlNpMThaN1BpYnBmaEYwa2M?oc=5" target="_blank" rel="noopener">말레이시아, 2억 8천만 달러 규모 반도체 제조 계약 조사 착수</a></li>
+</ul>
+<p>2억 8천만 달러 규모의 반도체 제조 계약에 대한 조사가 시작되었습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE5zVDdGWmdYWmduOThtYlEyY1Y0bDVXOHZnanVPSnp3Yk9GMl8tRXNEbXZFX1I1ZnI1SmhOQTVtZmliWTBIVmxnMEhZSXpMcW5BYWFlbtIBVEFVX3lxTE5zVDdGWmdYWmduOThtYlEyY1Y0bDVXOHZnanVPSnp3Yk9GMl8tRXNEbXZFX1I1ZnI1SmhOQTVtZmliWTBIVmxnMEhZSXpMcW5BYWFlbg?oc=5" target="_blank" rel="noopener">와이씨, 반도체 검사장비 403억원 수주</a></li>
+</ul>
+<p>매출액 대비 19.08%에 해당하는 403억원 규모의 반도체 검사장비를 수주했습니다.</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트가 반도체 공장 건설의 고도화된 기술력을 소개하며 정밀 시공 역량을 강조했습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFAxaGU3eXZJc0ppdms1aHRLcmFJRjdNNmt3ZDZxLUFTbUJmT21vaF8zZG9nSHVOVEI2Y190NzRFUFN3VXA3WE5UM0RNcDVYblI3?oc=5" target="_blank" rel="noopener">SK에코플랜트, 반도체 공장 건설의 정밀 기술력 소개</a></li>
+</ul>
+<p>지구상에서 가장 정밀한 반도체 공장 건설 기술을 보유하고 있음을 소개했습니다.</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[SK에코플랜트, 반도체공장 건설에 필요한 극초정밀 인프라 기술력 강조] 용인 클러스터 물 공급 인프라 구축 지연시 프로젝트 일정 차질 가능. 극초정밀 시공 실패시 막대한 재시공 비용 발생.</li>
+<li>[슈나이더일렉트릭, 북미 데이터센터 전력인프라 수주 15% 성장] 주거용 및 분산 IT 부문 약세로 일부 상쇄. 데이터센터 투자 과열시 수주 변동성 확대 가능.</li>
+<li>[광양 세풍산단 착공, 133만㎡ 규모 반도체 클러스터 조성] 미래첨단 국가산단 지정 추진중이나 확정되지 않음. 기업 유치 실적에 따라 사업성 변동 가능.</li>
+<li>[스맥, 삼성전자 DS부문 반도체 공정장비 수주 개시] 계약 규모 및 조건 미공개로 실제 사업 영향 평가 어려움.</li>
+<li>[와이씨, 삼성전자와 403억원 반도체 검사장비 공급계약] 주가는 공시 당일 11.5% 하락. 시장은 일회성 계약으로 평가하는 분위기.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>SK에코플랜트의 구체적인 반도체 팹 수주 실적 및 용인 클러스터 관련 계약 체결 여부 확인 필요.</li>
+<li>2026년 1분기 실적 발표시 데이터센터 부문 수주 잔고 및 지역별 성장률 확인.</li>
+<li>국가산단 지정 여부 및 주요 반도체 관련 기업 입주 의향서 체결 동향 모니터링.</li>
+<li>스맥의 분기 실적 발표시 삼성전자 관련 매출 비중 및 후속 수주 현황 확인.</li>
+<li>와이씨의 추가 수주 공시 및 1분기 실적 발표시 수주잔고 증가 추이 확인.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/5건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-03-05T21:36:12.242260+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
