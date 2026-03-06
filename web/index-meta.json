@@ -115,5 +115,14 @@
     "top_headline": "SK에코플랜트, 반도체공장 건설에 필요한 극초정밀 인프라 기술력 강조",
     "sk_headline": "SK에코플랜트 반도체 공장 건설 기술력 소개",
     "article_count": 39
+  },
+  "2026-03-07": {
+    "date": "2026-03-07",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "SK에코플랜트, 반도체 공장 건설 기술력 홍보",
+    "sk_headline": "SK에코플랜트, 반도체 공장 건설 기술력 부각",
+    "article_count": 39
   }
 }
