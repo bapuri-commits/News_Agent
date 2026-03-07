@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-03-08 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-03-08.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-03-08</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-03-08</h1>
+
+<blockquote>SK에코플랜트 3Q 영업익 1,574억원 반도체 본격화로 흑자전환 / 슈나이더 데이터센터 부문 10%↑ 북미 15% 성장 주도 / 한화비전 자회사 SK하이닉스에 HBM용 TC본더 1Q 공급 시작</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. SK에코플랜트 3Q 영업익 1,574억원 반도체 본격화로 흑자전환</h3>
+
+<p>SK에코플랜트 3분기 영업이익 1,574억원 기록, 반도체 사업 본격화로 흑자 전환. 구체적인 반도체 프로젝트 내용은 미확인.</p>
+
+<p><strong>영향</strong>: 반도체 FAB 건설 수주 확대로 수익성 개선 가시화. 건설사 수주믹스에서 고수익 반도체 비중 확대 시사.</p>
+<p><strong>리스크</strong>: 반도체 시장 사이클 변동성 및 FAB 프로젝트 집행 지연 가능성. 구체적 수주 내역 미공개로 지속성 불확실.</p>
+<p><strong>확인 필요</strong>: 반도체 FAB 구체적 수주 프로젝트명 및 계약금액 공시 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMirANBVV95cUxORHRfUlljTUprTjFXUENiempUcGlMMFZFMkFjanlQT21NWVJJbWxqT0g3UXVmQkRCWTRucXJYdHJVbGo5YWxhSmZJWDRsWTlMRmtfMUQzeThsSFB4NUdCbTVCa2V1SXJwejNSQmloWkhmTHBoR2s3M1VMY0pjdGxObW0tbU90UVdibE1OdDU2eENGRm5FZWhFSDJ5TnR0YlJkd0p4eHlrN1hqUVBXWm1WakdpMGkzRk1Oc3o2NFZ1RzYtLS1vWXdnUlF5djV3WWhwaVpqci1admVvbXlOdVUteWtKWFVoT3REMGtFN3poX2FWWFNBZm1TSG1RV0lpNmxNZ1JLRkt3amJUdy1mZlZNYzZGenh3VWp4ZFl5R2ZsQktheks2MS1PVk1ZYS1Va25PS1pPOGRyZWVJQnl2U0xNd3RyelRQRUVUNHlsREZUS21GOTJhZXgwT3dQR21ldDdwQkdRYmo5Q2xKQnBEbFNNUVBDckI5bURhYW5DY2UwQkZBc3dsR3pzZTQtOG5zQTItZ2FZNHNocDdoNXlBbVVZanJTdldUczU4ZjV1Uw?oc=5" target="_blank" rel="noopener">MSN</a></p>
+
+<h3>2. 슈나이더 데이터센터 부문 10%↑ 북미 15% 성장 주도</h3>
+
+<p>슈나이더일렉트릭 2025년 전체 매출 8.9% 유기성장, 북미지역 15% 성장. 에너지관리(데이터센터 포함) 부문 10% 성장, 데이터센터/네트워크가 전체 주문의 30% 차지.</p>
+
+<p><strong>영향</strong>: AI 데이터센터 붐으로 전력/냉각 인프라 수요 지속. 향후 5년간 데이터센터 시장 연 10% 이상 성장 전망.</p>
+<p><strong>리스크</strong>: 주거용 및 분산IT 부문 약세 지속. 데이터센터 집중도 높아 시장 변동성 노출.</p>
+<p><strong>확인 필요</strong>: 2026년 1-2분기 데이터센터 프로젝트 구체화 및 수주 추이 모니터링.</p>
+
+<p>📎 출처: <a href="https://www.constructiondive.com/news/data-centers-remain-standout-industry-for-schneider-electric/813818/" target="_blank" rel="noopener">Construction Dive</a></p>
+
+<h3>3. 한화비전 자회사 SK하이닉스에 HBM용 TC본더 1Q 공급 시작</h3>
+
+<p>한화세미텍(한화비전 자회사) 1분기부터 SK하이닉스에 TC본더 장비 공급 예정. 4분기 매출 1,959억원, 영업이익 411억원 전망(키움증권).</p>
+
+<p><strong>영향</strong>: HBM 생산 확대로 패키징 장비 수요 급증. TC본더 외 HCB 장비도 공급 추진으로 HBM 16단 이상 대응.</p>
+<p><strong>리스크</strong>: 특정 고객(SK하이닉스) 의존도 높음. 대만/중국 고객 확대는 미확인 상태.</p>
+<p><strong>확인 필요</strong>: 1분기 TC본더 실제 납품 실적 및 2분기 매출 반영 규모 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE41UUY0bjJJbm5YenNmaXBWZnRrR3RKNkJjbEJHYlRvZ3M1V2kyUy1ydXlZOC1WbzJfQWtDWVZxQmVEcm9tVzZPb2U0ODczb3VNMTA2WHByTWQ4SlBBY0dmQnZfREJ1YVA1emN3TzF6YlkwbmxsdW9J0gF3QVVfeXFMTjVRRjRuMklublh6c2ZpcFZmdGtHdEo2QmNsQkdiVG9nczVXaTJTLXJ1eVk4LVZvMl9Ba0NZVnFCZURyb21XNk9vZTQ4NzNvdU0xMDZYcHJNZDhKUEFjR2ZCdl9EQnVhUDV6Y3dPMXpiWTBubGx1b0k?oc=5" target="_blank" rel="noopener">핀포인트뉴스</a></p>
+
+<h3>4. 올스웰 공기유동제어로 데이터센터 냉각에너지 30% 절감</h3>
+
+<p>올스웰 DSBM(Dynamic System Balancing Method) 기술로 데이터센터 냉각 에너지 최대 30% 절감. 직접대류 방식 냉각 설계 적용.</p>
+
+<p><strong>영향</strong>: 데이터센터 운영비(OPEX) 절감 솔루션으로 시장 확대 기대. 전력 효율 규제 강화로 수요 증가 전망.</p>
+<p><strong>확인 필요</strong>: 실제 데이터센터 프로젝트 수주 사례 및 고객사 발표 모니터링.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE5fNm9OTnFFcVV3NEJpbXJsMkxDcjZxZHdlQXA1YVdVdmR6ampVa3gxTkFuOG9zYUMxUkM4VHA4MFVxei0zTUwyVXFkb0ZMZw?oc=5" target="_blank" rel="noopener">전자신문</a></p>
+
+<h3>5. 두산에너빌리티 美 데이터센터용 380MW 가스터빈 7기 수주</h3>
+
+<p>두산에너빌리티 미국 기업과 380MW급 가스터빈 7기 공급계약 체결. 2029년 5월부터 매달 1기씩 순차 공급, 미국 총 12기 공급 예정.</p>
+
+<p><strong>영향</strong>: 미국 데이터센터 전력 수요 급증으로 가스터빈 수주 확대. 글로벌 발전설비 시장 입지 강화.</p>
+<p><strong>리스크</strong>: 2029년 납품으로 실적 반영 지연. 천연가스 가격 변동 및 환경규제 강화 리스크.</p>
+<p><strong>확인 필요</strong>: 계약 금액 및 구체적 고객사(데이터센터 운영사) 정보 공개 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE9BWTBCblViUS04c1AxYjRmLWpiaFA3MXUwcmd2cmkzYTZkdHcwTlh1Q1RaVUdweGJSUEhZSWEzel8wanJzVG5JY2ZpMjVtZEVISkNMX1kxSXA2TFdyUmZTMWdnVm56eEtDbFhUeG1uWGlYQdIBckFVX3lxTE9BWTBCblViUS04c1AxYjRmLWpiaFA3MXUwcmd2cmkzYTZkdHcwTlh1Q1RaVUdweGJSUEhZSWEzel8wanJzVG5JY2ZpMjVtZEVISkNMX1kxSXA2TFdyUmZTMWdnVm56eEtDbFhUeG1uWGlYQQ?oc=5" target="_blank" rel="noopener">메가경제</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>3분기 영업익 1,574억원으로 흑자전환</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> 반도체 사업 본격화로 수주 믹스 개선이 확인됨. 3분기 영업이익 1,574억원(Claim: 기사 제목)을 기록하며 흑자 전환에 성공했다고 발표. 반도체 인프라 비중 상승이 수익성 개선의 주요 동력으로 작용한 것으로 분석됨.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMirANBVV95cUxORHRfUlljTUprTjFXUENiempUcGlMMFZFMkFjanlQT21NWVJJbWxqT0g3UXVmQkRCWTRucXJYdHJVbGo5YWxhSmZJWDRsWTlMRmtfMUQzeThsSFB4NUdCbTVCa2V1SXJwejNSQmloWkhmTHBoR2s3M1VMY0pjdGxObW0tbU90UVdibE1OdDU2eENGRm5FZWhFSDJ5TnR0YlJkd0p4eHlrN1hqUVBXWm1WakdpMGkzRk1Oc3o2NFZ1RzYtLS1vWXdnUlF5djV3WWhwaVpqci1admVvbXlOdVUteWtKWFVoT3REMGtFN3poX2FWWFNBZm1TSG1RV0lpNmxNZ1JLRkt3amJUdy1mZlZNYzZGenh3VWp4ZFl5R2ZsQktheks2MS1PVk1ZYS1Va25PS1pPOGRyZWVJQnl2U0xNd3RyelRQRUVUNHlsREZUS21GOTJhZXgwT3dQR21ldDdwQkdRYmo5Q2xKQnBEbFNNUVBDckI5bURhYW5DY2UwQkZBc3dsR3pzZTQtOG5zQTItZ2FZNHNocDdoNXlBbVVZanJTdldUczU4ZjV1Uw?oc=5" target="_blank" rel="noopener">MSN</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>미국의 AI반도체 수출규제 강화 검토와 함께 국내에서는 반도체 투자 재개 기대감이 확산되고 있다. 1월 반도체 수출이 103% 급증하며 경상수지 133억달러 흑자를 기록했고, HBM과 AI 반도체 관련 투자와 장비업체들의 실적 개선이 주목받고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9KcmNwV1NreFc3cDg4endqbmdxUDExWWRfVjVjOXIwV1BiT3RJRkxRaVZzaUVHS1B0UXJnMEM3SGhnQXJ4ajdYU1dEdDVLRDhHbW5iSFhpOVQ3WmJvQ25oWjREa0RNTVg0d01wcl9TWng?oc=5" target="_blank" rel="noopener">미국, AI반도체 수출에 보안·투자 패키지 요구 검토</a></li>
+</ul>
+<p>미국이 AI반도체 수출 허가제 도입을 검토 중이다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBVUDZuZHVGV2hjYUhYamM4TmRiQmRGMTQxT20wVFdDZXpCSG9kN2lLZDA5dTk4TmxraEU0bGNYcGVLbTZTNGYwTE03SXpOQWZOdkJPcUpVTXBMUdIBVEFVX3lxTFAxUGRURlZETUZZUkxNYWp2R3Ffb2M4Y0VNQ09JT1JKaGZJZVVMcU9IeDBCcXNEME5iT0FWODhMa2hJamNVMTJTeHU0N2NhS2t2bjRFUA?oc=5" target="_blank" rel="noopener">1월 반도체 수출 103% 증가로 경상수지 133억달러 흑자</a></li>
+</ul>
+<p>반도체 수출 호조로 1월 경상수지가 역대 5위 흑자를 기록했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE41UUY0bjJJbm5YenNmaXBWZnRrR3RKNkJjbEJHYlRvZ3M1V2kyUy1ydXlZOC1WbzJfQWtDWVZxQmVEcm9tVzZPb2U0ODczb3VNMTA2WHByTWQ4SlBBY0dmQnZfREJ1YVA1emN3TzF6YlkwbmxsdW9J0gF3QVVfeXFMTjVRRjRuMklublh6c2ZpcFZmdGtHdEo2QmNsQkdiVG9nczVXaTJTLXJ1eVk4LVZvMl9Ba0NZVnFCZURyb21XNk9vZTQ4NzNvdU0xMDZYcHJNZDhKUEFjR2ZCdl9EQnVhUDV6Y3dPMXpiWTBubGx1b0k?oc=5" target="_blank" rel="noopener">한화비전, HBM 관련 반도체 장비 수주 폭발 조짐</a></li>
+</ul>
+<p>HBM 전쟁 속 한화비전이 반도체 장비 수주 급증 기대감으로 주목받고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVTNTS0F2eVY4eGRPdkNqN05iV2Z2TnhiTWRZLWFNSGZuZFFubjV5SWYwZkNaU05pVEVkeDN2aWRhTlJ4Z2plbEY0UEV0bEpjbnRjb1BfNFZ4WjctbjN1d05UV3V0WG80RTFwMDlrRlVIaTNOM19XN1RoUUUwUHBSWFowMXMzSHZC?oc=5" target="_blank" rel="noopener">한미반도체 TCB 독주, HBM 패키징 시장 선도</a></li>
+</ul>
+<p>한미반도체가 TCB 기술로 HBM 패키징 시장에서 독보적 지위를 유지하고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxOV2paREtHamd3VlJNcEFsY1l1UzVrTnI0Z09ab1BNZndQVng0ZFJsMXVMeHlFSm9RZ1hsRFFTTkpqZnZodUp6VEFpU0E3ZmRTd2hOb3pNR0VWSElIY1I5R1VVQ0FxRFlHSFh4WEJhQ253NnM0QVhHVDBjNkQ0THFZQTZrWFMzYXfSAZsBQVVfeXFMUEN3ZG5tQ2t4UGhtV05XQnMtalZkMHpYWTNxZDgxcTJULVR5elV3STdJWmMwWkFmR1hYZWhPQTNBVnFrMkpCUGVnS1N2WWs1WXo3RWNTOHphVktjVGc5RGhUZGJjbnRvc2xqY29FOWp6NDItNmc3d0FvNWxlZndZeUtaVk14MTVMRGVYN0I5Q3R6NW5aOEVIemN6YlE?oc=5" target="_blank" rel="noopener">AI반도체 개발업체 하이퍼엑셀, 1500억 투자 유치 시동</a></li>
+</ul>
+<p>하이퍼엑셀이 기업가치 6000억원을 목표로 시리즈B 투자 유치에 나섰다</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>애플의 미국산 칩 생산이 실제로는 대만 의존도가 높다는 점이 지적되고 있고, 엔비디아는 MWC에서 AI-네이티브 전략을 발표했다. IoT 시장에서는 새로운 규제 환경에 대응하는 전략적 변화가 요구되고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/apples-first-made-in-u-s-chips-fall-short-of-claim/" target="_blank" rel="noopener">애플 미국산 칩, 실제로는 대만 의존도 높아</a></li>
+</ul>
+<p>애플의 미국 기반 칩 생산이 최종 조립은 여전히 대만에 의존하고 있다</p>
+<ul>
+<li><a href="https://www.eetimes.com/nvidia-advances-ai-native-strategy-at-mwc/" target="_blank" rel="noopener">엔비디아, MWC에서 AI-네이티브 전략 발표</a></li>
+</ul>
+<p>엔비디아가 통신 부문에서 AI-네이티브 전략을 적극 추진하고 있다</p>
+<ul>
+<li><a href="https://www.eetimes.com/is-your-iot-strategy-ready-for-the-new-landscape/" target="_blank" rel="noopener">IoT 시장, 새로운 규제 환경 대응 전략 필요</a></li>
+</ul>
+<p>IoT 시장에서 규제 변화로 인한 유연성과 복원력 중심 전략이 요구되고 있다</p>
+
+<h3>데이터센터 신축</h3>
+<p>데이터센터 건설 시장에서 전력 공급과 속도가 핵심 이슈로 부상하고 있다. 슈나이더일렉트릭은 지속적 성장을 보이고 있고, 모듈형 데이터센터 건설과 독립 전력망 구축이 주요 트렌드로 나타나고 있다. 오라클과 오픈AI의 텍사스 확장 계획이 자금조달 문제로 중단되는 등 일부 프로젝트는 차질을 빚고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/data-centers-remain-standout-industry-for-schneider-electric/813818/" target="_blank" rel="noopener">슈나이더일렉트릭, 데이터센터 사업에서 지속 성장</a></li>
+</ul>
+<p>슈나이더일렉트릭이 효율성과 지속가능성 추구로 건설 기술 고객들로부터 꾸준한 성장을 보이고 있다</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/data-centers-modular-construction-sap/814106/" target="_blank" rel="noopener">모듈형 데이터센터 건설, 시장 진출 속도 향상 기대</a></li>
+</ul>
+<p>데이터센터 건설에서 속도가 중요해지면서 모듈형 건설 방식이 주목받고 있다</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/oracleopenai-drop-plans-to-expand-flagship-abilene-stargate-site-meta-in-talks-to-pick-up-crusoe-capacity-with-nvidias-help/" target="_blank" rel="noopener">오라클·오픈AI 텍사스 스타게이트 확장 계획 중단</a></li>
+</ul>
+<p>자금조달 문제와 스타게이트 프로젝트 범위 변경으로 텍사스 데이터센터 확장이 무산됐다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE9BWTBCblViUS04c1AxYjRmLWpiaFA3MXUwcmd2cmkzYTZkdHcwTlh1Q1RaVUdweGJSUEhZSWEzel8wanJzVG5JY2ZpMjVtZEVISkNMX1kxSXA2TFdyUmZTMWdnVm56eEtDbFhUeG1uWGlYQdIBckFVX3lxTE9BWTBCblViUS04c1AxYjRmLWpiaFA3MXUwcmd2cmkzYTZkdHcwTlh1Q1RaVUdweGJSUEhZSWEzel8wanJzVG5JY2ZpMjVtZEVISkNMX1kxSXA2TFdyUmZTMWdnVm56eEtDbFhUeG1uWGlYQQ?oc=5" target="_blank" rel="noopener">두산에너빌리티, 미국 데이터센터용 가스터빈 7기 추가 수주</a></li>
+</ul>
+<p>미국 데이터센터 전력 수요 증가로 두산에너빌리티가 380MW급 가스터빈 7기를 추가 수주했다</p>
+
+<h3>DC 냉각</h3>
+<p>데이터센터 냉각 기술 혁신이 에너지 절약의 핵심으로 부상하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE5fNm9OTnFFcVV3NEJpbXJsMkxDcjZxZHdlQXA1YVdVdmR6ampVa3gxTkFuOG9zYUMxUkM4VHA4MFVxei0zTUwyVXFkb0ZMZw?oc=5" target="_blank" rel="noopener">올스웰, 공기·열 유동제어로 데이터센터 냉각 에너지 30% 절감</a></li>
+</ul>
+<p>올스웰이 공기·열 유동제어 기술로 데이터센터 냉각 에너지를 최대 30% 절감하는 솔루션을 개발했다</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트가 반도체 사업 본격화로 실적 개선을 보이고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMirANBVV95cUxORHRfUlljTUprTjFXUENiempUcGlMMFZFMkFjanlQT21NWVJJbWxqT0g3UXVmQkRCWTRucXJYdHJVbGo5YWxhSmZJWDRsWTlMRmtfMUQzeThsSFB4NUdCbTVCa2V1SXJwejNSQmloWkhmTHBoR2s3M1VMY0pjdGxObW0tbU90UVdibE1OdDU2eENGRm5FZWhFSDJ5TnR0YlJkd0p4eHlrN1hqUVBXWm1WakdpMGkzRk1Oc3o2NFZ1RzYtLS1vWXdnUlF5djV3WWhwaVpqci1admVvbXlOdVUteWtKWFVoT3REMGtFN3poX2FWWFNBZm1TSG1RV0lpNmxNZ1JLRkt3amJUdy1mZlZNYzZGenh3VWp4ZFl5R2ZsQktheks2MS1PVk1ZYS1Va25PS1pPOGRyZWVJQnl2U0xNd3RyelRQRUVUNHlsREZUS21GOTJhZXgwT3dQR21ldDdwQkdRYmo5Q2xKQnBEbFNNUVBDckI5bURhYW5DY2UwQkZBc3dsR3pzZTQtOG5zQTItZ2FZNHNocDdoNXlBbVVZanJTdldUczU4ZjV1Uw?oc=5" target="_blank" rel="noopener">SK에코플랜트 3분기 영업이익 1574억원, 반도체 사업으로 흑자전환</a></li>
+</ul>
+<p>SK에코플랜트가 반도체 사업 본격화로 3분기 영업이익 1574억원을 기록하며 흑자로 전환했다</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[SK에코플랜트 3Q 영업익 1,574억원 반도체 본격화로 흑자전환] 반도체 시장 사이클 변동성 및 FAB 프로젝트 집행 지연 가능성. 구체적 수주 내역 미공개로 지속성 불확실.</li>
+<li>[슈나이더 데이터센터 부문 10%↑ 북미 15% 성장 주도] 주거용 및 분산IT 부문 약세 지속. 데이터센터 집중도 높아 시장 변동성 노출.</li>
+<li>[한화비전 자회사 SK하이닉스에 HBM용 TC본더 1Q 공급 시작] 특정 고객(SK하이닉스) 의존도 높음. 대만/중국 고객 확대는 미확인 상태.</li>
+<li>[두산에너빌리티 美 데이터센터용 380MW 가스터빈 7기 수주] 2029년 납품으로 실적 반영 지연. 천연가스 가격 변동 및 환경규제 강화 리스크.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>반도체 FAB 구체적 수주 프로젝트명 및 계약금액 공시 확인 필요.</li>
+<li>2026년 1-2분기 데이터센터 프로젝트 구체화 및 수주 추이 모니터링.</li>
+<li>1분기 TC본더 실제 납품 실적 및 2분기 매출 반영 규모 확인.</li>
+<li>실제 데이터센터 프로젝트 수주 사례 및 고객사 발표 모니터링.</li>
+<li>계약 금액 및 구체적 고객사(데이터센터 운영사) 정보 공개 확인.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/5건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-03-07T21:21:59.727215+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
