@@ -142,5 +142,14 @@
     "top_headline": "SK에코플랜트 3Q 영업익 1,574억원 반도체사업 흑자전환",
     "sk_headline": "SK에코플랜트 3Q 영업이익 1,574억원 달성",
     "article_count": 39
+  },
+  "2026-03-10": {
+    "date": "2026-03-10",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "AI 데이터센터 전력효율 격차 해결 방안 제시",
+    "sk_headline": "",
+    "article_count": 39
   }
 }
