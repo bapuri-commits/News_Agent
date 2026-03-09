@@ -1,9 +1,10 @@
 # News_Agent — VPS 배포 가이드
 
-> ⚠️ **초안 문서** — 각 Stage 진행 시 실제 환경에 맞게 수정될 수 있음.
-
 > Contabo VPS에서 cron으로 매일 뉴스 브리핑을 생성하고, nginx로 정적 페이지를 서빙하는 절차.
 > DevOps 학습 로드맵 Stage 2, 4, 6, 7에서 사용.
+>
+> **참조**: nginx 설정의 중앙 관리 사본은 `SyOps/deploy/nginx/services.conf`에 있습니다.
+> DevOps 로드맵 전체는 `SyOps/docs/DEVOPS_ROADMAP.md`를 참조하세요.
 
 ---
 
@@ -72,23 +73,24 @@ python -m src.main deploy
 
 ---
 
-## Stage 4 — nginx 정적 서빙
+## Stage 4 — nginx 정적 서빙 ✅
 
-### /etc/nginx/sites-available/news-agent
+설정 파일: `/etc/nginx/sites-available/services` (중앙 관리: `SyOps/deploy/nginx/services.conf`)
 
 ```nginx
-# TODO: Stage 5에서 작성
-# server {
-#     listen 80;
-#     server_name news.도메인;
-#
-#     root /opt/News_Agent/web;
-#     index index.html;
-#
-#     location / {
-#         try_files $uri $uri/ =404;
-#     }
-# }
+server {
+    server_name news.syworkspace.cloud;
+
+    location / {
+        alias /opt/data/news-agent/web/;
+        index index.html;
+        try_files $uri $uri/ =404;
+    }
+
+    listen 443 ssl;
+    ssl_certificate /etc/letsencrypt/live/drop.syworkspace.cloud/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/drop.syworkspace.cloud/privkey.pem;
+}
 ```
 
 ---
