@@ -151,5 +151,14 @@
     "top_headline": "AI 데이터센터 전력효율 격차 해결 방안 제시",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-03-11": {
+    "date": "2026-03-11",
+    "theme_label": "Data Pulse",
+    "theme_accent": "#38bdf8",
+    "theme_gradient": "linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%)",
+    "top_headline": "인텔 EMIB, TSMC CoWoS 대안으로 AI반도체 패키징 경쟁 본격화",
+    "sk_headline": "SK에코플랜트, 배터리 검사장비 업체와 수주 연결고리",
+    "article_count": 39
   }
 }
