@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-03-12 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-03-12.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-03-12</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-03-12</h1>
+
+<blockquote>SK에코플랜트, SK에코엔지니어링 100% 편입 후 4000억 지원 / Applied Materials-SK하이닉스, 50억달러 규모 실리콘밸리 R&amp;D 시설 공동개발 / SK에코플랜트, SK하이닉스 반도체 공사 7조원 수주</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. SK에코플랜트, SK에코엔지니어링 100% 편입 후 4000억 지원</h3>
+
+<p>SK에코플랜트가 SK에코엔지니어링의 RCPS 42.8%(3620억원) 인수 완료 후 유상증자 500억원 참여로 100% 자회사화. 최근 한달간 총 4000억원 이상 투입.</p>
+
+<p><strong>영향</strong>: AI 데이터센터·반도체 EPC 역량 강화 위한 지배구조 단순화 완료. 양사 간 사업 시너지 및 통합 엔지니어링 역량 확대 기대.</p>
+<p><strong>리스크</strong>: 대규모 자금 투입에 따른 단기 현금흐름 부담. AI 인프라 시장 경쟁 심화 시 투자 회수 불확실성 존재.</p>
+<p><strong>확인 필요</strong>: SK에코엔지니어링의 반도체·데이터센터 프로젝트 구체적 수주 실적 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1ZYjI2TTAwVWkwMF91aHR3UGpCSFBXNUk5bFlidlY4UFhtUlZ2Y1gwOWk2cWQ2dV9kWVZ5NUtvSFktaTM4Y0tvZ0ZWblFCNm9zV2c2QmxLT2FWUUl4ZTVnWXhTdkNkY3dsa0VV0gFvQVVfeXFMUGZLVE9ZejA5bVM2TDJxdHdZMXZrNUNNQzlucWtXSHZqVG5iYzdCMFQ5TnJDbXpUNGVQc3JkSzdxMjF1Ujd5N193LWY4N0xObDhoc1dTSVBCUmpXSmVsWlFGT2dWWjVzVm5MNXB4aTBR?oc=5" target="_blank" rel="noopener">더퍼블릭</a></p>
+
+<h3>2. Applied Materials-SK하이닉스, 50억달러 규모 실리콘밸리 R&amp;D 시설 공동개발</h3>
+
+<p>SK하이닉스가 Applied Materials의 EPIC Center 창립 파트너로 참여. 시설은 2024년 말 개소 예정. 차세대 DRAM 및 HBM 공동개발 계획.</p>
+
+<p><strong>영향</strong>: 한국 반도체 기업의 미국 내 첨단 R&amp;D 거점 확보. HBM 등 AI 메모리 기술 개발 가속화 기대.</p>
+<p><strong>리스크</strong>: 50억달러 규모 투자에 대한 구체적 분담 비율 미확인. 미중 기술 갈등 상황에서 기술 보안 이슈 가능성.</p>
+<p><strong>확인 필요</strong>: EPIC Center 정식 개소 시점 및 SK하이닉스의 구체적 투자 규모 확인 필요.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/applied-materials-and-sk-hynix-to-co-develop-next-generation-dram-and-hbm-at-5bn-silicon-valley-rd-facility/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>3. SK에코플랜트, SK하이닉스 반도체 공사 7조원 수주</h3>
+
+<p>SK에코플랜트가 SK하이닉스로부터 반도체 관련 공사 7조원 수주. 구체적 프로젝트 내용 및 기간은 미확인.</p>
+
+<p><strong>영향</strong>: SK에코플랜트의 수주믹스 전환 가속화. 반도체 EPC 분야 매출 비중 대폭 확대 예상.</p>
+<p><strong>리스크</strong>: 7조원 규모 프로젝트의 구체적 내용, 계약 조건, 공사 기간 등 세부사항 미확인으로 실행 리스크 평가 불가.</p>
+<p><strong>확인 필요</strong>: 프로젝트별 세부 내역 및 착공 시점, 준공 일정 등 구체적 계약 조건 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE16TFV6R0hwZVdnZzNTNkwyUWVSaGZkVHE1NFBaU0JXQzVIS0VfZTRSbGVYTmpYamo2TWZKRUNzYWJtRW9obUdrVW83dWJJMmdWMjg1VTJCejVLWVZiVnh0Z1RWLVNhS0RpRmc?oc=5" target="_blank" rel="noopener">IB토마토</a></p>
+
+<h3>4. 삼성·SK하이닉스, HBM 수요 급증과 헬륨 공급 위기로 생산 압박</h3>
+
+<p>HBM 수요 급증으로 생산 확대 압박 증가. 중동발 헬륨 공급 불안정으로 반도체 생산라인 운영 차질 우려.</p>
+
+<p><strong>영향</strong>: 한국 반도체 기업들의 HBM 생산 능력 확대 제약. 핵심 소재 공급망 리스크로 생산 일정 차질 가능성.</p>
+<p><strong>리스크</strong>: 헬륨 공급 중단 시 반도체 생산라인 가동 중단 위험. HBM 납기 지연으로 고객사 관계 악화 가능성.</p>
+<p><strong>확인 필요</strong>: 헬륨 대체 공급원 확보 현황 및 재고 수준 점검 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxOc09TalBHLUs2QUFNMVQwRk9NNVZ2bXJVNG5YZS1wbjUxMFg2R2lYRmpUeWItTFpZaFFJVm90c2J5X2JzZ0pZRXpnNFpMZnJBb25TVHJ4eHo5TWtkekQxTnpxTGdKYXVHU25VYUZBZFhKekRBdWh6b256OGxwWTFKUFJNX2lkLUU?oc=5" target="_blank" rel="noopener">글로벌이코노믹</a></p>
+
+<h3>5. 한성크린텍, 삼성 평택 P4·P5 폐수처리·초순수 설비 수주</h3>
+
+<p>한성크린텍이 삼성E&amp;A 발주 삼성전자 평택 P4 2단계, P5 1단계 그린동 폐수처리 및 초순수 시스템 설치공사 수주. 계약금액 미공개.</p>
+
+<p><strong>영향</strong>: AI·HBM 투자 확대로 반도체 공정 인프라 수요 증가. 한성크린텍의 반도체 부문 매출 확대 기대.</p>
+<p><strong>리스크</strong>: 계약 규모 미공개로 실적 기여도 평가 제한. 반도체 투자 사이클 변동에 따른 후속 수주 불확실성.</p>
+<p><strong>확인 필요</strong>: P5 프로젝트 관련 추가 초순수 시스템 설치공사 수주 여부 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE83Zlhmel9PczhhbmxlcWFyQ0podklUUDRocXhnbXZqMkxOWkJ3YVBuOTBqZlg0ZzhfcXBDc3dlMmxUSGM2NGxXUGhXcVNPanh2MWNxeS13TE9FamlPd25ucGxLYmU2akFrQWg4ZnF3?oc=5" target="_blank" rel="noopener">mt.co.kr</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>SK에코엔지니어링 100% 편입, AI인프라 재편</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> SK에코플랜트가 자회사 SK에코엔지니어링을 100% 완전 편입하며 AI 인프라 중심 사업구조 재편을 가속화하고 있다. 회사는 반도체 공장과 AI 데이터센터 등 하이테크 인프라 사업 확대를 위해 EPC 및 프로젝트 관리 역량을 강화 중이며, 하이닉스 반도체 공사 수주 규모가 7조원(Claim, IB토마토)에 달한다고 보도됐다. 반도체 업황 회복 기대와 관련 설비 투자 수요 확대가 반영된 전략적 움직임으로 평가된다.</li>
+<li><strong>현금흐름·차입</strong> SK에코플랜트는 최근 한 달 사이 SK에코엔지니어링에 총 4000억원을 투입했다(Claim, 전자공시 기준). 이는 RCPS 565만주 매입에 3620억원, 유상증자 참여에 500억원으로 구성되며, RCPS 조기 상환을 통해 배당 및 이자 부담 등 잠재적 금융비용을 줄이고 재무구조 안정성을 높이겠다는 방침이다.</li>
+<li><strong>IPO/경쟁사</strong> 지배구조 단순화를 통해 양사 간 사업 연계 강화와 통합 엔지니어링 역량 확대를 추진하고 있다. SK에코엔지니어링이 2022년 플랜트 사업부 물적분할 출범 후 약 4년 만에 완전 자회사 체제로 재편되며, AI 인프라 솔루션 사업자로서의 사업 기반을 본격 강화할 것으로 업계는 전망하고 있다.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1ZYjI2TTAwVWkwMF91aHR3UGpCSFBXNUk5bFlidlY4UFhtUlZ2Y1gwOWk2cWQ2dV9kWVZ5NUtvSFktaTM4Y0tvZ0ZWblFCNm9zV2c2QmxLT2FWUUl4ZTVnWXhTdkNkY3dsa0VV0gFvQVVfeXFMUGZLVE9ZejA5bVM2TDJxdHdZMXZrNUNNQzlucWtXSHZqVG5iYzdCMFQ5TnJDbXpUNGVQc3JkSzdxMjF1Ujd5N193LWY4N0xObDhoc1dTSVBCUmpXSmVsWlFGT2dWWjVzVm5MNXB4aTBR?oc=5" target="_blank" rel="noopener">더퍼블릭</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE16TFV6R0hwZVdnZzNTNkwyUWVSaGZkVHE1NFBaU0JXQzVIS0VfZTRSbGVYTmpYamo2TWZKRUNzYWJtRW9obUdrVW83dWJJMmdWMjg1VTJCejVLWVZiVnh0Z1RWLVNhS0RpRmc?oc=5" target="_blank" rel="noopener">IB토마토</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFB6aFAzZERwOGVZQlRLenY5Z2JNZzBYdUp0bWFWYkRJdTVuUnB4RzNOUHRNN0xSbG51bXVPbVNRR0VpTjdlSEs3MXVjcUJET2xpVVpuenlRemJmOUhuYjBwZ3dsMEQ5WWo5YV8wSzZVMNIBb0FVX3lxTFB6aFAzZERwOGVZQlRLenY5Z2JNZzBYdUp0bWFWYkRJdTVuUnB4RzNOUHRNN0xSbG51bXVPbVNRR0VpTjdlSEs3MXVjcUJET2xpVVpuenlRemJmOUhuYjBwZ3dsMEQ5WWo5YV8wSzZVMA?oc=5" target="_blank" rel="noopener">한스경제</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>AI 반도체 투자 열풍이 지속되며 국민성장펀드의 NPU 기업 투자, 삼성전자의 47.5조원 설비투자 등 대규모 투자가 이어지고 있다. 반도체 소부장 ETF 순자산이 1조원을 돌파하며 투자 심리도 크게 개선되었다. HBM과 3D 반도체 패키징 기술이 차세대 AI 반도체의 핵심 경쟁력으로 부상하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNYmR4NEFuTlc2bGFUczhDY3lZd1pGamp3Tm9EOF8xMVlDTGg3aEd0azgwb1ZyOGJQdzhPYmtKODI1bVBlUk9DMXdYUThPbGt4ZUhRUHNPb242N0FGZ25JbHN2T0NGTTZPajhqUlZpVEFoRHFObHQ3Q2ZGcDVfMFZvVg?oc=5" target="_blank" rel="noopener">국민성장펀드, NPU 5개사에 수천억 투자 시동</a></li>
+</ul>
+<p>17일 NPU 기업들과의 간담회를 통해 AI반도체 투자 계획을 본격화했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE80NExfY2w4Y0UxdGZCNUlFcnAxUzJqeUppSm5EMWEzN2EtbF9NcjNYdFFtQ2d2QVJZcHRyaEVKdjZyTW1ySmVKQWpaQ29iR2NCNktsRWdZaDZNTUlOLUo0LTQtSTY?oc=5" target="_blank" rel="noopener">신한자산 반도체 ETF 순자산 1조원 돌파</a></li>
+</ul>
+<p>삼성전자·SK하이닉스 증설에 따른 소부장 수혜 기대로 투자 급증했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE1sNXMySWN5S215cVRnSzAwWmZmN1JlVkQ3b3RXNjdLRjZaSnROUm1scWJfQjg0cjk4VmhEYUlXTVloZkhYaDludThvRGtfWjVmVlRUaG5n?oc=5" target="_blank" rel="noopener">삼성전자, 작년 반도체 설비투자 47.5조원</a></li>
+</ul>
+<p>전년 대비 1.2조원 증가한 역대 최대 규모의 설비투자를 단행했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE1GNThfTTVtYkdISnRPOUdXWU9BcndfN1EwTHVGelBrQTk3RkthcDQ4NUFueXZpUTIwUGVFQ3d4Wk80OU0xcHotVzlicw?oc=5" target="_blank" rel="noopener">삼성전자, R&amp;D 37조7000억 역대 최대 투자</a></li>
+</ul>
+<p>AI 반도체 경쟁력 강화를 위한 연구개발 투자를 대폭 확대했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE9USVpsOVhNcEh6N2ZmSnM5UTRnLXVzTXJwWTA3WktSeU9kQjBIdFFvOThfa2xieE85cVI5QTVNYU0zY0Q1c0l6TDFXMnNRUzIySlpEd25GOUZOYzhQRUw4?oc=5" target="_blank" rel="noopener">KB자산운용, 중국 AI반도체 ETF 신규 출시</a></li>
+</ul>
+<p>중국 AI반도체 핵심 기업에 투자하는 ETF를 새롭게 선보였다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE83R3BoSWxQYjV4c0JiTnVueHN6TjlDZGxxb2JpWmNEV0ZlZkpZb21TTGdKM3BNcURkeU1oaHJUX0ZFZF9iOFRzNFpvaDNHSXFvYnRxVXRWWUhxbXhTazlLSkk3WUZXQ1FDX3Jvejc4YWU0NTg?oc=5" target="_blank" rel="noopener">한미반도체, HBM 3D 적층 핵심 기술 보유</a></li>
+</ul>
+<p>HBM의 생명인 적층 기술에서 핵심적인 경쟁력을 확보했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPTmc5VFgwOE9fakhWNFA4RlBkSElmaUFpWHNJa0Rhenl2SjNuZGJOMmhrWEhoQ2pUZ3VCeW1NTTdQYU9Ta2NiUnM2akFIbzY2dTZjMXEzdEU1clg4bWRJTjRCQjFSRDkyOXM2UW1qeGlFX1VXZlFrWlhaeXI5Q20wUnNn0gGWAUFVX3lxTE4xUld5aTdCMkFpTWpXeUstRkhEamE3TVljS3hIelVxR2U4bHBiVThIM00xelh5RjZmZDI3TmZSTDJOUmx3V2x1VE1obEVQRUU5RDZhQ2RVN01Fems1Qno4V2lvc0xnQ20wZVFjdHEzV2F5akw3RG9ocDdtd3hjZVM5TXlmeGJiSW5DN1hzTWZtZWdqa0p0Zw?oc=5" target="_blank" rel="noopener">AI 반도체 패키징 기술 경쟁 심화</a></li>
+</ul>
+<p>인텔 EMIB, TSMC CoWoS 등 차세대 패키징 기술 대안들이 부상하고 있다</p>
+
+<h3>첨단 패키징</h3>
+<p>SK하이닉스가 Applied Materials의 EPIC 센터 창립 파트너로 참여하며 차세대 DRAM 공동 개발에 나섰고, HBM 공급망에 중동발 헬륨 위기가 추가 압박 요인으로 작용하고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/applied-materials-and-sk-hynix-to-co-develop-next-generation-dram-and-hbm-at-5bn-silicon-valley-rd-facility/" target="_blank" rel="noopener">SK하이닉스, Applied Materials와 차세대 DRAM 공동개발</a></li>
+</ul>
+<p>EPIC 센터의 창립 파트너로 참여해 올해 말 개소 예정이다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxOc09TalBHLUs2QUFNMVQwRk9NNVZ2bXJVNG5YZS1wbjUxMFg2R2lYRmpUeWItTFpZaFFJVm90c2J5X2JzZ0pZRXpnNFpMZnJBb25TVHJ4eHo5TWtkekQxTnpxTGdKYXVHU25VYUZBZFhKekRBdWh6b256OGxwWTFKUFJNX2lkLUU?oc=5" target="_blank" rel="noopener">중동발 헬륨 위기로 HBM 생산라인 압박</a></li>
+</ul>
+<p>HBM 쟁탈전과 헬륨 공급 부족으로 삼성·SK하이닉스가 이중 압박을 받고 있다</p>
+
+<h3>EPC / 수주</h3>
+<p>한성크린텍이 삼성 반도체 프로젝트를 수주하며 AI·HBM 투자 확대 기대감이 높아지고 있고, 배터리 검사장비 분야에서도 관련 기업들의 수주 활동이 활발해지고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE83Zlhmel9PczhhbmxlcWFyQ0podklUUDRocXhnbXZqMkxOWkJ3YVBuOTBqZlg0ZzhfcXBDc3dlMmxUSGM2NGxXUGhXcVNPanh2MWNxeS13TE9FamlPd25ucGxLYmU2akFrQWg4ZnF3?oc=5" target="_blank" rel="noopener">한성크린텍, 삼성 반도체 프로젝트 수주</a></li>
+</ul>
+<p>AI·HBM 투자 확대 기대감으로 주가가 상승했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFB6aFAzZERwOGVZQlRLenY5Z2JNZzBYdUp0bWFWYkRJdTVuUnB4RzNOUHRNN0xSbG51bXVPbVNRR0VpTjdlSEs3MXVjcUJET2xpVVpuenlRemJmOUhuYjBwZ3dsMEQ5WWo5YV8wSzZVMNIBb0FVX3lxTFB6aFAzZERwOGVZQlRLenY5Z2JNZzBYdUp0bWFWYkRJdTVuUnB4RzNOUHRNN0xSbG51bXVPbVNRR0VpTjdlSEs3MXVjcUJET2xpVVpuenlRemJmOUhuYjBwZ3dsMEQ5WWo5YV8wSzZVMA?oc=5" target="_blank" rel="noopener">배터리 검사장비 기업 RED, 대형 프로젝트 연속 수주</a></li>
+</ul>
+<p>KTR·SK에코플랜트·방재시험연구원 등에서 잇따라 수주했다</p>
+
+<h3>DC 전력</h3>
+<p>노르웨이 데이터센터 업체 인수와 미국 그리드 인프라 개선을 위한 로비 그룹 결성 등 데이터센터 전력 인프라 투자가 글로벌하게 확산되고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/3i-infrastructure-acquires-majority-stake-in-norways-lefdal-mine-datacenter/" target="_blank" rel="noopener">3i Infrastructure, 노르웨이 데이터센터 업체 인수</a></li>
+</ul>
+<p>Lefdal Mine Data 지분을 3억 유로에 인수했다</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/google-tesla-carrier-form-new-lobbying-group-focused-on-us-grid-capacity/" target="_blank" rel="noopener">구글·테슬라·캐리어, 미국 그리드 개선 로비그룹 결성</a></li>
+</ul>
+<p>기존 그리드 인프라의 스마트하고 빠른 활용을 위한 정책 지원을 추진한다</p>
+
+<h3>데이터센터 신축</h3>
+<p>건설업계에서 데이터센터 계약을 보유한 대형 건설사들이 백로그 확보에서 유리한 위치를 점하고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/construction-backlog-rebounds-february-2026/814460/" target="_blank" rel="noopener">데이터센터 계약 보유 건설사들의 백로그 반등</a></li>
+</ul>
+<p>대형 건설사와 데이터센터 전문 업체들이 가장 많은 수주잔량을 확보했다</p>
+
+<h3>클린룸 / 공정 인프라</h3>
+<p>멀티다이 설계에서 HBM과 UCIe 인터커넥트의 현장 모니터링, 테스트, 수리 기술이 핵심 이슈로 부상하고 있다.</p>
+
+<ul>
+<li><a href="https://semiengineering.com/enabling-seamless-monitoring-test-and-repair-in-multi-die-designs/" target="_blank" rel="noopener">멀티다이 설계에서 HBM 인터커넥트 현장 수리 기술</a></li>
+</ul>
+<p>HBM과 UCIe 인터커넥트의 현장 모니터링과 수리가 가능해졌다</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>광학 MEMS 마이크로폰과 ARM의 Neoverse 등 차세대 오디오 및 네트워크 장비 기술이 발전하고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/beyond-the-backplate-optical-mems-microphones-unlock-high-fidelity-audio/" target="_blank" rel="noopener">광학 MEMS 마이크로폰, 초소형 스튜디오급 음질 구현</a></li>
+</ul>
+<p>초소형 폼팩터에서 스튜디오 품질의 오디오를 제공한다</p>
+<ul>
+<li><a href="https://www.eetimes.com/arm-positions-neoverse-for-ai-and-telco-networks-at-mwc/" target="_blank" rel="noopener">ARM Neoverse, AI와 통신 네트워크 시장 공략</a></li>
+</ul>
+<p>5G 비용 관리와 6G, AI 데이터 급증에 대비한 맞춤형 실리콘에 집중한다</p>
+
+<h3>자재 / 노무</h3>
+<p>2월 건설 계획이 다시 감소하며 비용 증가와 지정학적 리스크로 인한 건설업체 신뢰도 하락이 지속되고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/monthly-construction-planning-slipped-february/814363/" target="_blank" rel="noopener">2월 건설 계획 재차 감소</a></li>
+</ul>
+<p>비용 증가와 지정학적 리스크로 건설업체들의 단기 신뢰도가 위축됐다</p>
+
+<h3>안전 / 품질 / 컴플라이언스</h3>
+<p>AI, 현실 캡처, 안전 모니터링 등에 특화된 건설 기술 스타트업 6개사가 총 1억 2600만 달러의 투자를 유치했다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/contech-funding-fyld-sensera-xbuild-moab-payra/814452/" target="_blank" rel="noopener">건설기술 스타트업 6개사, 1억 2600만 달러 투자 유치</a></li>
+</ul>
+<p>AI, 현실 캡처, 안전 모니터링, 견적 소프트웨어 분야에 집중 투자됐다</p>
+
+<h3>프로젝트 파이낸싱</h3>
+<p>SK에코플랜트가 SK하이닉스 반도체 공사 수주로 7조원 규모의 대형 프로젝트를 확보하며 일감 지형 변화를 이끌고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE16TFV6R0hwZVdnZzNTNkwyUWVSaGZkVHE1NFBaU0JXQzVIS0VfZTRSbGVYTmpYamo2TWZKRUNzYWJtRW9obUdrVW83dWJJMmdWMjg1VTJCejVLWVZiVnh0Z1RWLVNhS0RpRmc?oc=5" target="_blank" rel="noopener">SK에코플랜트, 하이닉스 반도체 공사 7조원 수주</a></li>
+</ul>
+<p>대규모 반도체 건설 프로젝트로 건설업계 일감 지형이 바뀌고 있다</p>
+
+<h3>M&amp;A / 사업재편</h3>
+<p>SK에코플랜트가 자회사를 100% 편입하고 4000억원을 지원하며 AI 인프라 사업 재편을 가속화하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1ZYjI2TTAwVWkwMF91aHR3UGpCSFBXNUk5bFlidlY4UFhtUlZ2Y1gwOWk2cWQ2dV9kWVZ5NUtvSFktaTM4Y0tvZ0ZWblFCNm9zV2c2QmxLT2FWUUl4ZTVnWXhTdkNkY3dsa0VV0gFvQVVfeXFMUGZLVE9ZejA5bVM2TDJxdHdZMXZrNUNNQzlucWtXSHZqVG5iYzdCMFQ5TnJDbXpUNGVQc3JkSzdxMjF1Ujd5N193LWY4N0xObDhoc1dTSVBCUmpXSmVsWlFGT2dWWjVzVm5MNXB4aTBR?oc=5" target="_blank" rel="noopener">SK에코플랜트, 자회사 편입 후 4000억 지원</a></li>
+</ul>
+<p>AI 인프라 사업 재편을 위해 자회사를 100% 편입하고 대규모 투자를 단행했다</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[SK에코플랜트, SK에코엔지니어링 100% 편입 후 4000억 지원] 대규모 자금 투입에 따른 단기 현금흐름 부담. AI 인프라 시장 경쟁 심화 시 투자 회수 불확실성 존재.</li>
+<li>[Applied Materials-SK하이닉스, 50억달러 규모 실리콘밸리 R&amp;D 시설 공동개발] 50억달러 규모 투자에 대한 구체적 분담 비율 미확인. 미중 기술 갈등 상황에서 기술 보안 이슈 가능성.</li>
+<li>[SK에코플랜트, SK하이닉스 반도체 공사 7조원 수주] 7조원 규모 프로젝트의 구체적 내용, 계약 조건, 공사 기간 등 세부사항 미확인으로 실행 리스크 평가 불가.</li>
+<li>[삼성·SK하이닉스, HBM 수요 급증과 헬륨 공급 위기로 생산 압박] 헬륨 공급 중단 시 반도체 생산라인 가동 중단 위험. HBM 납기 지연으로 고객사 관계 악화 가능성.</li>
+<li>[한성크린텍, 삼성 평택 P4·P5 폐수처리·초순수 설비 수주] 계약 규모 미공개로 실적 기여도 평가 제한. 반도체 투자 사이클 변동에 따른 후속 수주 불확실성.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>SK에코엔지니어링의 반도체·데이터센터 프로젝트 구체적 수주 실적 확인 필요.</li>
+<li>EPIC Center 정식 개소 시점 및 SK하이닉스의 구체적 투자 규모 확인 필요.</li>
+<li>프로젝트별 세부 내역 및 착공 시점, 준공 일정 등 구체적 계약 조건 확인 필요.</li>
+<li>헬륨 대체 공급원 확보 현황 및 재고 수준 점검 필요.</li>
+<li>P5 프로젝트 관련 추가 초순수 시스템 설치공사 수주 여부 확인 필요.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/6건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-03-11T21:34:49.065166+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
