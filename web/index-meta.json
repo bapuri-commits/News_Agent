@@ -169,5 +169,14 @@
     "top_headline": "SK에코플랜트, SK에코엔지니어링 100% 편입 후 4000억 지원",
     "sk_headline": "SK에코엔지니어링 100% 편입, AI인프라 재편",
     "article_count": 39
+  },
+  "2026-03-13": {
+    "date": "2026-03-13",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "SK에코플랜트, 하이닉스 반도체 공사 7조원 수주",
+    "sk_headline": "하이닉스 반도체 공사 7조원 수주로 일감 구조 변화",
+    "article_count": 39
   }
 }

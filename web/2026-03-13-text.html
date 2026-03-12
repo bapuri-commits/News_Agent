@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-03-13 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-03-13.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-03-13</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-03-13</h1>
+
+<blockquote>SK에코플랜트, 하이닉스 반도체 공사 7조원 수주 / Balfour Beatty 미국 데이터센터 시장 확대 전략 / Pure DC, 더블린에 천연가스 마이크로그리드 데이터센터 계획</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. SK에코플랜트, 하이닉스 반도체 공사 7조원 수주</h3>
+
+<p>SK에코플랜트가 SK하이닉스 반도체 공사 7조원 규모 수주. 상세 프로젝트 위치, 공기, 계약조건은 본문에 미기재.</p>
+
+<p><strong>영향</strong>: SK에코플랜트의 사업 포트폴리오가 데이터센터에서 반도체 팹 건설로 다각화. 대규모 수주로 향후 수년간 매출 가시성 확보.</p>
+<p><strong>리스크</strong>: 반도체 팹 건설 경험 부족시 프로젝트 실행 리스크. 원가관리 및 공정 복잡도 증가 가능성.</p>
+<p><strong>확인 필요</strong>: 계약 상세조건(착공시기, 준공예정, 지급조건) 및 SK하이닉스 추가 팹 투자계획 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE16TFV6R0hwZVdnZzNTNkwyUWVSaGZkVHE1NFBaU0JXQzVIS0VfZTRSbGVYTmpYamo2TWZKRUNzYWJtRW9obUdrVW83dWJJMmdWMjg1VTJCejVLWVZiVnh0Z1RWLVNhS0RpRmc?oc=5" target="_blank" rel="noopener">IB토마토</a></p>
+
+<h3>2. Balfour Beatty 미국 데이터센터 시장 확대 전략</h3>
+
+<p>Balfour Beatty 2025년 매출 108억 파운드(약 19조원, YoY +7.5%), 세전이익 3.23억 파운드(YoY +51%). 워싱턴주/오리건에서 버지니아로 진출, 텍사스/조지아/펜실베니아 기회 모색 중.</p>
+
+<p><strong>영향</strong>: 미국 데이터센터 건설시장 경쟁 심화. 20년 이상 shell &amp; core 경험 보유사의 시장 확대로 한국 건설사 진출 기회 제약 가능.</p>
+<p><strong>확인 필요</strong>: Balfour Beatty의 구체적인 수주 프로젝트 발표 및 경쟁입찰 참여 동향 모니터링.</p>
+
+<p>📎 출처: <a href="https://www.constructiondive.com/news/balfour-beatty-record-backlog-us-data-centers/814581/" target="_blank" rel="noopener">Construction Dive</a></p>
+
+<h3>3. Pure DC, 더블린에 천연가스 마이크로그리드 데이터센터 계획</h3>
+
+<p>Pure DC가 아일랜드 더블린 Ballycoolin에 천연가스 기반 마이크로그리드를 갖춘 데이터센터 캠퍼스 계획. AVK社와 협력. 구체적 규모/일정 미확인.</p>
+
+<p><strong>영향</strong>: 아일랜드 그리드 제약 우회를 위한 자체 발전 솔루션 도입. 유럽 데이터센터의 전력 자급 트렌드 확산 신호.</p>
+<p><strong>리스크</strong>: 천연가스 사용에 따른 탄소배출 규제 리스크. 아일랜드 정부의 신규 데이터센터 인허가 제한 가능성.</p>
+<p><strong>확인 필요</strong>: 프로젝트 규모(MW), 환경영향평가 결과, 아일랜드 당국 인허가 진행상황 확인.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/pure-dc-plans-natural-gas-microgrid-at-dublin-data-center-campus-ireland/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>4. 메모리 3사, HBM 생산능력 확대 총력전</h3>
+
+<p>삼성전자 평택캠퍼스 HBM 증설, SK하이닉스 용인/청주/미국 인디애나 투자 15조→21조원 확대, 마이크론 미국 아이다호/뉴욕 1000억달러(148조원) 투자. HBM 공급부족 최소 2027년까지 전망.</p>
+
+<p><strong>영향</strong>: AI 수요 급증으로 HBM이 메모리 업계 핵심 경쟁력으로 부상. 장기공급계약 증가로 spot 시장 축소 및 가격 안정화 예상.</p>
+<p><strong>리스크</strong>: 대규모 설비투자에 따른 재무부담. 첨단 패키징 기술 난이도로 수율 확보 지연 가능성.</p>
+<p><strong>확인 필요</strong>: 각사 HBM 양산 일정 및 주요 고객사(엔비디아 등)와의 장기계약 체결 발표 모니터링.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTFBLd3h0M19jOWVDNDBuQkhpR0JreHRaM3NwWVpVSTVWZEdra3p0TkpJNWg5LXBZWk1ZdlJicEdkZ0NZV05FT0g5QkFIZ1ZLbzc5OThjdjQ0NVdPTjlIWUhCN18yTXJ4aWZieWlTSlpn?oc=5" target="_blank" rel="noopener">mstoday.co.kr</a></p>
+
+<h3>5. LS일렉트릭, DC 배전으로 데이터센터 전력효율 14% 개선</h3>
+
+<p>LS일렉트릭이 인터배터리 2026에서 직류(DC) 배전 운영 플랫폼 공개. AC→DC 변환 최소화로 전력효율 최대 14% 개선. 천안에 &#x27;DC 팩토리&#x27; 실증 중.</p>
+
+<p><strong>영향</strong>: 데이터센터 전력효율 개선 솔루션으로 운영비 절감 기대. 국내 전력기자재 업체의 글로벌 DC 시장 진출 기회.</p>
+<p><strong>리스크</strong>: DC 배전 표준화 미비로 시장 확산 속도 불확실. 기존 AC 인프라 교체 비용 부담.</p>
+<p><strong>확인 필요</strong>: 천안 DC팩토리 실증 결과 및 주요 데이터센터 운영사의 DC 배전 도입 의향 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE40QWRvWjg4eUd4Mjc0Sjh0UTJFLVZOam9nNU9UT2g5amRtTEFfYU5WTWZNZGRsVGMtaDFfSlBqbl80NGtOVWU1N1FuODFEYnVvMXhzaGF4VWVxbkJGRTBvVVJ3Qm9NNDIwUWpMVi1ENnFDd2hSUUllaEhqcGg?oc=5" target="_blank" rel="noopener">빅데이터뉴스</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>하이닉스 반도체 공사 7조원 수주로 일감 구조 변화</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> SK에코플랜트가 하이닉스 반도체 공사에서 7조원 규모의 대형 수주를 확보했다는 주장이 제기됨. 이는 기존 건설·인프라 중심에서 반도체/AI 인프라 비중이 크게 상승하는 수주 믹스 변화를 의미함. 다만 구체적인 수주 내역이나 기준시점에 대한 상세 정보는 제한적임.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE16TFV6R0hwZVdnZzNTNkwyUWVSaGZkVHE1NFBaU0JXQzVIS0VfZTRSbGVYTmpYamo2TWZKRUNzYWJtRW9obUdrVW83dWJJMmdWMjg1VTJCejVLWVZiVnh0Z1RWLVNhS0RpRmc?oc=5" target="_blank" rel="noopener">IB토마토</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>AI와 반도체 슈퍼사이클에 힘입어 국내외 반도체 팹 투자가 활발히 진행되고 있다. 삼성전자, SK하이닉스 등 메모리 3사는 HBM 등 차세대 메모리 생산 확대에 집중하고 있으며, 소부장 기업들도 잇따라 증설에 나서고 있다. 정부와 금융권도 반도체 인프라 투자를 위한 대규모 펀드 조성에 적극 나서고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5adEVPR3ctbXU4NG1KQkJLTmFnRUZRLXJCVkdNVDJVYjVwb3EwNmlyTjhTNVV1VmZjTUV0ckVVVERzRjhXUW5lZ01QUjFDTkhlWGhyZ0RGbHUtbTdVRk1KX2J0YVNCSVU0Nmtfbnc1Yk9GT3c?oc=5" target="_blank" rel="noopener">외국인 투자자들이 고영, 심텍 등 반도체 장비·바이오 기업에 지속적인 관심</a></li>
+</ul>
+<p>고영은 올해 미국으로 의료로봇 본격 출하 예정</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5KXzlRQlhLZFY0VG9pTGZOVU9aQjRPWEhwVEZqN0JPZk1TZFB6cy1DRVhVRmNqVDlib0pJTENxQmRmeTJGakZDSVRRRVNTZU90MUJ3X0dYUW1xVkdtZm5wOFBWT1c?oc=5" target="_blank" rel="noopener">KB국민은행, 국민성장인프라펀드에 5000억 출자</a></li>
+</ul>
+<p>반도체·에너지 인프라 투자 확대가 목적</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE02T2FJaURuS1NDS2JjZGpzNGstQ0Y3WUdUcHhOVmVBbmVfcHFEYnJDYk82MEVQM2U2aXlyOUY5ZkNMVkRnX1dVajJuSXdkME1DTWdjcWl1bmpjUnJCcjlF?oc=5" target="_blank" rel="noopener">와이씨켈, 성주에 164억 투자해 5공장 증설</a></li>
+</ul>
+<p>반도체 소재 생산능력 확대</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQZHowTGtfQ1NGd1MtNkpRc3ZXYW1sU2gzLVFmTnNFaFdWNERJQ0tsZm50LXlhWXdhaXRkeFRNaTJRdUJOMVU3d0hKTGU0TjZrbFBRV0kyLVlmR3pfWGtHYU9nMnV2QlVTTjJqUEVUbDNiR2pHZTZHSk9wcG0tT19fVA?oc=5" target="_blank" rel="noopener">AI가 반도체 산업 지형 변화 주도</a></li>
+</ul>
+<p>내년까지 AI 투자 확대 지속될 전망</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE0yN1ZtVTNmdExrZGtLT21tU1Z6b1R2akI5VWxIeS00RW9mYnFzM0lKbmUtc2xpb0VSNGtFY1NnZ2lZUEdVODZQNXE1RDBfeHljVWZrNDhQR2xEVVZUUEVueHBua0lVcVA3dXVUOWhTX0M?oc=5" target="_blank" rel="noopener">AI 슈퍼사이클로 반도체 호황 지속</a></li>
+</ul>
+<p>최소 올해까지 역대급 반도체 호황 예상</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE8yOWI2MzFDQmxEZ1FqV1BUSzZxM3RTdmtfSVhua0tPYUpQWDFYU2VRdHdQa2tuaVdRZDNsdFAzU3lJZnNzeXJMMFFJNHNSa0Q0R2dDYmtRb014R0NReTVRWVd3NA?oc=5" target="_blank" rel="noopener">DDR5·HBM 메모리 가격 폭등에 따른 증설 현황</a></li>
+</ul>
+<p>삼성전자, SK하이닉스, 마이크론 증설로 공급부족 해결 추진</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFA4djhVXzctYjR2ejQtZzJaU09ndi1zYTd1MWs0RjhBM3VsRlhNOWJvR2l2QnJaMVJ4QlFYbDRfOEN0bDloUWdMSFBObC0zeFl1OEtDNlV1eUltM0NwNXkwV2hYaDZWd3lreXc?oc=5" target="_blank" rel="noopener">리벨리온, 6000억 프리IPO 추진</a></li>
+</ul>
+<p>국민성장펀드 지원으로 AI 반도체 IPO 본격화</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTFBLd3h0M19jOWVDNDBuQkhpR0JreHRaM3NwWVpVSTVWZEdra3p0TkpJNWg5LXBZWk1ZdlJicEdkZ0NZV05FT0g5QkFIZ1ZLbzc5OThjdjQ0NVdPTjlIWUhCN18yTXJ4aWZieWlTSlpn?oc=5" target="_blank" rel="noopener">메모리 3사, HBM 확보전에 총력</a></li>
+</ul>
+<p>차세대 AI 반도체 핵심인 HBM 생산능력 확장</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>반도체 장비 및 공급망 분야에서 맞춤형 메모리 솔루션 개발과 공급망 금융 확대가 진행되고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/beyond-bandwidth-the-industry-is-striving-for-custom-memory-part-2/" target="_blank" rel="noopener">GUC, Marvell, 삼성 등 맞춤형 메모리 솔루션 개발</a></li>
+</ul>
+<p>고성능 애플리케이션용 커스텀 메모리 솔루션 준비</p>
+<ul>
+<li><a href="https://www.eetimes.com/newpower-worldwide-expands-credit-facility-to-500-million/" target="_blank" rel="noopener">NewPower Worldwide, 신용한도 5억 달러로 확대</a></li>
+</ul>
+<p>더 빠르고 대규모 공급 거래 지원 가능</p>
+
+<h3>데이터센터 신축</h3>
+<p>데이터센터 건설 분야에서 AI 전력 수요 증가에 대응한 인프라 구축이 활발하다. 해외에서는 Balfour Beatty가 미국 데이터센터 수주잔고 확대에 주력하고 있으며, 국내에서는 LS그룹이 AI 데이터센터 전력 인프라 통합 솔루션을 선보이고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/balfour-beatty-record-backlog-us-data-centers/814581/" target="_blank" rel="noopener">Balfour Beatty, 미국 데이터센터 수주잔고 기록적 수준</a></li>
+</ul>
+<p>미국 건물 부문과 영국 발전소 사업 확대 추진</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/pure-dc-plans-natural-gas-microgrid-at-dublin-data-center-campus-ireland/" target="_blank" rel="noopener">Pure DC, 더블린 데이터센터에 천연가스 마이크로그리드 계획</a></li>
+</ul>
+<p>아일랜드 Ballycoolin에서 AVK와 협력</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE40QWRvWjg4eUd4Mjc0Sjh0UTJFLVZOam9nNU9UT2g5amRtTEFfYU5WTWZNZGRsVGMtaDFfSlBqbl80NGtOVWU1N1FuODFEYnVvMXhzaGF4VWVxbkJGRTBvVVJ3Qm9NNDIwUWpMVi1ENnFDd2hSUUllaEhqcGg?oc=5" target="_blank" rel="noopener">LS일렉트릭, AI 시대 DC 전력 인프라 솔루션 강화</a></li>
+</ul>
+<p>AI 데이터센터 전력 문제 해결책 제시</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMitwJBVV95cUxNN2RfeGVqaUdUSGF1c0lXOTBXTmVJNFNRSm5reHJ2UEVCTkZLWHhHT3otTWY5aWtaVFQtN1dGazRnSGYwQkJ2VThiZmZxUDdMYnQ2bzJObC1BWHA5V3RkMFcyY0Y0WEdUZUlPbHpfazd1OWc3c1hPeTRudVJTczdVdFZPTnptR3ZnNnNTdDItNFFTZmhvOHhkdC1TRWdkU0ZfSG1vRE91UkU5aVdaYktWdENtRTdjeWppckNPWW0yaE1wTTJ5UWZPUFpyN2x1UW5OeTdmLTdfNUVPdG9sRGRtV0lNNUxHWG5pdkp0bDhjVEJvcS1RV2tzMThLRXhXaUl0SkZIOEEwU3l1eXRmOTNoWDVoMXlpYXBCTXhlLXFUeTdmdE5sUDRoNU92WElFZFJkZThxQlhfTQ?oc=5" target="_blank" rel="noopener">LS그룹, AI 데이터센터 전력 인프라 통합 솔루션 공개</a></li>
+</ul>
+<p>인터배터리 2026에서 솔루션 전시</p>
+
+<h3>DC 전력</h3>
+<p>데이터센터 전력 분야에서 AI 혁명과 디지털 인프라 투자에 대한 관심이 높아지고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/analysis/shark-tanks-kevin-oleary-on-bitzero-data-centers-and-the-ai-revolution/" target="_blank" rel="noopener">Kevin O&#x27;Leary, Bitzero와 AI 혁명 관련 디지털 인프라 투자 논의</a></li>
+</ul>
+<p>데이터센터와 AI 혁명에 대한 투자 관점 제시</p>
+
+<h3>자재 / 노무</h3>
+<p>건설 자재 및 인력 분야에서는 대규모 리노베이션 프로젝트가 완료되었다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/hyatt-regency-renovation-construction/814543/" target="_blank" rel="noopener">Hyatt Regency Hill Country Resort, 1억 달러 리노베이션 완료</a></li>
+</ul>
+<p>텍사스 리조트에 2.2에이커 인공 라군과 워터프론트 이벤트 공간 추가</p>
+
+<h3>AI / 반도체 트렌드</h3>
+<p>AI 트렌드 분야에서는 에릭슨이 6G 네트워크의 AI 네이티브 기술 개발 일정을 발표했다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/at-mwc-ericsson-details-ai-native-6g-timeline/" target="_blank" rel="noopener">에릭슨, MWC에서 AI 네이티브 6G 타임라인 공개</a></li>
+</ul>
+<p>2029년까지 6G 상용화 목표로 AI 네이티브 네트워크 개발</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트가 SK하이닉스 반도체 공사를 통해 대규모 수주를 확보하며 사업 구조를 전환하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE16TFV6R0hwZVdnZzNTNkwyUWVSaGZkVHE1NFBaU0JXQzVIS0VfZTRSbGVYTmpYamo2TWZKRUNzYWJtRW9obUdrVW83dWJJMmdWMjg1VTJCejVLWVZiVnh0Z1RWLVNhS0RpRmc?oc=5" target="_blank" rel="noopener">SK에코플랜트, SK하이닉스 반도체 공사 7조원 수주</a></li>
+</ul>
+<p>일감 지형 변화로 반도체 건설 분야 집중</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[SK에코플랜트, 하이닉스 반도체 공사 7조원 수주] 반도체 팹 건설 경험 부족시 프로젝트 실행 리스크. 원가관리 및 공정 복잡도 증가 가능성.</li>
+<li>[Pure DC, 더블린에 천연가스 마이크로그리드 데이터센터 계획] 천연가스 사용에 따른 탄소배출 규제 리스크. 아일랜드 정부의 신규 데이터센터 인허가 제한 가능성.</li>
+<li>[메모리 3사, HBM 생산능력 확대 총력전] 대규모 설비투자에 따른 재무부담. 첨단 패키징 기술 난이도로 수율 확보 지연 가능성.</li>
+<li>[LS일렉트릭, DC 배전으로 데이터센터 전력효율 14% 개선] DC 배전 표준화 미비로 시장 확산 속도 불확실. 기존 AC 인프라 교체 비용 부담.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>계약 상세조건(착공시기, 준공예정, 지급조건) 및 SK하이닉스 추가 팹 투자계획 확인 필요.</li>
+<li>Balfour Beatty의 구체적인 수주 프로젝트 발표 및 경쟁입찰 참여 동향 모니터링.</li>
+<li>프로젝트 규모(MW), 환경영향평가 결과, 아일랜드 당국 인허가 진행상황 확인.</li>
+<li>각사 HBM 양산 일정 및 주요 고객사(엔비디아 등)와의 장기계약 체결 발표 모니터링.</li>
+<li>천안 DC팩토리 실증 결과 및 주요 데이터센터 운영사의 DC 배전 도입 의향 확인.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 3/5건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-03-12T21:33:45.681128+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
