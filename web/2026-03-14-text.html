@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-03-14 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-03-14.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-03-14</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-03-14</h1>
+
+<blockquote>Balfour Beatty, 美 데이터센터 확대 목표로 사상 최대 백로그 달성 / 메모리 3사, HBM 물량 확보전 본격화...2년 장기계약 확대 / SK이터닉스, KKR 3,479억 인수 확정으로 상한가...목표가 4.3만원</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. Balfour Beatty, 美 데이터센터 확대 목표로 사상 최대 백로그 달성</h3>
+
+<p>Balfour Beatty 2025년 매출 108억파운드(145억달러, 7.5% YoY↑), 세전이익 3.23억파운드(51% YoY↑). 미국 버지니아 데이터센터 신규 수주, 텍사스/조지아/펜실베니아 진출 계획. 워싱턴주/오레곤 기반 20년 이상 데이터센터 건설 경험 보유.</p>
+
+<p><strong>영향</strong>: 미국 데이터센터 건설시장 주도권 확보 기회. 높은 수익성의 미국 Buildings 포트폴리오가 전체 실적 견인.</p>
+<p><strong>리스크</strong>: 기사 내 &#x27;구조적 문제(old problems)&#x27; 언급되었으나 구체적 내용 미확인. 과거 프로젝트 손실 이슈 재발 가능성.</p>
+<p><strong>확인 필요</strong>: 미국 신규 진출 지역(텍사스/조지아/펜실베니아) 구체적 프로젝트 수주 확정 여부 확인 필요.</p>
+
+<p>📎 출처: <a href="https://www.constructiondive.com/news/balfour-beatty-record-backlog-us-data-centers/814581/" target="_blank" rel="noopener">Construction Dive</a></p>
+
+<h3>2. 메모리 3사, HBM 물량 확보전 본격화...2년 장기계약 확대</h3>
+
+<p>삼성전자(평택), SK하이닉스(용인 21조원 투자), 마이크론(미국 1000억달러) HBM 생산설비 대규모 투자. HBM 공급계약 구조 변화: 1년→2년 이상 장기계약, 사후정산 방식 도입. AI GPU당 대량 HBM 탑재 필수로 수요 급증.</p>
+
+<p><strong>영향</strong>: 기술경쟁에서 물량경쟁으로 패러다임 전환. HBM 공급부족 최소 2027년까지 지속 전망으로 메모리사 협상력 강화.</p>
+<p><strong>리스크</strong>: 첨단 패키징 기술과 높은 수율 요구로 단기 증설 제약. 기존공장 유휴공간 부족으로 신규부지 확보 필요.</p>
+<p><strong>확인 필요</strong>: 각사 HBM 월별 생산능력(캐파) 증설 규모 및 장기계약 체결 현황 모니터링.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTFBLd3h0M19jOWVDNDBuQkhpR0JreHRaM3NwWVpVSTVWZEdra3p0TkpJNWg5LXBZWk1ZdlJicEdkZ0NZV05FT0g5QkFIZ1ZLbzc5OThjdjQ0NVdPTjlIWUhCN18yTXJ4aWZieWlTSlpn?oc=5" target="_blank" rel="noopener">mstoday.co.kr</a></p>
+
+<h3>3. SK이터닉스, KKR 3,479억 인수 확정으로 상한가...목표가 4.3만원</h3>
+
+<p>SK디스커버리(30.98%)·한앤컴퍼니(12.52%) 보유지분 KKR에 3,479억원 매각 본계약. 주가 37,350원 상한가(+29.91%), 거래량 1,184만주. 신안우이 해상풍력 390MW 착공, 미국 텍사스 100MW ESS 상업운전 개시.</p>
+
+<p><strong>영향</strong>: KKR 4,400억달러 기후펀드 활용한 글로벌 확장 기대. 자산개발에서 O&amp;M·PPA 고마진 사업모델 전환으로 수익성 개선.</p>
+<p><strong>리스크</strong>: 대형 프로젝트 집행 지연 시 실적 변동성. 해상풍력 인허가 및 계통연계 불확실성 상존.</p>
+<p><strong>확인 필요</strong>: SK그룹 내 신재생 자산 통합 JV 구체화 및 미국 ESS 2차 입찰 결과 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBBWFphOHY3X1U1eldXNHNOUHZJaEpVWW1nOFIxeVd6V0U2MmlFOWxTSktyc1ZzYjdMdjNUN0ZRUHVoN1VYdTNVZDNpamVtU080MmtJYUtuMUZRbEFHb29hUHVUMGVRLXVqNDdRRHh5OVNVUdIBdkFVX3lxTE53OUUyWDdPNDBXMHFDYVNQTG4yZkpNVjdEdDVVTDlCRFlCQmFkMzYzRVBXQk9BZDl3eWtHOHV6Q25LWG8zUWowNHpNYmpMTTE5N2hLZTdieWZ6dTNxczIxTWRSWHQxUHgzemJjYUp3bWdZWDhpRHc?oc=5" target="_blank" rel="noopener">데일리머니</a></p>
+
+<h3>4. 韓 반도체 디자인하우스, 주문형 반도체 시장 확대로 해외수주 증가</h3>
+
+<p>주문형 반도체(ASIC) 시장 수요 급증. 국내 디자인하우스 해외 수주 기반 확대 중. 구체적 기업명 및 수주 규모는 미확인.</p>
+
+<p><strong>영향</strong>: AI·데이터센터용 맞춤형 반도체 수요 증가로 디자인하우스 성장 기회 확대.</p>
+<p><strong>확인 필요</strong>: 주요 디자인하우스별 해외 수주 규모 및 고객사 구체화 동향 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxNcXBQZk1UQzFfUVU0YmJEYW1VUU5nT09LU0pHVXQwYWMzYWpfQUNmejFITWNlVGo5RHdyR2toODBFNXRmVjRjUW5ta09aVk1WSURlSWxIOG5pTFh1b3ZISjNWUW1nRC1FQXFNazBlbUNJTk9Ib0tFV0RSVldid3hzX2ln0gGWAUFVX3lxTFBkYXEybkJETUxrMzlsTWV3LURaSkNqeGhmZ2oyV1d0U0M1ckNFWTdnT0hEbXZyME5kR3FCMHdWSENEQ1hMVkQwR3A0UG5YeWpZdll6clQ0X1IyRVhTU3htblNlUnFhZThfZ0twOUswWUl1SUg3Y1UzSnpTSEpLbmg4OEdBaEREMHV0c1B1Y19IeUJUdmpxQQ?oc=5" target="_blank" rel="noopener">Chosunbiz</a></p>
+
+<h3>5. 삼성물산, 평택 P4 1조3792억 증액...연간 수주목표 23.3조원</h3>
+
+<p>삼성전자 평택 P4 Ph2 FAB동 계약금액 100억→1조3792억원 증액. 삼성물산 2026년 수주목표 23.3조원(전년比 18.9%↑). 평택 P5 공사 2026년 초 재개, 2022년 수주액 5439억원.</p>
+
+<p><strong>영향</strong>: 삼성그룹 450조원 투자계획으로 반도체 FAB 수주 지속 확대 전망. 대형 프로젝트 준공 후 실적 반등 기대.</p>
+<p><strong>리스크</strong>: FAB 공사 특성상 공정별 계약금액 변동 가능. 메모리 업황 변동 시 투자 조정 리스크.</p>
+<p><strong>확인 필요</strong>: 삼성전자 평택 P5 외 추가 FAB 발주 계획 및 계약금액 증액 추이 모니터링.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiRkFVX3lxTE00em9EZ2l3SDFJQURwckprMi1zUTk3Ym43NzlIMHpiZHIxTjBmRC1LMnB6dTlJeVdZSlFtZjRQTW5uUUdkY2c?oc=5" target="_blank" rel="noopener">v.daum.net</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 업계가 AI 수요 증가로 역대급 슈퍼사이클을 맞으며 대규모 투자가 지속되고 있다. 한은은 2027년까지 반도체 투자가 이어질 것으로 전망했으며, 정부도 대미투자특별법 통과와 소부장 국산화 등으로 산업 경쟁력 강화에 나섰다. ETF 상품 확대와 채권투자 활성화 등 투자 상품도 다양화되고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE43MWRZaUltMkFVajBaR0k5cVliMTJSZDJqU2ZqRE5yenpqM3pTN3B5QmdPbkJPUUdxaWlJWS1nMWxoZ1h5QUpUN1I5RUVfLXFnYk5HLTh5NUR1a25ENTJQOFN3dzNZLXBwWndSMFBONWNhQQ?oc=5" target="_blank" rel="noopener">아이티엠반도체 투자주의종목 지정</a></li>
+</ul>
+<p>단일계좌 매매관여 과다로 투자주의종목으로 지정됨</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE8yRkt0TnJPZF8za21MVTlRTmt3VmxDODlxb2JabzVVQTRINHNkYm1ZWVBGZm9NcmxqTDM1SlRyWjdrVzJyQ3dTOXlGdXdOSk5nRU5RMVFCXzJIRHd2MWpQSm9yM19PUEg2VktYNG4yZVl4dw?oc=5" target="_blank" rel="noopener">제주반도체 620억 BW 발행</a></li>
+</ul>
+<p>원자재 확보 및 R&amp;D 투자 강화를 위해 전환사채 발행</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE8yckJTaGxfWVM4ZnNCcEdwRVdRcUg0OWtIbmJiV2YtRFRvY00tRmlEX194OEZOTTYtSHRtX01pWEdIbUw2UnktVExKOVk0U28zX0Y3ekFENGJpRVN6eDhqdGc0bWU4YkR1R2M4Rg?oc=5" target="_blank" rel="noopener">AI반도체 ETF 5종 신규 상장</a></li>
+</ul>
+<p>한화·미래·신한·삼성운용이 AI반도체·우주항공 투자 ETF 출시</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE9IZGFHRXV3U2szcnZhWktkY2VsQ1Iza25RREo1U2MwOGktdG9NelZ2bHRiWHdGS3p0UktLekVEM3pOYy0zb08zN0tQR3FhQWlkN1huS2F3Q0M5LXpWd0FlTTlFem0tLU9KT1VTc2V2UzFzTHVp?oc=5" target="_blank" rel="noopener">반도체 기업 채권투자 급증</a></li>
+</ul>
+<p>엔비디아 58조원, TSMC 7조원 규모 채권투자 활발</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiRkFVX3lxTE9QOC1OYUk2cEhYbmpyQ3NRTHE0Z1Fod2RaWEN1VWhEdll0aUVnV3VIbzVYRlBqTGhRWDUxMF9mUnlFMWVUU3c?oc=5" target="_blank" rel="noopener">와이씨켐 반도체 소재공장 증설</a></li>
+</ul>
+<p>성주군과 투자협약 체결로 5공장 증설 추진</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE51dWNJTldBaXNLcEN2OVJKQ3JCNFdOcUNYT3lPcWdYUW1nYk1ZYkxEbkJ6MV9mLV90T3FnUGY5b1pJTUhoNVBCTVlONFBSamN2QUFDWlZ0ME84R0NPaTNhdA?oc=5" target="_blank" rel="noopener">대미투자특별법 국회 통과</a></li>
+</ul>
+<p>조선·반도체·자동차 업계 투자 인센티브 확대</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTFB6Ty1NRmdCWURxa29mVXJzSHlxUWZLN0dWUUFJTEVOQW9NWWt6eDR1Y2hTRW1RV1lFaU9NLXgxaU9MUTRCQmluOC1McEY?oc=5" target="_blank" rel="noopener">한은 2027년까지 반도체 투자 전망</a></li>
+</ul>
+<p>2000년대 후 가장 강한 반도체 투자 사이클 예상</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE0yN1ZtVTNmdExrZGtLT21tU1Z6b1R2akI5VWxIeS00RW9mYnFzM0lKbmUtc2xpb0VSNGtFY1NnZ2lZUEdVODZQNXE1RDBfeHljVWZrNDhQR2xEVVZUUEVueHBua0lVcVA3dXVUOWhTX0M?oc=5" target="_blank" rel="noopener">AI 반도체 슈퍼사이클 지속</a></li>
+</ul>
+<p>최소 올해까지 역대급 반도체 호황 지속 전망</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>반도체 검사장비 공급 계약이 체결되고 있으며, 2026년 임베디드 월드와 MWC에서는 AI와 로봇틱스, 6G 기술 동향이 주목받았다. 대만이 차세대 AI 시스템을 위한 반도체 기술 로드맵으로 업계 주도권을 유지하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5CQ3pWblk4WGRHZi0wRGFHeUpKWVlESUZPckFsanYxdW9rMkY2bWtPdlgxZkVFOHhyQy1hT3JaWlE3NjI3empLSlI0OFoyUkh5Yk4xVThMeERrb3RjOEVJam1wSVRrdWZJVENUN2lNYUY2SDQ?oc=5" target="_blank" rel="noopener">미래산업 반도체 검사장비 수주</a></li>
+</ul>
+<p>16억원 규모 반도체 검사장비 공급계약 체결</p>
+<ul>
+<li><a href="https://www.eetimes.com/embedded-world-2026-wrap-key-highlights/" target="_blank" rel="noopener">2026 임베디드 월드 AI 트렌드</a></li>
+</ul>
+<p>물리적 AI와 로봇틱스 분야 주요 동향 발표</p>
+<ul>
+<li><a href="https://www.eetimes.com/mwc-2026-concludes-as-telcos-pivot-to-ai/" target="_blank" rel="noopener">MWC 2026 통신업체 AI 전환</a></li>
+</ul>
+<p>6G와 통신경제학에서 GPU vs CPU 경쟁 심화</p>
+<ul>
+<li><a href="https://www.eetimes.com/the-silicon-hegemon/" target="_blank" rel="noopener">대만 반도체 패권 지속</a></li>
+</ul>
+<p>차세대 AI 시스템을 위한 기술 로드맵으로 업계 주도</p>
+
+<h3>첨단 패키징</h3>
+<p>AI 반도체 핵심 부품인 HBM 메모리 수요가 급증하면서 삼성전자, SK하이닉스, 마이크론 등 메모리 3사가 캐파 확장에 총력을 기울이고 있다. 메타의 AI 반도체가 엔비디아보다 많은 HBM을 사용한다고 발표하며 국내 메모리 업체들에 특수를 예고하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTFBLd3h0M19jOWVDNDBuQkhpR0JreHRaM3NwWVpVSTVWZEdra3p0TkpJNWg5LXBZWk1ZdlJicEdkZ0NZV05FT0g5QkFIZ1ZLbzc5OThjdjQ0NVdPTjlIWUhCN18yTXJ4aWZieWlTSlpn?oc=5" target="_blank" rel="noopener">메모리 3사 HBM 캐파 확장 경쟁</a></li>
+</ul>
+<p>차세대 AI 반도체용 HBM 확보를 위한 증설 총력전</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE8yOWI2MzFDQmxEZ1FqV1BUSzZxM3RTdmtfSVhua0tPYUpQWDFYU2VRdHdQa2tuaVdRZDNsdFAzU3lJZnNzeXJMMFFJNHNSa0Q0R2dDYmtRb014R0NReTVRWVd3NA?oc=5" target="_blank" rel="noopener">DDR5·HBM 가격 급등 해결책 모색</a></li>
+</ul>
+<p>메모리 가격 폭등 해결을 위한 반도체 증설 현황 분석</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFB4OWhTTWM1dWt3RHl0MXdLSlhxODdBOGVOS0EyQUF1YWtTNWlnME4xN0VPSDA1VHFtajh6SG5aTGJWUDRWcTRxdTA1UjJRUi1zV0VUdEFMUm11T1U2TFpsRzl6eFlpOGg1dnp4RGVVb2xSWjg?oc=5" target="_blank" rel="noopener">메타 AI칩 HBM 대량 사용 계획</a></li>
+</ul>
+<p>엔비디아보다 많은 HBM 사용으로 삼성·하이닉스 수혜 예상</p>
+
+<h3>데이터센터 신축</h3>
+<p>데이터센터 건설 시장이 AI 수요 증가로 활성화되면서 전력 인프라 안전관리와 관련 기업들의 성장이 주목받고 있다. 미국에서는 대규모 데이터센터 프로젝트들이 계획되고 있으며, 국내에서는 전력 인프라 안전관리 체계 구축에 집중하고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/behind-the-meter-data-center-proposed-outside-richmond-virginia/" target="_blank" rel="noopener">버지니아 데이터센터 캠퍼스 계획</a></li>
+</ul>
+<p>LS Power가 리치몬드 외곽에 4개 건물 캠퍼스 제안</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/synopsys-launches-ai-powered-eda-solutions-including-first-integrated-ansys-tools-since-acquisition/" target="_blank" rel="noopener">Synopsys AI 기반 EDA 솔루션 출시</a></li>
+</ul>
+<p>연례 컨버지 컨퍼런스에서 통합 AI 설계 도구 발표</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9QNUcyQVdySW5PbFl1N0EzcF9IX2p6Z2R0UGdIZ0tpUVdCTS1fVDk3X3VySW56RU1wTWNic1prbEpmdWhnU29DaElJTUI0YTVYbDhXaDc1QkR4T1BPRDBPNU5TNWZJYVRnQlNub2VKWU4zLW_SAXdBVV95cUxPaXVVazBGY2hMVjNidlJCNG9qSlhRczZRRnBhYjByeDVNLUpJak9XOUpNTU9OaHJFUFEyempUZWIxeUozdENXTHNnTnpBV093ZEhhOE5OTXk1OWw3V0JkTTEtRlg5MlZhR3ViT0htRWlySkJ4b1FlRQ?oc=5" target="_blank" rel="noopener">전기안전공사 데이터센터 안전관리 세미나</a></li>
+</ul>
+<p>데이터센터 전력 인프라 안전관리 체계 구축 논의</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBIY2dfQW1FNEdkUXRSX1NXVmJtc1VNclF0R255RmQya2V2UFpkaTRicktVekNKSENYNGtMZjR5eVJ2dXRxcTlYNEJQOXhMWmFHMHo3dHFSaUlXU05DaE1nUGZXMFcyRXRKOWfSAW5BVV95cUxNNnZxUHdPQzlmSUJFQmhtbVpKNkUxaEFQYnEtSTJXNml2aHpFa040UkdmTXVVMGFpU3lWR1UyYzJtZXhONXlIdHRuR0dsVHU4c2p1VERkckdJM0JPVDdxRWZHVTVnb0VQcFZUSkpQdw?oc=5" target="_blank" rel="noopener">LS 전력 인프라 사업 성장</a></li>
+</ul>
+<p>AI 데이터센터 전력 수요 확대로 사업 기회 증가</p>
+
+<h3>DC 전력</h3>
+<p>데이터센터 전력 분야에서 대규모 투자와 인수합병이 활발하게 진행되고 있다. SK이터닉스가 KKR로부터 3,479억원 규모 투자를 유치하며 ESS 사업 확장에 나서고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/eutelsat-announces-completion-of-its-re-financing-plan-closing-15bn-bond-offering/" target="_blank" rel="noopener">Eutelsat 15억 유로 채권 발행 완료</a></li>
+</ul>
+<p>LEO 성장 지원을 위한 재융자 계획 완료</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBBWFphOHY3X1U1eldXNHNOUHZJaEpVWW1nOFIxeVd6V0U2MmlFOWxTSktyc1ZzYjdMdjNUN0ZRUHVoN1VYdTNVZDNpamVtU080MmtJYUtuMUZRbEFHb29hUHVUMGVRLXVqNDdRRHh5OVNVUdIBdkFVX3lxTE53OUUyWDdPNDBXMHFDYVNQTG4yZkpNVjdEdDVVTDlCRFlCQmFkMzYzRVBXQk9BZDl3eWtHOHV6Q25LWG8zUWowNHpNYmpMTTE5N2hLZTdieWZ6dTNxczIxTWRSWHQxUHgzemJjYUp3bWdZWDhpRHc?oc=5" target="_blank" rel="noopener">SK이터닉스 KKR 투자 유치</a></li>
+</ul>
+<p>3,479억원 투자로 AI 데이터센터 전력 사업 확장</p>
+
+<h3>EPC / 수주</h3>
+<p>주문형 반도체 시장 수요 급증으로 한국 디자인하우스들이 해외 수주 기반 확대에 나서고 있으며, 삼성물산도 반도체 관련 수주를 통한 실적 회복을 추진하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxNcXBQZk1UQzFfUVU0YmJEYW1VUU5nT09LU0pHVXQwYWMzYWpfQUNmejFITWNlVGo5RHdyR2toODBFNXRmVjRjUW5ta09aVk1WSURlSWxIOG5pTFh1b3ZISjNWUW1nRC1FQXFNazBlbUNJTk9Ib0tFV0RSVldid3hzX2ln0gGWAUFVX3lxTFBkYXEybkJETUxrMzlsTWV3LURaSkNqeGhmZ2oyV1d0U0M1ckNFWTdnT0hEbXZyME5kR3FCMHdWSENEQ1hMVkQwR3A0UG5YeWpZdll6clQ0X1IyRVhTU3htblNlUnFhZThfZ0twOUswWUl1SUg3Y1UzSnpTSEpLbmg4OEdBaEREMHV0c1B1Y19IeUJUdmpxQQ?oc=5" target="_blank" rel="noopener">한국 디자인하우스 해외 진출 확대</a></li>
+</ul>
+<p>주문형 반도체 시장 급성장으로 해외 수주 기반 강화</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiRkFVX3lxTE00em9EZ2l3SDFJQURwckprMi1zUTk3Ym43NzlIMHpiZHIxTjBmRC1LMnB6dTlJeVdZSlFtZjRQTW5uUUdkY2c?oc=5" target="_blank" rel="noopener">삼성물산 반도체 수주 기대</a></li>
+</ul>
+<p>반도체 관련 수주를 통한 실적 회복 승부수</p>
+
+<h3>자재 / 노무</h3>
+<p>미국 상원이 단독주택 임대업체 강제 매각 조항을 포함한 주택법안을 통과시켜 다가구 임대 업계가 우려를 표하고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/senate-passes-housing-bill-sfr-forced-sale-provision/814668/" target="_blank" rel="noopener">미국 상원 주택법안 통과</a></li>
+</ul>
+<p>단독주택 임대업체 강제 매각 조항 포함으로 업계 반발</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[Balfour Beatty, 美 데이터센터 확대 목표로 사상 최대 백로그 달성] 기사 내 &#x27;구조적 문제(old problems)&#x27; 언급되었으나 구체적 내용 미확인. 과거 프로젝트 손실 이슈 재발 가능성.</li>
+<li>[메모리 3사, HBM 물량 확보전 본격화...2년 장기계약 확대] 첨단 패키징 기술과 높은 수율 요구로 단기 증설 제약. 기존공장 유휴공간 부족으로 신규부지 확보 필요.</li>
+<li>[SK이터닉스, KKR 3,479억 인수 확정으로 상한가...목표가 4.3만원] 대형 프로젝트 집행 지연 시 실적 변동성. 해상풍력 인허가 및 계통연계 불확실성 상존.</li>
+<li>[삼성물산, 평택 P4 1조3792억 증액...연간 수주목표 23.3조원] FAB 공사 특성상 공정별 계약금액 변동 가능. 메모리 업황 변동 시 투자 조정 리스크.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>미국 신규 진출 지역(텍사스/조지아/펜실베니아) 구체적 프로젝트 수주 확정 여부 확인 필요.</li>
+<li>각사 HBM 월별 생산능력(캐파) 증설 규모 및 장기계약 체결 현황 모니터링.</li>
+<li>SK그룹 내 신재생 자산 통합 JV 구체화 및 미국 ESS 2차 입찰 결과 확인.</li>
+<li>주요 디자인하우스별 해외 수주 규모 및 고객사 구체화 동향 확인.</li>
+<li>삼성전자 평택 P5 외 추가 FAB 발주 계획 및 계약금액 증액 추이 모니터링.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/5건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-03-13T21:39:55.867819+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>

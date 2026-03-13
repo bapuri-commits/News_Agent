@@ -178,5 +178,14 @@
     "top_headline": "SK에코플랜트, 하이닉스 반도체 공사 7조원 수주",
     "sk_headline": "하이닉스 반도체 공사 7조원 수주로 일감 구조 변화",
     "article_count": 39
+  },
+  "2026-03-14": {
+    "date": "2026-03-14",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "Balfour Beatty, 美 데이터센터 확대 목표로 사상 최대 백로그 달성",
+    "sk_headline": "",
+    "article_count": 39
   }
 }
