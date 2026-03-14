@@ -187,5 +187,14 @@
     "top_headline": "Balfour Beatty, 美 데이터센터 확대 목표로 사상 최대 백로그 달성",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-03-15": {
+    "date": "2026-03-15",
+    "theme_label": "Data Pulse",
+    "theme_accent": "#38bdf8",
+    "theme_gradient": "linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%)",
+    "top_headline": "IBM-램리서치 Sub-1nm 공정 개발 5년 협약 체결",
+    "sk_headline": "",
+    "article_count": 39
   }
 }
