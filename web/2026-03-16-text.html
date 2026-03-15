@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-03-16 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-03-16.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-03-16</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-03-16</h1>
+
+<blockquote>이란 전쟁으로 Meta 2Africa 해저케이블 공사 지연 / Clayco, 전력/에너지 사업부 신설로 2027년 $3억 매출 목표 / 파두, 국내 반도체 기업에 101억원 SSD 컨트롤러 공급 계약</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. 이란 전쟁으로 Meta 2Africa 해저케이블 공사 지연</h3>
+
+<p>Meta의 2Africa 해저케이블 프로젝트가 이란 전쟁으로 인해 지연됨. 이전에도 후티 반군 공격으로 홍해에서 지연 발생.</p>
+
+<p><strong>영향</strong>: Meta의 아프리카 데이터 인프라 구축 일정에 차질 예상. 글로벌 해저케이블 프로젝트의 지정학적 리스크 부각.</p>
+<p><strong>리스크</strong>: 중동 지역 불안정으로 추가 공사 지연 가능성. 프로젝트 비용 상승 우려.</p>
+<p><strong>확인 필요</strong>: Meta의 공식 프로젝트 일정 재조정 발표 및 대체 경로 검토 여부 확인 필요.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/iran-war-delays-work-on-metas-2africa-subsea-cable/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>2. Clayco, 전력/에너지 사업부 신설로 2027년 $3억 매출 목표</h3>
+
+<p>시카고 본사 건설사 Clayco가 Power and Energy 사업부를 신설. 2027년까지 3억 달러 매출 목표. 현재 일리노이주 태양광+배터리 저장 프로젝트 설계 진행 중, 올해 착공 예정. Clayco는 미국 5대 데이터센터 건설사로 57개 프로젝트 진행 중.</p>
+
+<p><strong>영향</strong>: 데이터센터 건설사의 전력 인프라 직접 시공 능력 확보로 통합 솔루션 제공. 2030년까지 미국 전력 수요 15-20% 증가 예상에 대응.</p>
+<p><strong>리스크</strong>: 신규 사업 진입에 따른 초기 투자 비용 및 기술 역량 확보 과제. 전력 인프라 사업의 인허가 복잡성.</p>
+<p><strong>확인 필요</strong>: 일리노이주 태양광 프로젝트 착공 일정 및 규모 구체화 확인 필요.</p>
+
+<p>📎 출처: <a href="https://www.constructiondive.com/news/clayco-ceo-new-power-energy-unit/814594/" target="_blank" rel="noopener">Construction Dive</a></p>
+
+<h3>3. 파두, 국내 반도체 기업에 101억원 SSD 컨트롤러 공급 계약</h3>
+
+<p>파두가 국내 반도체 업체와 101억원 규모 기업용 SSD 컨트롤러 공급 계약 체결(1월 14일 공시). 계약 기간은 1월 12일부터 10월 17일까지. 계약 금액은 파두의 2023년 매출 435억원의 23.2% 수준.</p>
+
+<p><strong>영향</strong>: 파두의 2024년 매출 성장 기여도 높을 것으로 예상. 국내 SSD 컨트롤러 시장 경쟁력 강화.</p>
+<p><strong>리스크</strong>: 계약 상대방 미공개로 실제 고객사 신용 리스크 파악 불가. 계약 이행 관련 불확실성.</p>
+<p><strong>확인 필요</strong>: 10월 계약 종료 시점 계약 상대방 공개 및 추가 수주 여부 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE5BTllILUdfbVpFN3N3TUN3S3o2MUljcG1rSUVoYWxUYzhMNHZDeWpLbmViRElDdmJULUhkS3RyYWZ2aXpkVDlGNWtMSWE?oc=5" target="_blank" rel="noopener">아이뉴스24</a></p>
+
+<h3>4. 효성그룹, AI 전력인프라·반도체 소재로 사업 재편 가속</h3>
+
+<p>효성중공업 2024년 호주·미국·유럽에서 총 9,585억원 전력기기 수주. 호주 1,425억원 ESS EPC 계약(1월 10일), 미국 7,870억원 전력기기 계약, 핀란드 290억원 초고압변압기 계약. 효성티앤씨 베트남에 1조원 투자 바이오 BDO 공장 상반기 가동 예정. 효성네오켐 NF3 생산능력 연 1만1,500톤(세계 2위).</p>
+
+<p><strong>영향</strong>: 효성중공업 2023년 영업이익 7,470억원(전년비 190% 증가) 사상 최대 실적. 수주잔고 15조3,402억원(전년비 43.2% 증가). AI 데이터센터 전력 수요 증가 수혜.</p>
+<p><strong>리스크</strong>: 글로벌 전력기기 시장 경쟁 심화. 베트남 바이오 BDO 공장 초기 운영 안정화 과제.</p>
+<p><strong>확인 필요</strong>: 호주 정부 20조원 규모 &#x27;국가 전력망 재정비&#x27; 사업 추가 수주 가능성 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5xSDRHOVNyV0I0Uk45eDBLck40aUJkdlppcEs0UUZjTUVwVHJNYjVXVjJnRHAyQ3d4RjNranpmRVU3LWVjWnBUQXdkMEFKYjVNYmgzSkVSLWdjeFdwSW4zdVZpbTVvUWE3YVFNS3dB?oc=5" target="_blank" rel="noopener">아시아투데이</a></p>
+
+<h3>5. 도시바, 반도체 메모리 사업 분사 후 지분 50% 이상 매각</h3>
+
+<p>도시바가 1월 24일 이사회에서 반도체 메모리 사업 분사 결정. 4월 1일 &#x27;도시바메모리&#x27; 자회사 출범(자본금 100억엔). 2017년도(2018년 3월말) 내 지분 50% 이상 매각 계획. 도시바메모리 시가총액 약 20조원 예상, 매각 시 10조원 이상 자금 조달 전망.</p>
+
+<p><strong>영향</strong>: 글로벌 2위 낸드플래시 업체의 경영권 변동으로 시장 재편 가능성. SK하이닉스, 웨스턴디지털, 마이크론, 애플, 훙하이 등 인수전 참여 예상.</p>
+<p><strong>리스크</strong>: 미국 원자력 자회사 손실 7조원 초과로 인한 도시바 본체 재무 압박. 기술 유출 우려로 일본 정부 승인 불확실성.</p>
+<p><strong>확인 필요</strong>: 3월 30일 임시 주주총회 승인 여부 및 우선협상대상자 선정 동향 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE9vOXE5bnFXc1ZvTEtNb3MySWZrUUFIQnlyNVdta0l4VW9kRGZ0UjNDa0hTak9xQzY0YzM1akFYZW1WU2hLYTd3SjlsbGFpUE1XREM0WEhGd0lmVFo3enAxMXZLMA?oc=5" target="_blank" rel="noopener">매일경제</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>AI 반도체 수요 증가로 글로벌 반도체 투자가 활발해지고 있으며, 한국 기업들의 대규모 증설 계획과 지자체들의 반도체 클러스터 조성 경쟁이 치열해지고 있다. 반도체 슈퍼사이클이 2027년까지 지속될 것으로 전망되며, 중국의 반도체 굴기와 미중 기술 패권 경쟁도 심화되고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFBmQTFfemZWNEo3cVNTYUlXZnVrN0wzVlhhYWVtOTVPUGI3d2FKTE0wc2o4Y3k1bU85OEZjMjVGRE5Fc0JSVVV2Ukx4TnhvSU8yQlpIa2t6cjhWUmJDcXA3TVV0a1FmcEZqYkFSdW9md9IBc0FVX3lxTFBqTUdxTFN3d3BnOUl0NGYzVEF0VHF0VVhHTnM4OUZ4bUVxTkFWWFk5a3dkUW1VbDg5cnV6aUV3bVNuOThUYy1KVTZyZGMzUVhpRC1BMVQ5RzctZFlGLTNnLU5IakVnaGdCRXBiX05XRDV0VWs?oc=5" target="_blank" rel="noopener">와이씨켐, 성주에 반도체 제5공장 164억 투자</a></li>
+</ul>
+<p>성주군과 와이씨켐이 반도체 부품 생산을 위한 164억원 규모 제5공장 투자협약을 체결했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxQVmZrLUZPVnJmOXlpeGFiUTdINnM2U2JWOVdWUVVFR0JpRFhfZUNxaU5tTUNESF9lbE5ENjhqeENjRzdKeGx1S2hzN1lCU2hhZnNuU0FhdHJKZENPVGR1c0I5aHU0RzNGOEhaOGlkZ29aTmhxbmR1YXhKX0tCcGo5dm02ZF9WWUU?oc=5" target="_blank" rel="noopener">중국, 엔비디아 블랙웰 3만6천개 도입과 파운드리 증설 동시 추진</a></li>
+</ul>
+<p>중국이 AI 반도체 확보와 자체 생산능력 구축을 위한 대규모 투자에 나서며 반도체 2라운드를 시작했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBMY1hPRGJlTFNxc1B0bnVWOFdDRlhaRHV4eUxQV1NtbjEtT0I4dnlLUFBoSm9pNTkxZDMyTndCOVVuLXNyRmd2cFlUYlRQa3BUMktNeFMzRFFCb0o4U3VsRnAwRHZySDM0RFNZ?oc=5" target="_blank" rel="noopener">김영록 전남지사, 500조 반도체 투자유치로 10만개 일자리 창출 공약</a></li>
+</ul>
+<p>광주·전남 지역에 반도체 3축 산업벨트를 조성해 대규모 투자유치와 일자리 창출을 추진한다고 발표했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTFBUcVM1ODFGNDB0ejZqbExPVzNRYjl2d3h0NC1RWHpZdUVEZHo4MTNFQ0FDSXJpenBIcEtNSkxlQ3hsMHphTGFPU3MyUUFXS2xwX1E?oc=5" target="_blank" rel="noopener">AI 투자 확대로 반도체 슈퍼사이클 2027년까지 지속 전망</a></li>
+</ul>
+<p>AI 투자 증가로 반도체 호황이 2027년까지 이어져 한국 경제의 새로운 성장 동력이 될 것으로 예측된다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBRNU5ENzYzci14dUtMOW1USW5BNnR1eVpWR1NZTG5zSlVXb1JXTDVmSWpzZ1I4dDY0Rzh2QUVralp6SThFZVJtMVBlVXlDN0gxYWh1ZGNtTDl1MkFYTUNVTA?oc=5" target="_blank" rel="noopener">삼성전자·SK하이닉스, AI반도체 호황으로 미래사업 투자 확대</a></li>
+</ul>
+<p>국내 반도체 양대 기업이 AI반도체 시장 성장에 따른 수익 증가로 차세대 기술 개발에 투자를 늘리고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE9XemZ2OTJsY2Z1ZldwUE4ycEE0NWN1c1BmTW9QYmVOeWRYYzZTenlJT3JMa2xSS01WWDVsT3hZam9xVW5STjRSOFlQbXotMWU0RnRxdQ?oc=5" target="_blank" rel="noopener">삼성·SK하이닉스, HBM 패권 확보 위한 인재 쟁탈전 치열</a></li>
+</ul>
+<p>AI 메모리 시장 주도권을 잡기 위해 두 기업 간 핵심 인재 확보 경쟁이 격화되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPa1FoRnVYRk5rWmRkSldQOGxMckV5VU1xS2hjQW8zTjQtZmlBcjhLd1dtMEdUSmI3Q3F4TklsWFhhVmZDaDBLVmtZbXdJdzZlZWwwbjBIYnB0eDZCTUlsV1VJUFpoOS1KdjdXSUpNOVBvX3NwbXBkS21SbGtJbFJGNU9oZktYVDQ?oc=5" target="_blank" rel="noopener">한·미·중 3국의 HBM 메모리 패권 경쟁 본격화</a></li>
+</ul>
+<p>기존 한국의 HBM 독점 체제에서 미국과 중국이 기술 추격에 나서며 글로벌 메모리 시장 재편이 예상된다</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>IBM과 Lam Research가 차세대 반도체 공정 개발을 위한 5년 협력 계약을 체결했으며, 중국의 자체 반도체 장비 기술 개발 가능성이 제기되고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/ibm-lam-research-focus-high-na-euv-on-sub-1-nm-nodes/" target="_blank" rel="noopener">IBM-Lam Research, Sub-1nm 노드용 High-NA EUV 기술 협력</a></li>
+</ul>
+<p>두 회사가 차세대 반도체 제조를 위한 새로운 소재와 공정 개발에 5년간 협력하기로 했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPaHBDX1h2dnRvN2VyTmRjVXZDdmtlUEc4NUZpZnloSk5zck5PZ19jc1hTejU5VnJaRFk3dG95WXVZWW9SUGVwU2hZdlhDZlYwY1V6MC1KR21kLVh6cTZ4a1U0UUx2STlXcTNPN3lfVUljdXk4ckl5OURkSnlhcU5VdFkyRjB6bmdxNjVqa9IBoAFBVV95cUxQTUxBSzZ5RW00SmtWU2ZHLXFXUU1XandTXzhjcWdORUJXa0swbU1BZmdmUmpJbGJCQUN5dl9LeG5uQ0dUSlpVSEtoZkd0cjlvNmF5NWtGa1lBMDZoVHpKYWRQVmFsbDhEMUxKOTU3SkFmX1QyYkEzZlZkYV9GLUZWa0hCN3h6VVQ0UGF6TkFJWk9sZjBHVGZlU0xQVl9WXzJu?oc=5" target="_blank" rel="noopener">전문가 전망: 10년 내 중국판 ASML 등장 가능성</a></li>
+</ul>
+<p>중국이 반도체 장비 기술 자립을 위해 노력하며, 미국의 반도체판 존스법 제정 가능성도 제기됐다</p>
+
+<h3>데이터센터 신축</h3>
+<p>이란 전쟁의 영향으로 메타의 해저 케이블 작업이 지연되고 있으며, 데이터센터의 지속가능한 냉각 시스템과 전력 인프라 안전관리에 대한 관심이 증가하고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/iran-war-delays-work-on-metas-2africa-subsea-cable/" target="_blank" rel="noopener">이란 전쟁으로 메타 2Africa 해저 케이블 작업 지연</a></li>
+</ul>
+<p>후티 반군 공격으로 인한 홍해 지역 위험 증가로 해저 케이블 설치 작업이 연기되고 있다</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/opinions/long-term-sustainability-finding-balance-for-data-center-cooling/" target="_blank" rel="noopener">데이터센터 냉각 시스템의 장기적 지속가능성 논의</a></li>
+</ul>
+<p>데이터센터의 물 사용량 절약과 친환경 냉각 시스템 도입이 중요한 과제로 대두되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE5OZ3VFSTlqWGYyN05YbjlsbTZEYU15MGFMNFd4TDFSYmJ4bmtPSFU2dGszZGttVVNBZXlXb0plNDVKQ2w5cWZ2NUd1bVM?oc=5" target="_blank" rel="noopener">전기안전공사, 데이터센터 전력 안전관리 세미나 개최</a></li>
+</ul>
+<p>데이터센터 전력 인프라의 안전성 확보를 위한 관리 방안을 논의하는 세미나가 열렸다</p>
+
+<h3>DC 전력</h3>
+<p>효성이 AI 시대에 맞춰 전력 인프라와 반도체 공급망 사업을 확대하며 사업 포트폴리오를 재편하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5xSDRHOVNyV0I0Uk45eDBLck40aUJkdlppcEs0UUZjTUVwVHJNYjVXVjJnRHAyQ3d4RjNranpmRVU3LWVjWnBUQXdkMEFKYjVNYmgzSkVSLWdjeFdwSW4zdVZpbTVvUWE3YVFNS3dB?oc=5" target="_blank" rel="noopener">효성, AI 기반 전력 인프라·반도체 공급망 사업 진출</a></li>
+</ul>
+<p>조현준 회장이 AI 시대에 맞춰 효성의 사업 영역을 전력 인프라와 반도체 분야로 확장하고 있다</p>
+
+<h3>DC 냉각</h3>
+<p>데이터센터 개발에서 전력 확보뿐만 아니라 부지 선정의 다차원적 위험 요소들을 종합적으로 고려해야 한다는 관점이 제시되고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/opinions/power-ready-doesnt-mean-shovel-ready-why-data-center-site-selection-is-a-multi-dimensional-problem/" target="_blank" rel="noopener">데이터센터 개발, 전력 준비만으론 부족한 다차원적 문제</a></li>
+</ul>
+<p>데이터센터 부지 적합성은 전력 외에도 다양한 위험 요소를 종합적으로 검토해야 하는 복합적 과제다</p>
+
+<h3>EPC / 수주</h3>
+<p>반도체 관련 기업들이 AI 시장 성장에 힘입어 대규모 공급 계약을 체결하고 있으며, 설계 수요도 급증하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE5BTllILUdfbVpFN3N3TUN3S3o2MUljcG1rSUVoYWxUYzhMNHZDeWpLbmViRElDdmJULUhkS3RyYWZ2aXpkVDlGNWtMSWE?oc=5" target="_blank" rel="noopener">파두, 국내 반도체 기업에 101억 SSD 컨트롤러 공급</a></li>
+</ul>
+<p>파두가 국내 반도체 회사와 101억원 규모의 SSD 컨트롤러 공급 계약을 체결했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTFBoeGw1eW1DWG1XSWxldUlrOUNKdnozVkRNc2tta1R1NV9yOTFlZ0V0YzRRRTJJY1F5dWU2S2owd0J2dS1YOEtIVXBRMWdBTnE2VW43bUkwMkhLcm1pNkVqbGRtbk43Nl92UHlMWnVuQ0pDUWNNeHJZ0gF3QVVfeXFMUGh4bDV5bUNYbVdJbGV1SWs5Q0p2ejNWRE1za21rVHU1X3I5MWVnRXRjNFFFMkljUXl1ZTZLajB3QnZ1LVg4S0hVcFExZ0FOcTZVbjdtSTAySEtybWk2RWpsZG1uTjc2X3ZQeUxadW5DSkNRY014clk?oc=5" target="_blank" rel="noopener">에이디테크놀로지, AI 반도체 설계 수요 급증으로 성장</a></li>
+</ul>
+<p>AI 반도체 시장 확대로 반도체 설계 전문업체의 수주와 매출이 크게 증가하고 있다</p>
+
+<h3>공기 / 원가 / 변경관리</h3>
+<p>건설 회사들이 전력·에너지 부문 신사업 진출을 통해 수익 다각화를 추진하고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/clayco-ceo-new-power-energy-unit/814594/" target="_blank" rel="noopener">Clayco, 전력·에너지 신사업 부문으로 2027년 3억달러 매출 목표</a></li>
+</ul>
+<p>건설회사 Clayco가 새로 출범한 전력·에너지 사업부를 통해 2027년까지 3억달러 매출을 계획하고 있다</p>
+
+<h3>자재 / 노무</h3>
+<p>미국에서 주택 관련 법안과 건설업 근로자 정신건강 프로그램이 주목받고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/senate-passes-housing-bill-sfr-forced-sale-provision/814668/" target="_blank" rel="noopener">미 상원, 단독주택 임대사업자 매각 조항 포함 주택법 통과</a></li>
+</ul>
+<p>21세기 주택법에 임대사업자들의 강제 매각 조항이 포함되어 다가구 주택 업계가 우려를 표명하고 있다</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/its-not-weak-to-speak-nyc-construction-unions-launch-mental-health-init/814588/" target="_blank" rel="noopener">뉴욕 건설 노조, 근로자 정신건강 동료 지원 프로그램 출범</a></li>
+</ul>
+<p>뉴욕 건설노조가 자살률 감소를 위한 동료 간 정신건강 지원 프로그램을 도입했다</p>
+
+<h3>M&amp;A / 사업재편</h3>
+<p>도시바의 반도체 사업 매각과 중국의 반도체 공급망 통합을 위한 M&amp;A 활동이 활발해지고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE9vOXE5bnFXc1ZvTEtNb3MySWZrUUFIQnlyNVdta0l4VW9kRGZ0UjNDa0hTak9xQzY0YzM1akFYZW1WU2hLYTd3SjlsbGFpUE1XREM0WEhGd0lmVFo3enAxMXZLMA?oc=5" target="_blank" rel="noopener">도시바, 반도체 사업 지분 50% 이상 매각 계획</a></li>
+</ul>
+<p>도시바가 사업 재편의 일환으로 반도체 부문 지분 과반을 매각하기로 결정했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNUlVTSmJzZU1URTlFclIySTlkbTZTdjA1eFJ5Q0o4ZnRxRXBEY0E1UXlRT1hIWTZINEFXQkdxMi1hTENFY3R6QVZIZk5POU05dHhxWlNORkVwS3ZHZjFqLTRTeF9xRkxFZVdOU2hpR0lfVjV4UHRtZ1RBMTZOdXY1dQ?oc=5" target="_blank" rel="noopener">중국, 반도체 공급망 강화를 위한 기술기업 M&amp;A 확대</a></li>
+</ul>
+<p>중국이 반도체 자급률 향상을 위해 관련 기술 기업들의 인수합병을 적극 추진하고 있다</p>
+
+<h3>기타</h3>
+<p>Embedded World 2026과 MWC 2026에서 물리적 AI와 로보틱스, 통신업계의 AI 전환이 주요 트렌드로 부각됐다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/embedded-world-2026-wrap-key-highlights/" target="_blank" rel="noopener">Embedded World 2026, 물리적 AI와 로보틱스 트렌드 부각</a></li>
+</ul>
+<p>임베디드 월드 2026에서 물리적 AI와 로보틱스 분야의 주요 기술 동향이 공개됐다</p>
+<ul>
+<li><a href="https://www.eetimes.com/mwc-2026-concludes-as-telcos-pivot-to-ai/" target="_blank" rel="noopener">MWC 2026, 통신업계의 AI 전환과 6G 경쟁 격화</a></li>
+</ul>
+<p>모바일 월드 콩그레스에서 지정학적 갈등과 GPU-CPU 경쟁이 6G와 통신 경제의 미래를 좌우하고 있다고 발표됐다</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[이란 전쟁으로 Meta 2Africa 해저케이블 공사 지연] 중동 지역 불안정으로 추가 공사 지연 가능성. 프로젝트 비용 상승 우려.</li>
+<li>[Clayco, 전력/에너지 사업부 신설로 2027년 $3억 매출 목표] 신규 사업 진입에 따른 초기 투자 비용 및 기술 역량 확보 과제. 전력 인프라 사업의 인허가 복잡성.</li>
+<li>[파두, 국내 반도체 기업에 101억원 SSD 컨트롤러 공급 계약] 계약 상대방 미공개로 실제 고객사 신용 리스크 파악 불가. 계약 이행 관련 불확실성.</li>
+<li>[효성그룹, AI 전력인프라·반도체 소재로 사업 재편 가속] 글로벌 전력기기 시장 경쟁 심화. 베트남 바이오 BDO 공장 초기 운영 안정화 과제.</li>
+<li>[도시바, 반도체 메모리 사업 분사 후 지분 50% 이상 매각] 미국 원자력 자회사 손실 7조원 초과로 인한 도시바 본체 재무 압박. 기술 유출 우려로 일본 정부 승인 불확실성.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>Meta의 공식 프로젝트 일정 재조정 발표 및 대체 경로 검토 여부 확인 필요.</li>
+<li>일리노이주 태양광 프로젝트 착공 일정 및 규모 구체화 확인 필요.</li>
+<li>10월 계약 종료 시점 계약 상대방 공개 및 추가 수주 여부 확인 필요.</li>
+<li>호주 정부 20조원 규모 &#x27;국가 전력망 재정비&#x27; 사업 추가 수주 가능성 확인 필요.</li>
+<li>3월 30일 임시 주주총회 승인 여부 및 우선협상대상자 선정 동향 확인 필요.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/5건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-03-15T21:30:35.588169+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>

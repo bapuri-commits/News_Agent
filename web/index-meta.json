@@ -196,5 +196,14 @@
     "top_headline": "IBM-램리서치 Sub-1nm 공정 개발 5년 협약 체결",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-03-16": {
+    "date": "2026-03-16",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "이란 전쟁으로 Meta 2Africa 해저케이블 공사 지연",
+    "sk_headline": "",
+    "article_count": 39
   }
 }
