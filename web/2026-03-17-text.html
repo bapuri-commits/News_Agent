@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-03-17 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-03-17.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-03-17</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-03-17</h1>
+
+<blockquote>캐나다 Virtual Grid, BESS 포함 모듈형 DC 프로토타입 공개 / 중동 분쟁으로 반도체 원자재 부족·연료비 상승 우려 / 마이크론, 대만 통루오 팹 인수 완료로 AI용 HBM 생산 확대</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. 캐나다 Virtual Grid, BESS 포함 모듈형 DC 프로토타입 공개</h3>
+
+<p>캐나다 데이터센터 기업 Virtual Grid가 자체 배터리 에너지 저장 시스템(BESS)을 포함한 모듈형 데이터센터 프로토타입을 출시했음. 구체적인 용량, 투자금액, 위치는 미확인.</p>
+
+<p><strong>영향</strong>: 전력 불안정 지역에서 BESS 통합형 모듈러 DC 수요 증가 예상. 기존 대형 DC 대비 빠른 구축과 전력 자립도 향상 가능.</p>
+<p><strong>리스크</strong>: 프로토타입 단계로 상용화 일정 불확실. BESS 통합에 따른 초기 투자비용 증가 우려.</p>
+<p><strong>확인 필요</strong>: Virtual Grid의 첫 상용 프로젝트 수주 여부 및 경쟁사 대응 동향 확인 필요.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/canadian-data-center-company-virtual-grid-launches-modular-prototype/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>2. 중동 분쟁으로 반도체 원자재 부족·연료비 상승 우려</h3>
+
+<p>중동 지역 분쟁 장기화가 반도체 산업에 영향을 미칠 것으로 전망. 구체적인 원자재 품목, 가격 상승률, 영향받는 기업명은 미확인.</p>
+
+<p><strong>영향</strong>: 반도체 제조 원가 상승 및 공급망 차질 가능성. 팹 건설 프로젝트 자재 조달 지연 우려.</p>
+<p><strong>리스크</strong>: 네온, 팔라듐 등 핵심 소재의 중동/러시아 의존도 고려시 공급 중단 리스크 존재. 해상 운송비 급등 가능성.</p>
+<p><strong>확인 필요</strong>: 주요 반도체 기업의 원자재 재고 수준 및 대체 공급선 확보 현황 모니터링 필요.</p>
+
+<p>📎 출처: <a href="https://www.eetimes.com/middle-east-turmoil-materials-shortage-fuel-price-hike-disrupting-chip-industry/" target="_blank" rel="noopener">EE Times</a></p>
+
+<h3>3. 마이크론, 대만 통루오 팹 인수 완료로 AI용 HBM 생산 확대</h3>
+
+<p>마이크론이 파워칩의 대만 통루오 P5 제조시설 인수를 2026년 1월 17일 완료. 30만 평방피트 300mm 클린룸 확보. 2차 시설 27만 평방피트 추가 건설 계획으로 2026회계연도 말 착공 목표.</p>
+
+<p><strong>영향</strong>: AI용 고대역폭 메모리(HBM) 생산능력 확대로 엔비디아 등 주요 고객사 대응력 강화. 타이중 메가캠퍼스와 연계로 생산 효율성 증대.</p>
+<p><strong>리스크</strong>: 대만 지정학적 리스크 집중. HBM 시장 경쟁 심화에 따른 가격 압박 가능성.</p>
+<p><strong>확인 필요</strong>: 2차 시설 건설 EPC 발주 시점 및 HBM4 양산 일정 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiwwJBVV95cUxNQ3BvSXBCSzN5cEc1emhoVUlGTmMzTUtKUkdHVzA2QzhHRkZMbEFSdi1jbXJnYVJJZEstZmNUbmVVdkN1TGtMYkcxaU9xeWNNN0otczAyRnY4YmNEeDB2OFk3VExQcG5aV0dkYnpyVHRUZ0tfLUtPcDI0STREVWppS1JtMngzWVAxUElvX05KVG1GbTdMaUh3bTVsSXVUNk1aRHN5UGhWa2ZjN081cTB1U0JlNzctM0xYREhXa3gwYmp0VWdEUTZ1WGZ2dDEyUnFRZ3pnRjVHWndTbnp6MTBCNm41a0xsN09tMmZ5d2k4YnFqcVdTOGlyNGlFc0I4SE82SEpVNWNQRFdpNlVXMEkwZi1aa0NXNXdSLWhhaUhZOXpsUV92dVc3UDJ6aWFrcHlZZmJ4Q0VwUVl1WHdrcWw0cTA5RQ?oc=5" target="_blank" rel="noopener">Benzinga</a></p>
+
+<h3>4. 디아이티, SK하이닉스에 158.7억원 반도체 장비 공급계약</h3>
+
+<p>디아이티가 SK하이닉스와 158억 7천만원 규모의 반도체 장비 공급계약을 체결. 구체적인 장비 종류, 납품 일정, 팹 위치는 미확인.</p>
+
+<p><strong>영향</strong>: SK하이닉스의 생산능력 확대 시그널. 국내 반도체 장비업체의 수주 증가로 매출 성장 기대.</p>
+<p><strong>리스크</strong>: 장비 납품 지연시 지체상금 리스크. 원자재 가격 상승에 따른 마진 압박 가능성.</p>
+<p><strong>확인 필요</strong>: 계약 장비의 구체적 사양 및 SK하이닉스의 추가 장비 발주 계획 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1KVXU3eFlBME9mTGhIaGIyand2M0tiTWR4Y1o5RTlpcGczN05takExbDRRZGpHaE5kR1ljc3pVcDBnUWJuWnkzcjFQLW5mRk1OZk40MUMyYzJYcDJIMllOR1J2UmRYekZE?oc=5" target="_blank" rel="noopener">CBC뉴스</a></p>
+
+<h3>5. 디아이티, SK하이닉스와 159억원 반도체 장비 공급계약</h3>
+
+<p>디아이티가 SK하이닉스와 159억원 규모의 반도체 제조 장비 공급계약 체결. 상기 e51c68921b62 기사와 금액 차이(158.7억 vs 159억) 존재.</p>
+
+<p><strong>영향</strong>: SK하이닉스 장비 투자 지속으로 HBM 등 첨단 메모리 생산 확대 신호. 디아이티 실적 개선 기대.</p>
+<p><strong>확인 필요</strong>: 정확한 계약 금액 확인 및 납품 일정 구체화 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNNUk4Qmd3c3BpbjBZQTFibjl4dURETFQwWGNGOGJFVVdnRnVnSmtPMlFiaV8zZ1RxX2xzbVF5QjU1d0F5MHJWbTVHbjhqNWRESDBjVDhhQnI3R1BZWjVlWm85MmVuVlQ2NnB2TkdsZTlMYkpGbllsOTVNZTdIRTQwcQ?oc=5" target="_blank" rel="noopener">edaily.co.kr</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>SK에코플랜트, 반도체 전문인력 양성 프로그램 확대</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> SK에코플랜트가 성균관대와 하이테크솔루션학과 석사과정을 통해 반도체 전문가 양성을 강화하고 있다. 2기 졸업생 11명 전원이 반도체 부문에 배치되어 반도체 종합솔루션 사업 경쟁력 강화에 기여하고 있다. 1-2기 졸업생의 반도체 부문 배치 비중이 약 67%에 이르며, 단순 EPC를 넘어 FAB 운영·소재공급·친환경 처리까지 포함한 통합솔루션으로 포트폴리오를 확장 중이다.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9CMVk1c0tTSE9yNWRWR1kwdFZCclJmR19lblZpTy0yNWJlTjNoeVlqLVZIUld2NDhfMnZmeUVqT0lJaHBmVjYtem92azVpdngySzhEcTM0V29ILU9yZ3BJZ1YtY1YwX3Bwb2I40gFvQVVfeXFMTVc1WmRQMEhCN3JwZkIzMmp4VG52MXNNMDhuLW1jbGdiS2hfVWtGOGcyYWpBbXgycVJPVThoTUNkYjNEU3RST1g3VzJNS205ZjdGUTlXd1J6Y2RsTlNac2w4NGh1LTdHX25Xd1A1NUNB?oc=5" target="_blank" rel="noopener">catchnews.kr</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>AI 반도체 투자 열풍이 지속되는 가운데, 머스크의 테라팹 착공 발표와 삼성·SK하이닉스의 HBM 집중 투자가 주목받고 있다. 반도체 클러스터 지방이전 논란과 AI 투자 거품 우려가 제기되면서도, 전문가들은 장기적 성장 잠재력을 높게 평가하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQc0dRcExuR2xsVnlEMFF3b2xlVXhXTlRrT0ZWUVM0dG5QUzB2ODk0bFZscjVZcnV4UXFLa2YyalJKSDhaRmdMV1NQemgzaEhFVGV6RjRSZ1hJVHJoRFQxWjR2V25RUmRqb1RacnR6anlIS3VIbl9pOXNGeVd5WW8tQtIBlAFBVV95cUxPNnAtOTB2OEtBVFhqeGdZWUxzNHVXdTZ4VWZCUWVqV3JqTnZ2VDVEaWpzc0lhOE51WUhqcG1GY1h4QVBLYjZ6eUIxWUpvMjQxcVRQRkRkUE5rRzNnWXB4TWpTZkw0d0k0RUpuMzU4M185RndpbTdiRS1DMk0wMExMRl9yNzhTT3V4R3ppTFN3MWF2X0Z5?oc=5" target="_blank" rel="noopener">배재규의 10년 후 반도체 유망종목 4선 제시</a></li>
+</ul>
+<p>장기 투자 관점에서 반도체 종목 투자 전략을 제안했다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE1WR18yYzludjB3Yk9nMUZyakFTMTRWWVZndEVnQVl0eG0xRlF6OUtyemtEbmtiOFJBbHhaSjJVSUIwN19ycWE5MDZjQTF1Zw?oc=5" target="_blank" rel="noopener">머스크, 초대형 테라팹 1주일 내 착공 선언</a></li>
+</ul>
+<p>일론 머스크가 반도체 전쟁을 선언하며 대규모 반도체 공장 건설을 발표했다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBkWjhScWdhS2h6SUNJaXFDMkFoVmhlT2t1NFNPMGVSS09uNnlYSml4ei1aM2cxX3pxZ3BfOGx6WHZzYkdRZDgtVGhVYW0yOFoxcThhbXRJUGtwaE5OQ2RrdEdoUkVEc1VkMWJj?oc=5" target="_blank" rel="noopener">반도체 클러스터 지방이전 논란으로 사회갈등 우려</a></li>
+</ul>
+<p>1000조원 규모 투자계획을 두고 삼성·SK가 어려움에 처했다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTFB5MEZpOHktY0ZMbnk2TkpBVV9zRk1rdVNrUjdPRDhZdkRKbGRVUkdDMVdrV0NkazhINTJocEV1ZzlWdzJ1OGRhZnREMGx6TWhTUFJyTDQyV2xnZF9UNEVpT2k2UW44QQ?oc=5" target="_blank" rel="noopener">AI 투자 거품 논란 속 반도체 수주 감소 우려</a></li>
+</ul>
+<p>AI 투자 열풍에 대한 거품 우려와 함께 향후 투자 둔화 가능성이 제기됐다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNU0ZHMlg4NHIxQXdqVnJacW03NWlkN0ttMXRSMTBIb3ZlNGJkQXItWUFSNGZEMXRuS0ExbU12a1dMb1E1ZTk0OTc2QkxjMVAzNnMxLU85TzF4ZGJIbExBWjR1SVN4d25Uanl4WWpOVERRM19uZnZITm1Ibk1ucWVFRnh6eHFVdTdx?oc=5" target="_blank" rel="noopener">HBM 집중으로 DRAM 가격 100% 폭등</a></li>
+</ul>
+<p>삼성·SK하이닉스의 HBM 올인 전략으로 DRAM 가격이 급등하고 있다.</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>레이저쎌이 대만 반도체 업체와 4억2천만원 규모의 반도체 장비 공급계약을 체결했다. 이는 연간 매출 대비 24% 규모의 대형 계약이다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE52eGkxRThkX1pxaUNJcFRmOHlXRTdXby1YVmtxOWFYZ2RCRWhBa1NCOGFOWll0VEt1eGN5c19zYWlyM2t0MzY0QXJaVFV2WVBEVGFkYmViNEVNcGJkR0FBeVFLV2VDSkhzQ3Z5VW5MR3hDYVU?oc=5" target="_blank" rel="noopener">레이저쎌, 4억원 규모 반도체 장비 공급계약 체결</a></li>
+</ul>
+<p>대만 반도체 업체와 4억2707만원 규모의 장비 공급계약을 체결했다.</p>
+
+<h3>첨단 패키징</h3>
+<p>중동 분쟁이 반도체 소재 공급망에 미치는 영향과 ABLIC의 유럽 시장 진출 소식이 전해졌다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/middle-east-turmoil-materials-shortage-fuel-price-hike-disrupting-chip-industry/" target="_blank" rel="noopener">중동 분쟁이 반도체 소재 공급망과 연료비에 미치는 영향</a></li>
+</ul>
+<p>중동 분쟁 장기화 시 반도체 비즈니스에 재앙이 될 수 있다고 경고했다.</p>
+<ul>
+<li><a href="https://www.eetimes.com/ablic-expands-market-presence-with-high-value-analog-solutions-in-europe-and-the-us/" target="_blank" rel="noopener">ABLIC, 고부가가치 아날로그 솔루션으로 유럽 시장 확대</a></li>
+</ul>
+<p>ABLIC이 틈새 분야 글로벌 리더로서 유럽 시장 진출을 확대하고 있다.</p>
+
+<h3>데이터센터 신축</h3>
+<p>아이오와주 노워크 시의회가 데이터센터 개발을 승인했고, 크로네가 데이터센터 냉각 공정 유량 계측 솔루션을 공개했다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/city-council-in-norwalk-iowa-approves-potential-data-center-development-agreement-despite-public-concerns/" target="_blank" rel="noopener">아이오와 노워크 시의회, 데이터센터 개발 승인</a></li>
+</ul>
+<p>Tract와의 개발 협약이 이달 초 승인됐다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiREFVX3lxTE95MkNoaEdUU0dkZy11eE1OQklQbzlMYnNhbWNTaEU4OGZwZnMxZldhMFpsQVJybi10M3I2WUVsWk9WZ0Fk?oc=5" target="_blank" rel="noopener">크로네, 데이터센터 냉각 공정 유량 계측 사례 공개</a></li>
+</ul>
+<p>데이터센터 냉각 시스템의 효율적 유량 관리 솔루션을 제시했다.</p>
+
+<h3>DC 전력</h3>
+<p>Synopsys가 자동차 디지털 트윈 개발에 AI 에이전트를 활용한다고 발표했다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/synopsys-bets-on-ai-agents-to-power-automotive-digital-twins/" target="_blank" rel="noopener">Synopsys, 자동차 디지털 트윈에 AI 에이전트 활용</a></li>
+</ul>
+<p>자동차 소프트웨어 검증 시간 단축을 위해 AI 에이전트와 디지털 트윈을 활용한다.</p>
+
+<h3>DC 냉각</h3>
+<p>엔비디아가 우주용 컴퓨팅 모듈을 발표했고, 캐나다 Virtual Grid가 자체 BESS를 갖춘 모듈형 데이터센터 프로토타입을 공개했다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/nvidia-announces-space-compute-modules-including-vera-rubin/" target="_blank" rel="noopener">엔비디아, 우주용 컴퓨팅 모듈 Space-1 Vera Rubin 발표</a></li>
+</ul>
+<p>Aetherflux, Axiom Space 등 우주 관련 기업들이 활용할 예정이다.</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/canadian-data-center-company-virtual-grid-launches-modular-prototype/" target="_blank" rel="noopener">Virtual Grid, 자체 BESS 탑재 모듈형 데이터센터 공개</a></li>
+</ul>
+<p>캐나다 데이터센터 업체가 배터리 저장 시스템을 포함한 모듈형 솔루션을 개발했다.</p>
+
+<h3>EPC / 수주</h3>
+<p>디아이티가 SK하이닉스와 159억원 규모의 반도체 장비 공급계약을 체결했고, 마이크론의 대만 반도체 공장 계약과 엔비디아·인텔의 7조원 규모 협력도 주목받고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1KVXU3eFlBME9mTGhIaGIyand2M0tiTWR4Y1o5RTlpcGczN05takExbDRRZGpHaE5kR1ljc3pVcDBnUWJuWnkzcjFQLW5mRk1OZk40MUMyYzJYcDJIMllOR1J2UmRYekZE?oc=5" target="_blank" rel="noopener">디아이티, SK하이닉스와 159억원 반도체 장비 공급계약</a></li>
+</ul>
+<p>SK하이닉스와 158억7000만원 규모의 반도체 제조장비 공급계약을 체결했다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiwwJBVV95cUxNQ3BvSXBCSzN5cEc1emhoVUlGTmMzTUtKUkdHVzA2QzhHRkZMbEFSdi1jbXJnYVJJZEstZmNUbmVVdkN1TGtMYkcxaU9xeWNNN0otczAyRnY4YmNEeDB2OFk3VExQcG5aV0dkYnpyVHRUZ0tfLUtPcDI0STREVWppS1JtMngzWVAxUElvX05KVG1GbTdMaUh3bTVsSXVUNk1aRHN5UGhWa2ZjN081cTB1U0JlNzctM0xYREhXa3gwYmp0VWdEUTZ1WGZ2dDEyUnFRZ3pnRjVHWndTbnp6MTBCNm41a0xsN09tMmZ5d2k4YnFqcVdTOGlyNGlFc0I4SE82SEpVNWNQRFdpNlVXMEkwZi1aa0NXNXdSLWhhaUhZOXpsUV92dVc3UDJ6aWFrcHlZZmJ4Q0VwUVl1WHdrcWw0cTA5RQ?oc=5" target="_blank" rel="noopener">마이크론, 대만 반도체 공장 계약으로 AI 메모리 시장 진출</a></li>
+</ul>
+<p>AI 기반 메모리 시장 급성장에 대응해 대만 공장 계약을 체결했다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaENkc0poSkdqRU9LRUxNOHNfd2JlbTVoMW13T3NQN3J6ZWc2YXp6X1VMUDEyNE5ydXNsYzZWRjBEYXMtZjRPS1dNNXNQdEFFb1dKSVJpRWJaRVhqMGlveWtVSExDUjA1Z2VMWDNWYXplc1RpQzI5MlhiZFkwRWpEVU4teUZZTHNf?oc=5" target="_blank" rel="noopener">엔비디아·인텔, 7조원 규모 전략적 협력 추진</a></li>
+</ul>
+<p>GPU만으로는 AI 시장을 주도할 수 없다며 두 기업이 대규모 협력을 추진하고 있다.</p>
+
+<h3>공기 / 원가 / 변경관리</h3>
+<p>미국 건설업계는 1월 말 기준 23만1천개의 일자리가 공석 상태이며, 고속도로 재승인 법안과 트럼프의 10% 임시관세에 대한 법적 검토가 진행되고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/construction-job-openings-slow-2026-labor-data/814836/" target="_blank" rel="noopener">미국 건설업계, 연초 일자리 공석률 높아</a></li>
+</ul>
+<p>1월 말 기준 미국 건설업체들이 23만1천개의 공석을 보유하고 있다.</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/construction-lawmakers-highway-reauthorization-bill/814847/" target="_blank" rel="noopener">건설업계, 고속도로 재승인 법안 통과 촉구</a></li>
+</ul>
+<p>CONEXPO에서 의회 위원들과 만난 후 법안 통과에 대한 기대감을 표했다.</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/trump-tariffs-lawsuit-court-of-international-trade-burlap-barrell-basic-fun/814796/" target="_blank" rel="noopener">트럼프 10% 임시관세, 추가 법적 검토 직면</a></li>
+</ul>
+<p>두 기업이 대통령의 Section 122 조항 활용이 불법이라며 소송을 제기했다.</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트가 성균관대학교와 협력해 반도체 전문 인력 양성에 나선다고 발표했다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9CMVk1c0tTSE9yNWRWR1kwdFZCclJmR19lblZpTy0yNWJlTjNoeVlqLVZIUld2NDhfMnZmeUVqT0lJaHBmVjYtem92azVpdngySzhEcTM0V29ILU9yZ3BJZ1YtY1YwX3Bwb2I40gFvQVVfeXFMTVc1WmRQMEhCN3JwZkIzMmp4VG52MXNNMDhuLW1jbGdiS2hfVWtGOGcyYWpBbXgycVJPVThoTUNkYjNEU3RST1g3VzJNS205ZjdGUTlXd1J6Y2RsTlNac2w4NGh1LTdHX25Xd1A1NUNB?oc=5" target="_blank" rel="noopener">SK에코플랜트-성균관대, 반도체 전문가 양성 협력</a></li>
+</ul>
+<p>SK에코플랜트가 성균관대와 반도체 분야 전문 인력 양성을 위한 협력을 시작한다.</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[캐나다 Virtual Grid, BESS 포함 모듈형 DC 프로토타입 공개] 프로토타입 단계로 상용화 일정 불확실. BESS 통합에 따른 초기 투자비용 증가 우려.</li>
+<li>[중동 분쟁으로 반도체 원자재 부족·연료비 상승 우려] 네온, 팔라듐 등 핵심 소재의 중동/러시아 의존도 고려시 공급 중단 리스크 존재. 해상 운송비 급등 가능성.</li>
+<li>[마이크론, 대만 통루오 팹 인수 완료로 AI용 HBM 생산 확대] 대만 지정학적 리스크 집중. HBM 시장 경쟁 심화에 따른 가격 압박 가능성.</li>
+<li>[디아이티, SK하이닉스에 158.7억원 반도체 장비 공급계약] 장비 납품 지연시 지체상금 리스크. 원자재 가격 상승에 따른 마진 압박 가능성.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>Virtual Grid의 첫 상용 프로젝트 수주 여부 및 경쟁사 대응 동향 확인 필요.</li>
+<li>주요 반도체 기업의 원자재 재고 수준 및 대체 공급선 확보 현황 모니터링 필요.</li>
+<li>2차 시설 건설 EPC 발주 시점 및 HBM4 양산 일정 확인 필요.</li>
+<li>계약 장비의 구체적 사양 및 SK하이닉스의 추가 장비 발주 계획 확인 필요.</li>
+<li>정확한 계약 금액 확인 및 납품 일정 구체화 필요.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/6건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-03-16T21:41:29.869024+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
