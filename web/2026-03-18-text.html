@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-03-18 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-03-18.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-03-18</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-03-18</h1>
+
+<blockquote>MS, 덴마크 쾨게 데이터센터 2단계 착공 / 정부, AI반도체에 5년간 50조원 투입 계획 / 삼성전자, HBM 생산 3배 증산·HBM4 비중 50% 확대</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. MS, 덴마크 쾨게 데이터센터 2단계 착공</h3>
+
+<p>마이크로소프트가 덴마크 쾨게(Køge)에서 데이터센터 2단계 건설을 착공함. 2026년 내 덴마크 클라우드 리전 출범 예정.</p>
+
+<p><strong>영향</strong>: 북유럽 클라우드 인프라 확대로 현지 DC 건설/운영 기회 증가 예상.</p>
+<p><strong>리스크</strong>: 전력 공급 및 냉각 인프라 확보 관련 리스크 존재 가능.</p>
+<p><strong>확인 필요</strong>: 덴마크 클라우드 리전 정확한 출범 시점 및 추가 투자 규모 확인 필요.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/microsoft-commences-second-phase-of-data-center-construction-in-k%C3%B8ge-denmark/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>2. 정부, AI반도체에 5년간 50조원 투입 계획</h3>
+
+<p>정부가 국민성장펀드로 향후 5년간 AI·반도체 분야에 50조원 투자 계획 발표. 2026년 10조원 우선 공급. 2030년까지 글로벌 AI 반도체 유니콘 5개 육성 목표.</p>
+
+<p><strong>영향</strong>: 국내 AI 반도체 팹리스 기업들의 대규모 자금 조달 기회 확대. NPU 중심 차세대 기술 개발 가속화 전망.</p>
+<p><strong>리스크</strong>: 민간 자금 매칭 여부 및 정책 지속성이 주요 변수.</p>
+<p><strong>확인 필요</strong>: 올해 10조원 집행 계획의 구체적인 투자처 및 일정 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE1IcEd4Smh6RFdNSTNZbGF3aDBxZUxEZHl2ejVpWmxMMUZMYTIybXBUNjFEdXpmSi1mMkF3YmpVMUNfSW5xRTEtXzRYYVpGdw?oc=5" target="_blank" rel="noopener">전자신문</a></p>
+
+<h3>3. 삼성전자, HBM 생산 3배 증산·HBM4 비중 50% 확대</h3>
+
+<p>삼성전자가 2026년 HBM 생산량을 전년 대비 3배 이상 증산 계획. HBM4 비중을 전체의 50% 이상으로 확대 목표. HBM5부터 2나노 공정 적용 예정.</p>
+
+<p><strong>영향</strong>: AI 데이터센터용 고성능 메모리 시장 점유율 확대 기대. 프리미엄 제품 중심 전략으로 수익성 개선 가능.</p>
+<p><strong>리스크</strong>: HBM 시장 전반의 공급 부족 상황에서 고객사별 물량 배분 이슈 존재.</p>
+<p><strong>확인 필요</strong>: 엔비디아 등 주요 고객사와의 HBM4 공급 계약 체결 여부 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE5VN3Zla182aTJjU1VTTm1UOEVud25BRHI5NVVXcWxaUWNMTzhUYUl5bnBwRHRNdmRjZzZiSjgxejlzY2RscVAtTVRUT1NPN2J2RFM0WFpNaTUyOWttWUl4dVlLLVdjcEIyaHd6dVdZM1hMUQ?oc=5" target="_blank" rel="noopener">중앙이코노미뉴스</a></p>
+
+<h3>4. 미래산업, SK하이닉스와 44억원 검사장비 공급계약</h3>
+
+<p>미래산업이 SK하이닉스와 총 44억원 규모의 반도체 검사장비 공급계약 체결. 공시 금액은 22억원. 2025년 연결 매출액의 8.7% 규모.</p>
+
+<p><strong>영향</strong>: 반도체 후공정 검사장비 수요 견조세 확인. 추가 수주 기회 확대 가능성.</p>
+<p><strong>확인 필요</strong>: 미국 테라다인 출신 사외이사 선임 후 글로벌 영업 확대 계획 점검 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9XNWNkUnM3b0FfcDdQZkJuRHJZTU1XV3FJNjF3MWZ5ekx5amFwM2FvWEo5eVFsUVExUkdCdlFKalAtWW4wZkI2M2tfZUtudHM?oc=5" target="_blank" rel="noopener">딜사이트</a></p>
+
+<h3>5. 그린생명과학, 140억원 AI반도체 소재 공급계약</h3>
+
+<p>그린생명과학이 140.3억원 규모의 AI반도체 소재 공급계약 체결. 구체적인 발주처 및 납품 일정은 미공개.</p>
+
+<p><strong>영향</strong>: AI 반도체 소재 분야 신규 사업 기회 확인. 기존 바이오 사업 외 사업 다각화 진행.</p>
+<p><strong>리스크</strong>: 신규 분야 진출에 따른 기술력 및 공급 안정성 검증 필요.</p>
+<p><strong>확인 필요</strong>: 계약 상대방 및 구체적인 소재 품목 공개 여부 모니터링 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE5nTER2cEN4TWdJNzVHc3RfM2NSY0haQ2tKOWNzUFNjTTd5MXdRXzhRLWEyZ3dSbVVlSmI0d0M2cjBmQUh6QnU5c2FfOWZtREhNT0E?oc=5" target="_blank" rel="noopener">매일경제 마켓</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>한국 정부가 &#x27;K-엔비디아&#x27; 프로젝트를 통해 AI 반도체 산업에 5년간 50조원을 투자하며, 국민성장펀드를 활용해 2030년까지 AI 반도체 유니콘 기업 5개를 육성하겠다고 발표했습니다. 삼성전자와 SK하이닉스는 HBM 메모리 생산을 대폭 확대하며 AI 반도체 시장 주도권 확보에 나서고 있습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1LM1J1QmNBNDZCN19RMGF4eDZRdnJncDdISnlVbkR0T3dOZktTV25hREttTmJhdXBtZ1k0OXItdE9yb00yTlFSTDcwSThyZ25kRXVLWHlubWliSFhGc1NmN1V1NGFRX0pEd3JqaEF3RXFWbEXSAXNBVV95cUxNSzNSdUJjQTQ2QjdfUTBheHg2UXZyZ3A3SEp5VW5EdE93TmZLU1duYURLbU5iYXVwbWdZNDlyLXRPcm9NMk5RUkw3MEk4cmduZEV1S1h5bm1pYkhYRnNTZjdVdTRhUV9KRHdyamhBd0VxVmxF?oc=5" target="_blank" rel="noopener">정부, K-엔비디아 프로젝트로 AI 반도체에 5년간 50조원 투자</a></li>
+</ul>
+<p>AI 반도체 글로벌 경쟁력 확보를 위한 정부의 대규모 투자 계획 발표</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE13RTRsZHF5emhHREhOUC04NTFEdi1OMk1qNlowalhxWTRLcFFGZUpVYkRTZ3I5VTk0MjhuNms1TUtMQjlyWm9fc09ZdkdfZm5veHlqVE1qM3RLX1lCQ2pTb2dWS3Z4c0sxNTZZNk5VNHdYb2dOVkNWatIBeEFVX3lxTE13RTRsZHF5emhHREhOUC04NTFEdi1OMk1qNlowalhxWTRLcFFGZUpVYkRTZ3I5VTk0MjhuNms1TUtMQjlyWm9fc09ZdkdfZm5veHlqVE1qM3RLX1lCQ2pTb2dWS3Z4c0sxNTZZNk5VNHdYb2dOVkNWag?oc=5" target="_blank" rel="noopener">국민성장펀드, 올해 AI·반도체에 10조원 투자로 K-엔비디아 육성 시동</a></li>
+</ul>
+<p>4월부터 수천억 규모 직접 투자 돌입 예정</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE5pVEtJTjBFdWZERnJYd3BCemVXMnF2RS1tak1obmNXNmtKb1hLU29yN2FNNjlTc3RDQlY0Ymp3cTNEV0MxSGR5MldUb3BfSTZ2Nm1CetIBVEFVX3lxTE5pVEtJTjBFdWZERnJYd3BCemVXMnF2RS1tak1obmNXNmtKb1hLU29yN2FNNjlTc3RDQlY0Ymp3cTNEV0MxSGR5MldUb3BfSTZ2Nm1Ceg?oc=5" target="_blank" rel="noopener">케이앤제이피엠, 울산에 550억 투자해 반도체 세정제 공장 건설</a></li>
+</ul>
+<p>반도체 핵심 소재 국산화에 기여할 연 2만톤 생산시설 구축</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1KV2l4S01YZk1FeWdaRzBoVHk2NDlSQlVIRkZzQS1GblRTMXR2S1dIT3p6WElIRVdmNEJuM1ZydU41V0NTVmdyMFVrUVliWXgxd21QOVh2Z21ZcHNKT1RDUnpuRS10bXdrMnNxanBtcHU1Y0hy0gF0QVVfeXFMTUpXaXhLTVhmTUV5Z1pHMGhUeTY0OVJCVUhGRnNBLUZuVFMxdHZLV0hPenpYSUhFV2Y0Qm4zVnJ1TjVXQ1NWZ3IwVWtRWWJZeDF3bVA5WHZnbVlwc0pPVENSem5FLXRtd2syc3FqcG1wdTVjSHI?oc=5" target="_blank" rel="noopener">현대모비스, 반도체·로봇 분야 투자 확대 계획 발표</a></li>
+</ul>
+<p>미래 성장동력 확보를 위한 핵심 분야 투자 강화</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE5VN3Zla182aTJjU1VTTm1UOEVud25BRHI5NVVXcWxaUWNMTzhUYUl5bnBwRHRNdmRjZzZiSjgxejlzY2RscVAtTVRUT1NPN2J2RFM0WFpNaTUyOWttWUl4dVlLLVdjcEIyaHd6dVdZM1hMUQ?oc=5" target="_blank" rel="noopener">삼성전자, HBM 생산 3배 증산으로 AI 반도체 주도권 확보</a></li>
+</ul>
+<p>AI 반도체 수요 급증에 대응한 HBM 메모리 대폭 증산</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNU0ZHMlg4NHIxQXdqVnJacW03NWlkN0ttMXRSMTBIb3ZlNGJkQXItWUFSNGZEMXRuS0ExbU12a1dMb1E1ZTk0OTc2QkxjMVAzNnMxLU85TzF4ZGJIbExBWjR1SVN4d25Uanl4WWpOVERRM19uZnZITm1Ibk1ucWVFRnh6eHFVdTdx?oc=5" target="_blank" rel="noopener">삼성·SK하이닉스 HBM 올인으로 DRAM 가격 100% 폭등</a></li>
+</ul>
+<p>AI 반도체 공급망 위기로 메모리 가격 급등 현상 발생</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>국내 반도체 장비업체들이 SK하이닉스 등 대형 반도체 업체와 검사장비 공급 계약을 잇따라 체결하며 실적 개선 기대감이 높아지고 있습니다. HBM 등 고성능 메모리 생산 확대에 따른 장비 수요 증가가 주요 배경입니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9XNWNkUnM3b0FfcDdQZkJuRHJZTU1XV3FJNjF3MWZ5ekx5amFwM2FvWEo5eVFsUVExUkdCdlFKalAtWW4wZkI2M2tfZUtudHM?oc=5" target="_blank" rel="noopener">미래산업, SK하이닉스와 반도체 검사장비 공급계약 체결</a></li>
+</ul>
+<p>43.8억원 규모의 반도체 장비 계약으로 실적 도약 발판 마련</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9oUHdnZGYwRXp2QlpwTnhEdS1pQkt0U1pGNWxtV0MxNUxYcnllakotVnNuNVA5c2pXbHZvVk5FeGM5Uy1OTmFpYlpPdHVZV1NJYmNyRzdR?oc=5" target="_blank" rel="noopener">SK하이닉스, 테스에 반도체 장비 주문</a></li>
+</ul>
+<p>HBM 생산 확대에 따른 검사장비 수요 증가</p>
+
+<h3>EPC / 수주</h3>
+<p>AI 반도체 소재 공급계약과 유럽 슈퍼컴퓨터 구축 프로젝트가 진행되고 있습니다. 그린생명과학이 140억원 규모의 AI 반도체 소재 공급계약을 체결했으며, 유럽에서는 2026년 운영 예정인 HammerHAI 슈퍼컴퓨터 계약이 체결됐습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE5nTER2cEN4TWdJNzVHc3RfM2NSY0haQ2tKOWNzUFNjTTd5MXdRXzhRLWEyZ3dSbVVlSmI0d0M2cjBmQUh6QnU5c2FfOWZtREhNT0E?oc=5" target="_blank" rel="noopener">그린생명과학, 140억원 규모 AI 반도체 소재 공급계약 체결</a></li>
+</ul>
+<p>AI 반도체 소재 시장 진출을 위한 대규모 공급계약 확보</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/eurohpc-ju-signs-contract-with-hpe-to-deploy-hammerhai-supercomputer-at-hlrs-in-stuttgart-germany/" target="_blank" rel="noopener">유럽 EuroHPC JU, HPE와 HammerHAI 슈퍼컴퓨터 구축 계약</a></li>
+</ul>
+<p>2026년 하반기 운영 예정인 고성능 컴퓨팅 시스템 구축</p>
+
+<h3>데이터센터 신축</h3>
+<p>글로벌 데이터센터 건설이 활발히 진행되고 있으며, 마이크로소프트가 덴마크에서 2단계 건설에 착수했고 독일 동부 국경지역에 360MW 규모 데이터센터 캠퍼스가 계획되고 있습니다. 국내에서는 LS에코에너지가 아세안 데이터센터 전력 인프라 시장 진출을 본격화하고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/microsoft-commences-second-phase-of-data-center-construction-in-k%C3%B8ge-denmark/" target="_blank" rel="noopener">마이크로소프트, 덴마크 쾨게에서 데이터센터 2단계 건설 착수</a></li>
+</ul>
+<p>올해 중 클라우드 리전 출시 계획과 함께 데이터센터 확장</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/360mw-data-center-campus-planned-on-germanys-eastern-border/" target="_blank" rel="noopener">독일 동부 국경지역에 360MW 규모 데이터센터 캠퍼스 계획</a></li>
+</ul>
+<p>프랑크푸르트 외곽 지역에 대규모 데이터센터 단지 조성</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE1JQlA1a1hFb1BXaDcwYUNYNHhISndFSXZpS2VybDZxT2lsM0FEY0tqd0VwaFk4Rk5RSGYxTUlkZlhGSUh2UWFUU2RPS0VUSWVWVVVKMlFrSDNoSEx4d2VIbTZQRzdMYm9jYnVlb0FpZw?oc=5" target="_blank" rel="noopener">LS에코에너지, 아세안 데이터센터 전력 인프라 시장 공략</a></li>
+</ul>
+<p>동남아시아 데이터센터 전력 인프라 시장 진출 본격화</p>
+
+<h3>DC 전력</h3>
+<p>AI 기술 확산으로 데이터센터가 급속히 증가하면서 전력 인프라 시장이 크게 성장하고 있습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1rTF9KU0ZBdk96Q3Y3ZmtoWmhBbWJDTVhBZEVWNFE1amZxZVZTYTNRa2VwY21xa3pILTNRUUZDRkJRLVROenlBdks5bk45bW9hNnRv?oc=5" target="_blank" rel="noopener">AI 기술 확산으로 데이터센터 전력 인프라 시장 급성장</a></li>
+</ul>
+<p>데이터센터 증가에 따른 전력 인프라 수요 확대</p>
+
+<h3>공기 / 원가 / 변경관리</h3>
+<p>미국에서 46억달러 규모의 SR400 P3 인프라 프로젝트가 진행되고 있으며, 해상풍력 발전 프로젝트들이 완공 및 가동에 들어가고 있습니다. AI 챗봇의 오류가 인프라 프로젝트에 미치는 리스크에 대한 우려도 제기되고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/georgia-sr400-p3-infrastructure-project/814967/" target="_blank" rel="noopener">조지아주 46억달러 SR400 P3 인프라 프로젝트 추진</a></li>
+</ul>
+<p>16마일 유료도로 프로젝트를 민관합작으로 건설 및 유지관리</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/revolution-wind-comes-online-vineyard-wind-completes-construction/814972/" target="_blank" rel="noopener">Revolution Wind 해상풍력 가동, Vineyard Wind 1 건설 완료</a></li>
+</ul>
+<p>700MW와 800MW 규모 해상풍력 프로젝트 연이어 완공</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/ai-hallucinate-construction-data-infrastructure-technology/814966/" target="_blank" rel="noopener">AI 챗봇 오류가 인프라 프로젝트에 미치는 리스크 경고</a></li>
+</ul>
+<p>잘못된 추론 기반 보고서로 인한 프로젝트 책임 문제 제기</p>
+
+<h3>자재 / 노무</h3>
+<p>중동 지역 분쟁이 반도체 산업에 미치는 영향으로 원자재 부족과 연료비 상승이 중국 반도체 공급망을 교란시키고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/middle-east-turmoil-materials-shortage-fuel-price-hike-disrupting-chip-industry/" target="_blank" rel="noopener">중동 분쟁으로 반도체 원자재 부족과 연료비 상승 발생</a></li>
+</ul>
+<p>장기화된 중동 전쟁이 반도체 비즈니스에 재앙적 영향 우려</p>
+
+<h3>M&amp;A / 사업재편</h3>
+<p>Synopsys가 Ansys 인수 완료 후 첫 번째 통합 제품을 선보이며 EDA 시장에서의 경쟁력 강화에 나서고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/synopsys-shows-off-first-synopsys-ansys-products/" target="_blank" rel="noopener">Synopsys, Ansys 인수 후 첫 통합 제품 공개</a></li>
+</ul>
+<p>10월 인수 완료 후 Synopsys Converge에서 통합 제품 시연</p>
+
+<h3>AI / 반도체 트렌드</h3>
+<p>제조업에서 DX에서 AX로의 전환이 가속화되며, 엣지 AI와 로봇공학, 디지털 트윈 기술이 융합된 자율 제조 시스템의 부상이 예고되고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/from-dx-to-ax-aw-2026-signals-the-rise-of-autonomous-manufacturing/" target="_blank" rel="noopener">AW 2026에서 자율 제조 시스템 부상 신호</a></li>
+</ul>
+<p>엣지 AI, 로봇공학, 디지털 트윈 융합으로 물리적 AI 기반 제조 시스템 구현</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[MS, 덴마크 쾨게 데이터센터 2단계 착공] 전력 공급 및 냉각 인프라 확보 관련 리스크 존재 가능.</li>
+<li>[정부, AI반도체에 5년간 50조원 투입 계획] 민간 자금 매칭 여부 및 정책 지속성이 주요 변수.</li>
+<li>[삼성전자, HBM 생산 3배 증산·HBM4 비중 50% 확대] HBM 시장 전반의 공급 부족 상황에서 고객사별 물량 배분 이슈 존재.</li>
+<li>[그린생명과학, 140억원 AI반도체 소재 공급계약] 신규 분야 진출에 따른 기술력 및 공급 안정성 검증 필요.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>덴마크 클라우드 리전 정확한 출범 시점 및 추가 투자 규모 확인 필요.</li>
+<li>올해 10조원 집행 계획의 구체적인 투자처 및 일정 확인 필요.</li>
+<li>엔비디아 등 주요 고객사와의 HBM4 공급 계약 체결 여부 확인 필요.</li>
+<li>미국 테라다인 출신 사외이사 선임 후 글로벌 영업 확대 계획 점검 필요.</li>
+<li>계약 상대방 및 구체적인 소재 품목 공개 여부 모니터링 필요.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/5건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-03-17T21:39:17.251256+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>

@@ -214,5 +214,14 @@
     "top_headline": "캐나다 Virtual Grid, BESS 포함 모듈형 DC 프로토타입 공개",
     "sk_headline": "SK에코플랜트, 반도체 전문인력 양성 프로그램 확대",
     "article_count": 39
+  },
+  "2026-03-18": {
+    "date": "2026-03-18",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "MS, 덴마크 쾨게 데이터센터 2단계 착공",
+    "sk_headline": "",
+    "article_count": 39
   }
 }
