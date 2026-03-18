@@ -223,5 +223,14 @@
     "top_headline": "MS, 덴마크 쾨게 데이터센터 2단계 착공",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-03-19": {
+    "date": "2026-03-19",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "테라울프, 플루어와 켄터키 3조원 규모 데이터센터 사전공사 계약",
+    "sk_headline": "AI 딥테크 생태계 구축하며 IPO 철회",
+    "article_count": 39
   }
 }
