@@ -241,5 +241,14 @@
     "top_headline": "Ark DC, 바르셀로나 45MW 데이터센터 구축 진출",
     "sk_headline": "AI 딥테크 협력 확대 vs IPO 중복상장 규제 딜레마",
     "article_count": 39
+  },
+  "2026-03-21": {
+    "date": "2026-03-21",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "SK에코플랜트 IPO 철회, FI와 1조원 회수협상 진행",
+    "sk_headline": "IPO 포기, 1조원 FI 매입 협상 진행",
+    "article_count": 39
   }
 }
