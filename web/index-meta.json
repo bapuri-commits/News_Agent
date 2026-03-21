@@ -250,5 +250,14 @@
     "top_headline": "SK에코플랜트 IPO 철회, FI와 1조원 회수협상 진행",
     "sk_headline": "IPO 포기, 1조원 FI 매입 협상 진행",
     "article_count": 39
+  },
+  "2026-03-22": {
+    "date": "2026-03-22",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "AC/DC 컨버터, 안전성과 유연성 위해 외장형으로 전환 추세",
+    "sk_headline": "IPO 철회, 1조원 FI 회수 협상 난항",
+    "article_count": 39
   }
 }
