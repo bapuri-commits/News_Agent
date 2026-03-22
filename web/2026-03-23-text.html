@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-03-23 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-03-23.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-03-23</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-03-23</h1>
+
+<blockquote>데이터센터 재생에너지 배치 새로운 플레이북 강제 / 삼성·SK하이닉스 구글·MS와 HBM 수조원 장기계약 / 에코랩, KKR로부터 쿨IT 7.2조원에 인수</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. 데이터센터 재생에너지 배치 새로운 플레이북 강제</h3>
+
+<p>데이터센터가 재생에너지 배치에 새로운 플레이북을 강제하고 있음. 유틸리티 기업들이 압박받고 있음.</p>
+
+<p><strong>영향</strong>: 데이터센터 전력 수요 급증으로 유틸리티 기업들의 재생에너지 조달 방식 변화 불가피</p>
+<p><strong>리스크</strong>: 전력 인프라 부족으로 데이터센터 구축 일정 지연 가능성</p>
+<p><strong>확인 필요</strong>: 주요 유틸리티 기업들의 재생에너지 투자 계획 발표 모니터링</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/opinions/how-data-centers-are-forcing-a-new-playbook-for-renewable-deployment/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>2. 삼성·SK하이닉스 구글·MS와 HBM 수조원 장기계약</h3>
+
+<p>HBM 패권 전쟁에서 삼성전자와 SK하이닉스가 구글, MS와 수조원 규모 장기 동맹 체결. 구체적인 계약 금액 미확인.</p>
+
+<p><strong>영향</strong>: 메모리 반도체 업체들의 장기 수요 가시성 확보로 실적 안정성 향상</p>
+<p><strong>확인 필요</strong>: 구글/MS의 HBM 구매 계약 규모 및 조건 구체화 발표 확인</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSTNHdkxwallWcHA4TFpvcFFXcUZJZEhzV2hudklDYndkODlVR3dlTTZYeXE2Q1pDYU8wUWMyenI4b1hoTVpPRElVZWhtOFNrQUJYaEZKaWwtYTFXMW1ZR1JjaUdwUkF0RkZtcjFuRUludlllYnk5TnU4ZjE4UFdtWTdWTjI2SjEx?oc=5" target="_blank" rel="noopener">글로벌이코노믹</a></p>
+
+<h3>3. 에코랩, KKR로부터 쿨IT 7.2조원에 인수</h3>
+
+<p>에코랩이 KKR로부터 냉각업체 쿨IT시스템스를 약 47억5000만달러(약 7조1500억원)에 현금 인수. 거래는 2026년 3분기 중 완료 예정. 쿨IT의 향후 12개월 예상 매출 약 5억5000만달러.</p>
+
+<p><strong>영향</strong>: AI 데이터센터 액체냉각 시장 급성장에 대응, 에코랩의 데이터센터 냉각 솔루션 사업 강화</p>
+<p><strong>리스크</strong>: 인수가격이 EBITDA의 29배로 높은 밸류에이션 부담</p>
+<p><strong>확인 필요</strong>: 3분기 거래 완료 및 통합 시너지 구체화 계획 발표</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE95UGdFMjJyUFhqcHVLY3JoRzVQM3NoRkRieEIxVE1wSzRPbHkwSU1BNlBfM0xiTkxTZFhjN3Y5TmpKd0dTTzZGSGJidEhJcnhzeHRGUA?oc=5" target="_blank" rel="noopener">v.daum.net</a></p>
+
+<h3>4. 리사 수 방한, 삼성과 HBM4 턴키 계약 체결</h3>
+
+<p>리사 수 AMD CEO가 삼성전자 평택사업장 방문, 차세대 AI 메모리 업무협약 체결. 삼성전자가 AMD 인스팅트 MI455X에 HBM3E(속도 13Gbps, 대역폭 3.3TB/s) 최우선 공급. 정부는 K-엔비디아 육성에 50조원 투입, 올해만 10조원 규모.</p>
+
+<p><strong>영향</strong>: 삼성전자의 메모리-파운드리 턴키 역량 입증으로 종합반도체 기업 위상 강화</p>
+<p><strong>리스크</strong>: 국산 NPU 기업들의 글로벌 경쟁력 확보 시점이 관건</p>
+<p><strong>확인 필요</strong>: AMD의 삼성 파운드리 위탁생산 구체적 제품 및 일정 발표</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE9XWlE5Zmd1Y0tIX1Vnd05QUU1aUmJTTkJwVGFxWDdydlVtZDQyUVlsZW9XeDlUdTFUeVZKV1FPSGR0UkFFbDFZVXBFNkUxUVpiSEY4S3ZULUF3TFdwM1E1cnplX1g?oc=5" target="_blank" rel="noopener">디지털데일리</a></p>
+
+<h3>5. 마이크론 실적 196%↑, 5년 장기계약 새 표준화</h3>
+
+<p>마이크론 2분기 매출 238.6억달러로 전년비 196.4% 증가. 삼성전자 올해 영업이익 예상치 97조7100억원(전년비 353.5%↑). 마이크론은 주요 고객 수요의 50-67%만 충족 가능하다고 밝혀 2030년까지 공급부족 전망.</p>
+
+<p><strong>영향</strong>: 메모리 업계 1년 단위에서 5년 장기계약으로 패러다임 전환, 수십조원 시설투자 리스크 경감</p>
+<p><strong>리스크</strong>: 공급부족 지속시 고객사 이탈 또는 대체 공급선 확보 움직임 가능</p>
+<p><strong>확인 필요</strong>: 삼성/SK하이닉스의 구체적인 5년 LTA 계약 조건 및 고객사 발표</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE00cE1iemZLbWVPRVk3OTJ6d1c4ZmRJdWNfY3ZaWGRtNnFreHQxRk9MV25KUTRMdE9oaXVkaXVrUWlaYTM0WW9WUGdnV2dxdFR2c2ZvUXY2eXM1QkxJamM5UzJzcGkxRzczMFE?oc=5" target="_blank" rel="noopener">뉴스1</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>SK에코플랜트 AI 인프라 밸류체인 차별화</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> 기사에서 &#x27;AI 인프라 밸류체인&#x27; 차별화된 가치를 언급하고 있어 반도체/AI 인프라 관련 사업 강화 의지를 시사함. 다만 구체적인 수주 규모나 믹스 변화에 대한 정량적 정보는 제공되지 않음.</li>
+<li><strong>IPO/경쟁사</strong> AI 인프라 밸류체인에서의 차별화된 가치 제시는 관련 시장에서의 경쟁력 강화 노력으로 해석됨. IPO나 포트폴리오 정리에 대한 구체적 언급은 없음.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE54UG11azhPS2ptYUF4MExTa2dMS2w1NjZ4WWExQVNmeThldDRBdFV4TEE3OGwxMDF1c0RNdlpMX0Fudk03bmJ5WVJWUXlHMFNEN21Z?oc=5" target="_blank" rel="noopener">네이트</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>삼성전자가 2026년 110조원 규모의 AI 반도체 투자를 발표하며 반도체 업계의 대규모 설비투자 경쟁이 본격화되고 있다. 메모리·파운드리 양 부문에서 가격 상승과 수요 증가로 반도체 업계 전반에 긍정적 전망이 확산되고 있다. 중동 전쟁 등 지정학적 리스크가 일부 우려되지만, AI 수요 증가에 따른 반도체 투자 열풍이 주도하는 상황이다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE5IREVPaWwyalpjWWZzZ3NLZHlSaENSUndNTTdwV1RjWW4xZ0U5bDZFeVlPb2V6Tl80Tmdla0ZXbm5RWGlrdjRlYmJ3d29DTTY1NFNUY3J30gGaAkFVX3lxTE9SVlFrTmpVTWh1S2l6dkRSSnM1cng0OEJ6aU4tX1FSeTlvVlRKb3NOX0JPcHg1QjBSdnNhRWJldmk3SGJfbEVOMjRBU3dJaE83LXVtbnozN25IYzhWYTdiMWJtUnhZakQ1Sm1xcGRCOE5fUGVPLTdSNEdqczVhejFjRlR3QlFTVm1PYWoyS1QxVHpMb05QenROVlFlVzdUWFZrRWw1YmlsUzhqbXNOclBWcU16bHk3bk9IZExlWklBZVY3cU13YzNzTWVLUTZnZmlkbzM1d3gzSG5rQ0hxQUhRZWwweFAtQ05tUkVTSndFM18wa093RFNYWnNDSzBFOWd1b09raXdLSTRBWTNFVVk4RHFTTWZNZnVLUQ?oc=5" target="_blank" rel="noopener">중동 전쟁이 반도체 생산에 제약 우려</a></li>
+</ul>
+<p>중동 전쟁으로 인한 반도체 생산 제약과 투자심리 위축 가능성이 제기되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE41eXZJREJOMWF1ekpOVUZYRUpMcERtU1FTZXJicUNVb1RRYnQ0TXUtOGU3a3ZGaVhnU0lBdFZIVUw5OVE3dUJ6Q2dTRGhDUG5LSGZJMjRuTE9NdGFvZFh1MDRjNXR1VnZsWEl0T9IBcEFVX3lxTE1fYVEzal9FdlJhT0VVYXlOUS1IeDJkaGdaQXNZUzdLVXpZdWI0OFBhMVpuOTRXRkRIMTRiRi1yTkwwb24zLTk0TFJsZndfLTJvNkhTRldqZS1TOU82MFE0ZDB1clZvN19SWmk2NUQ2OUw?oc=5" target="_blank" rel="noopener">삼성전자, 110조원 반도체 집중투자로 사업 구조조정</a></li>
+</ul>
+<p>삼성전자가 반도체에 110조원 올인하며 세트 사업은 구조조정에 나선다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiQEFVX3lxTFBqUjI0RGIxWS1UMGkwRkFUM1JNQjRVcENjRUJKVzRKaUkxbF9hWWdIb2ZjbXRzUGtyMjVLb2h4Z0c?oc=5" target="_blank" rel="noopener">삼성전자 2026년 AI 반도체에 110조원 투자 계획</a></li>
+</ul>
+<p>삼성전자가 2026년 AI 칩 역량 강화를 위해 전년 대비 22% 증가한 110조원을 투입한다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1EUTdDRTVXeXppSk45VlA4N0RrRUVrTHBlM3RfQ2loMDFSQk1Wd2FLbXQyME5QcUlMMkxOX29jU09BTXluSGdVZk9peVZjcHBOZUtEUnJBNXdtSVZZb1Y3a0k3TTBVS1l0b2V2TUJwbnd6N1nSAXdBVV95cUxQQWs5UzJQZGgtNm5uV1J6TFJIbS1fLVN3NHp3Q3M4b2ZnTk1RdGFpMnJqM3JndlY3Q1RKZF9NbjRYVm5uSXZwajNHdk12UEJfTjJnOG9rRmdnQk1uU0ZpWDlrS0tjQVYwZVRrTkxSX05ubFI3dDR1dw?oc=5" target="_blank" rel="noopener">브이엠, 반도체 투자 수혜로 실적 호조</a></li>
+</ul>
+<p>브이엠이 반도체 투자 확대 수혜를 본격적으로 받으며 예상을 뛰어넘는 실적을 기록했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE14R05iektVbTM1NTBfSmwwU0lUWnpvSmJQYnhoS1Z6YVpPdU40MUlndV9WcGxjeXF1OFI5bWtJRTg5bS1feHNXaG9sdUZyOGpOSENkY0d5ZlkyajFDMTJGcU9fclpnZ3BJLTJSeg?oc=5" target="_blank" rel="noopener">엔비디아·AMD, 한국 반도체 기업과 동맹 강화</a></li>
+</ul>
+<p>젠슨 황과 리사 수가 삼성전자·SK하이닉스와의 K-반도체 동맹에 사활을 걸고 있다</p>
+
+<h3>첨단 패키징</h3>
+<p>SK하이닉스가 AI 인프라 조직을 확대하며 HBM 패키징 분야에서의 패권 확장에 나서고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMi9wFBVV95cUxOcnRRdFE4SENBWU1jaFBCSWhEa0lOelF4dXRUd1Mtdlo0SndtUUF1RDFaZDNwMVdQWHNOMUZhNmpmcWl6SjZ2RnI2b3NKUWdINGRpUldzMHg0dG5wVy1lSERocThwdERGdHI1eTdKc2gweXFFclFZdmNuNkY5SEF4S290RzVlUkM2XzdPYzJUWE5iZ2l2LWdVVjVnY1c5VXNsZlNhUFRxMlpEVGhNME5HU19MRVhURmNpaTV0SW9VbDdXRVNPNFVZczk1aDZBQzNyU09URFZDUmMtZjlFNThGRU5hWlJWQmlxMlZrMDRVTmRjcnp1bGlF0gH6AUFVX3lxTFB6bWlyY0FhUGliNE9xRGdHbzNtTUtaQzJOMUVpMHdfckNOUkwwVVVMMC14NG9VbGNtd3VmanZULU9VZ1Zvb0F6WHhsV3otcUFIb1E5LTM0N20wbldzUS1FbDYyMnBKU3drSTFPa2lUbEZGTEVWX0JnbWgxRlRyU3AwQW50OXd6N28tU3VFVGZwYkxCXzlsd1VMS2NfcTBraUFWSnNFUGZ6YWNKLXk5dmdVTnA1RmUzR1hrclExSkRHU3hsQVNnM3NucGxOQUlMUEVRWE1rMF9hYi1Bc0hnRmppM2pSbXFOOTBXYmxCci0xbWl2RENNZktGZVE?oc=5" target="_blank" rel="noopener">SK하이닉스, AI 인프라 조직 확대로 HBM 패권 강화</a></li>
+</ul>
+<p>SK하이닉스가 AI 인프라 조직 외연을 확대하며 HBM 패권 확장을 전면에 내세우고 있다</p>
+
+<h3>데이터센터 신축</h3>
+<p>데이터센터 관련 컨퍼런스와 플랫폼이 기술·산업·글로벌을 연결하는 대표적인 DC 플랫폼으로 확장되고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE80MHNIREZXQkYzdXdjUldLYVdtLTVRWVFpZnh0cnBNU3Q5SjhZTGxZU3AxLXNzb2F0dkZKdUVWZF9PY2RJakpMQUVkSVd5MnJxdGpmSXUwT1dCMVkxYk5laE90OVc2SERVc2c?oc=5" target="_blank" rel="noopener">데이터센터코리아 컨퍼런스, DC 대표 플랫폼으로 확장</a></li>
+</ul>
+<p>데이터센터코리아 컨퍼런스가 기술·산업·글로벌을 잇는 대표 DC 플랫폼으로 확장하고 있다</p>
+
+<h3>DC 전력</h3>
+<p>AI 데이터센터의 급격한 확산으로 전력 공급 부족 문제가 심각해지고 있어, 5000억 달러 규모의 투자에도 불구하고 전력난이 발생하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTkFENUxSRm1zODZ4VjVaUTFPYjhBc01ZVlZOMTdrM2NON1RkSmItZTV1QWNiNnFfdVFEbFFsM2NWMnpHLXM0T1QxLWFuYmx3eVBtRnhLMDJTODRyWlg5TWtiVGgwWGppbUVwZml4YmU1MXd6R0xETU9aNTU0VDh6cWEwZnMyWFB6?oc=5" target="_blank" rel="noopener">AI 데이터센터 전력난으로 투자 역설 발생</a></li>
+</ul>
+<p>5000억 달러 규모의 AI 데이터센터 투자에도 불구하고 전력 공급 부족 문제가 심각해지고 있다</p>
+
+<h3>DC 냉각</h3>
+<p>에코랩이 쿨IT를 인수하며 데이터센터 냉각 사업 강화에 나서는 등 AI 인프라 전쟁이 냉각 분야로 확산되고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE95UGdFMjJyUFhqcHVLY3JoRzVQM3NoRkRieEIxVE1wSzRPbHkwSU1BNlBfM0xiTkxTZFhjN3Y5TmpKd0dTTzZGSGJidEhJcnhzeHRGUA?oc=5" target="_blank" rel="noopener">에코랩, 쿨IT 인수로 데이터센터 냉각 사업 강화</a></li>
+</ul>
+<p>에코랩이 쿨IT를 인수하며 AI 인프라 전쟁에서 데이터센터 냉각 사업을 강화하고 있다</p>
+
+<h3>EPC / 수주</h3>
+<p>삼성이 턴키 수주에 성공하며 50조원 규모의 AI 반도체 생태계가 본격 가동되고 있다. 리사 수의 러브콜과 GTC AI 동맹으로 K-반도체의 장기계약 전환이 가속화되고 있다. 경북도를 중심으로 AI 기반 제조업 재편도 추진되고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE9XWlE5Zmd1Y0tIX1Vnd05QUU1aUmJTTkJwVGFxWDdydlVtZDQyUVlsZW9XeDlUdTFUeVZKV1FPSGR0UkFFbDFZVXBFNkUxUVpiSEY4S3ZULUF3TFdwM1E1cnplX1g?oc=5" target="_blank" rel="noopener">삼성 턴키 수주로 50조원 AI 반도체 생태계 가동</a></li>
+</ul>
+<p>리사 수를 맞이한 삼성이 턴키 수주에 성공하며 50조원 규모의 AI 반도체 생태계가 본격 가동되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE00cE1iemZLbWVPRVk3OTJ6d1c4ZmRJdWNfY3ZaWGRtNnFreHQxRk9MV25KUTRMdE9oaXVkaXVrUWlaYTM0WW9WUGdnV2dxdFR2c2ZvUXY2eXM1QkxJamM5UzJzcGkxRzczMFE?oc=5" target="_blank" rel="noopener">GTC AI 동맹으로 K-반도체 장기계약 전환 가속</a></li>
+</ul>
+<p>GTC AI 동맹과 리사 수의 러브콜로 대체 불가한 K-반도체의 장기계약 전환이 가속화되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMi3wRBVV95cUxNdHZxN2x6VVRrbFJQNVZ4Z2k5OTJhajAxLVNTeVJPZDVRQTRZazZpeXdTSVh1dl9wVmczU0laNlBFdmRybDQyQ3BPNUFGdnQ2Y3VJc3A4bXNLam5WSHdLTkkxYU53VE9lcVFTM2VvUkFJenVhdzJrT2JEU3pBUlNqUVQ2RENGMlRSNUE2LU85RlpKamtaTVh5VlIxUEEzZThQTzIwWDNZUVgxSkFwdmpxLVVSSTBDWVFBODNVYkJtWl8zQTYtRF9oQTY1bE1XQVhFUzVXRHpVVnZURnR1NkhyZjBWMzNrWjg4MnFPYTFORnhGQ2ZvQzZ6NHNVaU9EajhlbzNMNThEdjlJMGFlczF3SUtlbXVYQlRTUUhUQk80Nk8taXl1Sy1VcVIyRnhObTdtdEpDdkV3TDdRYWVjcmhoOG5uTlE3dFNNTHoxOGZscUZIckxJTlRiQ0dTenlMcGVheFZQOWczdTNxMVllRm5WY2lUdXN5QjFubXFTTjZRUGVsVnA5bTBQOGJyTHFnRFlJQ093VkEzRkh5RUVPdkEyTWx0S3EwUmFYbVdmN25NS1B2dFFlOWd5aHBVV3VyR1d4MnpyZkNyOG8zWWkzU3U4SklRQU45VUhlWi0tX19KejJHaldmM2VLQ3p1b1JiQ1dnc0FIOTZTeGZHQjRpUmhmQ1NIUUFsM0J0QmJoVTM3RGpZQ0lEVFpnTXRtTFdtQ1VhWWQ4ZmNsR1AyUjNoMlNweU1IVnYxUDUyc3J4bWEtR2pQUTVnSDUzRVkyRkwwUE1vSWRMaUNUdXNDX2pjenFr?oc=5" target="_blank" rel="noopener">미래산업, 반도체 검사장비 공급계약 체결</a></li>
+</ul>
+<p>미래산업이 3,303만원 규모의 반도체 검사장비 공급계약을 체결하며 해외매출을 확대했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE51d2c3TUZScHg0NVRhanJleVZzXzNLWDNIaHdhVnU1ZlFBV2k4ZTFaeEpmVkxZal8yZ2hTYkRNWlUtZXkzMUM2QW9DMXdITW5TR1ExYlI5VmVOQ2dhRTlJ?oc=5" target="_blank" rel="noopener">경북도, AI로 제조업 재편 추진</a></li>
+</ul>
+<p>경북도가 AI를 활용해 철강·반도체 등 10대 주력산업으로 제조업을 재편하고 있다</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>AC/DC 컨버터가 안전성과 유연성, 크기 최적화를 위해 외장형으로 전환되는 추세를 보이고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/ac-dc-converters-are-coming-out-of-their-hosts-box/" target="_blank" rel="noopener">AC/DC 컨버터, 외장형으로 전환 추세</a></li>
+</ul>
+<p>안전성과 유연성, 크기 최적화를 위해 AC/DC 컨버터가 내장형에서 외장형으로 전환되고 있다</p>
+
+<h3>공기 / 원가 / 변경관리</h3>
+<p>미국에서는 대학 시설 건설이 활발한 반면, 도시 철도 교통 건설은 인구 증가에 비해 뒤처지며 비용 효율적인 버스 고속교통(BRT) 선호 현상이 나타나고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/skanska-texas-biology-building-higher-education-construction/815348/" target="_blank" rel="noopener">스칸스카, 텍사스A&amp;M 생물학 건물 1억6500만달러 수주</a></li>
+</ul>
+<p>스칸스카가 18만5000평방피트 규모의 텍사스A&amp;M 생물학 건물을 내년 착공할 예정이다</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/urban-rail-transit-construction/815299/" target="_blank" rel="noopener">미국 도시철도 건설, 인구증가 대비 부진</a></li>
+</ul>
+<p>미국 도시들이 지하철·경전철 대신 비용 효율적인 버스 고속교통 프로젝트를 선호하고 있다</p>
+
+<h3>자재 / 노무</h3>
+<p>바튼 말로우가 새로운 사업 추진 전략에 맞춰 최고경영진과 임원진의 책임을 조정하는 인사 변화를 단행했다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/barton-malow-c-suite-executive-changes-innovation/815289/" target="_blank" rel="noopener">바튼 말로우, 신사업 전략에 맞춰 임원진 변화</a></li>
+</ul>
+<p>바튼 말로우가 새로운 사업 추진 전략에 맞춰 4명 임원의 최고경영진 및 책임 변화를 단행했다</p>
+
+<h3>기타</h3>
+<p>AI가 공장 자동화를 혁신하고 있으며, 젠슨 황이 &#x27;AI 추론의 왕&#x27;으로 불리며 차세대 아키텍처를 공개했다. DHL과 사우디아라비아 등에서 데이터센터 물류 인프라 확장이 활발히 진행되고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/ee-times-europe-magazine-march-2026/" target="_blank" rel="noopener">AI가 공장 자동화와 운영을 혁신</a></li>
+</ul>
+<p>2026년 3월 EE Times Europe 매거진이 AI의 공장 자동화 혁신과 유럽의 탈위험화 전략을 분석했다</p>
+<ul>
+<li><a href="https://www.eetimes.com/gtc-2026-keynote-long-live-the-inference-king/" target="_blank" rel="noopener">젠슨 황, GTC에서 &#x27;AI 추론의 왕&#x27; 등극</a></li>
+</ul>
+<p>젠슨 황이 Groq 기반 Rubin CPU와 함께 &#x27;AI 추론의 왕&#x27;으로 불리며 획기적인 아키텍처를 공개했다</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/dhl-expands-north-american-logistics-infrastructure-to-meet-data-center-demand/" target="_blank" rel="noopener">DHL, 북미 데이터센터 물류 인프라 확장</a></li>
+</ul>
+<p>DHL이 데이터센터 수요 충족을 위해 올해 10개 창고 사이트를 가동할 예정이다</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/saudi-arabias-edarat-secures-data-center-contract-from-major-regional-bank/" target="_blank" rel="noopener">사우디 에다랏, 주요 지역 데이터센터 계약 확보</a></li>
+</ul>
+<p>사우디아라비아의 에다랏이 주요 지역 데이터센터 계약과 AI 데이터센터 설계·감독 서비스를 선정받았다</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[데이터센터 재생에너지 배치 새로운 플레이북 강제] 전력 인프라 부족으로 데이터센터 구축 일정 지연 가능성</li>
+<li>[에코랩, KKR로부터 쿨IT 7.2조원에 인수] 인수가격이 EBITDA의 29배로 높은 밸류에이션 부담</li>
+<li>[리사 수 방한, 삼성과 HBM4 턴키 계약 체결] 국산 NPU 기업들의 글로벌 경쟁력 확보 시점이 관건</li>
+<li>[마이크론 실적 196%↑, 5년 장기계약 새 표준화] 공급부족 지속시 고객사 이탈 또는 대체 공급선 확보 움직임 가능</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>주요 유틸리티 기업들의 재생에너지 투자 계획 발표 모니터링</li>
+<li>구글/MS의 HBM 구매 계약 규모 및 조건 구체화 발표 확인</li>
+<li>3분기 거래 완료 및 통합 시너지 구체화 계획 발표</li>
+<li>AMD의 삼성 파운드리 위탁생산 구체적 제품 및 일정 발표</li>
+<li>삼성/SK하이닉스의 구체적인 5년 LTA 계약 조건 및 고객사 발표</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 5/6건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-03-22T21:28:00.468472+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>

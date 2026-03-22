@@ -259,5 +259,14 @@
     "top_headline": "AC/DC 컨버터, 안전성과 유연성 위해 외장형으로 전환 추세",
     "sk_headline": "IPO 철회, 1조원 FI 회수 협상 난항",
     "article_count": 39
+  },
+  "2026-03-23": {
+    "date": "2026-03-23",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "데이터센터 재생에너지 배치 새로운 플레이북 강제",
+    "sk_headline": "SK에코플랜트 AI 인프라 밸류체인 차별화",
+    "article_count": 39
   }
 }
