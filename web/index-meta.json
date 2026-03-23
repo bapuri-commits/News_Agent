@@ -268,5 +268,14 @@
     "top_headline": "데이터센터 재생에너지 배치 새로운 플레이북 강제",
     "sk_headline": "SK에코플랜트 AI 인프라 밸류체인 차별화",
     "article_count": 39
+  },
+  "2026-03-24": {
+    "date": "2026-03-24",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "Aedan, 한국 완주에 200MW 데이터센터 개발",
+    "sk_headline": "SK에코플랜트, AI 인프라 밸류체인 강화로 반도체 수혜",
+    "article_count": 39
   }
 }
