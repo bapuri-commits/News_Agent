@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-03-25 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-03-25.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-03-25</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-03-25</h1>
+
+<blockquote>FuelCell Energy, 데이터센터용 12.5MW 모듈형 에너지 솔루션 출시 / SK하이닉스, ASML EUV 장비 12조원 도입 결정 / SK하이닉스, 차세대 D램·HBM 양산 위해 EUV 30대 이상 도입</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. FuelCell Energy, 데이터센터용 12.5MW 모듈형 에너지 솔루션 출시</h3>
+
+<p>FuelCell Energy가 데이터센터 부문을 위한 12.5MW 모듈형 에너지 솔루션을 출시. 수요 대응을 위해 제조시설을 3배 이상 확장할 예정.</p>
+
+<p><strong>영향</strong>: 데이터센터의 전력 공급 안정성과 탄소중립 요구에 대응하는 대안 전원 솔루션으로 시장 확대 예상.</p>
+<p><strong>리스크</strong>: 구체적인 고객사 계약 정보 미확인. 제조시설 확장 투자 규모와 일정 불명확.</p>
+<p><strong>확인 필요</strong>: FuelCell Energy의 구체적인 수주 계약 발표 및 제조시설 확장 일정 확인 필요.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/fuelcell-energy-launches-125mw-modular-energy-solution-for-data-center-sector/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>2. SK하이닉스, ASML EUV 장비 12조원 도입 결정</h3>
+
+<p>SK하이닉스가 ASML로부터 11조9496억원 규모 EUV 스캐너 도입 결정(자산총액의 9.97%). 2024년 말부터 2026년 12월까지 도입 예정. 청주 M15X와 용인 클러스터 Y1에 투입 예상.</p>
+
+<p><strong>영향</strong>: 6세대(1c) D램 공정 전환 가속화 및 HBM 생산능력 확대. AI 메모리 수요 대응력 강화로 시장 지배력 확대 예상.</p>
+<p><strong>리스크</strong>: ASML EUV 수주 잔액 67조원으로 글로벌 수요 폭증. 장비 확보 지연 가능성 및 대규모 투자에 따른 재무 부담.</p>
+<p><strong>확인 필요</strong>: 곽노정 CEO와 MS 스콧 거스리 부사장 회동에서 HBM 공급 계약 구체화 여부 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9TN0k3N0FNaS0xb0ZQUlYxYU92aWFYM0VrcDlkLWZNOEItS1RlTzBzTHFvZVlEeUlwS19jaTM0b0M3YWs5NHhpN2hmc0o1azJQZ0xNeGt3?oc=5" target="_blank" rel="noopener">매일경제</a></p>
+
+<h3>3. SK하이닉스, 차세대 D램·HBM 양산 위해 EUV 30대 이상 도입</h3>
+
+<p>11조9496억원 규모 EUV 장비 도입으로 최소 30대 이상 확보 예상(현재 보유 20대의 2배). 청주 M15X와 용인 클러스터 첫 팹(2025년 2월 클린룸 오픈)에 순차 투입.</p>
+
+<p><strong>영향</strong>: 1c D램 적용 HBM4E(7세대) 2025년 양산 본격화. EUV 레이어 확대로 미세공정 경쟁력 강화.</p>
+<p><strong>리스크</strong>: 구체적인 EUV 도입 대수 미공개. 설비 도입 일정과 양산 램프업 속도가 변수.</p>
+<p><strong>확인 필요</strong>: 2025년 2월 용인 클러스터 클린룸 오픈 및 설비 반입 일정 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE5ZdndDQ3hPemUwSmxfY1dQRDQ2anp1a3IyNkhhbW1Yb2EwTFVGa0d0TEFzSDB1OE1UZE9FZmVTVkZJT2EzVndpZTAzSUdFNFU0aDF2MnBn?oc=5" target="_blank" rel="noopener">지디넷코리아</a></p>
+
+<h3>4. SK하이닉스, 10-15조원 규모 미국 ADR 상장 추진</h3>
+
+<p>SK하이닉스가 전체 주식의 2.4% 신주 발행으로 미국 ADR 상장 추진. 10~15조원 달러 자금 조달 목표. HBM4 2026년 2월 양산 확정, 엔비디아 루빈용 물량 66% 배정받은 것으로 알려짐.</p>
+
+<p><strong>영향</strong>: 코리아 디스카운트 해소로 기업가치 20-30% 상승 기대. 용인 클러스터(600조원)와 인디애나 공장(5.5조원) 투자 자금 확보.</p>
+<p><strong>리스크</strong>: 신주 발행에 따른 기존 주주 지분 2.4% 희석. 미중 지정학적 갈등 시 미국 상장사로서 압박 가능성.</p>
+<p><strong>확인 필요</strong>: SEC 등록 서류 제출 시점 및 구체적인 상장 일정 발표 모니터링.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMickFVX3lxTFB0TlJwc2h2WkJfbG1sTHk0RjhOcTlEbHpoelpxMmxBMFZieWhYWUduaTEwbG93X2h1NG8zZ0wxOFU3ZVI0aE13aVdBdnZDYXMtVWZWanpHaC1GMU5tOTZoS0xmNTdBN0U1Z1lfVmRJckZ5UQ?oc=5" target="_blank" rel="noopener">데일리머니</a></p>
+
+<h3>5. ST-엔비디아, AI 데이터센터용 800V DC 전력 솔루션 개발</h3>
+
+<p>ST마이크로가 엔비디아 800VDC 레퍼런스 디자인 기반 12V/6V 직접 변환 솔루션 출시. GaN LLC 기술로 98% 이상 효율, 2,600W/in³ 전력 밀도 달성.</p>
+
+<p><strong>영향</strong>: AI 데이터센터 전력 효율 극대화로 기가와트급 인프라 확장성 지원. 하이퍼스케일러 전력 아키텍처 표준화 가능성.</p>
+<p><strong>확인 필요</strong>: 주요 하이퍼스케일러(AWS, Google, MS)의 800VDC 표준 채택 동향 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMizgJBVV95cUxQanM0WWl4Q2JUZXRweXZGejFWMU53UU9DOVZMbG9MWXdIWkJtQ2RBbzFLVDlMbFRqZC1iTFlXN094R0E4UmNnbERYeV92REtwcndDNldvX24xYy1JaTl4aU8xbS1MT3R4SVQwd1NUNm55LS0yenZTRDY2eVFIRF9rUjJZTmFrckxaMXJnd1N0SzJlLTd6blMteVpfX21SRW10TWdsblJvQWdiUWd5VC1VTkVBYk8xcG9feGdmSXRIeDE3WVBGbFRVRGtYcFNtUlNLZUsyMGp5Y2dRSG9MVW1ZU1BZZFQ1NzQxczRlekhIemNNc3Y5U0pHTVFhSlFac2RBWkFpVmxnVC13bVhCZUgxUEJtbE5EbGE2aTVydXpsVzR3MndoUDlNZ2ZXUHBMaU5sQkl5SWhMMDZjY1pvUmMtSDdTZ3hWRTM2c09DN3NR?oc=5" target="_blank" rel="noopener">아이씨엔매거진</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 업계의 대규모 투자 확대가 본격화되고 있으며, 특히 AI와 메모리 반도체 분야에 집중되고 있다. 삼성전자의 이재용 부회장이 중국 시안 공장 추가 투자를 검토하고, SK하이닉스가 미국 ADR 상장을 통해 15조원 규모 자금 조달을 추진하는 등 글로벌 경쟁력 확보에 나섰다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTFBlUUhYdmNoWWs4WDlobENFMV9vZEIxa2FOSG9iVGFvbzNxN0RoZjZwUFFQS1ViNTFFQlAtZkl5MzFFWl9uSVRrcU52aW41TXdWN0FFMXN3R1RveGZQZ1lCM2RlRmotOTVkOWpkT1VObE5Lb1Iy?oc=5" target="_blank" rel="noopener">마이크론 우려에 K2 반도체 투자 강화 논의</a></li>
+</ul>
+<p>반도체 K2 기업들이 마이크론 경쟁 우려로 투자 확대 검토 중</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE81TFVHdS1YVm5idmlWT3NkR0twMDFtWjl0Z3RWbTBsUmpwZHZmTW9YdkxpZ3pvT1VObE1VeUNtWFRubi1BblJHUVNKcHRoRXNDaXptTFhCVXVSYU9OS3pwT1pqczZIZUUyeDNmSGd0N2g3cl9TZjhqc29kNlg?oc=5" target="_blank" rel="noopener">중국 경제장관이 이재용에게 투자 확대 환영 의사 표명</a></li>
+</ul>
+<p>중국 경제장관이 이재용 부회장에게 투자 확대와 반도체 공급망 수호 환영</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1wMk9Cd1p2WVFMUlR6UnQzVkM3Y3NmX09ZU293alNVeVY4SFlFWjMzTlNDMUZSdGlVRlFZVGk5NS1Bak5DQTNocVlrTVlqbVJPWGZ6NVRUdVJGdw?oc=5" target="_blank" rel="noopener">이재용, CDF 참석해 시안 반도체 공장 추가 투자 검토</a></li>
+</ul>
+<p>이재용 부회장이 CDF 2년 연속 참석하며 시안 반도체 공장 추가 투자 가능성</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9KYmZmV0tvV0RRTjZQTW1zZFBRUTA4Tmt1RmIzb1gybzZLUHFtR2hBWWNLaGtyck5kX0ZhVi1ram9zYmgtand5SWJwbnl4bmVydWVQMzVFSGFGbmFIY09abFB4bDh6ZmpWV0E?oc=5" target="_blank" rel="noopener">엔비디아 광반도체 6조 투자로 광통신주 급등</a></li>
+</ul>
+<p>엔비디아의 광반도체 6조원 투자 발표로 광통신 관련주들이 상한가 행진</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTFB0TlJwc2h2WkJfbG1sTHk0RjhOcTlEbHpoelpxMmxBMFZieWhYWUduaTEwbG93X2h1NG8zZ0wxOFU3ZVI0aE13aVdBdnZDYXMtVWZWanpHaC1GMU5tOTZoS0xmNTdBN0U1Z1lfVmRJckZ5UQ?oc=5" target="_blank" rel="noopener">SK하이닉스, 미국 ADR 상장으로 15조 자금 조달 추진</a></li>
+</ul>
+<p>SK하이닉스가 HBM 경쟁력 강화를 위해 미국 ADR 상장을 통한 대규모 자금 조달 계획</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE14V3htN3dHSWtJcDZ6cFZhVWFpV29rbllwNUtVSW1hc2NnLUl0SmJqeWxyZS1yQk1kb3Z3eDk0dE1DbGdpQlR4NWdSeXpld0xtTC03cW5ZVXhic29SdUo1N1J1QzZCUmFybm0w?oc=5" target="_blank" rel="noopener">LG이노텍, 피지컬 AI 겨냥 반도체 기판 투자 확대</a></li>
+</ul>
+<p>LG이노텍이 피지컬 AI 시장을 겨냥해 반도체 기판 사업 투자를 확대</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTFAyNXluNEw1U1lXMXBjZDhPVGlNellxVExHaVRBZThiVGhkMlExUFlBOVpCbWRLTDBuVjRyZEZWbTVKeGphdDNvN0dlWWVNMGR6ZUR1VEJhblo3MVdTdkFIdXZHQmdrdw?oc=5" target="_blank" rel="noopener">당진에 삼성 AI 데이터센터·반도체 클러스터 조성 계획</a></li>
+</ul>
+<p>당진시가 삼성과 AI 데이터센터 및 반도체 클러스터 조성을 통한 산업 재전환 추진</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>SK하이닉스가 HBM과 차세대 D램 생산 확대를 위해 12조원 규모의 EUV 장비 도입을 결정했다. 이는 AI 메모리 반도체 시장에서의 경쟁 우위 확보를 위한 전략적 투자로 해석된다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9TN0k3N0FNaS0xb0ZQUlYxYU92aWFYM0VrcDlkLWZNOEItS1RlTzBzTHFvZVlEeUlwS19jaTM0b0M3YWs5NHhpN2hmc0o1azJQZ0xNeGt3?oc=5" target="_blank" rel="noopener">SK하이닉스, HBM 생산 가속을 위한 12조 장비 투자</a></li>
+</ul>
+<p>SK하이닉스가 HBM 생산 능력 확대를 위해 12조원 규모 장비 투자 결정</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE5ZdndDQ3hPemUwSmxfY1dQRDQ2anp1a3IyNkhhbW1Yb2EwTFVGa0d0TEFzSDB1OE1UZE9FZmVTVkZJT2EzVndpZTAzSUdFNFU0aDF2MnBn?oc=5" target="_blank" rel="noopener">SK하이닉스, EUV 장비 12조원 투자로 차세대 메모리 양산 준비</a></li>
+</ul>
+<p>차세대 D램과 HBM 양산을 위한 EUV 장비에 12조원 투자 계획 발표</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5LQldJWGhlSWV5V2xwYjAzSGpfYmU5WVdLanJtTFRoQzQ1R0RvYjdpMDlKUVVRSTFnN0lQWFVKa3FwNnFReW5Qbk1sMnZWWURsdHdrSEl6TWt3QdIBXkFVX3lxTE8weS0tOTFtR0Z0VGJyQjlxMDdwZ29rSWp4X1dtTTZZVktVQ2d6ZDdSZlNlRDB0R0ZpVnQ2Y1Nqa29hM2RGV0tZRVpmRW1FZy1NT0s4ZlZBdVE3dHF1NlE?oc=5" target="_blank" rel="noopener">하이닉스, HBM 주도권 강화 위한 12조 EUV 장비 도입</a></li>
+</ul>
+<p>HBM 시장 주도권 강화를 목표로 12조원 규모 EUV 장비 도입 결정</p>
+
+<h3>첨단 패키징</h3>
+<p>SK하이닉스가 HBM 생산 경쟁력 확보를 위해 차세대 클린룸을 조기 개방하기로 했다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1xdGdRX0pETDBRMFRCY0hGWGFobkJyZ3hua29xcUhGOEJBbTlQVk42M0lteXhtSWFPWFlpQlc0N25ZMW5yQlNzeWtiX1lLR2c4RDFtTkpTT2hhU3hhdzNSUTdOcWl0Z9IBZkFVX3lxTE1xdGdRX0pETDBRMFRCY0hGWGFobkJyZ3hua29xcUhGOEJBbTlQVk42M0lteXhtSWFPWFlpQlc0N25ZMW5yQlNzeWtiX1lLR2c4RDFtTkpTT2hhU3hhdzNSUTdOcWl0Zw?oc=5" target="_blank" rel="noopener">SK하이닉스, HBM 경쟁 위한 차세대 클린룸 조기 개방</a></li>
+</ul>
+<p>SK하이닉스가 HBM 경쟁력 확보를 위해 차세대 클린룸을 예정보다 앞당겨 개방</p>
+
+<h3>데이터센터 신축</h3>
+<p>글로벌 데이터센터 건설이 AI 수요 증가로 활발해지고 있으며, 전력 인프라와 냉각 시설이 핵심 이슈로 부상하고 있다. 유럽과 미국에서 대규모 데이터센터 개발 프로젝트가 진행 중이며, 한국 기업들도 관련 사업 기회를 적극 모색하고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/digital-realty-plans-milan-data-center-development/" target="_blank" rel="noopener">디지털 리얼티, 밀라노 데이터센터 개발 계획</a></li>
+</ul>
+<p>디지털 리얼티가 밀라노 외곽 부지 매입해 2028년 가동 목표 데이터센터 개발</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9QN3NOMGJfVi0tQmlIM0xOdDRVcnJVWVB3Y2g0Z3FsZ3pXN2drU0VnTmdXblFtNi1YYm1tZkZONnVXbXJ4N3VvbWs5aU1PRU9zQk1yX0V3?oc=5" target="_blank" rel="noopener">이삭그리디언, 미국과 데이터센터 전력 인프라 사업 MOU</a></li>
+</ul>
+<p>이삭그리디언이 미국 Centurion과 데이터센터 통합형 전력 인프라 사업 협약 체결</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiRkFVX3lxTE5icTB3aEhiWjY1alF6bUgtczlnOHNiYlZRRDZKOW5EYVJ5a0c1ZmJnOWVUbUFYZkUyaXBMei0zR01yeGdDQnc?oc=5" target="_blank" rel="noopener">플로원, AI 데이터센터 냉각 인프라 글로벌 시장 확장</a></li>
+</ul>
+<p>플로원이 AI 데이터센터 냉각 인프라 사업으로 글로벌 시장 진출 계획</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFB6UEt2Q21Db1hnNEFoX3Z3OEhGVThya0ZwY0V5VmdDZHVkVi03SlBqTFZUVlA2VXgwNG1mU3NJTHdBWjJmc09aeHZMTnVYTk1oSVM2SE9OUm53M29XaUZKUmRHbFFUek9C0gFsQVVfeXFMUDFxczJnLXNKZjViN1Rjd2FNeWlXaDRHTFl6TkdUYWRSNVFQam5yUTF1T1dJOVRQVVM5bm9iYVFVSWJCWnJvYkdBWWxMaWF1elp0QVY4Wlo4eVVlTGx6THFGNWF0WGtGelIwbGFm?oc=5" target="_blank" rel="noopener">스웨덴, 데이터센터 전력 공급용 SMR 6기 건설 추진</a></li>
+</ul>
+<p>스웨덴이 데이터센터 전력 공급을 위한 소형원자로 6기 건설 인허가 절차 시작</p>
+
+<h3>DC 전력</h3>
+<p>ST마이크로일렉트로닉스가 엔비디아와 협력해 AI 데이터센터용 800V DC 전력 솔루션을 출시했다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMizgJBVV95cUxQanM0WWl4Q2JUZXRweXZGejFWMU53UU9DOVZMbG9MWXdIWkJtQ2RBbzFLVDlMbFRqZC1iTFlXN094R0E4UmNnbERYeV92REtwcndDNldvX24xYy1JaTl4aU8xbS1MT3R4SVQwd1NUNm55LS0yenZTRDY2eVFIRF9rUjJZTmFrckxaMXJnd1N0SzJlLTd6blMteVpfX21SRW10TWdsblJvQWdiUWd5VC1VTkVBYk8xcG9feGdmSXRIeDE3WVBGbFRVRGtYcFNtUlNLZUsyMGp5Y2dRSG9MVW1ZU1BZZFQ1NzQxczRlekhIemNNc3Y5U0pHTVFhSlFac2RBWkFpVmxnVC13bVhCZUgxUEJtbE5EbGE2aTVydXpsVzR3MndoUDlNZ2ZXUHBMaU5sQkl5SWhMMDZjY1pvUmMtSDdTZ3hWRTM2c09DN3NR?oc=5" target="_blank" rel="noopener">ST-엔비디아 협력, AI 데이터센터용 800V DC 전력 솔루션 확장</a></li>
+</ul>
+<p>ST마이크로일렉트로닉스가 엔비디아와 협력해 AI 데이터센터용 800V DC 전력 솔루션 개발</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE01NndyV05FenR1S1E5SXR3SmVEd3dKNDhWczlNcDhaemlIOTNEeTVtdFU3dDJlNUdZTU14ejJZVlZtYTROQTNVOXBQVUJzNHpCR3g4Yk1IQjJjSGtlNExsN215X2o?oc=5" target="_blank" rel="noopener">ST, AI 데이터센터용 800V DC 전력 아키텍처 출시</a></li>
+</ul>
+<p>ST마이크로일렉트로닉스가 AI 데이터센터용 800V DC-12V·6V 전력 아키텍처 출시</p>
+
+<h3>EPC / 수주</h3>
+<p>미국에서 대규모 인프라 프로젝트에 대한 연방 정부 투자가 활발해지고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/feds-funds-west-states-water-infrastructure/815549/" target="_blank" rel="noopener">미 연방정부, 서부 주들에 8억8900만달러 물 인프라 투자</a></li>
+</ul>
+<p>트럼프 행정부가 서부 주들의 물 인프라 개선을 위해 8억8900만달러 지원</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/brent-spence-bridge-spring-groundbreaking-cost-rise/815431/" target="_blank" rel="noopener">44억달러 브렌트 스펜스 브리지 프로젝트 착공 임박</a></li>
+</ul>
+<p>44억달러 규모 브렌트 스펜스 브리지 건설 프로젝트가 봄 착공을 목표로 추진</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[FuelCell Energy, 데이터센터용 12.5MW 모듈형 에너지 솔루션 출시] 구체적인 고객사 계약 정보 미확인. 제조시설 확장 투자 규모와 일정 불명확.</li>
+<li>[SK하이닉스, ASML EUV 장비 12조원 도입 결정] ASML EUV 수주 잔액 67조원으로 글로벌 수요 폭증. 장비 확보 지연 가능성 및 대규모 투자에 따른 재무 부담.</li>
+<li>[SK하이닉스, 차세대 D램·HBM 양산 위해 EUV 30대 이상 도입] 구체적인 EUV 도입 대수 미공개. 설비 도입 일정과 양산 램프업 속도가 변수.</li>
+<li>[SK하이닉스, 10-15조원 규모 미국 ADR 상장 추진] 신주 발행에 따른 기존 주주 지분 2.4% 희석. 미중 지정학적 갈등 시 미국 상장사로서 압박 가능성.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>FuelCell Energy의 구체적인 수주 계약 발표 및 제조시설 확장 일정 확인 필요.</li>
+<li>곽노정 CEO와 MS 스콧 거스리 부사장 회동에서 HBM 공급 계약 구체화 여부 확인.</li>
+<li>2025년 2월 용인 클러스터 클린룸 오픈 및 설비 반입 일정 확인.</li>
+<li>SEC 등록 서류 제출 시점 및 구체적인 상장 일정 발표 모니터링.</li>
+<li>주요 하이퍼스케일러(AWS, Google, MS)의 800VDC 표준 채택 동향 확인.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/5건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-03-24T21:39:33.918288+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
