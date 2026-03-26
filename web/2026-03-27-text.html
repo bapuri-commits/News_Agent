@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-03-27 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-03-27.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-03-27</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-03-27</h1>
+
+<blockquote>Bechtel·Kiewit, 오하이오주 330억불 전력 프로젝트 수주 / 前 Tenstorrent 임원, 일본서 20억불 규모 AI 클라우드 시작 / 한미반도체, HBM TC본더 71% 점유율로 올해 매출 8135억 전망</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. Bechtel·Kiewit, 오하이오주 330억불 전력 프로젝트 수주</h3>
+
+<p>일본 투자로 오하이오주 파이크 카운티에 10GW 규모 발전소 건설. 프로젝트 규모 330억달러(약 48조원). Bechtel과 Kiewit가 EPC 계약자로 선정됨.</p>
+
+<p><strong>영향</strong>: 글로벌 EPC 업체들의 미국 내 대형 전력 인프라 수주 확대. 데이터센터 연계 발전소 프로젝트로 새로운 수주 패턴 형성.</p>
+<p><strong>리스크</strong>: 구체적인 공기와 착공 시기 미확인. 일본 자본의 지속적 투자 여부가 프로젝트 진행의 변수.</p>
+<p><strong>확인 필요</strong>: 프로젝트 착공 시기 및 한국 EPC 업체 하도급 참여 가능성 확인 필요.</p>
+
+<p>📎 출처: <a href="https://www.constructiondive.com/news/bechtel-kiewit-japan-ohio-power-generation-ai/815768/" target="_blank" rel="noopener">Construction Dive</a></p>
+
+<h3>2. 前 Tenstorrent 임원, 일본서 20억불 규모 AI 클라우드 시작</h3>
+
+<p>전 Tenstorrent 임원들이 일본에서 클라우드 프로바이더 및 AI 랩 설립. 인프라 자본 20억달러(약 2.9조원) 확보 완료.</p>
+
+<p><strong>영향</strong>: 일본 AI 인프라 시장 신규 진입으로 데이터센터 건설 수요 증가 예상. 아시아 지역 클라우드 경쟁 심화.</p>
+<p><strong>리스크</strong>: 구체적인 데이터센터 입지와 건설 계획 미확인. 신규 업체의 시장 안착 불확실성.</p>
+<p><strong>확인 필요</strong>: 데이터센터 건설 위치 및 EPC 발주 계획 구체화 시점 모니터링 필요.</p>
+
+<p>📎 출처: <a href="https://www.eetimes.com/ex-tenstorrent-execs-start-cloud-provider-ai-lab-in-japan/" target="_blank" rel="noopener">EE Times</a></p>
+
+<h3>3. 한미반도체, HBM TC본더 71% 점유율로 올해 매출 8135억 전망</h3>
+
+<p>한미반도체 HBM TC 본더 시장 점유율 71%. 2024년 매출 5767억원, 영업이익 2514억원 기록. 2025년 매출 전망 8135억원(전년비 41%↑), 영업이익 4042억원(60.1%↑).</p>
+
+<p><strong>영향</strong>: AI 반도체 수요 증가로 HBM 패키징 장비 수주 확대. 2분기부터 분기당 매출 2500억원 이상 예상.</p>
+<p><strong>리스크</strong>: 중국 시장 의존도와 미중 갈등에 따른 수출 규제 리스크. HBM 기술 전환 시 장비 수요 변동 가능성.</p>
+<p><strong>확인 필요</strong>: 세미콘 차이나에서 공개한 신규 장비의 실제 수주 성과 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1TVGhvVE1QWnhjNFBSdnJNVGxKM18wV0tGNC1NSFhQSmpJU096bTFITWMxbXFyWnA2Rm9qVlU4QXllV0xFa1Uxd2U0Wmw2THJNT3hBaG8xYkdfX05iaWFjRE1BZHczV2FTYzhhTEJn?oc=5" target="_blank" rel="noopener">아시아투데이</a></p>
+
+<h3>4. AI데이터센터 특별법 법안소위 통과, 전력·인허가 규제 완화</h3>
+
+<p>국회 과방위 법안소위에서 &#x27;AI 데이터센터 지원 특별법&#x27; 통과. 과기정통부 인허가 창구 일원화, 처리기한 최대 150일 제한. 비수도권 데이터센터 전력계통영향평가 면제 및 PPA 허용 포함.</p>
+
+<p><strong>영향</strong>: 데이터센터 인허가 기간 단축으로 프로젝트 속도 개선. 전력 조달 경로 다변화로 운영비용 절감 및 지방 입지 경쟁력 향상.</p>
+<p><strong>리스크</strong>: 기후에너지환경부와 전력 특례 관련 부처간 이견 존재. 법안 최종 통과까지 세부사항 변경 가능성.</p>
+<p><strong>확인 필요</strong>: 상임위원회 및 본회의 통과 일정과 최종 법안 내용 확정 시점 모니터링.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE80aHpLTkxSNmxZdjhvSDIzWjNXTFYzTXBfc2JrSUJTWEhKMWUxZUo4TUhCcTZuQ3N6MlRicUhJd2RUeFpmZ054V1c2NGxMQ1k?oc=5" target="_blank" rel="noopener">지디넷코리아</a></p>
+
+<h3>5. TS트릴리온 자회사 TS코어, 버티브와 데이터센터 MEP 공식 파트너십</h3>
+
+<p>버티브코리아와 TS코어 데이터센터 전력·냉각 인프라 공식 파트너십 체결. TS코어 올해 누적 수주액 477억원(안산 AI DC 190억, 고양 DC 140억, 전남 DC 148억).</p>
+
+<p><strong>영향</strong>: TS코어의 글로벌 장비 직접 조달로 원가 경쟁력 및 영업이익률 개선 기대. 하이퍼스케일 DC 시장 진출 기반 마련.</p>
+<p><strong>확인 필요</strong>: TS코어의 대형 하이퍼스케일 데이터센터 프로젝트 수주 성과 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5ubzF2UmU2MkVnQXAyMHJtZE9RSWVVcG9uWlB6cDM5LWMtdlpXU2xCQ2NGdFRtXzlhdG5TOEgzRXFUaEZsclgtems1bFFJSG8?oc=5" target="_blank" rel="noopener">아시아경제</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>신반포20차 재건축, &#x27;드파인&#x27; 브랜드로 수주전 돌입</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> SK에코플랜트가 신반포20차 소규모재건축 사업(142세대 규모) 시공권 확보를 위해 하이엔드 브랜드 &#x27;드파인&#x27;을 전면에 내세우며 수주전에 참여했다. 다음달 7일 입찰 마감을 앞두고 5개 건설사가 경쟁하고 있으며, 강남권 정비사업 확대를 위한 전략적 거점으로 접근하고 있다.</li>
+<li><strong>IPO/경쟁사</strong> 강남권 소규모재건축 시장에서 브랜드와 설계 완성도가 핵심 경쟁요소로 작용하고 있으며, SK에코플랜트는 신반포27차 등 인근 사업 수행 경험을 바탕으로 차별화된 경쟁력을 내세우고 있다. 대형 건설사 간 경쟁이 불가피한 구조에서 종합 경쟁력으로 승부를 보겠다는 전략이다.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE10bXlkM2ZKdWx6TEpUTTlBdXFjS2lGVldZeEJqRXdxMFNPSGs1Umo1THNQRXZ6d3FQMVhpXzVnbXlhMjBTOTgyOW5mMGsxNE5kRFNoQjhYemhwd09EMDJTdmdkeml1VERH?oc=5" target="_blank" rel="noopener">한국주택경제신문</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>AI 반도체 분야에 대규모 투자가 활발히 진행되고 있으며, 리벨리온에 6000억원 규모의 민관 합동 투자가 확정되었습니다. SK하이닉스와 삼성전자는 HBM 경쟁을 위해 EUV 장비 투자와 장기 공급계약을 통해 시장 선점에 나서고 있습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxQZ1AwTW9xVXFWbnhTdzExTUFBSzhueGx1akpEOTZCWG94UmlFSGxWbXpBVjNuMjlpLUNDSEFDVG9WQU9Ma2pYbXFPU3BVZDA2RFVjaS1jV05CbTlHQXJmZnpIdzhibnNtOV9zSlVqdm8zN1phbzFhUFNPeVVDNXR0ZVpvZmE?oc=5" target="_blank" rel="noopener">미래에셋생명, AI 반도체 혁신기업 투자 확대</a></li>
+</ul>
+<p>자기자본투자 본격화로 AI 반도체 분야 투자 비중 확대</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNajVnVURfaEVlRmtrYWhUUFIwekF5bXo2MVpXZmtxUzVaUHlvMHVRLWhSYnNFWnFYSzRGdUVJOHZ3cGNnNi1mVEQwM3UyVzUyZHpyVU80S1oyd1JVeU40Q2dVbmpmT1BUUlB1WDVSUDJaaXRGMUlMQjhuZkVYQ3k5StIBlAFBVV95cUxPbll5dmh2MEk1dEV5RGNvQjFWcFV0MWg2YTdudnItZEdMR1g5c25BZ3ZPXy1zb1diYzJCMzc0Nndhbjh0Rzh3Z0JjQWRQWmU3TTRmRnZUUUJNM2JPSEU1ejZ1TnpuX053UzZTRmt6b3puY3ptR3ZmLWQ5VlRVQThqb1czVzVnMTB2SUUzSXZjcm1JWUNk?oc=5" target="_blank" rel="noopener">리벨리온에 민관 합동 6000억 투자 확정</a></li>
+</ul>
+<p>AI 반도체 기업 육성을 위한 대규모 투자 결정</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE5yelo4dXlUbjlHbHZPRFJJanJjbE9ucXpOLXFnQm9Yd0d2YUM0REkzdmVaRjBTOF9GbWx6NWN6LUwyVVdxY3NDTEs4NHBSLThNRTdxVHlodS1fUzBt?oc=5" target="_blank" rel="noopener">삼성전자, 미국 AI 스타트업에 5000만 달러 투자</a></li>
+</ul>
+<p>반도체 특화 AI 기업과의 전략적 파트너십 구축</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBHUGpGcVpET012bE1pM3FGWmJ1djdJZzItblI3OC1KcktWd0tuNjFMa3h5LXFpcnJKMUV2Rzk0ZHI0b3lzU2dLMTVSd2hsckhJOG5zNHB6Q0Z4UW40N3FPbWpIWWttcnN4cEZqTEdqUUVMRlk?oc=5" target="_blank" rel="noopener">중국 AI 반도체 자급률 76% 달성 전망</a></li>
+</ul>
+<p>생산 수율과 HBM 확보는 여전히 한계로 분석</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE84bVlWbUV0RFd6NTVhb0lVSXQxZ0w0UmxJcmZ4M18zRlhjUlFaN3QzNmpPOVlPQWgzTTBmS0tEQkg3Y2pfR1RncEl1XzFQMHkxaGfSAVNBVV95cUxOdWtXMExjdnNaM25JQng0MWliT0hXTjVuTmMyanhITkhCYkVGLWJwXzBkNWZKWjJLUS1JS1N5NTByZV9lR3d2dk85bkNuSHpzZHhKRQ?oc=5" target="_blank" rel="noopener">SK하이닉스, EUV 장비 대량 확보로 HBM 경쟁력 강화</a></li>
+</ul>
+<p>삼성과의 HBM 시장 주도권 경쟁 본격화</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1ORmVmN1JNWlNobmFFRzFfOWI4bWJ5cGR2N1JWc2VRN0pjTlNqby1HSkdkUkZJM0N5VGFKaWJtU204YTFlaTlwNEEyVXloemZUdDRaNm5NNVJ0c2M1dUQ2M2pyM29Fd2p6Vlp1MFNEUjQzcE5r?oc=5" target="_blank" rel="noopener">삼성·SK하이닉스, 장기계약으로 반도체 사이클 안정화</a></li>
+</ul>
+<p>수급 불안정 해소를 위한 장기 공급계약 확산</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBqV01uZnBNUWh5V04tZ1Z3dFFRS2h3WWVxTU13djNKUWpjR2Y0LXE0RHE1Tmtad3pMcTd2dUF0empfXzV3aWlNV1dZT3JmZWlxdTlZdEFtTE01YTNWdnVuVWtQQ3VfRS1YbzJFMXdLY2FuZw?oc=5" target="_blank" rel="noopener">워트, 삼성전자와 30억원 반도체 장비 계약 체결</a></li>
+</ul>
+<p>매출액 대비 19.91% 규모의 대형 수주 확보</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxOODEtcUsxOFkzRzNGQlZJbkJoSW9rU2FjdFBpVFg2TzJPV3BoeTVhRFEtT0ljTjl5ZkNGVUpaYnByMzVlY0lTMWpzS01uWWJQdTBiSjJSb1p5eEFvN3dxTldhTlhOQk9UR3lzRHZnZG15ODJGQ2VsNFBRQ2dvNEJlQmVQSWdFYTFnbE8za0FITVFfM0VUY0lGMHRHNXA0UmFzdldlRHIyLVg4QzZaYWZkMzZvb0xCTjlkdldJSG1DLUprdWFCNC0w?oc=5" target="_blank" rel="noopener">한미반도체, SK하이닉스와 공급계약으로 주가 5% 상승</a></li>
+</ul>
+<p>반도체 장비 공급계약 체결 소식에 시장 반응 긍정적</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTFBGVHBiQWc1UVpPM0VfUUN1V29tWDdUcl9wVEx2RXVRQmp1NjdOejFsakx2LUo4b2tmd1h5Nl9OdVV6OHRxZ29lenJFRmlNRXUtSklxRGRPdUtEVjh3eXc1M3AwaEM2S3hua25aTzVzWXNRdjIyZHpr0gF3QVVfeXFMUEZUcGJBZzVRWk8zRV9RQ3VXb21YN1RyX3BUTHZFdVFCanU2N056MWxqTHYtSjhva2Z3WHk2X051VXo4dHFnb2V6ckVGaU1FdS1KSXFEZE91S0RWOHd5dzUzcDBoQzZLeG5rblpPNXNZc1F2MjJkems?oc=5" target="_blank" rel="noopener">아이에스티이, SK하이닉스 반도체 장비 추가 수주</a></li>
+</ul>
+<p>반도체 장비 업체들의 대형 고객사 수주 확대 지속</p>
+
+<h3>첨단 패키징</h3>
+<p>한미반도체가 HBM TC 본더 시장에서 70% 점유율을 바탕으로 2.5D 패키징 장비를 중국 시장에 첫 공개했습니다. SK하이닉스는 HBM 사업 강화를 위해 미국 상장을 통한 대규모 자금 조달을 추진하고 있습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1TVGhvVE1QWnhjNFBSdnJNVGxKM18wV0tGNC1NSFhQSmpJU096bTFITWMxbXFyWnA2Rm9qVlU4QXllV0xFa1Uxd2U0Wmw2THJNT3hBaG8xYkdfX05iaWFjRE1BZHczV2FTYzhhTEJn?oc=5" target="_blank" rel="noopener">한미반도체, HBM TC 본더 시장 70% 점유율 유지</a></li>
+</ul>
+<p>AI 반도체 패키징 핵심 장비에서 압도적 시장 지위 확보</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1VZnE5ZGozSjFWTldIUllGd1AzZzdLZGg0TlBLY2k5Yjkwa2NRWHBrQU5zYkg1V2h0VlBDTXRMZml1cnJBeFNIWTNvaEtpWUYzWEhYX0wtVTJ3a3hQV29STTFsOEx4Q1htdjNuNVJVY3dfbl9XMDZVadIBeEFVX3lxTE1VZnE5ZGozSjFWTldIUllGd1AzZzdLZGg0TlBLY2k5Yjkwa2NRWHBrQU5zYkg1V2h0VlBDTXRMZml1cnJBeFNIWTNvaEtpWUYzWEhYX0wtVTJ3a3hQV29STTFsOEx4Q1htdjNuNVJVY3dfbl9XMDZVaQ?oc=5" target="_blank" rel="noopener">한미반도체, 세미콘 차이나서 2.5D TC 본더 공개</a></li>
+</ul>
+<p>AI 패키징 시장 진출을 위한 신제품 중국 시장 첫 선보임</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE8tbU1aTzVqaHViYnZPVnlpRC1KejlJTVNzTlFKTXdZWHZtQ3pUbGcxNjBXZVdMQVM4SHk0bks0M09jUTlQVjVickdOWVVZZnVhS1JYUXFLcmpnb1FVczVwX2JzN25VMjVyU3c?oc=5" target="_blank" rel="noopener">SK하이닉스, 뉴욕 증시 상장으로 HBM 투자 자금 확보</a></li>
+</ul>
+<p>AI 메모리 시장 주도권 유지를 위한 대규모 자금 조달 추진</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBaYXRUQUJIWWgzQlJoWm5ROFI2ajhkZUY1aF9keDJqNXEwcmJQQXRlNDUtSVUzU0VxalZJTmdGT2RnZkxKb2M2NG9qWUo2MVVhb3hDbkNrRkU0bXhGdjZxdi0zbWNtVU02S1hXVVhLNmVPUQ?oc=5" target="_blank" rel="noopener">SK하이닉스, 순현금 100조원 확보 계획 발표</a></li>
+</ul>
+<p>HBM 등 AI 인프라 투자를 위한 재무 전략 본격화</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFBQRjNDdzdNbEVGYXRuVEptTEFKOG5TOFFMVGhTWU5UZU43M2QtUVp5VkRtWDg4dlM4R1RBOHF4aEZ5UWtBeW1iVklaYmNCMTgtRFBaUVNjOWbSAVhBVV95cUxQUEYzQ3c3TWxFRmF0blRKbUxBSjhuUzhRTFRoU1lOVGVONzNkLVFaeVZEbVg4OHZTOEdUQThxeGhGeVFrQXltYlZJWmJjQjE4LURQWlFTYzlm?oc=5" target="_blank" rel="noopener">SK하이닉스 미국 상장으로 15조원 조달 목표</a></li>
+</ul>
+<p>AI 반도체 패권 강화를 위한 최태원 회장의 전략적 결단</p>
+
+<h3>DC 전력</h3>
+<p>AI 인프라 구축을 위한 데이터센터 전력 및 냉각 솔루션 수요가 급증하고 있으며, 국내외에서 관련 파트너십과 투자가 활발히 진행되고 있습니다. 한국은 데이터센터 특별법을 통해 전력·인허가 규제 완화를 추진하고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/moduledge-and-comino-launch-joint-solution-to-half-ai-infrastructure-procurement-cycles/" target="_blank" rel="noopener">ModulEdge-Comino, AI 인프라 구축 기간 단축 솔루션 출시</a></li>
+</ul>
+<p>모듈형 데이터센터와 액체냉각 기술로 구축 기간을 3-6개월로 단축</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/whitepapers/hong-kong-asias-connectivity-hub-2026/" target="_blank" rel="noopener">홍콩, 아시아 연결성 허브로 AI 수요 증가</a></li>
+</ul>
+<p>시장 트렌드와 인프라 투자 동인으로 홍콩 데이터센터 시장 성장</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE80aHpLTkxSNmxZdjhvSDIzWjNXTFYzTXBfc2JrSUJTWEhKMWUxZUo4TUhCcTZuQ3N6MlRicUhJd2RUeFpmZ054V1c2NGxMQ1k?oc=5" target="_blank" rel="noopener">데이터센터 특별법으로 전력·인허가 규제 완화 추진</a></li>
+</ul>
+<p>AI 인프라 구축 걸림돌 해소를 위한 정부 차원의 규제 개선</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5ubzF2UmU2MkVnQXAyMHJtZE9RSWVVcG9uWlB6cDM5LWMtdlpXU2xCQ2NGdFRtXzlhdG5TOEgzRXFUaEZsclgtems1bFFJSG8?oc=5" target="_blank" rel="noopener">TS트릴리온-버티브코리아 데이터센터 인프라 파트너십</a></li>
+</ul>
+<p>전력·냉각 인프라 공급을 위한 공식 협력 체결</p>
+
+<h3>DC 냉각</h3>
+<p>데이터센터 냉각 시스템에 대한 대규모 금융 지원이 이루어지고 있으며, LG전자 관련 프로젝트에 3천억원 규모의 투자가 확정되었습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE03VlptQUs3M25xUjFPRm1kbVVDV2NuZVN0TThaWngzZ0lLMXpqTnRtbTdXVGtHaHdBUFhrVnc3b19WbGFDOFZSX2x5UG9xeTZjQ2FFbVphYmd4Z1FvbzdidjRoQ1kxdno2cXdUaVItWF9BRWst?oc=5" target="_blank" rel="noopener">수은, LG전자 데이터센터 냉각 프로젝트에 3천억 금융지원</a></li>
+</ul>
+<p>AI 데이터센터 냉각 인프라 구축을 위한 대규모 정책 금융 투입</p>
+
+<h3>EPC / 수주</h3>
+<p>미국에서 대규모 전력 생성 및 인프라 프로젝트 수주가 활발하며, 일본 지원 하에 330억 달러 규모의 오하이오 전력 프로젝트와 캘리포니아 교통 인프라 사업이 진행되고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/bechtel-kiewit-japan-ohio-power-generation-ai/815768/" target="_blank" rel="noopener">Bechtel-Kiewit, 330억 달러 오하이오 전력 생성 프로젝트 수주</a></li>
+</ul>
+<p>일본 투자로 10기가와트 신규 에너지 용량 구축 사업</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/california-funding-BART-tunnel-San-Jose/815905/" target="_blank" rel="noopener">캘리포니아, 철도·도로 프로젝트에 8억4800만 달러 배정</a></li>
+</ul>
+<p>베이 지역 고속철도 터널 건설 등 교통 인프라 투자 확대</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/flatirondragados-jv-washington-dam-contract-usace/815885/" target="_blank" rel="noopener">FlatironDragados JV, 6억9100만 달러 워싱턴 댐 계약 체결</a></li>
+</ul>
+<p>수자원 저장 및 어류 통로 개선을 위한 댐 개조 프로젝트</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>전 Tenstorrent 임원들이 일본에서 AI 랩과 클라우드 서비스를 시작하며 20억 달러 인프라 투자를 확보했고, PCBCart는 고급 DFM 서비스로 PCBA 시장에서 차별화를 추진하고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/ex-tenstorrent-execs-start-cloud-provider-ai-lab-in-japan/" target="_blank" rel="noopener">전 Tenstorrent 임원들, 일본에서 AI 랩 및 클라우드 사업 시작</a></li>
+</ul>
+<p>수직 통합 벤처로 20억 달러 인프라 투자 자본 확보</p>
+<ul>
+<li><a href="https://www.eetimes.com/pcbcart-advanced-dfm-surpassing-standard-hmlv-ems-provider/" target="_blank" rel="noopener">PCBCart, 고급 DFM으로 HMLV EMS 공급업체 차별화</a></li>
+</ul>
+<p>정밀도와 신속한 프로토타이핑으로 PCBA 시장 경쟁력 강화</p>
+
+<h3>AI / 반도체 트렌드</h3>
+<p>미래에셋생명이 AI 반도체 기업 리벨리온에 대한 투자를 확정하며 보험업을 넘어 AI 반도체 분야로 사업 영역을 확장하고 있습니다. 국민성장펀드도 리벨리온에 2500억원을 직접 투자하며 AI 반도체 생태계 육성에 나섰습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9WSmtMX3pORl9XVW5LeVpWbGJmOGcwUUxRekpJT1BETkhlNXp4dkZFYzBBYXZDMnY2Sk1nMDdPWlZGanRVZThSY2loRXFqc0xwNENHbGJrLUREdWN1VDV3blR2dWJHRzk5RmQ3VkRjeEluWTg?oc=5" target="_blank" rel="noopener">미래에셋생명, 리벨리온 투자로 AI 반도체 사업 확장</a></li>
+</ul>
+<p>보험업 넘어 AI 반도체 분야로 사업 포트폴리오 다각화</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5Qb1Z5TlhJM2R1YlpqalcxQmpKZzd1QTBUejdIVmJybjBWc3AyZDlESEFBZzBJVG5LS2ROazVVUFZmVTZJaDZOaVRSQ0I3Z084WlExNms4VWZUdmRZZWFpeTdsLXdHNU95cTRWQW1JRHI?oc=5" target="_blank" rel="noopener">국민성장펀드, 리벨리온에 2500억원 직접 투자</a></li>
+</ul>
+<p>AI 반도체 사업 육성을 위한 정부 차원의 대규모 투자 결정</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBjN1VRcnZiZWtpWU9kWjY1WmI3a3EzRVNsaGRfejUxckhRRC0wWkRlX3Z4R09uQnRRSUpoSjhBR1ZoTkJ1VzV4MGQ2YTc0OEM0Qy0tejNyV1llYjVCcHZ5Ulk0QUpjdkk?oc=5" target="_blank" rel="noopener">미래에셋 반도체 ETF, 개인 순매수 2조원 돌파</a></li>
+</ul>
+<p>AI 인프라 투자 수요 증가로 반도체 ETF 자금 유입 급증</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트가 신반포20차 재개발 사업에서 드파인 브랜드를 앞세워 수주 경쟁에 총력을 기울이고 있습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE10bXlkM2ZKdWx6TEpUTTlBdXFjS2lGVldZeEJqRXdxMFNPSGs1Umo1THNQRXZ6d3FQMVhpXzVnbXlhMjBTOTgyOW5mMGsxNE5kRFNoQjhYemhwd09EMDJTdmdkeml1VERH?oc=5" target="_blank" rel="noopener">SK에코플랜트, 신반포20차 재개발 수주 경쟁 참여</a></li>
+</ul>
+<p>드파인 브랜드를 활용한 프리미엄 주거 사업 수주 총력전</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[Bechtel·Kiewit, 오하이오주 330억불 전력 프로젝트 수주] 구체적인 공기와 착공 시기 미확인. 일본 자본의 지속적 투자 여부가 프로젝트 진행의 변수.</li>
+<li>[前 Tenstorrent 임원, 일본서 20억불 규모 AI 클라우드 시작] 구체적인 데이터센터 입지와 건설 계획 미확인. 신규 업체의 시장 안착 불확실성.</li>
+<li>[한미반도체, HBM TC본더 71% 점유율로 올해 매출 8135억 전망] 중국 시장 의존도와 미중 갈등에 따른 수출 규제 리스크. HBM 기술 전환 시 장비 수요 변동 가능성.</li>
+<li>[AI데이터센터 특별법 법안소위 통과, 전력·인허가 규제 완화] 기후에너지환경부와 전력 특례 관련 부처간 이견 존재. 법안 최종 통과까지 세부사항 변경 가능성.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>프로젝트 착공 시기 및 한국 EPC 업체 하도급 참여 가능성 확인 필요.</li>
+<li>데이터센터 건설 위치 및 EPC 발주 계획 구체화 시점 모니터링 필요.</li>
+<li>세미콘 차이나에서 공개한 신규 장비의 실제 수주 성과 확인 필요.</li>
+<li>상임위원회 및 본회의 통과 일정과 최종 법안 내용 확정 시점 모니터링.</li>
+<li>TS코어의 대형 하이퍼스케일 데이터센터 프로젝트 수주 성과 확인 필요.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/6건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-03-26T21:33:46.673571+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>

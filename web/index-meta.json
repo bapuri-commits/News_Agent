@@ -295,5 +295,14 @@
     "top_headline": "SK에코플랜트, 신반포20차 '드파인' 앞세워 수주전 돌입",
     "sk_headline": "신반포20차 소규모재건축 '드파인' 브랜드로 수주전",
     "article_count": 39
+  },
+  "2026-03-27": {
+    "date": "2026-03-27",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "Bechtel·Kiewit, 오하이오주 330억불 전력 프로젝트 수주",
+    "sk_headline": "신반포20차 재건축, '드파인' 브랜드로 수주전 돌입",
+    "article_count": 39
   }
 }
