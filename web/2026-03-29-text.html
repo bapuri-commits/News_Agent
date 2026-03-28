@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-03-29 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-03-29.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-03-29</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-03-29</h1>
+
+<blockquote>데이터센터 조명시스템 DC 전원 전환 제안 / 티씨케이 NAND 부품 수요확대로 2~3년 성장사이클 진입 / SK하이닉스 100조원 현금확보 목표, 美 ADR 상장 추진</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. 데이터센터 조명시스템 DC 전원 전환 제안</h3>
+
+<p>DatacenterDynamics가 데이터센터 내 조명을 DC 전원으로 운영하는 방안을 제시. 구체적인 기술사양이나 도입사례는 미확인.</p>
+
+<p><strong>영향</strong>: 전력효율 개선 및 UPS 부하 감소 가능. 데이터센터 운영비용 절감 기대.</p>
+<p><strong>리스크</strong>: 기존 AC 조명 인프라 교체비용 발생. DC 조명기구 공급망 제한적.</p>
+<p><strong>확인 필요</strong>: 주요 하이퍼스케일러의 DC 조명 도입 검토 여부 확인 필요.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/opinions/rewiring-resilience-the-case-for-dc-powered-lighting-in-data-centers/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>2. 티씨케이 NAND 부품 수요확대로 2~3년 성장사이클 진입</h3>
+
+<p>신한투자증권이 티씨케이에 대해 투자의견 &#x27;매수&#x27;, 목표주가 32만원 제시. NAND향 매출 비중 70~80%. 2026년 상반기 고객사 전환투자 본격화 예상.</p>
+
+<p><strong>영향</strong>: NAND 고단화 경쟁 심화로 고품질 부품 수요 증가. 가동률 상승시 실적 레버리지 효과 기대.</p>
+<p><strong>리스크</strong>: 중국향 매출 회복 지연 가능성. 고객사 투자 일정 변동 리스크.</p>
+<p><strong>확인 필요</strong>: 1분기 실적 발표시 이연매출 반영 규모 및 가동률 개선 속도 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1Za1g2SHVBZjhteTdUakt1RWJIMWVRLXJNb0UzOTJnQmlKc2FvcnNsWF9NYXl4emJwdm9kdnhaVThxYUZuVG9DOTZoQW1vZ2tXREkzYU9oTlY3dnpEeDdGaDVJbDZoUGE4X1g2c2Y5MlNLcm_SAXdBVV95cUxNTll4WldfQlpRQ1RkSWMzVGFtVVhaQ0kzakFlbVRrQTEySkJxbllpSmdPSmRfN05VZ2dsV0t4UkVvVXNRdEJuM25iQjQwZmFnNDJqYUxXWFVpdTZwcVlnbS00Z3dsSGRGWHJuanNWQWhFd25aNzl0MA?oc=5" target="_blank" rel="noopener">핀포인트뉴스</a></p>
+
+<h3>3. SK하이닉스 100조원 현금확보 목표, 美 ADR 상장 추진</h3>
+
+<p>곽노정 SK하이닉스 대표 주총에서 순현금 100조원 이상 확보 목표 발표. 미국 SEC에 ADR 상장 신청서 제출, 하반기 상장 목표. 청주 M15X, 용인 반도체 클러스터 투자 계획.</p>
+
+<p><strong>영향</strong>: 구글 터보퀀트 기술로 메모리 수요 둔화 우려 확산. 장기공급계약 비중 확대로 수익 안정화 추진.</p>
+<p><strong>리스크</strong>: 터보퀀트 기술의 KV캐시 6분의1 압축으로 서버용 D램 수요 감소 가능성. 소프트웨어 최적화 상용화 시점 불확실.</p>
+<p><strong>확인 필요</strong>: ADR 상장 구체적 일정 및 발행규모 확정 발표 모니터링.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5sQUpsTUxUajB6UUQyUG8tcXMxNzdLYzBPektjZDNjY0xVN2xEc3BrTHFKbEFUSkZDUkN4QUl6aU1HRUxDam4xaVNwLXRCVXNwbWtOYzQ5OEhzMFVyMjJtZ0R0LXQ?oc=5" target="_blank" rel="noopener">디지털데일리</a></p>
+
+<h3>4. 국민성장펀드 리벨리온에 2500억원 직접투자 승인</h3>
+
+<p>금융위원회 국민성장펀드가 리벨리온의 AI반도체 &#x27;Rebel100TM&#x27; 양산 및 차세대 개발에 2500억원 직접투자 의결. 상환전환우선주(RCPS) 매입 방식. 7월 양산 목표, 총 자금수요 6000억원.</p>
+
+<p><strong>영향</strong>: 첨단전략산업기금 첫 직접투자. 국내 팹리스-파운드리 전과정 국산화로 소버린 AI 구축.</p>
+<p><strong>리스크</strong>: 신생 벤처기업의 양산 일정 지연 및 기술적 불확실성. 나머지 3500억원 자금조달 미확정.</p>
+<p><strong>확인 필요</strong>: 7월 Rebel100TM 양산 개시 여부 및 추가 자금조달 진행상황 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE5JeE9oTUxPOWt2Q0lXMENaaDcwMm13MkRhUWlGQjhXdUtpejEybnN2UTZYeElKYnRjU0E2NVVDSDNzdGs0WFk4?oc=5" target="_blank" rel="noopener">피치원미디어</a></p>
+
+<h3>5. 미래산업, 영 킴 前테라다인 사장 사외이사 선임</h3>
+
+<p>미래산업 정기주총에서 영 킴 전 테라다인 메모리사업부 사장을 사외이사로 선임. 1분기 누적 수주 173억원, SK하이닉스와 22.4억원 계약체결. 최대주주 넥스턴앤롤코리아 지분 32.3%.</p>
+
+<p><strong>영향</strong>: 글로벌 반도체 테스트장비 전문가 영입으로 해외시장 확대 기대. 고부가가치 장비 중심 수주 전략.</p>
+<p><strong>리스크</strong>: 전년 동기 대비 시장 변동성 존재. 수주 물량 변동 가능성.</p>
+<p><strong>확인 필요</strong>: 1분기 실적 발표시 수주 잔고 및 매출 전환율 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5Fa1BLbHlacVJuSVM2NmhYSExzY0FLNlJzWlRTbUl2LU4tMmZRUEp2SlFFc2tLVHpDQ1hSYmVsZk5XenRhMHNnMDkxVEc4b2QtTF9GX3lSSERYQ0NlT1pDNUozaGwyYk5U?oc=5" target="_blank" rel="noopener">팍스경제TV</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 업계는 AI 반도체 투자 활황 속에서도 구글의 터보퀀트 발표로 투자 심리가 흔들리는 상황이다. 삼성전자와 SK하이닉스 등 주요 반도체 기업들의 주가가 한 달 새 20% 급락하며 반도체 슈퍼사이클 지속성에 대한 우려가 제기되고 있다. 그럼에도 메모리반도체 수요 감소 우려는 과도하다는 분석과 함께 장기적 성장 전망은 여전히 긍정적이다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1Za1g2SHVBZjhteTdUakt1RWJIMWVRLXJNb0UzOTJnQmlKc2FvcnNsWF9NYXl4emJwdm9kdnhaVThxYUZuVG9DOTZoQW1vZ2tXREkzYU9oTlY3dnpEeDdGaDVJbDZoUGE4X1g2c2Y5MlNLcm_SAXdBVV95cUxNTll4WldfQlpRQ1RkSWMzVGFtVVhaQ0kzakFlbVRrQTEySkJxbllpSmdPSmRfN05VZ2dsV0t4UkVvVXNRdEJuM25iQjQwZmFnNDJqYUxXWFVpdTZwcVlnbS00Z3dsSGRGWHJuanNWQWhFd25aNzl0MA?oc=5" target="_blank" rel="noopener">티씨케이, 반도체 투자 초입 단계로 2-3년 성장 사이클 진입</a></li>
+</ul>
+<p>반도체 투자 회복세로 티씨케이가 성장 국면에 들어섰다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE50d2VSUTNkNWlSM3hIVTNUTUdudjRWYm9BQk1xbllBUTNYSzFWRUVVYjlwWXhCTGY2X0R1TlJfdjRuZ2Ricm83UWN0V2g4ZE83SFNZYmhyNThvazNCbjRZT0xtelFWQnNPU0NaY0NyNG5EOThw?oc=5" target="_blank" rel="noopener">반도체 업계 단기자금 조달 활황, 다음 투자처 관심</a></li>
+</ul>
+<p>증권사 CP를 통한 반도체 기업들의 자금 조달이 활발해지고 있다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFBpbm83SFMxLTk4WlVzakJRYVNVTkdtTENJbk5kUTdHUmx3aGVrcWh2MnJqbTN2MldQTmNpX1kzSlp6NEc3Y29oLS1VNUUxVVRJQ25UWUR6OUhYRjM2TXpPdXJVLW1PRGdHbThjWFRRbw?oc=5" target="_blank" rel="noopener">VIG파트너스, 반도체 기업 PTC에 투자 결정</a></li>
+</ul>
+<p>사모펀드의 반도체 기업 투자가 지속되고 있다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiogJBVV95cUxOazlwS2pfTTVRR2ZEVEhmMTZNaEo1elFtS0JQNUYzTFp2QzB3RWxxbm1XX2t1MXlkVWpFTnNpUzk1a2dmOW1Za21EODlEaFZHQWVUeDJkanB2d08xRkFLYnBZcXNLOFBJY2VCSmJsb1NQc0c0S3Y4dDhxUGh6TlQ4ejZsX0x3NnRIa1UwSm82ZWFxZ0gwb2UtSXNjaEY2dDNFRjBObmpVZ1ZDTHNVdG1tblB5bE55MTJ0YnpCS3lBWUdheGZKWnVCYmdYLUt2MDBQWjd6WXh4blJEclpVVlRsbVRzbFpBb19MYk9KOWhsalhsNldFQ2daY3Z2WWVMeGlxLTBuV2swSDVCaUtIaXpSVnp6V0ZiNzBCXzFTc0MxNkJfUdIBpAJBVV95cUxNZHNJNjJWVHBTYXQ3RVVpc0FHc1BWeGN5LXo3cjR2RGtyM2YxRGc5QzZoU0haNzM2S0tmWkk1Wnc1X1FpTEVBbjlFak1BYW1jTFBhSmc3SWpHYzVrcmhrWWc2YmM0aUEzendzdVVaR1EyTl8xT05nQTZKR0dIei1uc0JYSWNZTFhNY2JtUm5acTdTV3lvaHkyZlJPQkdfMTRiTHJQQ1V4MGtYNFRQaW53R0V0VVppSnBVcW1rbHd3THotTmJhbTNDRHZpT3o5RzNjaFVTSng4SHRXSVU1VVRfMXA5RGFPUWZkdmVGY3RwXzFnQ3pVWjZ6YTEtd2ZSam5jcFJWaE5uandfbjJXQks2aFlvdDJ2d2haOU8zSjhJN01LbUZz?oc=5" target="_blank" rel="noopener">전쟁 장기화와 터보퀀트 이슈로 반도체 투자 매력도 하락 우려</a></li>
+</ul>
+<p>지정학적 리스크와 양자컴퓨팅 기술이 반도체 투자에 부정적 영향을 미치고 있다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE4tUVZab3I1bDFqdWEzVDlMZ2NvQk1zUVY5RzVqbEtlNVROMzRxWUszaG9pb3pmR2pFT2RETGJSUTh5eG03OVY0MTFETHA2R2VlWW9HWjZjTGltNHROZlNBVHBmdWYxSGQ2VEpj0gFvQVVfeXFMTWtSUUV6dHYwZ01raUg0VHpwTGlodmtFY0puRUlOTEhaN25mMXBpbkhKT0J3MmJtRDFXMUVfT0FIMFZuQVM4MzRaMVZueWNPS05xUW4wZFdyMXF6d2JGdHUwbXZxVDhUbDkxXzdkMXNZ?oc=5" target="_blank" rel="noopener">용인 반도체 클러스터 투자 중단으로 불확실성 증가</a></li>
+</ul>
+<p>국내 반도체 클러스터 조성 계획에 차질이 생기고 있다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBKU2EyUFhEZ0cwUjViY2hTSWxYMmRfVzN1dERtbDh5WEhuRkJ3aVJPcHNKMjlCcmZSSTVEcUJqOFdFbklNYi1URzl6cXdCdXFPMGZHbkhYUkdFVUpRWVFiajl1MXRzV3BGQ2c?oc=5" target="_blank" rel="noopener">일본 롬·도시바·미쓰비시, 전력반도체 분야 3각 연합 발표</a></li>
+</ul>
+<p>일본 기업들이 전력반도체 경쟁력 강화를 위해 연합체를 구성했다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5MV01Zc2FCaWJVYjRlb25tRGJLT29icW8wM2VBYy1TSlF3RnY0UUhqQUJ3STNPN2pZak5GUkVkVTZWRnUzQ1cwU01jOXZXSk5pUWZxd2VHRzVaYXBnQ3QzS2dyM1lvS1Q0ZzNxMnNhaGJ4Mkk?oc=5" target="_blank" rel="noopener">삼성전자·SK하이닉스, AI 버블 이후를 대비한 반도체 투자 전략</a></li>
+</ul>
+<p>국내 반도체 대기업들이 AI 붐 이후 상황에 대비한 투자 계획을 수립하고 있다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5sQUpsTUxUajB6UUQyUG8tcXMxNzdLYzBPektjZDNjY0xVN2xEc3BrTHFKbEFUSkZDUkN4QUl6aU1HRUxDam4xaVNwLXRCVXNwbWtOYzQ5OEhzMFVyMjJtZ0R0LXQ?oc=5" target="_blank" rel="noopener">구글 터보퀀트 파장 속 SK하이닉스 100조원 투자 자금 확보</a></li>
+</ul>
+<p>양자컴퓨팅 우려에도 SK하이닉스가 대규모 투자 계획을 유지하고 있다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE1jeWtMSGt2ZVlGT1ZHR1BYUF8xLW9GdmJOX3dZN05rUm1ZQnpmdmpPUkxrc3NRaXZZOHFqZW5pb0lKcmRHeFRjbHZlVlBNeWJfbkZpNS1FREFFYk9wYTd0aWNfd1Rtb2ZVWkZZQnplUdIBb0FVX3lxTE1jeWtMSGt2ZVlGT1ZHR1BYUF8xLW9GdmJOX3dZN05rUm1ZQnpmdmpPUkxrc3NRaXZZOHFqZW5pb0lKcmRHeFRjbHZlVlBNeWJfbkZpNS1FREFFYk9wYTd0aWNfd1Rtb2ZVWkZZQnplUQ?oc=5" target="_blank" rel="noopener">미래에셋생명, AI 반도체 리벨리온 투자 확정</a></li>
+</ul>
+<p>보험업계도 AI 반도체 기업 투자에 적극 참여하고 있다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9USjFfMVB0bDhwbm82OHBpbkYzbjhfdWE1OTZDWGMtQWFabmpETGJraUdfaFBseldELXVab0trZmVjeHpNZkJ0cEJmSXBKam01OFp6bXBDeHdBbHZmUkhlTjRUUmZFLXl2WVE?oc=5" target="_blank" rel="noopener">삼성 엑시노스 개발진 창업 반도체 회사, 양산 전 150억 투자 유치</a></li>
+</ul>
+<p>반도체 전문가들의 창업 기업에 대한 투자가 활발하다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWkd3U2kweGhJS1hqTU9QMG9HWHZoWFU3OXRJbDFyRlc3eGRzdEpTbFdKRlljWURkTnItSlF0S1B5ZGdIUlJncU1WTWN0UmM1b1NUODJfOXNnYU40V2tJazB4MXJvREh4SjdKUm5jalFOSWpVUXBqWS1fQWtqdnV3S29wTjdheFZ2?oc=5" target="_blank" rel="noopener">삼성전자·SK하이닉스 주가 한 달 새 20% 급락, 슈퍼사이클 종료 우려</a></li>
+</ul>
+<p>주요 반도체 기업들의 주가가 크게 하락하며 업황 둔화가 우려되고 있다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE5aUE5BSkhfUVRCeDJ0bnFWS0hMV05Nc1dzcWZDZlBBTHl5RDJTTm4zVzlJM0tMUEE3UGpxSGdyWFEtMzd4YjJfeHpvTmp5SFlQamlTSUk0WlVQTzJQeGtFdmdTd0dXeHdjVW0wVlh0ZUZRUEc2SXhlUQ?oc=5" target="_blank" rel="noopener">머스크 반도체 생산 계획 발표에도 시장 반응 냉담</a></li>
+</ul>
+<p>테슬라의 반도체 자체 생산 계획이 시장의 큰 관심을 받지 못하고 있다.</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>AI 반도체 장비 공급업계는 물리적 AI 상용화와 메모리 슈퍼사이클로 인한 수요 증가세를 보이고 있다. 특히 AI 기반 반도체 검사 기술이 2단계 게임 구조로 발전하며 새로운 시장 기회를 창출하고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/deepx-sets-new-pace-in-physical-ai-commercialization-27-global-deals-in-7-months/" target="_blank" rel="noopener">DEEPX, DX-M1 AI 칩으로 물리적 AI 상용화 가속화</a></li>
+</ul>
+<p>한국 팹리스 스타트업이 8개국에서 27건의 글로벌 계약을 체결했다.</p>
+<ul>
+<li><a href="https://www.eetimes.com/who-breaks-first-in-the-memory-supercycle/" target="_blank" rel="noopener">메모리 슈퍼사이클에서 어느 섹터가 먼저 한계에 도달할지 분석</a></li>
+</ul>
+<p>메모리 가격 상승에 따른 기술 섹터별 탄력성이 주목받고 있다.</p>
+<ul>
+<li><a href="https://www.eetimes.com/why-ai-in-semiconductor-inspection-is-becoming-a-two-layer-game/" target="_blank" rel="noopener">반도체 검사 분야 AI 기술이 2단계 게임 구조로 발전</a></li>
+</ul>
+<p>AI가 반도체 결함 탐지 기술을 단일 궤도가 아닌 복합적 방향으로 변화시키고 있다.</p>
+
+<h3>DC 전력</h3>
+<p>데이터센터 전력 효율성 향상을 위한 DC 전력 조명 시스템 도입이 주목받고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/opinions/rewiring-resilience-the-case-for-dc-powered-lighting-in-data-centers/" target="_blank" rel="noopener">데이터센터 복원력 강화를 위한 DC 전력 조명 시스템 필요성 제기</a></li>
+</ul>
+<p>데이터센터의 안정성 향상을 위해 DC 전력 기반 조명 시스템 도입이 검토되고 있다.</p>
+
+<h3>데이터센터 신축</h3>
+<p>AI 발전과 컴퓨팅 수요 증가로 데이터센터 투자가 7000억 달러 규모로 급증하고 있다. GPU 전력 스파이크 분석 기술과 양자-AI 결합 차세대 데이터센터 개발이 새로운 트렌드로 부상하고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/opinions/tech-giants-capital-spending-surging-to-700-billion-amid-robust-ai-demand/" target="_blank" rel="noopener">AI 발전으로 빅테크 기업들의 자본 지출이 7000억 달러로 급증</a></li>
+</ul>
+<p>AI 채택 증가로 컴퓨팅 용량 수요가 폭증하며 데이터센터 투자가 확대되고 있다.</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/data-center-energy-efficiency-startup-niv-ai-emerges-from-stealth-with-12m-fundraise/" target="_blank" rel="noopener">데이터센터 에너지 효율 스타트업 Niv-AI, GPU 전력 분석 기술로 부상</a></li>
+</ul>
+<p>GPU 전력 스파이크를 분석하는 에너지 효율 기술이 개발되고 있다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE5hX3ZGQjN4bzExLS01ZTZ5SEdiSWdKTm5MbXVMNTlEcDZ6Q3VLazhJMzlaYkxWeXdodGJLaGZnc1gwS0xQcm5aUW5DdUppeGwydDNPNEVMclJuc0M2Ri1aN2N5R05sVmI5OVJEVXBwRQ?oc=5" target="_blank" rel="noopener">국내 4개사, 양자-AI 결합 차세대 데이터센터 인프라 개발</a></li>
+</ul>
+<p>양자컴퓨팅과 AI를 결합한 새로운 데이터센터 모델이 국내에서 개발되고 있다.</p>
+
+<h3>EPC / 수주</h3>
+<p>EPC 업계는 대규모 인프라 프로젝트 수주가 활발하며, 국경 장벽 건설부터 NBA 경기장, 반도체 전문가 영입까지 다양한 분야에서 성장세를 보이고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/granite-construction-southern-border-work/816028/" target="_blank" rel="noopener">Granite, 남부 국경 장벽 건설 4억 9500만 달러 계약 수주</a></li>
+</ul>
+<p>트럼프 정부 두 번째 임기 첫 국경 장벽 계약을 획득했다.</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/flintco-mortenson-jv-breaks-ground-oklahoma-arena/816027/" target="_blank" rel="noopener">Flintco-Mortenson JV, 오클라호마시티 NBA 경기장 9억 달러 착공</a></li>
+</ul>
+<p>2028년 여름 완공 목표로 대규모 경기장 건설 프로젝트가 시작됐다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5Fa1BLbHlacVJuSVM2NmhYSExzY0FLNlJzWlRTbUl2LU4tMmZRUEp2SlFFc2tLVHpDQ1hSYmVsZk5XenRhMHNnMDkxVEc4b2QtTF9GX3lSSERYQ0NlT1pDNUozaGwyYk5U?oc=5" target="_blank" rel="noopener">미래산업, 글로벌 반도체 전문가 사외이사 영입 및 수주 확대</a></li>
+</ul>
+<p>기술 혁신과 주주가치 제고를 위해 전문가 영입과 사업 확장을 추진하고 있다.</p>
+
+<h3>공기 / 원가 / 변경관리</h3>
+<p>시카고 교통청이 철도 확장 및 현대화 사업을 위한 20억 달러 자금 지급 중단에 대해 법정 다툼을 벌이고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/judge-orders-dot-resume-funding-chicago-infrastructure-projects/815939/" target="_blank" rel="noopener">법원, 시카고 교통 사업 20억 달러 자금 복원 명령</a></li>
+</ul>
+<p>시카고 교통청이 철도 확장 및 현대화를 위한 자금 지급 중단으로 소송을 제기했다.</p>
+
+<h3>정책 / 보조금</h3>
+<p>정부가 &#x27;K-엔비디아&#x27; 프로젝트의 일환으로 AI 반도체 기업 리벨리온에 2500억원을 직접 투자하기로 결정했다. 이는 국민성장펀드의 첫 번째 메가 프로젝트로, AI 반도체 분야에서 국가 차원의 승부수를 던진 것으로 평가된다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE5JeE9oTUxPOWt2Q0lXMENaaDcwMm13MkRhUWlGQjhXdUtpejEybnN2UTZYeElKYnRjU0E2NVVDSDNzdGs0WFk4?oc=5" target="_blank" rel="noopener">정부, 리벨리온에 2500억원 직접투자로 한국형 엔비디아 육성</a></li>
+</ul>
+<p>AI 반도체 기업 육성을 위한 정부의 대규모 직접 투자가 결정됐다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9xd0E1Q0VTQ0NVSjFBVG0zdUpIdVpTX25VbFRWbFJRYktYWWVyMVJsdllDVi1RS1lzUTh6U1FjcHNfVnl6VnFTX2hXb2ZzQ0toZkNWNS13Smp2X1ZBTE5tY0RfcjZmb2s?oc=5" target="_blank" rel="noopener">금융위, K-엔비디아 향한 국민성장펀드 첫 직접투자 승인</a></li>
+</ul>
+<p>국민성장펀드의 1차 메가 프로젝트로 AI 반도체 기업 직접투자가 승인됐다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE00RHZnUGZvM1dPWWdaeGxJT2FiNHM2ZUptejhtdFBBSEpsenhMWHE5blNXWGZyTUFiQ1MyS3ZvLXNDcnVfdXEyWWZuWmh6cFB4YVHSAVNBVV95cUxNZ3Q5bXZHaS1IWUxhaENyM1gwVmFJdlZlRXpBTndkeTJDSGFfeFUwZVNDeWtFajRpa09GLWpndEg1SXdCMi1NWTVOTlNVUzIxeXJpbw?oc=5" target="_blank" rel="noopener">정부의 리벨리온 2500억 투자로 AI 반도체 승부수</a></li>
+</ul>
+<p>국가 차원에서 AI 반도체 분야 경쟁력 확보를 위한 전략적 투자를 단행했다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9QUl95NDVFbHEwQ1BQQ1gxUmpxdWFZVTlEdk9yU0VLV3F5dGctdVI4S1NOWnNSZnh3VTZFMWVMdGFFMXlIUFlaNzhKTklPQUFFeTlONkd3ZjdhUlZTVDFIcGwyZGRPV3BjUlE?oc=5" target="_blank" rel="noopener">과기부 K-엔비디아 프로젝트 본격 가동, 리벨리온 투자로 시작</a></li>
+</ul>
+<p>과학기술정보통신부가 AI 반도체 프로젝트를 본격 추진하기 시작했다.</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[데이터센터 조명시스템 DC 전원 전환 제안] 기존 AC 조명 인프라 교체비용 발생. DC 조명기구 공급망 제한적.</li>
+<li>[티씨케이 NAND 부품 수요확대로 2~3년 성장사이클 진입] 중국향 매출 회복 지연 가능성. 고객사 투자 일정 변동 리스크.</li>
+<li>[SK하이닉스 100조원 현금확보 목표, 美 ADR 상장 추진] 터보퀀트 기술의 KV캐시 6분의1 압축으로 서버용 D램 수요 감소 가능성. 소프트웨어 최적화 상용화 시점 불확실.</li>
+<li>[국민성장펀드 리벨리온에 2500억원 직접투자 승인] 신생 벤처기업의 양산 일정 지연 및 기술적 불확실성. 나머지 3500억원 자금조달 미확정.</li>
+<li>[미래산업, 영 킴 前테라다인 사장 사외이사 선임] 전년 동기 대비 시장 변동성 존재. 수주 물량 변동 가능성.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>주요 하이퍼스케일러의 DC 조명 도입 검토 여부 확인 필요.</li>
+<li>1분기 실적 발표시 이연매출 반영 규모 및 가동률 개선 속도 확인.</li>
+<li>ADR 상장 구체적 일정 및 발행규모 확정 발표 모니터링.</li>
+<li>7월 Rebel100TM 양산 개시 여부 및 추가 자금조달 진행상황 확인.</li>
+<li>1분기 실적 발표시 수주 잔고 및 매출 전환율 확인 필요.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/5건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-03-28T21:32:28.070514+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>

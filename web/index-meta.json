@@ -313,5 +313,14 @@
     "top_headline": "데이터센터 DC 조명 전환 필요성 제기",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-03-29": {
+    "date": "2026-03-29",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "데이터센터 조명시스템 DC 전원 전환 제안",
+    "sk_headline": "",
+    "article_count": 39
   }
 }
