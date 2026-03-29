@@ -322,5 +322,14 @@
     "top_headline": "데이터센터 조명시스템 DC 전원 전환 제안",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-03-30": {
+    "date": "2026-03-30",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "삼성전자, 2028년 실리콘 포토닉스 양산 목표",
+    "sk_headline": "",
+    "article_count": 39
   }
 }
