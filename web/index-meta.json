@@ -331,5 +331,14 @@
     "top_headline": "삼성전자, 2028년 실리콘 포토닉스 양산 목표",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-03-31": {
+    "date": "2026-03-31",
+    "theme_label": "Data Pulse",
+    "theme_accent": "#38bdf8",
+    "theme_gradient": "linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%)",
+    "top_headline": "OVHcloud, 유럽중앙은행 디지털 유로 클라우드 사업자 선정",
+    "sk_headline": "",
+    "article_count": 39
   }
 }

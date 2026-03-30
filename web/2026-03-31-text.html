@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-03-31 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-03-31.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-03-31</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-03-31</h1>
+
+<blockquote>OVHcloud, 유럽중앙은행 디지털 유로 클라우드 사업자 선정 / 머스크, AI 기반 무인 팹 &#x27;TeraFab&#x27; 공개로 반도체 제조 혁신 시도 / 테크센드포토마스크, 이천에 2,500억원 규모 제3공장 증설</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. OVHcloud, 유럽중앙은행 디지털 유로 클라우드 사업자 선정</h3>
+
+<p>OVHcloud가 유럽중앙은행(ECB)의 디지털 유로 프로젝트를 위한 주권 클라우드(sovereign cloud) 제공업체로 선정. 프로젝트는 금융 주권 확보가 목적.</p>
+
+<p><strong>영향</strong>: 유럽 공공부문 클라우드 시장에서 미국 빅테크 대비 유럽 사업자 우위 강화. 주권 클라우드 수요 증가 전망.</p>
+<p><strong>확인 필요</strong>: 계약 규모 및 데이터센터 위치 등 세부사항 확인 필요</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/ovhcloud-selected-as-sovereign-cloud-provider-for-ecbs-digital-euro-project/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>2. 머스크, AI 기반 무인 팹 &#x27;TeraFab&#x27; 공개로 반도체 제조 혁신 시도</h3>
+
+<p>일론 머스크가 TeraFab 프로젝트 공개. AI 기반 완전 무인 팹(human-free fabs) 구축으로 기존 반도체 제조 방식 파괴적 혁신 목표.</p>
+
+<p><strong>영향</strong>: 성공 시 팹 운영비용 대폭 절감 및 생산성 향상 가능. 기존 반도체 장비업체 비즈니스 모델 위협.</p>
+<p><strong>리스크</strong>: 기술적 실현 가능성 미검증. 초기 투자 규모 및 자금 조달 계획 불명확.</p>
+<p><strong>확인 필요</strong>: 구체적 기술 사양, 투자 규모, 양산 시점 발표 모니터링</p>
+
+<p>📎 출처: <a href="https://www.eetimes.com/terafab-what-if-it-is-done-differently/" target="_blank" rel="noopener">EE Times</a></p>
+
+<h3>3. 테크센드포토마스크, 이천에 2,500억원 규모 제3공장 증설</h3>
+
+<p>테크센드포토마스크가 이천시에 2,500억원 투자하여 제3공장 증설. 2027년 준공, 2028년부터 14나노 이하 첨단 포토마스크 양산 계획. 1990년부터 이천 신둔면에서 30년간 운영 중인 일본계 기업.</p>
+
+<p><strong>영향</strong>: 국내 첨단 반도체 소재 생산능력 확대. 초미세 공정 수요 대응으로 글로벌 경쟁력 강화.</p>
+<p><strong>확인 필요</strong>: 착공 시점 및 주요 고객사(삼성, SK하이닉스 등) 공급 계약 체결 여부 확인</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1NdE5FTmNVOEtlcThyR2pEa2lJN0hJY0h3R0N4Tkl0ZG14eTdBZjFnTHN1eFpQQU14U0hnQXZwWE95QUZEeHFxSGdtZ3U0T2pFOXRTZ0F1Y0V3QlYtejgxaE5hN2E0aExhM3lPSXJlWlJKV1lGeWlz0gF3QVVfeXFMTU10TkVOY1U4S2VxOHJHakRraUk3SEljSHdHQ3hOSXRkbXh5N0FmMWdMc3V4WlBBTXhTSGdBdnBYT3lBRkR4cXFIZ21ndTRPakU5dFNnQXVjRXdCVi16ODFoTmE3YTRoTGEzeU9JcmVaUkpXWUZ5aXM?oc=5" target="_blank" rel="noopener">시사매거진</a></p>
+
+<h3>4. OCI홀딩스, IFC로부터 말레이시아 반도체 폴리실리콘 공장 투자 유치</h3>
+
+<p>OCI TerraSus가 세계은행 IFC로부터 OTSM 프로젝트 투자 유치. 도쿠야마와 5:5 합작법인에 총 1.25억 달러(약 1,900억원) 확보. 2027년 준공, 2029년부터 연간 8,000톤 규모 11-Nine급 초고순도 반도체용 폴리실리콘 생산.</p>
+
+<p><strong>영향</strong>: 동남아 반도체 소재 공급망 다변화. 친환경 수력발전 활용으로 ESG 경쟁력 확보.</p>
+<p><strong>리스크</strong>: 2029년 상업생산까지 장기간 소요. PCN(Process Change Notification) 승인 지연 가능성.</p>
+<p><strong>확인 필요</strong>: 주요 고객사 확보 현황 및 장기공급계약 체결 동향 확인</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE90M2VvMm9SZnZQTGZUN3NHMld5cWpKUUdWUFRRenpRbmNiSFI0VmwwUDNJYWUxRkFDaElFOXNuMWFnZGE2eEVXaVl6aHBCU1JLbzJBT2VVRzVDUDhCRFJQRUZNX1YxZ0hVd09naDlhbw?oc=5" target="_blank" rel="noopener">이코노미사이언스</a></p>
+
+<h3>5. SK하이닉스·키옥시아, 미국 ITC 특허소송으로 HBM·낸드 수입금지 위기</h3>
+
+<p>SK하이닉스와 키옥시아가 미국 국제무역위원회(ITC) 특허 소송에서 HBM 및 낸드플래시 수입금지 위기 직면. AI 반도체 관련 특허 분쟁으로 추정.</p>
+
+<p><strong>영향</strong>: 수입금지 시 미국 시장 내 AI 가속기용 HBM 공급 차질 우려. 엔비디아 등 주요 고객사 공급망 재편 가능성.</p>
+<p><strong>리스크</strong>: ITC 예비 판정 및 최종 결정까지 불확실성 지속. 특허 회피 설계 또는 라이선스 협상 비용 증가.</p>
+<p><strong>확인 필요</strong>: ITC 예비 판정 일정 및 양사의 대응 전략(합의/항소) 발표 주시</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQa29pMW5fRjRPSjUzOFFWZi1kYWJQWkJCX1VSSnd5Q0lOZ1VtRFpwME4zY0UzQTFLU3pXamRsQkJ3dEF0Q3pITU9TdEFaQW9ZMVItMFlYa2ZNXzF3VjFhYWx5TlZ4eDFfbnZCRTFKM0RMX1lTNm9VT19ySzhpMDh0c0lJSldxRUhs?oc=5" target="_blank" rel="noopener">글로벌이코노믹</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 팹 투자가 활발히 진행되고 있으며, 이천시의 테크센드포토마스크 2,500억원 투자 유치와 AI 반도체 기업 리벨리온의 4억달러 투자 유치가 주목받고 있다. OCI홀딩스는 반도체 소재 사업 확장을 위해 IFC로부터 1,900억원을 조달했으며, NH농협손보 등 보험업계도 AI 반도체 투자에 나서고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1NdE5FTmNVOEtlcThyR2pEa2lJN0hJY0h3R0N4Tkl0ZG14eTdBZjFnTHN1eFpQQU14U0hnQXZwWE95QUZEeHFxSGdtZ3U0T2pFOXRTZ0F1Y0V3QlYtejgxaE5hN2E0aExhM3lPSXJlWlJKV1lGeWlz0gF3QVVfeXFMTU10TkVOY1U4S2VxOHJHakRraUk3SEljSHdHQ3hOSXRkbXh5N0FmMWdMc3V4WlBBTXhTSGdBdnBYT3lBRkR4cXFIZ21ndTRPakU5dFNnQXVjRXdCVi16ODFoTmE3YTRoTGEzeU9JcmVaUkpXWUZ5aXM?oc=5" target="_blank" rel="noopener">이천시, 테크센드포토마스크 제3공장 증설로 2,500억원 반도체 투자 유치</a></li>
+</ul>
+<p>일본 반도체 소재 제조사의 대규모 투자로 이천시가 반도체 허브로 성장</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1DUGZ5WFlER3lYZFoxQ09KQlg1bElCWTBOLXlmV0VIZi0tQnBBTlNiUElkYjZEczJMYzV0bHRKclc4SXF2bmJ6SGVhcG1lMDBJcUhRNDhsZkRGd3VZU19NdS1FbkI1YzVkb1l1eHhZMHJTWGNP0gF0QVVfeXFMTUNQZnlYWURHeVhkWjFDT0pCWDVsSUJZME4teWZXRUhmLS1CcEFOU2JQSWRiNkRzMkxjNXRsdEpyVzhJcXZuYnpIZWFwbWUwMElxSFE0OGxmREZ3dVlTX011LUVuQjVjNWRvWXV4eFkwclNYY08?oc=5" target="_blank" rel="noopener">NH농협손보, AI 반도체 기업 리벨리온에 100억원 지분투자</a></li>
+</ul>
+<p>손해보험업계 최초로 AI 반도체 스타트업에 직접 투자</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1kUGt0YVhZcXpOZ093UUVOaGlDY3BZT0NCdDhjaFdDODJlTXRSa01MUW9jZXl1SzhpQzBGcFNrYUgtdkl3MjY3RUpybnA1SzM3SUxvZkFKZTBySFIzbUpHMTVDU09ZYmtBRnhHWTVpSDJ1enZyVDFNMw?oc=5" target="_blank" rel="noopener">한국 AI반도체 기업 리벨리온, 4억달러 투자 유치로 미국 시장 진출</a></li>
+</ul>
+<p>국내 AI 반도체 팹리스의 해외 진출을 위한 대규모 자금 조달</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE9DWV9ldDBnQ3VLSWtmZGxzOHRQT2lac2hsOU44UGFVNUZtMnR1a01IZVhhZjRBR0ZxWUdQWkx0WC1lV0hLSG5Fb1Ytd19la0xsSzNZaGpVUVBxbWdNdlBjeHVjdHdaYUFHaHRmMzFB?oc=5" target="_blank" rel="noopener">OCI홀딩스, IFC로부터 1,900억원 투자 유치해 반도체 폴리실리콘 사업 확장</a></li>
+</ul>
+<p>세계은행 산하기관 투자로 해외 반도체 소재 사업 가속화</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iN1AtQ3ZFLWE5ckxNUEZnRlc1WkFkajlReHoxZ3FsLWJyQlF3bnhNRmpVUjI4MEpGTUFtZ3FKOWlfYWY2cnh2enQwcUN2VVZlZjBhd1FBTVZrTlY4QW03ZWRsUQ?oc=5" target="_blank" rel="noopener">한미반도체 곽동신 회장, 사재 30억원으로 자사주 추가 매입</a></li>
+</ul>
+<p>HBM 기술력에 대한 자신감 표현으로 해석</p>
+
+<h3>첨단 패키징</h3>
+<p>SK하이닉스와 키옥시아가 HBM과 낸드플래시 메모리 특허 분쟁으로 미국 수입금지 위기에 직면했다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQa29pMW5fRjRPSjUzOFFWZi1kYWJQWkJCX1VSSnd5Q0lOZ1VtRFpwME4zY0UzQTFLU3pXamRsQkJ3dEF0Q3pITU9TdEFaQW9ZMVItMFlYa2ZNXzF3VjFhYWx5TlZ4eDFfbnZCRTFKM0RMX1lTNm9VT19ySzhpMDh0c0lJSldxRUhs?oc=5" target="_blank" rel="noopener">SK하이닉스·키옥시아, HBM·낸드 수입금지 위기로 미 ITC 조사 대상</a></li>
+</ul>
+<p>AI 반도체 특허전쟁으로 주요 메모리 업체들이 미국 시장 진출에 제약</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>머스크의 TeraFab이 AI 기반 무인 반도체 제조를 통해 기존 칩 제조업계 혁신을 시도하고 있으며, 유럽의 반도체 전략이 시장 경제성 측면에서 도전에 직면하고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/terafab-what-if-it-is-done-differently/" target="_blank" rel="noopener">머스크, AI 기반 무인 반도체 공장 TeraFab으로 칩 제조업계 혁신 시도</a></li>
+</ul>
+<p>인간 개입 없는 완전 자동화 반도체 제조 시설 구상</p>
+<ul>
+<li><a href="https://www.eetimes.com/europes-semiconductor-strategy-meets-market-reality/" target="_blank" rel="noopener">유럽 반도체 전략, 지정학적 목표와 시장 경제성 사이에서 딜레마</a></li>
+</ul>
+<p>브뤼셀의 탈위험화 정책이 실제 시장 경제성과 충돌 가능성</p>
+
+<h3>데이터센터 신축</h3>
+<p>유럽 중앙은행의 디지털 유로 프로젝트를 위한 주권 클라우드 선정과 핀란드 데이터센터 개발이 활발하며, 데이터센터 투자 지속으로 반도체 ETF에 대한 관심이 계속되고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/ovhcloud-selected-as-sovereign-cloud-provider-for-ecbs-digital-euro-project/" target="_blank" rel="noopener">OVHcloud, ECB 디지털 유로 프로젝트의 주권 클라우드 제공업체 선정</a></li>
+</ul>
+<p>금융 주권 확보를 목표로 하는 디지털 화폐 프로젝트</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/60mw-data-center-colocated-with-solar-and-battery-storage-planned-in-finland/" target="_blank" rel="noopener">프랑스 에너지 기업, 핀란드에 태양광·배터리와 연계된 60MW 데이터센터 계획</a></li>
+</ul>
+<p>재생에너지와 결합된 지속가능한 데이터센터 개발 트렌드</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1Qa1FOZEtZemE5eThoNlJhRXZ4Wk5aYUlUVlQydE5jUXJZRU1YbmVhWlQ1NzE2cWM2RXdUMDhDQmdEYk9XcUJrVjZIRUhmaWE0TjltVUZVall5R1kxRHpPLThWNmZkZDdzZnp1NFZB?oc=5" target="_blank" rel="noopener">데이터센터 투자 지속으로 반도체 ETF에 대한 관심 지속</a></li>
+</ul>
+<p>데이터센터 확장이 반도체 수요 증가로 이어지며 투자 매력도 유지</p>
+
+<h3>DC 전력</h3>
+<p>텔레콤 이탈리아가 2030년 Inwit 타워 계약 종료를 결정했다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/telecom-italia-to-terminate-inwit-tower-contract-in-2030/" target="_blank" rel="noopener">텔레콤 이탈리아, 2030년 Inwit 타워 계약 종료 결정</a></li>
+</ul>
+<p>Fastweb+Vodafone의 Inwit 계약 종료 발표에 이은 결정</p>
+
+<h3>EPC / 수주</h3>
+<p>Jacobs가 49억달러 규모 위스콘신 인프라 프로젝트를 수주했고, OCI홀딩스가 세계은행 IFC와 반도체 합작법인 투자 계약을 체결했다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/jacobs-awards-wisconsin-infrastructure-project/816112/" target="_blank" rel="noopener">Jacobs, 49억달러 규모 위스콘신 인프라 프로젝트 수주</a></li>
+</ul>
+<p>I-39, I-90, I-94 회랑 설계 단계를 올해 말 시작 예정</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE90M2VvMm9SZnZQTGZUN3NHMld5cWpKUUdWUFRRenpRbmNiSFI0VmwwUDNJYWUxRkFDaElFOXNuMWFnZGE2eEVXaVl6aHBCU1JLbzJBT2VVRzVDUDhCRFJQRUZNX1YxZ0hVd09naDlhbw?oc=5" target="_blank" rel="noopener">OCI홀딩스, 세계은행 IFC와 반도체 합작법인 투자 계약 체결</a></li>
+</ul>
+<p>반도체 소재 사업 확장을 위한 국제금융기구와의 협력</p>
+
+<h3>자재 / 노무</h3>
+<p>건설업계에서 데이터 부족 문제로 로봇 활용이 제약받고 있으며, 트럼프 행정명령으로 연방 계약업체들의 DEI 프로그램 중단 압박이 가해지고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/construction-new-york-build-robot-use/816116/" target="_blank" rel="noopener">건설 데이터 부족으로 로봇 활용 제약</a></li>
+</ul>
+<p>성공 사례는 있지만 데이터 제약이 로봇 도입의 걸림돌</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/trump-executive-order-federal-contractors-dei-canceled-contracts/816076/" target="_blank" rel="noopener">트럼프, 연방 계약업체 DEI 프로그램 중단 명령</a></li>
+</ul>
+<p>4월 25일까지 계약업체의 DEI 참여 금지 조항 삽입 지시</p>
+
+<h3>인허가 / 환경</h3>
+<p>웨이모가 캘리포니아 자율주행차 테스트 데이터에서 압도적 우위를 보이고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/waymo-dominates-california-av-test-data/" target="_blank" rel="noopener">웨이모, 캘리포니아 자율주행차 테스트 데이터에서 압도적 우위</a></li>
+</ul>
+<p>캘리포니아 DMV 보고서에서 허가받은 자율주행차들이 900만 마일 이상 주행</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[머스크, AI 기반 무인 팹 &#x27;TeraFab&#x27; 공개로 반도체 제조 혁신 시도] 기술적 실현 가능성 미검증. 초기 투자 규모 및 자금 조달 계획 불명확.</li>
+<li>[OCI홀딩스, IFC로부터 말레이시아 반도체 폴리실리콘 공장 투자 유치] 2029년 상업생산까지 장기간 소요. PCN(Process Change Notification) 승인 지연 가능성.</li>
+<li>[SK하이닉스·키옥시아, 미국 ITC 특허소송으로 HBM·낸드 수입금지 위기] ITC 예비 판정 및 최종 결정까지 불확실성 지속. 특허 회피 설계 또는 라이선스 협상 비용 증가.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>계약 규모 및 데이터센터 위치 등 세부사항 확인 필요</li>
+<li>구체적 기술 사양, 투자 규모, 양산 시점 발표 모니터링</li>
+<li>착공 시점 및 주요 고객사(삼성, SK하이닉스 등) 공급 계약 체결 여부 확인</li>
+<li>주요 고객사 확보 현황 및 장기공급계약 체결 동향 확인</li>
+<li>ITC 예비 판정 일정 및 양사의 대응 전략(합의/항소) 발표 주시</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 3/5건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-03-30T21:43:34.624052+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
