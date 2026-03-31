@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-04-01 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-04-01.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-04-01</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-04-01</h1>
+
+<blockquote>SK에코플랜트 반도체 매출 첫 과반(54%) 달성, 건설 29%로 급감 / SK에코플랜트 2025년 영업익 3159억원(+40%), 부채비율 192%로 개선 / SK에코플랜트 AI인프라 중심 전환으로 매출·영업익 40% 성장</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. SK에코플랜트 반도체 매출 첫 과반(54%) 달성, 건설 29%로 급감</h3>
+
+<p>2025년 3분기 하이테크 부문 매출 4조7117억원(전체의 53.6%), 반도체 수주잔고 7조원. 청주 M15X 팹과 용인 반도체 클러스터 실적 반영. 울산 AI데이터센터(총투자 7조원) 2026년 1단계 가동 목표.</p>
+
+<p><strong>영향</strong>: 전통 건설사에서 AI인프라 기업으로 전환 성공. 영업이익 흑자전환(1574억원), 순이익 14배 증가. 반도체 소재 4개사 편입으로 밸류체인 완성.</p>
+<p><strong>리스크</strong>: 총차입금 7조1993억원, 부채비율 240%대. SK하이닉스 등 캡티브 물량 의존도 높음. 2025년 7월 IPO 기한 도래.</p>
+<p><strong>확인 필요</strong>: 울산 AI데이터센터 1단계 가동 일정 및 IPO 심사 진행상황 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5rUTlqWXFFU0tUd0lLU09hWkY5bGd3UFdHU1NET2NXZF96WUZBVHU1MGxTUWdIbjl3TWRjSUNIVWVtOUlrR2dXdmE5OV9Hd2xoa0lFZUtQdlJ2UUROc3Zlb2pSVjQ3MU1pbF9wR2ZwMEFmOG8?oc=5" target="_blank" rel="noopener">오늘경제</a></p>
+
+<h3>2. SK에코플랜트 2025년 영업익 3159억원(+40%), 부채비율 192%로 개선</h3>
+
+<p>2025년 연결 매출 12조1916억원(+40%), 영업이익 3159억원(+40%). 부채비율 233%→192%로 개선. AI인프라 관련 매출 비중 67% 달성.</p>
+
+<p><strong>영향</strong>: 반도체 FAB 구축 핵심 파트너 지위 확보. 편입된 소재 계열 자회사 실적 100% 반영으로 추가 성장 기대.</p>
+<p><strong>확인 필요</strong>: 2026년 1분기 실적 발표시 AI인프라 매출 비중 및 수주 현황 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1BRFJLcmExUk5OT2lZM1BmZGV1cjVBUVAtd0FVMkxkMGcxR2NDR2ZPRVdxd2xTODFZVW9VeG5tTTM5V3JFMmRQLUZZcnBTSVhQa25nTzZqaElVZw?oc=5" target="_blank" rel="noopener">viva100.com</a></p>
+
+<h3>3. SK에코플랜트 AI인프라 중심 전환으로 매출·영업익 40% 성장</h3>
+
+<p>2025년 매출 12조1916억원(+39.6%), 영업이익 3159억원(+39.7%). 부채비율 233%→192%. AI인프라 관련 사업 매출 비중 67%.</p>
+
+<p><strong>영향</strong>: 청주 M15X, 용인 반도체 클러스터 본격화로 실적 견인. 반도체 팹 구축 핵심 파트너로 입지 강화.</p>
+<p><strong>확인 필요</strong>: MEP 결합 AI데이터센터 프로젝트 수주 동향 모니터링.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTFBxVmhabmdIbm5xR0t5bDRRWjRLT08yajVoaDZGMmFaWTdVR0s4TU1fcGlZaV9TeXl6MzdCWng3cnpKdGd6ZC1mZDhRUXYxckFudXEtMVUyQdIBXEFVX3lxTE5tUkNjTVBPYUVHXzY4amhoMjN1aGk1ekhpb1hBTDlzRXRlcHd5RmhDQUEtVVNrSHFJN3owODRISmJkS0FDSlVZcERIaFhKbVhicUJQYVQ1Z0w2dFlD?oc=5" target="_blank" rel="noopener">tokenpost.kr</a></p>
+
+<h3>4. Willmeng, TSMC 인근 70억달러 복합개발 착공</h3>
+
+<p>피닉스 북부 2,300에이커 Halo Vista 마스터플랜 개발 착공. TSMC 650억달러 캠퍼스 인접 지역. 총투자 70억달러(약 10조원) 규모.</p>
+
+<p><strong>영향</strong>: TSMC 팹 근로자 주거/상업 수요 대응. 반도체 클러스터 생태계 확대.</p>
+<p><strong>리스크</strong>: 미확인 - 공사 일정 및 자금조달 구조 불명확</p>
+<p><strong>확인 필요</strong>: 건설사 선정 및 1단계 완공 일정 발표 모니터링.</p>
+
+<p>📎 출처: <a href="https://www.constructiondive.com/news/willmeng-starts-halo-vista-companion-tsmc/816286/" target="_blank" rel="noopener">Construction Dive</a></p>
+
+<h3>5. CoreWeave, GPU 구매용 85억달러 대출 확보</h3>
+
+<p>CoreWeave가 GPU 구매 목적으로 85억달러(약 12.3조원) 대출 확보. 작년 체결한 Meta와의 계약이 담보로 작용한 것으로 보도.</p>
+
+<p><strong>영향</strong>: AI 인프라 투자 가속화. GPU 수요 급증으로 데이터센터 구축 확대 예상.</p>
+<p><strong>리스크</strong>: GPU 공급 부족 및 가격 상승 리스크. 대출 상환 부담.</p>
+<p><strong>확인 필요</strong>: GPU 구매 규모 및 데이터센터 증설 계획 구체화 확인.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/coreweave-secures-85bn-loan-for-gpu-purchases/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>반도체 전환 성공, IPO는 불확실</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> 하이테크 부문 매출이 5조1586억원으로 전체 매출의 42.3%를 차지하며(2025년, 사업보고서 기준) 반도체·AI 인프라 중심 체질 개선이 완료됨. 전체 매출에서 반도체·AI 인프라·가스·소재·모듈 사업 비중이 67%에 달해(2025년, 사업보고서) 기존 건설 중심에서 완전 탈피했음. 청주 M15X, 용인 반도체 클러스터 등 대형 프로젝트가 본격 매출 기여하며 성장 지속.</li>
+<li><strong>현금흐름·차입</strong> 매출 12조1916억원(전년 대비 39.6% 증가), 영업이익 3159억원(전년 대비 39.7% 증가)으로 실적 크게 개선(2025년, 사업보고서). 부채비율은 233%에서 192%로 하락해(2024년 말→2025년 말) 재무구조도 개선됨. 현금 및 현금성자산이 3조원 수준으로(2025년 말 기준) 유동성은 양호한 상태.</li>
+<li><strong>PF/우발채무</strong> 해당 기간 특이사항 없음. 다만 2025년 4분기 손실충당부채 3443억원, 무형자산손실차손 2950억원 등 대규모 비용 처리로 4분기 순손실 7802억원 발생했으나(사업보고서) 이는 일회성 정리 성격.</li>
+<li><strong>IPO/경쟁사</strong> FI와 약속한 IPO 기한이 2026년 7월로 임박했으나(프리IPO 계약 조건) 중복상장 규제와 미국 자회사 회계기준 위반 감사인 지정으로 상장이 어려운 상황. FI들에게 투자금 1조원 대비 1조2000억원 수준 회수 제안 중이며(업계 추정), SK오션플랜트·탑선 지분 매각으로 6000억원 이상 조달 계획. 정부 중복상장 금지 기조로 2030년 이후 IPO 가능성 높음.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5rUTlqWXFFU0tUd0lLU09hWkY5bGd3UFdHU1NET2NXZF96WUZBVHU1MGxTUWdIbjl3TWRjSUNIVWVtOUlrR2dXdmE5OV9Hd2xoa0lFZUtQdlJ2UUROc3Zlb2pSVjQ3MU1pbF9wR2ZwMEFmOG8?oc=5" target="_blank" rel="noopener">오늘경제</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5vdHRuekc4SWJPRXFaRXhZZ3lWZjZ1RW03R1ItcDZycTlSeWVqXzZRY3hPaFhwZm0xX2JPeWI1Z29NLVhxWU9WVGVoeVZEUHYxV2xBY0FNdmNQems0N0JsTXcya19LQ3RTNjd0VzBuRWREcFXSAXdBVV95cUxQWEprLUY2WG1aeEIwSXlsdVRqQ3JieXdmUzkyNnVZN0RrNXlQTFRMcDVGWXNjNkJ5Q1VJMjlNNHVCVlZDaEtKUzFCMVFIMno5dmNBeEI2b3B5d29VRzhwamY4MTVGRGlYSS1nNlVtQ3dBdW81UEVKYw?oc=5" target="_blank" rel="noopener">인사이트코리아</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFAyeGhBVHBBQ1dJLUhQU3V5OEdXeHFiYzdYdG5jd0NpRGwyQUxPc3l1YmREWEF6c2xleVN3aFpJTURkNGtxUHMwYUhQS2MwUFhTd0xMR2llR2RRM03SAWBBVV85cUxPTEpXYlBXMUplUTNVdENKa3ZWeTZBYUhHd28xMDBKclpjOF83Z1M4clpjTklIUWE2Y2dHeHRYeVd6WHc2dkhQZlBVdFlSZTRqVGgxVzJCY1ozWWw2NDhrd2Q?oc=5" target="_blank" rel="noopener">연합뉴스</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 투자와 생산이 급증하며 국내 경제 회복세를 견인하고 있다. 2월 반도체 생산이 38년 만에 최대 증가하며 전체 산업생산과 투자를 동반 상승시켰다. AI 반도체 기업들의 대규모 투자 유치와 지역별 반도체 클러스터 조성도 가속화되고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFBZU3ZFU2V3ZFU3MUFYTTJ6SEVJRGVaZmROeWhJengyMk9MSU1JT1ZNZndwNzZJUDRCZVZEaF95aG9ud2FxSkR2SXBWanFLZy1ZZlV3RjZVRHRUS29WSjBDWnV2VGIzYUpkeWx3NU9xMA?oc=5" target="_blank" rel="noopener">SK에코플랜트, 장동현 체제 하에서 AI·반도체 인프라 중심 신사업 전환 가속</a></li>
+</ul>
+<p>건설업계가 반도체·AI 인프라 시장으로 사업 전환을 추진하고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1qU09JdHB2WnZSQzAxcEtjcXdxU1VucGlRRThKek93cm1oWW5iOExvd3UySkNJbVotY0lmWFBKdUdjb0NYM29pLUpYVXlDcU1keFl2RFVNRVZTQmt2RG1SNHpDQ0w?oc=5" target="_blank" rel="noopener">이천시, 2500억 반도체 투자 유치로 첨단산업 도시 도약</a></li>
+</ul>
+<p>지방자치단체들이 반도체 투자 유치에 적극 나서고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTFBacXgwMlEtWTgweUN0R2wxYWttZTNTaTRqR1VYdnExYWNkMGdfeW52VHdmVElqWW5nQ1VLTE5ocnU2UGNraTlLZnNBQ0tLUE1jLWtnMElRdER1QkpzTzBUX3laMl84QdIBZkFVX3lxTFBacXgwMlEtWTgweUN0R2wxYWttZTNTaTRqR1VYdnExYWNkMGdfeW52VHdmVElqWW5nQ1VLTE5ocnU2UGNraTlLZnNBQ0tLUE1jLWtnMElRdER1QkpzTzBUX3laMl84QQ?oc=5" target="_blank" rel="noopener">AI 반도체 기업 리벨리온, 6400억원 투자 유치 성공</a></li>
+</ul>
+<p>국내 AI 반도체 스타트업이 대규모 투자 유치에 성공했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1MczRxLS1fWFFpVG5rUm12UGdiMFBzU2RHWXhiT2xxRXBEOV9RdkdRczlJb0swaVlPTVZKY2ZUM0hiWTVwWG9tUk13SFV4LVJWcjFMUTRCUzV1RDdiTDZrRVZRTGFZSlVlLTU2bnBSbm8?oc=5" target="_blank" rel="noopener">2월 반도체 호황으로 산업생산 2.5% 증가, 투자 13.5% 급증</a></li>
+</ul>
+<p>반도체 생산 증가가 전체 산업 지표를 견인하고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE5ZYTJRNzMtXzhkUERWd3M4eGh1MXd3N1pfd2k3ZkhnSk9MbktOX1FIb3lZeDJySjl6LVlXaVNrXzVTZDJJMGhmb2NJRE5aNEp5c0dEdkNoRUZtRTZBLVprWXZjUU1OYk5hYXfSAW5BVV95cUxOQVVLT1c3MVNDWG1RT1dGQm9rWFhka3VFbXVkX3dzeTlyNnplUjM5S01aOFVvbF9kVkRiSlhjb1djbXl4Yk9md25XNDg3RlQ1ODhsMmFPSTJhWmFLRWRQQTllMXJZX3RzdUZWMGRpUQ?oc=5" target="_blank" rel="noopener">엠에스머트리얼즈, 예산에 200억 투자해 반도체 소재 국산화 추진</a></li>
+</ul>
+<p>반도체 소재 기업들이 국산화를 위한 투자를 확대하고 있다</p>
+
+<h3>데이터센터 신축</h3>
+<p>해외 데이터센터 건설 프로젝트에 변화가 나타나고 있다. 미국에서는 일부 프로젝트가 철회되는 반면, 5G 인프라 구축은 지속되고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/project-atlas-data-center-application-withdrawn-in-coweta-oklahoma/" target="_blank" rel="noopener">오클라호마 코웨타의 &#x27;Project Atlas&#x27; 데이터센터 신청이 철회됨</a></li>
+</ul>
+<p>Beale이 데이터센터 건설 프로젝트를 철회했다</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/ericsson-scores-vtel-wireless-5g-standalone-deal-in-us/" target="_blank" rel="noopener">에릭슨이 미국 VTel Wireless와 5G 독립형 네트워크 계약 체결</a></li>
+</ul>
+<p>에릭슨이 RAN과 5G Core를 VTel에 제공하기로 했다</p>
+
+<h3>DC 전력</h3>
+<p>AI 인프라 확장을 위한 대규모 자금 조달이 이루어지고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/coreweave-secures-85bn-loan-for-gpu-purchases/" target="_blank" rel="noopener">CoreWeave, GPU 구매를 위해 85억 달러 대출 확보</a></li>
+</ul>
+<p>Meta와의 계약을 바탕으로 대규모 GPU 구매 자금을 조달했다</p>
+
+<h3>EPC / 수주</h3>
+<p>반도체 및 건설 분야에서 대형 프로젝트 수주와 체질 개선이 진행되고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/willmeng-starts-halo-vista-companion-tsmc/816286/" target="_blank" rel="noopener">Willmeng, TSMC 인접 부지에 70억 달러 복합개발 프로젝트 착수</a></li>
+</ul>
+<p>피닉스 북부에 2,300에이커 규모 할로 비스타 개발이 시작됐다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE1icnhqYl9DdzljS1VZaTRWMjVxb2NsS2Jkb2ZoUGZxYUw3aG5PdlVLVGs5WVRqZHRWM3BwWF8wdmZKeWlpYThDTnl6dnNwNklDTkdHS2o1WTZKSDBsR2tCWTVfdjRWVFNrZkw5eklZUQ?oc=5" target="_blank" rel="noopener">포스코이앤씨, 안전·내실 중심 체질 개선으로 실적 반등 기대</a></li>
+</ul>
+<p>대형 수주와 사업 다각화를 통한 경영 개선을 추진하고 있다</p>
+
+<h3>안전 / 품질 / 컴플라이언스</h3>
+<p>건설 현장에서 법적 규제와 신기술 도입이 동시에 이루어지고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/white-house-ballroom-construction-halted-judge/816273/" target="_blank" rel="noopener">연방 판사, 트럼프의 4억 달러 볼룸 건설 작업 중단 명령</a></li>
+</ul>
+<p>의회 승인 없이 진행된 건설에 대해 법원이 중단 명령을 내렸다</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/cumming-group-advanced-tech-division/816258/" target="_blank" rel="noopener">커밍 그룹, 첨단 기술 부문 신설로 반도체·데이터센터 프로젝트 확보</a></li>
+</ul>
+<p>자문회사가 첨단 기술 전문 부서를 신설해 사업 영역을 확장했다</p>
+
+<h3>첨단 패키징</h3>
+<p>일본 반도체 기업들이 통합과 기술 혁신을 통해 글로벌 경쟁력 강화에 나서고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/rohm-joins-toshiba-and-mitsubishi-to-create-a-power-chip-titan/" target="_blank" rel="noopener">로옴, 도시바·미쓰비시와 손잡고 파워 반도체 거대 기업 창설</a></li>
+</ul>
+<p>일본 반도체 기업들이 통합을 통해 글로벌 시장 점유율 확대를 추진한다</p>
+<ul>
+<li><a href="https://www.eetimes.com/next-generation-led-drivers-for-exterior-lighting-in-the-sdv/" target="_blank" rel="noopener">로옴, SDV용 차세대 LED 드라이버 IC 개발</a></li>
+</ul>
+<p>소프트웨어 정의 차량의 외부 조명용 드라이버 IC를 새롭게 출시했다</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>AI 스타트업들이 아시아 지역에 연구 허브를 확장하고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/u-s-startup-emergence-ai-opens-research-hub-in-bengaluru/" target="_blank" rel="noopener">미국 스타트업 Emergence AI, 벵갈루루에 연구 허브 개설</a></li>
+</ul>
+<p>미션 크리티컬 분야용 자율 AI 개발을 위해 인도에 연구 기지를 설립했다</p>
+
+<h3>CapEx 가이던스</h3>
+<p>SK에코플랜트의 AI 인프라 사업 전환이 가시적 성과를 보이며 투자자들의 관심이 집중되고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE51eC1zOFpoa3JfTVRsWUVSc0dYWTBrUE5YOWpXTnQ0Q0MtQXhydE1vcHRqbzViRjRYanJtOW40bnFtandyUWk4UUZYY2Jia2c?oc=5" target="_blank" rel="noopener">SK에코플랜트, 작년 AI 인프라 실적 급성장으로 김영식 대표 능력 검증</a></li>
+</ul>
+<p>AI 인프라 사업 전환 효과가 실적으로 입증되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFB0MllDSG5DNFBxTHFjZ3pNVENxeVVQeHowZkVXX0g5Z0tQSk5XY2RteTd5LUhpMlpFeDlxUFJtNTZlSlFYUGxSelBmNTZxMFF0OW5GeTZCZS0tNUp1dXBtMDNDa3ZRckRUa0E?oc=5" target="_blank" rel="noopener">SK에코플랜트, AI 인프라 실적 호조로 김영식號 체질 개선 주목</a></li>
+</ul>
+<p>새 경영진 하에서 사업 구조 전환이 성공적으로 진행되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9yNTBBSE53dWxIZE1nNVJ3dlAydW1LclIzYVF6VWFsT3lIT2diSzJRNHJRSmpWMHJBdlBlMUhzZWY5dDByajB3RUI2S0R5cmdWUURfZ1RZMVhlZi1abnNSdTdTZ2F3V2NEcGtYLUdkVkTSAXNBVV95cUxQRTNuNktvc1cxd2hsVFlKbGpJNHRfSmJpRE5Nc2l5ajdMTnFCSk02eS1nN0I4aGdJczNVZmFlZWo0YzJ3UTJ6dWlwY01MRXVkSTRxVmpUTDVQT1VuQVpIaFRNeVNSNVBQOHFSbmhZY0tEcnlz?oc=5" target="_blank" rel="noopener">SK에코플랜트, AI 인프라 전환 효과로 실적 급성장 달성</a></li>
+</ul>
+<p>AI 인프라 중심 포트폴리오 전환이 매출 성장으로 이어졌다</p>
+
+<h3>AI / 반도체 트렌드</h3>
+<p>AI 인프라 확대가 건설업계의 새로운 성장 동력으로 부상하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1BRFJLcmExUk5OT2lZM1BmZGV1cjVBUVAtd0FVMkxkMGcxR2NDR2ZPRVdxd2xTODFZVW9VeG5tTTM5V3JFMmRQLUZZcnBTSVhQa25nTzZqaElVZw?oc=5" target="_blank" rel="noopener">SK에코플랜트, AI 인프라 확대로 영업이익 40% 증가 달성</a></li>
+</ul>
+<p>AI 인프라 사업이 회사 실적 개선의 핵심 요인으로 작용했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTFBxVmhabmdIbm5xR0t5bDRRWjRLT08yajVoaDZGMmFaWTdVR0s4TU1fcGlZaV9TeXl6MzdCWng3cnpKdGd6ZC1mZDhRUXYxckFudXEtMVUyQdIBXEFVX3lxTE5tUkNjTVBPYUVHXzY4amhoMjN1aGk1ekhpb1hBTDlzRXRlcHd5RmhDQUEtVVNrSHFJN3owODRISmJkS0FDSlVZcERIaFhKbVhicUJQYVQ1Z0w2dFlD?oc=5" target="_blank" rel="noopener">SK에코플랜트, AI 인프라로 매출 40% 상승, 반도체 클러스터가 견인</a></li>
+</ul>
+<p>반도체 클러스터 구축이 AI 인프라 매출 성장을 주도하고 있다</p>
+
+<h3>sk_ecoplant_strategy</h3>
+<p>SK에코플랜트가 2023년 영업이익 40% 증가를 기록하며 포트폴리오 전환의 성과를 입증했다. 부채비율도 200% 아래로 개선되어 재무 건전성이 향상됐다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNRTJUMkFnbnhtYUhIeUxCbVZPaGk0elBNMDBLNTh0cm8xYm1UdFAtNlJ2Y2VkT3J2VS1sYjhqRW9EbEdoVXBfeHgtNG15QlcxNnVkNG8zRjVTT3NVZzl5dFQ3TUYzVmRhYmV4dGhIMnM1dFZnN0MxSWI0bzNDWU5fWQ?oc=5" target="_blank" rel="noopener">SK에코플랜트, 2023년 영업이익 3159억원으로 전년 대비 39.7% 증가</a></li>
+</ul>
+<p>포트폴리오 전환 효과로 실적이 대폭 개선됐다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBPdndMU1RSbll1X04ybi1fM3p0M0c5WVJWZVgyS1BYNVp2OWYzLWNBTTlIYUhkcnV6UW04YjlpNUFMckRtVFl4ZHhzMzgyb2oyN2lJc1AyeFJpNGs?oc=5" target="_blank" rel="noopener">SK에코플랜트, 작년 영업이익 3159억원으로 40% 증가 기록</a></li>
+</ul>
+<p>AI·반도체 인프라 사업 확대가 실적 성장을 견인했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5LTjRzSFhhRWl6WmFUQzdIMnNZU0VGQzJqczc3QmE3ejAtWXR5U0FYYXY2S0pZZnMtaFpBd2ZrZkt3UHhSaXI5azVWM3M2X29uTDZXWERubG5ISm1DSk1ONElEcWUxNEJNc01vdVJ1R2VXa1U?oc=5" target="_blank" rel="noopener">SK에코플랜트, 영업이익 40% 증가와 함께 부채비율 200% 아래로 개선</a></li>
+</ul>
+<p>실적 개선과 동시에 재무 건전성도 향상됐다</p>
+
+<h3>sk_ecoplant_finance</h3>
+<p>SK에코플랜트의 실적 개선에도 불구하고 주가는 13거래일 연속 하락세를 보이고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9LRnhOM0xGX0tOcFFQWmI2SzF1YU1HekR6bjFqNENPd045bklOOTZoa2lVUWVEUG9XakxOajdKdlg1WnNVVG4zT1RyN3JUZzd3ampJcFBnMDk5dTlsV1VsTW1wODhWeGJ6ZVUzb0kzYTg?oc=5" target="_blank" rel="noopener">SK에코플랜트, 포트폴리오 전환 성과로 영업이익 3159억원 40% 증가</a></li>
+</ul>
+<p>사업 구조 전환이 가시적인 실적 개선으로 이어졌다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE9QaEFtM2tWSGMtbVNVSmFROVFZMThRM1lLV1NoVnIteVBTWEcxVlE5YlZrQmhHTFoxWmppWnZNV3R1U3Y1d2E4Z2l5aXBBTjlYY0ZUMzVleFN0OVBxWGNVWUdHdk56Ml9HVFQzMWQ1UQ?oc=5" target="_blank" rel="noopener">SK에코플랜트, 13거래일 연속 주가 하락세 지속</a></li>
+</ul>
+<p>실적 호조에도 불구하고 주가는 하락 추세를 보이고 있다</p>
+
+<h3>sk_ecoplant_order</h3>
+<p>SK에코플랜트가 4분기 대규모 적자에도 불구하고 연간 흑자 전환에 성공했으며, 주택 사업도 지속하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxNY0c2RWN6cFdYMDg5R3pBNVdzTEExUVVtSGYwczV6TC1Xd21faEZUUEdpMFVyWXhRRndyU0N6RzNwZVhKeWpjTndOc2JTNGhkbzRGRUVmSkxGNDlKV0o0UWN4X1VzbFRtZXlkcUlNWm4tT2RvSWlXdk9XUkxTZUkxZmhUcEdYYkhWZXc?oc=5" target="_blank" rel="noopener">DL이앤씨·GS건설·SK에코플랜트, 구리역 하이니티 리버파크 공동 분양</a></li>
+</ul>
+<p>주요 건설사들이 공동으로 대규모 주택 프로젝트를 진행하고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1obmR1QmxzNW5BQmlqbFNFbGd0TEJ0cGZkdlVaMDZla0JoSUp2UEJ4OS1iTUQ3NGdrYTV1RnBtWXVwSHJJd25scXhOU1RBYW83Y0hETUFxN19IdGp2VFVDaGRQTF90ZkhxX193bENqMWxRXzJDNHdzVg?oc=5" target="_blank" rel="noopener">SK에코플랜트, 4분기 적자에도 연간 흑자 전환 성공</a></li>
+</ul>
+<p>손실충당부채와 영업권 손상에도 불구하고 전체적으로는 흑자를 기록했다</p>
+
+<h3>인력 / 인사</h3>
+<p>SK에코플랜트가 중복상장 불허 규정으로 인해 IPO에 어려움을 겪고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5vdHRuekc4SWJPRXFaRXhZZ3lWZjZ1RW03R1ItcDZycTlSeWVqXzZRY3hPaFhwZm0xX2JPeWI1Z29NLVhxWU9WVGVoeVZEUHYxV2xBY0FNdmNQems0N0JsTXcya19LQ3RTNjd0VzBuRWREcFXSAXdBVV95cUxQWEprLUY2WG1aeEIwSXlsdVRqQ3JieXdmUzkyNnVZN0RrNXlQTFRMcDVGWXNjNkJ5Q1VJMjlNNHVCVlZDaEtKUzFCMVFIMno5dmNBeEI2b3B5d29VRzhwamY4MTVGRGlYSS1nNlVtQ3dBdW81UEVKYw?oc=5" target="_blank" rel="noopener">SK에코플랜트, FI 약정 기한 임박과 중복상장 불허로 IPO 이중고</a></li>
+</ul>
+<p>상장 규제로 인해 기업공개에 제약이 발생하고 있다</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[SK에코플랜트 반도체 매출 첫 과반(54%) 달성, 건설 29%로 급감] 총차입금 7조1993억원, 부채비율 240%대. SK하이닉스 등 캡티브 물량 의존도 높음. 2025년 7월 IPO 기한 도래.</li>
+<li>[Willmeng, TSMC 인근 70억달러 복합개발 착공] 미확인 - 공사 일정 및 자금조달 구조 불명확</li>
+<li>[CoreWeave, GPU 구매용 85억달러 대출 확보] GPU 공급 부족 및 가격 상승 리스크. 대출 상환 부담.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>울산 AI데이터센터 1단계 가동 일정 및 IPO 심사 진행상황 확인 필요.</li>
+<li>2026년 1분기 실적 발표시 AI인프라 매출 비중 및 수주 현황 확인.</li>
+<li>MEP 결합 AI데이터센터 프로젝트 수주 동향 모니터링.</li>
+<li>건설사 선정 및 1단계 완공 일정 발표 모니터링.</li>
+<li>GPU 구매 규모 및 데이터센터 증설 계획 구체화 확인.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 11/13건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-03-31T21:42:15.688293+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>

@@ -340,5 +340,14 @@
     "top_headline": "OVHcloud, 유럽중앙은행 디지털 유로 클라우드 사업자 선정",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-04-01": {
+    "date": "2026-04-01",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "SK에코플랜트 반도체 매출 첫 과반(54%) 달성, 건설 29%로 급감",
+    "sk_headline": "반도체 전환 성공, IPO는 불확실",
+    "article_count": 39
   }
 }
