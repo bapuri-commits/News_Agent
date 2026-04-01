@@ -349,5 +349,14 @@
     "top_headline": "SK에코플랜트 반도체 매출 첫 과반(54%) 달성, 건설 29%로 급감",
     "sk_headline": "반도체 전환 성공, IPO는 불확실",
     "article_count": 39
+  },
+  "2026-04-02": {
+    "date": "2026-04-02",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "Intel, 아일랜드 Fab 34 지분 49% 142억달러에 재매입",
+    "sk_headline": "SK에코플랜트, 3900억 자금확보로 AI인프라 드라이브",
+    "article_count": 39
   }
 }

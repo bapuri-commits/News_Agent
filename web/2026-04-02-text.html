@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-04-02 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-04-02.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-04-02</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-04-02</h1>
+
+<blockquote>Intel, 아일랜드 Fab 34 지분 49% 142억달러에 재매입 / TSMC 일본 2공장, 2028년부터 3nm 월 1.5만장 생산 / 캐나다 EDC, SK에코플랜트에 3,900억원 금융 지원</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. Intel, 아일랜드 Fab 34 지분 49% 142억달러에 재매입</h3>
+
+<p>Intel이 아일랜드 Fab 34의 49% 지분을 142억달러에 Apollo Global Management로부터 재매입. Apollo는 2024년 112억달러에 인수했었음.</p>
+
+<p><strong>영향</strong>: Intel이 30억달러 프리미엄 지급하며 제조시설 통제권 회복. 파운드리 전략 재조정 신호로 해석 가능.</p>
+<p><strong>리스크</strong>: 높은 프리미엄(26.8%) 지급으로 재무부담 가중. 파운드리 사업 수익성 불확실성 지속.</p>
+<p><strong>확인 필요</strong>: Intel의 파운드리 사업 전략 변경 여부 및 Fab 34 활용 계획 구체화 확인 필요.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/intel-repurchases-49-percent-stake-in-irelands-fab-34-for-142bn/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>2. TSMC 일본 2공장, 2028년부터 3nm 월 1.5만장 생산</h3>
+
+<p>TSMC가 일본 두 번째 팹에서 2028년부터 3nm 공정 생산 시작. 월간 웨이퍼 생산량 15,000장 목표.</p>
+
+<p><strong>영향</strong>: 일본 내 첨단 반도체 생산 기반 확충. 아시아 반도체 공급망 다변화에 기여.</p>
+<p><strong>리스크</strong>: 3nm 공정 안정화 및 수율 확보 과제. 일본 내 전문인력 확보 필요.</p>
+<p><strong>확인 필요</strong>: TSMC 일본 2공장 건설 진척도 및 고객사 확보 현황 모니터링 필요.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/tsmc-says-3nm-wafer-production-at-second-japanese-fab-will-begin-in-2028/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>3. 캐나다 EDC, SK에코플랜트에 3,900억원 금융 지원</h3>
+
+<p>캐나다 수출개발공사(EDC)가 SK에코플랜트에 3,900억원(3.6억 캐나다달러) 규모 금융 패키지 제공. EDC가 2,925억원 대출보증, 스탠다드차타드가 975억원 상업금융 제공. 반도체 제조 및 데이터센터 개발 프로젝트 투자에 활용 예정.</p>
+
+<p><strong>영향</strong>: SK에코플랜트의 AI 인프라 사업 확장을 위한 자금조달 성공. 캐나다-한국 간 첨단산업 협력 강화 신호.</p>
+<p><strong>리스크</strong>: 원화 기준 금융으로 환율 리스크는 완화되나, 프로젝트 실행 지연 시 상환부담 가능성.</p>
+<p><strong>확인 필요</strong>: SK에코플랜트의 구체적인 반도체/데이터센터 프로젝트 수주 발표 여부 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE9uaEprRm5UeVJsajdTVWlhaVJ5VGNDR2prUlVMck5XelVLVWJFVkNxRVNJdG5vZkFucGdaSEhZUnJnSWtpMHBEOGlFdENBR3VpYUh4dVNici16Sk5vNXF2cjR1SDZwQWFT0gFsQVVfeXFMTnNObEl2VWdaV1RYcWJfMGVFOFdMY3g0YUNLaEpUZHhSV2lvNzhVd3pxay0wdElKTk5nWjgyVkZsU2FDa2o2bVZvVFRjdXVmQ0p1ajdsMzVrSHRwb3RYZ1A3ZGZmUVZsaUtBTFZh?oc=5" target="_blank" rel="noopener">KIPOST</a></p>
+
+<h3>4. SK에코플랜트, AI 인프라 전환으로 매출 40% 성장</h3>
+
+<p>SK에코플랜트 2024년 연결 매출 12조1,916억원(전년비 39.6%↑), 영업이익 3,159억원(39.7%↑) 기록. AI 인프라와 반도체 관련 사업이 매출의 67% 차지. 부채비율 233%→192%로 개선.</p>
+
+<p><strong>영향</strong>: 청주 M15X, 용인 반도체 클러스터 등 대형 프로젝트 본격화로 실적 개선. AI 인프라 중심 사업 전환 전략 성과 가시화.</p>
+<p><strong>리스크</strong>: AI/반도체 시장 의존도 심화로 시장 변동성 노출. 대규모 프로젝트 집행 지연 리스크.</p>
+<p><strong>확인 필요</strong>: 2025년 1분기 실적 및 신규 프로젝트 수주 현황 점검 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTFBxVmhabmdIbm5xR0t5bDRRWjRLT08yajVoaDZGMmFaWTdVR0s4TU1fcGlZaV9TeXl6MzdCWng3cnpKdGd6ZC1mZDhRUXYxckFudXEtMVUyQdIBXEFVX3lxTE5tUkNjTVBPYUVHXzY4amhoMjN1aGk1ekhpb1hBTDlzRXRlcHd5RmhDQUEtVVNrSHFJN3owODRISmJkS0FDSlVZcERIaFhKbVhicUJQYVQ1Z0w2dFlD?oc=5" target="_blank" rel="noopener">tokenpost.kr</a></p>
+
+<h3>5. 리벨리온, 기업가치 3.5조원 평가받으며 6천억원 투자 유치</h3>
+
+<p>AI 반도체 스타트업 리벨리온이 프리IPO 라운드에서 약 6,000억원(4억달러) 투자 유치. 기업가치 3조4,000억~3조5,000억원 평가. 국민성장펀드와 미래에셋그룹 주도, NH농협손보 100억원 참여.</p>
+
+<p><strong>영향</strong>: 정책자금 3,000억원과 민간자본 결합으로 &#x27;K-엔비디아&#x27; 전략 구체화. 미국 시장 진출 및 메타, xAI 등 대형 고객 확보 추진.</p>
+<p><strong>리스크</strong>: 글로벌 AI 반도체 시장 경쟁 심화. 엔비디아 대비 기술력 검증 과제 존재.</p>
+<p><strong>확인 필요</strong>: 리벨리온의 미국 고객사 PoC 결과 및 정식 계약 체결 여부 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1xbmpnZEVUMDVPMWJGa0ZqZGxoUWtXRFVCc29tRF9YUDI5TDAwNmk2OWw1M2k1ckotRUhxaTE5cVlGcGpINnBob2JMajF6TkZwU3ViOG1NVDRJRC1kTzhCdXduSnNrYTl2LS1kSXdzaUpZVTlU0gF0QVVfeXFMTXFuamdkRVQwNU8xYkZrRmpkbGhRa1dEVUJzb21EX1hQMjlMMDA2aTY5bDUzaTVySi1FSHFpMTlxWUZwakg2cGhvYkxqMXpORnBTdWI4bU1UNElELWRPOEJ1d25Kc2thOXYtLWRJd3NpSllVOVQ?oc=5" target="_blank" rel="noopener">enewstoday.co.kr</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>SK에코플랜트, 3900억 자금확보로 AI인프라 드라이브</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> 2024년 매출 12조1916억원(+40%)에서 반도체·AI 인프라 사업이 67% 비중을 차지하며 포트폴리오 전환 완성. 하이테크 부문 매출이 5조1586억원(+84%)으로 전체의 42.3%를 기록했고, 3분기 기준 반도체 수주잔고만 7조원에 달한다고 주장(금융감독원 전자공시, 2024년 기준). SK하이닉스 등 그룹 내부 수주에서 외부 고객사 확보가 과제로 지적된다.</li>
+<li><strong>현금흐름·차입</strong> 캐나다 수출개발공사(EDC)와 스탠다드차타드를 통해 3900억원(약 3억6천만 CAD) 규모 자금을 확보했다고 발표(2024년 말 기준). 총차입금은 7조1993억원 수준이나 부채비율이 233%에서 192%로 개선되었다고 주장(사업보고서 기준). 반도체·AI 데이터센터 프로젝트 투자 자금으로 활용 예정이며, 환율 리스크를 고려한 원화 표시 금융으로 설계되었다.</li>
+<li><strong>IPO/경쟁사</strong> 2022년 프리IPO 당시 약속한 상장 기한이 2025년 7월로 예정되어 IPO가 눈앞에 있다고 분석. 과거 자회사 매출 과대계상에 따른 금융당국 제재 이력이 심사 과정의 변수로 작용할 가능성이 제기된다. 김영식 신임 CEO(전 SK하이닉스 사장) 선임으로 반도체 전문성을 강화하며 &#x27;AI 인프라 솔루션 프로바이더&#x27; 전환을 본격화하고 있다.</li>
+</ul>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>글로벌 반도체 업계에서 대규모 투자와 생산능력 확장이 활발하게 진행되고 있다. TSMC의 일본 3나노 팹 건설부터 국내외 AI반도체 기업들의 대규모 투자유치까지 전방위적 성장세를 보이고 있다. 특히 AI 반도체 분야에 집중된 투자가 두드러진다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/tsmc-says-3nm-wafer-production-at-second-japanese-fab-will-begin-in-2028/" target="_blank" rel="noopener">TSMC, 일본 2차 팹에서 2027년 3나노 웨이퍼 생산 시작</a></li>
+</ul>
+<p>월 15,000장 웨이퍼 생산능력으로 운영 예정</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE83Q1poTU95Qks5YmxOaU1nNHluYmVzeU5Xb2E2NnR3NmMyMFRsalNzMmZqSy1JLXZiWTF4YUJkZmhxM3podWVUQlVNSkpnWWRuS2Eyb2RKU3FzajNiVVBobk82a296enQyYkhfRm5aT0g3VTR2UHfSAWZBVV95cUxPbk8wdDZoREVUMTNLV0RFQWNsREFNTTlyOWk4ekZUSkgzTmNDYWlpOC1zeUpSUEN5YXhWRnA5alU4cjVldTdmUlkxWVAtR2ZuMUtWcWkzRmpLb05fcnQ0b0VnZjRXeXc?oc=5" target="_blank" rel="noopener">엔비디아, 미국 AI반도체 설계업체에 3조원 투자</a></li>
+</ul>
+<p>AI 반도체 생태계 강화를 위한 대규모 투자</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1xbmpnZEVUMDVPMWJGa0ZqZGxoUWtXRFVCc29tRF9YUDI5TDAwNmk2OWw1M2k1ckotRUhxaTE5cVlGcGpINnBob2JMajF6TkZwU3ViOG1NVDRJRC1kTzhCdXduSnNrYTl2LS1kSXdzaUpZVTlU0gF0QVVfeXFMTXFuamdkRVQwNU8xYkZrRmpkbGhRa1dEVUJzb21EX1hQMjlMMDA2aTY5bDUzaTVySi1FSHFpMTlxWUZwakg2cGhvYkxqMXpORnBTdWI4bU1UNElELWRPOEJ1d25Kc2thOXYtLWRJd3NpSllVOVQ?oc=5" target="_blank" rel="noopener">리벨리온, 6000억원 &#x27;역대급&#x27; 투자 유치 완료</a></li>
+</ul>
+<p>기업가치 3.5조원으로 평가받는 AI반도체 유니콘</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9Yb09sWmQtc3docERzY3d6dld1NHNOc0dDOFVYb1J1U1l2S3VSZXUzNW5xTi1hcVBSdi1UUlRDcF9rZ2lPUnRJanlPdGlyT0NNTm9XMWg1aHhhdjZyczYwRFhmV3lGNk85UW9LZw?oc=5" target="_blank" rel="noopener">AI반도체 모빌린트, 700억 투자유치로 풀스택 경쟁력 강화</a></li>
+</ul>
+<p>시리즈 C 투자 완료로 AI 반도체 시장 본격 공략</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1qU09JdHB2WnZSQzAxcEtjcXdxU1VucGlRRThKek93cm1oWW5iOExvd3UySkNJbVotY0lmWFBKdUdjb0NYM29pLUpYVXlDcU1keFl2RFVNRVZTQmt2RG1SNHpDQ0w?oc=5" target="_blank" rel="noopener">이천시, 2500억 반도체 투자 유치로 첨단산업 도시 도약</a></li>
+</ul>
+<p>지역별 반도체 생산기지 확장 가속화</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE9EcEZ1T004ajVWRE03X0JXYkRqbWdZYmlIY3JWamhuWFFMdXBEa2pqT2VVbjh6dWFLZ3lpdkhMeER3aDBMaktqX0kycDBEcnRBLVN3N2I2bGZ3enFKZFdaVEotMFZkcVhJYUtPZldR?oc=5" target="_blank" rel="noopener">시흥시, 대덕전자 투자 유치로 반도체 생산기지 확장</a></li>
+</ul>
+<p>반도체 산업 경쟁력 강화를 위한 지자체 투자 협약</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1MczRxLS1fWFFpVG5rUm12UGdiMFBzU2RHWXhiT2xxRXBEOV9RdkdRczlJb0swaVlPTVZKY2ZUM0hiWTVwWG9tUk13SFV4LVJWcjFMUTRCUzV1RDdiTDZrRVZRTGFZSlVlLTU2bnBSbm8?oc=5" target="_blank" rel="noopener">반도체 호황으로 2월 산업생산 2.5% 증가, 투자 13.5% 상승</a></li>
+</ul>
+<p>반도체 업황 개선이 전체 산업 생산과 투자 증가 견인</p>
+
+<h3>데이터센터 신축</h3>
+<p>인텔이 아일랜드 팹34의 지분 재매입을 통해 생산시설 통제권을 강화하고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/intel-repurchases-49-percent-stake-in-irelands-fab-34-for-142bn/" target="_blank" rel="noopener">인텔, 아일랜드 Fab 34 지분 49% 142억달러에 재매입</a></li>
+</ul>
+<p>아폴로가 2024년 112억달러에 취득한 지분을 재매입</p>
+
+<h3>DC 전력</h3>
+<p>암호화폐 채굴업체들이 AI/HPC 사업 확장과 함께 전력 인프라를 지속 확대하고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/cryptominer-mara-adds-25mw-gas-flare-capacity-in-north-dakota/" target="_blank" rel="noopener">암호화폐 채굴업체 MARA, 노스다코타에 25MW 가스 플레어 시설 추가</a></li>
+</ul>
+<p>AI/HPC 사업 확장과 함께 암호화폐 운영 지속 확대</p>
+
+<h3>DC 냉각</h3>
+<p>건설 노동시장의 냉각과 함께 데이터센터 개발 시 지역사회 기여 방안에 대한 논의가 활발하다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/construction-slow-labor-market-february-2026/816383/" target="_blank" rel="noopener">건설업계 채용 데이터, 노동시장 냉각 신호</a></li>
+</ul>
+<p>2월 건설 노동 이직률이 2000년 이후 최저 수준 기록</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/data-centers-community-benefits-spec-new-york-build-panel/816335/" target="_blank" rel="noopener">뉴욕, 데이터센터 개발 시 지역사회 혜택 제공 의무화 논의</a></li>
+</ul>
+<p>도로, 상하수도 등 주변 인프라에 자원 할당 필요성 제기</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>UAE의 디지털 주권 강화, AMD ROCm의 CUDA 대항, 마이크론의 AI용 클라이언트 스토리지 준비 등 다양한 기술 인프라 발전이 진행되고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/shaping-the-uaes-digital-destiny-building-sovereignty-trust-and-resilience-in-the-cyber-era/" target="_blank" rel="noopener">UAE, 디지털 주권 보호를 위한 인프라 구축 가속</a></li>
+</ul>
+<p>중요 자산과 데이터 보호를 위한 디지털 주권 강화 추진</p>
+<ul>
+<li><a href="https://www.eetimes.com/taking-on-cuda-with-rocm-one-step-after-another/" target="_blank" rel="noopener">AMD ROCm, CUDA 대항하여 &#x27;ROCm Sucks&#x27; 대응 개선 작업</a></li>
+</ul>
+<p>단계별 접근으로 CUDA 경쟁력 확보 추진</p>
+<ul>
+<li><a href="https://www.eetimes.com/micron-readies-client-storage-for-ai/" target="_blank" rel="noopener">마이크론, AI용 클라이언트 스토리지 준비</a></li>
+</ul>
+<p>온프레미스 AI 워크로드 증가에 대비한 데스크탑용 스토리지 개발</p>
+
+<h3>자재 / 노무</h3>
+<p>오피스 공간의 주거용 전환이 지난해 28% 증가하며 부동산 시장의 새로운 트렌드로 부상하고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/office-to-apartment-conversion-projects-rentcafe/816315/" target="_blank" rel="noopener">오피스-주거 전환 프로젝트 작년 28% 증가</a></li>
+</ul>
+<p>뉴욕시가 전환 주거 유닛 수에서 다른 도시 압도적 선두</p>
+
+<h3>CapEx 가이던스</h3>
+<p>SK에코플랜트가 AI 인프라 사업 전환을 통해 실적 급성장을 달성했다는 동일한 내용의 기사들이다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1BRFJLcmExUk5OT2lZM1BmZGV1cjVBUVAtd0FVMkxkMGcxR2NDR2ZPRVdxd2xTODFZVW9VeG5tTTM5V3JFMmRQLUZZcnBTSVhQa25nTzZqaElVZw?oc=5" target="_blank" rel="noopener">SK에코플랜트, AI 인프라 확대로 영업이익 40% 증가</a></li>
+</ul>
+<p>AI 인프라 사업 전환 효과로 실적 급성장 달성</p>
+
+<h3>프로젝트 파이낸싱</h3>
+<p>캐나다 수출개발공사(EDC)가 SK에코플랜트의 AI 인프라 확대를 지원하기 위해 3억6천만 캐나다달러 금융 패키지를 제공한다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE9uaEprRm5UeVJsajdTVWlhaVJ5VGNDR2prUlVMck5XelVLVWJFVkNxRVNJdG5vZkFucGdaSEhZUnJnSWtpMHBEOGlFdENBR3VpYUh4dVNici16Sk5vNXF2cjR1SDZwQWFT0gFsQVVfeXFMTnNObEl2VWdaV1RYcWJfMGVFOFdMY3g0YUNLaEpUZHhSV2lvNzhVd3pxay0wdElKTk5nWjgyVkZsU2FDa2o2bVZvVFRjdXVmQ0p1ajdsMzVrSHRwb3RYZ1A3ZGZmUVZsaUtBTFZh?oc=5" target="_blank" rel="noopener">EDC, SK에코플랜트에 3.6억 캐나다달러 금융 패키지 제공</a></li>
+</ul>
+<p>AI 인프라 확대 지원을 위한 대규모 금융 투자</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트가 건설업에서 AI 인프라 기업으로의 포트폴리오 전환에 성공하며 2023년 영업이익 3159억원으로 전년 대비 40% 증가를 기록했다. 반도체 매출이 전체 매출의 과반을 차지하며 탈건설 전략이 결실을 맺었다. 캐나다 EDC로부터 3900억원 규모의 투자 자금을 확보하며 AI 인프라 사업 확장 동력을 마련했다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE9MV2lKdWtDM2hqTkdzNTRXazd5TmlRZVcxMWU0QmdjVUhMdVVZY01iV0NYTUpSNm5YYWUtQlVaSGFtWjVXZmd3Mlg2aXAyaDRiVUhtY2VsOXJJTUpmOEFoSmJn?oc=5" target="_blank" rel="noopener">SK에코플랜트, AI 인프라 기업 전환으로 3900억 실탄 확보</a></li>
+</ul>
+<p>캐나다 EDC 투자 등으로 AI 인프라 사업 확장 자금 마련</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5rUTlqWXFFU0tUd0lLU09hWkY5bGd3UFdHU1NET2NXZF96WUZBVHU1MGxTUWdIbjl3TWRjSUNIVWVtOUlrR2dXdmE5OV9Hd2xoa0lFZUtQdlJ2UUROc3Zlb2pSVjQ3MU1pbF9wR2ZwMEFmOG8?oc=5" target="_blank" rel="noopener">SK에코플랜트, 다년간 탈건설 통해 반도체 매출 첫 과반 달성</a></li>
+</ul>
+<p>건설업에서 AI 인프라 기업으로의 포트폴리오 전환 성공</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE91VHJMWVhGelZKZV95ZVBMaWNzX2Z1SEJsU3h5ODVMeno2TEhhWlVfQ2Zja0dQa01pWUdrYlpINDBDbTFFcFdYbGNsNlFRUUtKUVpiWlpscExRQdIBXkFVX3lxTE9CZU5JQVF1ZFBGcUJWeEtKcV9aVWs3OXhtVGpyNnNpNU9VX0xORjVOckVvX1ZZSGJzZVVhMm45U01aYXdLcW9HemY2TGUxSzMzSkU0aTlPaDRrTTFJbWc?oc=5" target="_blank" rel="noopener">SK에코플랜트, 2023년 영업이익 3159억원으로 전년비 40% 증가</a></li>
+</ul>
+<p>AI 인프라 사업 전환 효과로 대폭 실적 개선</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE9QaEFtM2tWSGMtbVNVSmFROVFZMThRM1lLV1NoVnIteVBTWEcxVlE5YlZrQmhHTFoxWmppWnZNV3R1U3Y1d2E4Z2l5aXBBTjlYY0ZUMzVleFN0OVBxWGNVWUdHdk56Ml9HVFQzMWQ1UQ?oc=5" target="_blank" rel="noopener">SK에코플랜트 주가, 13거래일 연속 하락세</a></li>
+</ul>
+<p>실적 호조에도 불구하고 주가는 조정 국면</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[Intel, 아일랜드 Fab 34 지분 49% 142억달러에 재매입] 높은 프리미엄(26.8%) 지급으로 재무부담 가중. 파운드리 사업 수익성 불확실성 지속.</li>
+<li>[TSMC 일본 2공장, 2028년부터 3nm 월 1.5만장 생산] 3nm 공정 안정화 및 수율 확보 과제. 일본 내 전문인력 확보 필요.</li>
+<li>[캐나다 EDC, SK에코플랜트에 3,900억원 금융 지원] 원화 기준 금융으로 환율 리스크는 완화되나, 프로젝트 실행 지연 시 상환부담 가능성.</li>
+<li>[SK에코플랜트, AI 인프라 전환으로 매출 40% 성장] AI/반도체 시장 의존도 심화로 시장 변동성 노출. 대규모 프로젝트 집행 지연 리스크.</li>
+<li>[리벨리온, 기업가치 3.5조원 평가받으며 6천억원 투자 유치] 글로벌 AI 반도체 시장 경쟁 심화. 엔비디아 대비 기술력 검증 과제 존재.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>Intel의 파운드리 사업 전략 변경 여부 및 Fab 34 활용 계획 구체화 확인 필요.</li>
+<li>TSMC 일본 2공장 건설 진척도 및 고객사 확보 현황 모니터링 필요.</li>
+<li>SK에코플랜트의 구체적인 반도체/데이터센터 프로젝트 수주 발표 여부 확인 필요.</li>
+<li>2025년 1분기 실적 및 신규 프로젝트 수주 현황 점검 필요.</li>
+<li>리벨리온의 미국 고객사 PoC 결과 및 정식 계약 체결 여부 확인 필요.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 12/14건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-04-01T21:44:14.567949+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
