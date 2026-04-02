@@ -358,5 +358,14 @@
     "top_headline": "Intel, 아일랜드 Fab 34 지분 49% 142억달러에 재매입",
     "sk_headline": "SK에코플랜트, 3900억 자금확보로 AI인프라 드라이브",
     "article_count": 39
+  },
+  "2026-04-03": {
+    "date": "2026-04-03",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "AI 메모리 수요 급증으로 NOR 플래시 공급 부족 심화",
+    "sk_headline": "AI 전환 가속화로 매출·영업익 40% 급성장",
+    "article_count": 40
   }
 }
