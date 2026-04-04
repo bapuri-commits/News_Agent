@@ -376,5 +376,14 @@
     "top_headline": "SK에코플랜트 반도체 재편 가속, PF 2.8조원 부담 과제",
     "sk_headline": "반도체 중심 재편 성공, IPO는 중복상장 규제로 난망",
     "article_count": 39
+  },
+  "2026-04-05": {
+    "date": "2026-04-05",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "NIST 극한환경용 포토닉 칩 패키징 개발, USC 700°C 메모리 발견",
+    "sk_headline": "AI 인프라 전환 가속, PF 부담은 여전",
+    "article_count": 39
   }
 }
