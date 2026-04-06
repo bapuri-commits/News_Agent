@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-04-07 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-04-07.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-04-07</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-04-07</h1>
+
+<blockquote>NIST 극한환경용 포토닉 칩 패키징·USC 700°C 메모리 개발 / 중동전쟁 후 고액자산가 원전·방산 매도, 반도체 매수 전환 / JEDEC HBM4 두께 표준 900㎛ vs 825㎛ 논의, 수율·양산성 좌우</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. NIST 극한환경용 포토닉 칩 패키징·USC 700°C 메모리 개발</h3>
+
+<p>NIST는 극한 온도와 방사선 환경에서 작동 가능한 수산화물 촉매 결합(hydroxide catalysis bonding) 기반 포토닉 칩 패키징 기법 개발. USC는 텅스텐-하프늄산화물-그래핀 구조로 700°C에서 작동하는 신형 메모리 발견. IBM-ETH 취리히 10년 AI/양자컴퓨팅 알고리즘 협력 체결.</p>
+
+<p><strong>영향</strong>: 극한환경용 반도체 패키징 기술은 우주/국방 분야 수요 창출 가능. 고온 메모리는 차세대 전력반도체나 극한환경 컴퓨팅에 적용 가능성.</p>
+<p><strong>리스크</strong>: 실험실 기술의 상용화까지 시간 소요. 양산 수율과 비용 검증 필요.</p>
+<p><strong>확인 필요</strong>: NIST 패키징 기법의 파일럿 테스트 진행 여부와 참여 기업 확인 필요.</p>
+
+<p>📎 출처: <a href="https://semiengineering.com/chip-industry-week-in-review-132/" target="_blank" rel="noopener">Semiconductor Engineering</a></p>
+
+<h3>2. 중동전쟁 후 고액자산가 원전·방산 매도, 반도체 매수 전환</h3>
+
+<p>중동 전쟁 이후 고액 자산가들의 투자 포트폴리오 변화 포착. 원전과 방산 종목 매도, 반도체 종목 매수 움직임 확인.</p>
+
+<p><strong>영향</strong>: 지정학적 리스크 속에서도 반도체 산업에 대한 투자 심리 강세. 장기적으로 반도체 섹터 자금 유입 기대.</p>
+<p><strong>리스크</strong>: 지정학적 불확실성 지속 시 투자 심리 급변 가능. 단기 변동성 확대 우려.</p>
+<p><strong>확인 필요</strong>: 주요 반도체 종목별 외국인/기관 순매수 동향 추적 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQS3VMSDhGZnBFblNPNkpWeVUzUzZNWEVQb2xhak00WkV1MjBqbDJ5czFfWDBMZ0x3V1BfUkVycEhCSFE3bHhYbGJoYnBFdFBhRVpjNjcwbXp5aENWcm1WQXRIUm52VHlpaTJmMjBsQWd4V3Q4bVdGSnVKcWl6WFg5M1VDeGh2ZlNf0gGcAUFVX3lxTE5WdnQwQTM5ZldsSk4tN2Zqbl9PcjZIeWhBYk1xMDlSN0VSQndaZ0l0T1V1aTRFWEplN0VVdnNyUTRtYXZHSUM2UTVpdUtJVjNuckNPMWs0aDJ4dzNqM3ZBWXFTTERSYUdGRHhrYzh5dWtJaTVjUG5Od2xlekxiLXBnUVBmbW1CZWY1UkszRTBLX3dobTdPeE81TEN1dQ?oc=5" target="_blank" rel="noopener">조선비즈</a></p>
+
+<h3>3. JEDEC HBM4 두께 표준 900㎛ vs 825㎛ 논의, 수율·양산성 좌우</h3>
+
+<p>JEDEC이 차세대 HBM4/4E의 물리적 두께 규격 완화 논의 중. 적층 단수가 12단에서 20단으로 증가하며 기존 박막화 방식 한계 도달. 두께 표준을 900㎛ 또는 825㎛로 설정할지가 핵심 쟁점.</p>
+
+<p><strong>영향</strong>: 두께 표준 변경은 메모리 제조사의 공정 로드맵과 장비 투자 방향 결정. CMP 공정 중요성 증가로 에프엔에스테크(CMP 패드), HPSP(고압수소어닐링) 등 관련 업체 수혜 예상.</p>
+<p><strong>리스크</strong>: 과도한 두께 증가 시 휨 현상과 방열 문제 발생. 표준 합의 지연 시 HBM4 양산 일정 차질 우려.</p>
+<p><strong>확인 필요</strong>: 4월 중 JEDEC 표준 위원회 결정 사항과 삼성전자/SK하이닉스 입장 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE5BZEs0bUZTTmxuNVRXTUJuREhIWkd1b3VUWlpHZFVub0g5cGYwYzNWWUloTHBTRkhuS2ZwUjVpcnkzTXNpVGRRSnE2Z1dWTXc0d3doTHZ1Ykw2cEU0TUtFOGloNzhsQ2ota1R0dNIBcEFVX3lxTFB5UkttblVIU1R2Y2ZHek9xQlRCNzNfQmJRVlNIdExnOTdBYUt3SUhHQXZVdVJhMF9XQk82Q3V1WmJ3YUVISHhkRkF2b3dpT29aaVpNMEF1cnZEZWdEdVVYR3RNbjluLXhnWHYtSHlGVFY?oc=5" target="_blank" rel="noopener">글로벌경제신문</a></p>
+
+<h3>4. AIIA 평가, 국내 데이터센터 절반 이상 기준 미달…전력인프라 부족</h3>
+
+<p>한국인공지능산업협회(AIIA)가 국내 주요 데이터센터 42개 평가. 엄격한 기준 적용 시 그린 등급 6곳(14.3%), 유연한 기준에서도 21곳(50%)만 충족. 메가데이타 원주, LG유플러스 파주 센터가 우수 사례. 2024.8~2025.6 전국 290건 데이터센터 전력사용 신청.</p>
+
+<p><strong>영향</strong>: 국내 AIDC 시장 2025년 8736억원→2030년 2조8460억원 성장 전망(CAGR 26.6%). 전력 인프라 부족으로 글로벌 AI 기업 투자 유치 차질 우려.</p>
+<p><strong>리스크</strong>: 전력망 수용성 미비로 계획된 프로젝트 중 절반 이상 실행 불확실. 공급 부족 지속 시 해외 기업에 시장 기회 상실.</p>
+<p><strong>확인 필요</strong>: 정부의 데이터센터 전력 인프라 확충 계획과 규제 완화 정책 발표 시점 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9mS1FWY0FQTkRvMDFiX3FLOUN2cHF3UzlkWEJzZGg5Zi1iSk5COTdPWW9CQ0g2REpmX05UcHRuVndOdUZyVDFuUnRsQkFkZndQMmlKMlY5Q3czWjVXLVZBMmxzVkxGdUhJbEE?oc=5" target="_blank" rel="noopener">AI타임스</a></p>
+
+<h3>5. LS일렉트릭, 美 데이터센터 초고압변압기 1066억원 수주</h3>
+
+<p>LS파워솔루션이 미국 중부 빅테크 데이터센터 마이크로그리드용 345kV급 초고압 변압기 7026만달러(1066억원) 공급 계약 체결. 공급 기간 2027년 4분기~2028년 상반기. 2025년 9월 동일 프로젝트 배전 솔루션 4600만달러(641억원) 수주에 이은 추가 수주.</p>
+
+<p><strong>영향</strong>: 송배전 전체 밸류체인 경쟁력 입증으로 북미 데이터센터 전력 인프라 시장(2025년 13조원→2035년 56조원) 진출 가속화. 마이크로그리드 핵심 공급업체 입지 구축.</p>
+<p><strong>리스크</strong>: 2027년 말 납품까지 환율 변동과 원자재 가격 상승 리스크. 빅테크 고객사의 프로젝트 일정 변경 가능성.</p>
+<p><strong>확인 필요</strong>: 추가 마이크로그리드 프로젝트 수주 여부와 북미 현지 생산시설 투자 계획 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE9IWGItcXVzS1dhNDdGeTA0Y1RIRHpqVGJLdkpkbDI0U3FGVGU4czdLSThoaXRUWU1vcUlrd202RWEtLWZJNUdMQjJCa0RuT1NCNnBscGlfTWdKaXhUdXBPU3BYUVdfNlpoUDJacjFXdjRQUdIBckFVX3lxTE9IWGItcXVzS1dhNDdGeTA0Y1RIRHpqVGJLdkpkbDI0U3FGVGU4czdLSThoaXRUWU1vcUlrd202RWEtLWZJNUdMQjJCa0RuT1NCNnBscGlfTWdKaXhUdXBPU3BYUVdfNlpoUDJacjFXdjRQUQ?oc=5" target="_blank" rel="noopener">메가경제</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 업계가 전공정 장비 두자릿수 성장을 예상하며 대규모 투자가 이어지고 있다. 삼성의 12조원 상속세 완납으로 반도체·AI 분야 공격적 투자가 예상되고, 용인 반도체 클러스터가 내년 착공을 앞두고 있다. 벤처투자 시장에서도 리벨리온, 보스 등 반도체 스타트업에 대한 대규모 투자가 활발하다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE1MZnptQ21VYjh5aGN5bFF6dEZOZC05RzhOTnp1dVZ5OUpPbmRoemdncmp2OFBGQVJTMkVpNmFFSExmR25pTW5yeU54dlZvdw?oc=5" target="_blank" rel="noopener">SEMI, 반도체 전공정 장비 내년까지 두자릿수 성장 전망</a></li>
+</ul>
+<p>반도체 제조 장비 시장의 지속적 성장세가 예상된다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9VZzJMeGYyeFA3SmdDUWdza3dCOHMzUWZXMFdKRWxIbFpSVjNZdGJXRnNXNm04dkZyYmhkSk8wQlIyV3NHcUpOdHlPMk93N292b0E3bW9uNWVWeTd3eV9TNnlCNmc2VElqU1ZCNw?oc=5" target="_blank" rel="noopener">용인 반도체 클러스터 내년 착공 공식화</a></li>
+</ul>
+<p>국가 차원의 반도체 클러스터 구축이 본격화된다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxPZGZTQ2kwVnBQRkpzQUl3dWJEMkpya2NqdUdMTWV0Qm9ZSzlvZThpdlBnektSSld5LUlWU2xYc1M1Q2Yyanp4RW5PMFpRR3lvVUphMVhsQVFjYk51cHhiZzNKM0Y0a2JGRm9jN3hUZ2I5OUpscWRwSDF6OXhPb1ZBZw?oc=5" target="_blank" rel="noopener">반도체 벤처투자 35배 급증, 리벨리온 6400억·보스 870억 투자</a></li>
+</ul>
+<p>반도체 스타트업에 대한 대규모 투자가 활발하다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5uYUY1a3dtUXZsRFdXc3JFNVVYNnJReWtxMDRHTGd5bGZPY1dfMkN1U3FXNmpKSmRZSXFaUWh3R2R5V0JPMHIxQXhVb3B6elhJRlNTZkJRZzBwZ9IBVEFVX3lxTE1Gc2ZtTHE4NVJhNzY1VjRwSTJ6Vzg1YXIwMTQtYkg4UUJWQTM0cUZsYVo1RVVtTURQYXRodVJPMENzZjQxTjdYOXkzbDhDWGhMOW10UA?oc=5" target="_blank" rel="noopener">삼성 12조 상속세 완납으로 반도체·AI 투자 가속화 전망</a></li>
+</ul>
+<p>삼성의 재무 부담 해소로 공격적 투자가 예상된다</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>반도체 장비 공급 시장에서 DUV 리소그래피 규제 강화와 AI 추론 기술의 엣지 이동이 주요 변화로 나타나고 있다. 국내에서는 LS일렉트릭이 북미 AI 데이터센터 변압기 공급으로 1,066억원 수주에 성공했다.</p>
+
+<ul>
+<li><a href="https://semiengineering.com/chip-industry-week-in-review-132/" target="_blank" rel="noopener">DUV 리소그래피 규제 강화 및 반도체 매출 62% 성장</a></li>
+</ul>
+<p>장비 규제와 시장 성장이 동시에 진행되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE5laHJfTU95a0tTUnUwT3BZSW91bnpoTTlmc1BuQzh2SlZzUTVvYW9FQi1LT0xaRmZpdUlzUlVDaVRMTXFESk5YRFlYUHQ3T3dSTm0wZnU4MDBSME5mUVNKc0w1ZVgzYS1ZQXRBYg?oc=5" target="_blank" rel="noopener">LS일렉트릭, 북미 AI 데이터센터 변압기 1,066억원 수주</a></li>
+</ul>
+<p>국내 기업이 AI 인프라 핵심 장비 공급에 성공했다</p>
+
+<h3>첨단 패키징</h3>
+<p>HBM과 2나노 기술 발전으로 반도체 소부장 기업들이 호황을 누리고 있으며, HBM 두께 완화 논의가 본격화되고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxPYS1HSVdRR2oxeDNfMlBNVUhCRV95MEo0aXN3Uk9nU09ySXh1eGlMMGk1eDNaQ0NvMjBPTGx6RHBSRXFyajJKaEotdHBUT2xiN1V5NElSR2txMXBzQi1JM2NBeUhldldHSGd0N1ZEZXZTODY4LUczZ3gtUzIzaUUydQ?oc=5" target="_blank" rel="noopener">HBM·2나노 기술로 반도체 소부장 기업들 골디락스 시대</a></li>
+</ul>
+<p>차세대 메모리와 미세공정 기술이 소부장 업계 성장을 견인한다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE5BZEs0bUZTTmxuNVRXTUJuREhIWkd1b3VUWlpHZFVub0g5cGYwYzNWWUloTHBTRkhuS2ZwUjVpcnkzTXNpVGRRSnE2Z1dWTXc0d3doTHZ1Ykw2cEU0TUtFOGloNzhsQ2ota1R0dNIBcEFVX3lxTFB5UkttblVIU1R2Y2ZHek9xQlRCNzNfQmJRVlNIdExnOTdBYUt3SUhHQXZVdVJhMF9XQk82Q3V1WmJ3YUVISHhkRkF2b3dpT29aaVpNMEF1cnZEZWdEdVVYR3RNbjluLXhnWHYtSHlGVFY?oc=5" target="_blank" rel="noopener">HBM 두께 완화 논의로 AI 반도체 공급망 변수 부상</a></li>
+</ul>
+<p>HBM 규격 변화가 AI 반도체 생태계에 영향을 미칠 전망이다</p>
+
+<h3>데이터센터 신축</h3>
+<p>전 세계적으로 데이터센터 구축이 활발하며, 특히 AI 수요 증가로 전력 인프라에 대한 투자가 급증하고 있다. 국내 데이터센터의 절반 이상이 기준 미달로 인프라 개선이 시급한 상황이다. LS일렉트릭이 북미 AI 데이터센터 전력 프로젝트에서 대규모 수주를 따내며 한국 기업의 글로벌 진출이 확대되고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9mS1FWY0FQTkRvMDFiX3FLOUN2cHF3UzlkWEJzZGg5Zi1iSk5COTdPWW9CQ0g2REpmX05UcHRuVndOdUZyVDFuUnRsQkFkZndQMmlKMlY5Q3czWjVXLVZBMmxzVkxGdUhJbEE?oc=5" target="_blank" rel="noopener">국내 데이터센터 절반 이상 기준 미달, 전력 인프라 구축 시급</a></li>
+</ul>
+<p>국내 데이터센터 인프라의 전면적 개선이 필요하다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE51MTB5OUU2UUlxM1lUSWs1MjNYeEZ1dndsTjRIU0xMV1pKTFppVW9JcmtTTGZGZnhGc3VfS09XRkRJdko2RVRRRnU4QmlRQjBmYm9hNDdzWU1id9IBXkFVX3lxTE5Na191Ump0Z0ZoMW9iTWlBNjZrYnpkV1AtRUJoZ2VrNjc2eVdSblk4R1FvbjZfM1lRTVNsRGg3M0lXTjFVSE1VWExmTDVGVmJIRTEtbTRibUhLaVBrM0E?oc=5" target="_blank" rel="noopener">LS일렉트릭, 미국 데이터센터 전력 프로젝트 1000억원 수주</a></li>
+</ul>
+<p>한국 기업이 북미 AI 데이터센터 전력 시장에 성공적으로 진출했다</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/flagstar-bank-consolidates-six-data-centers-into-two/" target="_blank" rel="noopener">Flagstar Bank, 6개 데이터센터를 2개로 통합 완료</a></li>
+</ul>
+<p>12개월 만에 데이터센터 현대화 및 마이그레이션을 완료했다</p>
+
+<h3>EPC / 수주</h3>
+<p>건설 기술 분야에서 AI 기반 계약 분석 스타트업 Document Crunch가 Trimble에 인수되며 컨스텍(Construction Technology) M&amp;A가 활발하다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/trimble-acquire-document-crunch-contech/816630/" target="_blank" rel="noopener">Trimble, AI 계약 분석 스타트업 Document Crunch 인수</a></li>
+</ul>
+<p>건설 기술 분야에서 AI 기반 솔루션 확보를 위한 M&amp;A가 진행되고 있다</p>
+
+<h3>공기 / 원가 / 변경관리</h3>
+<p>2026년 초 건설 시장은 여러 지표가 둔화되었지만 모든 활동이 중단된 것은 아니며, 허리케인 피해 복구 등 긴급 프로젝트가 진행되고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/latest-construction-data-narrowing-market-2026/816761/" target="_blank" rel="noopener">2026년 초 건설 데이터, 시장 축소 조짐 속 일부 활동 지속</a></li>
+</ul>
+<p>건설 시장 지표 둔화에도 불구하고 선별적 활동은 계속되고 있다</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/aecom-hunt-replace-rays-ballpark-roof-construction-stadium/816737/" target="_blank" rel="noopener">AECOM Hunt, 허리케인 피해 야구장 6천만 달러 지붕 교체 완료</a></li>
+</ul>
+<p>다국적 협력을 통해 대형 섬유유리 패널 교체 작업을 신속히 완료했다</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[NIST 극한환경용 포토닉 칩 패키징·USC 700°C 메모리 개발] 실험실 기술의 상용화까지 시간 소요. 양산 수율과 비용 검증 필요.</li>
+<li>[중동전쟁 후 고액자산가 원전·방산 매도, 반도체 매수 전환] 지정학적 불확실성 지속 시 투자 심리 급변 가능. 단기 변동성 확대 우려.</li>
+<li>[JEDEC HBM4 두께 표준 900㎛ vs 825㎛ 논의, 수율·양산성 좌우] 과도한 두께 증가 시 휨 현상과 방열 문제 발생. 표준 합의 지연 시 HBM4 양산 일정 차질 우려.</li>
+<li>[AIIA 평가, 국내 데이터센터 절반 이상 기준 미달…전력인프라 부족] 전력망 수용성 미비로 계획된 프로젝트 중 절반 이상 실행 불확실. 공급 부족 지속 시 해외 기업에 시장 기회 상실.</li>
+<li>[LS일렉트릭, 美 데이터센터 초고압변압기 1066억원 수주] 2027년 말 납품까지 환율 변동과 원자재 가격 상승 리스크. 빅테크 고객사의 프로젝트 일정 변경 가능성.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>NIST 패키징 기법의 파일럿 테스트 진행 여부와 참여 기업 확인 필요.</li>
+<li>주요 반도체 종목별 외국인/기관 순매수 동향 추적 필요.</li>
+<li>4월 중 JEDEC 표준 위원회 결정 사항과 삼성전자/SK하이닉스 입장 확인 필요.</li>
+<li>정부의 데이터센터 전력 인프라 확충 계획과 규제 완화 정책 발표 시점 확인 필요.</li>
+<li>추가 마이크로그리드 프로젝트 수주 여부와 북미 현지 생산시설 투자 계획 확인 필요.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/5건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-04-06T21:39:58.606445+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
