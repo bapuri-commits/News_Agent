@@ -403,5 +403,14 @@
     "top_headline": "NIST 극한환경용 포토닉 칩 패키징·USC 700°C 메모리 개발",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-04-08": {
+    "date": "2026-04-08",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "SK에코플랜트, 신반포20차 재건축 단독입찰로 올해 첫 정비사업 수주 유력",
+    "sk_headline": "AI 인프라로 사업 포트폴리오 전환 가속화",
+    "article_count": 39
   }
 }
