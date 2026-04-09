@@ -421,5 +421,14 @@
     "top_headline": "Trimble, AI 계약분석 스타트업 Document Crunch 인수",
     "sk_headline": "AI 인프라 전방위 확장, 기술탈취 분쟁 부담",
     "article_count": 39
+  },
+  "2026-04-10": {
+    "date": "2026-04-10",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "SK에코플랜트, 기술·사업관리 역량으로 수주 경쟁력 강화 전략",
+    "sk_headline": "SK에코플랜트, 하이닉스 클러스터 현장 사고 발생",
+    "article_count": 39
   }
 }
