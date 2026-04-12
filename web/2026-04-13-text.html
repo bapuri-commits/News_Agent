@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-04-13 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-04-13.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-04-13</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-04-13</h1>
+
+<blockquote>데이터센터 계약방식별 리스크와 속도 트레이드오프 분석 / Intel-Tesla/SpaceX &#x27;Terafab&#x27; 파트너십 체결 / 한은 &#x27;반도체 호황 2026년 하반기부터 AI 수익성 검증 국면&#x27;</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. 데이터센터 계약방식별 리스크와 속도 트레이드오프 분석</h3>
+
+<p>McKinsey 전망: 2030년까지 전세계 데이터센터 인프라 CAPEX 7조 달러, 이중 미국 40% 차지. EPC/Design-Build 계약이 주류로, EPC는 턴키 방식으로 발주처 리스크 최소화하나 비용 상승 가능성 존재.</p>
+
+<p><strong>영향</strong>: 데이터센터 발주 급증으로 EPC 업체들의 협상력 강화 예상. 속도 중시 발주처는 EPC 선호하나 비용 통제력 약화 우려.</p>
+<p><strong>리스크</strong>: EPC 계약 시 설계변경 통제 어려움. 발주처의 비용 예측 불확실성 증가.</p>
+<p><strong>확인 필요</strong>: 주요 빅테크의 데이터센터 계약방식 선택과 EPC 업체별 수주 동향 확인</p>
+
+<p>📎 출처: <a href="https://www.constructiondive.com/news/owners-contractors-tips-data-center-contracts/817235/" target="_blank" rel="noopener">Construction Dive</a></p>
+
+<h3>2. Intel-Tesla/SpaceX &#x27;Terafab&#x27; 파트너십 체결</h3>
+
+<p>Intel이 Tesla, SpaceX, xAI와 Terafab 프로젝트 협약 체결. Yole 애널리스트는 Intel의 팹 확장으로 분석하며, 3사가 앵커 고객으로 참여.</p>
+
+<p><strong>영향</strong>: Intel 파운드리 사업 본격화 신호. Tesla/SpaceX의 자체 칩 생산 가능성과 Intel 가동률 개선 기대.</p>
+<p><strong>리스크</strong>: 구체적인 투자 규모, 위치, 일정 미확인. Intel의 파운드리 기술력 검증 필요.</p>
+<p><strong>확인 필요</strong>: Terafab 투자 규모, 위치, 착공 일정 및 생산 칩 종류 확인 필요</p>
+
+<p>📎 출처: <a href="https://www.eetimes.com/intel-enters-pact-with-tesla-and-spacex-for-terafab/" target="_blank" rel="noopener">EE Times</a></p>
+
+<h3>3. 한은 &#x27;반도체 호황 2026년 하반기부터 AI 수익성 검증 국면&#x27;</h3>
+
+<p>한은 보고서: 현 반도체 호황은 AI 데이터센터 투자 주도, HBM과 범용 D램 동시 급증. 빅테크 회사채 발행 증가, CDS 프리미엄 상승. SK하이닉스 용인캠퍼스, 삼성 평택5공장 증설 예정.</p>
+
+<p><strong>영향</strong>: 2026년 상반기까지 확장세 지속 전망. 하반기부터 AI 투자 수익성 검증 단계로 전환 시 수요 조정 가능성.</p>
+<p><strong>리스크</strong>: 빅테크 자금조달 어려움 시 데이터센터 건설 지연 위험. 중국 D램 공급 증가 속도가 한국의 3배로 가격 하방 압력.</p>
+<p><strong>확인 필요</strong>: 빅테크 2분기 실적발표 시 AI 투자 가이던스 및 현금흐름 변화 주시</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE5Ycjl6VkczQXRSLXhCa3F0VFYtYlFNdm5NejZQUTZqMWw4X2FIY1UyUVY0bjAxaEg2eXFHcmhBR21zOTd2SGsxTVdlVTlGTm1xWWk2bQ?oc=5" target="_blank" rel="noopener">이투데이</a></p>
+
+<h3>4. HBM 호황에 K-반도체 장비 수출 급증, 한미반도체 TC본더 글로벌 1위</h3>
+
+<p>한미반도체 인도에 BOC COB 본더 수출, SK하이닉스에 HBM용 TC본더 공급 중 글로벌 1위. 테스 949억원 수주. 2025년 반도체 장비 시장 1,351억 달러로 사상 최대.</p>
+
+<p><strong>영향</strong>: HBM 수요 폭증으로 후공정 장비업체 수혜 집중. 테스트 장비 매출 55% 급증.</p>
+<p><strong>확인 필요</strong>: 삼성전자/SK하이닉스의 2026년 장비 투자 계획 구체화 시점 확인</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE03bWxnUklmTWFHV0dXSXloZXdqYTZmSjY5WVl5UkNTRXpfT3czTGdvNnVaTDE3c1AwMU5OM2xBdS1JQTdXcTRKWG1nWE5fV2t3b1ZSZWZFNVdsZ0tIQ05LWjhRTDRHVloxOVE?oc=5" target="_blank" rel="noopener">서울파이낸스</a></p>
+
+<h3>5. AI 데이터센터 인프라 부족으로 2026년 물량 반토막 전망</h3>
+
+<p>2026년 데이터센터 물량이 인프라 부족으로 반토막날 전망 (구체적 수치 미확인). K-반도체 고점론 제기.</p>
+
+<p><strong>영향</strong>: 데이터센터 건설 병목현상 발생 시 반도체 수요 증가세 둔화 우려. 한국 메모리 업체들의 투자 계획 재검토 가능성.</p>
+<p><strong>리스크</strong>: 전력, 냉각, 부지 등 데이터센터 인프라 부족으로 건설 지연 위험. 반도체 수요 예측 하향 조정 가능성.</p>
+<p><strong>확인 필요</strong>: 주요 데이터센터 건설 프로젝트의 인허가 및 전력 공급 계약 진행 상황 점검</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaHdYUUxVcl9Jd1dWVlVjNFctVFk1MUlCQmVOVVd5LTdoOG8wM3Ribkp5Rmc1ckl4OVhVbllvYnpud2d6NFNJMlM3TzF6bTNDVTJxanY3MkZXcmlwRHpHTkFwd01nMmRCR0pEUE5BVTE3VDg4Ul9rNnFBZm9Db2JHUUVMejE4Unli?oc=5" target="_blank" rel="noopener">글로벌이코노믹</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>한국은행은 AI 수요에 따른 반도체 호황이 내년 상반기까지 지속될 것으로 전망한다고 발표했습니다. 삼성전자와 SK하이닉스 등 K-반도체 기업들은 HBM 시장에서 성장세를 보이고 있으며, 엔비디아 독주에 맞선 구글-브로드컴 등 빅테크의 맞춤형 칩 개발도 가속화되고 있습니다. 다만 2026년 이후 AI 수익성 검증과 중국의 추격이 주요 변수로 작용할 것으로 예상됩니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE5Ycjl6VkczQXRSLXhCa3F0VFYtYlFNdm5NejZQUTZqMWw4X2FIY1UyUVY0bjAxaEg2eXFHcmhBR21zOTd2SGsxTVdlVTlGTm1xWWk2bQ?oc=5" target="_blank" rel="noopener">한은, 반도체 호황 내년 하반기부터 AI 수익성 검증에 달려있다고 전망</a></li>
+</ul>
+<p>반도체 확장세가 내년 상반기까지 지속되지만 이후 AI 투자 수익성이 변수</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTFBsUkt0OG9xa2Uzc1Q1eS1pYlFweWRXaTNzWndfWmZlQ0lhcG0zVlJja05jaEs0RER3R1RnWU5mSUtlTjBPY2NPeVFFT2pydWQ4cXpsZUcwUGR3S2IxblIwbzhkS3lLT0FTODRPTkRkZWxMTHl3Tnc?oc=5" target="_blank" rel="noopener">삼성전자 HBM4E 20단 개발과 엔비디아 동맹으로 기업가치 상승</a></li>
+</ul>
+<p>HBM 시장에서 삼성전자의 경쟁력 강화로 장기 성장 모멘텀 확보</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9nc25qeUdmaFduVUd3aG81LS04YUNEcDFRTFRkQzdkVGg3QlZRM1p5NG5BT25uSDNENVQteGRISlNZRWY5a2QwMDNBaFMtLWlTY3NQYlRXd01QTTBaQk1ZZkNLa1ozcTYzcVVrZjIyTC01UUHSAXNBVV95cUxPZ3NuanlHZmhXblVHd2hvNS0tOGFDRHAxUUxUZEM3ZFRoN0JWUTNaeTRuQU9ubkgzRDVULXhkSEpTWUVmOWtkMDAzQWhTLS1pU2NzUGJUV3dNUE0wWkJNWWZDS2taM3E2M3FVa2YyMkwtNVFB?oc=5" target="_blank" rel="noopener">SK하이닉스도 삼성전자와 함께 분기 영업익 40조원 달성 가시권</a></li>
+</ul>
+<p>메모리 반도체 양강 체제의 실적 개선세 지속</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQRDl3Z0YwSGdaTUtVcW9ORW54c0MwMmxudnZpWEl6cmZiME9PMzBDOEFCclZtZlFSdHhJWnpBU3ctUlZBTC1hdFdWQlBJa1RBYmpZQjZzTGNYVnFWWExDRWpvaW1xb0lhWjMzWlVXaXZWcWtDUERWNF9mVmlwR29KX2VHVUVEYW03TW1KY2FKZ0stZmVfcGE2Smw1RTBVbXpEVkgwVmduUEM3QV9TOUE?oc=5" target="_blank" rel="noopener">차세대 반도체 패권이 빅테크 맞춤형 칩 수주 경쟁으로 이동</a></li>
+</ul>
+<p>파운드리 시장에서 커스텀 칩 설계 역량이 핵심 경쟁요소로 부상</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE9uVHNOTV9nSy10QlR5YWxGSjVnNWhackRTSWRjSF9SYkhnU2xGc3R2ZzVsSWdtUF9EXzdVSzVGakNvMHIwNWlsa0tWdWd5MjhZN0plU2lFNVZ3NEVDWnE1c01YTFVQa2owRm9pUkFxX1lMZ2w2cHEyNNIBeEFVX3lxTE9uVHNOTV9nSy10QlR5YWxGSjVnNWhackRTSWRjSF9SYkhnU2xGc3R2ZzVsSWdtUF9EXzdVSzVGakNvMHIwNWlsa0tWdWd5MjhZN0plU2lFNVZ3NEVDWnE1c01YTFVQa2owRm9pUkFxX1lMZ2w2cHEyNA?oc=5" target="_blank" rel="noopener">구글-브로드컴 AI 칩 동맹으로 K-반도체 협상력 강화 전망</a></li>
+</ul>
+<p>엔비디아 대항 생태계 형성으로 한국 반도체 기업의 선택권 증가</p>
+
+<h3>클린룸 / 공정 인프라</h3>
+<p>AI 및 신경망 컴퓨터 연구에서 데이터 신뢰성 문제와 차세대 컴퓨팅 아키텍처에 대한 기술 논문들이 발표되었습니다.</p>
+
+<ul>
+<li><a href="https://semiengineering.com/silent-data-corruption-a-major-reliability-challenge-in-large-scale-llm-training-tu-berlin/" target="_blank" rel="noopener">대규모 LLM 훈련에서 무음 데이터 손상이 주요 신뢰성 도전과제로 제기</a></li>
+</ul>
+<p>AI 모델 학습 과정의 데이터 무결성 확보가 새로운 기술적 과제</p>
+<ul>
+<li><a href="https://semiengineering.com/an-engineering-roadmap-toward-completely-neural-computers-meta-ai-kaust/" target="_blank" rel="noopener">메타AI와 KAUST가 완전 신경망 컴퓨터 엔지니어링 로드맵 제시</a></li>
+</ul>
+<p>기존 컴퓨터 아키텍처를 대체하는 신경망 기반 컴퓨팅 시스템 연구</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>HBM 수요 증가로 반도체 장비 시장이 호황을 맞으며 한국 반도체 생태계 전체가 동반 성장하고 있습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE03bWxnUklmTWFHV0dXSXloZXdqYTZmSjY5WVl5UkNTRXpfT3czTGdvNnVaTDE3c1AwMU5OM2xBdS1JQTdXcTRKWG1nWE5fV2t3b1ZSZWZFNVdsZ0tIQ05LWjhRTDRHVloxOVE?oc=5" target="_blank" rel="noopener">HBM 성장으로 반도체 장비 호황과 K-반도체 생태계 동반 성장</a></li>
+</ul>
+<p>메모리 반도체 수요 증가가 장비업체까지 성장 동력 제공</p>
+
+<h3>데이터센터 신축</h3>
+<p>AI 워크로드 증가로 데이터센터 건설이 급증하고 있으며, 전력 공급과 냉각 솔루션이 핵심 기술로 부상하고 있습니다. 미국에서는 데이터센터가 3월 상업 건설 계획의 주도적 역할을 하고 있으며, 중동 분쟁이 기술 투자에 부정적 영향을 미치고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/opinions/when-data-centers-bring-their-own-power-supply/" target="_blank" rel="noopener">데이터센터가 자체 전력 공급 시스템을 구축하는 추세</a></li>
+</ul>
+<p>전력 인프라 확보가 데이터센터 운영의 핵심 요소로 부상</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/opinions/the-chip-as-the-new-core-how-server-providers-are-powering-ai-conversations-in-the-data-center/" target="_blank" rel="noopener">AI 워크로드 증가로 서버 제공업체의 컴퓨팅 전략 변화 필요</a></li>
+</ul>
+<p>칩이 새로운 핵심 요소로 데이터센터 아키텍처 재편</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/product-news/ablecom-launches-130kw-ready-cooling-solutions-for-high-density-computing/" target="_blank" rel="noopener">Ablecom이 고밀도 AI 워크로드용 130kW 냉각 솔루션 출시</a></li>
+</ul>
+<p>랙 레벨 냉각 인프라로 공간 효율성 극대화</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/data-centers-power-march-construction-planning/817115/" target="_blank" rel="noopener">데이터센터가 3월 상업 건설 계획을 거의 독점적으로 주도</a></li>
+</ul>
+<p>데이터센터 없었다면 상업 건설 계획이 12.7% 감소했을 것</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9raExXd2RKeGxkQjhIZW1SMmwxSlVPSDc4eFpjNDJTMUVIWVFoUFBHUzNhQXFwSUw1YmRWNVF2WVFxVi13MHJXVTl4WDdUdjFVelFxc1lDakhOR0toMVBsNm1SZzl4eTBhQUVkVkF4WFVydVE?oc=5" target="_blank" rel="noopener">중동 분쟁으로 AI 데이터센터와 반도체 공급망에 투자 위축 우려</a></li>
+</ul>
+<p>지정학적 리스크가 기술 분야 투자 심리에 부정적 영향</p>
+
+<h3>EPC / 수주</h3>
+<p>AI 붐에 따른 데이터센터 건설 급증으로 계약 리스크 관리의 중요성이 부각되고 있으며, 건설업계에서 임원진 교체와 새로운 프로젝트 수주가 활발히 진행되고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/owners-contractors-tips-data-center-contracts/817235/" target="_blank" rel="noopener">AI 데이터센터 건설 붐으로 계약 리스크 관리의 중요성 강조</a></li>
+</ul>
+<p>데이터센터 건설 수요 급증에 따른 계약상 위험 요소 증가</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/contractor-executives-fluor-energy-jobs-balfour-beatty-hq/817132/" target="_blank" rel="noopener">건설업계 임원진 교체와 Fluor의 에너지 프로젝트 2건 수주</a></li>
+</ul>
+<p>건설업계 조직 개편과 신규 프로젝트 수주 활동 증가</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[데이터센터 계약방식별 리스크와 속도 트레이드오프 분석] EPC 계약 시 설계변경 통제 어려움. 발주처의 비용 예측 불확실성 증가.</li>
+<li>[Intel-Tesla/SpaceX &#x27;Terafab&#x27; 파트너십 체결] 구체적인 투자 규모, 위치, 일정 미확인. Intel의 파운드리 기술력 검증 필요.</li>
+<li>[한은 &#x27;반도체 호황 2026년 하반기부터 AI 수익성 검증 국면&#x27;] 빅테크 자금조달 어려움 시 데이터센터 건설 지연 위험. 중국 D램 공급 증가 속도가 한국의 3배로 가격 하방 압력.</li>
+<li>[AI 데이터센터 인프라 부족으로 2026년 물량 반토막 전망] 전력, 냉각, 부지 등 데이터센터 인프라 부족으로 건설 지연 위험. 반도체 수요 예측 하향 조정 가능성.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>주요 빅테크의 데이터센터 계약방식 선택과 EPC 업체별 수주 동향 확인</li>
+<li>Terafab 투자 규모, 위치, 착공 일정 및 생산 칩 종류 확인 필요</li>
+<li>빅테크 2분기 실적발표 시 AI 투자 가이던스 및 현금흐름 변화 주시</li>
+<li>삼성전자/SK하이닉스의 2026년 장비 투자 계획 구체화 시점 확인</li>
+<li>주요 데이터센터 건설 프로젝트의 인허가 및 전력 공급 계약 진행 상황 점검</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/5건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-04-12T21:36:11.567846+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
