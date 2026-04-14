@@ -466,5 +466,14 @@
     "top_headline": "Vertiv, 프리팹 데이터센터 업체 BMarko 인수",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-04-15": {
+    "date": "2026-04-15",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "Switch, 리노 데이터센터 담보로 7.68억 달러 ABS 자금 조달",
+    "sk_headline": "",
+    "article_count": 39
   }
 }
