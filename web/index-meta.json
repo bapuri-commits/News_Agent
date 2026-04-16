@@ -475,5 +475,14 @@
     "top_headline": "Switch, 리노 데이터센터 담보로 7.68억 달러 ABS 자금 조달",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-04-17": {
+    "date": "2026-04-17",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "WSP, AI시대 데이터센터 냉각·800V DC 전문인력 양성 강조",
+    "sk_headline": "신반포20차 소규모재건축 수주 '초읽기'",
+    "article_count": 39
   }
 }
