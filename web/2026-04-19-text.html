@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-04-19 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-04-19.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-04-19</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-04-19</h1>
+
+<blockquote>Nemetschek, HCSS 인수로 美인프라 시장 진출 / TSMC, AI 수요 대응 증설 가속화하나 공급 부족 우려 / 빅테크, EU 데이터센터 환경 데이터 비공개 조항 확보</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. Nemetschek, HCSS 인수로 美인프라 시장 진출</h3>
+
+<p>독일 Nemetschek Group이 미국 HCSS를 Thoma Bravo로부터 인수. HCSS는 2025년 매출 2.15억달러, 직원 550명, 고객사 4,000개. 인수 후 Nemetschek 72%, Thoma Bravo 28% 지분 구조.</p>
+
+<p><strong>영향</strong>: 미국 1.2조달러 인프라투자법(IIJA) 수혜를 겨냥한 유럽 ConTech의 미국 시장 진출. HeavyBid/HeavyJob과 Bluebeam/Nevaris 결합으로 중공업 건설 솔루션 확대.</p>
+<p><strong>리스크</strong>: 기존 HCSS 부채 전액 재융자 필요. 통합 후 시너지 실현 불확실성.</p>
+<p><strong>확인 필요</strong>: 인수가격 및 거래 완료 시점 확인 필요</p>
+
+<p>📎 출처: <a href="https://www.constructiondive.com/news/nemetschek-group-acquires-hcss-contech-merger-acquisition/817673/" target="_blank" rel="noopener">Construction Dive</a></p>
+
+<h3>2. TSMC, AI 수요 대응 증설 가속화하나 공급 부족 우려</h3>
+
+<p>TSMC가 AI 대기업 수요에 대응해 칩 생산 확대 중. 구체적 투자 규모나 일정은 미확인.</p>
+
+<p><strong>영향</strong>: AI 칩 수요 급증에 따른 파운드리 업계 캐팩스 확대 가속화. 공급 부족 지속 시 AI 기업들의 칩 확보 경쟁 심화.</p>
+<p><strong>리스크</strong>: 생산능력 확대에도 불구하고 공급 부족(shortage) 지속 가능성.</p>
+<p><strong>확인 필요</strong>: TSMC의 구체적 증설 계획 및 투자 규모 발표 모니터링</p>
+
+<p>📎 출처: <a href="https://www.eetimes.com/tsmc-chases-soaring-ai-demand/" target="_blank" rel="noopener">EE Times</a></p>
+
+<h3>3. 빅테크, EU 데이터센터 환경 데이터 비공개 조항 확보</h3>
+
+<p>마이크로소프트, 아마존, 구글, 메타 등이 EU에서 데이터센터 환경 영향 데이터를 비공개로 유지할 수 있는 조항 확보.</p>
+
+<p><strong>영향</strong>: 데이터센터 운영사들의 환경 규제 압력 완화. ESG 정보 공개 투명성 후퇴로 투자자 및 시민사회 반발 가능.</p>
+<p><strong>리스크</strong>: 향후 EU 환경 규제 강화 시 규제 리스크 증가. ESG 평가 하락 가능성.</p>
+<p><strong>확인 필요</strong>: EU 집행위원회의 구체적 규정 내용 및 시행 일정 확인</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/data-center-lobby-secured-eu-provision-to-keep-environmental-impact-data-confidential-report/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>4. 데이터센터 냉각용 유전체 유체 기술 가이드</h3>
+
+<p>데이터센터 냉각에 사용되는 유전체 유체(dielectric fluids)에 대한 기술 프라이머 발표.</p>
+
+<p><strong>영향</strong>: 액침냉각 등 차세대 냉각 기술 도입 가속화. 고밀도 AI 서버 냉각 솔루션으로 주목.</p>
+<p><strong>확인 필요</strong>: 주요 벤더별 유전체 유체 제품 및 가격 동향 모니터링</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/analysis/everything-data-center-operators-need-to-know-about-dielectric-fluids/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>5. EU 데이터센터 총 전력용량 6.4GW로 집계</h3>
+
+<p>EU 에너지효율지침(EED)에 따른 첫 집계 결과 EU 내 데이터센터 설치 용량 6.4GW. 아직 불완전한 데이터로 명시.</p>
+
+<p><strong>영향</strong>: EU 데이터센터 시장 규모 파악 시작. 향후 전력 인프라 투자 및 규제 정책 수립의 기초 자료.</p>
+<p><strong>리스크</strong>: 데이터 불완전성으로 실제 용량 과소평가 가능. 추가 규제 강화 가능성.</p>
+<p><strong>확인 필요</strong>: 완전한 데이터 집계 시점 및 국가별 세부 현황 발표 확인</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/european-commission-releases-aggregate-eed-data-center-data-operators-report-64gw-of-installed-capacity-across-the-eu/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>SK에코플랜트, 임직원 심리상담 프로그램 확대 운영</strong></p>
+
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBJVVBONUxJQy05cnZlY1FmaXh2UUMwTUcxdjhMRlp5dnBPQmhTSllld09UaktuS0ZIb3Y0S01XU2wtajFEVEFKOEkwR0F1ajVpeW5RUTJ1Q3FQQdIBWEFVX3lxTE1WTVhXRTdOcUlzRUllVEJPZGpobmphZDZ0V2dqVmFKZEl0WFhiZDlYWUZEakxIV2dLNFBHUkhxQWt0a0tQZ1FaR1dWVHYtZWtyQ1E3dW95SVA?oc=5" target="_blank" rel="noopener">아주경제</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE5FanByWVhQYWh2RG9uNFhqV1dzNm5YY2dSdmNhTHdyUV9RNkktdTBoYi1LZXNuaEltR2ZTZldvcklUZ0dwQ3hXb2Zud3BmajJKaEI4WmYtOGh2bXVrTlRjWks3azhlX2Uya0NOOQ?oc=5" target="_blank" rel="noopener">굿모닝경제</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBnWVNXUmltR3BjdDF1VjFtRkNXNXE4cTJneFlMLVVKSmFoWFA0NnphUFJJTTlhdVVLRnVXdGYwQkVNQ3VkSWRYWDUtVDR0QnpGVkxwMXp1azU5Y0UxRENhd1d3VFBJRnVDNVVUZkNkMHV5VUHSAXdBVV95cUxPcWxjUWRleFIwQ0VRP185cVpTb2JfeUFZbU1UVklRSzBEYV9ZLU9jelNRSF9BWjUtMXZhb2F2OV9tZWxoTVlNU0NUQ2Q4UVRSdXAzSGg1TFhJcEdsZlZoVDhYcC1nQUpWZ1A0VUpwcUI1Nk94czZrWQ?oc=5" target="_blank" rel="noopener">핀포인트뉴스</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFBHSWdIM0N4X25aTGloQzhzZFFQb3Zyd3oyclJ6dEFIRk42TGFXa0NNSlVnek9ycWVMSDFBeEUwUjhKWDVzM3F0M0dlSzhjcVlPVjdCN3Z3TlpDVlgyblE?oc=5" target="_blank" rel="noopener">뉴스투데이</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE5ELVdyazhXQzdLekNGcDBlQWhDeUI2am1tcEtkSEJFVUpnVFVPeTY2TnVlYWNycGpMbG84bGRudjRxNW5uV29MNk1MWTRtRk5xMy1WSElTOWRZWHJpWTBLRVhCRWVOejlvY0E2NTI3TdIBc0FVX3lxTE5UdVhWa1NHSy1hSTBVWmxuXzdleThmMEIwdWpCYmlxb2ZnREl3bXRvdzlDbVItYTFzM3lKY2NLcFh3cTZsVFc1NmRzd0RFaWhsM0M1bmlJbTdHd2dkVTM0Wk1zaFhUb1FXOUcwOWxXMFdjQWM?oc=5" target="_blank" rel="noopener">데일리한국</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>AI 반도체 수요 급증으로 TSMC 등 주요 파운드리 업체들이 생산 확장에 나서고 있으며, 국내외 반도체 ETF 투자 열풍이 지속되고 있다. Cadence의 AI 에이전트 스택, EU DARE 프로젝트 변화 등 설계 도구와 기술 개발도 활발히 진행되고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/tsmc-chases-soaring-ai-demand/" target="_blank" rel="noopener">TSMC AI 수요 급증 대응 생산 확장</a></li>
+</ul>
+<p>TSMC가 AI 칩 수요 급증에 대응해 생산 확장을 가속화하고 있으나 공급 부족 우려가 존재한다.</p>
+<ul>
+<li><a href="https://www.eetimes.com/first-take-on-cadencelive-and-its-ai-agent-stacks-for-eda/" target="_blank" rel="noopener">Cadence AI 에이전트 스택 EDA 도구 혁신</a></li>
+</ul>
+<p>Cadence가 새로운 AI 에이전트 스택으로 시스템 설계 분야를 혁신하고 있다.</p>
+<ul>
+<li><a href="https://www.eetimes.com/eu-dare-project-is-scrambling-to-replace-codasip/" target="_blank" rel="noopener">EU DARE 프로젝트 Codasip 대안 모색</a></li>
+</ul>
+<p>EU DARE 프로젝트가 Codasip 매각으로 인한 불확실성 해결을 위해 대안을 탐색 중이다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQR2p3VTFORU9HQXp3dF9lTFdiRndHaUZBc0Ytd1lvSHFyNzB0TGtaOFQwU28yajhVMk44dG9LbUVYNjB4dzZXYkhjcXFwMXdYc21WRUJ4UW5wdERENTJUOVZMdkw2NGNsX2lfUk1rQjk3bjNDQmFBVFlobFJLMWNrdw?oc=5" target="_blank" rel="noopener">한투운용 ACE AI반도체 ETF 수익률 1위</a></li>
+</ul>
+<p>한투운용의 ACE AI반도체TOP3+ ETF가 6개월 수익률 116%로 동종 ETF 중 1위를 기록했다.</p>
+
+<h3>DC 전력</h3>
+<p>데이터센터 업계에서는 환경 영향 데이터 공개 관련 EU 규정 확보와 건설 기술 분야 M&amp;A가 활발히 진행되고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/data-center-lobby-secured-eu-provision-to-keep-environmental-impact-data-confidential-report/" target="_blank" rel="noopener">데이터센터 로비 EU 환경 영향 데이터 규정 확보</a></li>
+</ul>
+<p>Microsoft, Amazon, Google, Meta 등이 포함된 데이터센터 로비가 환경 영향 데이터 관련 EU 규정을 확보했다.</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/nemetschek-group-acquires-hcss-contech-merger-acquisition/817673/" target="_blank" rel="noopener">Nemetschek HCSS 인수로 건설기술 강화</a></li>
+</ul>
+<p>Bluebeam과 Nevaris를 보유한 뮌헨 기반 Nemetschek이 HCSS를 인수해 기술 파워하우스 구축을 목표로 한다.</p>
+
+<h3>DC 냉각</h3>
+<p>데이터센터 냉각 기술 분야에서는 유전체 유체 활용에 대한 관심이 높아지고 있으며, 유럽위원회가 데이터센터 에너지 관련 데이터를 공개했다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/analysis/everything-data-center-operators-need-to-know-about-dielectric-fluids/" target="_blank" rel="noopener">데이터센터 유전체 유체 냉각 기술 가이드</a></li>
+</ul>
+<p>데이터센터 운영자들을 위한 냉각용 유전체 유체 활용 기술에 대한 기본 가이드가 제공되었다.</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/european-commission-releases-aggregate-eed-data-center-data-operators-report-64gw-of-installed-capacity-across-the-eu/" target="_blank" rel="noopener">유럽위원회 데이터센터 에너지 데이터 공개</a></li>
+</ul>
+<p>유럽위원회가 EED 지침 하의 데이터센터 총합 데이터를 공개했으나 아직 완전한 그림은 아니다.</p>
+
+<h3>EPC / 수주</h3>
+<p>건설 분야에서는 시공 결함으로 인한 대규모 손해배상 판결이 나오면서 품질 관리의 중요성이 부각되고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/tutor-perini-philadelphia-w-hotel-lawsuit/817890/" target="_blank" rel="noopener">Tutor Perini 1억7460만달러 손해배상 판결</a></li>
+</ul>
+<p>필라델피아 W Hotel과 Element Hotel 시공 결함으로 Tutor Perini가 계약 위반 판정을 받고 대규모 손해배상을 명령받았다.</p>
+
+<h3>공기 / 원가 / 변경관리</h3>
+<p>미국 건설업계는 이민률 감소로 인한 인력 부족 우려에 직면해 있어 프로젝트 일정과 비용에 부정적 영향이 예상된다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/immigration-rate-construction-workers-labor-shortage-trades/817865/" target="_blank" rel="noopener">미국 이민률 감소로 건설업 인력 부족 우려</a></li>
+</ul>
+<p>2024년 건설업 이민 노동자가 사상 최고치를 기록했으나, 미국의 마이너스 이민률로 인력 부족이 예상된다.</p>
+
+<h3>인력 / 인사</h3>
+<p>SK에코플랜트가 임직원과 가족을 대상으로 한 심리상담 프로그램 &#x27;에피케어&#x27;를 확대 운영하며 직원 복지 강화에 나서고 있다. 3년 6개월 동안 운영된 이 프로그램은 2000건을 돌파하며 성공적으로 정착했다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBJVVBONUxJQy05cnZlY1FmaXh2UUMwTUcxdjhMRlp5dnBPQmhTSllld09UaktuS0ZIb3Y0S01XU2wtajFEVEFKOEkwR0F1ajVpeW5RUTJ1Q3FQQdIBWEFVX3lxTE1WTVhXRTdOcUlzRUllVEJPZGpobmphZDZ0V2dqVmFKZEl0WFhiZDlYWUZEakxIV2dLNFBHUkhxQWt0a0tQZ1FaR1dWVHYtZWtyQ1E3dW95SVA?oc=5" target="_blank" rel="noopener">SK에코플랜트 직원 가족 심리상담 지원 확대</a></li>
+</ul>
+<p>SK에코플랜트가 임직원뿐만 아니라 가족까지 포함한 심리상담 프로그램을 확대 운영하고 있다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE80Vmw2MXV5U1RubkpSczNHN1pta25PZGl0bEFLV3N0S2VvYWh5NVRjeG1jamFDaEtpSFhGNC11WTdqRlA5SnVhZ1ZPbmZoNGxCWGYyTm5wRU9UOENU?oc=5" target="_blank" rel="noopener">에피케어 프로그램 누적 2000건 돌파</a></li>
+</ul>
+<p>SK에코플랜트의 심리상담 프로그램 &#x27;에피케어&#x27;가 3년 6개월 만에 누적 이용 건수 2000건을 돌파했다.</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[Nemetschek, HCSS 인수로 美인프라 시장 진출] 기존 HCSS 부채 전액 재융자 필요. 통합 후 시너지 실현 불확실성.</li>
+<li>[TSMC, AI 수요 대응 증설 가속화하나 공급 부족 우려] 생산능력 확대에도 불구하고 공급 부족(shortage) 지속 가능성.</li>
+<li>[빅테크, EU 데이터센터 환경 데이터 비공개 조항 확보] 향후 EU 환경 규제 강화 시 규제 리스크 증가. ESG 평가 하락 가능성.</li>
+<li>[EU 데이터센터 총 전력용량 6.4GW로 집계] 데이터 불완전성으로 실제 용량 과소평가 가능. 추가 규제 강화 가능성.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>인수가격 및 거래 완료 시점 확인 필요</li>
+<li>TSMC의 구체적 증설 계획 및 투자 규모 발표 모니터링</li>
+<li>EU 집행위원회의 구체적 규정 내용 및 시행 일정 확인</li>
+<li>주요 벤더별 유전체 유체 제품 및 가격 동향 모니터링</li>
+<li>완전한 데이터 집계 시점 및 국가별 세부 현황 발표 확인</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 11/15건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-04-18T21:36:47.218226+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
