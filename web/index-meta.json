@@ -502,5 +502,14 @@
     "top_headline": "Nemetschek, HCSS 인수로 美인프라 시장 진출",
     "sk_headline": "SK에코플랜트, 임직원 심리상담 프로그램 확대 운영",
     "article_count": 39
+  },
+  "2026-04-20": {
+    "date": "2026-04-20",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "SK에코플랜트 반도체·AI 비중 67%로 확대, 신용등급 상향 관건은 차입금 감축",
+    "sk_headline": "반도체·AI 리밸런싱으로 실적개선, 신용등급 상향 관심",
+    "article_count": 39
   }
 }
