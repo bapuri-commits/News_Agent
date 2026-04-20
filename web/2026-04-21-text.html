@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-04-21 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-04-21.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-04-21</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-04-21</h1>
+
+<blockquote>중국 YMTC, 제재 속에서도 로컬 장비로 신규 팹 건설 / 2025년 글로벌 반도체 장비시장 1,351억달러 전망 / 메모리 장기공급계약 5년으로 확대, 선수금 조건 포함</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. 중국 YMTC, 제재 속에서도 로컬 장비로 신규 팹 건설</h3>
+
+<p>중국 메모리 업체 YMTC가 미국 제재에도 불구하고 신규 NAND 팹을 건설 중. 장비, 소재, 공구를 대부분 중국 내 조달로 진행.</p>
+
+<p><strong>영향</strong>: 중국 반도체 자급화 가속화로 글로벌 장비업체 중국 시장 기회 축소. 한국 메모리 업체와의 기술격차 변화 주목 필요.</p>
+<p><strong>리스크</strong>: 중국산 장비의 품질/수율 미확인. 양산 시점 및 경쟁력 불확실.</p>
+<p><strong>확인 필요</strong>: YMTC 신규 팹 양산 시점 및 생산능력 규모 확인 필요.</p>
+
+<p>📎 출처: <a href="https://www.eetimes.com/ymtc-nand-design-surprise-alongside-a-new-fab/" target="_blank" rel="noopener">EE Times</a></p>
+
+<h3>2. 2025년 글로벌 반도체 장비시장 1,351억달러 전망</h3>
+
+<p>AI 수요 증가로 반도체 장비 시장이 전년 대비 15% 성장하여 1,351억 달러 사상 최대 규모 달성 전망.</p>
+
+<p><strong>영향</strong>: 한국 장비업체들의 수주 기회 확대. 특히 AI용 HBM 관련 장비 수요 급증 예상.</p>
+<p><strong>확인 필요</strong>: 주요 장비업체별 2025년 가이던스 및 HBM 관련 투자 계획 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQZTVRa1lualBJOWEycF9VTEZJSE9BaWZPbVhScDdNUTdsRGt5bUtqU0NzeHZLQlZhV1NsaU9FMy1Gd2xfREgwa0E2NmdEZ0ZMdnVhR1N1Q1ZHcHB0WnB3V2RLckdWcFJjSDhaT0kzUFpjYUowcHc4ZlRJYUZ4UnFfcw?oc=5" target="_blank" rel="noopener">이데일리</a></p>
+
+<h3>3. 메모리 장기공급계약 5년으로 확대, 선수금 조건 포함</h3>
+
+<p>샌디스크·마이크론이 차기 연도 매출 일부/전액 선수금 조건의 장기공급계약(LTA) 체결. 계약 기간 최대 5년으로 확대. HBM은 범용 D램 대비 3배 생산능력 필요.</p>
+
+<p><strong>영향</strong>: 메모리 업체 실적 가시성 및 현금흐름 개선. HBM 비중 확대로 공급 증가율 제한되어 가격 방어 가능.</p>
+<p><strong>리스크</strong>: 고객사 수요 둔화 시 계약 이행 리스크 존재. 설비투자 확대에 따른 과잉공급 우려.</p>
+<p><strong>확인 필요</strong>: 삼성전자·SK하이닉스의 LTA 체결 규모 및 조건 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBxVUZENkpMQmRibXVpN3BmLUtJRXZrQXhaeGdZdkw5aGpJVHRPLWliUTdlYUk0d01WV3A0cTh5U2lJT1Zzc05wNHJZTm85WnNBTmdGeVEzZU5tdEtNekEzOTVRb0s3YXZ0bXktSzE2Y1c?oc=5" target="_blank" rel="noopener">nanamcom.co.kr</a></p>
+
+<h3>4. LS일렉트릭, 빅테크 DC 수주 5천억원 돌파</h3>
+
+<p>LS일렉트릭이 2026년 빅테크 데이터센터 전력설비 수주 5,000억원 돌파. 미국 DCW 2026에서 직류(DC) 솔루션 및 UL 인증 배전시스템 공개. 천안 &#x27;DC 팩토리&#x27;에서 1MW급 직류 배전 라인 실증 완료.</p>
+
+<p><strong>영향</strong>: 북미 하이퍼스케일 DC 시장 진출 본격화. AI 데이터센터 랙당 1MW 전력 소비에 대응하는 고효율 DC 솔루션으로 차별화.</p>
+<p><strong>리스크</strong>: 글로벌 경쟁사 대비 레퍼런스 부족. DC 전환 속도 불확실.</p>
+<p><strong>확인 필요</strong>: DCW 2026 전시회 기간 중 신규 빅테크 고객사 계약 체결 여부 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBCeUc3cGFFdTl0SUZCWU9xc0lUWGktV1ppOElZbUwxZUJ1d1Mta0R6TlBDOThOTEFBUUlTa21mR1MyOHE3dzl1Z0dKcl9rbjlQeU8yMjZsa216d1FMNWJjWmhMMmJLeFU5RUgwWA?oc=5" target="_blank" rel="noopener">ER 이코노믹리뷰</a></p>
+
+<h3>5. 반도체 계약학과, 2027년부터 연 500명 배출</h3>
+
+<p>2027년부터 반도체 계약학과 졸업생 연간 400-480명 배출 예정. 삼성전자 협약 대학(성균관대·연세대·KAIST) 350-400명, SK하이닉스 협약(고려대·한양대·서강대) 100-110명. 2028년부터 UNIST·DGIST·GIST 100명 추가.</p>
+
+<p><strong>영향</strong>: 반도체 설계 인력난 완화 기대. 기업 맞춤형 즉시 전력 확보로 개발 경쟁력 강화.</p>
+<p><strong>리스크</strong>: 중도 탈락률 5-15%. 일부 고급 설계 분야는 여전히 석박사급 필요.</p>
+<p><strong>확인 필요</strong>: 2027년 1기 졸업생들의 실제 배치 부서 및 업무 성과 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE0tbGVHZERkWUtIeGtwRFBXQWN4bVFCN01YdXd1Rk1wOEh3WmFJUEZzYnE2aVlrZ1FDS0NOdTFoTzdMNmhPY0c3U3RJbm42dw?oc=5" target="_blank" rel="noopener">전자신문</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>반도체 비중 67% 달성, 신용등급 상향 검토 단계</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> 반도체/AI 중심 리밸런싱으로 하이테크 부문이 전체 매출의 42%를 차지했다(Claim: 5조1,585억원, 2023년 기준). 에센코어·SK에어플러스 편입으로 반도체 가스, 재사용 모듈까지 포함 시 전체 매출 비중이 67%에 달해 &#x27;반도체 인프라&#x27; 기업으로 전환을 완료했다.</li>
+<li><strong>현금흐름·차입</strong> 2023년 매출 12조1,915억원, 영업이익 3,159억원으로 전년 대비 각각 39.5%, 39.7% 증가했다(Claim). 순차입금/EBITDA 비율이 5.7~6.1배로 신평사 상향 기준(3.5~4배 이하) 대비 높지만, 환경 자회사 매각 대금 유입으로 차입 부담 완화가 예상된다.</li>
+<li><strong>PF/우발채무</strong> 대구 본리동 개발사업, 김포 물류센터 등 지방 비주택 관련 PF 우발채무가 주요 모니터링 대상으로 지적됐다. 지방 분양시장과 비주택시장 부진 장기화로 해당 PF 우발채무의 현실화 가능성에 대한 지속적 관찰이 필요한 상황이다.</li>
+<li><strong>IPO/경쟁사</strong> 7월 IPO 약정 기한을 앞두고 장외시장(K-OTC)에서 4만300원에 거래되며 상승세를 보이고 있다. EBITDA/매출액이 7.0~7.5%로 신평사 상향 기준(6~7% 이상)을 충족해 신용등급 &#x27;A-&#x27;에서 상향 가능성이 제기되고 있다.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE5JaEdlZWNRbjJnNWgtWDVBM3owRm90THkydXJXb2w0ZHdweDg2cEd4SjM0Nk1HRXFxOW5sZ2RSRjdCMENpN0FEeXpQN3o4Z3gyVnd5alJrZUVUUjRjWll2Yll6NTdFcVAwQU52QWpleTUzdnNm?oc=5" target="_blank" rel="noopener">연합인포맥스</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFAzM3R2WGI3NE5HTDhoS1p5amhJNWxoQ2VRY0tiSTZOSVVZcGFtSm51d1ZqLS1QUjMxUzlzd1JndWVzMXVoX25yWkdrRDBWem16SkZKSXdING5SM0RuVE5kcFgxbnltSmJtSlpHd3gzTQ?oc=5" target="_blank" rel="noopener">프리스탁뉴스</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>AI 수요 급증으로 반도체 장비 시장이 15% 성장해 1,351억 달러 규모를 기록했으며, 국내 투자자들은 반도체 관련 ETF와 개별 주식에 대한 투자를 크게 늘리고 있다. 특히 삼성전자의 1분기 57조원 영업익 어닝서프라이즈와 HBM 등 고부가 메모리 반도체 호조로 투자 심리가 재점화되고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/ymtc-nand-design-surprise-alongside-a-new-fab/" target="_blank" rel="noopener">YMTC, 제재 우회해 현지 장비로 NAND 팹 구축</a></li>
+</ul>
+<p>중국 메모리 업체가 제재를 피해 현지 장비와 소재로 팹을 건설하며 설계 혁신을 선보였다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQZTVRa1lualBJOWEycF9VTEZJSE9BaWZPbVhScDdNUTdsRGt5bUtqU0NzeHZLQlZhV1NsaU9FMy1Gd2xfREgwa0E2NmdEZ0ZMdnVhR1N1Q1ZHcHB0WnB3V2RLckdWcFJjSDhaT0kzUFpjYUowcHc4ZlRJYUZ4UnFfcw?oc=5" target="_blank" rel="noopener">AI 수요로 반도체 장비 시장 1,351억 달러 사상 최대</a></li>
+</ul>
+<p>반도체 장비 시장이 AI 붐으로 15% 성장하며 역대 최대 규모를 달성했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE93RGM1czN4Vk4wa1YtWHpGWVdSbGh0TFR6eDU3bXdCa2JHbHdrMnZQaDVUVXBVbVh1bFk2UDBySENlZWR1bl85bzlFdVF6ZTdZcjhHWjU1WUVWZ1ZXWHg5TUF3ZUtVZ1Y0eGVjNA?oc=5" target="_blank" rel="noopener">반도체 TOP10 등 ETF 4종 코스피 상장</a></li>
+</ul>
+<p>삼성전자와 하이닉스 중심의 반도체 ETF를 포함한 4개 상품이 새로 상장됐다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1oTDFnS09TS0JFeElpR3FsTWVneGVlWGEzZGZwUFZQbnhpbnRfSVVmTVdOMy1NbGJjUHFwNjZYSWN0c1ZuNlR5alpoZ1RKSTk0bzBn?oc=5" target="_blank" rel="noopener">삼성전자 노조, 45조원 성과급 요구로 논란</a></li>
+</ul>
+<p>반도체 투자 성과가 가시화되는 시점에 노조의 과도한 성과급 요구가 논란이 되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNQk5pclQySy1oN3RncTZxR0sxek41TnZVY01ENVE2Mzg0OGhRODNxaGZqVUZaSzJqblo3QW5qRGJrR3hCN084TjJWaHJfZmhXdzVuU0JQdVJqeDhJNGF4VTdsQTNYZFRvenJSal9ZUzZLME53QzVNMXRCSjdKblI4NloyM0VLQmpFQXR4QmNIeUE4WG9ybzJCODU0cnQ1bkxkb19aM0Q0TGRJdExtV20tVW96Z3M1VTdGa1RodjdDUUxQdXFGQk51Sg?oc=5" target="_blank" rel="noopener">삼성전자 1Q 57조원 영업익 어닝서프라이즈</a></li>
+</ul>
+<p>고부가 메모리 반도체가 실적을 견인하며 시장 예상을 크게 상회했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9vU25EeWZTSjBUbk1HSUhRVGRLMGNfR25sUjhvUU9iUm55R1YxZWtpdGhiZWFfdFlqaXBRQXNwS3FaMndLR2t4ZUxmMXhvcTlVdS1qYm1vOTZNa01sNkctMdIBYEFVX3lxTE9vU25EeWZTSjBUbk1HSUhRVGRLMGNfR25sUjhvUU9iUm55R1YxZWtpdGhiZWFfdFlqaXBRQXNwS3FaMndLR2t4ZUxmMXhvcTlVdS1qYm1vOTZNa01sNkctMQ?oc=5" target="_blank" rel="noopener">4월 삼성전자 신용거래 7.6% 급증</a></li>
+</ul>
+<p>반도체 투심 재점화로 개미들의 빚투가 다시 늘어나고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9BMEE3TkFJZUhreHpMZW1oQnFxNkFScGt5aGFRbktpNEphSWdIY1B4OGhEaTJrT1NMeGg4UVNHc214a0h2WkpWdmpkLU04UTduTW1UZDg5TlJoM1lDQlFmaUZ0UnpnRjV5YTlIWWZDZ1pHc1E?oc=5" target="_blank" rel="noopener">DRAM 공급부족 2027년까지 지속 전망</a></li>
+</ul>
+<p>AI 수요 급증으로 DRAM 대란이 장기화될 것으로 예측됐다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE9SbWpVZk5lVC1tMEJjZldlaTF1VVpNSldPM3h1R1UtRFJOcW9odzV0eTcyaE9NbWY5TmZOQUNKTFU2RUdtT1UxTTZSelBicDRrVE8xYkhkZDVVT3RnZGFYVnBPQWZoTWpkbWVxRjA3RWJtb1VrWmJsSVRidw?oc=5" target="_blank" rel="noopener">테슬라의 반도체 인재 스카우트로 삼성 긴장</a></li>
+</ul>
+<p>글로벌 기업들의 반도체 인재 쟁탈전이 치열해지고 있다</p>
+
+<h3>데이터센터 신축</h3>
+<p>LS일렉트릭이 북미 데이터센터 시장에서 DC 전력 솔루션을 본격 공개하며 차세대 데이터센터 인프라 시장 공략에 나섰다. 칠레에서는 엔텔 디지털이 마이크로 엣지 데이터센터 서비스를 출시했다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/chiles-entel-digital-launches-micro-edge-data-center-offering-alongside-zella-dc/" target="_blank" rel="noopener">칠레 엔텔 디지털, 마이크로 엣지 데이터센터 출시</a></li>
+</ul>
+<p>클라우드, IT, IoT 솔루션 포트폴리오의 일환으로 엣지 서비스를 시작했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBCeUc3cGFFdTl0SUZCWU9xc0lUWGktV1ppOElZbUwxZUJ1d1Mta0R6TlBDOThOTEFBUUlTa21mR1MyOHE3dzl1Z0dKcl9rbjlQeU8yMjZsa216d1FMNWJjWmhMMmJLeFU5RUgwWA?oc=5" target="_blank" rel="noopener">LS일렉트릭, DCW 2026서 DC 전력 시장 정조준</a></li>
+</ul>
+<p>차세대 데이터센터용 DC 전력 솔루션으로 시장 공략에 나섰다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1zNnA3WHlRbGJuZHlPZFIxZnB3V3pfSHVoT1lNX0kwNEtVSHhHWHFLTFlmQVhRRzliYnBBV0tteWJobDBkYUxZOHpIRDVCSy1WdWdnakp3dHVxLXhHWEtNM0VOVUdrZFB3WG5FQlZUMzVtczVW0gF0QVVfeXFMTXM2cDdYeVFsYm5keU9kUjFmcHdXel9IdWhPWU1fSTA0S1VIeEdYcUtMWWZBWFFHOWJicEFXS215YmhsMGRhTFk4ekhENUJLLVZ1Z2dqSnd0dXEteEdYS00zRU5VR2tkUHdYbkVCVlQzNW1zNVY?oc=5" target="_blank" rel="noopener">LS일렉트릭의 데이터센터 DC 전력 승부수</a></li>
+</ul>
+<p>직류 전력 기술을 통해 데이터센터 시장 진출을 본격화하고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9FY1VtZDl5NDVvR0dLOVhOYXJEcThOQWR2RnNJUmdPa05Rc1ZrYkNlTnRPbU1wZV9mSFUzNk0tZEdaRTNpMHp1OTFGSHJlODRtWk5qQmNmVDRxUzdFSTV3RFZzYWRpWndHOWfSAW5BVV95cUxNeS1Ub3FNNl9sTERvWC12SmtlNzJ2UEd2RWZZT2tjY2N6NHZlV0lxdzZWNkQ1cVo2MGRUQmlVdjR4d254UDk3ZDNQeldIbEdDd1lYV0UzUFo3MzFoSVE2UlpPSUx0eWo4WlMwbjM1dw?oc=5" target="_blank" rel="noopener">LS일렉트릭, DC 전력 전면 배치로 시장 판도 변화</a></li>
+</ul>
+<p>데이터센터 인프라 시장에서 혁신적인 전력 솔루션을 제시했다</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>EDA 분야에서 AI 에이전트 기술이 반도체와 PCB 설계 자동화를 혁신하고 있으며, 지멘스의 Fuse EDA AI Agent 등이 주목받고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/eda-ai-agents-intelligent-automation-in-semiconductor-pcb-design/" target="_blank" rel="noopener">EDA AI 에이전트가 반도체 설계 워크플로우 혁신</a></li>
+</ul>
+<p>코파일럿에서 자율 에이전트로 진화하며 설계 자동화를 가속화하고 있다</p>
+
+<h3>DC 전력</h3>
+<p>LS일렉트릭이 북미 시장에서 직류 전력 해법을 공개하며 데이터센터 인프라 경쟁이 본격화되고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTFAyUjgyZ0RjemlPVWF5ckFrUktSRXhMRkhocmE0Vk02Q2lfbDBGdUtGVDlLemRsWHAydWZTRzNrMi1jODJ2MjJDQllMLU1BbGhVYm5vczR6ODcyMmUtZEpLNndn?oc=5" target="_blank" rel="noopener">LS일렉트릭, 북미서 DC 전력 해법 공개</a></li>
+</ul>
+<p>데이터센터 인프라 시장에서 직류 전력 솔루션으로 경쟁력을 확보하고 있다</p>
+
+<h3>DC 냉각</h3>
+<p>페르미의 CEO와 CFO가 연이어 갑작스럽게 퇴임했으며, 삼성이 파업 관련 &#x27;불법 활동&#x27; 중단을 법원에 요청했다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/fermi-cfo-joins-ceo-in-sudden-departure-as-texas-data-center-hopeful-sees-shares-crash/" target="_blank" rel="noopener">페르미 CEO·CFO 연이어 갑작스런 퇴임</a></li>
+</ul>
+<p>텍사스 데이터센터 업체에서 최고경영진의 동반 사임이 발생했다</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/samsung-asks-court-to-stop-workers-engaging-in-illegal-activities-during-upcoming-strike/" target="_blank" rel="noopener">삼성, 파업 관련 &#x27;불법 활동&#x27; 중단 법원 요청</a></li>
+</ul>
+<p>노조의 계획된 파업 행동에 대해 법적 대응에 나섰다</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트가 반도체와 AI 사업을 앞세워 주가 상승세를 보이며 신용등급 상향 가능성이 주목받고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE5JaEdlZWNRbjJnNWgtWDVBM3owRm90THkydXJXb2w0ZHdweDg2cEd4SjM0Nk1HRXFxOW5sZ2RSRjdCMENpN0FEeXpQN3o4Z3gyVnd5alJrZUVUUjRjWll2Yll6NTdFcVAwQU52QWpleTUzdnNm?oc=5" target="_blank" rel="noopener">SK에코플랜트, 반도체·AI로 신용등급 상향 기대</a></li>
+</ul>
+<p>신사업 성과를 바탕으로 신용등급 개선 가능성이 제기되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFAzM3R2WGI3NE5HTDhoS1p5amhJNWxoQ2VRY0tiSTZOSVVZcGFtSm51d1ZqLS1QUjMxUzlzd1JndWVzMXVoX25yWkdrRDBWem16SkZKSXdING5SM0RuVE5kcFgxbnltSmJtSlpHd3gzTQ?oc=5" target="_blank" rel="noopener">SK에코플랜트, 반도체 테마로 4만원 돌파</a></li>
+</ul>
+<p>반도체 관련 사업 기대감으로 주가가 급등했다</p>
+
+<h3>EPC / 수주</h3>
+<p>반도체 계약학과 1세대 학생들이 내년에 500명 규모로 현장에 투입될 예정이다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE0tbGVHZERkWUtIeGtwRFBXQWN4bVFCN01YdXd1Rk1wOEh3WmFJUEZzYnE2aVlrZ1FDS0NOdTFoTzdMNmhPY0c3U3RJbm42dw?oc=5" target="_blank" rel="noopener">반도체 계약학과 1세대 500명 현장 투입 예정</a></li>
+</ul>
+<p>산업 맞춤형 인재 양성 프로그램의 첫 성과가 나온다</p>
+
+<h3>자재 / 노무</h3>
+<p>캘리포니아 건설업체가 임금 체불 사건으로 46만8천 달러 지급 명령을 받았다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/california-contractor-back-wages-theft-dol/817989/" target="_blank" rel="noopener">캘리포니아 건설업체, 임금 체불로 46만8천달러 지급 명령</a></li>
+</ul>
+<p>연방 조사에서 급여 누락과 초과근무 미지급이 적발됐다</p>
+
+<h3>공기 / 원가 / 변경관리</h3>
+<p>트럼프 관세 환급 절차가 월요일부터 시작되며 금융 담당자들이 핵심 역할을 맡게 된다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/what-cfos-should-know-trump-tariff-refund-process-trade/817932/" target="_blank" rel="noopener">트럼프 관세 환급 절차 월요일 시작</a></li>
+</ul>
+<p>기업들의 관세 환급 신청 과정에서 재무 책임자들의 역할이 중요해진다</p>
+
+<h3>M&amp;A / 사업재편</h3>
+<p>시카고 소재 불리 앤 앤드류스가 인테리어 전문업체 ICG를 인수했다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/bulley-andrews-acquires-icg-chicago/817872/" target="_blank" rel="noopener">불리 앤 앤드류스, 인테리어업체 ICG 인수</a></li>
+</ul>
+<p>양사 모두 인테리어 시장의 긍정적 전망을 바탕으로 합병을 추진했다</p>
+
+<h3>기타</h3>
+<p>포지트론 AI가 오라클과의 계약을 통해 아시모프 칩으로 엔비디아의 데이터센터 영역에 진출했다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/positron-ai-enters-nvidia-turf-with-oracle-deal/" target="_blank" rel="noopener">포지트론 AI, 오라클 계약으로 엔비디아 영역 진출</a></li>
+</ul>
+<p>아시모프 칩을 앞세워 데이터센터 시장에서 엔비디아와 경쟁에 나섰다</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[중국 YMTC, 제재 속에서도 로컬 장비로 신규 팹 건설] 중국산 장비의 품질/수율 미확인. 양산 시점 및 경쟁력 불확실.</li>
+<li>[메모리 장기공급계약 5년으로 확대, 선수금 조건 포함] 고객사 수요 둔화 시 계약 이행 리스크 존재. 설비투자 확대에 따른 과잉공급 우려.</li>
+<li>[LS일렉트릭, 빅테크 DC 수주 5천억원 돌파] 글로벌 경쟁사 대비 레퍼런스 부족. DC 전환 속도 불확실.</li>
+<li>[반도체 계약학과, 2027년부터 연 500명 배출] 중도 탈락률 5-15%. 일부 고급 설계 분야는 여전히 석박사급 필요.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>YMTC 신규 팹 양산 시점 및 생산능력 규모 확인 필요.</li>
+<li>주요 장비업체별 2025년 가이던스 및 HBM 관련 투자 계획 확인.</li>
+<li>삼성전자·SK하이닉스의 LTA 체결 규모 및 조건 확인 필요.</li>
+<li>DCW 2026 전시회 기간 중 신규 빅테크 고객사 계약 체결 여부 확인.</li>
+<li>2027년 1기 졸업생들의 실제 배치 부서 및 업무 성과 확인.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 6/7건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-04-20T21:48:22.614628+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>

@@ -511,5 +511,14 @@
     "top_headline": "SK에코플랜트 반도체·AI 비중 67%로 확대, 신용등급 상향 관건은 차입금 감축",
     "sk_headline": "반도체·AI 리밸런싱으로 실적개선, 신용등급 상향 관심",
     "article_count": 39
+  },
+  "2026-04-21": {
+    "date": "2026-04-21",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "중국 YMTC, 제재 속에서도 로컬 장비로 신규 팹 건설",
+    "sk_headline": "반도체 비중 67% 달성, 신용등급 상향 검토 단계",
+    "article_count": 39
   }
 }
