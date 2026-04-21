@@ -520,5 +520,14 @@
     "top_headline": "중국 YMTC, 제재 속에서도 로컬 장비로 신규 팹 건설",
     "sk_headline": "반도체 비중 67% 달성, 신용등급 상향 검토 단계",
     "article_count": 39
+  },
+  "2026-04-22": {
+    "date": "2026-04-22",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "네이버, GS풍력발전과 25년 PPA 체결 및 지분 30% 인수",
+    "sk_headline": "SK에코플랜트, AI 해양정화로봇 울산 도입",
+    "article_count": 39
   }
 }
