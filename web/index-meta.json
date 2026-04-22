@@ -529,5 +529,14 @@
     "top_headline": "네이버, GS풍력발전과 25년 PPA 체결 및 지분 30% 인수",
     "sk_headline": "SK에코플랜트, AI 해양정화로봇 울산 도입",
     "article_count": 39
+  },
+  "2026-04-23": {
+    "date": "2026-04-23",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "HD현대重, 美 데이터센터 발전설비 6,271억 수주",
+    "sk_headline": "SK하이닉스 P&T7 착공, AI해양로봇 도입",
+    "article_count": 39
   }
 }
