@@ -547,5 +547,14 @@
     "top_headline": "HD현대重, 美 데이터센터 발전설비 6,271억원 수주",
     "sk_headline": "AI·반도체 스타트업 육성 공모전 개최",
     "article_count": 39
+  },
+  "2026-04-25": {
+    "date": "2026-04-25",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "슈나이더, AI 데이터센터 혁신 서밋 개최",
+    "sk_headline": "SK에코플랜트, AI·반도체 스타트업 공모전 개최",
+    "article_count": 39
   }
 }
