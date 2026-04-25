@@ -556,5 +556,14 @@
     "top_headline": "슈나이더, AI 데이터센터 혁신 서밋 개최",
     "sk_headline": "SK에코플랜트, AI·반도체 스타트업 공모전 개최",
     "article_count": 39
+  },
+  "2026-04-26": {
+    "date": "2026-04-26",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "TSMC A14 노드 2028년, A13 2029년 출시 예정",
+    "sk_headline": "AI·반도체 스타트업 발굴로 혁신기술 확보 나서",
+    "article_count": 39
   }
 }
