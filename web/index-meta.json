@@ -565,5 +565,14 @@
     "top_headline": "TSMC A14 노드 2028년, A13 2029년 출시 예정",
     "sk_headline": "AI·반도체 스타트업 발굴로 혁신기술 확보 나서",
     "article_count": 39
+  },
+  "2026-04-27": {
+    "date": "2026-04-27",
+    "theme_label": "Data Pulse",
+    "theme_accent": "#38bdf8",
+    "theme_gradient": "linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%)",
+    "top_headline": "Schneider Electric, AI 데이터센터 혁신 서밋 개최",
+    "sk_headline": "",
+    "article_count": 39
   }
 }
