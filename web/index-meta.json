@@ -574,5 +574,14 @@
     "top_headline": "Schneider Electric, AI 데이터센터 혁신 서밋 개최",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-04-28": {
+    "date": "2026-04-28",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "Charter, 1Q 가입자 12만명 이탈 속 추가 M&A 검토",
+    "sk_headline": "",
+    "article_count": 39
   }
 }
