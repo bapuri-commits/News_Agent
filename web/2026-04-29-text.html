@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-04-29 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-04-29.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-04-29</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-04-29</h1>
+
+<blockquote>SK㈜, SK에코플랜트 지분 71.2%로 확대…4000억 투자 / Core Scientific, 텍사스 Pecos DC 300MW 확보 / AI 추론용 소규모 DC 클러스터가 미래…5-20MW급 분산형</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. SK㈜, SK에코플랜트 지분 71.2%로 확대…4000억 투자</h3>
+
+<p>SK㈜가 4000억원 투자로 SK에코플랜트 지분을 66.7%→71.2%로 확대. SK에코플랜트는 6500억원 규모 전환우선주 인수 착수. 2025년 매출 12조1916억원(YoY+40%), 영업이익 3159억원(YoY+40%) 달성.</p>
+
+<p><strong>영향</strong>: 반도체 소재 4개사(SK트리켐, SK레조낙, SK머티리얼즈제이엔씨, SK머티리얼즈퍼포먼스) 편입으로 반도체 밸류체인 전반 확보. AI 데이터센터 사업 확장으로 통합 인프라 사업자로 전환.</p>
+<p><strong>리스크</strong>: 대규모 투자(총 1조원 이상)에 따른 재무 부담. 반도체 시장 변동성에 따른 실적 리스크.</p>
+<p><strong>확인 필요</strong>: SK에코플랜트 임시주총 통과 여부 및 전환우선주 인수 완료 일정 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE1lVUU2SDNMcV83NjQ3V1Z6aExvcld3cDdMYnU0TGdPU1pWaVpSRS1QeHNOLXByVGxlc0xCZVhxUVFoVUtTSTZ6Y3ZCWjNvTmlwUy1Qb1Uzd0xTcFhxSm5yNjJPOGU3NWhsWlh0X1dsZnExd9IBckFVX3lxTE1lVUU2SDNMcV83NjQ3V1Z6aExvcld3cDdMYnU0TGdPU1pWaVpSRS1QeHNOLXByVGxlc0xCZVhxUVFoVUtTSTZ6Y3ZCWjNvTmlwUy1Qb1Uzd0xTcFhxSm5yNjJPOGU3NWhsWlh0X1dsZnExdw?oc=5" target="_blank" rel="noopener">팝콘뉴스</a></p>
+
+<h3>2. Core Scientific, 텍사스 Pecos DC 300MW 확보</h3>
+
+<p>Core Scientific이 텍사스 Pecos 데이터센터에서 300MW 용량 확보. HPC 호스팅 첫 단계는 내년 가동 예정.</p>
+
+<p><strong>영향</strong>: 대규모 전력 용량 확보로 AI/HPC 수요 대응력 강화. Behind-the-meter 전력 솔루션 검토로 전력 안정성 제고.</p>
+<p><strong>리스크</strong>: 텍사스 전력망 불안정성 및 전력 조달 리스크. 300MW 규모의 대용량 전력 공급 실현 가능성.</p>
+<p><strong>확인 필요</strong>: Behind-the-meter 전력 솔루션 구체화 및 1단계 HPC 시설 가동 일정 확인.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/core-scientific-secures-300mw-capacity-at-pecos-data-center-in-texas-looks-to-behind-the-meter-power/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>3. AI 추론용 소규모 DC 클러스터가 미래…5-20MW급 분산형</h3>
+
+<p>PTS Data Center Solutions CEO Pete Sacco가 Data Center World에서 5-20MW급 소규모 데이터센터 클러스터가 미래라고 발표. AI 추론 작업이 2027년 전체 AI 컴퓨팅의 55% 초과 예상. 추론은 1ms 지연시간 요구(훈련은 10ms).</p>
+
+<p><strong>영향</strong>: 500MW급 초대형 DC 시대 종료, 분산형 소규모 DC로 전환. Gray Wolf Data Centers 설립으로 &#x27;데이터센터의 스타벅스&#x27; 프랜차이즈 모델 추진.</p>
+<p><strong>리스크</strong>: 분산형 DC 간 연결 및 운영 복잡성. 소규모 DC의 규모의 경제 실현 어려움.</p>
+<p><strong>확인 필요</strong>: Gray Wolf Data Centers의 첫 번째 프랜차이즈 DC 착공 및 운영 모델 구체화.</p>
+
+<p>📎 출처: <a href="https://www.constructiondive.com/news/data-centers-smaller-ai-connection-design-construction/818543/" target="_blank" rel="noopener">Construction Dive</a></p>
+
+<h3>4. 반도체 소재, 실험실과 양산 현장 성능 격차 확대</h3>
+
+<p>이종집적 패키징이 고성능 컴퓨팅의 주요 아키텍처로 전환되며 단일 패키지 내 소재 수 급증. 소재 간 상호작용이 복잡해지고 운영 환경이 테스트 조건보다 가혹해짐.</p>
+
+<p><strong>영향</strong>: AI 하드웨어용 패키지의 기계적·전기적 복잡성 증가로 신뢰성 확보 난이도 상승. 기존 설계 경험칙 적용 어려워져 개발 리드타임 증가.</p>
+<p><strong>리스크</strong>: 복잡한 시스템의 모든 변수 예측 불가능. 양산 중 예상치 못한 소재 간 상호작용으로 인한 품질 문제 발생 가능성.</p>
+<p><strong>확인 필요</strong>: 주요 OSAT 업체들의 이종집적 패키징 양산 수율 및 신뢰성 데이터 공개.</p>
+
+<p>📎 출처: <a href="https://semiengineering.com/when-semiconductor-materials-misbehave/" target="_blank" rel="noopener">Semiconductor Engineering</a></p>
+
+<h3>5. 두산테스나, 평택 2공장 2303억 투자…총 6265억 시설투자</h3>
+
+<p>두산테스나가 평택 제2공장에 2303억원 투자, 2027년 11월 완공 목표. 테라다인·세메스 등에서 1909억원 테스트 장비 양수(연말까지 도입). 어드반테스트·세메스 장비 투자 1714억→2053억원으로 상향.</p>
+
+<p><strong>영향</strong>: 반도체 후공정(OSAT) 시장 지배력 강화 및 차세대 반도체 수요 선제 대응. 시스템반도체 슈퍼사이클 대비 생산능력 대폭 확대.</p>
+<p><strong>리스크</strong>: 총 6265억원 대규모 투자에 따른 재무 부담. 반도체 시장 사이클 하강 시 가동률 리스크.</p>
+<p><strong>확인 필요</strong>: 평택 2공장 착공 일정 및 테스트 장비 도입 진행 상황 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFB6MTAyWmRQcmxlZ1ZsanAxVk93OW4xVk5SNzlXSDYzZjBUR0tObk9NSFhRaEszUmJPRVJQbXMtRjkxTmN3dFFCbnEzM3ctb0FrTXNrNThUZV9yanAtWTBhWWotYVhhbVVzeXl3bg?oc=5" target="_blank" rel="noopener">한경매거진&amp;북</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 장비업계가 시스템반도체 슈퍼사이클에 대비해 대규모 설비투자를 단행하고 있다. 두산테스나가 2303억원을 투자해 평택 2공장을 착공하며 생산능력 확대에 나섰다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFB6MTAyWmRQcmxlZ1ZsanAxVk93OW4xVk5SNzlXSDYzZjBUR0tObk9NSFhRaEszUmJPRVJQbXMtRjkxTmN3dFFCbnEzM3ctb0FrTXNrNThUZV9yanAtWTBhWWotYVhhbVVzeXl3bg?oc=5" target="_blank" rel="noopener">두산테스나, 2303억 투자로 평택 2공장 착공</a></li>
+</ul>
+<p>시스템반도체 슈퍼사이클 대비 생산능력 확대</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9XREdzRmFUYUFrYXZrTFZuZnZyT0dGT1BBWTkwVnVqbE5CYTNtaEVJQ2JLVnlTdDlTcS1fQzFxblQ0dXRkYXdrUGN1ZWNDc3d4RlRROFR3?oc=5" target="_blank" rel="noopener">두산테스나, 1909억원 반도체 테스트 장비 인수</a></li>
+</ul>
+<p>평택 2공장 투자 재개와 함께 사업 확장</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE85Y2RyaGsyVEp3RE5ha085Z0J6RllvS3haXzlQWjloWk5ScHhMa0xuRHpxUF9CUjZYTWZFQjNFUGNja1NyVjN4OFRHWG9LZEM3eTFPX0dYT3dRQVlNTmFSYUtYX3Z4MFNFTTdpQnBTbUY?oc=5" target="_blank" rel="noopener">최태원, 전남 반도체 투자 요구에 신중 입장</a></li>
+</ul>
+<p>반도체가 꼭 필요한 투자인지 의문 표명</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>AI 서버 및 전력관리 부품 분야에서 기술혁신이 가속화되고 있다. 차세대 AI 서버 아키텍처와 고밀도 충전기용 부품 개발이 주목받고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/tenstorrent-unveils-next-gen-servers-for-fast-tokens-no-disaggregation-needed/" target="_blank" rel="noopener">Tenstorrent, 차세대 AI 서버 공개</a></li>
+</ul>
+<p>특수화된 하드웨어 대신 범용성 강조</p>
+<ul>
+<li><a href="https://www.eetimes.com/input-capacitor-challenges-in-high-density-pd-and-gan-chargers-ymin-capacitor-solutions/" target="_blank" rel="noopener">YMIN, 고밀도 GaN 충전기용 입력 캐패시터 개선</a></li>
+</ul>
+<p>ESR과 리플 성능 향상으로 신뢰성 제고</p>
+
+<h3>첨단 패키징</h3>
+<p>반도체 패키징 복잡도 증가로 소재의 실제 성능과 실험실 성능 간 격차가 확대되고 있다.</p>
+
+<ul>
+<li><a href="https://semiengineering.com/when-semiconductor-materials-misbehave/" target="_blank" rel="noopener">반도체 소재의 실제 성능과 실험실 성능 격차 확대</a></li>
+</ul>
+<p>패키지 복잡화로 소재 성능 예측 어려움 증가</p>
+
+<h3>데이터센터 신축</h3>
+<p>AI 시대에 맞춰 데이터센터 구축 패러다임이 대형 시설에서 분산형 소규모 데이터센터로 전환되고 있다. 추론 중심의 컴퓨팅 수요 증가로 분산 모델이 부상하고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/data-centers-smaller-ai-connection-design-construction/818543/" target="_blank" rel="noopener">소규모 연결형 데이터센터가 AI 시대 핵심</a></li>
+</ul>
+<p>훈련에서 추론으로 전환되며 분산 모델 필요</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/core-scientific-secures-300mw-capacity-at-pecos-data-center-in-texas-looks-to-behind-the-meter-power/" target="_blank" rel="noopener">Core Scientific, 텍사스 Pecos 데이터센터 300MW 확보</a></li>
+</ul>
+<p>HPC 호스팅 용량 내년 첫 단계 가동 예정</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/electrigen-to-build-and-operate-18gw-behind-the-meter-gas-platform-for-data-center-development-in-texas/" target="_blank" rel="noopener">ElectriGen, 1.8GW 가스 발전 플랫폼 구축</a></li>
+</ul>
+<p>데이터센터 전력 공급용 프로젝트 추진</p>
+
+<h3>DC 전력</h3>
+<p>데이터센터 운영사들이 재생에너지 확보를 위한 장기 전력구매계약(PPA)을 체결하며 친환경 전력 공급망을 구축하고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/virgin-media-o2-signs-10-year-solar-ppa-in-suffolk-uk/" target="_blank" rel="noopener">Virgin Media O2, 영국 Suffolk 태양광 10년 PPA 체결</a></li>
+</ul>
+<p>Liberty Global 계열사 간 재생에너지 공급 계약</p>
+
+<h3>EPC / 수주</h3>
+<p>대형 인프라 건설 프로젝트에서 계약업체 변경과 신규 착공이 동시에 진행되고 있다. 볼티모어 다리 재건축에서는 기존 업체가 제외되는 반면, 시카고에서는 대규모 교통 인프라 확장이 시작됐다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/kiewit-out-baltimore-key-bridge-rebuild-design-build/818749/" target="_blank" rel="noopener">Kiewit, 볼티모어 Key Bridge 재건축에서 제외</a></li>
+</ul>
+<p>메릴랜드 교통청이 다음 단계 시공사로 선정 안함</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/chicago-red-line-transit-extension-groundbreaking/818707/" target="_blank" rel="noopener">시카고, 57억달러 Red Line 연장 착공</a></li>
+</ul>
+<p>시카고 교통청 역사상 최대 자본 프로젝트</p>
+
+<h3>M&amp;A / 사업재편</h3>
+<p>SK그룹이 SK에코플랜트 지분을 4000억원 추가 인수하며 반도체·AI 중심 밸류업을 가속화하고 있다. IPO 부담을 정리하며 그룹 차원의 구조조정을 단행하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9xVUJHd3F6cUdOOGUybEppWmpTUHlJeGdRSl9TZlkwVlJGQ2VTeGVJLUQydHRWdXFUU1YyRTN1Yjdsc1htWjVvZ09KbEJvNFpFQ3d1SnlydkVrLUNIMllFblFvRVFTS2tqb0d6Wg?oc=5" target="_blank" rel="noopener">SK㈜, SK에코플랜트 지분 4000억 추가 인수</a></li>
+</ul>
+<p>반도체·AI 중심 밸류업 가속화 목적</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE52NW1Yb0RQWXhDbFBnRTEtNm8wM29zNHpqUnEySzhyTDJOc1VWeXEzNzFab3pVTFlzODJlb2QxSWZ3VzdlbURVcGVFM2M2YTIzTXJRVnQ3dlF2d2kxTlVEQ2xPbWplWm5HNzR4a3czZHBzd9IBckFVX3lxTE52NW1Yb0RQWXhDbFBnRTEtNm8wM29zNHpqUnEySzhyTDJOc1VWeXEzNzFab3pVTFlzODJlb2QxSWZ3VzdlbURVcGVFM2M2YTIzTXJRVnQ3dlF2d2kxTlVEQ2xPbWplWm5HNzR4a3czZHBzdw?oc=5" target="_blank" rel="noopener">SK의 4000억 베팅으로 반도체·AI 몸값 키우기</a></li>
+</ul>
+<p>SK에코플랜트 지분 확대로 사업가치 제고</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9ncjFLc2VkZkZkRWhFSDRzTFlIQmRfWi03STQxVzBQUXRhZEdpcmVaM1dyc05vOFNSYWdEVmsyVGNzN0x0Nm5kTVZDODg2Zlk3V0tyNi14QlNXQzA1d3UtVkFSenpMZ0RiTDFV?oc=5" target="_blank" rel="noopener">SK, FI 지분 4000억 인수로 IPO 부담 정리</a></li>
+</ul>
+<p>상장 준비 과정에서 구조 단순화 추진</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트가 1조원 규모의 프리IPO 투자금 상환과 6500억원 자사주 취득을 통해 재무구조 개선에 나서고 있다. SK㈜의 지분 확대와 함께 반도체·AI 인프라 중심 사업구조로 전환을 가속화하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE1lVUU2SDNMcV83NjQ3V1Z6aExvcld3cDdMYnU0TGdPU1pWaVpSRS1QeHNOLXByVGxlc0xCZVhxUVFoVUtTSTZ6Y3ZCWjNvTmlwUy1Qb1Uzd0xTcFhxSm5yNjJPOGU3NWhsWlh0X1dsZnExd9IBckFVX3lxTE1lVUU2SDNMcV83NjQ3V1Z6aExvcld3cDdMYnU0TGdPU1pWaVpSRS1QeHNOLXByVGxlc0xCZVhxUVFoVUtTSTZ6Y3ZCWjNvTmlwUy1Qb1Uzd0xTcFhxSm5yNjJPOGU3NWhsWlh0X1dsZnExdw?oc=5" target="_blank" rel="noopener">SK㈜ 4000억원 투자로 반도체·AI 밸류 강화</a></li>
+</ul>
+<p>SK에코플랜트 지분 확대를 통한 사업가치 제고</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5rUmhiSlZNRFBBUE01dUFaVlhJMVQ0TDdYeEUzNHlqbXZNVThiRXR5QVZ5SEVoekZESkpiRURZSnZpbGVVSFRNc0RzVnNNWG9qQjVqQVViRUIxRHVzekEzbDZ5b01nMVE?oc=5" target="_blank" rel="noopener">SK에코플랜트, 6500억원 규모 자사주 취득 결정</a></li>
+</ul>
+<p>재무부담 완화 목적의 주식 매입</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE43MThFWHlJNDc5dmxBN0FpdUo3R2ZKdzdPQUtqVXB4NUhzZkhnWk55OUVidVZ5Z3QydS1hN09vb3BrMm1YWlgzMHJ4OEtrNTNhOGc?oc=5" target="_blank" rel="noopener">1조원대 FI지분 현금상환으로 상장 난항 해결</a></li>
+</ul>
+<p>프리IPO 투자금 자력 상환으로 IPO 부담 경감</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBEbzh5R2tnbmtQNkJ6RkNzNzhyenNGZDVfNGdid2o4aGNyV3VOX1dzaVl3SzQ0RXAxWnZoUkdwWmZBWWgyTGZCYXU0NGJ2VlJiWVZYMTk1TFNLMEk5T3dsMGV5R0lSNWJ3Yk1rdg?oc=5" target="_blank" rel="noopener">8500억 CPS 상환으로 재무부담 완화</a></li>
+</ul>
+<p>전환우선주 상환을 통한 재무구조 개선</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[SK㈜, SK에코플랜트 지분 71.2%로 확대…4000억 투자] 대규모 투자(총 1조원 이상)에 따른 재무 부담. 반도체 시장 변동성에 따른 실적 리스크.</li>
+<li>[Core Scientific, 텍사스 Pecos DC 300MW 확보] 텍사스 전력망 불안정성 및 전력 조달 리스크. 300MW 규모의 대용량 전력 공급 실현 가능성.</li>
+<li>[AI 추론용 소규모 DC 클러스터가 미래…5-20MW급 분산형] 분산형 DC 간 연결 및 운영 복잡성. 소규모 DC의 규모의 경제 실현 어려움.</li>
+<li>[반도체 소재, 실험실과 양산 현장 성능 격차 확대] 복잡한 시스템의 모든 변수 예측 불가능. 양산 중 예상치 못한 소재 간 상호작용으로 인한 품질 문제 발생 가능성.</li>
+<li>[두산테스나, 평택 2공장 2303억 투자…총 6265억 시설투자] 총 6265억원 대규모 투자에 따른 재무 부담. 반도체 시장 사이클 하강 시 가동률 리스크.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>SK에코플랜트 임시주총 통과 여부 및 전환우선주 인수 완료 일정 확인.</li>
+<li>Behind-the-meter 전력 솔루션 구체화 및 1단계 HPC 시설 가동 일정 확인.</li>
+<li>Gray Wolf Data Centers의 첫 번째 프랜차이즈 DC 착공 및 운영 모델 구체화.</li>
+<li>주요 OSAT 업체들의 이종집적 패키징 양산 수율 및 신뢰성 데이터 공개.</li>
+<li>평택 2공장 착공 일정 및 테스트 장비 도입 진행 상황 확인.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 12/14건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-04-28T22:00:21.035055+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
