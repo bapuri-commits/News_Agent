@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-04-30 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-04-30.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-04-30</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-04-30</h1>
+
+<blockquote>시카고 오헤어공항 D동 14.5억불 프로젝트 수직공사 착수 / QTS 뉴저지 이스트윈저 데이터센터 확장 승인 연기 / SK그룹, SK에코플랜트 FI 지분 1조500억원 재매입 결정</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. 시카고 오헤어공항 D동 14.5억불 프로젝트 수직공사 착수</h3>
+
+<p>AECOM Hunt Clayco Bowa JV가 시카고 오헤어국제공항 D동 확장공사(19개 게이트, 58만sqft, 14.5억불) 수직공사 착수. 2025년 8월 착공 후 기초공사 35% 완료, 케이슨 90% 이상 시공 완료.</p>
+
+<p><strong>영향</strong>: 대형 공항 인프라 프로젝트로 향후 3,800개 건설일자리 창출 예상. ORDNext 프로그램의 일환으로 향후 E동 및 글로벌터미널 추가 발주 기대.</p>
+<p><strong>리스크</strong>: 73피트 높이 시설물 및 195피트 타워크레인 설치로 공항 운영 중 시공 리스크 존재. 전체 ORDNext 85억불 규모로 자금조달 지연 가능성.</p>
+<p><strong>확인 필요</strong>: 봄철 중앙냉각시설 착공 일정 및 추가 하도급업체 선정 모니터링 필요.</p>
+
+<p>📎 출처: <a href="https://www.constructiondive.com/news/chicago-airport-project-vertical-milestone-ohare/818876/" target="_blank" rel="noopener">Construction Dive</a></p>
+
+<h3>2. QTS 뉴저지 이스트윈저 데이터센터 확장 승인 연기</h3>
+
+<p>QTS가 뉴저지 이스트윈저 159 Princeton-Hightstown Road 52에이커 부지(기존 70MW 운영중)에 2호 데이터센터 건설 신청. 4월 27일 계획위원회 투표 연기되어 5월 4일 재심의 예정.</p>
+
+<p><strong>영향</strong>: 승인시 지역에 연간 200만불 세수 및 30만불 주택신탁기금 기여 예상. QTS의 46억불 AI 데이터센터 증설 계획의 일부로 전략적 중요성 높음.</p>
+<p><strong>리스크</strong>: 주민들의 전기요금 인상 우려로 인허가 지연 가능성. 소음 200데시벨, 진동 2,000-4,000 마이크로인치/초 수준이나 주민 반발 지속.</p>
+<p><strong>확인 필요</strong>: 5월 4일 이스트윈저 계획위원회 3차 심의 결과 및 QTS의 대안 제시 여부 확인.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/decision-on-qts-planned-expansion-of-data-center-in-east-windsor-new-jersey-postponed/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>3. SK그룹, SK에코플랜트 FI 지분 1조500억원 재매입 결정</h3>
+
+<p>SK㈜가 3,985억원으로 SK에코플랜트 보통주 266만주와 전환우선주 32만주 인수, SK에코플랜트도 6,500억원 규모 전환우선주 자사주 매입. 2022년 7월 FI 투자유치(8,000억원) 후 2026년 7월 IPO 기한 내 상장 불가로 연 7.5% 수익률 반영 청산.</p>
+
+<p><strong>영향</strong>: SK㈜ 지분율 66.7%→71.2% 상승으로 경영권 강화. SK에코플랜트 2025년 매출 12조1,916억원, 영업이익 3,159억원(전년비 40%↑) 달성으로 그룹 가치 제고 기대.</p>
+<p><strong>리스크</strong>: 중복상장 규제 시행(2026년 7월)으로 IPO 일정 불확실. 1조500억원 현금 유출로 SK그룹 재무부담 가중.</p>
+<p><strong>확인 필요</strong>: SK에코플랜트 임시주주총회 일정 및 중복상장 규제 최종안 확정 시점 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFB4OUdEWVFaWjdrM3d3LTJFSlJYeXZZbzNTTXhLR3BvTm9SV1BfR25tR1dsR3R4TFFyRTFEbENTelVPa2lZcjE3azlRbnJTWU0zTDVhM0xhM0l4a0YtNzcwZkxySndsZEswWVZsSQ?oc=5" target="_blank" rel="noopener">ER 이코노믹리뷰</a></p>
+
+<h3>4. SK에코플랜트 IPO 무산 후 반도체 인프라 사업 확대 전략</h3>
+
+<p>SK에코플랜트 IPO 무산 확정. 장동현 SK그룹 회장의 반도체 인프라 확대 전략에 따라 사업 재편 가속화.</p>
+
+<p><strong>영향</strong>: 건설업에서 반도체·AI 인프라 중심으로 사업 포트폴리오 전환 본격화. SK트리켐 등 반도체 소재 자회사 실적 반영으로 수익성 개선 기대.</p>
+<p><strong>확인 필요</strong>: SK에코플랜트의 구체적인 반도체 인프라 투자 계획 및 신규 수주 발표 모니터링.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBVdGVuVl9VYlpKU3lCZlQtZklVa3p4aXlXdmpqSXZZR1RpYXYxWnQtUU95dmFKT3FqZjcxLXgwWFNGa1hJRjhfQzVKeHVSZ2s3dXJ2TTlnaldsQjFUTi1KMUEyVVRNb0lxanlLZFNfb181a2c?oc=5" target="_blank" rel="noopener">비즈니스포스트</a></p>
+
+<h3>5. SK에코플랜트 FI 8천억 투자금 청산, AI·반도체 사업 전환</h3>
+
+<p>SK에코플랜트가 2022년 유치한 FI 투자금 8,000억원 전액 청산. 건설업에서 반도체·AI 인프라 사업으로 전환 가속화.</p>
+
+<p><strong>영향</strong>: 전통 건설업 탈피하여 고수익 반도체·AI 인프라 중심 사업구조 재편. 데이터센터 및 반도체 공장 건설 수주 확대 기대.</p>
+<p><strong>리스크</strong>: 대규모 자금 소요로 단기 현금흐름 악화 가능성. 신사업 전환 과정에서 기존 건설 역량 약화 우려.</p>
+<p><strong>확인 필요</strong>: 반도체·AI 분야 구체적 투자 규모 및 첫 대형 프로젝트 수주 시점 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE5Qelh4Z3hDLU5EYWxGcENNa0ZzYkwtdzVqOHNJdXFVMTFpQm5SdFZrUTktNTZHcFhrVUNyM2xpY0RKeWRXNGNsNllqcnV0Rm9lamNr?oc=5" target="_blank" rel="noopener">네이트</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>SK㈜, 4000억 투입해 에코플랜트 지분 71.2%로 확대</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> SK에코플랜트가 반도체·AI 인프라 중심으로 사업 포트폴리오를 성공적으로 재편했다고 기사들이 보도했다. 전체 매출에서 AI 인프라 관련 사업 비중이 67%에 달한다는 주장(뉴스락, 2025년 기준)이 제기되었으며, SK하이닉스 증설 수주 증가설과 함께 2024년 반도체 소재 4개사 추가 편입으로 수직계열화를 완성했다는 분석이 나왔다.</li>
+<li><strong>현금흐름·차입</strong> SK㈜가 약 4000억원을 투자해 재무적투자자(FI) 보유 지분을 인수하고, SK에코플랜트는 약 6500억원 규모 잔여 CPS를 자체 보유자금으로 취득한다고 발표했다. FI들과 연 7.5% 수익률로 합의하며 당초 요구했던 12% 대비 4.5%포인트 비용 부담을 덜어냈다는 주장(CEO스코어데일리)이 제기되었다.</li>
+<li><strong>IPO/경쟁사</strong> 2022년 IPO 약속이 회계 처리 위반 과징금과 중복상장 규제로 불발된 상황에서, 오히려 이를 &#x27;전화위복&#x27;으로 평가하며 지배력 강화 기회로 활용했다는 분석이 나왔다. 정부 밸류업 프로그램 모범사례로 언급되며, IPO는 정부 규제 확정 시점에 재검토하겠다는 입장을 밝혔다.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5UN2VIMXk1MzF0cWVCT1BBOVpOT1ZEanVsUE1ST01yTFJRWWdUbFI4T1hWV3FFU2xQWHV6UmFzZlVmcmpDdDU5VFNhaC1YMjV0c3pSZzNTN3lOUEp5UHU1TXFEdTRwV1FP?oc=5" target="_blank" rel="noopener">CEO스코어데일리</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE01YXl1NUpheFhaUXhsUmhSbzVFVklZTlF0dVp3V1RmM0NQdWNWcHNIRlppSkpidTZwOVN6bWFDOUtfUzN6d0k1bXhzeGtvOGExWDhHZWRYcmNENk1JNWlaeFJEcw?oc=5" target="_blank" rel="noopener">매일산업뉴스</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBEbzh5R2tnbmtQNkJ6RkNzNzhyenNGZDVfNGdid2o4aGNyV3VOX1dzaVl3SzQ0RXAxWnZoUkdwWmZBWWgyTGZCYXU0NGJ2VlJiWVZYMTk1TFNLMEk5T3dsMGV5R0lSNWJ3Yk1rdg?oc=5" target="_blank" rel="noopener">뉴스락</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>SK㈜가 SK에코플랜트 지분을 4000억원 추가 인수하며 반도체·AI 인프라 사업에 집중하고 있습니다. SK에코플랜트는 IPO 무산 이후 그룹의 반도체 인프라 핵심 계열사로 역할이 강화되고 있습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5UN2VIMXk1MzF0cWVCT1BBOVpOT1ZEanVsUE1ST01yTFJRWWdUbFI4T1hWV3FFU2xQWHV6UmFzZlVmcmpDdDU5VFNhaC1YMjV0c3pSZzNTN3lOUEp5UHU1TXFEdTRwV1FP?oc=5" target="_blank" rel="noopener">SK에코플랜트, 그룹 반도체 인프라 사업 집중 및 캐시카우 역할 강화</a></li>
+</ul>
+<p>SK에코플랜트가 그룹의 반도체 인프라 사업 중심축으로 지주사 캐시카우 역할을 강화하고 있습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9xVUJHd3F6cUdOOGUybEppWmpTUHlJeGdRSl9TZlkwVlJGQ2VTeGVJLUQydHRWdXFUU1YyRTN1Yjdsc1htWjVvZ09KbEJvNFpFQ3d1SnlydkVrLUNIMllFblFvRVFTS2tqb0d6Wg?oc=5" target="_blank" rel="noopener">SK㈜, SK에코플랜트 지분 4000억 추가 인수로 반도체·AI 밸류업 가속</a></li>
+</ul>
+<p>SK㈜가 SK에코플랜트 지분을 4000억원 규모로 추가 인수해 반도체·AI 중심 밸류업을 가속화하고 있습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBVdGVuVl9VYlpKU3lCZlQtZklVa3p4aXlXdmpqSXZZR1RpYXYxWnQtUU95dmFKT3FqZjcxLXgwWFNGa1hJRjhfQzVKeHVSZ2s3dXJ2TTlnaldsQjFUTi1KMUEyVVRNb0lxanlLZFNfb181a2c?oc=5" target="_blank" rel="noopener">SK에코플랜트 IPO 무산 이후 반도체 인프라 확대 전략 주목</a></li>
+</ul>
+<p>SK에코플랜트가 IPO 무산 이후 장동현 그룹의 반도체 인프라 확대 전략에 발맞춘 사업 전환을 추진하고 있습니다.</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>압력 센서의 스마트 액션 전환, AI 설계 검증 기술의 활용 한계, 광학 컴퓨터 상용화 등 반도체 및 전자 장비 공급 분야의 기술 혁신이 진행되고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/pressure-sensors-turning-environmental-signals-into-smart-actions/" target="_blank" rel="noopener">압력 센서의 환경 신호를 스마트 액션으로 전환하는 기술</a></li>
+</ul>
+<p>압력 센서가 환경 변화를 감지하여 지능형 시스템의 배경 신호로 활용되고 있습니다.</p>
+<ul>
+<li><a href="https://www.eetimes.com/ai-in-design-verification-where-it-works-and-where-it-doesnt/" target="_blank" rel="noopener">AI 설계 검증 기술의 효과적 활용 영역과 한계</a></li>
+</ul>
+<p>AI가 반복적 검증 작업을 효율화하지만 전문가의 최종 승인은 여전히 필수적입니다.</p>
+<ul>
+<li><a href="https://www.eetimes.com/lumai-productizes-lens-based-optical-computer/" target="_blank" rel="noopener">Lumai의 렌즈 기반 광학 컴퓨터 제품화</a></li>
+</ul>
+<p>Lumai가 평가용 시스템을 출시하며 2029년 상용 시스템 출시를 목표로 하고 있습니다.</p>
+
+<h3>데이터센터 신축</h3>
+<p>미국 동부 지역에서 데이터센터 확장 프로젝트들이 지역 승인 절차를 진행하고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/decision-on-qts-planned-expansion-of-data-center-in-east-windsor-new-jersey-postponed/" target="_blank" rel="noopener">QTS의 East Windsor 데이터센터 확장 계획 승인 결정</a></li>
+</ul>
+<p>QTS의 데이터센터 확장 계획이 세 번째 회의로 넘어가게 되었습니다.</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/zoning-board-of-sharon-pa-approves-planned-expansion-of-keel-infrastructures-existing-data-center-development/" target="_blank" rel="noopener">Sharon 지역위원회, Keel Infrastructure 확장 승인</a></li>
+</ul>
+<p>구 Bitfarms가 감독하는 프로젝트가 Mercer County 지역계획위원회 승인 단계로 진행됩니다.</p>
+
+<h3>DC 전력</h3>
+<p>데이터센터 에너지 공급 방식의 혁신으로 바이오메탄 생성을 통한 그리드 불확실성 해결 방안이 제시되고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/opinions/rethinking-data-center-energy-delivery/" target="_blank" rel="noopener">데이터센터 에너지 공급 방식 재검토</a></li>
+</ul>
+<p>바이오메탄 생성을 통해 그리드 불확실성을 통제 가능한 공급 변수로 전환하는 방안이 제시되었습니다.</p>
+
+<h3>EPC / 수주</h3>
+<p>대규모 인프라 프로젝트들이 착공 및 진행 중이며, AI 기술이 건설 현장에서 실용적으로 활용되고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/chicago-airport-project-vertical-milestone-ohare/818876/" target="_blank" rel="noopener">시카고 공항 14.5억달러 프로젝트 수직 건설 단계 진입</a></li>
+</ul>
+<p>AECOM Hunt Clayco Bowa JV가 오헤어 국제공항 D 콘코스에 19개 게이트 추가 건설 마일스톤을 달성했습니다.</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/garney-florida-wastewater-treatment-facility/818836/" target="_blank" rel="noopener">Garney, 플로리다 12억달러 폐수처리시설 착공</a></li>
+</ul>
+<p>캔자스시티 소재 Garney가 2028년 9월 초기 운영 시작을 목표로 폐수처리시설 건설에 착수했습니다.</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/how-the-trades-figured-out-the-best-use-for-ai/818828/" target="_blank" rel="noopener">건설업계의 AI 기술 최적 활용 방안</a></li>
+</ul>
+<p>건설 현장 작업자들이 필요에 의해 AI 기술을 활용하면서 예상치 못한 장점들을 발견하고 있습니다.</p>
+
+<h3>M&amp;A / 사업재편</h3>
+<p>SK그룹이 SK에코플랜트의 FI 지분을 4000억원에 인수하며 IPO 부담을 정리하는 수순에 들어갔습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9ncjFLc2VkZkZkRWhFSDRzTFlIQmRfWi03STQxVzBQUXRhZEdpcmVaM1dyc05vOFNSYWdEVmsyVGNzN0x0Nm5kTVZDODg2Zlk3V0tyNi14QlNXQzA1d3UtVkFSenpMZ0RiTDFV?oc=5" target="_blank" rel="noopener">SK, SK에코플랜트 FI 지분 4000억 인수로 IPO 부담 정리</a></li>
+</ul>
+<p>SK가 SK에코플랜트 FI 지분을 4000억원에 인수하며 IPO 부담을 정리하는 수순에 들어갔습니다.</p>
+
+<h3>프로젝트 파이낸싱</h3>
+<p>SK에코플랜트가 1조원 규모의 프리IPO 투자금을 상환하며 IPO 부담을 덜고 재무 구조를 개선하고 있습니다. SK그룹의 지원으로 FI 지분을 정리하며 상장 재추진 기반을 마련하고 있습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFB4OUdEWVFaWjdrM3d3LTJFSlJYeXZZbzNTTXhLR3BvTm9SV1BfR25tR1dsR3R4TFFyRTFEbENTelVPa2lZcjE3azlRbnJTWU0zTDVhM0xhM0l4a0YtNzcwZkxySndsZEswWVZsSQ?oc=5" target="_blank" rel="noopener">SK그룹, SK에코플랜트 FI 지분 1조500억원 재매입</a></li>
+</ul>
+<p>SK그룹이 IPO 지연 여파로 SK에코플랜트 FI 지분을 1조500억원 규모로 재매입했습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBwUkpGbmdTWXY5V0VIUHk2TmFZWHdHMWtBdG83dkNZRmVtWkM0TEF1amxNb1Z6Q0pOVnpsZ0loMHdFMjdHcmdsVllLM01hS3FPQkpwWkhRS2hqMjZYR1NSeHdLT2VnREV4ejZTRA?oc=5" target="_blank" rel="noopener">SK에코플랜트, 1조원 CPS 매입으로 IPO 부담 완화</a></li>
+</ul>
+<p>SK에코플랜트가 1조원 규모 CPS를 매입하며 IPO 부담을 덜고 체질 개선 속도를 높이고 있습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE52dEY0WDAxRGQ1VGh4ZHdZMVRXUVVUUmNsWjBwSHVOOUx5VkFuNVJYREdUaWR2ekowTmUzZGd0U0wyLU1XY3poMnpxNV9lbXFMX1J4YmU0ZThINzJQU2dFNi1rM0Zyd2x3?oc=5" target="_blank" rel="noopener">SK에코플랜트, 1조 프리IPO 자력 상환 마무리 수순</a></li>
+</ul>
+<p>SK에코플랜트가 1조원 규모의 프리IPO 투자금을 자력으로 상환하는 마무리 수순에 들어갔습니다.</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트가 회계 위반 이슈를 전화위복 삼아 대규모 자금 조달과 지분 구조 정리를 통해 재무 건전성을 강화하고 있습니다. SK㈜의 지분 확대와 FI 투자금 상환으로 경영권을 안정화하며, AI 인프라 대장주로의 전환을 추진하고 있습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9CRjJCVHVwNHY5ZUFyOEYyeDRxc2cxZzlZeXpEMFFiV0dLZXB6am1ldkk1RlZvUnkwWDFSRk54aGNITXBFYnlTcnNiV29CNml2U0Z3VkJWY3dydkMxaFQ5Qg?oc=5" target="_blank" rel="noopener">SK에코플랜트 회계 위반이 전화위복으로 작용</a></li>
+</ul>
+<p>SK에코플랜트의 회계 위반 사건이 오히려 긍정적인 전환점이 되었습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTFB4S2l2SFYyZGVHdVIxX1F6N1dUUUJtRWp3eXBERS1lSlc5WURpeUJEdl9qeFpFMUU2VFlwVEZ5MEZPN3g2a2VBWEYyOVdlZFZ3UERFeEZHVzNpQjFVSU5jc0hrRVNIMU5Rd2RaWFV2VzV6QjRF0gF0QVVfeXFMUHhLaXZIVjJkZUd1UjFfUXo3V1RRQm1Fand5cERFLWVKVzlZRGl5QkR2X2p4WkUxRTZUWXBURnkwRk83eDZrZUFYRjI5V2VkVndQREV4RkdXM2lCMVVJTmNzSGtFU0gxTlF3ZFpYVXZXNXpCNEU?oc=5" target="_blank" rel="noopener">SK㈜, SK에코플랜트 주식 4천억 취득으로 경영권 강화</a></li>
+</ul>
+<p>SK㈜가 계열사 SK에코플랜트 주식을 4천억원 가량 취득하며 경영권을 강화했습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE53eDVHbTM4YnpvdHFJT0I2WlByMVYzTWRSdHBfZzNoTFg2dXRHVm9RU0NNTExUMzZ4LURXTFRDeklzOFdESEZjdG1TYTlmYzA5UlppRTJ3MGRMQdIBVEFVX3lxTE9rTVFLV01OS01GQXlmT0hBSEk2WTROOUtJU0hTVHdhNFVreHNfcDF3d19hWFQzLU0tN2JDVU1ZRUpYNWlCd1FIWTE4OEM2bXlFZjhzTw?oc=5" target="_blank" rel="noopener">SK에코플랜트, 1.05조원 규모 FI 투자금 반환</a></li>
+</ul>
+<p>SK에코플랜트가 1조500억원 규모의 FI 투자금을 반환했습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5EVWZtUWtkeUR4bzJmYUJ3VlZyUjZORnlvcmpXbUstY0dOZzhxNjZ6ajBqU1BwcGJlcHVNS244YTB1WVFIdHZ1RGlwTkJQdVMtM0ZaZDZkMXVRazAyZXlJRnY3TGhUek5a?oc=5" target="_blank" rel="noopener">SK에코플랜트, 상장 실패 꼬리표 떼고 AI 인프라 대장주 도약</a></li>
+</ul>
+<p>SK에코플랜트가 상장 실패 이미지를 벗고 AI 인프라 대장주로의 완전한 전환을 추진하고 있습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE9jNmsyeVloMG1FQkg4aTJoX19CYmtyQUZIclhMYzlPeUJFSnVySHoyT1IwMUZzMHpUWmFBLXVCdnh1aU5WY3dTZEpkcXJkSGFIVnZHalBhemPSAVhBVV95cUxPYzZrMnlZaDBtRUJIOGkyaF9fQmJrckFGSHJYTGM5T3lCRUp1ckh6Mk9SMDFGczB6VFphQS11QnZ4dWlOVmN3U2RKZHFyZEhhSFZ2R2pQYXpj?oc=5" target="_blank" rel="noopener">SK에코플랜트, 6500억 규모 자기주식 취득 및 전환우선주 상환</a></li>
+</ul>
+<p>SK에코플랜트가 6500억원 규모의 자기주식을 취득하고 전환우선주를 상환했습니다.</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[시카고 오헤어공항 D동 14.5억불 프로젝트 수직공사 착수] 73피트 높이 시설물 및 195피트 타워크레인 설치로 공항 운영 중 시공 리스크 존재. 전체 ORDNext 85억불 규모로 자금조달 지연 가능성.</li>
+<li>[QTS 뉴저지 이스트윈저 데이터센터 확장 승인 연기] 주민들의 전기요금 인상 우려로 인허가 지연 가능성. 소음 200데시벨, 진동 2,000-4,000 마이크로인치/초 수준이나 주민 반발 지속.</li>
+<li>[SK그룹, SK에코플랜트 FI 지분 1조500억원 재매입 결정] 중복상장 규제 시행(2026년 7월)으로 IPO 일정 불확실. 1조500억원 현금 유출로 SK그룹 재무부담 가중.</li>
+<li>[SK에코플랜트 FI 8천억 투자금 청산, AI·반도체 사업 전환] 대규모 자금 소요로 단기 현금흐름 악화 가능성. 신사업 전환 과정에서 기존 건설 역량 약화 우려.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>봄철 중앙냉각시설 착공 일정 및 추가 하도급업체 선정 모니터링 필요.</li>
+<li>5월 4일 이스트윈저 계획위원회 3차 심의 결과 및 QTS의 대안 제시 여부 확인.</li>
+<li>SK에코플랜트 임시주주총회 일정 및 중복상장 규제 최종안 확정 시점 확인 필요.</li>
+<li>SK에코플랜트의 구체적인 반도체 인프라 투자 계획 및 신규 수주 발표 모니터링.</li>
+<li>반도체·AI 분야 구체적 투자 규모 및 첫 대형 프로젝트 수주 시점 확인.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 11/14건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-04-29T22:02:30.477600+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>

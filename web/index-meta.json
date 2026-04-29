@@ -592,5 +592,14 @@
     "top_headline": "SK㈜, SK에코플랜트 지분 71.2%로 확대…4000억 투자",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-04-30": {
+    "date": "2026-04-30",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "시카고 오헤어공항 D동 14.5억불 프로젝트 수직공사 착수",
+    "sk_headline": "SK㈜, 4000억 투입해 에코플랜트 지분 71.2%로 확대",
+    "article_count": 39
   }
 }
