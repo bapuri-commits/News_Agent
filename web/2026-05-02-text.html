@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-05-02 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-05-02.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-05-02</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-05-02</h1>
+
+<blockquote>선단공정 파운드리 공급부족으로 중소칩메이커 칩렛 전환 가속 / KAIST, 고성능 반도체 패키징용 액체냉각 기술 개발 / OCP, AI 고밀도랙 대응 DC용 저전압 직류전원 표준화 추진</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. 선단공정 파운드리 공급부족으로 중소칩메이커 칩렛 전환 가속</h3>
+
+<p>TSMC가 2nm 이하 선단공정 생산능력의 대부분을 Apple, Nvidia, Broadcom 등 대형고객에 우선 배정. Intel Foundry와 Samsung의 생산 확대 예상. 칩렛 기반 2D/2.5D/3D 패키징으로 설계 전환 증가.</p>
+
+<p><strong>영향</strong>: 선단공정 접근이 어려운 중소 팹리스들의 칩렛+어드밴스드 패키징 채택 가속화. 파운드리 시장의 양극화 심화와 패키징 기술의 전략적 중요성 상승.</p>
+<p><strong>리스크</strong>: 선단공정 공급부족 장기화 시 중소 팹리스의 경쟁력 약화. 패키징 기술별 표준화 미비로 개발비용 상승 우려.</p>
+<p><strong>확인 필요</strong>: Intel Foundry와 Samsung의 2nm 양산 일정 및 고객 확보 현황 확인 필요.</p>
+
+<p>📎 출처: <a href="https://semiengineering.com/foundries-capacity-is-limiting-who-competes-at-leading-edge-nodes/" target="_blank" rel="noopener">Semiconductor Engineering</a></p>
+
+<h3>2. KAIST, 고성능 반도체 패키징용 액체냉각 기술 개발</h3>
+
+<p>KAIST 연구진이 COP(성능계수) 10만 이상의 에너지 효율적 액체냉각 기술 개발. Intel이 애리조나주립대에 AI 가속기 칩 수백만 달러 기부. BASF가 90분 내 포토레지스트 제거 가능한 무독성 제거제 개발.</p>
+
+<p><strong>영향</strong>: 고밀도 AI 칩 패키징의 열관리 솔루션 확보로 차세대 패키징 기술 경쟁력 강화. 미국 대학의 반도체 인재 양성 가속화.</p>
+<p><strong>확인 필요</strong>: KAIST 액체냉각 기술의 상용화 일정 및 적용 대상 확인 필요.</p>
+
+<p>📎 출처: <a href="https://semiengineering.com/chip-industry-week-in-review-136/" target="_blank" rel="noopener">Semiconductor Engineering</a></p>
+
+<h3>3. OCP, AI 고밀도랙 대응 DC용 저전압 직류전원 표준화 추진</h3>
+
+<p>OCP 워킹그룹이 데이터센터 LVDC(저전압 직류) 표준화를 위한 170페이지 백서 발표. Nvidia가 AI 랙당 1MW 전력 필요 예상. Google, ABB, Siemens 등 참여. Mount Diablo 프로젝트로 컴퓨트와 전원 분리형 &#x27;사이드카&#x27; 설계 개발.</p>
+
+<p><strong>영향</strong>: AC-DC 다단계 변환 손실 제거로 데이터센터 전력효율 개선. AI 고밀도화에 따른 전력공급 방식의 패러다임 전환 가속.</p>
+<p><strong>리스크</strong>: LVDC 표준화 지연 시 업계 분열 가능성. 기존 인프라 전환 비용 부담.</p>
+<p><strong>확인 필요</strong>: 주요 클라우드 사업자의 LVDC 채택 로드맵 발표 모니터링 필요.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/ocp-members-tout-dc-power-in-the-data-center-to-meet-growing-ai-power-demands/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>4. 삼성·SK하이닉스 1Q 합산 영업익 95조원, HBM 수요로 신기록</h3>
+
+<p>삼성전자 1Q 매출 133.9조원, 영업이익 57.2조원(YoY +756%). SK하이닉스 1Q 매출 52.6조원, 영업이익 37.6조원(영업이익률 72%). 삼성 평택 P4 하반기 풀가동 목표, P5 80조원 투자 본공사 착수. SK하이닉스 청주 M15X, 용인 클러스터 조기 구축 추진.</p>
+
+<p><strong>영향</strong>: K-반도체 HBM 독과점 지위 강화로 글로벌 AI 공급망 핵심 위치 확보. 메모리 슈퍼사이클 장기화 전망에 따른 대규모 증설 투자 본격화.</p>
+<p><strong>리스크</strong>: 파운드리 부문 수율 안정화 지연 및 고객사 확보 난항. HBM 생산능력 한계로 수요 대응 차질 가능성.</p>
+<p><strong>확인 필요</strong>: 삼성 P4 상동(7월), 하동(11월) 가동 일정 및 HBM4 양산 현황 점검 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBzYzZkMzFkQ1gyblVLeTFRaUMwSjhqckFQNERmSTNfVXdvTlFDNmJrWXJsTTBXeFZ3VDRaMW1pcXJfT1pJbDB2Z2hlWVN6ZzlPY2NadTVqcjJlWEVQTFJ4MnZ1UWpKT1hqWFlmS3BQa1bSAXRBVV95cUxPYXh2RHZNaEoxeHdLMVVQVjAwajdkbkdwdTlmQUxEX2JfZ0MtSWV6NWlQOTVkU3dvUWNKNjZIYUdLUExjamI1b1daYzZaNjlsX3dBc1pLN0hOR3B1akNrNVJlRmJ1UHlXR3VqdEppS3FpUFZnRw?oc=5" target="_blank" rel="noopener">주간한국</a></p>
+
+<h3>5. 에어프로덕츠, 삼성전자 평택 팹 산업가스 장기공급 계약</h3>
+
+<p>에어프로덕츠가 삼성전자 평택 차세대 팹에 질소, 산소, 아르곤, 수소 장기 공급계약 체결. 평택 팹 인접부지에 복수 생산시설 직접 건설·운영. 2028~2030년 단계적 가동 예정. 에어프로덕츠 역대 최대 규모 반도체 투자.</p>
+
+<p><strong>영향</strong>: 삼성 평택캠퍼스 차세대 공정 인프라 구축 본격화. 팹 인접 가스공급 모델로 공급 안정성 및 원가경쟁력 확보.</p>
+<p><strong>확인 필요</strong>: 에어프로덕츠 평택 신규시설 투자규모 및 착공 일정 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE54RXJlZTdmRi1BVHNjN1NuWEM1dHY2MDB1ZEFmSm1Zb25na1doY2kzdEx5Qmd5Q0dPcjN4MmxBbE1ucHlBOUx4b2dLazY0dDUyYmI4MHlBME9OSTA5TGlqT19CVEhnUQ?oc=5" target="_blank" rel="noopener">PRESS9</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>이자비용이 영업익 추월, 1조원 FI 되사기 결정</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> 반도체·AI 인프라가 전체 매출의 67%를 차지하며 포트폴리오 전환 가속화. Hi-Tech 부문 매출 5조1,586억원 급증했으나 SK하이닉스 등 계열사 의존도 높음. 기존 건축·주택·인프라는 -73억원 적자 전환으로 수익구조 양극화 심화.</li>
+<li><strong>현금흐름·차입</strong> 연간 이자비용 3,733억원이 영업이익(3,159억원)을 574억원 초과하는 &#x27;재무적 엇박자&#x27; 발생(2024년 기준). 1년 이내 만기 차입부채가 3조475억원으로 전체의 56.2% 집중. 영업활동현금흐름 2,087억원 흑자는 비현금 조정 9,193억원 반영된 장부상 착시로 평가.</li>
+<li><strong>PF/우발채무</strong> PF 대출잔액 2조314억원이 기한이익상실(EOD) 조항과 얽혀 잠재적 뇌관으로 작용. 피고 계류 소송 72건(소송가액 약 6,443억원) 진행 중. 우발채무 관련 구체적 추가 정보는 해당 기간 특이사항 없음.</li>
+<li><strong>IPO/경쟁사</strong> 회계 과징금 처분과 중복상장 규제로 상장 무산, 1조원 규모 프리IPO 자금을 현금 정산으로 처리 결정(거래일 4월 30일). SK 3,985억원·SK에코플랜트 6,500억원 각각 부담하여 FI 지분 되사기. 7월 금융당국 중복상장 가이드라인 발표 후 상장 재검토 계획.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE4xUEFuVDNrbTdiZG9rcTN3S29mS1gweUxMTzVocW9JMmVNdEx3bWdhTzRFcTNPSVgyMTlVeUJHUmZ5M1VjcEZ3cGZuSm5MT1huYlZ4Ny1fTUhJeVpGWUpDeFJXNmhoLUdKaU1n0gFrQVVfeXFMTjFQQW5UM2ttN2Jkb2txM3dLb2ZLWDB5TExPNWhxb0kyZU10THdtZ2FPNEVxM09JWDIxOVV5QkdSZnkzVWNwRndwZm5KbkxPWG5iVng3LV9NSEl5WkZZSkN4Ulc2aGgtR0ppTWc?oc=5" target="_blank" rel="noopener">SR타임스</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBFMlF0WF90RlY5bHB6ZVR5cEFqdnZVSl9iVFhRM3ZfVWlxVnpGaEU2WEUyWnN1UGt0b29wQXBEVF96VEdNS3ZtekFpbXFDd3dVVm85QXZ5VktIZXJVejJ0aW9hSV8xV0VUUHc?oc=5" target="_blank" rel="noopener">한국M&amp;A경제신문</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>AI 반도체 수요 급증으로 HBM 시장이 활황을 보이며 삼성전자가 HBM 매출 3배 확대를 목표로 하는 등 반도체 업계가 새로운 성장 사이클에 진입했습니다. 3월 전체 산업 투자는 증가했으나 반도체 부문은 기저효과로 8.1% 감소했습니다. 반도체 호실적에 따른 투자 전략 논의와 함께 관련 학과 입학 경쟁률도 역대 최고치를 기록하고 있습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1JSnByRExTdlIyR2M1OVZvcXNXZE5mSGN5NkVkODQ4UnFVUkp0OS1YelBldjVKWVAyMExJSjFKcl9VUXp0QnFNeUNFOVFPbTVULUIxQTctbDNPQdIBWEFVX3lxTE9HRnp6RVNaOTk5MEN1ZjBBZlNPeVZfc3h5am1kMHprb1Qya0twZFc4Z096NGQ5cnRlQWExMGFmVzUwZmFVaVFPb0lheDBSNW1kWGtLQVlKcnY?oc=5" target="_blank" rel="noopener">삼성전자 HBM 매출 3배 확대 목표</a></li>
+</ul>
+<p>삼성전자가 올해 HBM 매출을 3배 이상 늘리겠다고 발표했습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFBUelhfUC1Nb3ZucXB2UGdVd2dPN0NyYXEyb2dxMkhXdmViYXl4YUpiQmF4eFVzZ0NkWXdwTmpXSkJIQkgyZFBCc0pBYmVHdVJ1RUM0UDU2dGnSAVhBVV95cUxQVHpYX1AtTW92bnFwdlBnVXdnTzdDcmFxMm9ncTJIV3ZlYmF5eGFKYkJheHhVc2dDZFl3cE5qV0pCSEJIMmRQQnNKQWJlR3VSdUVDNFA1NnRp?oc=5" target="_blank" rel="noopener">3월 반도체 생산 8.1% 감소</a></li>
+</ul>
+<p>3월 전체 산업 생산은 증가했으나 반도체는 기저효과로 8.1% 감소했습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE1uMUVtX0xFbVMzR0ZheE5ka3pvQkVaSm9VVXpOb2daMjVhZXlqa0tFOFBTVjBQX0FnWDQxR0xxYXUxTlRCLWZfdUZJTXJoX1QwNEd2bw?oc=5" target="_blank" rel="noopener">유안타증권 반도체 투자전략 세미나</a></li>
+</ul>
+<p>유안타증권이 삼성전자·하이닉스 투자전략 세미나를 개최합니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE5XZWNSc2ZKbGZXWkt5UGlOTGtVOUJLUUpTWHhPbExxWjZwQTROZXJKcTVpVUY5OFBmMjlfNURLc0lqNmwxX0puSUZSSVJqNlVneGxfWkxrVzJLRVFtelhFbkhn?oc=5" target="_blank" rel="noopener">미국 빅테크 AI 인프라 투자 확대</a></li>
+</ul>
+<p>반도체 가격 상승으로 미국 빅테크들이 AI 인프라 투자를 늘리고 있습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE53bl9ZSnZFejNDdU9UdnhtOVBqWnM1R2FqZ1dmNHh1a0dPeWJFbGRyWEdPNXpMSkl1bzB2bUtDdm5NbFo5YzJ6TXdTVTRHSjVTbzQ3UVlYM2RTY2xRQ1E?oc=5" target="_blank" rel="noopener">반도체학과 합격선 역대 최고</a></li>
+</ul>
+<p>삼성전자·SK하이닉스 취업 효과로 반도체학과 입학 경쟁률이 사상 최고를 기록했습니다.</p>
+
+<h3>첨단 패키징</h3>
+<p>AI 반도체 패키징 시장이 호황을 보이고 있으며, 대만 ASE가 올해 실적과 설비투자 전망을 확대했습니다. 퀄리타스반도체는 삼성 파운드리로부터 실리콘포토닉스 기반 광통신 모듈을 수주하며 CPO 핵심 기술력을 인정받았습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5vRldHRlNpTUlOaHluOU1fV0Zjbm9sVUFoVnVaRnZTbE1ZVjNla1dsVHZYenJqY29veFNpanlEa294Umd6ejBlQlFRXzZ3eS12RFVyRTZWYUNoYUlCdzl6X053UmtSSGNi?oc=5" target="_blank" rel="noopener">대만 ASE 패키징 호황으로 실적 전망 확대</a></li>
+</ul>
+<p>AI 반도체 패키징 수요 증가로 ASE가 올해 실적과 설비투자 전망을 상향조정했습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE9UN2dQZ2JsUjdxc3JrZjZWWjNLbTB4Z1ZNUzlRaUMtaUYybXZPRlBUN2dWZEplMHVaZm9DYkN1OE11WVF0TTAway1vRDU1U0ZISVNfaDJPWGJ2eTJCMzVrUHNFUnNJb3dNeFgwLUc2Qm5yRjN3?oc=5" target="_blank" rel="noopener">퀄리타스반도체 삼성 광통신 모듈 수주</a></li>
+</ul>
+<p>퀄리타스반도체가 삼성 파운드리로부터 실리콘포토닉스 기반 광통신 모듈을 수주했습니다.</p>
+
+<h3>EPC / 수주</h3>
+<p>에어프로덕츠가 삼성전자 평택 차세대 반도체 팹에 산업용 가스를 공급하기로 계약을 체결했습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE54RXJlZTdmRi1BVHNjN1NuWEM1dHY2MDB1ZEFmSm1Zb25na1doY2kzdEx5Qmd5Q0dPcjN4MmxBbE1ucHlBOUx4b2dLazY0dDUyYmI4MHlBME9OSTA5TGlqT19CVEhnUQ?oc=5" target="_blank" rel="noopener">에어프로덕츠-삼성전자 평택 팹 가스 공급 계약</a></li>
+</ul>
+<p>에어프로덕츠가 삼성전자 평택 차세대 반도체 팹에 산업용 가스를 공급합니다.</p>
+
+<h3>데이터센터 신축</h3>
+<p>미국에서 데이터센터 건설 수요가 급증하며 관련 인프라 업체들의 매출이 증가하고 있습니다. 메인주의 데이터센터 건설 제한 논의가 업계에 영향을 미치고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/granite-construction-border-data-center-work/819023/" target="_blank" rel="noopener">Granite社 데이터센터 건설로 매출 증가</a></li>
+</ul>
+<p>데이터센터 현장 준비 작업이 Granite 매출의 10%에 달하며 성장하고 있습니다.</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/maine-data-center-moratorium-debate-construction/819063/" target="_blank" rel="noopener">메인주 데이터센터 건설 제한 논의</a></li>
+</ul>
+<p>메인주의 20MW 용량 제한과 주 전체 제한 논의가 건설 활동에 영향을 미치고 있습니다.</p>
+
+<h3>DC 전력</h3>
+<p>AI 급성장으로 인한 전력 수요 증가에 대응하기 위해 데이터센터에서 DC 전력 시스템 도입과 물 공급 인프라의 중요성이 부각되고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/ocp-members-tout-dc-power-in-the-data-center-to-meet-growing-ai-power-demands/" target="_blank" rel="noopener">데이터센터 DC 전력 시스템 도입 확산</a></li>
+</ul>
+<p>AI 전력 수요 증가에 대응하여 저전압 직류 전력 프로젝트가 추진되고 있습니다.</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/opinions/why-water-will-shape-the-next-phase-of-uk-ai-data-center-growth/" target="_blank" rel="noopener">영국 AI 데이터센터 성장에 물 공급 중요성</a></li>
+</ul>
+<p>데이터센터 미래 발전에서 물의 역할이 전력만큼 중요하다는 분석이 나왔습니다.</p>
+
+<h3>DC 냉각</h3>
+<p>AMD가 텍사스의 암호화폐 채굴업체 Riot과 추가로 25MW 용량의 데이터센터 임대 계약을 체결했습니다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/amd-signs-additional-25mw-data-center-lease-with-riot-in-texas/" target="_blank" rel="noopener">AMD-Riot 추가 25MW 데이터센터 임대</a></li>
+</ul>
+<p>AMD가 텍사스 암호화폐 채굴업체 Riot과 25MW 데이터센터 추가 임대 계약을 체결했습니다.</p>
+
+<h3>프로젝트 파이낸싱</h3>
+<p>SK에코플랜트의 이자 부담이 영업이익을 초과하는 상황이지만, 보유 현금으로 상환할 계획이라고 밝혔습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE4xUEFuVDNrbTdiZG9rcTN3S29mS1gweUxMTzVocW9JMmVNdEx3bWdhTzRFcTNPSVgyMTlVeUJHUmZ5M1VjcEZ3cGZuSm5MT1huYlZ4Ny1fTUhJeVpGWUpDeFJXNmhoLUdKaU1n0gFrQVVfeXFMTjFQQW5UM2ttN2Jkb2txM3dLb2ZLWDB5TExPNWhxb0kyZU10THdtZ2FPNEVxM09JWDIxOVV5QkdSZnkzVWNwRndwZm5KbkxPWG5iVng3LV9NSEl5WkZZSkN4Ulc2aGgtR0ppTWc?oc=5" target="_blank" rel="noopener">SK에코플랜트 이자 부담 증가</a></li>
+</ul>
+<p>SK에코플랜트의 이자 부담이 영업이익을 넘어섰으나 보유 현금으로 상환 예정입니다.</p>
+
+<h3>M&amp;A / 사업재편</h3>
+<p>SK그룹이 상장 불발된 SK에코플랜트의 FI 지분을 1조원에 되사오는 구조조정을 단행했습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBFMlF0WF90RlY5bHB6ZVR5cEFqdnZVSl9iVFhRM3ZfVWlxVnpGaEU2WEUyWnN1UGt0b29wQXBEVF96VEdNS3ZtekFpbXFDd3dVVm85QXZ5VktIZXJVejJ0aW9hSV8xV0VUUHc?oc=5" target="_blank" rel="noopener">SK그룹 에코플랜트 FI 지분 1조원 재매입</a></li>
+</ul>
+<p>SK그룹이 상장 불발된 SK에코플랜트의 FI 지분을 1조원에 되사들였습니다.</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트가 AI 인프라와 ITAD 사업을 통한 차별화된 경쟁력을 소개했습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE9CN2tRQ2pkNllPQk12cThjZS1LRlR6dUdJbXBzaFZfQ3c1NWxKR18wUFktOGM3QmlKb0gzRVJVTkFERU1uMUtPUlozVEpkOWYw?oc=5" target="_blank" rel="noopener">SK에코플랜트 AI 인프라·ITAD 경쟁력 소개</a></li>
+</ul>
+<p>SK에코플랜트가 AI 인프라와 ITAD 사업의 차별화된 경쟁력을 공개했습니다.</p>
+
+<h3>기타</h3>
+<p>미국 다가구 주택 착공은 3월 증가했지만 허가는 감소했으며, AI 기술이 제조업 현장을 혁신하고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/multifamily-housing-starts-february-march-construction/819054/" target="_blank" rel="noopener">미국 다가구 주택 착공 증가, 허가 감소</a></li>
+</ul>
+<p>3월 미국 다가구 주택 착공은 증가했으나 건축허가는 감소했습니다.</p>
+<ul>
+<li><a href="https://www.eetimes.com/how-ai-is-transforming-the-factory-floor/" target="_blank" rel="noopener">AI 기술의 제조업 현장 혁신</a></li>
+</ul>
+<p>센싱 솔루션과 엣지 AI가 제조업을 혁신하고 동적 환경에서 의사결정을 지원하고 있습니다.</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[선단공정 파운드리 공급부족으로 중소칩메이커 칩렛 전환 가속] 선단공정 공급부족 장기화 시 중소 팹리스의 경쟁력 약화. 패키징 기술별 표준화 미비로 개발비용 상승 우려.</li>
+<li>[OCP, AI 고밀도랙 대응 DC용 저전압 직류전원 표준화 추진] LVDC 표준화 지연 시 업계 분열 가능성. 기존 인프라 전환 비용 부담.</li>
+<li>[삼성·SK하이닉스 1Q 합산 영업익 95조원, HBM 수요로 신기록] 파운드리 부문 수율 안정화 지연 및 고객사 확보 난항. HBM 생산능력 한계로 수요 대응 차질 가능성.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>Intel Foundry와 Samsung의 2nm 양산 일정 및 고객 확보 현황 확인 필요.</li>
+<li>KAIST 액체냉각 기술의 상용화 일정 및 적용 대상 확인 필요.</li>
+<li>주요 클라우드 사업자의 LVDC 채택 로드맵 발표 모니터링 필요.</li>
+<li>삼성 P4 상동(7월), 하동(11월) 가동 일정 및 HBM4 양산 현황 점검 필요.</li>
+<li>에어프로덕츠 평택 신규시설 투자규모 및 착공 일정 확인 필요.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 8/8건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-05-01T21:55:41.807859+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>

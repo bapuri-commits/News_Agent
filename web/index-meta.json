@@ -610,5 +610,14 @@
     "top_headline": "TSMC 첨단노드 공급부족으로 중소 칩메이커 설계전략 전환",
     "sk_headline": "프리IPO 1조원 상환으로 '상장 포기' 확정",
     "article_count": 39
+  },
+  "2026-05-02": {
+    "date": "2026-05-02",
+    "theme_label": "Data Pulse",
+    "theme_accent": "#38bdf8",
+    "theme_gradient": "linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%)",
+    "top_headline": "선단공정 파운드리 공급부족으로 중소칩메이커 칩렛 전환 가속",
+    "sk_headline": "이자비용이 영업익 추월, 1조원 FI 되사기 결정",
+    "article_count": 39
   }
 }

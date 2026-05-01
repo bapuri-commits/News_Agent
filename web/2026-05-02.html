@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Executive Briefing — 2026-05-01</title>
+<title>Executive Briefing — 2026-05-02</title>
 <style>
 /* ─── Design Tokens ─── */
 :root {
@@ -686,25 +686,25 @@ body {
 html { scroll-behavior: smooth; }
 </style>
 <style>:root {
-  --theme-bg: #fef2f2;
-  --theme-surface: #ffffff;
-  --theme-text: #1f2937;
-  --theme-text-secondary: #6b7280;
-  --theme-border: #fecaca;
-  --theme-accent: #dc2626;
-  --theme-accent-light: #fee2e2;
+  --theme-bg: #0f172a;
+  --theme-surface: #1e293b;
+  --theme-text: #e2e8f0;
+  --theme-text-secondary: #94a3b8;
+  --theme-border: #334155;
+  --theme-accent: #38bdf8;
+  --theme-accent-light: #0c4a6e;
 }</style>
 </head>
 <body>
-<div class="container layout-hero cards-elevated" data-preset="risk_crimson">
-  <header class="header" style="background: linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%);">
+<div class="container layout-hero cards-glass theme-dark" data-preset="noir_data">
+  <header class="header" style="background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);">
     <div class="header-top">
       <h1 class="logo">Executive Briefing</h1>
-      <span class="date-badge">2026-05-01</span>
+      <span class="date-badge">2026-05-02</span>
     </div>
     <p class="subtitle">건설 · 반도체 · 데이터센터 · 인프라</p>
     <div class="header-meta">
-      <span class="theme-badge">Risk Alert</span>
+      <span class="theme-badge">Data Pulse</span>
       
     </div>
   </header>
@@ -765,80 +765,82 @@ html { scroll-behavior: smooth; }
   .briefing-nav .nav-current { padding: 3px 10px; }
 }
 </style>
-<nav class="briefing-nav"><a href="2026-04-30.html">← 2026-04-30</a><span class="nav-sep">|</span><span class="nav-current">2026-05-01</span><span class="nav-sep">|</span><a href="2026-05-02.html">2026-05-02 →</a><span class="nav-sep">|</span><a href="2026-05-01-text.html">📋 텍스트</a><span class="nav-sep">|</span><a href="index.html">목록</a></nav>
-<section class="section section-top5">
+<nav class="briefing-nav"><a href="2026-05-01.html">← 2026-05-01</a><span class="nav-sep">|</span><span class="nav-current">2026-05-02</span><span class="nav-sep">|</span><span class="nav-disabled">→</span><span class="nav-sep">|</span><a href="2026-05-02-text.html">📋 텍스트</a><span class="nav-sep">|</span><a href="index.html">목록</a></nav>
+
+
+  <section class="section section-top5">
     <h2 class="section-title">
       <span class="section-icon">⚡</span> Top 5
     </h2>
     <div class="top5-grid">
-          <div class="card top5-card hero-card" style="--accent: #7e22ce">
+          <div class="card top5-card hero-card" style="--accent: #1a73e8">
       <div class="card-header">
         <span class="rank">#1</span>
         <div class="card-title-group">
-          <h3 class="card-title">TSMC 첨단노드 공급부족으로 중소 칩메이커 설계전략 전환</h3>
+          <h3 class="card-title">선단공정 파운드리 공급부족으로 중소칩메이커 칩렛 전환 가속</h3>
+          <span class="cat-badge" style="background: #1a73e815; color: #1a73e8">반도체 Fab / CapEx</span>
+        </div>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Fact</span><span class="detail-text">TSMC가 2nm 이하 선단공정 생산능력의 대부분을 Apple, Nvidia, Broadcom 등 대형고객에 우선 배정. Intel Foundry와 Samsung의 생산 확대 예상. 칩렛 기반 2D/2.5D/3D 패키징으로 설계 전환 증가.</span></div><div class="detail-row"><span class="detail-label impact">Impact</span><span class="detail-text">선단공정 접근이 어려운 중소 팹리스들의 칩렛+어드밴스드 패키징 채택 가속화. 파운드리 시장의 양극화 심화와 패키징 기술의 전략적 중요성 상승.</span></div><div class="detail-row"><span class="detail-label risk">Risk</span><span class="detail-text">선단공정 공급부족 장기화 시 중소 팹리스의 경쟁력 약화. 패키징 기술별 표준화 미비로 개발비용 상승 우려.</span></div><div class="detail-row"><span class="detail-label next">Next</span><span class="detail-text">Intel Foundry와 Samsung의 2nm 양산 일정 및 고객 확보 현황 확인 필요.</span></div>
+        <div class="sources"><a href="https://semiengineering.com/foundries-capacity-is-limiting-who-competes-at-leading-edge-nodes/" target="_blank" rel="noopener">Semiconductor Engineering</a></div>
+      </div>
+    </div>
+    <div class="card top5-card" style="--accent: #8b5cf6">
+      <div class="card-header">
+        <span class="rank">#2</span>
+        <div class="card-title-group">
+          <h3 class="card-title">KAIST, 고성능 반도체 패키징용 액체냉각 기술 개발</h3>
+          <span class="cat-badge" style="background: #8b5cf615; color: #8b5cf6">첨단 패키징</span>
+        </div>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Fact</span><span class="detail-text">KAIST 연구진이 COP(성능계수) <strong class="num-hl">10만</strong> 이상의 에너지 효율적 액체냉각 기술 개발. Intel이 애리조나주립대에 AI 가속기 칩 수백만 달러 기부. BASF가 90분 내 포토레지스트 제거 가능한 무독성 제거제 개발.</span></div><div class="detail-row"><span class="detail-label impact">Impact</span><span class="detail-text">고밀도 AI 칩 패키징의 열관리 솔루션 확보로 차세대 패키징 기술 경쟁력 강화. 미국 대학의 반도체 인재 양성 가속화.</span></div><div class="detail-row"><span class="detail-label next">Next</span><span class="detail-text">KAIST 액체냉각 기술의 상용화 일정 및 적용 대상 확인 필요.</span></div>
+        <div class="sources"><a href="https://semiengineering.com/chip-industry-week-in-review-136/" target="_blank" rel="noopener">Semiconductor Engineering</a></div>
+      </div>
+    </div>
+    <div class="card top5-card" style="--accent: #0369a1">
+      <div class="card-header">
+        <span class="rank">#3</span>
+        <div class="card-title-group">
+          <h3 class="card-title">OCP, AI 고밀도랙 대응 DC용 저전압 직류전원 표준화 추진</h3>
+          <span class="cat-badge" style="background: #0369a115; color: #0369a1">DC 전력</span>
+        </div>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Fact</span><span class="detail-text">OCP 워킹그룹이 데이터센터 LVDC(저전압 직류) 표준화를 위한 170페이지 백서 발표. Nvidia가 AI 랙당 <strong class="num-hl">1MW</strong> 전력 필요 예상. Google, ABB, Siemens 등 참여. Mount Diablo 프로젝트로 컴퓨트와 전원 분리형 &#x27;사이드카&#x27; 설계 개발.</span></div><div class="detail-row"><span class="detail-label impact">Impact</span><span class="detail-text">AC-DC 다단계 변환 손실 제거로 데이터센터 전력효율 개선. AI 고밀도화에 따른 전력공급 방식의 패러다임 전환 가속.</span></div><div class="detail-row"><span class="detail-label risk">Risk</span><span class="detail-text">LVDC 표준화 지연 시 업계 분열 가능성. 기존 인프라 전환 비용 부담.</span></div><div class="detail-row"><span class="detail-label next">Next</span><span class="detail-text">주요 클라우드 사업자의 LVDC 채택 로드맵 발표 모니터링 필요.</span></div>
+        <div class="sources"><a href="https://www.datacenterdynamics.com/en/news/ocp-members-tout-dc-power-in-the-data-center-to-meet-growing-ai-power-demands/" target="_blank" rel="noopener">DatacenterDynamics</a></div>
+      </div>
+    </div>
+    <div class="card top5-card" style="--accent: #7e22ce">
+      <div class="card-header">
+        <span class="rank">#4</span>
+        <div class="card-title-group">
+          <h3 class="card-title">삼성·SK하이닉스 1Q 합산 영업익 95조원, HBM 수요로 신기록</h3>
           <span class="cat-badge" style="background: #7e22ce15; color: #7e22ce">메모리 / 파운드리</span>
         </div>
         <span class="chevron">▾</span>
       </div>
       <div class="card-body">
-        <div class="detail-row"><span class="detail-label">Fact</span><span class="detail-text">TSMC이 첨단노드(2nm 이하) 생산능력의 대부분을 Apple, Nvidia, Broadcom 등 대형 고객사에 우선 배정. 2nm 이하 나노시트 공정은 전력소모 감소와 게이트 누설 개선으로 AI 데이터센터 수요 급증 중.</span></div><div class="detail-row"><span class="detail-label impact">Impact</span><span class="detail-text">첨단노드 접근이 제한된 중소 칩 개발사들이 칩렛 기반 2.5D/3D 패키징으로 전략 전환 중. Intel Foundry와 Samsung의 생산능력 확대가 공급 개선의 변수.</span></div><div class="detail-row"><span class="detail-label risk">Risk</span><span class="detail-text">첨단노드 파운드리 공급 과점화로 중소 팹리스의 시장 진입장벽 상승. 대체 솔루션인 첨단 패키징도 응용분야별 맞춤형 접근 필요로 비용 부담 증가.</span></div><div class="detail-row"><span class="detail-label next">Next</span><span class="detail-text">Intel Foundry와 Samsung의 2nm 양산 일정 및 고객 확보 현황 확인 필요.</span></div>
-        <div class="sources"><a href="https://semiengineering.com/foundries-capacity-is-limiting-who-competes-at-leading-edge-nodes/" target="_blank" rel="noopener">Semiconductor Engineering</a></div>
+        <div class="detail-row"><span class="detail-label">Fact</span><span class="detail-text">삼성전자 1Q 매출 <strong class="num-hl">133.9조원</strong>, 영업이익 <strong class="num-hl">57.2조원</strong>(YoY +<strong class="num-hl">756%</strong>). SK하이닉스 1Q 매출 <strong class="num-hl">52.6조원</strong>, 영업이익 <strong class="num-hl">37.6조원</strong>(영업이익률 <strong class="num-hl">72%</strong>). 삼성 평택 P4 하반기 풀가동 목표, P5 <strong class="num-hl">80조원</strong> 투자 본공사 착수. SK하이닉스 청주 M15X, 용인 클러스터 조기 구축 추진.</span></div><div class="detail-row"><span class="detail-label impact">Impact</span><span class="detail-text">K-반도체 HBM 독과점 지위 강화로 글로벌 AI 공급망 핵심 위치 확보. 메모리 슈퍼사이클 장기화 전망에 따른 대규모 증설 투자 본격화.</span></div><div class="detail-row"><span class="detail-label risk">Risk</span><span class="detail-text">파운드리 부문 수율 안정화 지연 및 고객사 확보 난항. HBM 생산능력 한계로 수요 대응 차질 가능성.</span></div><div class="detail-row"><span class="detail-label next">Next</span><span class="detail-text">삼성 P4 상동(7월), 하동(11월) 가동 일정 및 HBM4 양산 현황 점검 필요.</span></div>
+        <div class="sources"><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBzYzZkMzFkQ1gyblVLeTFRaUMwSjhqckFQNERmSTNfVXdvTlFDNmJrWXJsTTBXeFZ3VDRaMW1pcXJfT1pJbDB2Z2hlWVN6ZzlPY2NadTVqcjJlWEVQTFJ4MnZ1UWpKT1hqWFlmS3BQa1bSAXRBVV95cUxPYXh2RHZNaEoxeHdLMVVQVjAwajdkbkdwdTlmQUxEX2JfZ0MtSWV6NWlQOTVkU3dvUWNKNjZIYUdLUExjamI1b1daYzZaNjlsX3dBc1pLN0hOR3B1akNrNVJlRmJ1UHlXR3VqdEppS3FpUFZnRw?oc=5" target="_blank" rel="noopener">주간한국</a></div>
       </div>
     </div>
-    <div class="card top5-card" style="--accent: #059669">
-      <div class="card-header">
-        <span class="rank">#2</span>
-        <div class="card-title-group">
-          <h3 class="card-title">시카고 오헤어공항 D동 14.5억불 프로젝트 수직공사 착수</h3>
-          <span class="cat-badge" style="background: #05966915; color: #059669">마일스톤 / 착공·준공</span>
-        </div>
-        <span class="chevron">▾</span>
-      </div>
-      <div class="card-body">
-        <div class="detail-row"><span class="detail-label">Fact</span><span class="detail-text">AECOM Hunt Clayco Bowa JV가 시카고 오헤어공항 D동(19개 게이트, <strong class="num-hl">58만</strong> 평방피트) 수직공사 착수. 총 공사비 <strong class="num-hl">14.5억</strong> 달러. <strong class="num-hl">2025년</strong> 8월 착공 이후 기초공사 <strong class="num-hl">35%</strong> 완료, 케이슨 <strong class="num-hl">90%</strong> 이상 완료.</span></div><div class="detail-row"><span class="detail-label impact">Impact</span><span class="detail-text">ORDNext 프로그램의 핵심 프로젝트로 3,800개 이상 건설 일자리 창출. 향후 E동 및 글로벌 터미널 건설의 선행 인프라(중앙냉각시설 등) 구축.</span></div><div class="detail-row"><span class="detail-label risk">Risk</span><span class="detail-text">73피트 높이 시설물의 공항 내 시공으로 항공기 운항 중단 리스크. 195피트 타워크레인 설치 관련 안전관리 필요.</span></div><div class="detail-row"><span class="detail-label next">Next</span><span class="detail-text">봄철 중앙냉각시설 착공 일정 및 에어필드 포장/유틸리티 인프라 공사 진행 상황 모니터링.</span></div>
-        <div class="sources"><a href="https://www.constructiondive.com/news/chicago-airport-project-vertical-milestone-ohare/818876/" target="_blank" rel="noopener">Construction Dive</a></div>
-      </div>
-    </div>
-    <div class="card top5-card" style="--accent: #2563eb">
-      <div class="card-header">
-        <span class="rank">#3</span>
-        <div class="card-title-group">
-          <h3 class="card-title">구글, TPU 칩 선별 고객사 데이터센터 직접 판매 개시</h3>
-          <span class="cat-badge" style="background: #2563eb15; color: #2563eb">CapEx 가이던스</span>
-        </div>
-        <span class="chevron">▾</span>
-      </div>
-      <div class="card-body">
-        <div class="detail-row"><span class="detail-label">Fact</span><span class="detail-text">구글이 <strong class="num-hl">2026년</strong> <strong class="num-hl">1분기</strong> 실적발표에서 TPU를 선별 고객사의 자체 데이터센터용으로 판매 계획 발표. 클라우드 백로그 <strong class="num-hl">4,620억</strong> 달러 중 TPU 하드웨어 계약 포함(비중 미공개). <strong class="num-hl">2026년</strong> 말부터 소량, <strong class="num-hl">2027년</strong> 대부분 매출 인식 예정.</span></div><div class="detail-row"><span class="detail-label impact">Impact</span><span class="detail-text">구글의 기존 클라우드 임대 모델에서 하드웨어 직접 판매로 사업모델 확장. AI 연구소, 자본시장, HPC 분야 등 고성능 AI 워크로드 고객사가 주요 타겟.</span></div><div class="detail-row"><span class="detail-label risk">Risk</span><span class="detail-text">TPU 직접 판매가 클라우드 임대 대비 수익성 하락 가능성. 경쟁사(Nvidia) 대비 생태계 열세로 판매 확대 제약.</span></div><div class="detail-row"><span class="detail-label next">Next</span><span class="detail-text">2026년 하반기 TPU 하드웨어 매출 규모 및 주요 고객사 공개 여부 확인.</span></div>
-        <div class="sources"><a href="https://www.datacenterdynamics.com/en/news/google-to-sell-tpus-to-a-select-group-of-customers-for-their-data-centers/" target="_blank" rel="noopener">DatacenterDynamics</a></div>
-      </div>
-    </div>
-    <div class="card top5-card" style="--accent: #6b7280">
-      <div class="card-header">
-        <span class="rank">#4</span>
-        <div class="card-title-group">
-          <h3 class="card-title">SK, 에코플랜트 지분 71.2%로 확대…반도체 인프라 핵심사 육성</h3>
-          <span class="cat-badge" style="background: #6b728015; color: #6b7280">sk_ecoplant_finance</span>
-        </div>
-        <span class="chevron">▾</span>
-      </div>
-      <div class="card-body">
-        <div class="detail-row"><span class="detail-label">Fact</span><span class="detail-text">SK㈜가 <strong class="num-hl">4,000억원</strong> 투자로 FI 보유 SK에코플랜트 보통주 및 CPS 인수, 지분율 <strong class="num-hl">66.7%</strong>→<strong class="num-hl">71.2%</strong> 확대. SK에코플랜트는 <strong class="num-hl">6,500억원</strong> 규모 자사주 취득. <strong class="num-hl">2025년</strong> 영업이익 <strong class="num-hl">3,159억원</strong>(전년비 <strong class="num-hl">40%</strong> 증가).</span></div><div class="detail-row"><span class="detail-label impact">Impact</span><span class="detail-text">SK에코플랜트가 그룹 내 반도체 밸류체인(생산시설-가스/소재 공급-재활용) 핵심 기업으로 포지셔닝. 에센코어, SK에어플러스 등 반도체 관련 8개사 편입 완료.</span></div><div class="detail-row"><span class="detail-label risk">Risk</span><span class="detail-text">7월 IPO 무산으로 FI 상환 부담 발생. 정부 중복상장 금지 기조로 향후 IPO 일정 불확실.</span></div><div class="detail-row"><span class="detail-label next">Next</span><span class="detail-text">SK에코플랜트의 반도체 사업부문 별도 실적 공개 및 추가 M&amp;A 계획 확인 필요.</span></div>
-        <div class="sources"><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5FN2VzSkhCMkl4UGswVU80bU1YUllqYWJyNGpxb1MySjF2MjJ1RHhMcTZYaWIzWS1aVVZhZENmaW4tdGxLd2NWVlpCa1BfT1FFcUtWdzFmNmFkR0Z1ZFV2WENvYjY4X1hUcGZj?oc=5" target="_blank" rel="noopener">CEO스코어데일리</a></div>
-      </div>
-    </div>
-    <div class="card top5-card" style="--accent: #2563eb">
+    <div class="card top5-card" style="--accent: #16a34a">
       <div class="card-header">
         <span class="rank">#5</span>
         <div class="card-title-group">
-          <h3 class="card-title">대만 ASE, AI 반도체 패키징 호황으로 설비투자 확대</h3>
-          <span class="cat-badge" style="background: #2563eb15; color: #2563eb">CapEx 가이던스</span>
+          <h3 class="card-title">에어프로덕츠, 삼성전자 평택 팹 산업가스 장기공급 계약</h3>
+          <span class="cat-badge" style="background: #16a34a15; color: #16a34a">EPC / 수주</span>
         </div>
         <span class="chevron">▾</span>
       </div>
       <div class="card-body">
-        <div class="detail-row"><span class="detail-label">Fact</span><span class="detail-text">반도체 후공정(OSAT) 1위 ASE가 <strong class="num-hl">1분기</strong> 실적 시장 기대치 상회 발표. AI 수요 확대 반영해 연간 실적 및 투자 전망 상향(구체적 수치 미확인).</span></div><div class="detail-row"><span class="detail-label impact">Impact</span><span class="detail-text">AI 칩 수요 증가로 첨단 패키징(2.5D/3D) 투자 가속화. TSMC, AMD 등 주요 고객사의 AI 칩 물량 증가 수혜.</span></div><div class="detail-row"><span class="detail-label next">Next</span><span class="detail-text">ASE의 구체적인 설비투자 금액 및 증설 일정 발표 모니터링.</span></div>
-        <div class="sources"><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5vRldHRlNpTUlOaHluOU1fV0Zjbm9sVUFoVnVaRnZTbE1ZVjNla1dsVHZYenJqY29veFNpanlEa294Umd6ejBlQlFRXzZ3eS12RFVyRTZWYUNoYUlCdzl6X053UmtSSGNi?oc=5" target="_blank" rel="noopener">KIPOST</a></div>
+        <div class="detail-row"><span class="detail-label">Fact</span><span class="detail-text">에어프로덕츠가 삼성전자 평택 차세대 팹에 질소, 산소, 아르곤, 수소 장기 공급계약 체결. 평택 팹 인접부지에 복수 생산시설 직접 건설·운영. 2028~<strong class="num-hl">2030년</strong> 단계적 가동 예정. 에어프로덕츠 역대 최대 규모 반도체 투자.</span></div><div class="detail-row"><span class="detail-label impact">Impact</span><span class="detail-text">삼성 평택캠퍼스 차세대 공정 인프라 구축 본격화. 팹 인접 가스공급 모델로 공급 안정성 및 원가경쟁력 확보.</span></div><div class="detail-row"><span class="detail-label next">Next</span><span class="detail-text">에어프로덕츠 평택 신규시설 투자규모 및 착공 일정 확인 필요.</span></div>
+        <div class="sources"><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE54RXJlZTdmRi1BVHNjN1NuWEM1dHY2MDB1ZEFmSm1Zb25na1doY2kzdEx5Qmd5Q0dPcjN4MmxBbE1ucHlBOUx4b2dLazY0dDUyYmI4MHlBME9OSTA5TGlqT19CVEhnUQ?oc=5" target="_blank" rel="noopener">PRESS9</a></div>
       </div>
     </div>
     </div>
@@ -848,20 +850,20 @@ html { scroll-behavior: smooth; }
     <h2 class="section-title">
       <span class="section-icon">🏢</span> SK에코플랜트 렌즈
     </h2>
-    <div class="sk-headline">프리IPO 1조원 상환으로 &#x27;상장 포기&#x27; 확정</div>
+    <div class="sk-headline">이자비용이 영업익 추월, 1조원 FI 되사기 결정</div>
     <div class="lens-grid">
             <div class="lens-card" style="border-left: 3px solid #f97316">
         <div class="lens-label" style="color: #f97316">수주·믹스</div>
-        <div class="lens-text">AI 인프라 사업이 전체 매출의 67%를 차지하며 핵심축으로 성장(기사 근거: <strong class="num-hl">2025년</strong> 연결매출 <strong class="num-hl">12조</strong><strong class="num-hl">1916억원</strong>). 반도체 FAB·AI 데이터센터·소재·가스·리사이클링까지 밸류체인 구축 완료. 울산 AI 데이터센터 수주와 용인 3복층 반도체 FAB 등 대형 프로젝트 진행 중.</div>
+        <div class="lens-text">반도체·AI 인프라가 전체 매출의 67%를 차지하며 포트폴리오 전환 가속화. Hi-Tech 부문 매출 <strong class="num-hl">5조</strong><strong class="num-hl">1,586억원</strong> 급증했으나 SK하이닉스 등 계열사 의존도 높음. 기존 건축·주택·인프라는 -<strong class="num-hl">73억원</strong> 적자 전환으로 수익구조 양극화 심화.</div>
       </div>      <div class="lens-card" style="border-left: 3px solid #ef4444">
         <div class="lens-label" style="color: #ef4444">현금흐름</div>
-        <div class="lens-text">영업이익 <strong class="num-hl">3159억원</strong> 대비 이자비용 3733억원으로 <strong class="num-hl">574억원</strong> 초과, 본업 수익으로 이자 감당 불가(기사 근거: <strong class="num-hl">2025년</strong> 연결기준). 단기차입금 <strong class="num-hl">3조</strong>475억원으로 전체 차입금의 <strong class="num-hl">56.2%</strong> 집중. 프리IPO 상환을 위해 보유 현금 <strong class="num-hl">6500억원</strong> 활용 예정.</div>
+        <div class="lens-text">연간 이자비용 3,733억원이 영업이익(<strong class="num-hl">3,159억원</strong>)을 <strong class="num-hl">574억원</strong> 초과하는 &#x27;재무적 엇박자&#x27; 발생(<strong class="num-hl">2024년</strong> 기준). <strong class="num-hl">1년</strong> 이내 만기 차입부채가 <strong class="num-hl">3조</strong>475억원으로 전체의 <strong class="num-hl">56.2%</strong> 집중. 영업활동현금흐름 <strong class="num-hl">2,087억원</strong> 흑자는 비현금 조정 <strong class="num-hl">9,193억원</strong> 반영된 장부상 착시로 평가.</div>
       </div>      <div class="lens-card" style="border-left: 3px solid #dc2626">
         <div class="lens-label" style="color: #dc2626">PF/우발채무</div>
-        <div class="lens-text">PF 대출잔액 <strong class="num-hl">2조</strong>314억원이 기한이익상실 조항과 연결된 잠재 리스크로 존재. 계류 소송 <strong class="num-hl">72건</strong>(소송가액 <strong class="num-hl">6443억원</strong>)이 진행 중. 자금보충약정 관련 특이사항 없음.</div>
+        <div class="lens-text">PF 대출잔액 <strong class="num-hl">2조</strong>314억원이 기한이익상실(EOD) 조항과 얽혀 잠재적 뇌관으로 작용. 피고 계류 소송 <strong class="num-hl">72건</strong>(소송가액 약 <strong class="num-hl">6,443억원</strong>) 진행 중. 우발채무 관련 구체적 추가 정보는 해당 기간 특이사항 없음.</div>
       </div>      <div class="lens-card" style="border-left: 3px solid #8b5cf6">
         <div class="lens-label" style="color: #8b5cf6">IPO/경쟁사</div>
-        <div class="lens-text">7월 IPO 무산으로 프리IPO <strong class="num-hl">1조원</strong> 상환 진행 - SK㈜ <strong class="num-hl">4000억원</strong>, SK에코플랜트 <strong class="num-hl">6500억원</strong> 자사주 취득. 중복상장 규제와 회계 이슈로 상장 경로 사실상 차단. 상장 준비 기업에서 그룹 내 비상장 핵심 자산으로 성격 전환.</div>
+        <div class="lens-text">회계 과징금 처분과 중복상장 규제로 상장 무산, <strong class="num-hl">1조원</strong> 규모 프리IPO 자금을 현금 정산으로 처리 결정(거래일 4월 30일). SK <strong class="num-hl">3,985억원</strong>·SK에코플랜트 <strong class="num-hl">6,500억원</strong> 각각 부담하여 FI 지분 되사기. 7월 금융당국 중복상장 가이드라인 발표 후 상장 재검토 계획.</div>
       </div>
     </div>
   </section>
@@ -877,69 +879,21 @@ html { scroll-behavior: smooth; }
         <span class="chevron">▾</span>
       </div>
       <div class="card-body">
-        <p class="cat-summary">AI와 반도체 분야에 대한 투자가 대폭 확대되면서 ICT 기업들의 R&amp;D 투자가 64조원을 돌파했습니다. 첨단 공정 노드 활용 한계로 멀티다이 설계 기회가 증가하고 있으며, 증권사들은 반도체 투자 전략 세미나를 통해 시장 변화를 점검하고 있습니다. 한국-카타르 등 국가 간 첨단산업 투자 협력도 강화되고 있습니다.</p>
-        <p class="cat-impact"><span class="detail-label impact">Impact</span> AI 열풍으로 반도체 투자 패턴이 기존 <strong class="num-hl">2년</strong> 주기와 다른 양상을 보이며, 반도체 쏠림 현상이 더욱 강화되어 업계 재편과 투자 전략 변화가 가속화될 전망입니다.</p>
-        <ul class="cat-list"><li><strong>첨단 공정 노드 활용 제약으로 멀티다이 설계 기회 확산</strong><br><span class="cat-fact">파운드리 용량 한계가 중소 칩 개발업체들에게 멀티다이 설계 기회를 창출하고 있습니다.</span></li><li><strong>Xtrackers ETF, 혁신에서 반도체 중심으로 투자 초점 변경</strong><br><span class="cat-fact">ETF 투자 전략이 반도체 중심으로 전환되고 있습니다.</span></li><li><strong>ICT 기업 R&amp;D 투자 64조 돌파, AI·반도체가 견인</strong><br><span class="cat-fact">AI와 반도체 분야 투자 증가로 ICT 기업 연간 R&amp;D 투자가 64조원을 넘어섰습니다.</span></li><li><strong>한-카타르 제조AI·로봇·바이오·반도체 첨단산업 투자 협력 강화</strong><br><span class="cat-fact">한국과 카타르가 첨단산업 분야 투자 협력을 확대하기로 했습니다.</span></li><li><strong>미국 빅테크들 반도체 가격 상승으로 AI 인프라 투자 확대</strong><br><span class="cat-fact">반도체 가격 상승에도 불구하고 빅테크 기업들이 AI 인프라 투자를 늘리고 있습니다.</span></li></ul>
-      </div>
-    </div>
-    <div class="card cat-card" style="--accent: #2563eb">
-      <div class="card-header">
-        <span class="cat-badge" style="background: #2563eb15; color: #2563eb">CapEx 가이던스</span>
-        <span class="item-count">2건</span>
-        <span class="chevron">▾</span>
-      </div>
-      <div class="card-body">
-        <p class="cat-summary">구글이 데이터센터용 TPU를 특정 고객군에 판매하기 시작했으며, 대만 ASE는 AI 반도체 패키징 호황으로 실적과 설비투자 전망을 상향 조정했습니다.</p>
-        
-        <ul class="cat-list"><li><strong>구글, 데이터센터용 TPU를 선별된 고객군에 판매</strong><br><span class="cat-fact">구글이 FY2026 <strong class="num-hl">1분기</strong> 강세를 예상하며 TPU 외부 판매를 시작했습니다.</span></li><li><strong>대만 ASE, AI 반도체 패키징 호황으로 실적·설비투자 전망 확대</strong><br><span class="cat-fact">AI 반도체 패키징 수요 급증으로 ASE가 올해 실적과 설비투자 계획을 상향 조정했습니다.</span></li></ul>
+        <p class="cat-summary">AI 반도체 수요 급증으로 HBM 시장이 활황을 보이며 삼성전자가 HBM 매출 <strong class="num-hl">3배</strong> 확대를 목표로 하는 등 반도체 업계가 새로운 성장 사이클에 진입했습니다. 3월 전체 산업 투자는 증가했으나 반도체 부문은 기저효과로 <strong class="num-hl">8.1%</strong> 감소했습니다. 반도체 호실적에 따른 투자 전략 논의와 함께 관련 학과 입학 경쟁률도 역대 최고치를 기록하고 있습니다.</p>
+        <p class="cat-impact"><span class="detail-label impact">Impact</span> AI 반도체 특수로 메모리 반도체 업체들의 수익성이 크게 개선되고 있으며, HBM과 같은 고부가가치 제품으로의 전환이 가속화되고 있습니다. 미국 빅테크 기업들의 AI 인프라 투자 증가로 반도체 가격 상승과 공급 부족 현상이 나타나고 있습니다.</p>
+        <ul class="cat-list"><li><strong>삼성전자 HBM 매출 3배 확대 목표</strong><br><span class="cat-fact">삼성전자가 올해 HBM 매출을 <strong class="num-hl">3배</strong> 이상 늘리겠다고 발표했습니다.</span></li><li><strong>3월 반도체 생산 8.1% 감소</strong><br><span class="cat-fact">3월 전체 산업 생산은 증가했으나 반도체는 기저효과로 <strong class="num-hl">8.1%</strong> 감소했습니다.</span></li><li><strong>유안타증권 반도체 투자전략 세미나</strong><br><span class="cat-fact">유안타증권이 삼성전자·하이닉스 투자전략 세미나를 개최합니다.</span></li><li><strong>미국 빅테크 AI 인프라 투자 확대</strong><br><span class="cat-fact">반도체 가격 상승으로 미국 빅테크들이 AI 인프라 투자를 늘리고 있습니다.</span></li><li><strong>반도체학과 합격선 역대 최고</strong><br><span class="cat-fact">삼성전자·SK하이닉스 취업 효과로 반도체학과 입학 경쟁률이 사상 최고를 기록했습니다.</span></li></ul>
       </div>
     </div>
     <div class="card cat-card" style="--accent: #8b5cf6">
       <div class="card-header">
         <span class="cat-badge" style="background: #8b5cf615; color: #8b5cf6">첨단 패키징</span>
-        <span class="item-count">1건</span>
+        <span class="item-count">2건</span>
         <span class="chevron">▾</span>
       </div>
       <div class="card-body">
-        <p class="cat-summary">자율주행 시스템에서 센서 동기화와 타임스탬프 오차가 시스템 성능에 미치는 영향에 대한 기술적 이슈가 주목받고 있습니다.</p>
+        <p class="cat-summary">AI 반도체 패키징 시장이 호황을 보이고 있으며, 대만 ASE가 올해 실적과 설비투자 전망을 확대했습니다. 퀄리타스반도체는 삼성 파운드리로부터 실리콘포토닉스 기반 광통신 모듈을 수주하며 CPO 핵심 기술력을 인정받았습니다.</p>
         
-        <ul class="cat-list"><li><strong>자율주행 시스템 센서 동기화와 타임스탬프 오차 문제 부각</strong><br><span class="cat-fact">미세한 타이밍 오차가 자율주행 시스템의 세계 모델 업데이트에 큰 영향을 미칠 수 있습니다.</span></li></ul>
-      </div>
-    </div>
-    <div class="card cat-card" style="--accent: #6366f1">
-      <div class="card-header">
-        <span class="cat-badge" style="background: #6366f115; color: #6366f1">장비 / 부품 공급망</span>
-        <span class="item-count">1건</span>
-        <span class="chevron">▾</span>
-      </div>
-      <div class="card-body">
-        <p class="cat-summary">Athos 스타트업이 멀티벤더 칩렛 로드맵을 포기하고 자체 설계 칩렛 테이프아웃을 추진하고 있습니다.</p>
-        
-        <ul class="cat-list"><li><strong>Athos, 멀티벤더 칩렛 포기하고 자체 설계로 전환</strong><br><span class="cat-fact">스타트업이 안전성과 확장성을 위해 자체 칩렛 설계 테이프아웃을 계획하고 있습니다.</span></li></ul>
-      </div>
-    </div>
-    <div class="card cat-card" style="--accent: #7c3aed">
-      <div class="card-header">
-        <span class="cat-badge" style="background: #7c3aed15; color: #7c3aed">데이터센터 신축</span>
-        <span class="item-count">3건</span>
-        <span class="chevron">▾</span>
-      </div>
-      <div class="card-body">
-        <p class="cat-summary">미국에서 데이터센터 건설과 공항 확장 프로젝트가 활발히 진행되고 있으며, Mara가 오하이오주 가스 발전소를 인수해 데이터센터 구축을 계획하고 있습니다.</p>
-        
-        <ul class="cat-list"><li><strong>Granite 인프라 회사, 데이터센터 공사로 매출 증가</strong><br><span class="cat-fact">연방 계약이 사업의 <strong class="num-hl">15%</strong>, 데이터센터 부지 준비가 10%를 차지하고 있습니다.</span></li><li><strong>시카고 공항 14억5천만 달러 확장 프로젝트 진행</strong><br><span class="cat-fact">오헤어 국제공항 D터미널에 19개 게이트를 추가하는 프로젝트가 진행되고 있습니다.</span></li><li><strong>Mara, 오하이오 505MW 가스 발전소 인수로 200MW 데이터센터 구축</strong><br><span class="cat-fact">약 <strong class="num-hl">15억</strong> 달러 규모의 거래로 발전소를 인수해 데이터센터 건설을 계획하고 있습니다.</span></li></ul>
-      </div>
-    </div>
-    <div class="card cat-card" style="--accent: #0369a1">
-      <div class="card-header">
-        <span class="cat-badge" style="background: #0369a115; color: #0369a1">DC 전력</span>
-        <span class="item-count">1건</span>
-        <span class="chevron">▾</span>
-      </div>
-      <div class="card-body">
-        <p class="cat-summary">Orange가 BNP 파리바의 광섬유 자회사 Scorefit을 <strong class="num-hl">13억</strong> 유로에 인수할 계획을 발표했습니다.</p>
-        
-        <ul class="cat-list"><li><strong>Orange, Scorefit 13억 유로 인수 추진</strong><br><span class="cat-fact">통신사가 BNP 파리바의 광섬유 자회사를 인수할 예정입니다.</span></li></ul>
+        <ul class="cat-list"><li><strong>대만 ASE 패키징 호황으로 실적 전망 확대</strong><br><span class="cat-fact">AI 반도체 패키징 수요 증가로 ASE가 올해 실적과 설비투자 전망을 상향조정했습니다.</span></li><li><strong>퀄리타스반도체 삼성 광통신 모듈 수주</strong><br><span class="cat-fact">퀄리타스반도체가 삼성 파운드리로부터 실리콘포토닉스 기반 광통신 모듈을 수주했습니다.</span></li></ul>
       </div>
     </div>
     <div class="card cat-card" style="--accent: #16a34a">
@@ -949,33 +903,93 @@ html { scroll-behavior: smooth; }
         <span class="chevron">▾</span>
       </div>
       <div class="card-body">
-        <p class="cat-summary">연준이 기준금리를 동결하며 이란 전쟁으로 인한 일자리와 인플레이션 리스크를 언급했습니다.</p>
+        <p class="cat-summary">에어프로덕츠가 삼성전자 평택 차세대 반도체 팹에 산업용 가스를 공급하기로 계약을 체결했습니다.</p>
         
-        <ul class="cat-list"><li><strong>연준 기준금리 동결, 이란 전쟁 리스크 언급</strong><br><span class="cat-fact">제롬 파월 의장이 5월 임기 종료 후에도 이사로 남아 연준의 독립성 보장에 기여할 예정입니다.</span></li></ul>
+        <ul class="cat-list"><li><strong>에어프로덕츠-삼성전자 평택 팹 가스 공급 계약</strong><br><span class="cat-fact">에어프로덕츠가 삼성전자 평택 차세대 반도체 팹에 산업용 가스를 공급합니다.</span></li></ul>
       </div>
     </div>
-    <div class="card cat-card" style="--accent: #0ea5e9">
+    <div class="card cat-card" style="--accent: #7c3aed">
       <div class="card-header">
-        <span class="cat-badge" style="background: #0ea5e915; color: #0ea5e9">AI / 반도체 트렌드</span>
-        <span class="item-count">3건</span>
+        <span class="cat-badge" style="background: #7c3aed15; color: #7c3aed">데이터센터 신축</span>
+        <span class="item-count">2건</span>
         <span class="chevron">▾</span>
       </div>
       <div class="card-body">
-        <p class="cat-summary">SK에코플랜트가 AI 인프라 사업에 집중하며 기업 경쟁력을 차별화하고 있습니다. ITAD 사업과 함께 AI 인프라 대장주로 포지셔닝하며 반도체·AI 사업으로의 전환을 추진하고 있습니다.</p>
+        <p class="cat-summary">미국에서 데이터센터 건설 수요가 급증하며 관련 인프라 업체들의 매출이 증가하고 있습니다. 메인주의 데이터센터 건설 제한 논의가 업계에 영향을 미치고 있습니다.</p>
         
-        <ul class="cat-list"><li><strong>SK에코플랜트의 AI 인프라·ITAD 차별화 경쟁력 부각</strong><br><span class="cat-fact">AI 인프라와 ITAD 사업을 통해 차별화된 경쟁력을 구축하고 있습니다.</span></li><li><strong>SK에코플랜트, 상장 실패 극복하고 AI 인프라 대장주 도약</strong><br><span class="cat-fact">상장 실패의 꼬리표를 떼고 AI 인프라 분야 선도기업으로 자리매김하고 있습니다.</span></li><li><strong>SK에코플랜트, FI 8000억 청산하고 반도체·AI 사업 전환</strong><br><span class="cat-fact">기존 투자금을 청산하고 반도체와 AI 사업으로 사업 영역을 전환하고 있습니다.</span></li></ul>
+        <ul class="cat-list"><li><strong>Granite社 데이터센터 건설로 매출 증가</strong><br><span class="cat-fact">데이터센터 현장 준비 작업이 Granite 매출의 10%에 달하며 성장하고 있습니다.</span></li><li><strong>메인주 데이터센터 건설 제한 논의</strong><br><span class="cat-fact">메인주의 <strong class="num-hl">20MW</strong> 용량 제한과 주 전체 제한 논의가 건설 활동에 영향을 미치고 있습니다.</span></li></ul>
+      </div>
+    </div>
+    <div class="card cat-card" style="--accent: #0369a1">
+      <div class="card-header">
+        <span class="cat-badge" style="background: #0369a115; color: #0369a1">DC 전력</span>
+        <span class="item-count">2건</span>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <p class="cat-summary">AI 급성장으로 인한 전력 수요 증가에 대응하기 위해 데이터센터에서 DC 전력 시스템 도입과 물 공급 인프라의 중요성이 부각되고 있습니다.</p>
+        
+        <ul class="cat-list"><li><strong>데이터센터 DC 전력 시스템 도입 확산</strong><br><span class="cat-fact">AI 전력 수요 증가에 대응하여 저전압 직류 전력 프로젝트가 추진되고 있습니다.</span></li><li><strong>영국 AI 데이터센터 성장에 물 공급 중요성</strong><br><span class="cat-fact">데이터센터 미래 발전에서 물의 역할이 전력만큼 중요하다는 분석이 나왔습니다.</span></li></ul>
+      </div>
+    </div>
+    <div class="card cat-card" style="--accent: #0d9488">
+      <div class="card-header">
+        <span class="cat-badge" style="background: #0d948815; color: #0d9488">DC 냉각</span>
+        <span class="item-count">1건</span>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <p class="cat-summary">AMD가 텍사스의 암호화폐 채굴업체 Riot과 추가로 <strong class="num-hl">25MW</strong> 용량의 데이터센터 임대 계약을 체결했습니다.</p>
+        
+        <ul class="cat-list"><li><strong>AMD-Riot 추가 25MW 데이터센터 임대</strong><br><span class="cat-fact">AMD가 텍사스 암호화폐 채굴업체 Riot과 <strong class="num-hl">25MW</strong> 데이터센터 추가 임대 계약을 체결했습니다.</span></li></ul>
+      </div>
+    </div>
+    <div class="card cat-card" style="--accent: #ea580c">
+      <div class="card-header">
+        <span class="cat-badge" style="background: #ea580c15; color: #ea580c">프로젝트 파이낸싱</span>
+        <span class="item-count">1건</span>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <p class="cat-summary">SK에코플랜트의 이자 부담이 영업이익을 초과하는 상황이지만, 보유 현금으로 상환할 계획이라고 밝혔습니다.</p>
+        
+        <ul class="cat-list"><li><strong>SK에코플랜트 이자 부담 증가</strong><br><span class="cat-fact">SK에코플랜트의 이자 부담이 영업이익을 넘어섰으나 보유 현금으로 상환 예정입니다.</span></li></ul>
+      </div>
+    </div>
+    <div class="card cat-card" style="--accent: #dc2626">
+      <div class="card-header">
+        <span class="cat-badge" style="background: #dc262615; color: #dc2626">M&amp;A / 사업재편</span>
+        <span class="item-count">1건</span>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <p class="cat-summary">SK그룹이 상장 불발된 SK에코플랜트의 FI 지분을 1조원에 되사오는 구조조정을 단행했습니다.</p>
+        
+        <ul class="cat-list"><li><strong>SK그룹 에코플랜트 FI 지분 1조원 재매입</strong><br><span class="cat-fact">SK그룹이 상장 불발된 SK에코플랜트의 FI 지분을 1조원에 되사들였습니다.</span></li></ul>
       </div>
     </div>
     <div class="card cat-card" style="--accent: #f97316">
       <div class="card-header">
         <span class="cat-badge" style="background: #f9731615; color: #f97316">SK에코플랜트</span>
-        <span class="item-count">4건</span>
+        <span class="item-count">1건</span>
         <span class="chevron">▾</span>
       </div>
       <div class="card-body">
-        <p class="cat-summary">SK에코플랜트가 <strong class="num-hl">6500억원</strong> 규모의 자기주식 취득을 통해 전환우선주 상환을 추진하고 있습니다. 이자비용이 영업이익을 추월하는 재무 부담을 줄이고 그룹 내 반도체 인프라 사업에 집중하며 캐시카우 역할을 강화하고 있습니다.</p>
-        <p class="cat-impact"><span class="detail-label impact">Impact</span> 전환우선주 상환으로 재무 부담을 줄이고 기업가치를 제고하며, 그룹 차원의 반도체 인프라 사업 집중으로 수익성 개선이 기대됩니다.</p>
-        <ul class="cat-list"><li><strong>SK에코플랜트 이자비용이 영업이익 추월, 보유 현금으로 상환 계획</strong><br><span class="cat-fact">이자가 영업익을 넘어서는 상황에서 보유 현금을 활용한 부채 상환을 추진하고 있습니다.</span></li><li><strong>SK에코플랜트, 그룹 반도체 인프라 사업 집중으로 캐시카우 역할 강화</strong><br><span class="cat-fact">그룹 내 반도체 인프라 사업에 집중하며 지주사의 수익원 역할을 강화하고 있습니다.</span></li><li><strong>SK에코플랜트, 6500억원 자기주식 취득으로 전환우선주 상환</strong><br><span class="cat-fact">전환우선주 상환을 위해 <strong class="num-hl">6500억원</strong> 규모의 자기주식 취득을 추진하고 있습니다.</span></li><li><strong>전환우선주 상환으로 재무 부담 경감과 기업가치 제고 추진</strong><br><span class="cat-fact">전환우선주 상환을 통해 재무 부담을 줄이고 기업가치 향상을 도모하고 있습니다.</span></li></ul>
+        <p class="cat-summary">SK에코플랜트가 AI 인프라와 ITAD 사업을 통한 차별화된 경쟁력을 소개했습니다.</p>
+        
+        <ul class="cat-list"><li><strong>SK에코플랜트 AI 인프라·ITAD 경쟁력 소개</strong><br><span class="cat-fact">SK에코플랜트가 AI 인프라와 ITAD 사업의 차별화된 경쟁력을 공개했습니다.</span></li></ul>
+      </div>
+    </div>
+    <div class="card cat-card" style="--accent: #6b7280">
+      <div class="card-header">
+        <span class="cat-badge" style="background: #6b728015; color: #6b7280">기타</span>
+        <span class="item-count">2건</span>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <p class="cat-summary">미국 다가구 주택 착공은 3월 증가했지만 허가는 감소했으며, AI 기술이 제조업 현장을 혁신하고 있습니다.</p>
+        
+        <ul class="cat-list"><li><strong>미국 다가구 주택 착공 증가, 허가 감소</strong><br><span class="cat-fact">3월 미국 다가구 주택 착공은 증가했으나 건축허가는 감소했습니다.</span></li><li><strong>AI 기술의 제조업 현장 혁신</strong><br><span class="cat-fact">센싱 솔루션과 엣지 AI가 제조업을 혁신하고 동적 환경에서 의사결정을 지원하고 있습니다.</span></li></ul>
       </div>
     </div>
   </section>
@@ -984,20 +998,19 @@ html { scroll-behavior: smooth; }
     <h2 class="section-title">
       <span class="section-icon">⚠️</span> 리스크 종합
     </h2>
-    <ul class="risk-list"><li>[TSMC 첨단노드 공급부족으로 중소 칩메이커 설계전략 전환] 첨단노드 파운드리 공급 과점화로 중소 팹리스의 시장 진입장벽 상승. 대체 솔루션인 첨단 패키징도 응용분야별 맞춤형 접근 필요로 비용 부담 증가.</li>
-<li>[시카고 오헤어공항 D동 14.5억불 프로젝트 수직공사 착수] 73피트 높이 시설물의 공항 내 시공으로 항공기 운항 중단 리스크. 195피트 타워크레인 설치 관련 안전관리 필요.</li>
-<li>[구글, TPU 칩 선별 고객사 데이터센터 직접 판매 개시] TPU 직접 판매가 클라우드 임대 대비 수익성 하락 가능성. 경쟁사(Nvidia) 대비 생태계 열세로 판매 확대 제약.</li>
-<li>[SK, 에코플랜트 지분 71.2%로 확대…반도체 인프라 핵심사 육성] 7월 IPO 무산으로 FI 상환 부담 발생. 정부 중복상장 금지 기조로 향후 IPO 일정 불확실.</li></ul>
+    <ul class="risk-list"><li>[선단공정 파운드리 공급부족으로 중소칩메이커 칩렛 전환 가속] 선단공정 공급부족 장기화 시 중소 팹리스의 경쟁력 약화. 패키징 기술별 표준화 미비로 개발비용 상승 우려.</li>
+<li>[OCP, AI 고밀도랙 대응 DC용 저전압 직류전원 표준화 추진] LVDC 표준화 지연 시 업계 분열 가능성. 기존 인프라 전환 비용 부담.</li>
+<li>[삼성·SK하이닉스 1Q 합산 영업익 95조원, HBM 수요로 신기록] 파운드리 부문 수율 안정화 지연 및 고객사 확보 난항. HBM 생산능력 한계로 수요 대응 차질 가능성.</li></ul>
   </section>
     <section class="section">
     <h2 class="section-title">
       <span class="section-icon">🔭</span> Next Signals
     </h2>
     <ul class="signal-list"><li>Intel Foundry와 Samsung의 2nm 양산 일정 및 고객 확보 현황 확인 필요.</li>
-<li>봄철 중앙냉각시설 착공 일정 및 에어필드 포장/유틸리티 인프라 공사 진행 상황 모니터링.</li>
-<li>2026년 하반기 TPU 하드웨어 매출 규모 및 주요 고객사 공개 여부 확인.</li>
-<li>SK에코플랜트의 반도체 사업부문 별도 실적 공개 및 추가 M&amp;A 계획 확인 필요.</li>
-<li>ASE의 구체적인 설비투자 금액 및 증설 일정 발표 모니터링.</li></ul>
+<li>KAIST 액체냉각 기술의 상용화 일정 및 적용 대상 확인 필요.</li>
+<li>주요 클라우드 사업자의 LVDC 채택 로드맵 발표 모니터링 필요.</li>
+<li>삼성 P4 상동(7월), 하동(11월) 가동 일정 및 HBM4 양산 현황 점검 필요.</li>
+<li>에어프로덕츠 평택 신규시설 투자규모 및 착공 일정 확인 필요.</li></ul>
   </section>
     <section class="section">
     <h2 class="section-title">
@@ -1034,7 +1047,7 @@ html { scroll-behavior: smooth; }
   </section>
 
   <footer class="footer">
-    <p>Generated 2026-04-30T21:59:37.240152+00:00</p>
+    <p>Generated 2026-05-01T21:55:41.807859+00:00</p>
   </footer>
 </div>
 
