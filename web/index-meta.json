@@ -619,5 +619,14 @@
     "top_headline": "선단공정 파운드리 공급부족으로 중소칩메이커 칩렛 전환 가속",
     "sk_headline": "이자비용이 영업익 추월, 1조원 FI 되사기 결정",
     "article_count": 39
+  },
+  "2026-05-03": {
+    "date": "2026-05-03",
+    "theme_label": "Data Pulse",
+    "theme_accent": "#38bdf8",
+    "theme_gradient": "linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%)",
+    "top_headline": "구글 TPU 판매 시작, KAIST 액체냉각 기술로 10만배 효율 달성",
+    "sk_headline": "",
+    "article_count": 39
   }
 }
