@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-05-06 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-05-06.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-05-06</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-05-06</h1>
+
+<blockquote>SK에코플랜트, FI 지분 1조500억원 조기 상환 결정 / UCSD 컨소시엄, GPU 대체 HBM-PNM 아키텍처 AMMA 제안 / KLA 3Q26 실적, AI 수요로 2027년까지 강한 성장 전망</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. SK에코플랜트, FI 지분 1조500억원 조기 상환 결정</h3>
+
+<p>SK에코플랜트와 SK㈜가 FI 보유 전환우선주와 구주를 총 1조500억원에 매입 결정(SK에코플랜트 6500억원, SK㈜ 4000억원). SK㈜ 지분율 66.7%→71.2% 상승. 2026년 7월 상장 조건이었으나 IPO 지연으로 조기 상환.</p>
+
+<p><strong>영향</strong>: 상장 일정 제약 없이 AI 인프라 사업(현재 매출 60% 후반) 독자 추진 가능. CPS 상환으로 향후 배당 부담 감소 및 재무구조 안정성 개선.</p>
+<p><strong>리스크</strong>: 단기 현금 유출 6500억원으로 향후 투자 여력 제한 우려. 외부 고객사 확대 없이 그룹 내부 물량 의존 시 성장 한계.</p>
+<p><strong>확인 필요</strong>: 1분기 실적 발표 시 현금창출력 개선 속도 및 외부 수주 실적 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5YOEpQcVNUVkFhUWZmQTZwUzZBRFRjN1dEaUQyWXJtVmhSanJQeVR2amF5OFpnSGNkYlBUcmFZYVkwTFJyalRiOEJsaWNUUU5zRTNsa1dPWm9Wc0NmYTlmVHBqdGwzeTRz?oc=5" target="_blank" rel="noopener">fetv.co.kr</a></p>
+
+<h3>2. UCSD 컨소시엄, GPU 대체 HBM-PNM 아키텍처 AMMA 제안</h3>
+
+<p>UC산디에고, 컬럼비아대, 연세대, NVIDIA, 삼성 연구진이 100만 토큰 컨텍스트 처리용 메모리 중심 아키텍처 AMMA 발표. H100 대비 15.5배 낮은 지연시간, 6.9배 낮은 에너지 소비 달성.</p>
+
+<p><strong>영향</strong>: 장기적으로 AI 추론 워크로드용 GPU 아키텍처 재설계 필요성 제기. HBM-PNM 기술이 차세대 AI 가속기 핵심으로 부상 가능.</p>
+<p><strong>리스크</strong>: 2026년 4월 논문으로 상용화까지 최소 2-3년 소요. 기존 GPU 생태계와의 호환성 미확인.</p>
+<p><strong>확인 필요</strong>: NVIDIA, AMD 등 주요 GPU 제조사의 PNM 통합 로드맵 발표 모니터링.</p>
+
+<p>📎 출처: <a href="https://semiengineering.com/replacing-gpu-compute-dies-with-pnm-enabled-hbm-cubes-for-long-context-decode-attention-ucsd-columbia-yonsei-u-nvidia-samsung/" target="_blank" rel="noopener">Semiconductor Engineering</a></p>
+
+<h3>3. KLA 3Q26 실적, AI 수요로 2027년까지 강한 성장 전망</h3>
+
+<p>반도체 검사장비 업체 KLA가 2026년 3월 분기 실적에서 AI 인프라 투자 확대로 2027년까지 성장 가시성 확보. 최첨단 파운드리 로직, HBM, 첨단 패키징(CoWoS, SOIC, 하이브리드 본딩) 수요 강조.</p>
+
+<p><strong>영향</strong>: AI 칩 생산 복잡도 증가로 공정 제어 장비 수요 지속 상승. WFE(Wafer Fab Equipment) 시장 전망 상향 조정.</p>
+<p><strong>리스크</strong>: 하이퍼스케일러 투자와 실제 반도체 생산능력 간극 존재. High-NA EUV 도입 지연 가능성.</p>
+<p><strong>확인 필요</strong>: 주요 파운드리 업체들의 2H26 설비투자 계획 구체화 및 중국 수요 변화 추이 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPdUhMUGFEanRGblN4Vk1wOE1tekwzWVJiLXBvZDBFZXN4b2RjTHVLZVlwMEVnWFZScUFuUjBqQnVFUkhndW53Um1JZTI0S1lIbEdXTGZvWlNEeHVYa3Vidk1sLXE4RU9TSmdudnR3OHBIcW5wOHhIYklXSlZkSHdGTlp3?oc=5" target="_blank" rel="noopener">네이버 프리미엄콘텐츠</a></p>
+
+<h3>4. 국내 건설사 데이터센터 경쟁, 전력·부지 확보가 핵심</h3>
+
+<p>JLL 전망 글로벌 데이터센터 시장 2030년까지 연평균 14% 성장(미주 17%, APAC 12%). 현대건설 64MW급 퍼시픽써니 준공, 삼성물산 13개 프로젝트 확보, 대우건설 전남 장성 200-300MW급 추진.</p>
+
+<p><strong>영향</strong>: 단순 시공에서 개발·투자·운영 통합 사업모델로 전환. 전력조달 리드타임과 모듈화 시공이 경쟁력 좌우.</p>
+<p><strong>리스크</strong>: 전력망 접속 지연 및 인허가 복잡성 증가. 통합사업 역량 미확보 시 글로벌 경쟁에서 도태 위험.</p>
+<p><strong>확인 필요</strong>: 주요 건설사별 1Q26 데이터센터 수주 실적 및 해외 진출 성과 발표 주시.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE96T3lZRnhUeUR3R29pbmR5UGR5bi1Wei1iaEFIY0hvN00tZW8wZHI2SVdtUkVOd25WT1Z4WXAtdmpZdGtpQUlzN1ZFUWQySXRrNGZqNG5oYWVEd0NYdmZrWnJydzQ2djQyMEkxbDZGbFFXeVRo?oc=5" target="_blank" rel="noopener">대한경제</a></p>
+
+<h3>5. 아이렌, 텍사스 1.4GW 데이터센터 전력 공급 개시</h3>
+
+<p>아이렌(IREN)이 텍사스 Sweetwater 1 데이터센터(1.4GW 규모)에 전력 공급 시작. 2026년 매출 9억5842만달러 전망(전년 대비 191% 증가). 비트코인 채굴에서 AI 데이터센터 전력 공급으로 사업 전환.</p>
+
+<p><strong>영향</strong>: 대규모 전력 인프라 보유 기업의 AI 데이터센터 시장 진출로 새로운 비즈니스 모델 등장. 전력 확보가 데이터센터 핵심 경쟁력으로 부상.</p>
+<p><strong>리스크</strong>: 비트코인에서 AI로의 급격한 전환에 따른 운영 리스크. 텍사스 전력망 안정성 및 규제 변화 가능성.</p>
+<p><strong>확인 필요</strong>: 실제 가동률 및 고객사 계약 규모 공개 여부 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE1feG1zcEt1YWFxNlFMdFVNTXJEZndyM2pFR2t2WWJRSXV0ZngwVTF6T2h3REFhODVoQ3duSzh1bDBjMExxM0RzcUkwMGdBNVZsZFE?oc=5" target="_blank" rel="noopener">매일경제</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 투자 열풍이 지속되며 관련 ETF로 자금이 몰리고 있다. AI 인프라 투자 확대로 반도체주가 상승세를 이어가며 코스피가 사상 최고치를 경신했다. 반도체 후공정과 소재·부품 기업들도 투자 유치에 나서고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFB5bVBrRHBYZHRpRGg5M0ZBVnhFWXVzTloxWl80UlRhUlBFbUI2NmZmMWxHMmNUWXpaTzN5c1lEWG1QZDJPVzFOcFVZVXV3ZDNGX25sQW9JRG81WVpKaW5BWE8xbkZ0LVktZFNZbldIejB1Wm8?oc=5" target="_blank" rel="noopener">미래반도체 2026년 투자분석 발표</a></li>
+</ul>
+<p>미래반도체의 투자 전망 분석이 공개됐다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE1oMDdnS1NtQnFZcXVwZmFFdUQ3MlpsVGZ2YzVzdjZlbzRCTVR4c0RtX1JYcEgtWGlPX2FrUmY0bXBGUy1LTXRvUWtXNVZwbDdzTEpjQWJn?oc=5" target="_blank" rel="noopener">지앤지인텍, 반도체용 초순수 사업으로 시리즈A 투자 유치</a></li>
+</ul>
+<p>반도체 제조에 필수인 초순수 전문기업이 기관 투자를 받았다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE51a2VCSjFoTHB0N1h4elhHaGI1bDZLMnJMbTkwT2QwcEJUQ29nNnNTQUd3bGF4Rm5qMGFtX012dWIxWk9qSUZyUVZyc1gtYUE?oc=5" target="_blank" rel="noopener">박찬대, 반도체 후공정이 승부처라며 인천 증설 지원 시사</a></li>
+</ul>
+<p>정부가 반도체 후공정 분야 지원을 강화할 방침이다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE8tcHpMZ0tGaHZEeDJ3MXE2aEJvZVhaUE9sUU9DSk1MN2N6N2RCdURFc3VwMHBCMFNzd2c4Y05iek9GMzFOUnFXQTdGVEZFN2d3RUczazluQjVzZ9IBVEFVX3lxTE12OXJPaWRKVzg0YXJGVFgtNUJvNFlUY1ZGcFBtVHNxNjZrbklRX2c4U0Z0WXhNNGxCblEyeF8ydDBVbENCVkFaVy1tNUdmTG1GVFl1cA?oc=5" target="_blank" rel="noopener">신흥시장 반도체 쏠림으로 분산투자 매력 감소</a></li>
+</ul>
+<p>반도체 집중 투자로 포트폴리오 다변화가 어려워지고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1jclh6R3pZTEdDUVFGRDdiV3JjR3R1aU1ib04tMkZrcE1Vazl6ZldEVTlSaV9GMGctcHMtSjY1QUZMRDJJOU1SMUtsOGt2QlJKd0d3?oc=5" target="_blank" rel="noopener">반도체 장세에 노조 리스크와 AI 투자 고점 우려 부상</a></li>
+</ul>
+<p>반도체 상승세에도 불구하고 조정 리스크가 제기되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE5acUo5TGZBQmUxRUMwZGxQNlRMWWRzVzg2M0c0YWlnQ2xJOHQyOXdMV3R5SkJoc2dOd3VjNW5TcFdpLUlnNWxBbmxVbENrd2dSTThLMS13?oc=5" target="_blank" rel="noopener">반도체주 상승으로 코스피 6936.99 사상 최고치 마감</a></li>
+</ul>
+<p>반도체주 강세로 주가지수가 7천선에 근접했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE44OXM1SDd0LTNUZUlNRENHMmo0Sy0zMVRhNkduRkZwcmRSUUVoQm1TZlJGS21XOEdXRG9iRmZjT1ZhTkZvR2xQZC04NDRvcFVnUDdCNTNicEQtNDVsWU1IQU9EbVRxYThuRklONGpEUFZUcWc?oc=5" target="_blank" rel="noopener">4월 반도체 ETF로 8조원 자금 유입</a></li>
+</ul>
+<p>암호화폐에서 반도체 ETF로 투자 자금이 이동했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE1BZXBMV2NHQXJDVDMyaE1BWWdpZkhNbXc2VUxyRVliam5QblB0cm82OUFSTm8xczlPLWlaMW5aV09iZ0o1SFM0bnNFcVNJVzdoVkRUSw?oc=5" target="_blank" rel="noopener">SK하이닉스의 HBM 기술 개발 과정과 성과</a></li>
+</ul>
+<p>외면받던 HBM 기술을 집념으로 개발해 시장을 선도하고 있다</p>
+
+<h3>첨단 패키징</h3>
+<p>반도체 첨단 패키징 기술 개발이 활발해지고 있다. 한미반도체가 2.5D 패키징용 TC 본더를 선보이며 첨단 패키징 시장 공략에 나섰다. 관련 기업들의 주가도 상한가를 기록하며 투자자들의 관심이 높아지고 있다.</p>
+
+<ul>
+<li><a href="https://semiengineering.com/replacing-gpu-compute-dies-with-pnm-enabled-hbm-cubes-for-long-context-decode-attention-ucsd-columbia-yonsei-u-nvidia-samsung/" target="_blank" rel="noopener">PNM 지원 HBM 큐브를 활용한 새로운 메모리 중심 아키텍처 연구</a></li>
+</ul>
+<p>GPU 컴퓨트 다이를 대체하는 새로운 기술 논문이 발표됐다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBsN0VJMXJaRUNmTTl6UTAxclJWbThydFIzN1ZiNGZRT05ZRWhiVmg3OEk5YmZiQWVHVXQ2TFlOQzZEakNEUWFGampwVFp1SDNycVhUeUhR?oc=5" target="_blank" rel="noopener">한미반도체, 세미콘 동남아에서 2.5D 패키징용 TC 본더 공개</a></li>
+</ul>
+<p>첨단 패키징 장비를 동남아시아 시장에 소개했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE9uRDhmZS1LSWs5VmhTUUpxSEluQ3hOMFc2cE56d2RhalJxMDVWRWZXNXBMdFoybGpGOXZiMkdBVG50UHZhTEI1aFRZMXJJVTJFalNVVjVzeDk5QTVXaGwwQTRBS2tDVGhqQlRQdFVvTWpTRUZ1Mi1v0gF3QVVfeXFMT25EOGZlLUtJazlWaFNRSnFISW5DeE4wVzZwTnp3ZGFqUnEwNVZFZlc1cEx0WjJsakY5dmIyR0FUbnRQdmFMQjVoVFkxcklVMkVqU1VWNXN4OTlBNVdobDBBNEFLa0NUaGpCVFB0VW9NalNFRnUyLW8?oc=5" target="_blank" rel="noopener">오로스·아진엑스텍 주가 상한가로 반도체 랠리 가속</a></li>
+</ul>
+<p>패키징 관련 기업들의 주가가 급등했다</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>양자 컴퓨팅 위협 대응을 위한 PQC 시장이 2026년 12억 달러에서 2035년 130억 달러로 성장할 전망이다. 유럽은 반도체 전략을 지정학과 산업 역량을 조화시키는 방향으로 발전시키고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/looming-quantum-threat-as-pqc-market-expands/" target="_blank" rel="noopener">PQC 시장이 2035년까지 130억 달러로 급성장 전망</a></li>
+</ul>
+<p>양자 컴퓨팅 위협에 대응하는 보안 시장이 확대되고 있다</p>
+<ul>
+<li><a href="https://www.eetimes.com/the-next-phase-of-europes-semiconductor-strategy/" target="_blank" rel="noopener">유럽 반도체 전략의 다음 단계 모색</a></li>
+</ul>
+<p>지정학과 산업 역량을 통합한 장기 전략이 필요하다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPdUhMUGFEanRGblN4Vk1wOE1tekwzWVJiLXBvZDBFZXN4b2RjTHVLZVlwMEVnWFZScUFuUjBqQnVFUkhndW53Um1JZTI0S1lIbEdXTGZvWlNEeHVYa3Vidk1sLXE4RU9TSmdudnR3OHBIcW5wOHhIYklXSlZkSHdGTlp3?oc=5" target="_blank" rel="noopener">KLA, 2027년까지 반도체 장비 성장에 자신감 표명</a></li>
+</ul>
+<p>반도체 검사장비 업체가 향후 성장을 낙관하고 있다</p>
+
+<h3>데이터센터 신축</h3>
+<p>AI 데이터센터 건설이 급증하면서 전력 인프라 확보가 핵심 경쟁 요소로 부상했다. 건설사들이 데이터센터 사업에 뛰어들고 있으며, 삼성은 데이터센터 연결구조 기술을 승부수로 내세우고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE1feG1zcEt1YWFxNlFMdFVNTXJEZndyM2pFR2t2WWJRSXV0ZngwVTF6T2h3REFhODVoQ3duSzh1bDBjMExxM0RzcUkwMGdBNVZsZFE?oc=5" target="_blank" rel="noopener">아이렌, 텍사스 1.4GW 데이터센터 전력 공급 개시</a></li>
+</ul>
+<p>AI 인프라 사업을 본격적으로 시작했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE96T3lZRnhUeUR3R29pbmR5UGR5bi1Wei1iaEFIY0hvN00tZW8wZHI2SVdtUkVOd25WT1Z4WXAtdmpZdGtpQUlzN1ZFUWQySXRrNGZqNG5oYWVEd0NYdmZrWnJydzQ2djQyMEkxbDZGbFFXeVRo?oc=5" target="_blank" rel="noopener">건설사들의 데이터센터 진출 가속화</a></li>
+</ul>
+<p>전력과 부지 확보가 핵심 경쟁 요소로 부상했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFBxbHVSWC1EY3Q2VkFVWHlTTFFmNWtNYmxQMUM3bE15cllFWjlOckRXZDVsR2ZQc0Q5dWpPRDBTR0J1MVFqblBnWUR0d1FLZW5JeTVvZUF3OWwzUXhZYldCOFZmbUR2bm9EVWliM1JqNNIBb0FVX3lxTFBxbHVSWC1EY3Q2VkFVWHlTTFFmNWtNYmxQMUM3bE15cllFWjlOckRXZDVsR2ZQc0Q5dWpPRDBTR0J1MVFqblBnWUR0d1FLZW5JeTVvZUF3OWwzUXhZYldCOFZmbUR2bm9EVWliM1JqNA?oc=5" target="_blank" rel="noopener">삼성, 데이터센터 연결구조 기술로 승부수</a></li>
+</ul>
+<p>우주 반도체 기술을 데이터센터에 적용하고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE1vV1lrYTdjOWtLcUFlUGFjM0RMOExWcTE3UU9YRjBnWDhaZGtnVWUxaFZFbmNnbXBxdEp6N2p3SDljMENkWUpuNC1ReHc?oc=5" target="_blank" rel="noopener">AI 데이터센터 증가로 전력 인프라가 승부 가름</a></li>
+</ul>
+<p>데이터센터 성공의 핵심이 전력 공급 능력으로 변했다</p>
+
+<h3>DC 전력</h3>
+<p>데이터센터 전력 관련 인력 이동과 전력망 연결 효율화를 위한 디지털 도구 개발이 이뤄지고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/former-pure-dc-ceo-dame-dawn-childs-joins-nlighten/" target="_blank" rel="noopener">Pure DC 전 CEO Dame Dawn Childs, nLighten 합류</a></li>
+</ul>
+<p>데이터센터 전력 업계의 주요 인사 이동이 발생했다</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/sp-energy-networks-and-keen-ai-launch-digital-tool-to-cut-uk-grid-connection-wait-times/" target="_blank" rel="noopener">SP Energy Networks와 Keen AI, 전력망 연결 단축 도구 출시</a></li>
+</ul>
+<p>전력망 연결 시간을 주 단위에서 초 단위로 단축하는 도구를 개발했다</p>
+
+<h3>EPC / 수주</h3>
+<p>대형 제약회사와 건설업계에서 주요 프로젝트 수주와 안전 표준화 노력이 진행되고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/drugmaker-abbvie-durham-north-carolina-manufacturing-campus/819318/" target="_blank" rel="noopener">AbbVie, 노스캐롤라이나에 14억 달러 제조 캠퍼스 건설 결정</a></li>
+</ul>
+<p>185에이커 규모의 회사 최대 단일 투자 프로젝트다</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/big-contractors-standardize-safety-language-stcky-hazard-sif/818988/" target="_blank" rel="noopener">대형 건설업체들, 안전 언어 표준화 추진</a></li>
+</ul>
+<p>현장별로 다른 안전 계획과 위험 식별 방식을 통일하려 한다</p>
+
+<h3>공기 / 원가 / 변경관리</h3>
+<p>텍사스의 급속한 인프라 성장으로 건설 속도는 빨라졌지만 품질 리스크가 증가하고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/hidden-cost-rapid-infrastructure-growth-texas/819342/" target="_blank" rel="noopener">텍사스 인프라 급성장의 숨겨진 비용</a></li>
+</ul>
+<p>빠른 건설 추진이 품질을 위험에 빠뜨릴 수 있다</p>
+
+<h3>인허가 / 환경</h3>
+<p>텍사스 오스틴 근처 3천만 달러 데이터센터 프로젝트가 승인 권고를 받지 못했다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/30m-data-center-near-austin-texas-fails-to-get-recommendation-for-approval-from-pz-commission/" target="_blank" rel="noopener">오스틴 근처 3천만 달러 데이터센터, 승인 권고 실패</a></li>
+</ul>
+<p>최종 결정은 시의회에 달려있다</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트가 FI(금융투자) 사업을 정리하고 AI 인프라 사업에 집중하는 전략을 추진하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5YOEpQcVNUVkFhUWZmQTZwUzZBRFRjN1dEaUQyWXJtVmhSanJQeVR2amF5OFpnSGNkYlBUcmFZYVkwTFJyalRiOEJsaWNUUU5zRTNsa1dPWm9Wc0NmYTlmVHBqdGwzeTRz?oc=5" target="_blank" rel="noopener">SK에코플랜트, FI 정리하고 AI 인프라 사업 집중</a></li>
+</ul>
+<p>사업 포트폴리오를 AI 인프라 중심으로 재편하고 있다</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[SK에코플랜트, FI 지분 1조500억원 조기 상환 결정] 단기 현금 유출 6500억원으로 향후 투자 여력 제한 우려. 외부 고객사 확대 없이 그룹 내부 물량 의존 시 성장 한계.</li>
+<li>[UCSD 컨소시엄, GPU 대체 HBM-PNM 아키텍처 AMMA 제안] 2026년 4월 논문으로 상용화까지 최소 2-3년 소요. 기존 GPU 생태계와의 호환성 미확인.</li>
+<li>[KLA 3Q26 실적, AI 수요로 2027년까지 강한 성장 전망] 하이퍼스케일러 투자와 실제 반도체 생산능력 간극 존재. High-NA EUV 도입 지연 가능성.</li>
+<li>[국내 건설사 데이터센터 경쟁, 전력·부지 확보가 핵심] 전력망 접속 지연 및 인허가 복잡성 증가. 통합사업 역량 미확보 시 글로벌 경쟁에서 도태 위험.</li>
+<li>[아이렌, 텍사스 1.4GW 데이터센터 전력 공급 개시] 비트코인에서 AI로의 급격한 전환에 따른 운영 리스크. 텍사스 전력망 안정성 및 규제 변화 가능성.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>1분기 실적 발표 시 현금창출력 개선 속도 및 외부 수주 실적 확인 필요.</li>
+<li>NVIDIA, AMD 등 주요 GPU 제조사의 PNM 통합 로드맵 발표 모니터링.</li>
+<li>주요 파운드리 업체들의 2H26 설비투자 계획 구체화 및 중국 수요 변화 추이 확인.</li>
+<li>주요 건설사별 1Q26 데이터센터 수주 실적 및 해외 진출 성과 발표 주시.</li>
+<li>실제 가동률 및 고객사 계약 규모 공개 여부 확인 필요.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 5/5건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-05-05T22:03:13.525351+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>

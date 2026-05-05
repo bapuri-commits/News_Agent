@@ -646,5 +646,14 @@
     "top_headline": "OCP, AI 고밀도 서버용 DC전원 표준화 추진",
     "sk_headline": "FI 상환 완료, AI 인프라 재평가 시험대",
     "article_count": 39
+  },
+  "2026-05-06": {
+    "date": "2026-05-06",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "SK에코플랜트, FI 지분 1조500억원 조기 상환 결정",
+    "sk_headline": "",
+    "article_count": 39
   }
 }
