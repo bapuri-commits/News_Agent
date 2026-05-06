@@ -655,5 +655,14 @@
     "top_headline": "SK에코플랜트, FI 지분 1조500억원 조기 상환 결정",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-05-07": {
+    "date": "2026-05-07",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "건설안전주간, OSHA와 공식 파트너십 체결",
+    "sk_headline": "FI 지분 1조500억원에 조기 정리, AI 인프라 독립 성장 추진",
+    "article_count": 39
   }
 }

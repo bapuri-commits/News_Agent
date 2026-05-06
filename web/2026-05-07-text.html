@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-05-07 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-05-07.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-05-07</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-05-07</h1>
+
+<blockquote>건설안전주간, OSHA와 공식 파트너십 체결 / 슈나이더일렉트릭, AI 데이터센터 수요로 Q1 매출 11.2% 성장 / SK에코플랜트, FI 지분 1조500억원에 조기 상환</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. 건설안전주간, OSHA와 공식 파트너십 체결</h3>
+
+<p>5월 6일 워싱턴 내셔널몰에서 건설 근로자 1,000명 참가한 Construction Safety Week 행사 개최. OSHA와 공식 파트너십 체결하여 중대재해 예방 및 정신건강 지원 포함한 토탈 워커 헬스 추진. 연간 건설업 사망자 1,000명, 자살자는 5배인 5,000명 발생.</p>
+
+<p><strong>영향</strong>: OSHA와의 공식 협력으로 안전교육 및 가이드라인 접근성 강화. 정신건강까지 포괄하는 안전관리로 건설업계 ESG 경영 및 인력 유지 개선 기대.</p>
+<p><strong>확인 필요</strong>: Construction Safety Week의 기술 게시판 시리즈 구체적 내용 및 업계 적용 현황 확인 필요.</p>
+
+<p>📎 출처: <a href="https://www.constructiondive.com/news/construction-safety-week-osha-alliance/819531/" target="_blank" rel="noopener">Construction Dive</a></p>
+
+<h3>2. 슈나이더일렉트릭, AI 데이터센터 수요로 Q1 매출 11.2% 성장</h3>
+
+<p>슈나이더일렉트릭 2026년 1분기 매출 114억 달러로 전년대비 11.2% 유기적 성장. 에너지관리 부문 12.8% 성장했으며, 특히 데이터센터 수요가 두 자릿수 성장 견인. 북미 지역 에너지관리 매출 15.9% 증가.</p>
+
+<p><strong>영향</strong>: AI 칩용 고밀도 서버랙에 필수인 액체냉각 수요 증가로 데이터센터 전력/냉각 장비 시장 확대. 지정학적 긴장으로 에너지 보안 차원의 전기화/디지털화 투자 가속화.</p>
+<p><strong>리스크</strong>: 전년도 높은 기저효과 대비 성장 지속성 검증 필요. AI 투자 둔화 시 수요 감소 가능성.</p>
+<p><strong>확인 필요</strong>: 2분기 실적 발표 시 데이터센터 세부 지역별 성장률 및 액체냉각 관련 구체적 매출 비중 확인.</p>
+
+<p>📎 출처: <a href="https://www.constructiondive.com/news/energy-security-drives-schneider-electric-growth-ceo/819446/" target="_blank" rel="noopener">Construction Dive</a></p>
+
+<h3>3. SK에코플랜트, FI 지분 1조500억원에 조기 상환</h3>
+
+<p>SK에코플랜트와 SK(주)가 FI 보유 전환우선주와 구주를 총 1조500억원(SK에코플랜트 6500억원, SK(주) 4000억원)에 일괄 매입. 2022년 프리IPO 투자금으로 2026년 7월까지 상장 조건이었으나 회계이슈와 중복상장 규제로 IPO 지연. SK(주) 지분율 66.7%→71.2% 상승.</p>
+
+<p><strong>영향</strong>: IPO 일정 제약 없이 AI인프라 중심 독자 성장전략 추진 가능. 전환우선주 상환으로 배당부담 감소 및 재무구조 개선 예상.</p>
+<p><strong>리스크</strong>: 단기 현금유출 6500억원으로 향후 투자여력 제약 우려. 외부 고객사 확대 없이는 성장 한계 직면 가능.</p>
+<p><strong>확인 필요</strong>: 2026년 상반기 실적 발표 시 AI인프라 부문 외부 수주 실적 및 현금창출력 개선 수준 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5YOEpQcVNUVkFhUWZmQTZwUzZBRFRjN1dEaUQyWXJtVmhSanJQeVR2amF5OFpnSGNkYlBUcmFZYVkwTFJyalRiOEJsaWNUUU5zRTNsa1dPWm9Wc0NmYTlmVHBqdGwzeTRz?oc=5" target="_blank" rel="noopener">fetv.co.kr</a></p>
+
+<h3>4. SK에코플랜트, 서울랜드서 가족 2600명 초청 창립행사</h3>
+
+<p>5월 3일 SK에코플랜트가 서울랜드에서 구성원 및 가족 2600명 대상 창립기념 행사 개최. 어린이날 징검다리 연휴에 맞춰 5월 4일을 창립기념 휴무일로 지정.</p>
+
+<p><strong>영향</strong>: 구성원 복지 강화로 인재 유지 및 조직문화 개선. 건설업에서 AI인프라 기업으로 전환 과정에서 내부 결속력 강화.</p>
+<p><strong>확인 필요</strong>: 미확인</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE9FUzRxc1NxVEhhQ3dxbDVlLUd5STJxaGZrUVg2c0I4OXJDSTNUdzBUd25xNEtaTVlXUzJGNXhZUThpWVhBckJnNm9XNnVuRGg1Sll2cVF3RE1WS1U4WS1qSEhJWFhKWEZ5dEVsLWVGOA?oc=5" target="_blank" rel="noopener">위클리오늘</a></p>
+
+<h3>5. 삼성 아산 온양사업장, AI반도체 첨단패키징 투자 추진</h3>
+
+<p>삼성전자 아산 온양사업장이 AI반도체 후공정을 위한 첨단 패키징 투자 추진 중(구체적 투자규모 미확인).</p>
+
+<p><strong>영향</strong>: 국내 AI반도체 후공정 생태계 구축 가속화. 아산지역이 반도체 전후공정 통합 거점으로 부상 가능.</p>
+<p><strong>리스크</strong>: 투자규모 및 일정 미확정. 첨단패키징 기술력 및 수율 확보 과제.</p>
+<p><strong>확인 필요</strong>: 삼성전자의 구체적 투자규모, 착공시기, 양산목표 시점 공식 발표 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE51VVkyRmp5c1JxSUhNZ3I2OEFITk5IRDc1OHlRSlB2UWJXWVJEVTg0a1AyWGRlMG9Xb18zTTQxWDE5SWJkMmN1T09oOUlkUEE3aTFB?oc=5" target="_blank" rel="noopener">아산데일리</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>FI 지분 1조500억원에 조기 정리, AI 인프라 독립 성장 추진</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> AI 인프라 관련 사업 비중이 60% 후반까지 확대되어 &#x27;건설 기반 하이테크 기업&#x27;으로의 전환 가시화(Claim: 기사 기준). 반도체 소재, 산업용 가스, 데이터센터 등으로 사업 축을 빠르게 이동시키며 매출과 영업이익이 동반 성장 중인 것으로 확인됨.</li>
+<li><strong>현금흐름·차입</strong> FI 지분 정리에 총 1조500억원 투입, SK에코플랜트가 약 6500억원 부담(Claim: 공시 기준). 외부 차입 없이 보유 자금을 활용한다고 발표했으나, 단기간 내 현금 유출 규모 확대로 향후 투자 확대 시 재무 여력 관리가 주요 과제로 부상할 가능성 존재.</li>
+<li><strong>PF/우발채무</strong> CPS 상환에 따라 향후 배당 부담이 줄어들어 재무구조 안정성 개선 전망. 2022년 프리IPO 투자자들과의 2026년 7월 상장 조건이 해소되어 우발적인 FI 상환 부담 리스크가 제거됨. 현금창출력 개선 속도가 향후 재무 안정성을 가늠할 핵심 지표로 평가됨.</li>
+<li><strong>IPO/경쟁사</strong> 회계 이슈와 중복상장 규제 강화로 IPO 추진 동력이 약화되어 상장 일정을 사실상 포기한 상황. 약 7% 수준의 수익을 반영한 가격으로 FI와 합의 완료(Claim: 기사 기준). 향후 그룹 내부 물량을 넘어 외부 고객사 확대를 통한 외연 확장이 핵심 과제로 부상.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5YOEpQcVNUVkFhUWZmQTZwUzZBRFRjN1dEaUQyWXJtVmhSanJQeVR2amF5OFpnSGNkYlBUcmFZYVkwTFJyalRiOEJsaWNUUU5zRTNsa1dPWm9Wc0NmYTlmVHBqdGwzeTRz?oc=5" target="_blank" rel="noopener">fetv.co.kr</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE9FUzRxc1NxVEhhQ3dxbDVlLUd5STJxaGZrUVg2c0I4OXJDSTNUdzBUd25xNEtaTVlXUzJGNXhZUThpWVhBckJnNm9XNnVuRGg1Sll2cVF3RE1WS1U4WS1qSEhJWFhKWEZ5dEVsLWVGOA?oc=5" target="_blank" rel="noopener">위클리오늘</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 업계에 대한 대규모 투자가 활발히 진행되고 있으며, 국가 차원에서 반도체·AI 산업 육성을 위한 펀드 조성이 본격화되고 있다. 중국의 딥시크 투자부터 한국의 국민참여성장펀드 출시까지 글로벌 차원의 반도체 투자 경쟁이 심화되고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE43YlNTcFVma0JLU0xPX3hEaWM2eFRhbUtJallmcE41bExnZW5FTjVkQnY2dGhrQ1pXX1I5WGEzRl9hUDhnOEotVWRWOFl1TTM1Y3RzSmd3?oc=5" target="_blank" rel="noopener">반도체 제조 공정의 핵심지표 &#x27;TAT(Turn Around Time)&#x27; 분석</a></li>
+</ul>
+<p>D램 하나 제조에 120일이 소요되는 복잡한 공정 구조</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5FQk85M2FFTEVPZm9XUzAtQm5MOUlWS2RGN3F4eU5uRkhKM2plSHZFY3BpX2lZcHBwNHJSYm5VNnplLWF6eW04X1NYZnlnR3pVYTZZNjJSX3c?oc=5" target="_blank" rel="noopener">스페이스X, 반도체 자급자족 목표로 테라팹에 투자</a></li>
+</ul>
+<p>우주항공 기업의 반도체 수직통합 전략 추진</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1QUW90Y1FXUUFIN3JPY0tRd096cnc2R2tVYTIxc2pLdzZpQjl0ZUJUNEVWcWJXNzFaYWJzU1lYLUVMNlc3TzV1aU9kdEl5MFhiQkt3bXF2RzRDb0V1TXMtZU9yYlNKM1VDc0gyVHVOZVloX3M?oc=5" target="_blank" rel="noopener">용인시장 이상일, 1000조원 반도체 투자 유치에 총력</a></li>
+</ul>
+<p>지자체 차원의 대규모 반도체 투자 유치 경쟁</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE14WldrcDg1aTdTdHpPeTRZMXNRSnBRenlkVzhTN0NuNFo4OVV6UnpOV1UxNTFwZEJqbFU4b2k0ckJLRUtEWWlJQlRDTmp3UGxVUHk0aU5SbDVsSmPSAWBBVV95cUxNdjN1ODJMVEl2b0psT0hBTlNCalpXV0I0amJpVW5QM1Z2VmM3UkVTNzVQS29MTFpHaG83OHlkX2g0aUJKSDVyWXAzZERXWUFfVmdobjFDYTl3Wk8wbEotRG4?oc=5" target="_blank" rel="noopener">중국 반도체 기금, 딥시크에 65조원 규모 투자 논의</a></li>
+</ul>
+<p>중국의 AI 반도체 기업에 대한 대규모 투자 계획</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1yRDAxM3BDV09CSXBNNWZlSlNPYU1UUzRFZEswbDI4Mm1yS0JWYUdyM3Y3UWhpd29iTllMRTkyM1FWMmVQUVhId3ZSTnpwQ3ZQMDBxeEcteS1VVU56Znkwcl94Qko0anc?oc=5" target="_blank" rel="noopener">정부 손실보전 20%의 국민참여성장펀드 22일 출시</a></li>
+</ul>
+<p>반도체·AI 투자 촉진을 위한 정부 주도 펀드 조성</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBjeFp6X1JCUXN1aldCenlydkU4OWNJc2p4Z0hvTFM5X3ZPSWJfLWJaalFlWTZqUGxjX1gyczQ3MjFQQ0paLW9TTk9jOW16WHFUN014eGtjYURsUQ?oc=5" target="_blank" rel="noopener">전남도지사, SK에 반도체 팹 투자 유치 요청</a></li>
+</ul>
+<p>지자체간 반도체 공장 유치 경쟁 가속화</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1EamxpTmYwWGU3Sm1JR2ZnbXJYeTh1d08zZksxZWRaSkV0QjREdWxNNjU3cjBCS0ZGejJIZjNVc3FfYm1GWWRYQTZFVk14enJLTjZrWVlZZGZOUUdrRE5FMkVOTEd6bkNVZnJ5Qm1nbW8?oc=5" target="_blank" rel="noopener">증권가, 반도체 호황 속 코스피 8000선 전망</a></li>
+</ul>
+<p>반도체 업황 개선으로 주식시장 강세 지속 예상</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9KaU9NU3ZHVzFVVFdZX3JSZHVpSnVUcXQxMFQ0cWoyVzU1em9DeDRoMWVQRHhXSnZPaXdWTnd2aThSa25TbnRaZDJ2ZVNmRmdQNWk1aXJ1OVdnLThRcTJlQkFKUlZrOHZ3WkQ5SGMzZ3p4TW8?oc=5" target="_blank" rel="noopener">메모리반도체 호황으로 SK하이닉스 레버리지 ETF 확대</a></li>
+</ul>
+<p>해외 투자기관들의 한국 반도체 투자 상품 확대</p>
+
+<h3>첨단 패키징</h3>
+<p>반도체 패키징 분야에서 FPGA와 펌웨어 결합을 통한 전략적 전환과 삼성의 AI 반도체 후공정 투자가 주목받고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/fpga-makers-strategic-pivot-into-firmware-world/" target="_blank" rel="noopener">Lattice, AMI 인수로 FPGA와 오픈소스 펌웨어 플랫폼 결합</a></li>
+</ul>
+<p>저전력 FPGA 업체의 펌웨어 영역 확장 전략</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE51VVkyRmp5c1JxSUhNZ3I2OEFITk5IRDc1OHlRSlB2UWJXWVJEVTg0a1AyWGRlMG9Xb18zTTQxWDE5SWJkMmN1T09oOUlkUEE3aTFB?oc=5" target="_blank" rel="noopener">삼성 아산 온양사업장, AI 반도체 첨단 패키징 투자 추진</a></li>
+</ul>
+<p>AI 반도체 후공정 거점으로 도약 계획</p>
+
+<h3>데이터센터 신축</h3>
+<p>AI와 암호화폐 데이터센터 건설이 활발히 진행되고 있으며, 대규모 전력 용량 확보를 위한 인수합병이 증가하고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/t-rex-to-acquire-3mw-crypto-data-center-in-roberta-georgia/" target="_blank" rel="noopener">T-Rex, 조지아주에 3MW 규모 암호화폐 데이터센터 인수</a></li>
+</ul>
+<p>두 번째 크립토마인 확보로 사업 확장</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/core-scientific-acquires-cryptomine-in-muskogee-to-expand-ai-data-center-campus/" target="_blank" rel="noopener">Core Scientific, AI 데이터센터 확장 위해 440MW 연결망 인수</a></li>
+</ul>
+<p>Polaris Technologies 인수로 대용량 전력망 확보</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/cerebras-signs-on-for-40mw-of-capacity-at-digi-power-x-data-center-in-alabama/" target="_blank" rel="noopener">Cerebras, 40MW 용량의 10년 계약 체결(11억달러 규모)</a></li>
+</ul>
+<p>Digi Power X 데이터센터와 장기 용량 계약</p>
+
+<h3>EPC / 수주</h3>
+<p>건설업계에서 안전 강화와 AI 기술 도입이 확산되고 있으며, 지정학적 불확실성으로 인한 전기화·디지털화 수요가 증가하고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/construction-safety-week-osha-alliance/819531/" target="_blank" rel="noopener">건설 안전 주간, OSHA와 새로운 연합 협정 체결</a></li>
+</ul>
+<p>1,000명 건설 전문가가 참여한 안전 강화 행사</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/energy-security-drives-schneider-electric-growth-ceo/819446/" target="_blank" rel="noopener">슈나이더 일렉트릭, AI 붐과 지정학적 불확실성으로 성장</a></li>
+</ul>
+<p>전기화·디지털화 빌딩 시스템 전망 개선</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/ai-procurement-tool-evaluates-local-government-contract-euna-solutions/819485/" target="_blank" rel="noopener">AI 조달 도구로 지방정부 계약 입찰 평가</a></li>
+</ul>
+<p>공공기관 입찰 효율성 개선을 위한 AI 솔루션 도입</p>
+
+<h3>AI / 반도체 트렌드</h3>
+<p>스페인 ICFO에서 분사한 퀀텀 보안 스타트업이 AI 시대의 암호화 보안 솔루션을 개발하고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/how-spains-icfo-helped-build-a-quantum-security-startup-for-the-ai-era/" target="_blank" rel="noopener">스페인 ICFO 스핀오프 Quside, 퀀텀 난수 생성기 칩 개발</a></li>
+</ul>
+<p>AI 시대 보안 암호화 응용을 위한 퀀텀 기술 상용화</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>양자 컴퓨팅 위협에 대응한 포스트 퀀텀 암호화(PQC) 시장이 급속도로 확대되고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/looming-quantum-threat-as-pqc-market-expands/" target="_blank" rel="noopener">PQC 시장, 2026년 12억달러에서 2035년 130억달러로 확대</a></li>
+</ul>
+<p>&#x27;지금 수확하고 나중에 해독&#x27; 위협에 따른 시장 성장</p>
+
+<h3>ESG / 탄소규제</h3>
+<p>SK에코플랜트가 창립기념일을 맞아 임직원 가족과의 소통을 강화하는 ESG 활동을 전개하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBuN0o5MVNtWmFjTkZMTjhMSkgxSWhLaHNtOE1FTTZ2Yi1fRTU3LUJncE5VUGp3N0Z0SDNKTmd3c3RkQzh0LTBmRHJhbVpVd0JXelRhdi1EM1hvVmR5X0U3TjZHRURVTkFjOWlwVQ?oc=5" target="_blank" rel="noopener">SK에코플랜트, 창립기념일 임직원 가족 2600명 초청 행사</a></li>
+</ul>
+<p>가정의 달 맞이 구성원 화합 강화 ESG 활동</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트가 FI(Financial Investment) 사업을 정리하고 AI 인프라 사업으로 방향을 전환하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5YOEpQcVNUVkFhUWZmQTZwUzZBRFRjN1dEaUQyWXJtVmhSanJQeVR2amF5OFpnSGNkYlBUcmFZYVkwTFJyalRiOEJsaWNUUU5zRTNsa1dPWm9Wc0NmYTlmVHBqdGwzeTRz?oc=5" target="_blank" rel="noopener">SK에코플랜트, FI 사업 정리하고 AI 인프라로 집중</a></li>
+</ul>
+<p>사업 포트폴리오 재편을 통한 AI 인프라 사업 강화</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE9FUzRxc1NxVEhhQ3dxbDVlLUd5STJxaGZrUVg2c0I4OXJDSTNUdzBUd25xNEtaTVlXUzJGNXhZUThpWVhBckJnNm9XNnVuRGg1Sll2cVF3RE1WS1U4WS1qSEhJWFhKWEZ5dEVsLWVGOA?oc=5" target="_blank" rel="noopener">건설업계 동향 - SK에코플랜트 등 주요 업체 현황</a></li>
+</ul>
+<p>주요 건설업체들의 사업 동향 종합 정리</p>
+
+<h3>기타</h3>
+<p>SK에코플랜트가 가정의 달을 맞아 구성원 가족 초청 창립기념 행사를 개최했다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNenVkRVJMQVE0T2Y3V0lPa0o5NUpZVXUwclhGYzlZbmxpMk00bVJaNk1LLWlHTGw5bTRkZ3NyQ25ZZzhPWUU0OVhkZGZiZHFveUZJQlNuWVN4QkwzOU52YlJ1dzdvbW1Pc09BdFFwQmljaFRIc1ZKVWRlbTcxS1RWWg?oc=5" target="_blank" rel="noopener">SK에코플랜트, 가정의 달 맞이 가족 초청 창립기념 행사</a></li>
+</ul>
+<p>구성원과 가족간 소통 강화를 위한 기업 문화 활동</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[슈나이더일렉트릭, AI 데이터센터 수요로 Q1 매출 11.2% 성장] 전년도 높은 기저효과 대비 성장 지속성 검증 필요. AI 투자 둔화 시 수요 감소 가능성.</li>
+<li>[SK에코플랜트, FI 지분 1조500억원에 조기 상환] 단기 현금유출 6500억원으로 향후 투자여력 제약 우려. 외부 고객사 확대 없이는 성장 한계 직면 가능.</li>
+<li>[삼성 아산 온양사업장, AI반도체 첨단패키징 투자 추진] 투자규모 및 일정 미확정. 첨단패키징 기술력 및 수율 확보 과제.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>Construction Safety Week의 기술 게시판 시리즈 구체적 내용 및 업계 적용 현황 확인 필요.</li>
+<li>2분기 실적 발표 시 데이터센터 세부 지역별 성장률 및 액체냉각 관련 구체적 매출 비중 확인.</li>
+<li>2026년 상반기 실적 발표 시 AI인프라 부문 외부 수주 실적 및 현금창출력 개선 수준 확인.</li>
+<li>미확인</li>
+<li>삼성전자의 구체적 투자규모, 착공시기, 양산목표 시점 공식 발표 확인 필요.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/5건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-05-06T21:58:26.104420+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
