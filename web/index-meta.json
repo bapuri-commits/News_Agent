@@ -664,5 +664,14 @@
     "top_headline": "건설안전주간, OSHA와 공식 파트너십 체결",
     "sk_headline": "FI 지분 1조500억원에 조기 정리, AI 인프라 독립 성장 추진",
     "article_count": 39
+  },
+  "2026-05-08": {
+    "date": "2026-05-08",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "슈나이더 Q1 매출 $114억 달성, 데이터센터 수요로 13% 성장",
+    "sk_headline": "SK에코플랜트, AI·반도체 딥테크 기업 발굴 공모전 개최",
+    "article_count": 39
   }
 }
