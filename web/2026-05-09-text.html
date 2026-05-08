@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-05-09 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-05-09.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-05-09</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-05-09</h1>
+
+<blockquote>인텔, 첨단 패키징 장비 대량 발주 본격화 / Zerra DC, 호주 멜버른에 6동 규모 데이터센터 개발 추진 / WSP, AI·데이터센터 수요로 1분기 전력 인프라 매출 급증</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. 인텔, 첨단 패키징 장비 대량 발주 본격화</h3>
+
+<p>인텔이 파운드리 사업 확대를 위해 첨단 패키징 장비 발주를 본격화하고 있음. 구체적인 발주 규모와 장비 공급업체는 미확인.</p>
+
+<p><strong>영향</strong>: 인텔의 파운드리 대형 수주 가능성 시사. 첨단 패키징 시장 경쟁 심화 예상.</p>
+<p><strong>확인 필요</strong>: 인텔의 구체적인 장비 발주 규모 및 공급업체 확인 필요</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxNMGRNb2hKOU1aM0hIZDJYa0xxNEZTaVhnN25nSFpKYWFZS0VpRXA5czRreDBVREF3OTZ6UDhmX2pfY0huN01RWDZlSGx2bEFMd2ZaZEFvNW9wbXhrQTNWRUhzN2l4Ukp0cU1zN281V3hoQVdMaWp4NzMtYk4yRlZ1WldB0gGWAUFVX3lxTE1KNXB3UGwwTGpVMlM0eWhWY1p6VUxmR0U1QUlUWGVEeUdHQXl6U0tUbzFCMlVIcTY1ZWhIZXExblRFVlJpUWhpcWdDNHpQem9QWVRiRlpSRlZMVEhJb3VZbXVRS0wyQjQ5QW9HX1o5VjZNOEZsOUFpWUJfX0dPUFU1Y1puSEtUTFZkbWFkR3l3NThxSkE1UQ?oc=5" target="_blank" rel="noopener">조선비즈</a></p>
+
+<h3>2. Zerra DC, 호주 멜버른에 6동 규모 데이터센터 개발 추진</h3>
+
+<p>Zerra DC가 호주 멜버른 Campbellfield의 구 Ford 자동차 공장 부지(45에이커)를 인수. 300-340 Barry Road에 6동 규모의 데이터센터 캠퍼스 개발 계획. 2024년 4월 빅토리아주에 건축 허가 신청서 제출.</p>
+
+<p><strong>영향</strong>: 호주 데이터센터 시장 확대 가속화. AGP 소유 Zerra DC는 미국·인도·일본·호주에서 총 920MW 용량 확보.</p>
+<p><strong>리스크</strong>: 인허가 승인 지연 가능성. 전력 인프라 확보 필요.</p>
+<p><strong>확인 필요</strong>: 빅토리아주 건축 허가 승인 여부 및 착공 일정 확인</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/zerra-dc-files-to-build-six-building-data-center-campus-in-melbourne-australia/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>3. WSP, AI·데이터센터 수요로 1분기 전력 인프라 매출 급증</h3>
+
+<p>WSP의 미국 매출 중 전력 생성 프로젝트가 약 1/3 차지. 2023년 12월 전력 인프라 기업 TRC 인수 완료. 과거 2년간 M&amp;A에 60-70억 캐나다달러(44-51억 달러) 투입.</p>
+
+<p><strong>영향</strong>: 데이터센터 전력 제약 해결을 위한 전력 인프라 사업 기회 확대. M&amp;A를 통한 외형 성장 전략 지속.</p>
+<p><strong>리스크</strong>: 높은 부채 비율로 추가 M&amp;A 제약 가능성</p>
+<p><strong>확인 필요</strong>: WSP의 구체적인 전력 인프라 프로젝트 수주 현황 확인</p>
+
+<p>📎 출처: <a href="https://www.constructiondive.com/news/wsp-earnings-q1-power-ai-data-center/819671/" target="_blank" rel="noopener">Construction Dive</a></p>
+
+<h3>4. 삼성·SK하이닉스 반도체 투자 확대로 클린룸 설비 발주 급증</h3>
+
+<p>삼성전자 2024년 반도체 설비투자 60조원 이상(전년 대비 +20%). SK하이닉스 38조원 이상(+52%). 한양이엔지 1분기 3,780억원 수주 확보. 신성이엔지도 동일 금액 수주.</p>
+
+<p><strong>영향</strong>: 클린룸 설비업체 실적 개선 가시화. 한양이엔지 2024년 예상 매출 1.27조원(+13.5%), 영업이익 888억원(+65.4%).</p>
+<p><strong>리스크</strong>: 반도체 시장 둔화 시 투자 축소 가능성</p>
+<p><strong>확인 필요</strong>: 삼성 P5 클린룸 공사 착수 일정 및 발주 규모 확인</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE4xbGc1eThFejZCbmRRd0wtS1ZrbHBtWFI3TkFTa193VkFHamV5d2k5NEtabUxjNE9uSUZDcXpDd0ZuZzdtVmNodWY5UTU3aFVLOXdsZ0VUbzI1cG1nWkFhUFk2UkpqS2JhVDBJTlFCUE84c3N6NXfSAXZBVV95cUxOMWxnNXk4RXo2Qm5kUXdMLUtWa2xwbVhSN05BU2tfd1ZBR2pleXdpOTRLWm1MYzRPbklGQ3F6Q3dGbmc3bVZjaHVmOVE1N2hVSzl3bGdFVG8yNXBtZ1pBYVBZNlJKaktiYVQwSU5RQlBPOHNzejV3?oc=5" target="_blank" rel="noopener">시사저널e</a></p>
+
+<h3>5. 동진쎄미켐, 1분기 영업이익 666억원 기록 전년비 39.4% 증가</h3>
+
+<p>동진쎄미켐 1분기 실적: 매출 3,281억원(전년 동기 대비 +13.2%), 영업이익 666억원(+39.4%), 당기순이익 669억원(+85.2%). EUV 포토레지스트 양산 안정화 및 미국 테일러 공장 가동 본격화.</p>
+
+<p><strong>영향</strong>: 반도체 소재 수요 증가로 실적 개선 지속. HBM 및 이차전지 소재 사업 확대 추진.</p>
+<p><strong>확인 필요</strong>: 동진쎄미켐의 미국 테일러 공장 가동률 및 신규 수주 현황 확인</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9PaVdjcGFCeEFMYTd2TmJ5MjVYdFlZcXFRU056ZHB2cUdKeGMtVG1mTlhBd1FwZVlDYlhRWk1qV19JcnFubFFBWEFzWTg4aXVsTEZxYmJXRjNxd9IBVEFVX3lxTE91WlFNNmZkTG4xVXpZU3RWVGpSbHVaMTZpS2F2aVVmYTJ2TWVINllfZkMxLUlwVEQ0SEs5eC1VaWVseTFXZTN2amY0ZVc2d2xOUzU2dg?oc=5" target="_blank" rel="noopener">한국경제</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>SK에코플랜트 사업현장 근로자 1명 사망 사고</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> 해당 기간 특이사항 없음. 기사는 근로자 사망 사고에 관한 내용으로 수주 현황이나 사업 믹스 변화와 관련된 정보는 포함되지 않음.</li>
+<li><strong>현금흐름·차입</strong> 해당 기간 특이사항 없음. 근로자 안전사고 관련 내용으로 현금흐름이나 차입 구조에 대한 언급은 없음.</li>
+<li><strong>PF/우발채무</strong> 근로자 사망 사고로 인한 잠재적 법적 리스크 및 보상 비용이 발생할 가능성이 있으나, 현재 원인 파악 중인 상황. 구체적인 우발채무 규모나 영향은 추후 조사 결과에 따라 결정될 것으로 보임.</li>
+<li><strong>IPO/경쟁사</strong> 해당 기간 특이사항 없음. 기사는 안전사고 관련 내용으로 IPO나 경쟁사 동향과 관련된 정보는 없음.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE44aklDdlZ0N1pzQ0FRS1NHRmZmY1FCVWN4RVpMVGRzdmJiQmZWZnpleEFQQUJwUzNCWTl0OXBsZFkxRjRvaDJDZ3pFU3ZkbDgyTVl4RGtnd0VjZUJ6aDFtRmZsYUp4M0dCaGFwdk9HTFFNWkU?oc=5" target="_blank" rel="noopener">비즈니스포스트</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>머스크의 80조원 규모 테라팹 건설, TSMC의 360조원 미국 투자 확대 등 초대형 반도체 생산시설 투자가 본격화되고 있습니다. 중국도 R&amp;D 투자 비중을 늘리며 기술 자립에 박차를 가하고 있어 글로벌 반도체 투자 경쟁이 치열해지고 있습니다. 국내에서는 메모리 가격 상승과 AI 수요 증가로 반도체 투자 열기가 확산되고 있습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE42cDdGa296SVkwRUh4SEhId0UzNHhrTWVlVHFvVGIwWnBYVW5Fb09IdktGZnRpVUFtN1FrWXNFYXVIQXN3YkpHSVJBMnE3dw?oc=5" target="_blank" rel="noopener">머스크, 텍사스에 80조원 규모 초대형 반도체공장 건설</a></li>
+</ul>
+<p>일론 머스크가 텍사스에 최소 80조원을 투자해 테라팹 반도체공장을 건설한다고 발표했습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTFBuWXJhSVgzM1ZwcmI1U0dScFpsRXdCY1NWU0ZJaXNOYzNjbWUyeGRVS2NacDRHNWVZdlhIbDVINklFam5HMVE1ck9zbw?oc=5" target="_blank" rel="noopener">TSMC, 미국 투자 360조원까지 확대</a></li>
+</ul>
+<p>TSMC가 애리조나 반도체 클러스터 구축을 위해 미국 투자규모를 360조원까지 확대한다고 발표했습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFBCUW13WVZJRjFLYU1ZT0hfeHNfaEJsWGZkTUdaOVBxVEE4SUJyRFBrUTRvRzRJaEg1b0xJSnJmTTlwcVRuYkJzdVNiVE1ZSHd1cHJKRjFBWGMxMnE3RFhER0RSRFA?oc=5" target="_blank" rel="noopener">K-반도체 업체들, 설비 투자 풀가동</a></li>
+</ul>
+<p>반도체 슈퍼 호황으로 국내 반도체 업체들이 설비 투자를 풀가동하고 있습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeHktS2RMUWg0bFJxSk5JUUlaZ1NDY3MyZC1VWnd0R2V0NWVuYU9lTVhZcUJheWN1amNoR0hJa2NPV1hwVEZpaXo5dVFaaHdlSHZpdE0tcGNFdG5UQU0ySEt2Zzl5X3ZjbU1VcmMzQmpidzZabVBPZG5RSjJKX2h0c1JfV1p3LVZW?oc=5" target="_blank" rel="noopener">중국 반도체 기업, R&amp;D 투자 비율에서 미국 추월</a></li>
+</ul>
+<p>중국 반도체 기업들이 R&amp;D 투자 비율에서 미국을 넘어서며 기술 자립에 박차를 가하고 있습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE03T0d3ZU0wX1FBNUtkd29LTWRkQXZmQ2luaVB1QkROb05aUXl2bFpYOFowbkNvVzYyTDI4eXhyejBfWXkzNXBwdVRHVG1tdHplYzUzVjRKNmQxLVVqMWllaFFyT0s1eXdoRWx6YmpIOFhNRmFXMXc?oc=5" target="_blank" rel="noopener">메모리 가격 8배 폭등으로 한국 반도체 주목</a></li>
+</ul>
+<p>메모리 가격이 8배 폭등하며 한국 반도체 업체들이 다시 주목받고 있습니다.</p>
+
+<h3>클린룸 / 공정 인프라</h3>
+<p>반도체 선단공정 투자 확대로 클린룸 설비 공급이 증가하고 있습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE4xbGc1eThFejZCbmRRd0wtS1ZrbHBtWFI3TkFTa193VkFHamV5d2k5NEtabUxjNE9uSUZDcXpDd0ZuZzdtVmNodWY5UTU3aFVLOXdsZ0VUbzI1cG1nWkFhUFk2UkpqS2JhVDBJTlFCUE84c3N6NXfSAXZBVV95cUxOMWxnNXk4RXo2Qm5kUXdMLUtWa2xwbVhSN05BU2tfd1ZBR2pleXdpOTRLWm1MYzRPbklGQ3F6Q3dGbmc3bVZjaHVmOVE1N2hVSzl3bGdFVG8yNXBtZ1pBYVBZNlJKaktiYVQwSU5RQlBPOHNzejV3?oc=5" target="_blank" rel="noopener">삼성·하닉 증설로 클린룸 설비 공급 증가</a></li>
+</ul>
+<p>반도체 선단공정 투자 확대로 삼성과 하닉의 증설 효과로 클린룸 설비 공급이 늘고 있습니다.</p>
+
+<h3>첨단 패키징</h3>
+<p>인텔의 첨단 패키징 장비 발주와 HBM 관련 투자가 활발해지고 있습니다. 반도체 소재 및 패키징 기술에 대한 집중 투자가 확산되고 있으며, 관련 ETF 수익률도 급등하고 있습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxNMGRNb2hKOU1aM0hIZDJYa0xxNEZTaVhnN25nSFpKYWFZS0VpRXA5czRreDBVREF3OTZ6UDhmX2pfY0huN01RWDZlSGx2bEFMd2ZaZEFvNW9wbXhrQTNWRUhzN2l4Ukp0cU1zN281V3hoQVdMaWp4NzMtYk4yRlZ1WldB0gGWAUFVX3lxTE1KNXB3UGwwTGpVMlM0eWhWY1p6VUxmR0U1QUlUWGVEeUdHQXl6U0tUbzFCMlVIcTY1ZWhIZXExblRFVlJpUWhpcWdDNHpQem9QWVRiRlpSRlZMVEhJb3VZbXVRS0wyQjQ5QW9HX1o5VjZNOEZsOUFpWUJfX0dPUFU1Y1puSEtUTFZkbWFkR3l3NThxSkE1UQ?oc=5" target="_blank" rel="noopener">인텔, 첨단 패키징 장비 발주 본격화</a></li>
+</ul>
+<p>인텔이 파운드리 대형 수주의 신호탄으로 첨단 패키징 장비 발주를 본격화하고 있습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9PaVdjcGFCeEFMYTd2TmJ5MjVYdFlZcXFRU056ZHB2cUdKeGMtVG1mTlhBd1FwZVlDYlhRWk1qV19JcnFubFFBWEFzWTg4aXVsTEZxYmJXRjNxd9IBVEFVX3lxTE91WlFNNmZkTG4xVXpZU3RWVGpSbHVaMTZpS2F2aVVmYTJ2TWVINllfZkMxLUlwVEQ0SEs5eC1VaWVseTFXZTN2amY0ZVc2d2xOUzU2dg?oc=5" target="_blank" rel="noopener">반도체 소재 업체, HBM·이차전지로 사업 확장</a></li>
+</ul>
+<p>반도체 소재 집중 전략이 성과를 거두며 HBM과 이차전지로 사업 영역을 확대하고 있습니다.</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1wYVlxcHpEY3lMY3l0eXZFeVdJNTlzaE1UQV82Y0ZiMVRSaHoyTXR3WEZLLTR3amE4ZXhwUXNEcnBrblZzYXp3YWV4dzd5YWM?oc=5" target="_blank" rel="noopener">글로벌HBM반도체 ETF 수익률 481% 급등</a></li>
+</ul>
+<p>PLUS글로벌HBM반도체 ETF가 481%의 높은 수익률을 기록했습니다.</p>
+
+<h3>데이터센터 신축</h3>
+<p>호주 멜버른과 미국에서 대규모 데이터센터 건설 프로젝트가 추진되고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/zerra-dc-files-to-build-six-building-data-center-campus-in-melbourne-australia/" target="_blank" rel="noopener">Zerra DC, 멜버른에 6개 건물 데이터센터 캠퍼스 개발</a></li>
+</ul>
+<p>Zerra DC가 호주 멜버른의 전 포드 자동차 공장 부지에 데이터센터 캠퍼스 개발을 추진하고 있습니다.</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/tutor-perini-Q1-2026-earnings-data-centers/819716/" target="_blank" rel="noopener">Tutor Perini, 데이터센터 사업 기회 모색</a></li>
+</ul>
+<p>건설업체 Tutor Perini가 197억달러 백로그를 바탕으로 데이터센터 사업 기회를 찾고 있습니다.</p>
+
+<h3>DC 전력</h3>
+<p>데이터센터 전력 인프라 관련 M&amp;A와 투자가 활발하게 진행되고 있습니다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/wsp-earnings-q1-power-ai-data-center/819671/" target="_blank" rel="noopener">WSP, 전력 생성과 AI 분야로 성장</a></li>
+</ul>
+<p>WSP가 전력 인프라 업체 TRC 인수 후 전력 생성과 AI 분야에서 성장을 이어가고 있습니다.</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/iren-acquires-spanish-data-center-developer-nostrum/" target="_blank" rel="noopener">Iren, 스페인 데이터센터 개발업체 Nostrum 인수</a></li>
+</ul>
+<p>전 암호화폐 회사 Iren이 스페인 데이터센터 개발업체 Nostrum을 인수했습니다.</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/medallion-sues-infrapartners-for-15m-over-unfinished-lagos-data-center/" target="_blank" rel="noopener">Medallion, 라고스 데이터센터 미완성으로 1500만달러 소송</a></li>
+</ul>
+<p>Digital Realty 자회사 Medallion이 라고스 데이터센터 미완성 문제로 InfraPartners를 상대로 소송을 제기했습니다.</p>
+
+<h3>EPC / 수주</h3>
+<p>건설 안전주간 행사에서 OSHA와 새로운 동맹 협정이 체결되었습니다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/construction-safety-week-osha-alliance/819531/" target="_blank" rel="noopener">건설 안전주간, OSHA와 새 동맹 협정 체결</a></li>
+</ul>
+<p>워싱턴 DC에서 열린 건설 안전주간 행사에서 약 1000명의 건설업 전문가가 참석한 가운데 OSHA와 새로운 동맹 협정이 체결되었습니다.</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트 사업현장 숙소에서 근로자 사망 사고가 발생했습니다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE44aklDdlZ0N1pzQ0FRS1NHRmZmY1FCVWN4RVpMVGRzdmJiQmZWZnpleEFQQUJwUzNCWTl0OXBsZFkxRjRvaDJDZ3pFU3ZkbDgyTVl4RGtnd0VjZUJ6aDFtRmZsYUp4M0dCaGFwdk9HTFFNWkU?oc=5" target="_blank" rel="noopener">SK에코플랜트 현장 숙소에서 근로자 1명 사망</a></li>
+</ul>
+<p>SK에코플랜트 사업현장 근로자 숙소에서 한 명이 사망했으며 상세 원인을 파악 중입니다.</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[Zerra DC, 호주 멜버른에 6동 규모 데이터센터 개발 추진] 인허가 승인 지연 가능성. 전력 인프라 확보 필요.</li>
+<li>[WSP, AI·데이터센터 수요로 1분기 전력 인프라 매출 급증] 높은 부채 비율로 추가 M&amp;A 제약 가능성</li>
+<li>[삼성·SK하이닉스 반도체 투자 확대로 클린룸 설비 발주 급증] 반도체 시장 둔화 시 투자 축소 가능성</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>인텔의 구체적인 장비 발주 규모 및 공급업체 확인 필요</li>
+<li>빅토리아주 건축 허가 승인 여부 및 착공 일정 확인</li>
+<li>WSP의 구체적인 전력 인프라 프로젝트 수주 현황 확인</li>
+<li>삼성 P5 클린룸 공사 착수 일정 및 발주 규모 확인</li>
+<li>동진쎄미켐의 미국 테일러 공장 가동률 및 신규 수주 현황 확인</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 4/6건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-05-08T22:01:36.908995+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>

@@ -673,5 +673,14 @@
     "top_headline": "슈나이더 Q1 매출 $114억 달성, 데이터센터 수요로 13% 성장",
     "sk_headline": "SK에코플랜트, AI·반도체 딥테크 기업 발굴 공모전 개최",
     "article_count": 39
+  },
+  "2026-05-09": {
+    "date": "2026-05-09",
+    "theme_label": "Data Pulse",
+    "theme_accent": "#38bdf8",
+    "theme_gradient": "linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%)",
+    "top_headline": "인텔, 첨단 패키징 장비 대량 발주 본격화",
+    "sk_headline": "SK에코플랜트 사업현장 근로자 1명 사망 사고",
+    "article_count": 39
   }
 }
