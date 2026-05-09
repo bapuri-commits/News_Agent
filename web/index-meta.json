@@ -682,5 +682,14 @@
     "top_headline": "인텔, 첨단 패키징 장비 대량 발주 본격화",
     "sk_headline": "SK에코플랜트 사업현장 근로자 1명 사망 사고",
     "article_count": 39
+  },
+  "2026-05-10": {
+    "date": "2026-05-10",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "인텍플러스, 글로벌 파운드리 CoWoS 검사장비 양산 수주 임박",
+    "sk_headline": "SK에코플랜트, AI·반도체 딥테크 육성 확대",
+    "article_count": 39
   }
 }
