@@ -691,5 +691,14 @@
     "top_headline": "인텍플러스, 글로벌 파운드리 CoWoS 검사장비 양산 수주 임박",
     "sk_headline": "SK에코플랜트, AI·반도체 딥테크 육성 확대",
     "article_count": 39
+  },
+  "2026-05-11": {
+    "date": "2026-05-11",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "인텍플러스, 글로벌 파운드리 CoWoS 검사장비 연내 수주 기대",
+    "sk_headline": "SK에코플랜트, AI·반도체 딥테크 기업 발굴 나서",
+    "article_count": 39
   }
 }

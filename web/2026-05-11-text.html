@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-05-11 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-05-11.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-05-11</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-05-11</h1>
+
+<blockquote>인텍플러스, 글로벌 파운드리 CoWoS 검사장비 연내 수주 기대 / 데이터센터 PUE 지표, 서버 내부 AC/DC 변환 손실 5% 미반영 / Zerra DC, 멜버른 구 포드공장 부지에 6개동 데이터센터 개발 신청</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. 인텍플러스, 글로벌 파운드리 CoWoS 검사장비 연내 수주 기대</h3>
+
+<p>인텍플러스는 글로벌 파운드리의 CoWoS 라인용 신규 검사장비 데모 장비를 공급 완료. 2019년 북미 고객사향 패키징 검사장비 공급으로 매출 급성장 기록. 대면적·고속 검사 기술력 보유.</p>
+
+<p><strong>영향</strong>: AI반도체/HBM 수요 증가로 CoWoS 등 첨단 패키징 검사장비 시장 구조적 성장 예상. 상반기~연내 양산 장비 수주 가능성.</p>
+<p><strong>리스크</strong>: 글로벌 경기 둔화와 반도체 투자 사이클 변동성에 따른 고객사 투자 일정 지연 가능성.</p>
+<p><strong>확인 필요</strong>: 1분기 내 글로벌 파운드리의 CoWoS 양산 장비 발주 여부 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5jeHJMYVFBRVM2SzlBTW9va09lbjFFTlZqMVlhdGRObW5iVUNHTnVncWRDTDZGTEcyMXBCYWhPRnNHeW8wU3d5empJaTVGYzF4SFNQemdNTmhsQVY0enp2REVkVUw4VlFvSEU2Q25Dc1piWXU3Z0hv0gF3QVVfeXFMTmN4ckxhUUFFUzZLOUFNb29rT2VuMUVOVmoxWWF0ZE5tbmJVQ0dOdWdxZENMNkZMRzIxcEJhaE9Gc0d5bzBTd3l6aklpNUZjMXhIU1B6Z01OaGxBVjR6enZERWRVTDhWUW9IRTZDbkNzWmJZdTdnSG8?oc=5" target="_blank" rel="noopener">핀포인트뉴스</a></p>
+
+<h3>2. 데이터센터 PUE 지표, 서버 내부 AC/DC 변환 손실 5% 미반영</h3>
+
+<p>2024년 데이터센터 전력 소비 415TWh로 전 세계 전력의 1.5% 차지. PUE는 IT장비 전력 대비 전체 전력 사용 효율 측정 지표(1.0이 이상적). 서버 내 AC/DC 변환 과정에서 5% 전력 손실 발생하나 PUE 계산에서 제외.</p>
+
+<p><strong>영향</strong>: 실제 데이터센터 효율성이 PUE 지표보다 낮을 수 있어 정확한 에너지 관리에 한계. Grid-to-chip 관점의 새로운 효율성 지표 필요.</p>
+<p><strong>리스크</strong>: 서버 전원공급장치(PSU) 효율 개선 없이는 AI 데이터센터 전력 수요 증가 대응 한계.</p>
+<p><strong>확인 필요</strong>: 주요 데이터센터 운영사의 PSU 효율 개선 투자 계획 및 새로운 효율성 지표 도입 동향 확인.</p>
+
+<p>📎 출처: <a href="https://semiengineering.com/what-is-power-usage-effectiveness-pue-in-data-centers/" target="_blank" rel="noopener">Semiconductor Engineering</a></p>
+
+<h3>3. Zerra DC, 멜버른 구 포드공장 부지에 6개동 데이터센터 개발 신청</h3>
+
+<p>Zerra DC가 호주 멜버른 북부 Campbellfield 소재 구 포드 자동차 공장 부지(45에이커)를 인수. 2026년 4월 빅토리아주에 6개 건물 데이터센터 캠퍼스 개발 허가 신청. AGP 소유 Zerra DC는 미국·인도·일본·호주에 920MW 용량 확보.</p>
+
+<p><strong>영향</strong>: 호주 데이터센터 시장 확대 신호. 제조업 부지의 데이터센터 전환 트렌드 지속.</p>
+<p><strong>리스크</strong>: 개발 세부 계획 미공개로 프로젝트 규모 및 일정 불확실성 존재.</p>
+<p><strong>확인 필요</strong>: 빅토리아주 개발 허가 승인 여부 및 프로젝트 세부 사양(전력 용량, 착공 일정) 발표 모니터링.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/zerra-dc-files-to-build-six-building-data-center-campus-in-melbourne-australia/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>4. AI데이터센터 특별법 통과, 타임아웃제·비수도권 전력평가 면제</h3>
+
+<p>국회 본회의 &#x27;AI데이터센터 산업 진흥 특별법&#x27; 의결(2월 7일). 인허가 타임아웃제 도입(전력계통영향평가 150일, 건축허가 40일 등 미회신시 자동승인). 비수도권 AI데이터센터 전력계통영향평가 면제, 특구 지정 및 재정지원 근거 마련.</p>
+
+<p><strong>영향</strong>: 데이터센터 인허가 기간 대폭 단축으로 투자 활성화 예상. 비수도권 대규모 프로젝트 유치 가속화.</p>
+<p><strong>확인 필요</strong>: 공포 후 9개월 뒤 시행 예정. 과기정통부의 특구 지정 기준 및 첫 지정 지역 발표 주목.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBBdkhWdDR6SHhFcU44WU5zcWwxV3lJbEdIOU9QVUVPUFRkdEFLMGM5SmRBbXRkQkZySzlrZGp3Sm5ZV2pCWlJiVU5sTllIbUU1YjVIM2ZBSk0tbWJOWlZheHRzU1kwN01t0gFoQVVfeXFMUEF2SFZ0NHpIeEVxTjhZTnNxbDFXeUlsR0g5T1BVRU9QVGR0QUswYzlKZEFtdGRCRnJLOWtkandKbllXakJaUmJVTmxOWUhtRTViNUgzZkFKTS1tYk5aVmF4dHNTWTA3TW0?oc=5" target="_blank" rel="noopener">법치뉴스</a></p>
+
+<h3>5. UIUC, 3D프린팅 구리 콜드플레이트로 DC냉각전력 30%→1.1% 감축</h3>
+
+<p>미국 UIUC 연구팀이 위상최적화와 전기화학 3D프린팅(ECAM) 기술로 순수 구리 콜드플레이트 개발. 기존 대비 냉각성능 32% 향상, 압력강하 감소. 1GW 데이터센터 기준 냉각전력 550MW→11MW 감축 가능.</p>
+
+<p><strong>영향</strong>: AI 데이터센터 전력 문제 해결의 핵심 기술. DLC(직접액체냉각) 시장 성장 가속화 예상.</p>
+<p><strong>리스크</strong>: 상용화 시점 및 대량생산 가능성 미확인. 기존 공랭 인프라 전환 비용 부담.</p>
+<p><strong>확인 필요</strong>: 주요 데이터센터 운영사 또는 냉각장비 업체의 기술 도입 및 상용화 일정 발표 모니터링.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9sVUF4c0pfbkh0b21tNVRTODY4b3dQT1Vmckx5WlNrV0NXSmw2eXROVWRwTzFkeERmdllIX1M5alcwMUk1cGt0QW8xbmgtR2FJU3JXSE0tVUtuRTNxbWRqWTZCd01SSXF1OEE?oc=5" target="_blank" rel="noopener">냉동공조저널</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>SK에코플랜트, AI·반도체 딥테크 기업 발굴 나서</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> SK에코플랜트가 연구개발특구진흥재단과 함께 &#x27;Tech Open Collaboration 개방형 혁신기술 공모전&#x27;을 통해 AI·반도체 분야 딥테크 기업 6개사를 선정할 예정이다(Claim: 7일 설명회 개최, 7월 최종 선정). 산업 AI, 생성형 AI, 반도체 EPC, 반도체 친환경 등을 포함한 8개 분야에서 기업을 발굴하여 공동 기술개발 및 기술검증 기회를 제공한다.</li>
+<li><strong>IPO/경쟁사</strong> SK에코플랜트가 선정 기업들에게 SK증권 등 18개 협력기관을 통한 투자와 사업화 연계 지원을 제공한다고 발표했다(Claim: 기사 내용 기준). 이는 딥테크 기업 육성을 통한 신사업 포트폴리오 확장 전략으로 해석된다.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1OeG9MQURYeUtnS0RjQkdqWnVMYjFMaUxJOGRRWl9yM1dqR19ESmJpdGhobWxnUXdTYi1CMm5OZVAwV0RReFAtNTV6bzdjZ3RlYnR0WlFMZ2ZydE9OeF9CbEhvb3NQWlU?oc=5" target="_blank" rel="noopener">행정수도뉴스</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>AI 반도체 투자 붐에 따라 한국과 일본의 정부 정책 차이가 부각되고 있으며, 국내 소재 업계도 공격적인 증설 투자에 나서고 있다. 반도체 관련 ETF와 투자 상품이 연일 신고가를 기록하며 투자자들의 관심이 집중되고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5ieW8wbVFxek5hNV9KbEpERThrWkN0NUEwcGRUNHF4akVaRHlzQVJsUVM2ZjVBLS1IVWVTd0R4ZktqWE43R1JiUHRpSDk0YW1xcE5HMV9lanp5d9IBVEFVX3lxTE9CUnBQRG5rQ3ROQmJIOW1RclBGOEJPNUVWeXRuNUQ3cU91cm9NdldweG9nMTVyNUE4Vnllb3BzNngxQmZKNUtSOHdDRlhOSGVXOHdDNA?oc=5" target="_blank" rel="noopener">한국은 규제 강화로 기업가 족쇄가 늘어나는 반면 일본은 AI·반도체 공격 경영을 유도</a></li>
+</ul>
+<p>양국의 반도체 육성 정책 방향이 상반된 모습을 보이고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFAyYXFBbFozdnE3WERfVmRJOU5KTmItRWpETVU1bXVzTVRmVkNXalhMQ0ZRSjZ3SHBObi10SnM0RnJVbXk3OVFFdjRxQm40OGpZVWtCcnJ2UXUwUE8yNGtqd2QtdHNhaERySm02WNIBckFVX3lxTFBTOE9BVm1vbDdiSHRrek1rdlN6a1BYZnUyY2tuRDdCMlN2VnZGNnFrQ0IweGthcFNITzkwU014N3J2ZmdnSTZzTkg2cUZOM0NPd0hWVW1SUXdMdjdQLW54SlE2MWFocWxnaGxCRzhSTlJOQQ?oc=5" target="_blank" rel="noopener">두산·롯데 등 소재 업계가 AI 반도체 훈풍에 공격 투자 나서</a></li>
+</ul>
+<p>반도체 소재 업계의 증설 투자가 본격화되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9XTldwcjU2Q3R5LXNvcXpsbWpzUkhGWG53amdQMGZfWW96QS1SREJWb2o4TTVucXRFUFFxQXpFTE81Q0UyMTAyVEEtZ0YyZlBiakdSQUItTF9xQQ?oc=5" target="_blank" rel="noopener">반도체·바이오·AI 분야 투자하는 국민성장펀드 접수 시작</a></li>
+</ul>
+<p>정부 차원의 신산업 투자 지원이 확대되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMi6wRBVV95cUxNY1pJY3ZJQjlXUEdiRkl1b3VUM21YaHYxT2JtVHFUcXBNMFVWempCaWgxekhXemZ6VlBveUZ6c0VIcDNrelAzMFFKa1RsTWFNTkNrQWR3Tk82X2JkV1V3eE5BdDVoUmFlU1lHNkxxMkdJLXZ2WGs3UDlkc0FRcHRVdS1KOUdWTzFocjFkLXAzV0dodWhrSTVieWIxbmlqcWR5ck0xbVI4aFJGNkpyTVNsNkt4dXBqdkNwTjl5Z3A5eXVUeGRueHhjeVBiejlXR3BTY0lIVUhBbEhaTFhXLWR2b2VLT0xvV1dBQXBzczZiWGdFWkNuWjZEdkFlNDUzQk1VV3ZrWUxQYmxXU2lGR0tPQkFSaUt5d2RwQ1ptaFV6NDlTVUNqQ1ZWMVh2alZJS3AwaWtzRjFaYXQ1ZU0wOHd2YklTQTdZUGJwTlplZkJJa2w0WEE1dkJIR0ZMVmZDWHZ1LXl5SzRnUzBpTnpPOENzdk0zQjBnaVR2c0d5ejRsa05SSjI4TzVQUzNwdFlPOTUxVjNYYk5kcUhGM3VOeDhoOEZyVEZoUjA1ZkxGN2k0b0FEcUJjb3F4Rko5aFQ5QTU3T0o5WXowei1pejNDSmJFaU40OFBTWDFrVlhUTzhHcktaeXF3akhkZTFfelNfeUVpNmdScVhKRlN2LV8yNTZjaU5yZHF0NGlnQW5jZDYxNy03SVB5eHZYWS1ITzItSy1DNXE3QkZER21ldllsRm9ZNnFKNDhpWTF1c2hNWGk5U1p2WFBQNnRYYUlIek5rNVQzQlF6b2JfTnRpSnh2bnpKbG5Fd3BLSnUtdS1r?oc=5" target="_blank" rel="noopener">반도체 지수 140만포인트 돌파하며 AI투자 1조달러 시대 도래</a></li>
+</ul>
+<p>글로벌 AI 투자 규모가 사상 최대치를 기록했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE1QLU5VLXZMeXBXcC13S1JsMVdwMm5rUzl4Z2hSRDhIVXp2cmpCYU01aFVaQTI3aDEtZlRpYlJKaC1objhhMnFyLS10cWJuMzR6dkE?oc=5" target="_blank" rel="noopener">AI붐으로 반도체 공장이 풀가동되며 레거시 파운드리까지 수혜</a></li>
+</ul>
+<p>구세대 반도체 제조업체들도 AI 수요로 활황을 맞고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBvQWIxS2J3LW9tbHRNNDZBS3NGaUd6OGEwRVJEMEFnOS1vc1oxczAxeGdIZFVVdTRXWnV4ODZLOEJoeTJzY3ZHVWljOWhEZWdzSElEbDlZMmFUd9IBVEFVX3lxTFBGeXlmY3hpQUtHeGo3SXh1Vks0UG5oaTRRM2dvZlpLaWE3dV9la0tpV2J1Z000dUZ1ZktBWFYtekxVQm9lb0VxQnBDMVBNblVLSm1SYw?oc=5" target="_blank" rel="noopener">신진호 대표가 반도체 단기 조정 시점 다가온다고 전망</a></li>
+</ul>
+<p>27년 무패 신화의 펀드매니저가 반도체 과열 우려를 제기했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMigAdBVV95cUxQM0JidjcyaWxCQWJ5d0JBUnFiLUlWQmxjOEt3cXIxUWRfMXBNd05KRVdJUERCLWo2bUxqODdJdWZlV19JV2tZMnY5YWdyQ3Bub2tuWW54MktTQXVqNFI1ZjhhNzlodDdzMXBUSmNBeU11WUdCZ2VqeXgtdEI4eG1mbERkaTNnRFNYenl5aFptTE1TSUtTVzFES19UQ0FYOVhIMHVRcUhEMGI0cFotZDgwWnVveUJ5R01xZmFESTEzWEt6Y2R3czhEby0yN3lyb3ZWUVhWVUpwSjUwN1psS3E5YlkySVIxZDFqNTVJblZLZ05aZkpjX0Y5TVVEWTloSzJnTE1zQ0ZMZ2g3b1ZvNDlPamhPdTRPUjZvWlFRYzdJV3ZYdDA1ajdBSHVlYXlQTldOSDRtcXZtNUFpcEdGTW1pVXFLTmNKYkEtTUlscEU4NzMzcFVBSmF5NU1XWjV6dDQ1NGgwMFJIaVNOZ1lfb0F4Q3MwVVFzclpkdTd2RFdPZ2lVckFqRXg2Y21pY01TTkUtV2dmMnI4bzRaUEJfVVpPRmptUWdqOW9qSktya2RUX1ZSX2dNNFhES20wQUxwTkxWQXBHRkxZMTJLLXh3RG5fSW40U2VHVU1sRFB0bUZCc184TDVhUXB5MllzZ3BlNDhIS1d3ajZxLU1kT1RfVkRjZjhTQ1ZOaUQ1OXlaZlAwUWdEaHBOTzZPVDdKTHNpbmNGV2tWdE5VZUloaGttV3JnLVd5ZUxxNEVTZ0dYX21jalJVUDBaY04ta2oyOWJfZUIwTU1mdjYxaUxSTHNfbUg1cldPMDdOb1IwSjRvMG56RF9XUlN0S1N5akk3cmpxcXBkRzdXb2k3Qnl4aTNhLXk3UDFxdU9JQm1Hcm42T1NMcVAzTThlLVBDOWJjMUROUjRYS0RiNUpIVGxpbnRwRlRaQTc1NEItTHE3TEhseFIweXJwT29MTkpUUUJlc3FUbHN4c3REdlFPejRHWnRGSU56LS1SQ08zMW1LeTkyRlREZkxXY1E5a3RGQ3lHWV9UdU00UVNvaHRTNGNmUUxrSEVoNktsZTkyQUhoNTA0SE1iOU9fSzZwZXlCelBjLWxhWVlJVk1XTExOdlpXckRyZGRXc05FZ3dRUFhKTWNwbm1qSVp2WGY0UmEtV3hvZGFsNUlCY29KZ21zSE8zSGloNW8xUQ?oc=5" target="_blank" rel="noopener">삼성 D램 1위 복귀와 SK하이닉스 고객 대화로 AI 메모리 경쟁 격화</a></li>
+</ul>
+<p>국내 메모리 양강이 AI용 고성능 메모리 시장에서 치열한 경쟁을 벌이고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1aYVE3WWVMQm1UTjdCZGZWbnN3Y1Z5Ty1DMTlRbWZTYjdjcTJNUjJyejdrb3Q2cHBNc25IRjV4R2hnWTNYVHd6eERiUHBsNWhHZ1FHQ1pDRk9IcGt4Q3ZpTXpFaHc1UkdmbUYwM1h30gFuQVVfeXFMTVphUTdZZUxCbVRON0JkZlZuc3djVnlPLUMxOVFtZlNiN2NxMk1SMnJ6N2tvdDZwcE1zbkhGNXhHaGdZM1hUd3p4RGJQcGw1aEdnUUdDWkNGT0hwa3hDdmlNekVodzVSR2ZtRjAzWHc?oc=5" target="_blank" rel="noopener">대만이 AI 붐을 통째로 먹으며 반도체 생태계 우위 확보</a></li>
+</ul>
+<p>TSMC 중심의 대만 반도체 생태계가 AI 시대 최대 수혜자가 되고 있다</p>
+
+<h3>첨단 패키징</h3>
+<p>인텍플러스가 CoWoS 패키징 수혜 기대감으로 주목받고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5jeHJMYVFBRVM2SzlBTW9va09lbjFFTlZqMVlhdGRObW5iVUNHTnVncWRDTDZGTEcyMXBCYWhPRnNHeW8wU3d5empJaTVGYzF4SFNQemdNTmhsQVY0enp2REVkVUw4VlFvSEU2Q25Dc1piWXU3Z0hv0gF3QVVfeXFMTmN4ckxhUUFFUzZLOUFNb29rT2VuMUVOVmoxWWF0ZE5tbmJVQ0dOdWdxZENMNkZMRzIxcEJhaE9Gc0d5bzBTd3l6aklpNUZjMXhIU1B6Z01OaGxBVjR6enZERWRVTDhWUW9IRTZDbkNzWmJZdTdnSG8?oc=5" target="_blank" rel="noopener">인텍플러스가 CoWoS 수혜로 연내 대형 수주 가능성 부각</a></li>
+</ul>
+<p>AI 반도체 패키징 기술 수요 증가로 관련 업체 실적 개선이 예상된다</p>
+
+<h3>데이터센터 신축</h3>
+<p>해외에서는 멜버른에 대규모 데이터센터 캠퍼스 건설이 계획되고 있으며, 국내에서는 AI 데이터센터 특별법이 통과되어 인허가와 전력 공급 병목 해소가 기대된다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/zerra-dc-files-to-build-six-building-data-center-campus-in-melbourne-australia/" target="_blank" rel="noopener">Zerra DC가 멜버른 포드 공장 부지에 6개 건물 데이터센터 캠퍼스 개발 신청</a></li>
+</ul>
+<p>호주에서 대규모 데이터센터 개발 프로젝트가 추진되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBBdkhWdDR6SHhFcU44WU5zcWwxV3lJbEdIOU9QVUVPUFRkdEFLMGM5SmRBbXRkQkZySzlrZGp3Sm5ZV2pCWlJiVU5sTllIbUU1YjVIM2ZBSk0tbWJOWlZheHRzU1kwN01t0gFoQVVfeXFMUEF2SFZ0NHpIeEVxTjhZTnNxbDFXeUlsR0g5T1BVRU9QVGR0QUswYzlKZEFtdGRCRnJLOWtkandKbllXakJaUmJVTmxOWUhtRTViNUgzZkFKTS1tYk5aVmF4dHNTWTA3TW0?oc=5" target="_blank" rel="noopener">AI 데이터센터 특별법 통과로 인허가 자동 승인과 전력 특례 도입</a></li>
+</ul>
+<p>국내 데이터센터 구축 규제 완화가 본격화되었다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE14OWpnQll2d21TSDd1ZmM0QkVpUzd5RllCYjlrd2FkcnUtNUZBM0NYaFJKQnpWMFdQczBvaEtlTTlyTElnZThrNXRyMGJwX1l0X0ZzdHlR?oc=5" target="_blank" rel="noopener">AI DC특별법으로 전력·입지·인허가 병목 해소 기대</a></li>
+</ul>
+<p>데이터센터 구축의 주요 장벽들이 법제도적으로 해결될 전망이다</p>
+
+<h3>DC 전력</h3>
+<p>데이터센터의 전력 효율성과 재생에너지 사용에 대한 기술적 개선과 새로운 기준들이 제시되고 있다. AI 데이터센터의 냉각 전력을 대폭 줄이는 기술이 개발되고 있다.</p>
+
+<ul>
+<li><a href="https://semiengineering.com/what-is-power-usage-effectiveness-pue-in-data-centers/" target="_blank" rel="noopener">데이터센터 PUE 측정에서 서버 AC/DC 전력 변환 비효율성 간과 문제 제기</a></li>
+</ul>
+<p>기존 전력 효율성 측정 방식의 한계가 지적되고 있다</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/opinions/the-latest-ghg-protocol-proposal-raises-the-bar-for-100-renewable-reporting-in-data-centers/" target="_blank" rel="noopener">새로운 GHG 프로토콜이 100% 재생에너지 기준을 더욱 엄격하게 제시</a></li>
+</ul>
+<p>데이터센터의 재생에너지 사용 기준이 강화되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9sVUF4c0pfbkh0b21tNVRTODY4b3dQT1Vmckx5WlNrV0NXSmw2eXROVWRwTzFkeERmdllIX1M5alcwMUk1cGt0QW8xbmgtR2FJU3JXSE0tVUtuRTNxbWRqWTZCd01SSXF1OEE?oc=5" target="_blank" rel="noopener">AI 데이터센터 냉각 전력을 30%에서 1.1%로 대폭 줄이는 기술 개발</a></li>
+</ul>
+<p>데이터센터 냉각 기술의 혁신적 발전이 이루어지고 있다</p>
+
+<h3>EPC / 수주</h3>
+<p>SK에코플랜트가 AI·반도체 딥테크 기업 발굴에 나서고, 글로벌 EPC 업체들의 수주와 실적 동향이 엇갈리고 있다. 건설 안전 주간 행사와 함께 업계 전반의 안전 의식 제고 노력이 이어지고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1OeG9MQURYeUtnS0RjQkdqWnVMYjFMaUxJOGRRWl9yM1dqR19ESmJpdGhobWxnUXdTYi1CMm5OZVAwV0RReFAtNTV6bzdjZ3RlYnR0WlFMZ2ZydE9OeF9CbEhvb3NQWlU?oc=5" target="_blank" rel="noopener">연구개발특구진흥재단과 SK에코플랜트가 AI·반도체 딥테크 기업 공동 발굴 협약</a></li>
+</ul>
+<p>건설업계가 신산업 생태계 조성에 적극 참여하고 있다</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/wsp-earnings-q1-power-ai-data-center/819671/" target="_blank" rel="noopener">WSP가 1분기 전력 발전과 AI 분야 성장으로 실적 개선</a></li>
+</ul>
+<p>글로벌 EPC 업체들이 AI 인프라 구축으로 수혜를 보고 있다</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/construction-safety-week-osha-alliance/819531/" target="_blank" rel="noopener">건설 안전 주간에 1,000명 건설 전문가가 참여하여 안전 의식 제고</a></li>
+</ul>
+<p>건설업계의 안전 관리 강화 노력이 지속되고 있다</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/fluor-posts-drop-q1-awards-revenue/819751/" target="_blank" rel="noopener">Fluor 1분기 수주와 매출 감소했으나 하반기 회복 기대</a></li>
+</ul>
+<p>글로벌 EPC 업체의 수주 타이밍 지연이 일시적 실적 부진으로 이어졌다</p>
+
+<h3>기타</h3>
+<p>지정학적 긴장이 메모리 공급망 재편을 가속화하고 있으며, 유럽의 하이브리드 양자 컴퓨팅 전략이 본격화되고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/geopolitics-is-rewriting-memory-sourcing/" target="_blank" rel="noopener">지정학적 긴장이 메모리 소싱 전략 재편을 가속화</a></li>
+</ul>
+<p>글로벌 반도체 공급망이 지정학적 리스크로 인해 재구성되고 있다</p>
+<ul>
+<li><a href="https://www.eetimes.com/how-bsc-contributes-to-europe-hybrid-quantum-strategy/" target="_blank" rel="noopener">BSC가 유럽의 하이브리드 양자 전략에서 엑사스케일과 AI, 양자 하드웨어 연결 역할</a></li>
+</ul>
+<p>유럽이 슈퍼컴퓨팅과 양자컴퓨팅 융합 전략을 추진하고 있다</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[인텍플러스, 글로벌 파운드리 CoWoS 검사장비 연내 수주 기대] 글로벌 경기 둔화와 반도체 투자 사이클 변동성에 따른 고객사 투자 일정 지연 가능성.</li>
+<li>[데이터센터 PUE 지표, 서버 내부 AC/DC 변환 손실 5% 미반영] 서버 전원공급장치(PSU) 효율 개선 없이는 AI 데이터센터 전력 수요 증가 대응 한계.</li>
+<li>[Zerra DC, 멜버른 구 포드공장 부지에 6개동 데이터센터 개발 신청] 개발 세부 계획 미공개로 프로젝트 규모 및 일정 불확실성 존재.</li>
+<li>[UIUC, 3D프린팅 구리 콜드플레이트로 DC냉각전력 30%→1.1% 감축] 상용화 시점 및 대량생산 가능성 미확인. 기존 공랭 인프라 전환 비용 부담.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>1분기 내 글로벌 파운드리의 CoWoS 양산 장비 발주 여부 확인.</li>
+<li>주요 데이터센터 운영사의 PSU 효율 개선 투자 계획 및 새로운 효율성 지표 도입 동향 확인.</li>
+<li>빅토리아주 개발 허가 승인 여부 및 프로젝트 세부 사양(전력 용량, 착공 일정) 발표 모니터링.</li>
+<li>공포 후 9개월 뒤 시행 예정. 과기정통부의 특구 지정 기준 및 첫 지정 지역 발표 주목.</li>
+<li>주요 데이터센터 운영사 또는 냉각장비 업체의 기술 도입 및 상용화 일정 발표 모니터링.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 6/6건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-05-10T21:48:10.553082+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
