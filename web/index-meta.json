@@ -718,5 +718,14 @@
     "top_headline": "SK에코플랜트, 반도체·AI인프라 중심 체질개선 본격화",
     "sk_headline": "SK에코플랜트, AI 인프라 중심 체질전환 가속화",
     "article_count": 39
+  },
+  "2026-05-14": {
+    "date": "2026-05-14",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "SK에코플랜트, 건설→에너지·환경 플랫폼 전환 가속",
+    "sk_headline": "건설 넘어 에너지·환경 플랫폼 전환 가속",
+    "article_count": 39
   }
 }
