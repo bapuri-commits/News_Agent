@@ -727,5 +727,14 @@
     "top_headline": "SK에코플랜트, 건설→에너지·환경 플랫폼 전환 가속",
     "sk_headline": "건설 넘어 에너지·환경 플랫폼 전환 가속",
     "article_count": 39
+  },
+  "2026-05-15": {
+    "date": "2026-05-15",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "샌디스크, HBM 대체 HBF 메모리 2026년 하반기 샘플 출시",
+    "sk_headline": "",
+    "article_count": 39
   }
 }
