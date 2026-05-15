@@ -736,5 +736,14 @@
     "top_headline": "샌디스크, HBM 대체 HBF 메모리 2026년 하반기 샘플 출시",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-05-16": {
+    "date": "2026-05-16",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "용인 수지삼성2차 재건축 SK에코플랜트 단독입찰 유찰",
+    "sk_headline": "1Q 영업익 9314억원, AI·반도체 호황으로 급성장",
+    "article_count": 39
   }
 }
