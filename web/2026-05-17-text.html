@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-05-17 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-05-17.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-05-17</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-05-17</h1>
+
+<blockquote>SK에코플랜트, 신반포20차 재건축 2,084억원 수주 / 노르웨이 데이터센터 러시, Polar DC 40MW 등 다수 프로젝트 / 샌디스크-SK하이닉스, HBM 대항마 HBF 메모리 표준화 추진</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. SK에코플랜트, 신반포20차 재건축 2,084억원 수주</h3>
+
+<p>SK에코플랜트가 서울 서초구 신반포20차아파트 소규모재건축 시공권을 94/96표(97.92%)로 수주. 총 공사비 2,084억원 규모로 지하4~지상35층 4개동 190세대 건설. 용적률 299.99% 적용으로 원안(249.27%) 대비 50.72% 상향.</p>
+
+<p><strong>영향</strong>: SK에코플랜트의 2025년 첫 수주이자 마수걸이. 강남권 프리미엄 브랜드 &#x27;드파인&#x27; 적용으로 하이엔드 시장 경쟁력 강화.</p>
+<p><strong>리스크</strong>: 2028년 5월까지 사업시행인가 신청 필요. 서울시 소규모재건축 용적률 완화 조례 적용 기한 준수 필수.</p>
+<p><strong>확인 필요</strong>: 사업시행인가 신청 시점 및 용인 수지삼성2차, 광명 하안주공5단지 입찰 결과 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE14MS1sQ19aY3Jkam1qdUUwNi1ta2lpUU14aWhmWnlEOWljN09zM3BYM2NFSWFtaUh5OUNjUUVQM2o2LTJlRUh6c3RSM0NKWVJaOUJqQ2tPMkdmaHpCQ3Y2c2NXcnM2Y1hV?oc=5" target="_blank" rel="noopener">한국주택경제신문</a></p>
+
+<h3>2. 노르웨이 데이터센터 러시, Polar DC 40MW 등 다수 프로젝트</h3>
+
+<p>Polar DC가 노르웨이 Herøya에 40MW(39,000㎡) AI 데이터센터 HER01 개발 발표. Arcem은 Bergen 130MW, Husnes 90MW(1단계 40MW) 프로젝트 추진. Crusoe가 Polar DC 시설을 AI 클라우드로 활용 예정.</p>
+
+<p><strong>영향</strong>: 노르웨이가 재생에너지와 냉각 조건을 앞세워 북유럽 AI 데이터센터 허브로 부상. H.I.G. Capital 인수 이후 Polar DC의 공격적 확장.</p>
+<p><strong>확인 필요</strong>: Polar DC의 Herøya 착공 일정 및 Arcem의 Bergen 프로젝트 인허가 진행 상황 모니터링.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/polar-dc-targets-40mw-data-center-in-her%C3%B8ya-norway/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>3. 샌디스크-SK하이닉스, HBM 대항마 HBF 메모리 표준화 추진</h3>
+
+<p>샌디스크가 16다이+베이스다이 구조의 고대역폭플래시(HBF) 메모리를 제안하고 SK하이닉스와 함께 OCP 표준화 추진. 2026년 하반기 첫 샘플, 2027년 초 AI 추론 디바이스 적용 목표. GPU 패키지 내 AI 모델 파라미터 저장용.</p>
+
+<p><strong>영향</strong>: HBM과 NAND 사이 새로운 메모리 티어 창출로 AI 추론 효율성 개선 기대. 플래시 메모리의 고부가가치화 가능성.</p>
+<p><strong>리스크</strong>: 새로운 인터페이스 프로토콜 채택에 따른 생태계 구축 과제. HBM 대비 성능 차이로 적용 분야 제한 가능.</p>
+<p><strong>확인 필요</strong>: 2026년 하반기 HBF 샘플 출시 일정 및 GPU 제조사들의 채택 여부 확인.</p>
+
+<p>📎 출처: <a href="https://semiengineering.com/flash-getting-stacked-high-bandwidth-version/" target="_blank" rel="noopener">Semiconductor Engineering</a></p>
+
+<h3>4. 한미반도체, 미국 새너제이에 현지법인 설립하며 HBM4 수주 가속</h3>
+
+<p>한미반도체가 2025년 말 미국 캘리포니아 새너제이에 현지법인 &#x27;한미USA&#x27; 설립 계획 발표. SK하이닉스 인디애나 HBM공장(2028년), 마이크론 아이다호/뉴욕 메가팹 등 고객사 미국 투자 확대. 곽동신 회장 &#x27;2분기 TC본더 수주 집중, 하반기 가속화&#x27; 언급.</p>
+
+<p><strong>영향</strong>: 글로벌 1위 HBM용 열압착본더 업체의 미국 시장 직접 진출로 빅테크 대응력 강화. 테슬라 테라팹(1190억달러) 등 초대형 프로젝트 수혜 기대.</p>
+<p><strong>확인 필요</strong>: 한미USA 법인 설립 완료 시점 및 2분기 실적 발표 시 구체적인 수주 규모 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1rRm9PSDNJdG5SZU4xVDgzNWpGNmZoQUw5SU55OGl3Zmt0dFdsMW4wamZmOUh4VXNucVk3Um4xV19ZY25qUHVaWDhOLUw4bHBZRVpmMGJTanQ0RUc1UjNUbnpWUUo1aG1EV1dHZ0VxaUY0MVpf0gF0QVVfeXFMTWtGb09IM0l0blJlTjFUODM1akY2ZmhBTDlJTnk4aXdma3R0V2wxbjBqZmY5SHhVc25xWTdSbjFXX1ljbmpQdVpYOE4tTDhscFlFWmYwYlNqdDRFRzVSM1RuelZRSjVobURXV0dnRXFpRjQxWl8?oc=5" target="_blank" rel="noopener">이뉴스투데이</a></p>
+
+<h3>5. LS에코에너지, 베트남 비엣텔 60MW AI 데이터센터 전력망 수주</h3>
+
+<p>LS에코에너지가 베트남 최대 통신사 비엣텔의 하노이 인근 60MW AI 데이터센터 전력망 구축 사업 수주. 초고압케이블과 버스덕트 공급으로 베트남 북부 최대 AI 인프라 사업 참여. 현지 생산법인 LS-VINA 보유.</p>
+
+<p><strong>영향</strong>: 동남아 AI 데이터센터 벨트(인니-말레이시아-필리핀-베트남) 전력 인프라 공급망 장악력 확대. 광케이블까지 원스톱 공급 가능한 AI 인프라 핵심 기업 부상.</p>
+<p><strong>확인 필요</strong>: 글로벌 빅테크의 동남아 추가 데이터센터 발주 동향 및 LS에코에너지 추가 수주 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5KNGlYb2IzSklqWE5FYk1VNVlEVGZZWktTM3FZcW1KZTRWYlpqeHluaXJYSVZjR3ZKWnZpU0FINnp6ektPY0puQ2JoNjNTQUhBVDFjVVd1QWxocWxDamtYYVJENnN1SVVYQzVCZEh3?oc=5" target="_blank" rel="noopener">코리아포스트 한글판</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>SK에코플랜트, 1Q 영업익 9314억 &#x27;어닝서프라이즈&#x27;</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> 신반포20차 소규모재건축 2,084억원 수주로 2026년 첫 수주 마수걸이 달성(한국주택경제신문). AI·반도체 중심 사업 전환 효과로 하이테크 부문 매출이 1조4746억원으로 전년 동기 8441억원 대비 74.7% 급증, 전체 매출 중 반도체·AI 관련 3개 부문이 67% 비중 차지(이투데이).</li>
+<li><strong>현금흐름·차입</strong> 1분기 부채비율 176%로 2024년 말 233%, 2025년 말 192% 대비 지속 개선 추세 확인(데일리안). AI 인프라와 반도체 사업 성장으로 현금 창출 능력 강화되어 재무 건전성이 동반 개선되고 있다는 평가(뉴스로드). 해당 기간 차입 구조나 유동성 관련 특이사항은 없음.</li>
+<li><strong>PF/우발채무</strong> 해당 기간 PF 관련 우발채무나 자금보충약정 등에 대한 특이사항 없음. 신반포20차 프로젝트는 소규모재건축으로 일반적인 EPC 사업 구조로 추정되나 구체적인 리스크 요인은 기사에서 확인되지 않음.</li>
+<li><strong>IPO/경쟁사</strong> 해당 기간 IPO 관련 직접적인 언급이나 자회사 매각 등 포트폴리오 정리 소식은 없음. 다만 AI 인프라 솔루션 기업으로의 체질 전환이 본격 성과로 이어지고 있어 향후 재평가 가능성 시사(뉴스로드). 경쟁사 관련 특이사항도 확인되지 않음.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE14MS1sQ19aY3Jkam1qdUUwNi1ta2lpUU14aWhmWnlEOWljN09zM3BYM2NFSWFtaUh5OUNjUUVQM2o2LTJlRUh6c3RSM0NKWVJaOUJqQ2tPMkdmaHpCQ3Y2c2NXcnM2Y1hV?oc=5" target="_blank" rel="noopener">한국주택경제신문</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE9IY1Q4V29CalhGTGl2UjJQSFpyNWZpUkVzc2QwRkMzRDRTdEgtVEJuUjlBTldEdVV4d1ducEtWSkpxR1lfdHB1dzh6b3ZMOUpfcXNYcjNvWjQyRVduajRiSC02REJHc1A3NEZhRXVmdw?oc=5" target="_blank" rel="noopener">비즈니스플러스</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE5iV1cweGhQOUYxTi1GeEwzS2gwSFpub0NpbG9jMzdPS0NvcjNnbHUwdkNNNE5nYmkxa2xGY3dwY0Y1dEpUQkNpMjVmbzhIYkVUbUV1MDh30gHwAUFVX3lxTE1kdGlpallQR3dxU0VBQlNLTzM1TkRyQTk2LUtqcXB6a0VCYlRoNVgxMzJBdVprZGlpUlVacWhXUFl3aEw0Z1VoM3FqbHBYcVRTVjF2MXBXRndRRV8zRkhpaWxMWDNRWXVZWmU2Qm1uMXNxWjB1bXI0U29vVEp6UkdCeldzYnJyaVA0LXRJQUJfZFdQblZWMDQ4REZIQUIzTWpVa1NKZUFoVjJzaWhIVXZrcnlvLTNHSmJ6Qk45NWYzVkQ3UHZqakxmWk5ISzhVWndBMlNoUnpYWExSQ2FmNmFQNlFzbWdGVHNOQklvdVQ4OA?oc=5" target="_blank" rel="noopener">데일리안</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 장비업체들이 미국 진출을 가속화하고 있으며, AI·HBM 수요 급증으로 관련 ETF 자금 유입도 폭증하고 있다. 한미반도체는 2026년 미국 법인 설립을 통해 현지 공급망 진출을 본격화하고, 투자자들은 AI반도체 ETF에 대규모 자금을 몰아주고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1rRm9PSDNJdG5SZU4xVDgzNWpGNmZoQUw5SU55OGl3Zmt0dFdsMW4wamZmOUh4VXNucVk3Um4xV19ZY25qUHVaWDhOLUw4bHBZRVpmMGJTanQ0RUc1UjNUbnpWUUo1aG1EV1dHZ0VxaUY0MVpf0gF0QVVfeXFMTWtGb09IM0l0blJlTjFUODM1akY2ZmhBTDlJTnk4aXdma3R0V2wxbjBqZmY5SHhVc25xWTdSbjFXX1ljbmpQdVpYOE4tTDhscFlFWmYwYlNqdDRFRzVSM1RuelZRSjVobURXV0dnRXFpRjQxWl8?oc=5" target="_blank" rel="noopener">한미반도체 2분기 수주 급증, 하반기 더욱 가속화 전망</a></li>
+</ul>
+<p>곽동신 회장이 2분기 수주 호조를 바탕으로 하반기 성장 가속화를 예고했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1IbXRuQ05oTm5QYmxuU1lXWjBsaFgtLUdUaURkV05RdzVhNXFjb21oRkVMRU1zUHBlQjFJWkpMVjFoelNSRmdZY0UtRmNBU2lIMVllSjJEdWU5UHdSZHF0MnlJNW4xVEJrMnc?oc=5" target="_blank" rel="noopener">한미반도체, 2026년 한미USA 설립으로 미국 진출</a></li>
+</ul>
+<p>미국 반도체 공급망 진출을 위해 2026년 현지 법인 설립 계획을 발표했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFA3UkM5V2tRQWZ2MTB0WExEUmprQ0ttNS1GOG1yYW5qRi1tck1hVUtsOXcwMU5ia19mVDFXS0hPZXlaMFlpaG9qQzVNZ2tzVm1sdWs0dVZqajZia3hp?oc=5" target="_blank" rel="noopener">삼성전자, 총파업 앞두고 HBM 중심 비상관리 돌입</a></li>
+</ul>
+<p>노조 총파업을 앞두고 HBM 등 핵심 제품 생산 차질 방지를 위한 비상체제에 돌입했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5IT0ExU0FnRms1YUsza0xydEh1eUF4bG1tX3hzU0VJQWx6RjhXbWo3Wk5GS24yT0FNenlkSkxKbEwwYjVfclBVV2pkaFBLZ0loOTBELUhVMVJWRXZMZWNVWDdZVDVUbzFVSTI00gFrQVVfeXFMTkhPQTFTQWdGazVhSzNrTHJ0SHV5QXhsbW1feHNTRUlBbHpGOFdtajdaTkZLbjJPQU16eWRKTEpsTDBiNV9yUFVXamRoUEtnSWg5MEQtSFUxUlZFdkxlY1VYN1lUNVRvMVVJMjQ?oc=5" target="_blank" rel="noopener">한투운용 AI반도체 ETF 순자산 1조원 돌파</a></li>
+</ul>
+<p>ACE AI반도체TOP3+ ETF가 두 달 만에 순자산 1조원을 돌파했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTFAtNG15YTI5am5McEx1UnZkLUhNRFNqTDVENHMtTE5VaXE4Y2hLVjc3SmdZTlVPYzZCMF9wYUU3ZG9iVW5CdHVuc1JZZVJaMVNGTWNnMktxWkFjVW1xZl9idkQyekg4ZkxUODhLMFJiVnZORDhkM0tYbg?oc=5" target="_blank" rel="noopener">TSMC, 2030년 세계 반도체 시장 1.5조달러 전망</a></li>
+</ul>
+<p>TSMC가 2030년까지 글로벌 반도체 시장이 1.5조달러 규모로 성장할 것으로 예측했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBzSXM2eG5FY0JOeTlScVNwTURfM3B5TE9ieDdmLXNWSXZQM0FWd3RRTDlpX0tsbzJwamQzaEV4M0VYWkZnb0M5cEVsS2dkTEVhMlNWWGJMd3Bvc1pyeDNULVVicWUwN2FW?oc=5" target="_blank" rel="noopener">엘케이켐, 212억원 반도체 소재 공급계약 체결</a></li>
+</ul>
+<p>유피케미칼과 212억원 규모의 반도체 소재 공급 계약을 체결했다</p>
+
+<h3>첨단 패키징</h3>
+<p>HBM에서 영감을 받은 고대역폭 3D 플래시 메모리 기술이 주목받고 있으며, AI 칩 스타트업의 IPO 열기도 재점화되고 있다. 전자 부품 업체들은 글로벌 공급망 다변화를 통한 제조 복원력 강화에 나서고 있다.</p>
+
+<ul>
+<li><a href="https://semiengineering.com/flash-getting-stacked-high-bandwidth-version/" target="_blank" rel="noopener">HBM 영감 받은 고대역폭 3D 플래시 메모리 기술 부상</a></li>
+</ul>
+<p>HBF(High-Bandwidth Flash) 기술이 AI 효율성 개선을 위한 차세대 메모리로 주목받고 있다</p>
+<ul>
+<li><a href="https://www.eetimes.com/cerebras-ipo-revives-ai-chip-startup-fever/" target="_blank" rel="noopener">Cerebras IPO로 AI 칩 스타트업 열기 재점화</a></li>
+</ul>
+<p>높은 밸류에이션으로 비GPU AI 하드웨어에 대한 투자자 관심이 확인됐다</p>
+<ul>
+<li><a href="https://www.eetimes.com/elytone-electronics-deepens-av-design-services-expands-magnetics-and-power-technology-portfolio/" target="_blank" rel="noopener">Elytone Electronics, AV 설계 서비스 확대</a></li>
+</ul>
+<p>Arrow의 기술과 공급망 자원을 활용해 지역간 제조 복원력을 강화하고 있다</p>
+
+<h3>데이터센터 신축</h3>
+<p>노르웨이와 베트남에서 대규모 데이터센터 건설 프로젝트가 진행되고 있으며, 한국 기업들도 해외 AI 인프라 구축에 적극 참여하고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/polar-dc-targets-40mw-data-center-in-her%C3%B8ya-norway/" target="_blank" rel="noopener">Polar DC, 노르웨이 40MW 데이터센터 건설 추진</a></li>
+</ul>
+<p>Herøya 지역에 40MW 규모의 데이터센터 건설을 목표로 하고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5KNGlYb2IzSklqWE5FYk1VNVlEVGZZWktTM3FZcW1KZTRWYlpqeHluaXJYSVZjR3ZKWnZpU0FINnp6ektPY0puQ2JoNjNTQUhBVDFjVVd1QWxocWxDamtYYVJENnN1SVVYQzVCZEh3?oc=5" target="_blank" rel="noopener">LS에코에너지, 베트남 AI 데이터센터 수주</a></li>
+</ul>
+<p>전선회사를 넘어 글로벌 AI 인프라 핵심 기업으로 도약하고 있다</p>
+
+<h3>DC 냉각</h3>
+<p>미국 유틸리티 업체들이 데이터센터 전력 수요 급증에 대비한 고도화된 프로젝트 파이프라인을 확대하고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/pennsylvania-utility-ppl-records-12-percent-jump-in-advanced-stage-data-center-pipeline-from-last-quarter/" target="_blank" rel="noopener">PPL, 고급 단계 데이터센터 프로젝트 12% 증가</a></li>
+</ul>
+<p>현재 28.3GW 규모의 프로젝트 파이프라인을 보유하고 있다</p>
+
+<h3>EPC / 수주</h3>
+<p>미국에서 대규모 인프라 건설 프로젝트가 활발히 진행되고 있으며, 한국 반도체 장비업체들의 미국 진출과 유럽의 반도체 경쟁력 강화 노력도 이어지고 있다. 교육 부문에서도 반도체 전문 인력 양성이 본격화되고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/flatirondragados-virginia-floodwater-project/820403/" target="_blank" rel="noopener">FlatironDragados, 5억1800만달러 버지니아 홍수 방지 프로젝트 진행</a></li>
+</ul>
+<p>2년간의 사전 건설 단계를 거쳐 본격적인 건설에 착수했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFB1emNHOEhQZVFZR2g4Z2FDWEFEbzh2eXB0Z3hhYUJpM0V0di1kb05uQThjblcyd005djVQbVZySTQ5YVFDSVB0c0VhMDVkZE1LS1FacnlyZnlIQQ?oc=5" target="_blank" rel="noopener">한미반도체, 연말 미국 법인 설립으로 장비 수주 확대</a></li>
+</ul>
+<p>올해 말 미국 현지 법인 설립을 통해 본격적인 장비 수주 확대를 기대하고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE8tOS16bTQ1Z2s1OFZGbUtDSDc1c0NRZUlIQ3F6YUFKbmw4S1ZQVG4tMmxlSEwzUUVFMm1CbnAxS2JnMG1QZW9tdTVCM2tCUVBWaXdjeW8tN3ZDU043ZndPTVM4Y21nU1d5dlQzbFBn0gFyQVVfeXFMT1FPUWJPUkNkYmZLV2p0eS1sNUpwUDhiRjRZWktOTzFtRXQyX3h1MXU4dkxxME1JVVJPTVEzcEgzZ0d2RWNMYXY5bklpTXhPa2EtaXJVQ2Uzb3J5MV9PZmp5MWJBN2QyNzBia3NvbDRXVGxB?oc=5" target="_blank" rel="noopener">Siemens, 유럽 반도체 경쟁력 강화 협약</a></li>
+</ul>
+<p>Chips JU와 전략 협약을 체결해 유럽의 반도체 경쟁력 강화에 나섰다</p>
+
+<h3>자재 / 노무</h3>
+<p>건설업계에서 인사 이동과 교육 투자가 활발히 이루어지고 있으며, 기업들이 전문 인력 양성에 적극 투자하고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/shawmut-new-florida-exec-warfel-dewalt-tutor-perini/820277/" target="_blank" rel="noopener">Shawmut 플로리다 신임 임원 임명, DeWalt 20만달러 기술 장학금</a></li>
+</ul>
+<p>건설업계 인사 이동과 함께 전문 기술 교육에 대한 투자가 확대되고 있다</p>
+
+<h3>공기 / 원가 / 변경관리</h3>
+<p>미국의 전력 소비량이 2050년까지 55% 증가할 것으로 예상되며, 특히 데이터센터 에너지 소비가 향후 10년간 300% 급증할 전망이다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/us-annual-electricity-consumption-data-centers-nema/820350/" target="_blank" rel="noopener">미국 연간 전력 소비량 2050년까지 55% 증가 전망</a></li>
+</ul>
+<p>NEMA는 데이터센터 에너지 소비가 향후 10년간 300% 성장할 것으로 예측했다</p>
+
+<h3>AI / 반도체 트렌드</h3>
+<p>SK에코플랜트가 AI 인프라 및 반도체 사업 확대로 1분기 영업이익이 1261% 급증하며 &#x27;9000억 시대&#x27;를 열었다. AI 인프라 투자 붐이 건설업계에 본격적인 성장 동력을 제공하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE9IY1Q4V29CalhGTGl2UjJQSFpyNWZpUkVzc2QwRkMzRDRTdEgtVEJuUjlBTldEdVV4d1ducEtWSkpxR1lfdHB1dzh6b3ZMOUpfcXNYcjNvWjQyRVduajRiSC02REJHc1A3NEZhRXVmdw?oc=5" target="_blank" rel="noopener">SK에코플랜트, AI·반도체 특화로 1분기 9000억 영업익 달성</a></li>
+</ul>
+<p>체질 개선 전략이 적중해 1분기 영업이익 &#x27;9000억 시대&#x27;를 개막했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE1rX2I1UlpFY05vdk9XUEloRmM1MjQyX2NnU0VqME80WWozMW1mdHYwUG9DWmhUUENBRENsQVhyendvZDhlUHp5eWgxRGhocjk5UFByMHBCcmdnb1hubnpJcE5wNA?oc=5" target="_blank" rel="noopener">SK에코플랜트 1분기 영업이익 9314억원, AI 인프라 확대 효과</a></li>
+</ul>
+<p>AI 인프라 사업 확대가 1분기 실적 급상승의 주요 동력이 됐다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE5CX0EzbEdaRlJLZFk3c1k1dTJCN3RWUWpPbUplUVNCYWVqVFpHQmhYRnQ0LWVGNXRlTS1lY2xiQlBXTWNZNmNES2RkYmdqeUdseWhpaQ?oc=5" target="_blank" rel="noopener">SK에코플랜트 1분기 매출 4조8997억원, AI·반도체 호황 영향</a></li>
+</ul>
+<p>AI와 반도체 업황 호조로 1분기 매출이 크게 증가했다</p>
+
+<h3>CapEx 가이던스</h3>
+<p>SK에코플랜트가 AI와 반도체 호황에 힘입어 1분기 매출 4조8997억원을 기록하며 실적이 급증했다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE5CX0EzbEdaRlJLZFk3c1k1dTJCN3RWUWpPbUplUVNCYWVqVFpHQmhYRnQ0LWVGNXRlTS1lY2xiQlBXTWNZNmNES2RkYmdqeUdseWhpaQ?oc=5" target="_blank" rel="noopener">SK에코플랜트 1분기 매출 4조8997억원, AI·반도체 호황 영향</a></li>
+</ul>
+<p>AI와 반도체 업황 호조로 1분기 매출이 크게 증가했다</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트가 신반포20차 소규모재건축 수주로 주거 부문에서도 성과를 거두고 있으며, AI·반도체 호황으로 1분기 영업이익 9314억원을 달성했다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE14MS1sQ19aY3Jkam1qdUUwNi1ta2lpUU14aWhmWnlEOWljN09zM3BYM2NFSWFtaUh5OUNjUUVQM2o2LTJlRUh6c3RSM0NKWVJaOUJqQ2tPMkdmaHpCQ3Y2c2NXcnM2Y1hV?oc=5" target="_blank" rel="noopener">SK에코플랜트, 신반포20차 소규모재건축 수주</a></li>
+</ul>
+<p>주거 재건축 시장에서 첫 수주를 따내며 사업 영역을 확장했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE5iV1cweGhQOUYxTi1GeEwzS2gwSFpub0NpbG9jMzdPS0NvcjNnbHUwdkNNNE5nYmkxa2xGY3dwY0Y1dEpUQkNpMjVmbzhIYkVUbUV1MDh30gHwAUFVX3lxTE1kdGlpallQR3dxU0VBQlNLTzM1TkRyQTk2LUtqcXB6a0VCYlRoNVgxMzJBdVprZGlpUlVacWhXUFl3aEw0Z1VoM3FqbHBYcVRTVjF2MXBXRndRRV8zRkhpaWxMWDNRWXVZWmU2Qm1uMXNxWjB1bXI0U29vVEp6UkdCeldzYnJyaVA0LXRJQUJfZFdQblZWMDQ4REZIQUIzTWpVa1NKZUFoVjJzaWhIVXZrcnlvLTNHSmJ6Qk45NWYzVkQ3UHZqakxmWk5ISzhVWndBMlNoUnpYWExSQ2FmNmFQNlFzbWdGVHNOQklvdVQ4OA?oc=5" target="_blank" rel="noopener">SK에코플랜트 1분기 영업이익 9314억원, AI·반도체 호황 주효</a></li>
+</ul>
+<p>AI와 반도체 업황 호조가 1분기 실적 급성장의 핵심 요인으로 작용했다</p>
+
+<h3>기타</h3>
+<p>미국 FCC가 Verizon의 10억달러 규모 Array 스펙트럼 인수를 승인하며 통신 인프라 확장을 지원하고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/fcc-approves-verizons-1bn-array-spectrum-deal/" target="_blank" rel="noopener">FCC, Verizon의 10억달러 Array 스펙트럼 인수 승인</a></li>
+</ul>
+<p>AWS-3, AWS-1, PCS 라이선스를 포함한 스펙트럼 거래가 승인됐다</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[SK에코플랜트, 신반포20차 재건축 2,084억원 수주] 2028년 5월까지 사업시행인가 신청 필요. 서울시 소규모재건축 용적률 완화 조례 적용 기한 준수 필수.</li>
+<li>[샌디스크-SK하이닉스, HBM 대항마 HBF 메모리 표준화 추진] 새로운 인터페이스 프로토콜 채택에 따른 생태계 구축 과제. HBM 대비 성능 차이로 적용 분야 제한 가능.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>사업시행인가 신청 시점 및 용인 수지삼성2차, 광명 하안주공5단지 입찰 결과 확인.</li>
+<li>Polar DC의 Herøya 착공 일정 및 Arcem의 Bergen 프로젝트 인허가 진행 상황 모니터링.</li>
+<li>2026년 하반기 HBF 샘플 출시 일정 및 GPU 제조사들의 채택 여부 확인.</li>
+<li>한미USA 법인 설립 완료 시점 및 2분기 실적 발표 시 구체적인 수주 규모 확인.</li>
+<li>글로벌 빅테크의 동남아 추가 데이터센터 발주 동향 및 LS에코에너지 추가 수주 확인.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 11/12건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-05-16T21:49:59.653699+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
