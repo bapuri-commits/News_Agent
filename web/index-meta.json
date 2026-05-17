@@ -754,5 +754,14 @@
     "top_headline": "SK에코플랜트, 신반포20차 재건축 2,084억원 수주",
     "sk_headline": "SK에코플랜트, 1Q 영업익 9314억 '어닝서프라이즈'",
     "article_count": 39
+  },
+  "2026-05-18": {
+    "date": "2026-05-18",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "마이크론 HBM 2026년까지 매진, 연간 CAPEX 250억달러로 증액",
+    "sk_headline": "",
+    "article_count": 40
   }
 }
