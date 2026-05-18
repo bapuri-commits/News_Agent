@@ -763,5 +763,14 @@
     "top_headline": "마이크론 HBM 2026년까지 매진, 연간 CAPEX 250억달러로 증액",
     "sk_headline": "",
     "article_count": 40
+  },
+  "2026-05-19": {
+    "date": "2026-05-19",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "美 주요 건설사들, AI 데이터센터 붐에 적극 투자 확대",
+    "sk_headline": "신반포20차 재건축 2048억 수주, 드파인 브랜드 강남 확장",
+    "article_count": 39
   }
 }
