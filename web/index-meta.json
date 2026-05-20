@@ -781,5 +781,14 @@
     "top_headline": "SK에코, 용인·광명 재건축으로 상반기 2조 수주 도전",
     "sk_headline": "SK에코플랜트, 신반포20차 재건축 2천억 수주",
     "article_count": 39
+  },
+  "2026-05-21": {
+    "date": "2026-05-21",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "SK에코플랜트, 신반포20차 2,048억 수주로 강남권 재건축 확대",
+    "sk_headline": "반도체 호황 타고 주택 선별수주 전략으로 체질 개선",
+    "article_count": 39
   }
 }
