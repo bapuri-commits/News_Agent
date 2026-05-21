@@ -790,5 +790,14 @@
     "top_headline": "SK에코플랜트, 신반포20차 2,048억 수주로 강남권 재건축 확대",
     "sk_headline": "반도체 호황 타고 주택 선별수주 전략으로 체질 개선",
     "article_count": 39
+  },
+  "2026-05-22": {
+    "date": "2026-05-22",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "2025년 글로벌 DC 건설규모 31.7GW, 전년비 2배↑",
+    "sk_headline": "1분기 반도체 특수로 영업익 9,314억원 돌파",
+    "article_count": 39
   }
 }

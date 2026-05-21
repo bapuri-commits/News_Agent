@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-05-22 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-05-22.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-05-22</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-05-22</h1>
+
+<blockquote>2025년 글로벌 DC 건설규모 31.7GW, 전년비 2배↑ / SK에코플랜트 1Q 영업익 9314억원, 전년비 1262%↑ / SK에코플랜트 반도체 전환효과로 창사 최대실적 달성</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. 2025년 글로벌 DC 건설규모 31.7GW, 전년비 2배↑</h3>
+
+<p>2025년 전세계 데이터센터 건설 중 규모가 31.7GW로 2024년 대비 2배 이상 증가(Cushman &amp; Wakefield 보고서). 미주지역이 25.3GW로 전체의 80% 차지. 달라스가 처음으로 세계 1위 DC 시장 등극, 버지니아는 운영 IT부하 11GW로 여전히 최대.</p>
+
+<p><strong>영향</strong>: AI/클라우드 수요 폭증으로 DC 건설 급증하나 규제강화와 지역사회 반발로 &#x27;관리된 성장&#x27; 국면 진입. APAC 전력공급 리드타임 2년 8개월로 글로벌 평균(4.5년)보다 짧아 경쟁력 확보.</p>
+<p><strong>리스크</strong>: 대규모 전력공급 리드타임 평균 4.5년으로 프로젝트 지연 위험. 투자자들의 재무/운영 투명성 요구 증가 및 지역사회 부정적 정서 확산.</p>
+<p><strong>확인 필요</strong>: 주요 지역별 전력공급 확보 현황 및 규제 변화 모니터링 필요.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/global-data-center-capacity-under-construction-reached-317gw-in-2025-more-than-double-the-year-before-report/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>2. SK에코플랜트 1Q 영업익 9314억원, 전년비 1262%↑</h3>
+
+<p>SK에코플랜트 2025년 1분기 매출 4조8997억원(YoY +90%), 영업이익 9314억원(YoY +1262%). 메모리 모듈 제조/재활용 부문 매출 2조3555억원으로 전체의 48.1% 차지. 신반포20차 재건축 수주(2048억원), 올해 정비사업 수주목표 1조원.</p>
+
+<p><strong>영향</strong>: 반도체/AI 인프라 중심 사업구조 전환 성과 가시화. 용인반도체클러스터, 청주 M15X, 울산 AI데이터센터 등 대형 프로젝트 본격화로 실적 급등.</p>
+<p><strong>리스크</strong>: 주택사업 비중 축소로 전통 건설부문 매출 감소(솔루션부문 5조→3.9조). 반도체 업황 변동성에 대한 노출 증가.</p>
+<p><strong>확인 필요</strong>: 용인 수지삼성2차 재건축 수의계약 여부 및 추가 정비사업 수주 동향 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFAwQjYwdEdIOTNXQ0lFM29YbmpqRUhBRVZTVGo3SnF4V0R1MGkzQi1LVnVnOUhhdVYzdHpmZzJzSHpsOW1WU21xYTZtZGFSaTRGODl4QzByU21yaHM2VmFQT1NFa2hZdXNVMUww0gFvQVVfeXFMTVBQYTF6TTNVMUxWSzlvalRvaXFETUtoY1pnZVVHSEF1YzVoYXRubXFHaG5oZ3VPTTJwc2IxWC1EWnBuUkJsVFVlUkRjVVhLbHBhYm5tOVFLdllRcjVaRWRLejBzVFFDeHVwYzN0cjJ3?oc=5" target="_blank" rel="noopener">한스경제</a></p>
+
+<h3>3. SK에코플랜트 반도체 전환효과로 창사 최대실적 달성</h3>
+
+<p>SK에코플랜트 1분기 매출 4조8997억원, 영업이익 9314억원 창사 이래 최대 실적. 하이테크 부문 매출 5조1904억원(2024년 2.8조→2025년 5.2조), 가스·소재 부문 3856억원(전년 568억원 대비 약 7배 증가).</p>
+
+<p><strong>영향</strong>: 김영식 대표(전 SK하이닉스 CPO) 선임 후 반도체 밸류체인 구축 가속화. SK트리켐 등 4개 반도체 소재 계열사 편입으로 단순 시공사에서 종합 솔루션 기업으로 전환.</p>
+<p><strong>리스크</strong>: 솔루션(주택/건축) 부문 매출 5조→3.9조로 역성장. 반도체 사업 집중에 따른 사업 포트폴리오 편중 리스크.</p>
+<p><strong>확인 필요</strong>: 반도체 사업부문별 상반기 실적 추이 및 주택사업 선별수주 전략 구체화 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBpUmc3OUxYSkt1UDhUclJMd0ltbFZTT0M1WDYwY0x5cWtwVlZIQk4zNEZ5VS12RThMOHBrV0pqN2hLaTJmR1VsdHJadnV1dGl3OWVUbmRQMnU5SGNyOVlLSm5UNDIzSE4wZS1FSm9fTTBQeXPSAXdBVV95cUxQNVZMYm4taXF0OUNZNEdBeFZnakl1a2pSYVh5dE02bnE1TTJaNGc5RWNOa2s3Y1JrSE5UeDlWRnlWb3hfcWNCQUZHcTFiZ2NmalZoMHozV3pMVS1LSm1jNk8wMjQ1MWNvSjV2YWV2LWJCb0l2bHoxWQ?oc=5" target="_blank" rel="noopener">인사이트코리아</a></p>
+
+<h3>4. Groq, SRAM 기반 LLM 추론 대규모 배포 성공</h3>
+
+<p>Nvidia/Groq 연구진이 SRAM 기반 대규모 LLM 추론 시스템 &#x27;SHIP&#x27; 논문 발표. Groq 퍼블릭 클라우드에서 일일 수천억 토큰 처리 중. GPU의 HBM 메모리 대역폭 병목현상 해결을 위해 SRAM 활용.</p>
+
+<p><strong>영향</strong>: GPU 기반 시스템의 메모리 병목현상 돌파구 제시. 저지연 동기식 인터커넥트로 수천개 칩 확장 가능, 실시간 LLM 서비스 효율성 획기적 개선.</p>
+<p><strong>리스크</strong>: SRAM의 제한된 메모리 용량으로 인한 확장성 제약. 대규모 칩 인터커넥트 구축 비용 및 복잡도 증가.</p>
+<p><strong>확인 필요</strong>: 주요 클라우드 서비스 제공업체의 SRAM 기반 추론 시스템 도입 계획 확인.</p>
+
+<p>📎 출처: <a href="https://semiengineering.com/large-scale-sram-based-llm-inference-deployment-groq/" target="_blank" rel="noopener">Semiconductor Engineering</a></p>
+
+<h3>5. AMD, 대만에 100억달러 투자로 AI 인프라 강화</h3>
+
+<p>AMD가 대만 생태계에 100억달러 이상 투자 계획 발표. TSMC 2nm 공정으로 HPC(고성능컴퓨팅) 칩 생산 확대 예정. AI 인프라 구축 가속화 목적.</p>
+
+<p><strong>영향</strong>: TSMC 2nm 선점으로 차세대 AI칩 경쟁력 확보. 대만 반도체 생태계 의존도 심화 및 아시아 공급망 집중 가속.</p>
+<p><strong>리스크</strong>: 지정학적 리스크로 인한 공급망 취약성 증가. 100억달러 규모 대규모 투자에 따른 재무 부담.</p>
+<p><strong>확인 필요</strong>: TSMC 2nm 양산 일정 및 AMD의 구체적인 제품 로드맵 발표 모니터링.</p>
+
+<p>📎 출처: <a href="https://www.eetimes.com/amd-plans-10b-investment-in-taiwan-to-boost-ai-infrastructure/" target="_blank" rel="noopener">EE Times</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>1분기 반도체 특수로 영업익 9,314억원 돌파</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> 반도체/AI 중심 전환 가속화로 하이테크 부문이 1조4,746억원(전년동기대비 74.7% 증가), 메모리 모듈 제조·재활용은 2조3,555억원(323% 증가)을 기록했다. 용인 반도체 클러스터, 청주 M15X, 울산 AI 데이터센터 등 대형 프로젝트가 본격화되었으며, 올해 도시정비사업 수주 목표 1조원 설정으로 선별 수주 전략을 병행하고 있다.</li>
+<li><strong>IPO/경쟁사</strong> 기존 환경·에너지 중심에서 반도체 종합서비스 기업으로의 체질 개선이 본격화되었다. SK하이닉스 출신 김영식 대표 선임과 SK그룹 내 반도체 소재 계열사(SK트리켐, SK레조낙 등) 편입을 통해 반도체 밸류체인을 완성했으며, IPO 준비 과정에서 단기간 내 실적과 성장성을 증명하려는 전략이 주효했다.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFAwQjYwdEdIOTNXQ0lFM29YbmpqRUhBRVZTVGo3SnF4V0R1MGkzQi1LVnVnOUhhdVYzdHpmZzJzSHpsOW1WU21xYTZtZGFSaTRGODl4QzByU21yaHM2VmFQT1NFa2hZdXNVMUww0gFvQVVfeXFMTVBQYTF6TTNVMUxWSzlvalRvaXFETUtoY1pnZVVHSEF1YzVoYXRubXFHaG5oZ3VPTTJwc2IxWC1EWnBuUkJsVFVlUkRjVVhLbHBhYm5tOVFLdllRcjVaRWRLejBzVFFDeHVwYzN0cjJ3?oc=5" target="_blank" rel="noopener">한스경제</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBpUmc3OUxYSkt1UDhUclJMd0ltbFZTT0M1WDYwY0x5cWtwVlZIQk4zNEZ5VS12RThMOHBrV0pqN2hLaTJmR1VsdHJadnV1dGl3OWVUbmRQMnU5SGNyOVlLSm5UNDIzSE4wZS1FSm9fTTBQeXPSAXdBVV95cUxQNVZMYm4taXF0OUNZNEdBeFZnakl1a2pSYVh5dE02bnE1TTJaNGc5RWNOa2s3Y1JrSE5UeDlWRnlWb3hfcWNCQUZHcTFiZ2NmalZoMHozV3pMVS1LSm1jNk8wMjQ1MWNvSjV2YWV2LWJCb0l2bHoxWQ?oc=5" target="_blank" rel="noopener">인사이트코리아</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5xX0Uxay1SSDV5SmlMLUJRRDFfVWdmaEpUVDZjMmh0NnlQQjlMWXRlX0l0ZmhqSWU4RTM0dkR4ejROQXVoTDRTdzZsYU1uNm8?oc=5" target="_blank" rel="noopener">딜사이트</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5NUjJINkRiLVdfVkJ3MW5QdlFleWFSaVpqSmNWUExmY0c0YUMtRWFVWHdWbWtVRFZQYUYzTlQ5c0tIdThqM3RlbnU0QmdMUFRXWXRTcWd5YUV0MTY1OHc0VDNkLTUxNXVvM2JMelRnUk5abzjSAXNBVV95cUxOTVIySDZEYi1XX1ZCdzFuUHZRZXlhUmlaakpjVlBMZmNHNGFDLUVhVVh3Vm1rVURWUGFGM05UOXNLSHU4ajN0ZW51NEJnTFBUV1l0U3FneWFFdDE2NTh3NFQzZC01MTV1bzNiTHpUZ1JOWm84?oc=5" target="_blank" rel="noopener">데일리한국</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 투자 열풍이 지속되며 국가차원의 국부펀드 조성과 함께 자산운용사들이 반도체 관련 펀드를 잇따라 출시하고 있다. AMD의 대만 반도체 생태계 15조원 투자와 밀양 파워큐브세미의 100억원 투자 등 국내외 반도체 투자가 활발히 진행되고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBibm1iSGtfcndxbWlycGNjazJrRDlmbXhKRVJBZ3g2NzR6bW9XcXBOTTVTOWYyRVNvdGdLSWRGb3NKUW9WWEhMeEwxdkF1TG15SGVOTkc5WFdkQdIBVEFVX3lxTE94N3k0N3doblVlMzFvU0FLWjVqMmJzR2paWl82Tl91ZWQzWi05eXBoejRUM2FjamRwRDY0X3c3N0VTaVQ1anFyRTlad3ZrV1pybnhQMg?oc=5" target="_blank" rel="noopener">K국부펀드 조성으로 반도체 초과세수를 미래 세대 투자에 활용</a></li>
+</ul>
+<p>정부가 반도체 초과세수를 활용해 국가 차원의 국부펀드 조성 계획을 공개했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE8zRk5fZy1hWlY1WGxqa0JoMVFyZGVzcW9hNUNaOXZxRXM3ZlRjS0ZCV01KUjVIZXFBXzJ2TDNPXzlwODFMeEtCd0MxelN5RFFIMHBN?oc=5" target="_blank" rel="noopener">AMD, 대만 반도체 생태계에 15조원 대규모 투자로 엔비디아 추격</a></li>
+</ul>
+<p>AMD가 대만 반도체 생태계에 100억달러 규모의 투자를 발표했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5iZnZCNFloaHZiOGk1TWt5eEROSXJ5b2lZMXU0WnlHNk5TM2JtTGZ1d3A2ZUdhSkxZZVNTbVhVbXJDSXpDT2hlcWE0TkpJZlBHVGtubE8tdUV4a0N1RGdvR1liSHlhTU5KZ3c0Znd3?oc=5" target="_blank" rel="noopener">삼성자산운용, 반도체 목표전환형 펀드 출시</a></li>
+</ul>
+<p>삼성자산운용이 반도체 집중투자 후 안전자산으로 전환하는 펀드를 출시했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE4tdDNsaUJlckJnZnZmX05UR1V5b1hUTVZnS0duSVZRN2U5bGdkazFDTkJiellLN3ZTd2VPZUpNc3hZUllkN2RMaE9uYVJKSG5FbUY3aWQ5WHlreTlPeFlqdGFEektFTUxKcnc?oc=5" target="_blank" rel="noopener">밀양나노산단에 파워큐브세미 100억원 투자협약 체결</a></li>
+</ul>
+<p>밀양시가 전력반도체 기업 파워큐브세미와 100억원 규모 투자협약을 체결했다</p>
+
+<h3>첨단 패키징</h3>
+<p>AI 반도체 패키징 관련 ETF와 HBM 기대감으로 관련 장비주들이 강세를 보이고 있다. 특히 한미반도체가 15% 급등하는 등 AI 반도체 장비 투자 상품들이 주목받고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE82LV9iSWhaQ2lidGZGa2Z0VUwwbnpway1PUksxZDhFa0w0RVNsRXZWemlvcW1Rd3FWOXY1YkF5UmhESjNqa1ZKMEFuckhvRTRIUmpTX0FoclZRUVhXSTh6UlRSamR2LUV4SVUxaw?oc=5" target="_blank" rel="noopener">AI 반도체 ETF 수익률 경쟁 격화, HBM·메모리 투자 상품 강세</a></li>
+</ul>
+<p>AI 반도체 관련 ETF들의 수익률 경쟁이 치열해지고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBjWlZYY0hBaEZETlk0MlpXMkh1a3ZFbFJBdklENTM3Z3BFbGNJX3RVOF91S0pya2RLR0lySlE4UUxOTl96UVdTVUd0U1RRWXl1SlFhdElGMEhwTUFfdFo5UHZaTDR4VllV?oc=5" target="_blank" rel="noopener">한미반도체 15% 급등, HBM 기대감 속 AI 반도체 장비주 강세</a></li>
+</ul>
+<p>한미반도체가 HBM 기대감으로 33만2500원까지 15% 급등했다</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>AMD의 대만 AI 인프라 투자와 가트너의 자율 비즈니스 전략 채택 권고로 글로벌 반도체 장비 공급망이 재편되고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/amd-plans-10b-investment-in-taiwan-to-boost-ai-infrastructure/" target="_blank" rel="noopener">AMD, 대만에 100억달러 투자로 AI 인프라 강화</a></li>
+</ul>
+<p>AMD가 TSMC 2nm 공정을 활용한 HPC 칩 생산 확대를 위해 대만에 투자한다</p>
+<ul>
+<li><a href="https://www.eetimes.com/gartner-urges-supply-chain-execs-to-adopt-autonomous-business-strategies/" target="_blank" rel="noopener">가트너, 공급망 임원들에게 자율 비즈니스 전략 채택 촉구</a></li>
+</ul>
+<p>22%의 조직이 자율 비즈니스 운영 역할을 도입했고 내년 50% 초과 예상된다</p>
+
+<h3>데이터센터 신축</h3>
+<p>글로벌 데이터센터 건설 용량이 2025년 31.7GW에 달하며, 연료전지와 클라우드 서비스 분야에서 투자가 활발하다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/global-data-center-capacity-under-construction-reached-317gw-in-2025-more-than-double-the-year-before-report/" target="_blank" rel="noopener">2025년 전 세계 데이터센터 건설 용량 31.7GW 달성</a></li>
+</ul>
+<p>댈러스가 데이터센터 건설 순위에서 처음으로 1위를 차지했다</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/nebius-to-deploy-bloom-energy-fuel-cells-to-power-its-us-data-centers/" target="_blank" rel="noopener">Nebius, 미국 데이터센터에 연료전지 최대 328MW 용량 배치</a></li>
+</ul>
+<p>Nebius가 Bloom Energy 연료전지를 미국 데이터센터에 배치한다</p>
+
+<h3>EPC / 수주</h3>
+<p>미국에서 교통 시스템 기술 솔루션과 대형 건설 프로젝트 계약이 활발히 진행되고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/transit-tech-lab-mta-startups/820750/" target="_blank" rel="noopener">18개 스타트업, 뉴욕 교통 시스템 기술 솔루션 테스트 선정</a></li>
+</ul>
+<p>AI를 활용한 여러 Transit Tech Lab 제안이 올해 포함되었다</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/maryland-key-bridge-contracts-may-2026/820788/" target="_blank" rel="noopener">메릴랜드주, Key Bridge 재건축에 40억달러 규모 4개 계약 발표</a></li>
+</ul>
+<p>볼티모어 다리 재건축을 위한 4개 별도 조달 계획이 공개되었다</p>
+
+<h3>AI / 반도체 트렌드</h3>
+<p>한국과 베트남 간 AI 반도체 협력이 강화되고 있으며, 국내 금융권이 AI·방산·반도체 분야에 대규모 투자를 확대하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE93M3dpZGVxUUlQdGlZOXl2WUpMTWpKMDZoaFU0N1BUVXRmN1Y0SkVoWW5IMmY1dVkzc2wwNU9MUlpOUmtwajlDMHBKS3E?oc=5" target="_blank" rel="noopener">베트남과 AI 반도체 기판 협력 강화, 삼성전기 12억달러 투자</a></li>
+</ul>
+<p>삼성전기가 베트남에 12억달러를 투자하며 한·베 반도체 협력이 본격화되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE43U3JzMl9pd1BwQ01iMnVPNW5fX0wxWlJWQkNKOVRWOXJtdVRHLTUxdWMxQS11TmRLUERGOXl1SjBxWnUyTE9YTTR5N3VRSExkVDAzazlKaV9JbkhiMWF2UElsSnhLYks1MG5TbDFxONIBc0FVX3lxTE5GSUtxX0hfbzlXOWdGc1R6SUZmYVlFaW9UWkhzWjFfUkpNWVpHZVVFSmlNMTdsVm41eDFhcmFxRWwta1JEZHRCTDVsVURhVDEtN1o4MGllV1ZneGYtZmJGSzMtWmg4dEZlaGdXaXV0Y2JQeWM?oc=5" target="_blank" rel="noopener">우리금융, AI·방산·반도체에 80조원 집중 투자</a></li>
+</ul>
+<p>우리금융이 생산적·포용금융의 일환으로 80조원 규모 투자를 발표했다</p>
+
+<h3>M&amp;A / 사업재편</h3>
+<p>파크시스템스가 이자 0%로 1000억원을 조달하여 반도체 설비 투자와 M&amp;A에 적극 나서고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5EeTRvWEpacng1cDd1OWFEeE1JQnBwalhwNUM5cDdEaXI4SjRxZVI1MjFueW9Oc1hnWlVfR1hFaFduLXhUcjJjVXpiZzN5MnZNMkoxVVJsemQ3d244QVBjR1JLOFJNeU1Ud1NKNFJTUjgtY0U?oc=5" target="_blank" rel="noopener">파크시스템스, 이자 0%로 1000억 조달하여 M&amp;A 가속화</a></li>
+</ul>
+<p>파크시스템스가 반도체 설비 투자와 M&amp;A를 위해 무이자로 1000억원을 조달했다</p>
+
+<h3>CapEx 가이던스</h3>
+<p>SK에코플랜트가 AI 인프라 수요 증가로 실적이 급등하며 정비사업도 속도를 내고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFAwQjYwdEdIOTNXQ0lFM29YbmpqRUhBRVZTVGo3SnF4V0R1MGkzQi1LVnVnOUhhdVYzdHpmZzJzSHpsOW1WU21xYTZtZGFSaTRGODl4QzByU21yaHM2VmFQT1NFa2hZdXNVMUww0gFvQVVfeXFMTVBQYTF6TTNVMUxWSzlvalRvaXFETUtoY1pnZVVHSEF1YzVoYXRubXFHaG5oZ3VPTTJwc2IxWC1EWnBuUkJsVFVlUkRjVVhLbHBhYm5tOVFLdllRcjVaRWRLejBzVFFDeHVwYzN0cjJ3?oc=5" target="_blank" rel="noopener">SK에코플랜트, AI 인프라 수요로 실적 급등</a></li>
+</ul>
+<p>SK에코플랜트가 AI 인프라 관련 사업으로 실적이 크게 개선되었다</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트가 1분기 역대급 영업이익을 기록하며 반도체 사업의 성공적인 성과를 보여주고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBpUmc3OUxYSkt1UDhUclJMd0ltbFZTT0M1WDYwY0x5cWtwVlZIQk4zNEZ5VS12RThMOHBrV0pqN2hLaTJmR1VsdHJadnV1dGl3OWVUbmRQMnU5SGNyOVlLSm5UNDIzSE4wZS1FSm9fTTBQeXPSAXdBVV95cUxQNVZMYm4taXF0OUNZNEdBeFZnakl1a2pSYVh5dE02bnE1TTJaNGc5RWNOa2s3Y1JrSE5UeDlWRnlWb3hfcWNCQUZHcTFiZ2NmalZoMHozV3pMVS1LSm1jNk8wMjQ1MWNvSjV2YWV2LWJCb0l2bHoxWQ?oc=5" target="_blank" rel="noopener">SK에코플랜트, 1분기 영업익 역대급 기록</a></li>
+</ul>
+<p>SK에코플랜트가 반도체 사업 호조로 1분기 역대 최고 영업이익을 달성했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5xX0Uxay1SSDV5SmlMLUJRRDFfVWdmaEpUVDZjMmh0NnlQQjlMWXRlX0l0ZmhqSWU4RTM0dkR4ejROQXVoTDRTdzZsYU1uNm8?oc=5" target="_blank" rel="noopener">SK에코플랜트의 반도체 낙수 효과 주목</a></li>
+</ul>
+<p>SK에코플랜트의 반도체 사업 성공이 다른 사업 부문에 긍정적 영향을 미치고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5NUjJINkRiLVdfVkJ3MW5QdlFleWFSaVpqSmNWUExmY0c0YUMtRWFVWHdWbWtVRFZQYUYzTlQ5c0tIdThqM3RlbnU0QmdMUFRXWXRTcWd5YUV0MTY1OHc0VDNkLTUxNXVvM2JMelRnUk5abzjSAXNBVV95cUxOTVIySDZEYi1XX1ZCdzFuUHZRZXlhUmlaakpjVlBMZmNHNGFDLUVhVVh3Vm1rVURWUGFGM05UOXNLSHU4ajN0ZW51NEJnTFBUV1l0U3FneWFFdDE2NTh3NFQzZC01MTV1bzNiTHpUZ1JOWm84?oc=5" target="_blank" rel="noopener">SK에코플랜트, 반도체 성공에도 주택사업 지속 추진</a></li>
+</ul>
+<p>SK에코플랜트가 반도체 사업 호조 속에서도 주택사업을 포기하지 않겠다고 밝혔다</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[2025년 글로벌 DC 건설규모 31.7GW, 전년비 2배↑] 대규모 전력공급 리드타임 평균 4.5년으로 프로젝트 지연 위험. 투자자들의 재무/운영 투명성 요구 증가 및 지역사회 부정적 정서 확산.</li>
+<li>[SK에코플랜트 1Q 영업익 9314억원, 전년비 1262%↑] 주택사업 비중 축소로 전통 건설부문 매출 감소(솔루션부문 5조→3.9조). 반도체 업황 변동성에 대한 노출 증가.</li>
+<li>[SK에코플랜트 반도체 전환효과로 창사 최대실적 달성] 솔루션(주택/건축) 부문 매출 5조→3.9조로 역성장. 반도체 사업 집중에 따른 사업 포트폴리오 편중 리스크.</li>
+<li>[Groq, SRAM 기반 LLM 추론 대규모 배포 성공] SRAM의 제한된 메모리 용량으로 인한 확장성 제약. 대규모 칩 인터커넥트 구축 비용 및 복잡도 증가.</li>
+<li>[AMD, 대만에 100억달러 투자로 AI 인프라 강화] 지정학적 리스크로 인한 공급망 취약성 증가. 100억달러 규모 대규모 투자에 따른 재무 부담.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>주요 지역별 전력공급 확보 현황 및 규제 변화 모니터링 필요.</li>
+<li>용인 수지삼성2차 재건축 수의계약 여부 및 추가 정비사업 수주 동향 확인.</li>
+<li>반도체 사업부문별 상반기 실적 추이 및 주택사업 선별수주 전략 구체화 확인.</li>
+<li>주요 클라우드 서비스 제공업체의 SRAM 기반 추론 시스템 도입 계획 확인.</li>
+<li>TSMC 2nm 양산 일정 및 AMD의 구체적인 제품 로드맵 발표 모니터링.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 6/7건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-05-21T22:22:57.439595+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
