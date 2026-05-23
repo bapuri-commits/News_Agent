@@ -808,5 +808,14 @@
     "top_headline": "AMD, 대만에 100억달러 투자...TSMC 2nm 공정 AI칩 생산",
     "sk_headline": "SK에코플랜트 1분기 반도체 급성장으로 역대급 실적",
     "article_count": 39
+  },
+  "2026-05-24": {
+    "date": "2026-05-24",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "SK에코플랜트, 서초 신반포20차 재건축 190가구 수주",
+    "sk_headline": "신반포20차 재건축 수주, AI·반도체 혁신기업 발굴",
+    "article_count": 39
   }
 }
