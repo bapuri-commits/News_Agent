@@ -817,5 +817,14 @@
     "top_headline": "SK에코플랜트, 서초 신반포20차 재건축 190가구 수주",
     "sk_headline": "신반포20차 재건축 수주, AI·반도체 혁신기업 발굴",
     "article_count": 39
+  },
+  "2026-05-25": {
+    "date": "2026-05-25",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "엔비디아-Groq, SRAM 기반 LLM 추론 첫 대규모 상용화",
+    "sk_headline": "반도체 특화 전환으로 1Q 수익성 급개선",
+    "article_count": 39
   }
 }

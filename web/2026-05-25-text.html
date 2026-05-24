@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-05-25 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-05-25.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-05-25</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-05-25</h1>
+
+<blockquote>엔비디아-Groq, SRAM 기반 LLM 추론 첫 대규모 상용화 / 데이터센터 물부족-전력불안정 연쇄위기, UPS 배터리 사양 재정의 / AI 팩토리 광케이블 병목현상, GPU 가동 차질 위기</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. 엔비디아-Groq, SRAM 기반 LLM 추론 첫 대규모 상용화</h3>
+
+<p>Groq가 SRAM 기반 LLM 추론 시스템으로 일일 수천억 토큰 처리하는 퍼블릭 클라우드 서비스 운영 중. 기존 GPU-HBM 대비 메모리 병목현상 해결하는 새로운 아키텍처 구현. 수천 개 칩을 저지연 동기식 인터커넥트로 연결하는 SHIP(SRAM-based Huge Inference Pipelines) 기술 적용.</p>
+
+<p><strong>영향</strong>: 메모리 반도체 시장에서 HBM 의존도를 낮추고 SRAM 수요 급증 가능성. AI 추론 인프라 설계 패러다임 전환으로 새로운 칩 아키텍처 투자 확대 전망.</p>
+<p><strong>리스크</strong>: SRAM은 HBM 대비 용량 제약이 크고 칩당 비용이 높아 대규모 확산 시 경제성 검증 필요.</p>
+<p><strong>확인 필요</strong>: Groq의 실제 고객사 및 매출 규모, 타 빅테크의 SRAM 기반 추론 시스템 도입 계획 확인 필요.</p>
+
+<p>📎 출처: <a href="https://semiengineering.com/large-scale-sram-based-llm-inference-deployment-groq/" target="_blank" rel="noopener">Semiconductor Engineering</a></p>
+
+<h3>2. 데이터센터 물부족-전력불안정 연쇄위기, UPS 배터리 사양 재정의</h3>
+
+<p>AI 워크로드로 랙당 전력밀도가 기존 5-15kW에서 100kW+ 수준으로 급증. 극한 기후 시 냉각수 부족과 전력망 불안정이 동시 발생하며 UPS 배터리 부하 가중. CSB Energy Technology는 고속 방전 및 빈번한 사이클링 가능한 고출력 배터리를 새로운 표준으로 제시.</p>
+
+<p><strong>영향</strong>: 데이터센터 운영사들의 UPS 배터리 교체 주기 단축 및 고사양 제품 수요 증가. 배터리 제조사는 AI 데이터센터 특화 제품 라인업 강화 필요.</p>
+<p><strong>리스크</strong>: 배터리 수명 단축으로 운영비용 상승, 폐배터리 처리 문제 대두. 극한 기후 빈발 시 냉각-전력 복합 장애 리스크.</p>
+<p><strong>확인 필요</strong>: 주요 하이퍼스케일러의 UPS 배터리 사양 변경 및 조달 계획, 배터리 제조사들의 AI DC 특화 제품 출시 동향.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/opinions/water-grid-volatility-and-the-growing-burden-on-the-ups-battery-layer/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>3. AI 팩토리 광케이블 병목현상, GPU 가동 차질 위기</h3>
+
+<p>AI 데이터센터 구축 시 광케이블 인프라가 GPU 납품보다 수개월~수년 지연되는 사례 발생. AI 수요 충족 위해 추가 2억 루트마일(약 3.2억km) 광케이블 필요 전망. 전력 확보 지역이 기존 광케이블 인프라가 없는 신규 시장인 경우가 많아 신규 구축 필요.</p>
+
+<p><strong>영향</strong>: 데이터센터 개발사는 부지 선정 시 광케이블 인프라를 전력만큼 중요한 요소로 고려 필요. 광케이블 업체들의 수주 폭증 및 시공 인력 부족 심화.</p>
+<p><strong>리스크</strong>: 광케이블 구축 지연으로 데이터센터 가동 지연 시 막대한 기회비용 손실. 권리확보 및 인허가 프로세스가 예측 불가능한 변수.</p>
+<p><strong>확인 필요</strong>: 주요 클라우드 사업자의 광케이블 인프라 투자 계획 및 Zayo 등 전문업체 수주 현황.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/opinions/ai-factories-have-a-fiber-problem/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>4. AI 인프라 투자 6900억달러, 전력확보가 핵심 경쟁력</h3>
+
+<p>2026년까지 전 세계 AI 인프라 투자 6900억 달러(약 1조원) 전망. 중동 지역이 풍부한 에너지 자원과 대규모 부지, 빠른 규제 정비로 AI 인프라 허브로 부상. GPU보다 전력 부족이 AI 산업 최대 제약요소로 지적.</p>
+
+<p><strong>영향</strong>: 전력망 운영사와의 장기계약 또는 직접 발전소 투자가 AI 기업의 새로운 경쟁력. 국가 단위 인프라 경쟁으로 AI 산업 구조 재편.</p>
+<p><strong>리스크</strong>: 대규모 전력 소비에 따른 탄소배출 및 ESG 리스크. 전력 인프라 구축에 3-5년 소요로 단기 수요 대응 어려움.</p>
+<p><strong>확인 필요</strong>: 빅테크 기업들의 전력회사 지분투자 또는 발전소 직접 건설 계획 발표.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFB0M1hkdUk2UHFCZUpJc21XeWg3anVuMzIyX3owUXJValdkRldTeTlGVkZnSUppSGl0V0w0M1dGZkY2bDBpSWxMYWJzdC0xakQxMHJWeFo5aGwtTkpqbUw1QmZwWnRkRDJMZ1Rz0gFvQVVfeXFMTWdGNUdMTTFRZWJPVVlSYnZjR0MwTTNzbTFVS0U0enU0Q0JQYnRURC11eXZxcXpUeWRsc1djdUlsd2JVSkxORjdiaVRVWW1yUV9yNVRzUmp3a3M4YTYtZldBSXZSQzFVTVBFVkhvRjl3?oc=5" target="_blank" rel="noopener">AI라이프경제</a></p>
+
+<h3>5. 한온시스템, AI DC 액침냉각 시장 진출-1Q 영업익 361%↑</h3>
+
+<p>한온시스템 2026년 1분기 영업이익 972억원으로 전년비 361% 급증. 자동차 열관리 세계 2위 기술력 바탕으로 AI 데이터센터 액침냉각 솔루션 시장 본격 진출 선언. 한국앤컴퍼니그룹 편입 후 조현범 회장 주도로 인프라 열관리를 제3의 성장축으로 육성.</p>
+
+<p><strong>영향</strong>: 국내 데이터센터 냉각 시장에 대기업 플레이어 등장으로 기술 고도화 및 규모의 경제 실현 기대. 액침냉각 등 차세대 냉각 기술 상용화 가속화.</p>
+<p><strong>리스크</strong>: 전기차 시장 침체로 본업 매출 둔화 우려. 데이터센터 냉각 시장 실제 대규모 수주 실적 미확인 상태.</p>
+<p><strong>확인 필요</strong>: 한화, 네이버 등 국내 주요 데이터센터 사업자와의 구체적 공급계약 체결 여부.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE1XamhBRGVQRkpXb3lXa3ZCUkh3azlVQUo5OEltdlpfZjJrbzBBak41RmpOVmZuZGhWcTZneERZWnRKYVpOckxULS1Lb0d0UXFUa21UTWUtYmxuVndsanRsQTVoYXBDM0FCd1F5MmxlWHROUQ?oc=5" target="_blank" rel="noopener">데일리머니</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>반도체 특화 전환으로 1Q 수익성 급개선</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> 환경·에너지 중심에서 반도체 종합서비스 기업으로 체질 개선을 완료했다고 평가됨. 용인 반도체 클러스터 등 대형 프로젝트 매출이 본격화되면서 반도체 플랜트 시공뿐만 아니라 공정용 가스·소재, 메모리 모듈 제조·유통, 리사이클링까지 사업영역을 확장했음. 단순 SK하이닉스 수주업체를 넘어 반도체 밸류체인 전반의 통합 서비스 제공업체로 포지셔닝하고 있음.</li>
+<li><strong>현금흐름·차입</strong> 해당 기간 특이사항 없음.</li>
+<li><strong>PF/우발채무</strong> 해당 기간 특이사항 없음.</li>
+<li><strong>IPO/경쟁사</strong> IPO 준비 과정에서 시장에 단기간 내 실적과 성장성을 증명하기 위해 반도체 중심으로 사업구조를 재편했다고 언급됨. SK하이닉스 출신 김영식 대표를 선봉장으로 내세워 반도체 밸류체인에 맞춘 조직·사업 구조 개편을 추진 중. 향후 SK하이닉스 의존도를 넘어 그룹 전체의 반도체 경쟁력을 강화하는 독자적 산업 파트너로의 도약이 과제로 제시됨.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxNZ25NakNkLU03c1ZyRFd5WGxMeDRoTmlOZklaOThQOVYzZ1lpUjZ3V0pCUDZkUGZLN2xvNnlXMTlOYnJqd3dDUUFQdjZGS0hqUTJXNUJ0dVBzWGg4UldFNzFIamlGWGhBNkdvVnZPM0RTUmd6RndoeTFaM0NscWdIZ2FSNjNsSHJySlNkYkp6NA?oc=5" target="_blank" rel="noopener">Naver Blog</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 산업이 AI 슈퍼사이클에 힘입어 투자와 성장 전망이 크게 개선되고 있다. 미국의 반도체 관세 정책과 자국 생산 확대 압박이 지속되는 가운데, 국내 반도체 기업들은 투자 확대와 성과급 지급 딜레마에 직면했다. 기관투자자들의 삼성전자·SK하이닉스 집중 매수와 개인투자자들의 반도체 ETF 몰림이 동반되며 시장 관심이 집중되고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE01YnVzTXpfWU1makp3N3VaUTkxZUpMcnF2dUk5VkJuemVNQkJRN2JxNFZVM1J3cUcweHRXd09CaXZCR1dyNHlCOV9PYW9WVFRxbzdpaWw4Yw?oc=5" target="_blank" rel="noopener">반도체 뉴라텍 218억, AI 글라스 레티널 278억 프리IPO 투자</a></li>
+</ul>
+<p>반도체와 AI 관련 스타트업들이 대규모 투자를 유치하고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE9nbnBKTTB6b1BRMWJLWFpPTi0wQ3VhdWZXM2hDMEpGbXh1WDViLWowZEMzU2FEZU5adDFtN0hfd0VkNGRsaWhEaTN0VGhPV1ZRSDVrTW9GYzVUMTlhVUxfTFJpX2UyRW15?oc=5" target="_blank" rel="noopener">롯데에너지머티리얼즈, AI·반도체 소재 투자 확대위해 롯데에코월 매각</a></li>
+</ul>
+<p>기업들이 AI·반도체 소재 사업 강화를 위한 구조조정을 진행하고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9IbDk0RDhacWNYN1poMFlybmh5dF94X3NRcWlHTzZ0a0o1VWktUFFJM3VsWGZoTlBELW9hM0FQeW5iTzNxdHVobTNXVGMyV2VRc3A4RENQNFBRWlJTOG5SaNIBYEFVX3lxTE9IbDk0RDhacWNYN1poMFlybmh5dF94X3NRcWlHTzZ0a0o1VWktUFFJM3VsWGZoTlBELW9hM0FQeW5iTzNxdHVobTNXVGMyV2VRc3A4RENQNFBRWlJTOG5SaA?oc=5" target="_blank" rel="noopener">미국 무역대표, 반도체 관세 적절시점 부과 예고하며 압박 지속</a></li>
+</ul>
+<p>미국이 반도체 관세 카드를 유지하며 자국 생산 확대를 압박하고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5xT1lEVmNBMFBqSk1Yd2RMblR5TmJuMS1pWEpoRUw3YUxTWi1KRVpCcFJFd1JJdDdLYmVmdmw3YWlYcGdHV1EwMk1tTXFaLUVFUXV0eGdoQVrSAVhBVV95cUxOcU9ZRFZjQTBQakpNWHdkTG5UeU5ibjEtaVhKaEVMN2FMU1otSkVaQnBSRXdSSXQ3S2JlZnZsN2FpWHBnR1dRMDJNbU1xWi1FRVF1dHhnaEFa?oc=5" target="_blank" rel="noopener">해외 경쟁사 대규모 투자 대비 한국 반도체 성과급 딜레마</a></li>
+</ul>
+<p>마이크론 38조원, TSMC 85조원 투자 대비 국내 기업들의 성과급 지급이 투자 여력을 압박하고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE5wZlgteWxIOTROenVqS0F3LTJzUGdONG41WlBhaWFBb2Q0V1hya0tWNEZpZEw3Z1hGMzRzWVg2QTRNdGdLX0pkemluNEF3eVpWYWJSY3c0Y3A3QVZqRmQ1THpDRWk2c3JXYnZzMkpETQ?oc=5" target="_blank" rel="noopener">프랑스 마크롱, 양자·반도체에 15억유로 추가 투자</a></li>
+</ul>
+<p>유럽도 양자컴퓨팅과 반도체 기술 경쟁력 확보를 위한 대규모 투자를 확대하고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE8tcEIxMnRGN0M4SkxzamxzVllud0xOdjE3UEpVUFdJR3lsdklRRGhPTWZLeThuZGJTQ0ZZWlhzdGp1ZmViOTVUNjYyUlFEdVNveklPMEdGOU1VbHVJbEdBbFJyaFozRGFqNExvTmRiS0dHMXfSAXdBVV95cUxNa2t6YmRwdjhVLS1nbFVwZjF2SDd3WTJyR1NnM1RMdW41X29vMmlfdnVHQ3NmTXJKR0VPUEdUbHZ5aGdDYWNTZVU0Y09JVGhMLWxteGNWU051ZEhsNmd0N08zMFVZYmNwbXJmQWlUUEZfWURpRjkzNA?oc=5" target="_blank" rel="noopener">기관투자자들이 삼성전자·SK하이닉스 집중 매수</a></li>
+</ul>
+<p>기관들이 반도체 대장주에 다시 몰리며 투자 심리가 개선되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xRnFUeC1GREF6WHV1Z3ZPZURiVkFiaDFXUEJqb2lvT1ZKemxUZTJaNEZ2M1ZrOEJSdHQtbnpCekpBUko1Ni1QMjJBVXFGREFSRnc?oc=5" target="_blank" rel="noopener">개인투자자들이 반도체 3배ETF에 대규모 투자</a></li>
+</ul>
+<p>서학개미들이 반도체 불장을 기대하며 레버리지 상품에 몰리고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5YcThXbllRbmxULWVqR0R6YTJEeElGdF9sNUtXMDNOYzF2S3hBeVU2N1lSbEFPalJtTUV5UC1JeGdweEk4TXY3WlBnT0wzcXZxbXhZeVZ4U1ZidWl1ZVFVQWxEd0F4MENzZzE2enJR?oc=5" target="_blank" rel="noopener">AI·반도체 슈퍼사이클로 한국 경제성장률·수출 전망 동반 상향</a></li>
+</ul>
+<p>반도체 호황이 국가 경제 전반에 긍정적 파급효과를 가져오고 있다</p>
+
+<h3>데이터센터 신축</h3>
+<p>AI 데이터센터 급증으로 전력 인프라와 광섬유 연결성 문제가 핵심 과제로 부상하고 있다. 데이터센터와 반도체 클러스터가 몰리면서 전력망 포화 상태에 도달했고, AI 승부처가 모델보다는 전력·데이터센터·인프라 경쟁으로 이동하고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/construction-starts-jumped-april-more-project-types-broke-ground/820960/" target="_blank" rel="noopener">4월 건설 착공 급증, 데이터센터·에너지 메가프로젝트 확산</a></li>
+</ul>
+<p>데이터센터와 에너지 프로젝트를 중심으로 건설 착공이 크게 늘어났다</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/opinions/ai-factories-have-a-fiber-problem/" target="_blank" rel="noopener">AI 팩토리들이 광섬유 연결성 문제에 직면</a></li>
+</ul>
+<p>AI 데이터센터 급증으로 광섬유 인프라 확충이 시급한 상황이다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFB0M1hkdUk2UHFCZUpJc21XeWg3anVuMzIyX3owUXJValdkRldTeTlGVkZnSUppSGl0V0w0M1dGZkY2bDBpSWxMYWJzdC0xakQxMHJWeFo5aGwtTkpqbUw1QmZwWnRkRDJMZ1Rz0gFvQVVfeXFMTWdGNUdMTTFRZWJPVVlSYnZjR0MwTTNzbTFVS0U0enU0Q0JQYnRURC11eXZxcXpUeWRsc1djdUlsd2JVSkxORjdiaVRVWW1yUV9yNVRzUmp3a3M4YTYtZldBSXZSQzFVTVBFVkhvRjl3?oc=5" target="_blank" rel="noopener">AI 승부처가 모델에서 전력·데이터센터·인프라로 이동</a></li>
+</ul>
+<p>진짜 AI 경쟁은 하드웨어 인프라에서 시작되고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1TU2JvUFdxOXptT0t5TU05RDlEZnduUjR3M18tQUU1V2NabE1ucGhRdW1xOUo2WGlTWWpLWnhhcnFrbFJKY3RCelc3RW1MNTh1dlVMN3h5Ym10Ti1ZOUUyR1FGU2VtZDNtOGdfNmdsNFA?oc=5" target="_blank" rel="noopener">AI 데이터센터와 반도체 클러스터로 전력망 포화 상태</a></li>
+</ul>
+<p>데이터센터와 반도체 시설이 동시에 몰리면서 전력 공급 한계에 도달했다</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>미국이 양자컴퓨팅 하드웨어에 20억 달러 규모 CHIPS 법 패키지를 투입하며 전략적 인프라로 인식하고 있다. 우주산업에서도 민첩하고 고신뢰성 페이로드를 위한 상업용 우주 스크리닝 접근법이 논의되고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/u-s-quantum-bet-puts-hardware-first-but-utility-remains-the-test/" target="_blank" rel="noopener">미국, 양자컴퓨팅 하드웨어에 20억 달러 CHIPS 법 투자</a></li>
+</ul>
+<p>워싱턴이 양자컴퓨팅을 전략적 인프라로 보고 대규모 투자를 결정했다</p>
+<ul>
+<li><a href="https://www.eetimes.com/commercial-space-screening-approach-for-agile-high-reliability-payloads/" target="_blank" rel="noopener">우주시장 진화에 따른 민첩하고 고신뢰성 페이로드 기술 논의</a></li>
+</ul>
+<p>우주산업에서 민첩성과 신뢰성을 균형잡는 전자부품 기술이 중요해지고 있다</p>
+
+<h3>DC 전력</h3>
+<p>데이터센터 전력 인프라에서 UPS 배터리 시스템이 더 넓고 빈번한 전력 변동을 흡수해야 하는 부담이 증가하고 있다. 아일랜드에서는 녹색 기술 미래를 위한 스킬 개발의 중요성이 강조되고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/opinions/water-grid-volatility-and-the-growing-burden-on-the-ups-battery-layer/" target="_blank" rel="noopener">UPS 배터리 시스템이 전력망 변동성 증가로 부담 가중</a></li>
+</ul>
+<p>데이터센터 전력 안정성 확보를 위한 UPS 시스템 요구사항이 높아지고 있다</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/opinions/powering-irelands-green-and-technological-future-through-skills/" target="_blank" rel="noopener">아일랜드, 녹색·기술 미래를 위한 스킬 개발 강조</a></li>
+</ul>
+<p>기술만큼 인력 개발이 중요하다는 인식이 확산되고 있다</p>
+
+<h3>첨단 패키징</h3>
+<p>엔비디아 연구진이 SRAM 기반 대규모 LLM 추론 배포 기술인 &#x27;SHIP&#x27; 논문을 발표했다.</p>
+
+<ul>
+<li><a href="https://semiengineering.com/large-scale-sram-based-llm-inference-deployment-groq/" target="_blank" rel="noopener">엔비디아, SRAM 기반 대규모 LLM 추론 파이프라인 &#x27;SHIP&#x27; 기술 공개</a></li>
+</ul>
+<p>빠른 LLM 서비스를 위한 SRAM 기반 추론 배포 기술이 개발되었다</p>
+
+<h3>DC 냉각</h3>
+<p>한온시스템이 데이터센터 급증에 따른 차세대 냉각 인프라 독점 수주에 돌입하며, 액침냉각 솔루션으로 AI 서버 발열 문제 해결에 나서고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE1XamhBRGVQRkpXb3lXa3ZCUkh3azlVQUo5OEltdlpfZjJrbzBBak41RmpOVmZuZGhWcTZneERZWnRKYVpOckxULS1Lb0d0UXFUa21UTWUtYmxuVndsanRsQTVoYXBDM0FCd1F5MmxlWHROUQ?oc=5" target="_blank" rel="noopener">한온시스템, 데이터센터 냉각 인프라 독점 수주 및 액침냉각 솔루션 공개</a></li>
+</ul>
+<p>세계 2위 열관리 노하우를 바탕으로 AI 서버 발열 해결 솔루션을 제공한다</p>
+
+<h3>EPC / 수주</h3>
+<p>할마와 스칸스카 파트너십이 80억 달러 규모 뉴욕 펜 스테이션 프로젝트의 마스터 개발업체로 선정되었다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/amtrak-skanska-halmar-penn-station-renovation/820914/" target="_blank" rel="noopener">할마-스칸스카 파트너십, 80억 달러 뉴욕 펜 스테이션 개발업체 선정</a></li>
+</ul>
+<p>DOT와 암트랙이 펜 교통 파트너스를 마스터 개발업체로 발표했다</p>
+
+<h3>공기 / 원가 / 변경관리</h3>
+<p>ENR의 2026년 상업 건설업체 순위에서 터너 컨스트럭션이 1위를 유지했고, 모텐슨이 12단계 상승하며 톱10에 진입했다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/top-commercial-contractors-revenue-2026-enr/820930/" target="_blank" rel="noopener">터너 컨스트럭션 상업건설업체 1위 유지, 모텐슨 톱10 진입</a></li>
+</ul>
+<p>ENR 톱400 리스트에서 주요 건설업체들의 순위 변동이 있었다</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트의 반도체 관련 낙수 효과에 대한 분석이 제시되고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxNZ25NakNkLU03c1ZyRFd5WGxMeDRoTmlOZklaOThQOVYzZ1lpUjZ3V0pCUDZkUGZLN2xvNnlXMTlOYnJqd3dDUUFQdjZGS0hqUTJXNUJ0dVBzWGg4UldFNzFIamlGWGhBNkdvVnZPM0RTUmd6RndoeTFaM0NscWdIZ2FSNjNsSHJySlNkYkp6NA?oc=5" target="_blank" rel="noopener">SK에코플랜트의 반도체 낙수 효과 분석</a></li>
+</ul>
+<p>SK에코플랜트가 반도체 투자 확대에 따른 간접적 수혜를 받을 것으로 전망된다</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[엔비디아-Groq, SRAM 기반 LLM 추론 첫 대규모 상용화] SRAM은 HBM 대비 용량 제약이 크고 칩당 비용이 높아 대규모 확산 시 경제성 검증 필요.</li>
+<li>[데이터센터 물부족-전력불안정 연쇄위기, UPS 배터리 사양 재정의] 배터리 수명 단축으로 운영비용 상승, 폐배터리 처리 문제 대두. 극한 기후 빈발 시 냉각-전력 복합 장애 리스크.</li>
+<li>[AI 팩토리 광케이블 병목현상, GPU 가동 차질 위기] 광케이블 구축 지연으로 데이터센터 가동 지연 시 막대한 기회비용 손실. 권리확보 및 인허가 프로세스가 예측 불가능한 변수.</li>
+<li>[AI 인프라 투자 6900억달러, 전력확보가 핵심 경쟁력] 대규모 전력 소비에 따른 탄소배출 및 ESG 리스크. 전력 인프라 구축에 3-5년 소요로 단기 수요 대응 어려움.</li>
+<li>[한온시스템, AI DC 액침냉각 시장 진출-1Q 영업익 361%↑] 전기차 시장 침체로 본업 매출 둔화 우려. 데이터센터 냉각 시장 실제 대규모 수주 실적 미확인 상태.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>Groq의 실제 고객사 및 매출 규모, 타 빅테크의 SRAM 기반 추론 시스템 도입 계획 확인 필요.</li>
+<li>주요 하이퍼스케일러의 UPS 배터리 사양 변경 및 조달 계획, 배터리 제조사들의 AI DC 특화 제품 출시 동향.</li>
+<li>주요 클라우드 사업자의 광케이블 인프라 투자 계획 및 Zayo 등 전문업체 수주 현황.</li>
+<li>빅테크 기업들의 전력회사 지분투자 또는 발전소 직접 건설 계획 발표.</li>
+<li>한화, 네이버 등 국내 주요 데이터센터 사업자와의 구체적 공급계약 체결 여부.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 6/6건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-05-24T21:58:24.434672+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>
