@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-05-26 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-05-26.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-05-26</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-05-26</h1>
+
+<blockquote>세메스 1Q 영업익 961억원, 전년비 106% 증가 / HBM 공급 절벽 2026년 이후도 지속 전망 / BOA, 2024년 글로벌 HBM 시장 80조원 전망</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. 세메스 1Q 영업익 961억원, 전년비 106% 증가</h3>
+
+<p>세메스 1Q24 실적: 매출 5,963억원(YoY +11%), 영업이익 961억원(YoY +106%). 삼성전자 전체(해외법인 포함) 매출 비중 85%. 삼성차이나반도체(SCS) 매출 1,063억원(YoY +171%).</p>
+
+<p><strong>영향</strong>: 삼성전자 DS부문 1Q 시설투자 10.2조원 집행으로 장비 수요 급증. 평택 P4 마감공사 및 중국 시안 V8 낸드 양산 전환으로 장비 교체 수요 확대.</p>
+<p><strong>리스크</strong>: 매출의 85%가 삼성전자 의존으로 고객 집중도 높음. 외산 장비 대비 국산화율 제한적.</p>
+<p><strong>확인 필요</strong>: 2Q24 실적 발표시 HBM 관련 장비 수주 규모 및 V9 낸드 전환 일정 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9idXR4a2VsZDV6c1Brc3Y1bG9SeWtPN0Q5UW9tbWJCWkxsNmNfM1VNd0hLcWJRSUowTkhYUV9tTi1KQ0J3SGJUQnJlLV9iTlU4Q3hQS0pR?oc=5" target="_blank" rel="noopener">헤럴드경제</a></p>
+
+<h3>2. HBM 공급 절벽 2026년 이후도 지속 전망</h3>
+
+<p>미확인: 기사 본문 누락으로 구체적 사실 확인 불가.</p>
+
+<p><strong>영향</strong>: HBM 공급 부족이 2026년 이후까지 지속될 경우 AI 반도체 생산 병목현상 장기화 우려.</p>
+<p><strong>리스크</strong>: AI 반도체 &#x27;3중 병목&#x27;(GPU, HBM, 패키징) 현실화로 공급망 전체 차질 가능성.</p>
+<p><strong>확인 필요</strong>: 삼성전자·SK하이닉스 HBM 증설 계획 및 실제 양산 일정 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMDVtQ2FXRFJxMng2T0JmU2JrU3EyakV6OW5aWlBRSGxtSWtZWGFwMGJpT2VXX0VTZDZwME9SNWZZWExCcDNMSEs1d051ZzJ0akUwLURPZXFkMnNYOE1SUmVFaXFhRzI0OTZULV9uOFlGcndEZjJMM2RtYjk2bkxMOC1VNzQ3cHNZ?oc=5" target="_blank" rel="noopener">글로벌이코노믹</a></p>
+
+<h3>3. BOA, 2024년 글로벌 HBM 시장 80조원 전망</h3>
+
+<p>BOA 추정 2024년 글로벌 HBM 시장 규모 546억달러(약 80조원), 전년비 57% 성장. 삼성전자 2월 업계 최초 HBM4 양산 출하 시작, 10나노급 6세대 D램 적용.</p>
+
+<p><strong>영향</strong>: HBM이 AI 서버 핵심 부품으로 자리매김하며 메모리 업계 구조적 고성장 견인. 삼성-SK하이닉스 간 차세대 HBM4 주도권 경쟁 본격화.</p>
+<p><strong>리스크</strong>: HBM4부터 베이스다이에 파운드리 공정 도입으로 기술 난이도 상승. TSMC-SK하이닉스 동맹 대 삼성 IDM 경쟁 구도 형성.</p>
+<p><strong>확인 필요</strong>: 엔비디아 차세대 GPU의 HBM4 공급업체 선정 결과 및 인증 일정 모니터링.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE1iS19FclcxcXBTU21xdTB0RWF4YS1jMHlNUEFmYmJoa242MWc3YVhXdy0yWmRrWnNSS0hGVnVLNldkZVJ5QzBGZHNLcm5DTjB5T2FJX3pEdE1DNFE?oc=5" target="_blank" rel="noopener">에너지경제신문</a></p>
+
+<h3>4. 삼성전기 실리콘 커패시터 1.6조원 대규모 수주</h3>
+
+<p>삼성전기 실리콘 커패시터 공급계약 1조 5,770억원 체결(2023년 매출의 13.8% 규모). 계약 상대방 비공개. LG이노텍·삼성전기 AI 서버용 대면적 고다층 패키지 기판 양산 착수.</p>
+
+<p><strong>영향</strong>: AI 데이터센터 전력효율 부품 수요 폭증으로 전자부품 업체 수혜 확대. 장기공급계약(LTA), 선급금 등 리스크 공유 모델이 메모리 넘어 부품 산업 전반으로 확산.</p>
+<p><strong>확인 필요</strong>: 삼성전기 실리콘 커패시터 계약 상대방 공개 및 추가 수주 가능성 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTFB6dVhiZEdmWGxVVzJ0NnMteGtnZklFN0VYcmVKXzRQcVVWWUNrdGNhRUp6SzBJelA4cnR4dUdWNTRyRkNIbF94LVE2MnZPN2ZtdDgzQTN3RHdQU0VlVEVTTVR1bXB0VjNZX2pxdWswLVY4bU1VY2fSAXZBVV95cUxQenVYYmRHZlhsVVcydDZzLXhrZ2ZJRTdFWHJlSl80UHFVVllDa3RjYUVKekswSXpQOHJ0eHVHVjU0ckZDSGxfeC1RNjJ2TzdmbXQ4M0Ezd0R3UFNFZVRFU01UdW1wdFYzWV9qcXVrMC1WOG1NVWNn?oc=5" target="_blank" rel="noopener">데일리머니</a></p>
+
+<h3>5. 빅테크, SMR 직접 투자로 AI 전력 확보 나서</h3>
+
+<p>세계원자력협회(WNA) 2035년 글로벌 SMR 시장 640조원 전망. 아마존 X-에너지 5억달러 투자, 구글·MS 원자력 파트너십 100억달러 이상 투자. 현대건설 홀텍과 북미 10GW SMR 구축 목표.</p>
+
+<p><strong>영향</strong>: AI 데이터센터 전력 수요 폭증으로 SMR이 건설업계 신규 전략사업으로 부상. 국내 건설사들 단순 시공 넘어 개발·지분투자 단계 진출.</p>
+<p><strong>리스크</strong>: 초도호기(FOAK) 경제성 미검증. 뉴스케일 유타주 프로젝트 비용 급등으로 무산 사례. 80여종 SMR 모델 중 최종 생존 모델 불확실.</p>
+<p><strong>확인 필요</strong>: 테라파워 와이오밍주 SFR 실증 프로젝트 진행 상황 및 HD현대중공업 부품 공급 계약 구체화 여부.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1vWTVNVk04TFlQSV9fZ0lhWG13WVlKRjRuY1QzMk82czM2NmZTd3J1M0lHU3VGaHE3bGtiUTVFWldacXliTTZRZWlCWHJUY1ptc21xUUF6c2FyUC10Z0F0VkVPbkgtLXZEZlZjOTV5ZEs0YVh2Ym1v0gF3QVVfeXFMTW9ZNU1WTThMWVBJX19nSWFYbXdZWUpGNG5jVDMyTzZzMzY2ZlN3cnUzSUdTdUZocTdsa2JRNUVaV1pxeWJNNlFlaUJYclRjWm1zbXFRQXpzYXJQLXRnQXRWRU9uSC0tdkRmVmM5NXlkSzRhWHZibW8?oc=5" target="_blank" rel="noopener">여성경제신문</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>반도체 중심 사업 전환으로 실적 급성장</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> SK에코플랜트가 환경·에너지 중심에서 반도체 종합 서비스 기업으로 체질 개선을 완료했다고 분석. 용인 반도체 클러스터 등 대형 프로젝트 매출이 본격화되었으며, 반도체 공정용 가스·소재, 메모리 모듈 제조·유통, 리사이클링까지 사업 영역을 확장. 단순 SK하이닉스 수주를 넘어 반도체 밸류체인 전반의 통합 서비스 제공업체로 포지셔닝.</li>
+<li><strong>IPO/경쟁사</strong> IPO 준비를 위한 사업 구조 재편 과정에서 반도체 중심으로 포트폴리오를 전환했다고 확인. 시장에 단기간 내 실적과 성장성을 증명해야 하는 IPO 과제를 안고 있으며, 김영식 대표(SK하이닉스 35년 경력 반도체 전문가)를 선봉장으로 조직·사업 구조 개편을 추진. SK그룹 내 흩어져 있던 반도체 관련 기업들이 SK에코플랜트 중심으로 집결하는 구조 개편 진행.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxNZ25NakNkLU03c1ZyRFd5WGxMeDRoTmlOZklaOThQOVYzZ1lpUjZ3V0pCUDZkUGZLN2xvNnlXMTlOYnJqd3dDUUFQdjZGS0hqUTJXNUJ0dVBzWGg4UldFNzFIamlGWGhBNkdvVnZPM0RTUmd6RndoeTFaM0NscWdIZ2FSNjNsSHJySlNkYkp6NA?oc=5" target="_blank" rel="noopener">Naver Blog</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 슈퍼사이클이 확산되며 AI 반도체 투자 열풍이 지속되고 있다. 개미투자자들이 반도체 관련주와 3배 ETF에 몰리며 관련 기업들의 주가가 급등하고 있다. 삼성전자는 현금유출을 줄이고 AI 반도체 투자를 확대하는 전략을 추진 중이다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQS25mV1J3Y0l0dGJoc2hibkRCU0dGOFBVRUpBMHI5a0pIbDN6TFNfVjliQlBmWk5LbU5ZNW1TX3VqT0xJbkpWUHBBazBmOFlhWlRIRDV4MnlWWHI4V1E3UGtybDJodzF3UTljc2pxcTA3a0FUMXZEdExkT2RHaWxSM2l6UHMxczRi?oc=5" target="_blank" rel="noopener">부도 위기 중국 건설사들의 반도체 투자로 주가 380% 폭등</a></li>
+</ul>
+<p>묻지마 반도체 투자에 개미투자자들이 몰리며 관련 기업 주가가 급등했다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFB4dXJLZ3kydTJQekdlVzltSTBYczJDSkVPSUVJSnF2ZkpNLV9WSkpxR21LRGc5LThaMVFHd3g3eEtpOE1pZ3ZjcnlXQ1haVUtmMUFjV0RTdjJ6X2JsWjZuWEttbHB2ay1R?oc=5" target="_blank" rel="noopener">삼성전자, AI 반도체 전략으로 현금유출 줄이고 투자 확대</a></li>
+</ul>
+<p>성과급 지급 방식을 조정해 AI 반도체 투자 여력을 확보하고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE84d29RSGdVa0lpTWZaY3RSampwejNqdnpUSlJMWXg1ZkJoZWVSN0I1NWV2ZjNabWZnUjJIbk9mTUNUbGdfaWVhVHdNb1ZRVExaTG40OVR0d0FtSm1MX0pKa1dFUndKQV9DeVlXUUp3?oc=5" target="_blank" rel="noopener">OCI, 화학 중심 구조에서 탈피해 반도체·AI 소재로 사업 확장</a></li>
+</ul>
+<p>기존 화학 기업이 반도체와 AI 소재 분야로 사업 영역을 넓히고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Wakw0ZDhud29rZXM2Mkw0dm5SOXE0MUluYlZ2akNwS0VsV2JmSEozOU5rRjA5TTRvdVpMNXZoaGtBSjY0Y2pBdEwtNkRmTTI5NUE?oc=5" target="_blank" rel="noopener">서학개미들이 반도체 3배 ETF에 대거 투자</a></li>
+</ul>
+<p>고위험 고수익을 노린 개미투자자들이 레버리지 상품에 몰리고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9tN2FtV29TN1l0QU9CdWhkVU9KV0FKMVNiSzAzR1JzOTFpNWdMMTVYZ3VzUjJtUW5BWEFkTnFfdTVFbTVrTUxTcV9RZmFCcXZGUGluRXB3?oc=5" target="_blank" rel="noopener">중국 반도체주 한달 새 40% 급등, 추가 상승 전망</a></li>
+</ul>
+<p>중국 반도체 기업들의 주가가 한달 사이 급격히 상승했다</p>
+
+<h3>첨단 패키징</h3>
+<p>HBM(고대역폭메모리) 공급 부족이 2026년 이후에도 지속될 것으로 예상되며, AI 반도체 분야의 병목 현상이 심화되고 있다. 한국과 대만이 AI 반도체 패권 시대의 핵심 거점으로 부상하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMDVtQ2FXRFJxMng2T0JmU2JrU3EyakV6OW5aWlBRSGxtSWtZWGFwMGJpT2VXX0VTZDZwME9SNWZZWExCcDNMSEs1d051ZzJ0akUwLURPZXFkMnNYOE1SUmVFaXFhRzI0OTZULV9uOFlGcndEZjJMM2RtYjk2bkxMOC1VNzQ3cHNZ?oc=5" target="_blank" rel="noopener">HBM 공급 절벽이 2026년 이후에도 지속, AI 반도체 3중 병목 현실화</a></li>
+</ul>
+<p>HBM 공급 부족 문제가 장기간 계속될 것으로 전망된다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE1iS19FclcxcXBTU21xdTB0RWF4YS1jMHlNUEFmYmJoa242MWc3YVhXdy0yWmRrWnNSS0hGVnVLNldkZVJ5QzBGZHNLcm5DTjB5T2FJX3pEdE1DNFE?oc=5" target="_blank" rel="noopener">K-반도체가 AI 지배하는 HBM 시대를 열고 있다</a></li>
+</ul>
+<p>한국 메모리 반도체가 AI 시대의 핵심 기술로 자리잡고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE4wSmtkVVNQTEZxUXZOUVJMem0wVFVSZW5DbFhxTDUzN2x4ZVlheXZuelJuZlN5NXlXT3dvajFMYmVkQVRBYXBuX1BnMlA1dVFNX2tmcmh3YmjSAVhBVV95cUxOMEprZFVTUExGcVF2TlFSTHptMFRVUmVuQ2xYcUw1MzdseGVZYXl2bnpSbmZTeTV5V093b2oxTGJlZEFUQWFwbl9QZzJQNXVRTV9rZnJod2Jo?oc=5" target="_blank" rel="noopener">AI 반도체 패권 시대, 한국과 대만이 세계의 심장 역할</a></li>
+</ul>
+<p>한국과 대만이 글로벌 AI 반도체 생태계의 중심축으로 부상했다</p>
+
+<h3>데이터센터 신축</h3>
+<p>데이터센터 건설 시장이 활발한 움직임을 보이고 있으며, 우주 데이터센터와 암호화폐 채굴 시설 등 다양한 형태의 프로젝트가 진행되고 있다. AI 호황으로 인해 반도체 이후 차세대 전자부품에 대한 관심도 증가하고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/data-centers-in-space-a-brilliant-idea-or-delusional/" target="_blank" rel="noopener">우주 데이터센터 구축 아이디어, 전력과 열 문제가 과제</a></li>
+</ul>
+<p>우주 공간에 데이터센터를 설치하는 계획의 기술적 실현 가능성이 논의되고 있다</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/boxminer-plans-20mw-crypto-data-center-in-la-pine-oregon/" target="_blank" rel="noopener">Boxminer, 오레곤주에 20MW 암호화폐 데이터센터 계획</a></li>
+</ul>
+<p>라파인 지역에 대규모 암호화폐 채굴 시설 건설이 계획되어 주민 반발을 사고 있다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTFB6dVhiZEdmWGxVVzJ0NnMteGtnZklFN0VYcmVKXzRQcVVWWUNrdGNhRUp6SzBJelA4cnR4dUdWNTRyRkNIbF94LVE2MnZPN2ZtdDgzQTN3RHdQU0VlVEVTTVR1bXB0VjNZX2pxdWswLVY4bU1VY2fSAXZBVV95cUxQenVYYmRHZlhsVVcydDZzLXhrZ2ZJRTdFWHJlSl80UHFVVllDa3RjYUVKekswSXpQOHJ0eHVHVjU0ckZDSGxfeC1RNjJ2TzdmbXQ4M0Ezd0R3UFNFZVRFU01UdW1wdFYzWV9qcXVrMC1WOG1NVWNn?oc=5" target="_blank" rel="noopener">AI 호황으로 커패시터 등 차세대 전자부품 주목</a></li>
+</ul>
+<p>반도체 다음 성장 동력으로 커패시터 등 전자부품 시장이 부상하고 있다</p>
+
+<h3>장비 / 부품 공급망</h3>
+<p>품질 검사 리포트의 중요성과 IC 설계 기술 지원 서비스에 대한 업계 관심이 높아지고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/realising-the-benefits-of-quality-inspection-reports/" target="_blank" rel="noopener">제품 설계에서 품질 검사 리포트의 이점 실현</a></li>
+</ul>
+<p>프로토타입과 테스트 외에도 통제 불가능한 요인들이 제품에 미치는 영향이 크다</p>
+<ul>
+<li><a href="https://www.eetimes.com/you-may-not-know-actions-technology-but-youve-definitely-heard-it-the-evolution-of-an-audio-chip-specialist/" target="_blank" rel="noopener">Actions Technology, 수억 대 소비자 오디오 기기에 핵심 기술 지원</a></li>
+</ul>
+<p>IC 설계 회사가 전 세계 소비자 오디오 기기의 핵심 기술을 지원하고 있다</p>
+
+<h3>EPC / 수주</h3>
+<p>4월 건설 착공이 증가했으며, 데이터센터와 에너지 메가프로젝트 외에도 다양한 프로젝트가 시작되었다. 팹리스 기업들도 반도체 슈퍼사이클의 수혜를 받아 영업이익이 크게 증가했다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/construction-starts-jumped-april-more-project-types-broke-ground/820960/" target="_blank" rel="noopener">4월 건설 착공 증가, 다양한 프로젝트 유형으로 확산</a></li>
+</ul>
+<p>데이터센터와 에너지 메가프로젝트 외에도 여러 분야에서 착공이 늘었다</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiRkFVX3lxTE1tNDlnZjRyejUyRlMzclZDdklWMVh1THFIbUxJS1lMTHF0UXBpVVVISDBvN2xFV1BRMGNzVXVyWHNyUlptUnc?oc=5" target="_blank" rel="noopener">팹리스 기업들도 슈퍼사이클 수혜로 영업익 17배 증가</a></li>
+</ul>
+<p>반도체 슈퍼사이클이 팹리스 업체들에게도 큰 실적 개선을 가져다줬다</p>
+
+<h3>자재 / 노무</h3>
+<p>뉴욕 펜실베니아역 개발사업과 상업용 건설업체 순위 발표 등 대형 인프라 프로젝트와 건설업계 동향이 주목받고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/amtrak-skanska-halmar-penn-station-renovation/820914/" target="_blank" rel="noopener">Halmar-Skanska 파트너십, 뉴욕 펜실베니아역 80억달러 개발사업 수주</a></li>
+</ul>
+<p>Penn Transportation Partners가 대규모 교통 인프라 개발의 마스터 개발사로 선정됐다</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/top-commercial-contractors-revenue-2026-enr/820930/" target="_blank" rel="noopener">Turner Construction, 2026년 상업용 건설업체 1위 유지</a></li>
+</ul>
+<p>ENR 탑 400 리스트에서 터너가 1위를 지키고 모텐슨이 10위권에 진입했다</p>
+
+<h3>DC 전력</h3>
+<p>AI 서비스 증가로 인한 전력 수요 급증에 대응하기 위해 건설사들이 SMR(소형모듈원자로) 사업에 진출하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1vWTVNVk04TFlQSV9fZ0lhWG13WVlKRjRuY1QzMk82czM2NmZTd3J1M0lHU3VGaHE3bGtiUTVFWldacXliTTZRZWlCWHJUY1ptc21xUUF6c2FyUC10Z0F0VkVPbkgtLXZEZlZjOTV5ZEs0YVh2Ym1v0gF3QVVfeXFMTW9ZNU1WTThMWVBJX19nSWFYbXdZWUpGNG5jVDMyTzZzMzY2ZlN3cnUzSUdTdUZocTdsa2JRNUVaV1pxeWJNNlFlaUJYclRjWm1zbXFRQXpzYXJQLXRnQXRWRU9uSC0tdkRmVmM5NXlkSzRhWHZibW8?oc=5" target="_blank" rel="noopener">건설사들이 AI 전력 수요 대응을 위해 SMR 사업 진출</a></li>
+</ul>
+<p>AI 서비스 확산으로 급증하는 전력 수요를 충족하기 위한 새로운 원전 기술에 주목하고 있다</p>
+
+<h3>인력 / 인사</h3>
+<p>반도체 업계에서 성과급 지급 방식을 둘러싼 딜레마가 발생하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5xT1lEVmNBMFBqSk1Yd2RMblR5TmJuMS1pWEpoRUw3YUxTWi1KRVpCcFJFd1JJdDdLYmVmdmw3YWlYcGdHV1EwMk1tTXFaLUVFUXV0eGdoQVrSAVhBVV95cUxOcU9ZRFZjQTBQakpNWHdkTG5UeU5ibjEtaVhKaEVMN2FMU1otSkVaQnBSRXdSSXQ3S2JlZnZsN2FpWHBnR1dRMDJNbU1xWi1FRVF1dHhnaEFa?oc=5" target="_blank" rel="noopener">한국 반도체 기업들의 성과급 지급 딜레마</a></li>
+</ul>
+<p>다른 기업들이 성과급을 확대하는 가운데 한국 반도체 기업들이 고민에 빠져있다</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트의 반도체 사업 진출이 관련 산업에 미치는 파급 효과가 주목받고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxNZ25NakNkLU03c1ZyRFd5WGxMeDRoTmlOZklaOThQOVYzZ1lpUjZ3V0pCUDZkUGZLN2xvNnlXMTlOYnJqd3dDUUFQdjZGS0hqUTJXNUJ0dVBzWGg4UldFNzFIamlGWGhBNkdvVnZPM0RTUmd6RndoeTFaM0NscWdIZ2FSNjNsSHJySlNkYkp6NA?oc=5" target="_blank" rel="noopener">SK에코플랜트의 반도체 진출이 가져올 낙수 효과</a></li>
+</ul>
+<p>SK에코플랜트의 반도체 사업 참여가 관련 업계에 미칠 긍정적 영향이 분석되고 있다</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[세메스 1Q 영업익 961억원, 전년비 106% 증가] 매출의 85%가 삼성전자 의존으로 고객 집중도 높음. 외산 장비 대비 국산화율 제한적.</li>
+<li>[HBM 공급 절벽 2026년 이후도 지속 전망] AI 반도체 &#x27;3중 병목&#x27;(GPU, HBM, 패키징) 현실화로 공급망 전체 차질 가능성.</li>
+<li>[BOA, 2024년 글로벌 HBM 시장 80조원 전망] HBM4부터 베이스다이에 파운드리 공정 도입으로 기술 난이도 상승. TSMC-SK하이닉스 동맹 대 삼성 IDM 경쟁 구도 형성.</li>
+<li>[빅테크, SMR 직접 투자로 AI 전력 확보 나서] 초도호기(FOAK) 경제성 미검증. 뉴스케일 유타주 프로젝트 비용 급등으로 무산 사례. 80여종 SMR 모델 중 최종 생존 모델 불확실.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>2Q24 실적 발표시 HBM 관련 장비 수주 규모 및 V9 낸드 전환 일정 확인 필요.</li>
+<li>삼성전자·SK하이닉스 HBM 증설 계획 및 실제 양산 일정 확인 필요.</li>
+<li>엔비디아 차세대 GPU의 HBM4 공급업체 선정 결과 및 인증 일정 모니터링.</li>
+<li>삼성전기 실리콘 커패시터 계약 상대방 공개 및 추가 수주 가능성 확인.</li>
+<li>테라파워 와이오밍주 SFR 실증 프로젝트 진행 상황 및 HD현대중공업 부품 공급 계약 구체화 여부.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 6/6건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-05-25T22:10:17.372650+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>

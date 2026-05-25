@@ -826,5 +826,14 @@
     "top_headline": "엔비디아-Groq, SRAM 기반 LLM 추론 첫 대규모 상용화",
     "sk_headline": "반도체 특화 전환으로 1Q 수익성 급개선",
     "article_count": 39
+  },
+  "2026-05-26": {
+    "date": "2026-05-26",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "세메스 1Q 영업익 961억원, 전년비 106% 증가",
+    "sk_headline": "반도체 중심 사업 전환으로 실적 급성장",
+    "article_count": 39
   }
 }
