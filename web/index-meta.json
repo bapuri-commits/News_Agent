@@ -835,5 +835,14 @@
     "top_headline": "세메스 1Q 영업익 961억원, 전년비 106% 증가",
     "sk_headline": "반도체 중심 사업 전환으로 실적 급성장",
     "article_count": 39
+  },
+  "2026-05-27": {
+    "date": "2026-05-27",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "DC Blox, 기존 대출에 6억달러 추가해 총 8.5억달러 확보",
+    "sk_headline": "반도체 낙수효과 속 신반포20차 첫 수주",
+    "article_count": 39
   }
 }
