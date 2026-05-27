@@ -844,5 +844,14 @@
     "top_headline": "DC Blox, 기존 대출에 6억달러 추가해 총 8.5억달러 확보",
     "sk_headline": "반도체 낙수효과 속 신반포20차 첫 수주",
     "article_count": 39
+  },
+  "2026-05-28": {
+    "date": "2026-05-28",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "SK에코플랜트 1Q 영업익 9,314억원 기록, 반도체 자회사 실적 급증",
+    "sk_headline": "반도체 업황에 1Q 영업이익 14배 급증, IPO보다 내재화",
+    "article_count": 39
   }
 }
