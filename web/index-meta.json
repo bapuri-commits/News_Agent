@@ -853,5 +853,14 @@
     "top_headline": "SK에코플랜트 1Q 영업익 9,314억원 기록, 반도체 자회사 실적 급증",
     "sk_headline": "반도체 업황에 1Q 영업이익 14배 급증, IPO보다 내재화",
     "article_count": 39
+  },
+  "2026-05-29": {
+    "date": "2026-05-29",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "SK에코플랜트 1Q 영업익 9,314억원 (+1,262%), 반도체 자회사 효과",
+    "sk_headline": "반도체·AI 급성장으로 1분기 영업이익 9314억원 기록",
+    "article_count": 39
   }
 }
