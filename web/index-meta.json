@@ -862,5 +862,14 @@
     "top_headline": "SK에코플랜트 1Q 영업익 9,314억원 (+1,262%), 반도체 자회사 효과",
     "sk_headline": "반도체·AI 급성장으로 1분기 영업이익 9314억원 기록",
     "article_count": 39
+  },
+  "2026-05-30": {
+    "date": "2026-05-30",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "Ascenty 브라질 4개 DC에 12억불 투자, 150MW 규모",
+    "sk_headline": "SK에코플랜트, AI 내재화 가속화로 미래 경쟁력 강화",
+    "article_count": 39
   }
 }
