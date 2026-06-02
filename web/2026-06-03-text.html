@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-06-03 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-06-03.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-06-03</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-06-03</h1>
+
+<blockquote>EDF, 佛 폐발전소에 SoftBank 400MW·Eclairion 330MW DC 선정 / QTS, 오하이오 Van Wert에 100억달러 규모 DC 캠퍼스 발표 / 물리적 AI 시대, 반도체 업체들 밸류체인 상위 이동 가속</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. EDF, 佛 폐발전소에 SoftBank 400MW·Eclairion 330MW DC 선정</h3>
+
+<p>EDF가 프랑스 내 2개 폐발전소 부지의 AI 데이터센터 개발자로 SoftBank(Bouchain 400MW)와 Eclairion(Loire-sur-Rhône 330MW)을 선정. SoftBank는 프랑스 내 총 5GW, 750억달러 규모 DC 개발 계획 중. 부지는 기존 전력 인프라 활용으로 개발기간 수년 단축 가능.</p>
+
+<p><strong>영향</strong>: 총 730MW 규모로 프랑스의 대규모 DC 프로젝트 시작. 폐발전소 부지 활용으로 전력/부지 확보 리스크 최소화하며 개발 속도 향상.</p>
+<p><strong>리스크</strong>: 현재 타당성 조사 단계로 환경/기술/행정 검토 결과에 따라 프로젝트 변경 가능. 폐루프 냉각 시스템 채택으로 전력 소비 증가 우려.</p>
+<p><strong>확인 필요</strong>: 타당성 조사 완료 후 최종 임대계약 체결 여부 및 착공 일정 확인 필요.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/edf-selects-softbank-and-eclairion-to-deliver-ai-data-center-projects-at-former-power-stations-in-france/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>2. QTS, 오하이오 Van Wert에 100억달러 규모 DC 캠퍼스 발표</h3>
+
+<p>QTS가 오하이오주 Van Wert시 902에이커 부지에 100억달러 규모 데이터센터 캠퍼스 조성 발표. 최대 7개동 건설 예정, 200개 정규직 및 1,500개 건설직 일자리 창출. 향후 20년간 2억달러 세수 예상. 폐루프 냉각 시스템 채택.</p>
+
+<p><strong>영향</strong>: 미국 중서부 지역의 초대형 DC 프로젝트로 지역 경제 활성화 기대. QTS의 대규모 그린필드 개발 역량 입증.</p>
+<p><strong>리스크</strong>: 구체적인 착공 일정 및 단계별 투자 계획 미공개. American Electric Power와 전력 인프라 구축 협력 필요로 전력 공급 일정이 주요 변수.</p>
+<p><strong>확인 필요</strong>: 6월 11일 주민 설명회 결과 및 구체적인 개발 일정/단계별 투자 계획 발표 모니터링.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/qts-behind-van-wert-ohio-mega-site-acquisition-announces-10-billion-data-center-campus/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>3. 물리적 AI 시대, 반도체 업체들 밸류체인 상위 이동 가속</h3>
+
+<p>TSMC 유럽 심포지엄에서 유럽 반도체 CEO들이 AI가 비즈니스에 미치는 영향 논의. 물리적 AI(Physical AI) 확산으로 칩메이커들이 밸류체인 상위로 이동 중.</p>
+
+<p><strong>영향</strong>: AI 워크로드 특화 칩 수요 증가로 반도체 업체들의 시스템 레벨 설계 참여 확대. 고부가가치 영역 진출 기회.</p>
+<p><strong>확인 필요</strong>: 주요 반도체 업체들의 AI 특화 칩/시스템 개발 로드맵 및 투자 계획 확인.</p>
+
+<p>📎 출처: <a href="https://www.eetimes.com/physical-ai-pushes-chipmakers-up-the-value-chain/" target="_blank" rel="noopener">EE Times</a></p>
+
+<h3>4. TSMC, 화웨이 &#x27;Her&#x27;s Law&#x27; 제안에도 트랜지스터 스케일링 지속 강조</h3>
+
+<p>TSMC Kevin Zhang이 화웨이의 &#x27;Her&#x27;s Law&#x27;(3D 집적 중심) 제안에 대응해 트랜지스터 스케일링이 여전히 반도체 성능/에너지효율 향상의 핵심이라고 주장. 3D 집적도 중요하지만 기본은 트랜지스터 미세화.</p>
+
+<p><strong>영향</strong>: TSMC의 미세공정 로드맵 지속 추진 의지 확인. 중국과의 기술 경쟁에서 공정 미세화 우위 유지 전략.</p>
+<p><strong>리스크</strong>: 미세공정 한계 도달 시 대안 기술 전환 지연 리스크. 화웨이 등 중국 업체의 3D 패키징 기술 추격.</p>
+<p><strong>확인 필요</strong>: TSMC의 2nm 이하 공정 개발 진척도 및 3D 패키징 기술 투자 확대 여부 확인.</p>
+
+<p>📎 출처: <a href="https://www.eetimes.com/tsmc-defends-transistor-scaling-amid-huaweis-hers-law-proposal/" target="_blank" rel="noopener">EE Times</a></p>
+
+<h3>5. SK에코플랜트, 서울 이촌 리모델링·대전 재개발 동시 수주</h3>
+
+<p>SK에코플랜트가 서울 이촌 우성아파트 리모델링(1,565억원, 272가구)과 대전 도마변동 2구역 재개발(지분 55%, 2,004억원, 1,057가구) 동시 수주. 이촌은 서울 리모델링 첫 진출, 대전은 포스코이앤씨와 컨소시엄. 총 수주액 약 3,569억원.</p>
+
+<p><strong>영향</strong>: SK에코플랜트의 도시정비사업 포트폴리오 확대. 특히 서울 리모델링 시장 진출로 향후 수주 경쟁력 강화 기대.</p>
+<p><strong>리스크</strong>: 리모델링 시장 경험 부족으로 서울 첫 사업의 시공 리스크. 대전 사업은 대규모 재정비촉진지구 내 위치로 공정 조율 필요.</p>
+<p><strong>확인 필요</strong>: 이촌 리모델링 사업계획 승인 및 착공 시점, 대전 재개발 분양 일정 확인.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE45dmpsbkZhT1NrSGtOSXZmSFh1RXN6UkhXR2xibmp2ODVZUE03SlVKNkNvUVNrS3hidDZFdVdJRGNJQlFSLXZrU2dCMXJya09UR0U5Z19yRjktcmttVnhvUHF0dVhXQldTVlHSAW5BVV95cUxNMzI2bVlJUnkxeUF3T0MtaDdpd2NVdnNFRl9ucWVyOUppX2d0bmxhUXJqNk9LNG1DMVVGT0RabVV5Z25tMllfb19WejVUQ1VMU0pXZW9UY3JsODVDMUpOQmgzbEg1RXRZN05iMWM1UQ?oc=5" target="_blank" rel="noopener">catchnews.kr</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>용인 반도체 현장서 온열질환 예방, 서울 리모델링 진출</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> 주장: 서울 이촌 우성아파트 리모델링(1565억원)과 대전 도마변동 2구역 재개발(지분 55%, 약 2004억원) 동시 수주. 용인 반도체 클러스터 현장에서 폭염 대응 시설 점검 진행으로 반도체 인프라 사업 지속 확인됨. 확인된 Fact는 도시정비사업 2건 신규 수주이며, 반도체 현장 활동은 기존 수주 프로젝트의 시공 단계로 추론됨.</li>
+<li><strong>IPO/경쟁사</strong> 주장: SK에코플랜트가 서울 리모델링 시장 첫 진출 성공으로 수도권 도시정비사업 확장 기반 마련. 현대건설은 전국 121개 현장에서 혹서기 특별점검 프로그램 운영 중으로 대형 건설사 간 현장 안전관리 경쟁 확인됨. 확인된 Fact는 SK에코플랜트의 서울 진출이며, 업계 전반의 안전관리 강화는 정부 정책 대응으로 추론됨.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE45dmpsbkZhT1NrSGtOSXZmSFh1RXN6UkhXR2xibmp2ODVZUE03SlVKNkNvUVNrS3hidDZFdVdJRGNJQlFSLXZrU2dCMXJya09UR0U5Z19yRjktcmttVnhvUHF0dVhXQldTVlHSAW5BVV95cUxNMzI2bVlJUnkxeUF3T0MtaDdpd2NVdnNFRl9ucWVyOUppX2d0bmxhUXJqNk9LNG1DMVVGT0RabVV5Z25tMllfb19WejVUQ1VMU0pXZW9UY3JsODVDMUpOQmgzbEg1RXRZN05iMWM1UQ?oc=5" target="_blank" rel="noopener">catchnews.kr</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1CMXJseCs1VlRubm5IUTlRTVZ0UFN2NEFkNllDMV9xdkZiaTBGOUJtUVhCYVRrTFFKVGZIQmpwMHJUOWZIelhEdW1YZ2dlTHUxVkQ2NEtmZWVseDBfaTFCU3lzYUZEUnNDMnc?oc=5" target="_blank" rel="noopener">월요신문</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>AI 반도체 호황으로 팹 투자가 급증하며, TSMC는 3D 집적화와 함께 트랜지스터 스케일링을 통한 성능 향상을 지속 추진하고 있다. 국내에서는 AI 반도체 관련 투자 펀드들이 높은 수익률을 기록하며 투자자들의 관심이 집중되고 있다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/physical-ai-pushes-chipmakers-up-the-value-chain/" target="_blank" rel="noopener">TSMC 유럽 심포지엄에서 Physical AI가 반도체 가치사슬 상향 이동 견인</a></li>
+</ul>
+<p>AI 기술이 반도체 업계 비즈니스에 미치는 영향에 대해 유럽 반도체 CEO들이 논의</p>
+<ul>
+<li><a href="https://www.eetimes.com/tsmc-defends-transistor-scaling-amid-huaweis-hers-law-proposal/" target="_blank" rel="noopener">TSMC가 화웨이의 &#x27;Her&#x27;s Law&#x27; 제안에 맞서 트랜지스터 스케일링 방어</a></li>
+</ul>
+<p>3D 집적화 중요성 인정하면서도 트랜지스터 스케일링이 여전히 성능·에너지 효율의 주요 동력</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMikAJBVV95cUxPR2VkZXJXZ1hKOF9reURrNFZfeUo3NHUwYzg1SXBNNjdhVDh4T2FkendhOUVnZzFLOVJpbC1LTG9RLWZBTE03SlpIZkl6VmJjRUlsVWxDZzh3cC1XV1hJYlZVNjRLZk1faU03VVVFUU5pRVpWeFZ4cU9VMHNSaElVZ2xnckRkUklacWs3ZmF6QXdrY2lncGxlSDEyVmFzd1MtMU9oU3BhbTlmcXRHQWpydkdoVEgxUV8yQTVoWkZpX3hrUGlpMmQ2NDNtYUdTOVc3dnlqOXJiMWxndGJ2YWNNLWxpLXQ4TzcxUjZ1Y2t4VTdsZzdIc2NmOUtqNG91WkFPN1dteWstUExYY2l3M0hvZNIBkAJBVV95cUxPR2VkZXJXZ1hKOF9reURrNFZfeUo3NHUwYzg1SXBNNjdhVDh4T2FkendhOUVnZzFLOVJpbC1LTG9RLWZBTE03SlpIZkl6VmJjRUlsVWxDZzh3cC1XV1hJYlZVNjRLZk1faU03VVVFUU5pRVpWeFZ4cU9VMHNSaElVZ2xnckRkUklacWs3ZmF6QXdrY2lncGxlSDEyVmFzd1MtMU9oU3BhbTlmcXRHQWpydkdoVEgxUV8yQTVoWkZpX3hrUGlpMmQ2NDNtYUdTOVc3dnlqOXJiMWxndGJ2YWNNLWxpLXQ4TzcxUjZ1Y2t4VTdsZzdIc2NmOUtqNG91WkFPN1dteWstUExYY2l3M0hvZA?oc=5" target="_blank" rel="noopener">에코프로에이치엔, AI 반도체 호황으로 클린룸 필터 수요 급증</a></li>
+</ul>
+<p>AI 반도체 제조 확대로 클린룸 관련 장비 수요가 크게 증가</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBBeTNMVVBLcWNnd09EZ2pqZ2xkNmxyaDJLRXQ2UDduaERHQUZPclhUUWJ3VldfczN2Um1iLTN5RjU4Z0pqNWVCZkRBc2lTd2p2cjlEdE9ZT29RTmZDSkhES9IBYEFVX3lxTFBBeTNMVVBLcWNnd09EZ2pqZ2xkNmxyaDJLRXQ2UDduaERHQUZPclhUUWJ3VldfczN2Um1iLTN5RjU4Z0pqNWVCZkRBc2lTd2p2cjlEdE9ZT29RTmZDSkhESw?oc=5" target="_blank" rel="noopener">NH아문디 K-반도체 ETF 순자산 4조원 돌파</a></li>
+</ul>
+<p>국내 반도체 20종목에 투자하는 ETF가 대규모 자금 유입 기록</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTFBCYUdHajdnMmVpc1ZaVUV4VTFfRy13QkxDVF9KVmg1TW1mRzFHRHlDaW05RHVlQk1aVDJlUnNvVGNiWTRYcE01clF2TG8xRjZTV0d1Mg?oc=5" target="_blank" rel="noopener">RISE 네트워크인프라 펀드, AI 반도체 공급망 투자로 1년 수익률 758% 달성</a></li>
+</ul>
+<p>AI 반도체 관련 투자로 극도로 높은 수익률을 기록한 투자상품 등장</p>
+
+<h3>데이터센터 신축</h3>
+<p>AI 데이터센터 건설이 본격화되면서 대규모 투자가 이어지고 있으며, 건설 현장에 AI 기술을 도입해 효율성을 높이는 추세다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/edf-selects-softbank-and-eclairion-to-deliver-ai-data-center-projects-at-former-power-stations-in-france/" target="_blank" rel="noopener">EDF가 SoftBank·Eclairion과 AI 데이터센터 프로젝트 추진</a></li>
+</ul>
+<p>AI 데이터센터 건설을 위한 타당성 조사 착수</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/qts-behind-van-wert-ohio-mega-site-acquisition-announces-10-billion-data-center-campus/" target="_blank" rel="noopener">QTS, 오하이오 메가사이트 인수로 100억 달러 규모 개발 발표</a></li>
+</ul>
+<p>2억 달러 세수와 1,500개 건설 일자리 창출 예상</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/ai-integration-jobsite-work-data-center-construction/821369/" target="_blank" rel="noopener">건설 현장 AI 통합으로 데이터센터 건설 붐 대응</a></li>
+</ul>
+<p>AI 워크플로 도입으로 건설 지연 감소 및 효율성 향상 기대</p>
+
+<h3>EPC / 수주</h3>
+<p>국내외에서 대규모 건설 프로젝트 수주가 활발하며, SK에코플랜트는 서울 리모델링 시장 첫 진출을 기록했다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE45dmpsbkZhT1NrSGtOSXZmSFh1RXN6UkhXR2xibmp2ODVZUE03SlVKNkNvUVNrS3hidDZFdVdJRGNJQlFSLXZrU2dCMXJya09UR0U5Z19yRjktcmttVnhvUHF0dVhXQldTVlHSAW5BVV95cUxNMzI2bVlJUnkxeUF3T0MtaDdpd2NVdnNFRl9ucWVyOUppX2d0bmxhUXJqNk9LNG1DMVVGT0RabVV5Z25tMllfb19WejVUQ1VMU0pXZW9UY3JsODVDMUpOQmgzbEg1RXRZN05iMWM1UQ?oc=5" target="_blank" rel="noopener">SK에코플랜트, 서울 리모델링 첫 진출 및 대전 도시정비사업 수주</a></li>
+</ul>
+<p>서울 리모델링 시장 신규 진입과 대전 지역 추가 사업 확보</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/memorial-sloan-kettering-cancer-center-construction-turner-consigli/821693/" target="_blank" rel="noopener">Turner-Consigli JV, 23억 달러 규모 NYC 암센터 건설 수주</a></li>
+</ul>
+<p>Kenneth C. Griffin Pavilion에 12개 수술실과 208개 병상 포함</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/california-high-speed-rail-central-valley-jv-picked/821809/" target="_blank" rel="noopener">Kiewit 컨소시엄, 35억 달러 캘리포니아 고속철 공사 수주</a></li>
+</ul>
+<p>베이커스필드-머세드 간 119마일 구간 건설 담당</p>
+
+<h3>안전 / 품질 / 컴플라이언스</h3>
+<p>혹서기를 맞아 건설 현장의 폭염 안전 관리가 강화되고 있으며, SK에코플랜트가 고용노동부와 협력해 온열질환 예방 캠페인을 적극 추진하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1CMXJseEs1VlRubm5IUTlRTVZ0UFN2NEFkNllDMV9xdkZiaTBGOUJtUVhCYVRrTFFKVGZIQmpwMHJUOWZIelhEdW1YZ2dlTHUxVkQ2NEtmZWVseDBfaTFCU3lzYUZEUnNDMnc?oc=5" target="_blank" rel="noopener">현대건설·SK에코플랜트, 혹서기 현장 안전 특별 점검 실시</a></li>
+</ul>
+<p>폭염 시즌 대비 건설 현장 안전 관리 강화</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE10T1BQTGZrVVpUekFVNW9ER05rRHlzWFBhNVBjZkJjdkVrQkU2bld5enRhVXd3MHR5UktDVXpMV3c1Yy1tZ0hTWjFJaXR4SUE?oc=5" target="_blank" rel="noopener">SK에코플랜트, 고용부와 폭염안전 5대 수칙 홍보 캠페인</a></li>
+</ul>
+<p>고용노동부 경기청과 합동으로 온열질환 예방 활동 전개</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9xVXpWQTNPYW5abXBzeHlBOTlDZklnM3ZhUDB3SkNGVHdIdUVMdUlaNF8zamhtbWN3RS1zRk5vRDQ2Zm1pZ19pSGNTR05YcDlna1ZFcFEwOERfSjJ5VTRqX2d3Y0RSa1ZNS000Z0lublZJSkHSAXdBVV95cUxPNkF0SFpHUEhIR2ZIYkdNM0NjSXVxenl1VndmUnFBdVRnX05kVkZ3Qm96QzFSTVIzV3M4Qmo3eFo5b2hoVnNZb0w2TWdzX3VUTXZoX0x6Q3dzZ2kzYnZoSVROcEFLSlctRXlYdDZMb0pJN2hsLXRWcw?oc=5" target="_blank" rel="noopener">SK에코플랜트, 혹서기 온열질환 예방으로 현장관리 강화</a></li>
+</ul>
+<p>여름철 건설 현장 근로자 안전 보호를 위한 체계적 관리 시스템 운영</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트가 환경부와 녹색 신사업 협력을 강화하고, OLED 소재 사업 등 신성장 동력 발굴에 나서고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBka2xGV3dsQkdhaGtIcWNDUGMwWkVPMTJOaGl0aWQtdEZqbENlQVF6d0ZhcEJ4YzlZS3NJdjNNTFdMU3ZPbXVER0pYMndaS01BOTNMZFBYOXRTUl84MlRFLWd5Y0dIbndkWkHSAW5BVV95cUxNS2wzNHpZdDkyVEs4WFdUVGFabUhUUzNsSFlwX1ZTN3g4VWFOalNDaklGOFZxRTYxYjNLbl9JTXd6bHozbnQzaWgwMkx2RXFNZ1JIdnp4Y2g4clByV2o1MW9vYi1KcXRnRzh3VUZrZw?oc=5" target="_blank" rel="noopener">SK에코플랜트-환경부, 녹색 신사업 협력 강화 합의</a></li>
+</ul>
+<p>친환경 사업 분야 협력 확대를 위한 양해각서 체결</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFBoQlVCZUxBdmpvUTRlTU1VZGNZYzVjSlU3MWNWMXI5TUJ2RDhvaGtud2hyTTZjSEptU3h4bXRqRXR3UXF2Tm1NTXlSRUx2UFhv?oc=5" target="_blank" rel="noopener">SK머티리얼즈 제이엔씨의 차세대 OLED 소재 개발 현황 소개</a></li>
+</ul>
+<p>OLED 디스플레이 소재 기술 발전과 미래 전망 제시</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE1DV1puZEdUTWtUME0yMHVsSFd0cTdaSUFER0s5SDBBdkM0bDlObVFoQk1lVlRjcHczYWQ0eE10aXpDSVVQeHVUcnR3czZ4dw?oc=5" target="_blank" rel="noopener">SK에코플랜트, 노동부 경기청과 현장 온열질환 예방 협력</a></li>
+</ul>
+<p>건설 현장 근로자 안전을 위한 정부기관 협력 강화</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5jYi03bXZoQXE5Q3hjSHFSWVpiQ3lGQndBNTVnb1lLNXMxSXNYQVg1VVNmTEVXOG1NQ214dGJsbDR2WEVfM0xDanhrcnZ0NFFWLURTQ2VKcTZUZw?oc=5" target="_blank" rel="noopener">SK에코플랜트, 고용부와 폭염 대응 캠페인으로 온열질환 예방 강화</a></li>
+</ul>
+<p>여름철 건설 현장 안전 관리를 위한 정부 합동 캠페인 추진</p>
+
+<h3>첨단 패키징</h3>
+<p>ScioSense가 고정밀 초음파 유량 변환기 UFC23을 출시하며 시스템 아키텍처 유연성을 강화했다.</p>
+
+<ul>
+<li><a href="https://www.eetimes.com/sciosense-launches-ufc23-ultrasonic-flow-converter-for-high-precision-ultra-low-power-smart-metering/" target="_blank" rel="noopener">ScioSense, 고정밀 초음파 유량 변환기 UFC23 출시</a></li>
+</ul>
+<p>제조업체들의 시스템 아키텍처와 마이크로컨트롤러 선택 유연성 확보</p>
+
+<h3>DC 냉각</h3>
+<p>Starcloud가 궤도 데이터센터 네트워크 구축을 위해 Starlink에서 50개 이상의 ISL 레이저를 구매했다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/starcloud-buys-50-isl-lasers-off-starlink-for-orbital-data-center-network/" target="_blank" rel="noopener">Starcloud, 궤도 데이터센터용 Starlink ISL 레이저 50개 구매</a></li>
+</ul>
+<p>Starlink 상호 연결 솔루션에 대한 의존도 강화</p>
+
+<h3>인력 / 인사</h3>
+<p>SK에코플랜트와 GS건설이 사업 재편을 통해 서로 다른 인력 운영 전략을 보이고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE9TcnBaVWNzeVo1a3NUZ0tkeVBlTTctZ2xTVVQwaU4zT1FYcm1Ga2lmOEt4RGU5MTJDV0N0ZUJNWDZJdGpnU2diTUFNemNRdDl6bXBKT3lxa2hPSXdZY2xxWFcxSVFTSVVL?oc=5" target="_blank" rel="noopener">SK에코플랜트·GS건설, 사업 재편으로 인력 지형 변화</a></li>
+</ul>
+<p>두 건설사의 사업 구조조정에 따른 인력 운영 방향 차별화</p>
+
+<h3>기타</h3>
+<p>개인 투자자가 반도체 주식 투자로 1억원 수익을 얻었으나 가족에게 고백하지 못해 고민하는 사례가 화제가 되었다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE9wUkNIQTVYQTZkWjJDQ1V6SGhSakZwNXZta0dSeEhYQkJLRHpnU2JUemNHZjJWUjBlOVpuZUctcXlmRjQ1V1QtZk5DamZQcFFz?oc=5" target="_blank" rel="noopener">반도체 투자로 1억 수익 얻은 투자자의 고백 고민 화제</a></li>
+</ul>
+<p>아내 몰래 투자한 사실을 고백할지 고민하는 개인투자자 사연이 온라인에서 주목</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[EDF, 佛 폐발전소에 SoftBank 400MW·Eclairion 330MW DC 선정] 현재 타당성 조사 단계로 환경/기술/행정 검토 결과에 따라 프로젝트 변경 가능. 폐루프 냉각 시스템 채택으로 전력 소비 증가 우려.</li>
+<li>[QTS, 오하이오 Van Wert에 100억달러 규모 DC 캠퍼스 발표] 구체적인 착공 일정 및 단계별 투자 계획 미공개. American Electric Power와 전력 인프라 구축 협력 필요로 전력 공급 일정이 주요 변수.</li>
+<li>[TSMC, 화웨이 &#x27;Her&#x27;s Law&#x27; 제안에도 트랜지스터 스케일링 지속 강조] 미세공정 한계 도달 시 대안 기술 전환 지연 리스크. 화웨이 등 중국 업체의 3D 패키징 기술 추격.</li>
+<li>[SK에코플랜트, 서울 이촌 리모델링·대전 재개발 동시 수주] 리모델링 시장 경험 부족으로 서울 첫 사업의 시공 리스크. 대전 사업은 대규모 재정비촉진지구 내 위치로 공정 조율 필요.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>타당성 조사 완료 후 최종 임대계약 체결 여부 및 착공 일정 확인 필요.</li>
+<li>6월 11일 주민 설명회 결과 및 구체적인 개발 일정/단계별 투자 계획 발표 모니터링.</li>
+<li>주요 반도체 업체들의 AI 특화 칩/시스템 개발 로드맵 및 투자 계획 확인.</li>
+<li>TSMC의 2nm 이하 공정 개발 진척도 및 3D 패키징 기술 투자 확대 여부 확인.</li>
+<li>이촌 리모델링 사업계획 승인 및 착공 시점, 대전 재개발 분양 일정 확인.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 12/14건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-06-02T23:06:00.729480+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>

@@ -898,5 +898,14 @@
     "top_headline": "SK에코플랜트, 서울 이촌 리모델링·대전 재개발 동시 수주",
     "sk_headline": "반도체 중심 사업재편으로 인력 8% 증가",
     "article_count": 39
+  },
+  "2026-06-03": {
+    "date": "2026-06-03",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "EDF, 佛 폐발전소에 SoftBank 400MW·Eclairion 330MW DC 선정",
+    "sk_headline": "용인 반도체 현장서 온열질환 예방, 서울 리모델링 진출",
+    "article_count": 39
   }
 }
