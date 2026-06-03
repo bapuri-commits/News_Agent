@@ -907,5 +907,14 @@
     "top_headline": "EDF, 佛 폐발전소에 SoftBank 400MW·Eclairion 330MW DC 선정",
     "sk_headline": "용인 반도체 현장서 온열질환 예방, 서울 리모델링 진출",
     "article_count": 39
+  },
+  "2026-06-04": {
+    "date": "2026-06-04",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "김영식 SK에코플랜트 사장, 반도체·AI 인프라 중심 체질 개선 주도",
+    "sk_headline": "김영식 CEO, 반도체 중심 체질전환으로 수익성 개선 성과",
+    "article_count": 39
   }
 }
