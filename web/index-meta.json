@@ -916,5 +916,14 @@
     "top_headline": "김영식 SK에코플랜트 사장, 반도체·AI 인프라 중심 체질 개선 주도",
     "sk_headline": "김영식 CEO, 반도체 중심 체질전환으로 수익성 개선 성과",
     "article_count": 39
+  },
+  "2026-06-05": {
+    "date": "2026-06-05",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "SK에코 김영식 사장, 반도체 중심 체질개선으로 1Q 영업익 1262% 급증",
+    "sk_headline": "김영식 사장 반도체 전환 가속화, '드파인' 서울 공략",
+    "article_count": 39
   }
 }
