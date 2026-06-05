@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-06-06 (Reference)</title>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --border: #e7e5e4;
+  --accent: #1a73e8;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.ref-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.ref-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-nav-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.ref-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ref-link:hover { text-decoration: underline; }
+.ref-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.ref-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.ref-copy-btn {
+  display: inline-block;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+.ref-copy-btn:hover { opacity: 0.8; }
+.ref-copy-btn:active { transform: scale(0.97); }
+
+.ref-body {
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+.ref-body h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--text);
+}
+.ref-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.ref-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: var(--text);
+}
+.ref-body p {
+  margin: 8px 0;
+}
+.ref-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.ref-body li {
+  margin: 6px 0;
+}
+.ref-body li strong {
+  color: var(--text);
+}
+.ref-body blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  background: #f5f5f4;
+  border-radius: 0 6px 6px 0;
+}
+.ref-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.ref-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+.ref-body a:hover {
+  border-bottom-color: var(--accent);
+}
+.ref-body strong {
+  font-weight: 700;
+}
+.ref-body em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ref-body code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.ref-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ref-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 480px) {
+  .ref-container { padding: 12px; }
+  .ref-header { padding: 16px 12px; }
+  .ref-body { font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+<div class="ref-container">
+  <header class="ref-header">
+    <div class="ref-nav-row">
+      <a href="2026-06-06.html" class="ref-link">&larr; 카드 버전</a>
+      <a href="index.html" class="ref-link">목록</a>
+    </div>
+    <h1 class="ref-title">Executive Briefing</h1>
+    <p class="ref-date">2026-06-06</p>
+    <button class="ref-copy-btn" onclick="copyAll()">전체 복사</button>
+  </header>
+  <article class="ref-body" id="briefing-body">
+<h1>Executive Briefing — 2026-06-06</h1>
+
+<blockquote>SK에코, 아일랜드 1.8조원 연료전지 DC 조건부 승인 / SK에코, 신반포20차 수주로 강남 재건축 진출 / SK에코, 용인·청주 반도체 현장에 인력 집중 재배치</blockquote>
+
+
+<hr>
+
+<h2>주요 뉴스</h2>
+
+<h3>1. SK에코, 아일랜드 1.8조원 연료전지 DC 조건부 승인</h3>
+
+<p>아일랜드 웨스트미스 의회가 250MW급 데이터센터 건설계획 조건부 승인(1/5). 투자액 10억 유로(약 1.8조원), 더블린 서쪽 80km 캐슬로스트 지역 위치. SK에코플랜트는 2023년 11월 럼클룬에너지와 SOFC 공급 MOU 체결, EPC 및 지분투자 참여 예정.</p>
+
+<p><strong>영향</strong>: 아일랜드 첫 에너지 독립형 DC로 SOFC 시장 선점 기회. 단순 시공 넘어 사업개발-투자-EPC 통합 사업자로 역할 확대.</p>
+<p><strong>리스크</strong>: 조건부 승인의 구체적 조건 미확인. SOFC 기술 상용화 및 경제성 검증 필요.</p>
+<p><strong>확인 필요</strong>: 조건부 승인의 세부 조건 및 착공 시점 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE9LUkZvRDRmSEYtdExDekFlZU9wUXI3RFVEVU1SQUpoQ21GTlVjMzBOTmNSb3RHaHoxOUJUTmFRS19HSlVXam10UzMyeWNLM3RDWkVSQml5OG9oVmRxQjF4QnVPSQ?oc=5" target="_blank" rel="noopener">더구루</a></p>
+
+<h3>2. SK에코, 신반포20차 수주로 강남 재건축 진출</h3>
+
+<p>SK에코플랜트가 신반포20차 재건축 수주. &#x27;드파인&#x27; 브랜드로 강남 재건축 시장 진출.</p>
+
+<p><strong>영향</strong>: 고수익 강남 재건축 시장 진입으로 주택사업 수익성 개선 기대.</p>
+<p><strong>리스크</strong>: 미확인 - 수주금액, 공사기간, 조합원 동의율 등 세부사항 부재.</p>
+<p><strong>확인 필요</strong>: 수주금액, 착공시기, 분양가 상한제 적용여부 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1aT2wxcVV6ZVB1aDZ5MTI4cFVTS2dpWXdXT1lWY1NObjBmNDZ0OTlQRWd3Wk9lU0ZiQ2lvcGlMOTd4cm1YQmVlQ29FM0pnQXdFYXh2b3lKNUJZM2hweTRHaDk0Y2M?oc=5" target="_blank" rel="noopener">베타뉴스</a></p>
+
+<h3>3. SK에코, 용인·청주 반도체 현장에 인력 집중 재배치</h3>
+
+<p>전체 직원 2024년 3,449명→2025년 1Q 3,811명 증가. 하이테크 부문 1,045명→1,134명, AI솔루션 부문 1,796명→1,855명 증가. 용인 클러스터 1기 팹 31조원 투자, 클린룸 오픈 2027년 5월→2월로 단축.</p>
+
+<p><strong>영향</strong>: SK하이닉스 HBM 생산확대에 맞춰 반도체 인프라 실행조직으로 전환. 2025년 1Q 영업이익 9,314억원으로 과거 4년 총합 초과.</p>
+<p><strong>리스크</strong>: 공기 단축에 따른 안전관리 및 품질관리 리스크. 숙련인력 확보 및 유지 과제.</p>
+<p><strong>확인 필요</strong>: 용인 1기 팹 공정률 및 2기 팹 착공 일정 확인 필요.</p>
+
+<p>📎 출처: <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE91UFlhSENpM1FaMkQyeXNOWWtnVHkwOFJMc2M1SFdSdzJJY3gwbWd5Vl9mX1dUWTh0MS1uall6dUhUemtxSWJtQ2g4cE9xVG92bzl5cEZweml0MWJuUzQzTTJNRlR0SDE1b1RiSzdFQjh5UdIBdkFVX3lxTFAzaTVvdHZBZU9MTXRkc1lGUWV5dFkwQXdoOFU4V3BaZEZjanVpaWdwMjVVQl9TNHBtNEN4SG9wZUtaRjVxSkhSb0Y2WnUtdEluZk1BZjFucDF6Vjh1ekU2d1BFR2tBX0x1WVdkNmlNMlBXVVMyU3c?oc=5" target="_blank" rel="noopener">시사저널e</a></p>
+
+<h3>4. 이탈리아 조폐국 프리팹 DC 5주만에 완공</h3>
+
+<p>Sirti Digital Solutions가 이탈리아 조폐국에 프리팹 DC 5주만에 구축. 2,800만 유로(325억원) 투자, 1,200㎡ 면적, 200랙 1.5MW IT용량, PUE 1.25 이하. 44개 모듈 조립, 100% 재활용 가능 소재, 콘크리트 미사용.</p>
+
+<p><strong>영향</strong>: 모듈형 프리팹 DC의 초단기 구축 가능성 입증. 지진대응 및 시속 200km 강풍 견딜 수 있는 내구성 확보.</p>
+<p><strong>확인 필요</strong>: 모듈형 DC의 확장성 및 타 프로젝트 적용 사례 모니터링.</p>
+
+<p>📎 출처: <a href="https://www.datacenterdynamics.com/en/news/earthquake-proof-prefab-rome-data-center-built-in-five-weeks/" target="_blank" rel="noopener">DatacenterDynamics</a></p>
+
+<h3>5. Nikon, 패키징용 1.5μm L/S 디지털 리소 출시</h3>
+
+<p>Nikon이 후공정 어드밴스드 패키징용 디지털 리소 시스템 발표. 1.5마이크론 라인/스페이스, 시간당 65패널 처리속도. 2027년 3월 말까지 출시 예정.</p>
+
+<p><strong>영향</strong>: AI칩 수요 증가로 어드밴스드 패키징 장비 시장 경쟁 심화. 기존 스테퍼 대비 생산성 향상 기대.</p>
+<p><strong>확인 필요</strong>: ASML 등 경쟁사 대응 및 주요 파운드리 도입 계획 확인.</p>
+
+<p>📎 출처: <a href="https://semiengineering.com/chip-industry-week-in-review-141/" target="_blank" rel="noopener">Semiconductor Engineering</a></p>
+
+<hr>
+
+<h2>SK에코플랜트 동향</h2>
+
+<p><strong>아일랜드 데이터센터 승인·노량진 분양 가시화</strong></p>
+
+<ul>
+<li><strong>수주·믹스</strong> 아일랜드 웨스트미스 의회가 250MW급 데이터센터 사업을 조건부 승인했다(주장: 투자액 10억 유로/약 1조8000억원, 기사 기준). SK에코플랜트는 2023년 11월 MOU 체결로 SOFC 공급·EPC·지분 투자 등 종합사업자로 참여 예정이다. 노량진2구역 드파인 아르티아(171세대 일반분양) 등 국내 주택사업도 병행 추진 중이다.</li>
+<li><strong>IPO/경쟁사</strong> 용인 반도체 클러스터와 청주 M15X 등 핵심 현장에 하이테크 부문 인력을 1045명→1134명으로 확대 배치했다(주장: 2025년 1분기 기준). SK하이닉스 HBM 생산능력 확대에 맞춰 반도체 인프라 중심으로 사업 구조 재편을 가속화하고 있다. 김영식 사장의 반도체 제조 경험을 활용해 공정 속도전에 집중하는 모습이다.</li>
+</ul>
+
+<p>📎 <a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE9LUkZvRDRmSEYtdExDekFlZU9wUXI3REFURU1SQUpoQ21GTlVjMzBOTmNSb3RHaHoxOUJUTmFRS19HSlVXam10UzMyeWNLM3RDWkVSQml5OG9oVmRxQjF4QnVPSQ?oc=5" target="_blank" rel="noopener">더구루</a></p>
+<p>📎 <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE91UFlhSENpM1FaMkQyeXNOWWtnVHkwOFJMc2M1SFdSdzJJY3gwbWd5Vl9mX1dUWTh0MS1uall6dUhUemtxSWJtQ2g4cE9xVG92bzl5cEZweml0MWJuUzQzTTJNRlR0SDE1b1RiSzdFQjh5UdIBdkFVX3lxTFAzaTVvdHZBZU9MTXRkc1lGUWV5dFkwQXdoOFU4V3BaZEZjanVpaWdwMjVVQl9TNHBtNEN4SG9wZUtaRjVxSkhSb0Y2WnUtdEluZk1BZjFucDF6Vjh1ekU2d1BFR2tBX0x1WVdkNmlNMlBXVVMyU3c?oc=5" target="_blank" rel="noopener">시사저널e</a></p>
+
+<hr>
+
+<h2>카테고리별 기사</h2>
+
+<h3>반도체 Fab / CapEx</h3>
+<p>반도체 업계의 대규모 투자 확산과 함께 관련 밸류체인 전반에 투자 수혜가 확대되고 있다. AI 투자 급증으로 반도체 설비투자와 기판 공장 증설이 가속화되는 동시에, 브로드컴 쇼크 등으로 투자 변동성도 증가하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1HelF2R2F6UkU3UHFzbTYzdnN3LVgzNG1ydEppcHpJRjloVkZWQjRtUF9Pd2hRSkdUOWZtZnFpNDdJcTdVazVhRS1LSGg2WFpMSXI0YlE1VDE4X0xYYkQwY0dsczhSbXRBeFdIZlpoZGnSAXBBVV95cUxNR3pRdkdhelJFN1Bxc202M3Zzdy1YMzRtcnRKaXB6SUY5aFZGVkI0bVBfT3doUUpHVDlmbWZxaTQ3SXE3VWs1YUUtS0hoNlhaTElyNGJRNVQxOF9MWGJEMGNHbHM4Um10QXhXSGZaaGRp?oc=5" target="_blank" rel="noopener">반도체 호황으로 EHS 투자 주목</a></li>
+</ul>
+<p>삼성·SK의 EHS 투자 기조가 지속될 전망</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE84bm01SG9BdE9EY3hSU3pWRzJmNGdnWVc5RHlHcEM2Z180cDh1UUhGeXBsYl83eElIUmpDN2ZWaVkzZTlRWVRlYXdHdU5lUFZDOFUxOVJJNm5OMGRVazlkTW1oY0xacTlrb3gzVFRhM2ZSQjg?oc=5" target="_blank" rel="noopener">온투 이노베이션 반도체 투자 수혜 기대</a></li>
+</ul>
+<p>도이체방크가 투자의견 &#x27;매수&#x27; 제시</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9ad3dmLXVTRFYxNjZFSGp1YUF4ZFdURDg4STZ6bktvOHF6SWxuNmt2dUI2dWMwRk42VWVoTWxoT3RWZ3ZrLWRzSGh1OFB5b0s1SmRQWjBNS2ljN2NfLVZfOdIBYEFVX3lxTE9ad3dmLXVTRFYxNjZFSGp1YUF4ZFdURDg4STZ6bktvOHF6SWxuNmt2dUI2dWMwRk42VWVoTWxoT3RWZ3ZrLWRzSGh1OFB5b0s1SmRQWjBNS2ljN2NfLVZfOQ?oc=5" target="_blank" rel="noopener">일본 산업용 로봇 수주 17% 증가</a></li>
+</ul>
+<p>반도체 설비투자 영향으로 수주 급증</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE05V3lFLVJweVlSV1JXVDhadHJVd0VIWlFRZVVsdHVBUHZhS2szU1pLd19YLV8tQl9aZFF6YkNwakVncHZOUHloN0tSb2FjWDhXOVR3TXRjVVRVLXlaM2R2ZGVhSkt1alNVeTRwMDhtazFaYms?oc=5" target="_blank" rel="noopener">삼성·SK하이닉스 업황 고점 리스크 부각</a></li>
+</ul>
+<p>중국 투자 확대와 수요 감소 우려 제기</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE9taDhlSjJWSWVQT2M2U2RxRk55WTRrQlJWTkVuam5IcHhhb3BXdlo1U0Y3ZExXMVVpRi1zaW5ySEQzenNuWlF0ZnNzWVBFVXlYTURna29YWU9lMWtYWHFCRk1MUVVIX0QwbjRnRlpQMHRGMmI0M3fSAWZBVV95cUxPUGdZcU1ySDg3TktwbEVQcS03VnRNNGVocVl6a3p5eWtnZVM4UGhncTg3TjlWdHhQU0RCdlBiTzV2c0w3TWVlVXFVWWNYZ1lQTTR6cHExc0FsUkY1WlRKLVd0MDVrcXc?oc=5" target="_blank" rel="noopener">빅테크의 반도체 기판 공장 증설 러브콜</a></li>
+</ul>
+<p>선수금 제공하며 공장 증설 요청 쇄도</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5HRDhhbGlRTTVNWlFVUTlhWVlWZnFtUHlCeVpWa0RITzc2OEZfNWl0cUoxZHJJLTFuSi0tTE4zcU8taDE5TmV4RlNKWXFzWnhJN3g5N1hNTFExY0swMi1TUFlpYWwwQk5NTE5BSGFxZ03SAXBBVV95cUxOR0Q4YWxpUU01TVpRVVE5YVlZVmZxbVB5QnlaVmtESE83NjhGXzVpdHFKMWRySS0xbkotLUxOM3FPLWgxOU5leEZTSllxc1p4STd4OTdYTUxRMWNLMDItU1BZaWFsMEJOTUxOQUhhcWdN?oc=5" target="_blank" rel="noopener">LG이노텍 베트남 반도체 기판 공장 증설</a></li>
+</ul>
+<p>패키지 사업 육성 가속화 추진</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5UTlJPTmRXdmJQMFlJZTBzTHlLdWV0UlRibmlrblZJOVFKSU8xYTZmRDlPMC1SVEtYT2FVNWIydENLdENJbmhjNXNKcHNqMVp4STNSak9Wd1dpQkI2cS1yUdIBYEFVX3lxTE5UTlJPTmRXdmJQMFlJZTBzTHlLdWV0UlRibmlrblZJOVFKSU8xYTZmRDlPMC1SVEtYT2FVNWIydENLdENJbmhjNXNKcHNqMVp4STNSak9Wd1dpQkI2cS1yUQ?oc=5" target="_blank" rel="noopener">브로드컴 쇼크로 반도체 매도세</a></li>
+</ul>
+<p>비기술주로 자금 이동 현상</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5UTVhNay04WGdDdDRvU3kyWFpMSzB3TDQ5b1lKN1FqVktCMGVuU2FWUzc4SHFGdUR1ckN1VDV1bG9BTFdmbnRkRGtYZVh1MEpUbW1Db1JseURfSWp4U0MwTURabENFMUE10gFuQVVfeXFMUFVXaXlvOHl2SGhiRUdNQ25aVl82SzJIR2dYcWZpak11MWFyYjJUOVdmU2twaVFTa0dsNmNTUnZZaEltRjRtMkQ1eF9YV1RMM2xlOGh6Vk80OW1qOERraDJQaGxuVlNnUXhBbHJDVmc?oc=5" target="_blank" rel="noopener">AI 투자로 반도체 밸류체인 주목</a></li>
+</ul>
+<p>ACE ETF 맞춤형 라인업 출시</p>
+
+<h3>데이터센터 신축</h3>
+<p>글로벌 데이터센터 건설 프로젝트가 활발히 진행되고 있으나, 지역별로 상반된 상황을 보이고 있다. 시카고와 로마에서는 새로운 데이터센터가 완공되거나 건설 중인 반면, 미국에서는 환경 우려와 법적 분쟁으로 프로젝트 지연이 발생하고 있다.</p>
+
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/edged-tops-out-second-building-at-chicago-data-center-campus-illinois/" target="_blank" rel="noopener">Edged 시카고 데이터센터 2번째 건물 완공</a></li>
+</ul>
+<p>72MW 규모로 내년 가동 예정</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/earthquake-proof-prefab-rome-data-center-built-in-five-weeks/" target="_blank" rel="noopener">로마에 내진설계 조립식 데이터센터 건설</a></li>
+</ul>
+<p>5주 만에 완공된 2800만 유로 규모 시설</p>
+<ul>
+<li><a href="https://www.datacenterdynamics.com/en/news/compass-datacenters-looks-to-calm-data-center-controversy-by-funding-15m-animal-shelter-in-ellis-county-texas/" target="_blank" rel="noopener">Compass Datacenters 지역 갈등 해결 노력</a></li>
+</ul>
+<p>830에이커 캠퍼스 승인 후 자금 지원 제공</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/judge-halts-google-data-center-project/822152/" target="_blank" rel="noopener">구글 미네소타 데이터센터 프로젝트 중단</a></li>
+</ul>
+<p>법원 명령으로 500만 달러 손실 예상</p>
+
+<h3>EPC / 수주</h3>
+<p>대규모 인프라 프로젝트에서 주요 EPC 계약이 체결되고 있다. NASA 관련 7개 업체 수주와 10억 달러 규모의 오하이오강 터널 프로젝트가 주목받고 있다.</p>
+
+<ul>
+<li><a href="https://www.constructiondive.com/news/nasa-upgrade-turner-uc-berkeley-build-trimble-tour/822052/" target="_blank" rel="noopener">NASA 프로젝트에 7개 업체 수주</a></li>
+</ul>
+<p>터너가 5억5700만 달러 UC 버클리 건물 완공</p>
+<ul>
+<li><a href="https://www.constructiondive.com/news/lane-brayman-jv-ohio-river-tunnel/822171/" target="_blank" rel="noopener">Lane-Brayman JV 10억 달러 터널 공사 수주</a></li>
+</ul>
+<p>펜실베이니아주 청정수 계획의 핵심 프로젝트</p>
+
+<h3>첨단 패키징</h3>
+<p>AI와 지정학적 요인이 전자산업의 새로운 변화를 주도하고 있다. Computex 2026에서 AI 생태계가 부각되며, 젠슨 황과 대만이 전자산업의 중심으로 떠오르고 있다.</p>
+
+<ul>
+<li><a href="https://semiengineering.com/chip-industry-week-in-review-141/" target="_blank" rel="noopener">Computex에서 AI 생태계와 자율 칩 설계 부각</a></li>
+</ul>
+<p>인텔의 AI 랙 타겟팅과 니콘의 1.5미크론 리소그래피 기술 주목</p>
+<ul>
+<li><a href="https://www.eetimes.com/geopolitics-ai-and-jensen-huang-fuel-electronics-rock-and-roll-era/" target="_blank" rel="noopener">젠슨 황과 AI가 Computex 2026 주도</a></li>
+</ul>
+<p>대만이 전자산업과 지정학적 중심지로 부상</p>
+<ul>
+<li><a href="https://www.eetimes.com/manufacturing-accelerates-in-may-amid-inflation-and-geopolitical-headwinds/" target="_blank" rel="noopener">5월 제조업 인플레이션 속에서도 성장</a></li>
+</ul>
+<p>지정학적 역풍에도 불구하고 제조업 확장 지속</p>
+
+<h3>SK에코플랜트</h3>
+<p>SK에코플랜트가 글로벌 데이터센터 사업과 국내 재건축 시장에서 동시에 성과를 거두고 있다. 아일랜드 데이터센터 프로젝트 승인과 강남 재건축 진출로 사업 영역을 확장하고 있다.</p>
+
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE9LUkZvRDRmSEYtdExDekFlZU9wUXI3RFVEVU1SQUpoQ21GTlVjMzBOTmNSb3RHaHoxOUJUTmFRS19HSlVXam10UzMyeWNLM3RDWkVSQml5OG9oVmRxQjF4QnVPSQ?oc=5" target="_blank" rel="noopener">아일랜드 데이터센터 사업 가시화</a></li>
+</ul>
+<p>현지 의회에서 조건부 승인 획득</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1aT2wxcVV6ZVB1aDZ5MTI4cFVTS2dpWXdXT1lWY1NObjBmNDZ0OTlQRWd3Wk9lU0ZiQ2lvcGlMOTd4cm1YQmVlQ29FM0pnQXdFYXh2b3lKNUJZM2hweTRHaDk0Y2M?oc=5" target="_blank" rel="noopener">신반포20차 수주로 강남 재건축 진출</a></li>
+</ul>
+<p>&#x27;드파인&#x27; 브랜드로 강남 시장 공략</p>
+<ul>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE91UFlhSENpM1FaMkQyeXNOWWtnVHkwOFJMc2M1SFdSdzJJY3gwbWd5Vl9mX1dUWTh0MS1uall6dUhUemtxSWJtQ2g4cE9xVG92bzl5cEZweml0MWJuUzQzTTJNRlR0SDE1b1RiSzdFQjh5UdIBdkFVX3lxTFAzaTVvdHZBZU9MTXRkc1lGUWV5dFkwQXdoOFU4V3BaZEZjanVpaWdwMjVVQl9TNHBtNEN4SG9wZUtaRjVxSkhSb0Y2WnUtdEluZk1BZjFucDF6Vjh1ekU2d1BFR2tBX0x1WVdkNmlNMlBXVVMyU3c?oc=5" target="_blank" rel="noopener">용인 반도체 인프라 사업 집중</a></li>
+</ul>
+<p>반도체 관련 인프라 전환 가속화</p>
+
+<hr>
+
+<h2>리스크 모니터링</h2>
+
+<ul>
+<li>[SK에코, 아일랜드 1.8조원 연료전지 DC 조건부 승인] 조건부 승인의 구체적 조건 미확인. SOFC 기술 상용화 및 경제성 검증 필요.</li>
+<li>[SK에코, 신반포20차 수주로 강남 재건축 진출] 미확인 - 수주금액, 공사기간, 조합원 동의율 등 세부사항 부재.</li>
+<li>[SK에코, 용인·청주 반도체 현장에 인력 집중 재배치] 공기 단축에 따른 안전관리 및 품질관리 리스크. 숙련인력 확보 및 유지 과제.</li>
+</ul>
+
+<h2>향후 확인 사항</h2>
+
+<ul>
+<li>조건부 승인의 세부 조건 및 착공 시점 확인 필요.</li>
+<li>수주금액, 착공시기, 분양가 상한제 적용여부 확인 필요.</li>
+<li>용인 1기 팹 공정률 및 2기 팹 착공 일정 확인 필요.</li>
+<li>모듈형 DC의 확장성 및 타 프로젝트 적용 사례 모니터링.</li>
+<li>ASML 등 경쟁사 대응 및 주요 파운드리 도입 계획 확인.</li>
+</ul>
+
+<hr>
+
+<h2>출처 요약</h2>
+
+<p>전체 39개 기사 분석 | DC전문 3건 · 반도체전문 3건 · 건설전문 3건 · 국내매체 30건</p>
+<p>본문 크롤링: 9/11건 성공</p>
+
+
+<hr>
+<p><em>생성: 2026-06-05T22:17:45.529015+00:00</em></p>
+  </article>
+  <div class="ref-toast" id="toast">클립보드에 복사되었습니다</div>
+</div>
+<script>
+function copyAll() {
+  var el = document.getElementById('briefing-body');
+  var text = el.innerText || el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showToast).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast(); }
+    catch(e) { alert('복사에 실패했습니다. 직접 텍스트를 선택해 복사해주세요.'); }
+    document.body.removeChild(ta);
+  }
+  function showToast() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+}
+</script>
+</body>
+</html>

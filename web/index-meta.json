@@ -925,5 +925,14 @@
     "top_headline": "SK에코 김영식 사장, 반도체 중심 체질개선으로 1Q 영업익 1262% 급증",
     "sk_headline": "김영식 사장 반도체 전환 가속화, '드파인' 서울 공략",
     "article_count": 39
+  },
+  "2026-06-06": {
+    "date": "2026-06-06",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "SK에코, 아일랜드 1.8조원 연료전지 DC 조건부 승인",
+    "sk_headline": "아일랜드 데이터센터 승인·노량진 분양 가시화",
+    "article_count": 39
   }
 }
