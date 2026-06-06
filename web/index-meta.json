@@ -934,5 +934,14 @@
     "top_headline": "SK에코, 아일랜드 1.8조원 연료전지 DC 조건부 승인",
     "sk_headline": "아일랜드 데이터센터 승인·노량진 분양 가시화",
     "article_count": 39
+  },
+  "2026-06-07": {
+    "date": "2026-06-07",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "SK에코플랜트 아일랜드 250MW 데이터센터 조건부 승인",
+    "sk_headline": "아일랜드 데이터센터 사업 인허가 획득, AI 인프라 경쟁력 강화",
+    "article_count": 39
   }
 }
