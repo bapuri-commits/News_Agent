@@ -943,5 +943,14 @@
     "top_headline": "SK에코플랜트 아일랜드 250MW 데이터센터 조건부 승인",
     "sk_headline": "아일랜드 데이터센터 사업 인허가 획득, AI 인프라 경쟁력 강화",
     "article_count": 39
+  },
+  "2026-06-08": {
+    "date": "2026-06-08",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "SK에코플랜트 1Q 영업익 1262% 급증, 반도체·AI 중심 재편",
+    "sk_headline": "반도체·AI 삼각편대로 '제2도약' 시동",
+    "article_count": 39
   }
 }
