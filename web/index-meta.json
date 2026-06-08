@@ -952,5 +952,14 @@
     "top_headline": "SK에코플랜트 1Q 영업익 1262% 급증, 반도체·AI 중심 재편",
     "sk_headline": "반도체·AI 삼각편대로 '제2도약' 시동",
     "article_count": 39
+  },
+  "2026-06-09": {
+    "date": "2026-06-09",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "니콘, 후공정 리소장비로 1.5μm L/S 구현",
+    "sk_headline": "반도체·AI 수주로 체질 전환 가속",
+    "article_count": 39
   }
 }
