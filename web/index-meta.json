@@ -970,5 +970,14 @@
     "top_headline": "HBM 품질검사에 3D X-ray CT 기술 도입, 불량 조기 발견",
     "sk_headline": "",
     "article_count": 39
+  },
+  "2026-06-11": {
+    "date": "2026-06-11",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "벡텔, 마이크론 뉴욕 1천억불 반도체 공장 EPC 수주",
+    "sk_headline": "",
+    "article_count": 39
   }
 }
