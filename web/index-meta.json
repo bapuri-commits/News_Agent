@@ -988,5 +988,14 @@
     "top_headline": "Meta, 데이터센터 건설인력 양성에 $115M 투자",
     "sk_headline": "FI 우선주 6509억원 상환으로 IPO 재정비",
     "article_count": 39
+  },
+  "2026-06-13": {
+    "date": "2026-06-13",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "Sentinel DC, 메인州 Jay 제지공장 DC 프로젝트 철회",
+    "sk_headline": "SK에코플랜트, 반도체·AI 인프라 인재 채용 본격화",
+    "article_count": 39
   }
 }
