@@ -997,5 +997,14 @@
     "top_headline": "Sentinel DC, 메인州 Jay 제지공장 DC 프로젝트 철회",
     "sk_headline": "SK에코플랜트, 반도체·AI 인프라 인재 채용 본격화",
     "article_count": 39
+  },
+  "2026-06-14": {
+    "date": "2026-06-14",
+    "theme_label": "SK Focus",
+    "theme_accent": "#ea580c",
+    "theme_gradient": "linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #fb923c 100%)",
+    "top_headline": "Sentinel DC, 메인주 Jay 데이터센터 프로젝트 철회",
+    "sk_headline": "SK에코플랜트, AI·반도체 인재 대거 채용",
+    "article_count": 39
   }
 }
