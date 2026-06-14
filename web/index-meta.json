@@ -1006,5 +1006,14 @@
     "top_headline": "Sentinel DC, 메인주 Jay 데이터센터 프로젝트 철회",
     "sk_headline": "SK에코플랜트, AI·반도체 인재 대거 채용",
     "article_count": 39
+  },
+  "2026-06-15": {
+    "date": "2026-06-15",
+    "theme_label": "Risk Alert",
+    "theme_accent": "#dc2626",
+    "theme_gradient": "linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%)",
+    "top_headline": "SK에코, AI·반도체 매출 비중 1년새 41%→82% 급증",
+    "sk_headline": "SK에코플랜트, AI·반도체 매출 82% 체질전환",
+    "article_count": 39
   }
 }

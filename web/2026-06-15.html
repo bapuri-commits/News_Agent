@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Briefing — 2026-06-15</title>
+<style>
+/* ─── Design Tokens ─── */
+:root {
+  --bg: var(--theme-bg, #f8f9fa);
+  --surface: var(--theme-surface, #ffffff);
+  --text: var(--theme-text, #1f2937);
+  --text-secondary: var(--theme-text-secondary, #6b7280);
+  --border: var(--theme-border, #e5e7eb);
+  --accent: var(--theme-accent, #1a73e8);
+  --accent-light: var(--theme-accent-light, #e8f0fe);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, 'Pretendard', 'Noto Sans KR', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Container ─── */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* ─── Header ─── */
+.header {
+  text-align: center;
+  color: white;
+  border-radius: var(--radius);
+  padding: 32px 24px 24px;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.15) 100%);
+  pointer-events: none;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: white;
+}
+
+.date-badge {
+  background: rgba(255,255,255,0.22);
+  color: white;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+
+.subtitle {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.88rem;
+  margin-top: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.header-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.theme-badge {
+  display: inline-block;
+  padding: 3px 14px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: rgba(255,255,255,0.25);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  backdrop-filter: blur(4px);
+}
+
+.reading-time {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.7);
+  font-weight: 500;
+}
+
+/* ─── Sections ─── */
+.section {
+  margin-bottom: 36px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  letter-spacing: -0.3px;
+}
+
+.section-icon { font-size: 1.2rem; }
+
+/* ─── Base Card ─── */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.rank {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--accent, #1a73e8);
+  min-width: 32px;
+  opacity: 0.8;
+}
+
+.card-title-group { flex: 1; min-width: 0; }
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.cat-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+.chevron {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  transition: transform var(--transition);
+  flex-shrink: 0;
+}
+
+.card.expanded .chevron { transform: rotate(180deg); }
+
+/* ─── Card Body (accordion) ─── */
+.card-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 20px;
+}
+
+.card.expanded .card-body {
+  max-height: 800px;
+  padding: 0 20px 18px;
+}
+
+/* ─── Detail Rows ─── */
+.detail-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+
+.detail-label {
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 10px;
+  border-radius: 6px;
+  background: var(--accent-light);
+  color: var(--accent);
+  text-transform: uppercase;
+  min-width: 54px;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+.detail-label.impact { background: #fef3c7; color: #b45309; }
+.detail-label.risk { background: #fee2e2; color: #dc2626; }
+.detail-label.next { background: #dbeafe; color: #2563eb; }
+
+.detail-text {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.sources {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.sources a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sources a:hover { text-decoration: underline; }
+
+/* ─── Number Highlight ─── */
+.num-hl {
+  color: var(--accent);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── Item Count ─── */
+.item-count {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-left: auto;
+  background: var(--border);
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* ─── SK Section ─── */
+.sk-section {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.sk-headline {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #c2410c;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.lens-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.lens-card {
+  background: white;
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+}
+
+.lens-card:hover { transform: translateY(-1px); }
+
+.lens-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lens-text {
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+/* ─── Category Cards ─── */
+.cat-summary {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  line-height: 1.55;
+}
+
+.cat-impact {
+  font-size: 0.85rem;
+  color: var(--text);
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: #fef3c7;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+.cat-impact .detail-label {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.cat-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cat-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.cat-list li:last-child { border-bottom: none; }
+
+.cat-fact {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+/* ─── Risks & Signals ─── */
+.risk-list, .signal-list {
+  list-style: none;
+  padding: 0;
+}
+
+.risk-list li, .signal-list li {
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+}
+
+.risk-list li:hover, .signal-list li:hover {
+  transform: translateX(4px);
+}
+
+.risk-list li { border-left: 4px solid #dc2626; }
+.signal-list li { border-left: 4px solid #2563eb; }
+
+/* ─── Source Chart ─── */
+.source-total {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.source-chart { padding: 4px 0; }
+
+.source-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.source-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  min-width: 80px;
+  color: var(--text);
+}
+
+.bar-track {
+  flex: 1;
+  height: 10px;
+  background: var(--border);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.source-count {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  min-width: 40px;
+  text-align: right;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── Footer ─── */
+.footer {
+  text-align: center;
+  padding: 28px 0;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  border-top: 1px solid var(--border);
+  margin-top: 16px;
+}
+
+.empty {
+  color: var(--text-secondary);
+  font-style: italic;
+  padding: 16px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   LAYOUT VARIANTS
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Top5 Grid wrapper ─── */
+.top5-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── Hero Layout: Top 1 대형 카드 ── */
+.layout-hero .hero-card {
+  border-left: none;
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+}
+
+.layout-hero .hero-card .card-header {
+  padding: 22px 24px;
+}
+
+.layout-hero .hero-card .rank {
+  opacity: 1;
+  background: var(--accent);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.layout-hero .hero-card .card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+/* ── Grid Layout: 2열 그리드 ── */
+.layout-grid .top5-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.layout-grid .top5-grid .hero-card {
+  grid-column: 1 / -1;
+}
+
+/* ── Editorial Layout: 좌측 강조 ── */
+.layout-editorial .header {
+  text-align: left;
+  border-radius: var(--radius);
+}
+
+.layout-editorial .header-top {
+  justify-content: flex-start;
+}
+
+.layout-editorial .header-meta {
+  justify-content: flex-start;
+}
+
+.layout-editorial .section-title {
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 20px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CARD STYLE VARIANTS
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Elevated: 강한 그림자 + 왼쪽 보더 ── */
+.cards-elevated .card {
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--accent, #e5e7eb);
+}
+
+.cards-elevated .card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── Glass: 반투명 + backdrop blur ── */
+.cards-glass .card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-left: 3px solid var(--accent, #e5e7eb);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* ── Flat: 최소 장식 ── */
+.cards-flat .card {
+  box-shadow: none;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent, #e5e7eb);
+}
+
+.cards-flat .card:hover {
+  box-shadow: none;
+  transform: none;
+  border-color: var(--accent);
+}
+
+/* ── Bordered: 깔끔한 보더 ── */
+.cards-bordered .card {
+  box-shadow: none;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent, #e5e7eb);
+}
+
+.cards-bordered .card:hover {
+  box-shadow: var(--shadow);
+}
+
+/* ── Editorial + Card Style 합성 (specificity 보장) ── */
+.layout-editorial .card {
+  border-left: none !important;
+  border-right: none;
+  border-top: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 0;
+  box-shadow: none !important;
+  margin-bottom: 0;
+}
+
+.layout-editorial .card:first-child {
+  border-top: none;
+}
+
+.layout-editorial .card:hover {
+  transform: none !important;
+  background: var(--accent-light);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   DARK THEME
+   ═══════════════════════════════════════════════════════════ */
+
+.theme-dark {
+  --bg: var(--theme-bg);
+  --surface: var(--theme-surface);
+  --text: var(--theme-text);
+  --text-secondary: var(--theme-text-secondary);
+  --border: var(--theme-border);
+}
+
+.theme-dark .sk-section {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+.theme-dark .sk-headline { color: #fb923c; }
+
+.theme-dark .lens-card {
+  background: #1e293b;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.theme-dark .risk-list li,
+.theme-dark .signal-list li {
+  background: var(--surface);
+}
+
+.theme-dark .detail-label {
+  background: rgba(56,189,248,0.15);
+  color: #38bdf8;
+}
+
+.theme-dark .detail-label.impact {
+  background: rgba(251,191,36,0.15);
+  color: #fbbf24;
+}
+
+.theme-dark .detail-label.risk {
+  background: rgba(248,113,113,0.15);
+  color: #f87171;
+}
+
+.theme-dark .detail-label.next {
+  background: rgba(96,165,250,0.15);
+  color: #60a5fa;
+}
+
+.theme-dark .item-count {
+  background: var(--border);
+  color: var(--text-secondary);
+}
+
+.theme-dark .num-hl {
+  color: #38bdf8;
+}
+
+.theme-dark.cards-glass .card {
+  background: rgba(30,41,59,0.8);
+  border-color: rgba(51,65,85,0.6);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE RESPONSIVE
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 600px) {
+  .lens-grid { grid-template-columns: 1fr; }
+  .layout-grid .top5-grid { grid-template-columns: 1fr; }
+  .container { padding: 16px 12px; }
+  .header { padding: 24px 16px 20px; margin-bottom: 24px; }
+  .logo { font-size: 1.35rem; }
+  .section { margin-bottom: 28px; }
+}
+
+@media (max-width: 480px) {
+  .card-header { padding: 14px 16px; }
+  .card.expanded .card-body { padding: 0 16px 14px; }
+  .detail-row { flex-direction: column; gap: 4px; }
+  .detail-label { align-self: flex-start; }
+  .source-label { min-width: 60px; font-size: 0.75rem; }
+  .risk-list li, .signal-list li { padding: 12px 14px; }
+}
+
+/* ─── Smooth scroll + selection ─── */
+::selection {
+  background: var(--accent-light);
+  color: var(--text);
+}
+
+html { scroll-behavior: smooth; }
+</style>
+<style>:root {
+  --theme-bg: #fef2f2;
+  --theme-surface: #ffffff;
+  --theme-text: #1f2937;
+  --theme-text-secondary: #6b7280;
+  --theme-border: #fecaca;
+  --theme-accent: #dc2626;
+  --theme-accent-light: #fee2e2;
+}</style>
+</head>
+<body>
+<div class="container layout-hero cards-elevated" data-preset="risk_crimson">
+  <header class="header" style="background: linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #ef4444 100%);">
+    <div class="header-top">
+      <h1 class="logo">Executive Briefing</h1>
+      <span class="date-badge">2026-06-15</span>
+    </div>
+    <p class="subtitle">건설 · 반도체 · 데이터센터 · 인프라</p>
+    <div class="header-meta">
+      <span class="theme-badge">Risk Alert</span>
+      
+    </div>
+  </header>
+<style>
+.briefing-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 10px 16px;
+  font-family: -apple-system, 'Pretendard', 'Noto Sans KR', sans-serif;
+  font-size: 0.85rem;
+}
+.theme-dark .briefing-nav {
+  background: rgba(15,23,42,0.82);
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+.briefing-nav a,
+.briefing-nav span {
+  padding: 6px 14px;
+  text-decoration: none;
+  color: var(--accent, #1a73e8);
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.briefing-nav a:hover {
+  background: var(--accent-light, #e8f0fe);
+}
+.briefing-nav .nav-current {
+  color: var(--text, #1f2937);
+  font-weight: 700;
+  background: var(--accent-light, #e8f0fe);
+  border-radius: 20px;
+  padding: 4px 14px;
+}
+.briefing-nav .nav-disabled {
+  color: var(--text-secondary, #d1d5db);
+  opacity: 0.4;
+  pointer-events: none;
+}
+.briefing-nav .nav-sep {
+  color: var(--border, #e5e7eb);
+  padding: 0 2px;
+  user-select: none;
+}
+@media (max-width: 480px) {
+  .briefing-nav { font-size: 0.78rem; gap: 0; padding: 8px 8px; }
+  .briefing-nav a, .briefing-nav span { padding: 5px 8px; }
+  .briefing-nav .nav-current { padding: 3px 10px; }
+}
+</style>
+<nav class="briefing-nav"><a href="2026-06-14.html">← 2026-06-14</a><span class="nav-sep">|</span><span class="nav-current">2026-06-15</span><span class="nav-sep">|</span><span class="nav-disabled">→</span><span class="nav-sep">|</span><a href="2026-06-15-text.html">📋 텍스트</a><span class="nav-sep">|</span><a href="index.html">목록</a></nav>
+
+
+  <section class="section section-top5">
+    <h2 class="section-title">
+      <span class="section-icon">⚡</span> Top 5
+    </h2>
+    <div class="top5-grid">
+          <div class="card top5-card hero-card" style="--accent: #1a73e8">
+      <div class="card-header">
+        <span class="rank">#1</span>
+        <div class="card-title-group">
+          <h3 class="card-title">SK에코, AI·반도체 매출 비중 1년새 41%→82% 급증</h3>
+          <span class="cat-badge" style="background: #1a73e815; color: #1a73e8">반도체 Fab / CapEx</span>
+        </div>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Fact</span><span class="detail-text">SK에코플랜트의 AI·반도체 3개 부문(Hi-Tech, Gas &amp; Material, Asset Lifecycle) 매출이 <strong class="num-hl">2025년</strong> <strong class="num-hl">1분기</strong> <strong class="num-hl">4조</strong>354억원으로 전년동기 대비 <strong class="num-hl">171.7%</strong> 증가. 전체 매출 중 AI·반도체 비중이 <strong class="num-hl">2024년</strong> 41%에서 <strong class="num-hl">2025년</strong> <strong class="num-hl">1분기</strong> 82.4%로 확대. <strong class="num-hl">2026년</strong> <strong class="num-hl">1분기</strong> 기준 주요 수주에 용인 클러스터, SK하이닉스 M15X, 울산 AIDC 등 포함.</span></div><div class="detail-row"><span class="detail-label impact">Impact</span><span class="detail-text">기존 환경·에너지 중심에서 AI EPC 중심으로 전면 사업구조 재편. 반도체 팹 시공뿐 아니라 가스·소재 공급까지 지속 매출 확보 구조 구축.</span></div><div class="detail-row"><span class="detail-label risk">Risk</span><span class="detail-text">AI·반도체 부문 집중도 82%로 특정 사업 의존도 과다. 반도체 다운사이클 시 실적 급락 우려.</span></div><div class="detail-row"><span class="detail-label next">Next</span><span class="detail-text">SK하이닉스 M15X 및 용인 클러스터 공사 진행 상황과 추가 수주 확보 여부 확인 필요.</span></div>
+        <div class="sources"><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBBZlBNd2JOajlLRVZ6V2dqU2dtRnAtcWM5SE9lX3U5Rk1QX0JlS21uSUxyQ01kM0laV0t4UkhYRnYwUkt5TzZ4VXYxZDRYTi11SE14ZWR3LVFCTTRmOUluN0YyWTZEMlJFRjRDQ1hGRkI5X0k?oc=5" target="_blank" rel="noopener">소비자가 만드는 신문</a></div>
+      </div>
+    </div>
+    <div class="card top5-card" style="--accent: #0d9488">
+      <div class="card-header">
+        <span class="rank">#2</span>
+        <div class="card-title-group">
+          <h3 class="card-title">SK에코, 반도체 신입 두자릿수 채용…28일까지 접수</h3>
+          <span class="cat-badge" style="background: #0d948815; color: #0d9488">인력 / 인사</span>
+        </div>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Fact</span><span class="detail-text">SK에코플랜트가 반도체 플랜트설계 및 시공 분야 주니어 탤런트(신입~<strong class="num-hl">3년</strong> 미만 경력) 두 자릿수 채용. 6월 28일까지 SK커리어스 플랫폼에서 접수. 9월 최종 입사 예정.</span></div><div class="detail-row"><span class="detail-label impact">Impact</span><span class="detail-text">AI 인프라 사업 확대에 따른 전문인력 확보 본격화. 기존 경력직 채용에 이어 신입 채용으로 인재 파이프라인 구축.</span></div><div class="detail-row"><span class="detail-label risk">Risk</span><span class="detail-text">반도체 업계 전반의 인재 확보 경쟁 심화로 우수 인력 채용 어려움 예상.</span></div><div class="detail-row"><span class="detail-label next">Next</span><span class="detail-text">채용 규모 및 지원자 수준 확인으로 SK에코플랜트의 반도체 사업 투자 의지 가늠 필요.</span></div>
+        <div class="sources"><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE8tcWNTQUFsN3lCQ3BvNzRNaDlLVzhNUWlCT2ZkdnRXVVhjZFlCMFZiUVMtenN2ZDJraUhwU2pXdlc0VXNtdy12czJZTGpRY0szZjdURG9WRWNsVkhxc0VyTGFhZzROelVieW1J0gFvQVVfeXFMUGxuSFBPMDFQWTRSUVE2cVM4b2NrM1dTUWMxTEtRNWxJX0tIM0pYblIwZjVxMGJmbVpWblJTMkJ0VExja3NaMnhRVFNOc1daLXRyekFnZUR5R3JKLWwyYVdzYkFPa2xsVDV5VkM3OXNN?oc=5" target="_blank" rel="noopener">더퍼블릭</a></div>
+      </div>
+    </div>
+    <div class="card top5-card" style="--accent: #0d9488">
+      <div class="card-header">
+        <span class="rank">#3</span>
+        <div class="card-title-group">
+          <h3 class="card-title">Vertiv, 이탈리아 냉각기업 ThermoKey 인수 완료</h3>
+          <span class="cat-badge" style="background: #0d948815; color: #0d9488">DC 냉각</span>
+        </div>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Fact</span><span class="detail-text">데이터센터 전력·냉각 대기업 Vertiv가 이탈리아 냉각 전문기업 ThermoKey 인수를 6월 13일 완료. 3월 인수 계획 발표 후 약 3개월 만에 거래 종결. ThermoKey CEO Giuseppe Visentini는 계속 경영 참여.</span></div><div class="detail-row"><span class="detail-label impact">Impact</span><span class="detail-text">Vertiv의 EMEA 지역 열관리 포트폴리오 및 제조역량 강화. AI 인프라 확대로 고밀도 냉각 수요 증가에 대응.</span></div><div class="detail-row"><span class="detail-label risk">Risk</span><span class="detail-text">인수 금액 미공개로 투자 규모 및 재무 영향 파악 불가.</span></div><div class="detail-row"><span class="detail-label next">Next</span><span class="detail-text">Vertiv의 ThermoKey 기술을 활용한 신제품 출시 및 EMEA 시장 점유율 변화 모니터링 필요.</span></div>
+        <div class="sources"><a href="https://www.datacenterdynamics.com/en/news/vertivs-acquisition-of-thermokey-closes/" target="_blank" rel="noopener">DatacenterDynamics</a></div>
+      </div>
+    </div>
+    <div class="card top5-card" style="--accent: #1a73e8">
+      <div class="card-header">
+        <span class="rank">#4</span>
+        <div class="card-title-group">
+          <h3 class="card-title">한국, 2026년 반도체 장비투자 297억달러로 세계 2위 전망</h3>
+          <span class="cat-badge" style="background: #1a73e815; color: #1a73e8">반도체 Fab / CapEx</span>
+        </div>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Fact</span><span class="detail-text">SEMI 분석에 따르면 한국의 <strong class="num-hl">2026년</strong> 반도체 장비 투자액은 약 297억달러(<strong class="num-hl">42조원</strong>)로 <strong class="num-hl">2025년</strong> 대비 <strong class="num-hl">27.2%</strong> 증가 전망. 중국에 이어 세계 2위로 대만 추월 예상. 정부는 2025-<strong class="num-hl">2027년</strong> 총 186억유로(<strong class="num-hl">26조원</strong>) 규모 지원 패키지 발표.</span></div><div class="detail-row"><span class="detail-label impact">Impact</span><span class="detail-text">삼성전자·SK하이닉스의 HBM 및 10나노급 첨단 D램 생산능력 대폭 확충. 글로벌 메모리 반도체 시장 지배력 강화.</span></div><div class="detail-row"><span class="detail-label risk">Risk</span><span class="detail-text">중국의 생산능력 확충 및 가격 경쟁, 미국 수출규제로 인한 공급망 불안정 지속.</span></div><div class="detail-row"><span class="detail-label next">Next</span><span class="detail-text">2026년 상반기 실제 장비 발주 규모 및 HBM 수요 충족도 확인 필요.</span></div>
+        <div class="sources"><a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE5VeG13d0tqYUNwaS03M3pkV0tOWEw5YlYtMU9GeHNyc1l4YUg3RUI5MVBvS3VCaWYxaXV0WG5mTW1pM1U3Vmw3ZlRn?oc=5" target="_blank" rel="noopener">뉴스N연합</a></div>
+      </div>
+    </div>
+    <div class="card top5-card" style="--accent: #7c3aed">
+      <div class="card-header">
+        <span class="rank">#5</span>
+        <div class="card-title-group">
+          <h3 class="card-title">구글, GPU 11만개 월 9.2억달러에 임대…HBM 수요 지속</h3>
+          <span class="cat-badge" style="background: #7c3aed15; color: #7c3aed">데이터센터 신축</span>
+        </div>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Fact</span><span class="detail-text">구글이 스페이스X로부터 <strong class="num-hl">2026년</strong> 10월~<strong class="num-hl">2029년</strong> 6월까지 엔비디아 GPU 약 11만개를 월 9.2억달러에 임대. 전체 계약 규모 315억달러. SK하이닉스가 HBM 시장 점유율 <strong class="num-hl">62%</strong>(출하량 기준) 차지.</span></div><div class="detail-row"><span class="detail-label impact">Impact</span><span class="detail-text">빅테크의 AI 연산 수요가 자체 데이터센터 증설 속도를 초과. GPU 핵심부품인 HBM 수요 지속 증가로 SK하이닉스 수혜 예상.</span></div><div class="detail-row"><span class="detail-label risk">Risk</span><span class="detail-text">삼성전자의 HBM4 양산 성공 시 SK하이닉스 점유율 하락 가능. AI 투자 사이클 고점 논란.</span></div><div class="detail-row"><span class="detail-label next">Next</span><span class="detail-text">2026년 하반기 삼성전자 HBM4 엔비디아 공급 승인 여부 및 SK하이닉스 점유율 변화 확인.</span></div>
+        <div class="sources"><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE9fMGNkcWVRVmQ5ckVxaWRYazhlQnFlNDEyUFJBbGllMEpiUjhLelN4bWF5R1BBZDctTDZxdEdVSDM3SXhvd3ZsUml3bnNnc1puRGRYc2dKa29OLUxlX3p4NGUwWG1yWnkyUG5lZVB3?oc=5" target="_blank" rel="noopener">이포커스</a></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+    <section class="section sk-section">
+    <h2 class="section-title">
+      <span class="section-icon">🏢</span> SK에코플랜트 렌즈
+    </h2>
+    <div class="sk-headline">SK에코플랜트, AI·반도체 매출 82% 체질전환</div>
+    <div class="lens-grid">
+            <div class="lens-card" style="border-left: 3px solid #f97316">
+        <div class="lens-label" style="color: #f97316">수주·믹스</div>
+        <div class="lens-text">AI·반도체 관련 3개 부문(Hi-Tech, Gas &amp; Material, Asset Lifecycle) 매출이 <strong class="num-hl">2025년</strong> 1Q <strong class="num-hl">4조</strong>354억원으로 전년 동기 대비 <strong class="num-hl">171.7%</strong> 증가했다(주장, 전자공시 기준). 전체 매출 대비 비중은 <strong class="num-hl">2024년</strong> 41%에서 <strong class="num-hl">2025년</strong> <strong class="num-hl">66.8%</strong>, 1Q에는 82.4%로 급상승했다(주장, 기사 기준). 수주 잔량도 용인 클러스터, SK하이닉스 M15X, 울산 AIDC 등 반도체·데이터센터 중심으로 구성되어 수주 믹스 전환이 가시화되었다.</div>
+      </div>      <div class="lens-card" style="border-left: 3px solid #ef4444">
+        <div class="lens-label" style="color: #ef4444">현금흐름</div>
+        <div class="lens-text">해당 기간 특이사항 없음</div>
+      </div>      <div class="lens-card" style="border-left: 3px solid #dc2626">
+        <div class="lens-label" style="color: #dc2626">PF/우발채무</div>
+        <div class="lens-text">해당 기간 특이사항 없음</div>
+      </div>      <div class="lens-card" style="border-left: 3px solid #8b5cf6">
+        <div class="lens-label" style="color: #8b5cf6">IPO/경쟁사</div>
+        <div class="lens-text">SK에코플랜트가 반도체 플랜트설계·시공 분야 주니어 탤런트를 두 자릿수 규모로 채용한다고 발표했다(주장, 12일 발표). AI 인프라 시장 성장으로 관련 기술 인력 확보 경쟁이 치열해지는 가운데, 5월 경력직 모집에 이어 신입 인재 확보에도 적극 나서고 있다. 성균관대와 협력한 &#x27;하이테크솔루션학과 석사과정&#x27; 운영 등 체계적 인재 육성 프로그램도 병행하고 있다.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">
+      <span class="section-icon">📊</span> 카테고리별 동향
+    </h2>
+        <div class="card cat-card" style="--accent: #1a73e8">
+      <div class="card-header">
+        <span class="cat-badge" style="background: #1a73e815; color: #1a73e8">반도체 Fab / CapEx</span>
+        <span class="item-count">5건</span>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <p class="cat-summary">반도체 기업들의 호남·충청권 투자 검토에 대해 경북도가 위기가 아닌 기회라며 적극적인 투자 유치 의지를 표명했다. 반도체 호황으로 인한 초과세수 <strong class="num-hl">15조원</strong> 발생으로 정부가 미래 투자 확대를 계획하고 있다. 전국 반도체 생태계 확산과 후공정 투자 증가가 지역별 경쟁을 가속화하고 있다.</p>
+        <p class="cat-impact"><span class="detail-label impact">Impact</span> 반도체 투자의 전국적 확산은 수도권 집중에서 벗어나 지역 균형발전을 촉진하는 동시에, 지자체 간 투자 유치 경쟁을 심화시킬 것으로 전망된다. 정부의 초과세수 기반 미래 투자 확대는 국내 반도체 생태계 강화와 글로벌 경쟁력 제고에 긍정적 영향을 미칠 것으로 예상된다.</p>
+        <ul class="cat-list"><li><strong>경북도, 호남·충청권 반도체 투자를 위기가 아닌 기회로 평가</strong><br><span class="cat-fact">경북도가 타 지역 반도체 투자에 대해 긍정적 입장을 표명했다</span></li><li><strong>반도체 호황으로 초과세수 15조원 전망, 정부 미래 투자 확대</strong><br><span class="cat-fact">반도체 수출 증가로 올해 초과세수 15조원이 예상되어 미래 투자에 활용할 예정이다</span></li><li><strong>한국, 2026년 반도체 장비 투자 세계 2위 전망</strong><br><span class="cat-fact">HBM과 첨단 D램 증설이 한국의 반도체 장비 투자를 세계 2위 수준으로 끌어올릴 것으로 예상된다</span></li><li><strong>전남·광주, AI·에너지·인재 중심의 반도체 밸리 구축 추진</strong><br><span class="cat-fact">전남과 광주가 반도체 클러스터 조성을 통한 지역 발전을 도모하고 있다</span></li><li><strong>HBM 생산 증가로 반도체 공장 용수 확보 경쟁 심화</strong><br><span class="cat-fact">HBM 등 고성능 반도체 생산에 필요한 용수 확보가 주요 이슈로 부상했다</span></li></ul>
+      </div>
+    </div>
+    <div class="card cat-card" style="--accent: #8b5cf6">
+      <div class="card-header">
+        <span class="cat-badge" style="background: #8b5cf615; color: #8b5cf6">첨단 패키징</span>
+        <span class="item-count">4건</span>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <p class="cat-summary">HBM 시장 호황으로 후공정 관련 기업들이 주목받고 있으며, 제너셈 등 후공정 장비업체가 수혜를 받고 있다. 구글의 GPU 대량 임대와 울트라캐패시터 신제품 출시 등 반도체 패키징 분야의 기술 발전과 수요 증가가 지속되고 있다.</p>
+        <p class="cat-impact"><span class="detail-label impact">Impact</span> HBM과 AI 반도체 수요 급증으로 후공정 패키징 기술의 중요성이 부각되면서 관련 장비업체들의 성장 기회가 확대되고 있다.</p>
+        <ul class="cat-list"><li><strong>HBM 전쟁에서 후공정 장비업체 제너셈 급부상</strong><br><span class="cat-fact">HBM 시장 성장으로 후공정 장비업체들이 새로운 성장 동력을 확보했다</span></li><li><strong>구글 GPU 11만개 임대로 SK하이닉스 HBM 호황 지속 전망</strong><br><span class="cat-fact">구글의 대규모 GPU 임대가 HBM 수요 증가로 이어질 것으로 예상된다</span></li><li><strong>Tecate Group, 새로운 울트라캐패시터 셀 제품 발표</strong><br><span class="cat-fact">고성능 울트라캐패시터 기술이 반도체 패키징 분야에 적용될 예정이다</span></li><li><strong>UCLA, 1억2500만달러 반도체 허브 설립으로 AI 연구 강화</strong><br><span class="cat-fact">UCLA가 대규모 투자를 통해 반도체 기술 혁신을 도모하고 있다</span></li></ul>
+      </div>
+    </div>
+    <div class="card cat-card" style="--accent: #6366f1">
+      <div class="card-header">
+        <span class="cat-badge" style="background: #6366f115; color: #6366f1">장비 / 부품 공급망</span>
+        <span class="item-count">1건</span>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <p class="cat-summary">자동차 이더넷 테스트 장비 분야에서 새로운 기술이 개발되어 자동차 산업의 반도체 검증 역량이 강화되고 있다.</p>
+        
+        <ul class="cat-list"><li><strong>PEAK, 자동차 이더넷용 PAE-미디어 컨버터 출시</strong><br><span class="cat-fact">자동차 개발 및 검증을 위한 전용 테스트 장비가 시장에 출시되었다</span></li></ul>
+      </div>
+    </div>
+    <div class="card cat-card" style="--accent: #7c3aed">
+      <div class="card-header">
+        <span class="cat-badge" style="background: #7c3aed15; color: #7c3aed">데이터센터 신축</span>
+        <span class="item-count">4건</span>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <p class="cat-summary">데이터센터 건설 분야에서 프로젝트 취소와 인수합병이 동시에 진행되고 있으며, 지정학적 갈등이 데이터센터 인프라 설계에 새로운 고려사항으로 부상했다. 구글과 메타 등 주요 기업들이 건설 인력 양성에 대규모 투자를 확대하고 있다.</p>
+        <p class="cat-impact"><span class="detail-label impact">Impact</span> 데이터센터 건설 수요 증가와 함께 숙련 건설 인력 부족 문제가 심화되면서 기업들의 교육 투자가 늘어나고 있으며, 지정학적 리스크 대응이 새로운 설계 요구사항으로 자리잡고 있다.</p>
+        <ul class="cat-list"><li><strong>Sentinel DC, 메인주 제지공장 데이터센터 프로젝트 포기</strong><br><span class="cat-fact">주정부의 모라토리움 거부권 행사에도 불구하고 회사가 프로젝트를 중단했다</span></li><li><strong>Vertiv, 이탈리아 ThermoKey 인수 완료로 냉각 기술 확장</strong><br><span class="cat-fact">데이터센터 냉각 기술 강화를 위한 M&amp;A가 완료되었다</span></li><li><strong>데이터센터, 지정학적 갈등에 따른 인프라 설계 변화 필요</strong><br><span class="cat-fact">지역 분쟁과 돌발 상황에 대응할 수 있는 인프라 설계가 요구되고 있다</span></li><li><strong>구글, 숙련 건설 인력 양성에 5천만달러 투자</strong><br><span class="cat-fact">메타에 이어 구글도 건설 교육 파이프라인 강화에 대규모 투자를 발표했다</span></li></ul>
+      </div>
+    </div>
+    <div class="card cat-card" style="--accent: #16a34a">
+      <div class="card-header">
+        <span class="cat-badge" style="background: #16a34a15; color: #16a34a">EPC / 수주</span>
+        <span class="item-count">1건</span>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <p class="cat-summary">SK에코플랜트가 AI EPC 사업으로의 전환을 통해 AI·반도체 분야 매출 비중을 <strong class="num-hl">1년</strong> 만에 41%에서 82%로 대폭 확대했다.</p>
+        
+        <ul class="cat-list"><li><strong>SK에코플랜트, AI EPC 전환으로 반도체 매출 비중 82%까지 확대</strong><br><span class="cat-fact"><strong class="num-hl">1년</strong> 만에 AI·반도체 매출 비중이 41%에서 82%로 급증했다</span></li></ul>
+      </div>
+    </div>
+    <div class="card cat-card" style="--accent: #a16207">
+      <div class="card-header">
+        <span class="cat-badge" style="background: #a1620715; color: #a16207">자재 / 노무</span>
+        <span class="item-count">2건</span>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <p class="cat-summary">건설 분야에서 부패 사건과 자재비 급등이 동시에 발생하면서 업계에 부담이 가중되고 있다. 5월 건설비용이 팬데믹 이후 최고 수준의 연간 상승률을 기록했다.</p>
+        
+        <ul class="cat-list"><li><strong>시카고 주택청 전 임원, 480만달러 건설 계약 리베이트 혐의</strong><br><span class="cat-fact">부정한 건설 계약 수주를 통한 자금 편취 사건이 연방법원에 기소되었다</span></li><li><strong>5월 건설비용, 팬데믹 이후 최고 연간 상승률 기록</strong><br><span class="cat-fact">자재비 상승과 입찰가격 성장 둔화로 건설업체들이 이중고를 겪고 있다</span></li></ul>
+      </div>
+    </div>
+    <div class="card cat-card" style="--accent: #0d9488">
+      <div class="card-header">
+        <span class="cat-badge" style="background: #0d948815; color: #0d9488">인력 / 인사</span>
+        <span class="item-count">1건</span>
+        <span class="chevron">▾</span>
+      </div>
+      <div class="card-body">
+        <p class="cat-summary">SK에코플랜트가 AI 인프라 확장을 위해 반도체 분야 인재 채용을 적극 추진하고 있다.</p>
+        
+        <ul class="cat-list"><li><strong>SK에코플랜트, AI 인프라 확장 위한 반도체 인재 채용 추진</strong><br><span class="cat-fact">AI 인프라 사업 성장에 따른 전문 인력 확보에 나섰다</span></li></ul>
+      </div>
+    </div>
+  </section>
+
+    <section class="section">
+    <h2 class="section-title">
+      <span class="section-icon">⚠️</span> 리스크 종합
+    </h2>
+    <ul class="risk-list"><li>[SK에코, AI·반도체 매출 비중 1년새 41%→82% 급증] AI·반도체 부문 집중도 82%로 특정 사업 의존도 과다. 반도체 다운사이클 시 실적 급락 우려.</li>
+<li>[SK에코, 반도체 신입 두자릿수 채용…28일까지 접수] 반도체 업계 전반의 인재 확보 경쟁 심화로 우수 인력 채용 어려움 예상.</li>
+<li>[Vertiv, 이탈리아 냉각기업 ThermoKey 인수 완료] 인수 금액 미공개로 투자 규모 및 재무 영향 파악 불가.</li>
+<li>[한국, 2026년 반도체 장비투자 297억달러로 세계 2위 전망] 중국의 생산능력 확충 및 가격 경쟁, 미국 수출규제로 인한 공급망 불안정 지속.</li>
+<li>[구글, GPU 11만개 월 9.2억달러에 임대…HBM 수요 지속] 삼성전자의 HBM4 양산 성공 시 SK하이닉스 점유율 하락 가능. AI 투자 사이클 고점 논란.</li></ul>
+  </section>
+    <section class="section">
+    <h2 class="section-title">
+      <span class="section-icon">🔭</span> Next Signals
+    </h2>
+    <ul class="signal-list"><li>SK하이닉스 M15X 및 용인 클러스터 공사 진행 상황과 추가 수주 확보 여부 확인 필요.</li>
+<li>채용 규모 및 지원자 수준 확인으로 SK에코플랜트의 반도체 사업 투자 의지 가늠 필요.</li>
+<li>Vertiv의 ThermoKey 기술을 활용한 신제품 출시 및 EMEA 시장 점유율 변화 모니터링 필요.</li>
+<li>2026년 상반기 실제 장비 발주 규모 및 HBM 수요 충족도 확인 필요.</li>
+<li>2026년 하반기 삼성전자 HBM4 엔비디아 공급 승인 여부 및 SK하이닉스 점유율 변화 확인.</li></ul>
+  </section>
+    <section class="section">
+    <h2 class="section-title">
+      <span class="section-icon">📰</span> 소스 분포
+    </h2>
+    <p class="source-total">총 39건</p>
+    <div class="source-chart">
+            <div class="source-bar">
+        <span class="source-label">DC전문</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 7.6923076923076925%; background: #7c3aed"></div>
+        </div>
+        <span class="source-count">3건</span>
+      </div>      <div class="source-bar">
+        <span class="source-label">반도체전문</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 7.6923076923076925%; background: #1a73e8"></div>
+        </div>
+        <span class="source-count">3건</span>
+      </div>      <div class="source-bar">
+        <span class="source-label">건설전문</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 7.6923076923076925%; background: #16a34a"></div>
+        </div>
+        <span class="source-count">3건</span>
+      </div>      <div class="source-bar">
+        <span class="source-label">국내매체</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 76.92307692307693%; background: #0891b2"></div>
+        </div>
+        <span class="source-count">30건</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Generated 2026-06-14T22:10:51.773817+00:00</p>
+  </footer>
+</div>
+
+<script>
+document.querySelectorAll('.card-header').forEach(h => {
+  h.addEventListener('click', () => {
+    const card = h.closest('.card');
+    card.classList.toggle('expanded');
+  });
+});
+</script>
+</body>
+</html>
